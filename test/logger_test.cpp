@@ -25,6 +25,7 @@ int main() {
     // ========== 测试2：日志文件输出 ==========
     SET_LOG_FILE("test_log.txt"); // 已修正宏名，对应 setLogFileName
     INFO("Log to file: test_log.txt");
+    EXIT_IF(true, "Exit now");
 
 
     // ========== 测试3：日志轮转（时间触发） ==========
