@@ -25,10 +25,11 @@ int main() {
     // ========== 测试2：日志文件输出 ==========
     SET_LOG_FILE("test_log.txt"); // 已修正宏名，对应 setLogFileName
     INFO("Log to file: test_log.txt");
-    EXIT_IF(true, "Exit now");
+    // EXIT_IF(true, "Exit now");
 
 
     // ========== 测试3：日志轮转（时间触发） ==========
+    // 需修改logger.h的最小轮转时间
     logger.setLogRotateInterval(10); // 10秒轮转一次
     INFO("Log will rotate every 10 seconds");
     std::this_thread::sleep_for(std::chrono::seconds(11)); // 等待触发轮转
@@ -47,7 +48,7 @@ int main() {
     // ========== 测试5：条件日志宏（注释终止语句） ==========
     // FATAL_IF(true, "FATAL_IF triggered"); // 注释：避免终止
     // CHECK(1 == 2, "1 != 2"); // 注释：避免终止
-    // EXIT_IF(true, "EXIT_IF triggered"); // 注释：避免终止
+    EXIT_IF(true, "EXIT_IF triggered"); // 注释：避免终止
 
 
     // ========== 测试6：多线程日志（并发安全） ==========

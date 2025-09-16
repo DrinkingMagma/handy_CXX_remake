@@ -86,16 +86,25 @@ namespace handy
         // 写入日志
         size_t totalLength = prefixLength + contentLength + 2;  // 添加换行符\n和字符串结束符\0
         std::unique_ptr<char[]> logBuffer(new char[totalLength]);
-        snprintf(logBuffer.get(), totalLength, "%s%s\n", logPrefix, contentBuffer.get());
-
+        // 精确写入日志前缀 + 内容 + \n，确保无多余空字符
+        int written = snprintf(logBuffer.get(), totalLength, "%s%s\n", logPrefix, contentBuffer.get());
+        if (written < 0 || written >= static_cast<int>(totalLength)) {
+            // 错误处理：写入失败或越界，回退到 stdout 避免污染文件
+            fprintf(stderr, "Log buffer write error, fallback to stdout\n");
+            fwrite(logPrefix, 1, prefixLength, stdout);
+            fwrite(contentBuffer.get(), 1, contentLength, stdout);
+            fwrite("\n", 1, 1, stdout);
+            fflush(stdout);
+            return;
+        }
         // 使用C标准库函数 fwrite 将完整日志写入文件描述符 m_fd
-        size_t written = fwrite(logBuffer.get(), 1, totalLength, m_fd);
+        size_t actualWritten = fwrite(logBuffer.get(), 1, written, m_fd);
         // fwrite 通常会先将数据写入内存缓冲区，而非直接写入磁盘或控制台
         // 调用 fflush 强制将缓冲区中的数据立即写入目标设备
-        fflush(m_fd);   // 确保日志立即写入
+        fflush(m_fd);   // 确保日志立即写入 
 
         // 更新当前文件的大小
-        m_currentFileSize += written;
+        m_currentFileSize += actualWritten;
     }
 
     void Logger::setLogFileName(const std::string& logFileName)
