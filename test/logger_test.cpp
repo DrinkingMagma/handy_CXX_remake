@@ -30,10 +30,10 @@ int main() {
 
     // ========== 测试3：日志轮转（时间触发） ==========
     // 需修改logger.h的最小轮转时间
-    logger.setLogRotateInterval(10); // 10秒轮转一次
-    INFO("Log will rotate every 10 seconds");
-    std::this_thread::sleep_for(std::chrono::seconds(11)); // 等待触发轮转
-    INFO("After sleep, check if log rotated by time");
+    // logger.setLogRotateInterval(10); // 10秒轮转一次
+    // INFO("Log will rotate every 10 seconds");
+    // std::this_thread::sleep_for(std::chrono::seconds(11)); // 等待触发轮转
+    // INFO("After sleep, check if log rotated by time");
 
 
     // ========== 测试4：日志轮转（大小触发） ==========

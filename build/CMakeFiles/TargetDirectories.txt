@@ -1,0 +1,8 @@
+/root/C++/handy_CXX_remake/build/CMakeFiles/rebuild_cache.dir
+/root/C++/handy_CXX_remake/build/CMakeFiles/edit_cache.dir
+/root/C++/handy_CXX_remake/build/handy/CMakeFiles/rebuild_cache.dir
+/root/C++/handy_CXX_remake/build/handy/CMakeFiles/handy.dir
+/root/C++/handy_CXX_remake/build/handy/CMakeFiles/edit_cache.dir
+/root/C++/handy_CXX_remake/build/test/CMakeFiles/rebuild_cache.dir
+/root/C++/handy_CXX_remake/build/test/CMakeFiles/logger_test.dir
+/root/C++/handy_CXX_remake/build/test/CMakeFiles/edit_cache.dir

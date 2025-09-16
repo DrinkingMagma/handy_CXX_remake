@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhandy.a CMakeFiles/handy.dir/logger.cpp.o
+/usr/bin/ranlib libhandy.a

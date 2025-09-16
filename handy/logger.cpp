@@ -47,12 +47,11 @@ namespace handy
         // 获取毫秒
         // now.time_since_epoch()：获取从纪元时间（1970-01-01 00:00:00）到当前的总时长
         // std::chrono::milliseconds：将总时长转换为毫秒
-        // % std::chrono::seconds(1).count()：对 1 秒（1000 毫秒）取余，得到当前秒内的毫秒数（0-999）
-        auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()) % std::chrono::seconds(1).count();
+        long long ms = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count() % 1000;
 
         // 构建日志前缀
         char logPrefix[256];
-        int prefixLength = snprintf(logPrefix, sizeof(logPrefix), "[%s.%03lld] [%s] [%s:%d %s] ", timeStr, static_cast<long long>(ms.count()), getLogLevelString(static_cast<LogLevel>(level)), file, line, func);
+        int prefixLength = snprintf(logPrefix, sizeof(logPrefix), "[%s.%03lld] [%s] [%s:%d %s] ", timeStr, ms, getLogLevelString(static_cast<LogLevel>(level)), file, line, func);
 
         // 处理可变参数
         // C标准库类型，用于访问可变参数
