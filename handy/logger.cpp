@@ -84,7 +84,7 @@ namespace handy
             m_fd = stdout;
 
         // 写入日志
-        size_t totalLength = prefixLength + contentLength + 2;  // 添加换行符\n和字符串结束符\0
+        size_t totalLength = prefixLength + contentLength + 2;  // 添加换行符\n
         std::unique_ptr<char[]> logBuffer(new char[totalLength]);
         // 精确写入日志前缀 + 内容 + \n，确保无多余空字符
         int written = snprintf(logBuffer.get(), totalLength, "%s%s\n", logPrefix, contentBuffer.get());
