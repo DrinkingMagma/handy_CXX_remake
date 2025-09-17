@@ -1,27 +1,11 @@
 #pragma once
+#include "non_copy_able.h"
 #include <string>
 #include <cstring>
 #include <functional>
 
 namespace handy
 {
-    /**
-     * @brief 禁止派生类对象的拷贝构造和拷贝赋值操作
-     * @note 用于需要确保资源独占性或者避免不必要复制开销的场景，如单例模式、文件句柄管理等场景
-    */
-    class NonCopyAble
-        {
-            protected:
-                NonCopyAble() = default;
-                ~NonCopyAble() noexcept = default;
-                NonCopyAble(const NonCopyAble&) = delete;
-                NonCopyAble& operator=(const NonCopyAble&) = delete;
-
-                // 允许移动操作（根据实际需求添加
-                NonCopyAble(NonCopyAble&&) = default;
-                NonCopyAble& operator=(NonCopyAble&&) = default;
-        };
-
     /**
      * @brief 通用工具函数集合
      * @note 提供字符串处理、时间获取、文件描述符操作等通用功能
@@ -71,26 +55,31 @@ namespace handy
         static int64_t steadyMilli() noexcept { return steadyMicro() / 1000; }
 
         /**
-         * @brief 将时间戳转换为可读字符串
-         * @param t 时间戳
+         * @brief 将time_t时间戳转换为可读字符串（线程安全）
+         * @param t 待转换的time_t时间戳（Unix纪元时间）
          * @return 格式为"YYYY-MM-DD HH:MM:SS"的字符串
-         * @note 线程安全，使用线程局部存储的tm结构
+         * @note 1. 错误时返回"invalid time"或"error formatting time"
+         * @note 2. 使用线程局部tm结构，避免多线程竞争（localtime_r线程安全
          */
         static std::string readableTime(time_t t) noexcept;
 
         /**
          * @brief 将字符串区间转换为整数
-         * @param b 字符串起始地址
-         * @param e 字符串结束地址(不包含)
+         * @param b 字符串起始地址（非空）
+         * @param e 字符串结束地址(不包含)（非空，且b < e）
          * @return 转换后的整数，失败返回0
+         * @note 1. 忽略字符串末尾的非数字字符（如"123abc"返回123）
+         * @note 2. 支持正负号（如"-456"返回-456）
          */
         static int64_t atoi(const char* b, const char* e) noexcept;
 
         /**
-         * @brief 将字符串区间转换为整数并验证范围
-         * @param b 字符串起始地址
-         * @param e 字符串结束地址(不包含)
-         * @return 转换后的整数，若未完全消耗输入则返回-1
+         * @brief 将字符串区间严格转换为整数（需完全匹配，线程安全）
+         * @param b 字符串起始地址（非空）
+         * @param e 字符串结束地址(不包含)（非空，且b < e）
+         * @return 转换后的int64_t值；失败（未完全匹配）时返回-1
+         * @note 1. 仅当整个区间均为数字时才返回有效结果（如"123"返回123，"123a"返回-1）
+         * @note 2. 支持正负号（如"+789"返回789）
          */
         static int64_t atoi2(const char* b, const char* e) noexcept;
 
@@ -102,10 +91,12 @@ namespace handy
         static int64_t atoi(const char* b) noexcept { return atoi(b, b + std::strlen(b)); }
 
         /**
-         * @brief 为文件描述符添加标志
-         * @param fd 文件描述符
+         * @brief 为文件描述符添加标志（线程安全）
+         * @param fd 目标文件描述符（需 >= 0）
          * @param flag 要添加的标志
          * @return 成功返回0，失败返回-1并设置errno
+         * @note 1. 若标志已存在，直接返回0（避免重复操作）
+         * @note 2. 使用fcntl的F_GETFD/F_SETFD操作，保证原子性
          */
         static int addFdFlag(int fd, int flag) noexcept;
     };

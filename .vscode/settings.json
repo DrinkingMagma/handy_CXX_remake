@@ -49,6 +49,10 @@
         "streambuf": "cpp",
         "thread": "cpp",
         "typeinfo": "cpp",
-        "cstring": "cpp"
-    }
+        "cstring": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "map": "cpp"
+    },
+    "makefile.configureOnOpen": false
 }

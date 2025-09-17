@@ -3,89 +3,89 @@
 
 #### 1. 日志模块 (Logger)
 
-- [x] 对应 handy/logging.cc 功能实现
+- [x] 对应 handy/logging.cpp 功能实现
 - [x] 支持日志级别控制（与原项目 setloglevel 兼容）
-- [ ] 日志文件滚动（参考 daemon.cc 中的日志配置逻辑）
+- [ ] 日志文件滚动（参考 daemon.cpp 中的日志配置逻辑）
 - [x] 多线程安全输出保障
 
 #### 2. 基础工具模块 (难度: ★☆☆☆☆)
 
-- [ ] util.h/util.cc
-  - [ ] 实现字符串格式化函数（参考 util::format 实现）
-  - [ ] 系统工具函数（时间转换、错误处理等）
-  - [ ] 非拷贝基类（noncopyable）
+- [x] utils.h/utils.cpp
+  - [x] 实现字符串格式化函数（参考 util::format 实现）
+  - [x] 系统工具函数（时间转换、错误处理等）
+  - [x] 非拷贝基类（noncopyable）
 - [ ] slice.h
   - [ ] 轻量级字符串视图实现（支持 slice 相关操作）
-- [ ] conf.h/conf.cc
+- [ ] conf.h/conf.cpp
   - [ ] 配置文件解析功能（兼容 test/files 中的 ini 格式）
-  - [ ] 键值对读取接口（参考 daemon.cc 中的配置读取逻辑）
+  - [ ] 键值对读取接口（参考 daemon.cpp 中的配置读取逻辑）
 
 #### 3. 事件循环核心 (难度: ★★★☆☆)
 
-- [ ] event_base.h/event_base.cc
+- [ ] event_base.h/event_base.cpp
   - [ ] 事件循环基类实现（EventBase 核心逻辑）
-  - [ ] 定时器管理（runAfter/runAt/cancel，参考 timer.cc）
+  - [ ] 定时器管理（runAfter/runAt/cancel，参考 timer.cpp）
   - [ ] 信号处理（Signal::signal，参考示例中的信号处理）
-- [ ] poller.h/poller.cc
+- [ ] poller.h/poller.cpp
   - [ ] 跨平台 I/O 多路复用封装
-    - [ ] Linux: epoll（参考 raw-examples/epoll.cc）
-    - [ ] MacOS: kqueue（参考 raw-examples/kqueue.cc）
-- [ ] port_posix.h/port_posix.cc
+    - [ ] Linux: epoll（参考 raw-examples/epoll.cpp）
+    - [ ] MacOS: kqueue（参考 raw-examples/kqueue.cpp）
+- [ ] port_posix.h/port_posix.cpp
   - [ ] 平台相关系统调用封装（兼容 Linux/MacOS）
 
 #### 4. 网络连接基础 (难度: ★★★☆☆)
 
-- [ ] conn.h/conn.cc
-  - [ ] TCP 连接基类（TcpConn，参考 echo.cc 连接逻辑）
+- [ ] conn.h/conn.cpp
+  - [ ] TCP 连接基类（TcpConn，参考 echo.cpp 连接逻辑）
   - [ ] 连接状态管理（Connected/Closed 等状态处理）
   - [ ] 数据发送/接收缓冲区（参考 Buffer 类实现）
-- [ ] net.h/net.cc
+- [ ] net.h/net.cpp
   - [ ] 地址解析、套接字操作封装
-  - [ ] TCP 服务器基类（TcpServer，参考 echo.cc 服务器实现）
+  - [ ] TCP 服务器基类（TcpServer，参考 echo.cpp 服务器实现）
 
 #### 5. 协议编解码 (难度: ★★☆☆☆)
 
-- [ ] codec.h/codec.cc
-  - [ ] 行协议编解码器（LineCodec，参考 hsha.cc）
-  - [ ] 长度前缀协议编解码器（LengthCodec，参考 codec-svr.cc）
+- [ ] codec.h/codec.cpp
+  - [ ] 行协议编解码器（LineCodec，参考 hsha.cpp）
+  - [ ] 长度前缀协议编解码器（LengthCodec，参考 codec-svr.cpp）
 - [ ] protobuf 支持（参考 protobuf 目录）
   - [ ] ProtoMsgCodec 实现（消息序列化/反序列化）
   - [ ] 与 protobuf 库的集成（.proto 文件处理）
 
 #### 6. 高级网络功能 (难度: ★★★★☆)
 
-- [ ] udp.h/udp.cc
-  - [ ] UDP 连接封装（参考 udp-cli.cc/udp-svr.cc）
+- [ ] udp.h/udp.cpp
+  - [ ] UDP 连接封装（参考 udp-cli.cpp/udp-svr.cpp）
   - [ ] UDP 服务器实现（UdpServer）
-- [ ] http.h/http.cc
+- [ ] http.h/http.cpp
   - [ ] HTTP 协议解析与封装
-  - [ ] HTTP 服务器基础功能（参考 http-hello.cc）
+  - [ ] HTTP 服务器基础功能（参考 http-hello.cpp）
 
 #### 7. 扩展模块 (难度: ★★★☆☆)
 
 - [ ] threads.h/threads.h
   - [ ] 线程池实现
-  - [ ] 半同步半异步模式（HSHA）支持（参考 hsha.cc/udp-hsha.cc）
-- [ ] stat-svr.h/stat-svr.cc
-  - [ ] 状态监控服务器（参考 stat.cc）
+  - [ ] 半同步半异步模式（HSHA）支持（参考 hsha.cpp/udp-hsha.cpp）
+- [ ] stat-svr.h/stat-svr.cpp
+  - [ ] 状态监控服务器（参考 stat.cpp）
   - [ ] 页面展示接口（onPage 函数实现）
-- [ ] daemon.h/daemon.cc
-  - [ ] 守护进程模式支持（参考 daemon.cc）
+- [ ] daemon.h/daemon.cpp
+  - [ ] 守护进程模式支持（参考 daemon.cpp）
   - [ ] 进程管理（启动/停止/重启）
 
 #### 8. 文件操作模块 (难度: ★★☆☆☆)
 
-- [ ] file.h/file.cc
+- [ ] file.h/file.cpp
   - [ ] 文件读写操作封装（参考 file::writeContent 实现）
   - [ ] 文件状态检查与处理
 
 #### 9. 示例与测试 (难度: ★★☆☆☆)
 
 - [ ] 核心示例移植
-  - [ ] echo.cc（基础回显服务）
-  - [ ] timer.cc（定时器示例）
-  - [ ] chat.cc（聊天服务器）
-  - [ ] http-hello.cc（HTTP 服务示例）
+  - [ ] echo.cpp（基础回显服务）
+  - [ ] timer.cpp（定时器示例）
+  - [ ] chat.cpp（聊天服务器）
+  - [ ] http-hello.cpp（HTTP 服务示例）
 - [ ] 测试用例完善
   - [ ] 配置文件解析测试（基于 test/files）
   - [ ] 网络功能单元测试

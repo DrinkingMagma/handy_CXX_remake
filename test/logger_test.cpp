@@ -23,8 +23,8 @@ int main() {
 
 
     // ========== 测试2：日志文件输出 ==========
-    SET_LOG_FILE("test_log.txt"); // 已修正宏名，对应 setLogFileName
-    INFO("Log to file: test_log.txt");
+    SET_LOG_FILE("logger_test.log"); // 已修正宏名，对应 setLogFileName
+    INFO("Log to file: logger_test.log");
     // EXIT_IF(true, "Exit now");
 
 

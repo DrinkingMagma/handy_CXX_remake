@@ -3,6 +3,7 @@
 #include <memory>
 #include <chrono>
 #include <cstdarg>
+#include <fcntl.h>
 
 // 使用std命名空间显式限定（避免using namespace std潜在冲突）
 using std::string;
@@ -102,6 +103,120 @@ namespace handy
 
     int64_t utils::timeMicro() noexcept
     {
-        
+        try
+        {
+            time_point<system_clock> now = system_clock::now();
+            // 转换为微秒级的时间戳
+            return duration_cast<microseconds>(now.time_since_epoch()).count();
+        }
+        catch(...)
+        {
+            // 捕获所有异常（如时钟未初始化），返回错误值
+            return -1;
+        }
+    }
+
+    int64_t utils::steadyMicro() noexcept
+    {
+        try
+        {
+            time_point<steady_clock> now = steady_clock::now();
+            return duration_cast<microseconds>(now.time_since_epoch()).count();
+        }
+        catch(...)
+        {
+            return -1;
+        }
+    }
+
+    string utils::readableTime(time_t t) noexcept
+    {
+        try
+        {
+            // 获取当前线程的tm结构（线程安全，无竞争）
+            tm* tm_ptr = getThreadLocalTm();
+            // localtime_r：线程安全的时间转换（避免localtime的全局竞争）
+            if(!localtime_r(&t, tm_ptr))
+            {
+                // 转换失败（如非法时间戳）
+                return "invalid time";
+            }
+
+            // 格式化时间字符串（调用utils::format确保一致性)
+            return format(
+                "%04d-%02d-%02d %02d:%02d:%02d",
+                tm_ptr->tm_year + 1900,
+                tm_ptr->tm_mon + 1,
+                tm_ptr->tm_mday,
+                tm_ptr->tm_hour,
+                tm_ptr->tm_min,
+                tm_ptr->tm_sec
+            );
+        } catch (...)
+        {
+            // 捕获所有异常（如内存分配失败）
+            return "error formatting time";
+        }
+    }
+
+    int64_t utils::atoi(const char* b, const char* e) noexcept
+    {
+        // 校验参数的合法性
+        if(!b || !e || b >= e)
+            return 0;
+
+        char* endPtr = nullptr;
+        // strtoll：安全转换为long long(支持64位，避免溢出)
+        long long val = strtoll(b, &endPtr, 10);
+
+        // 即使部分转换（如endPtr < e），仍返回已转换的值
+        return static_cast<int64_t>(val);
+    }
+
+    int64_t utils::atoi2(const char* b, const char* e) noexcept
+    {
+        if(!b || !e || b >= e)
+            return -1;
+
+        char* endPtr = nullptr;
+        long long val = strtoll(b, &endPtr, 10);
+
+        // 严格校验：必须完全消耗输入字符串（即endPtr == e）
+        if(endPtr != e)
+            return -1;
+
+        return static_cast<int64_t>(val);
+    }
+
+    int utils::addFdFlag(int fd, int flag) noexcept
+    {
+        // 校验文件描述符的合法性
+        if(fd < 0) 
+        {
+            // 设置错误码：无效的文件描述符
+            errno = EBADF;
+            return -1;
+        }
+
+        // 1. 获取当前文件描述符的标志
+        int currentFlags = fcntl(fd, F_GETFD);
+        if(currentFlags == -1)
+        {
+            // fcntl失败时，errno被系统自动设置
+            return -1;
+        }
+
+        // 2. 检查标志是否已经存在（避免重复设置）
+        if((currentFlags & flag) == flag)
+            return 0;
+
+        // 3. 添加标志并设置回文件描述符
+        if(fcntl(fd, F_SETFD, currentFlags | flag) == -1)
+        {
+            // fcntl失败时，errno被系统自动设置
+            return -1;
+        }
+
+        return 0;
     }
 }

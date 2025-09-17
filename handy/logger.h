@@ -1,23 +1,24 @@
 #pragma once
+#include "non_copy_able.h"
 #include <string>
 #include <mutex>
 #include <cstdio>
 #include <atomic>
 
-namespace handy
-{
-	class NonCopyAble
-	{
-        // 运行子类访问，但禁止外部直接实例化
-        protected:
-            // 允许子类对象正常构造和析构
-            NonCopyAble() = default;
-            ~NonCopyAble() = default;
-            // 禁止子类进行拷贝构造和复制
-            NonCopyAble(const NonCopyAble&) = delete;
-            NonCopyAble& operator=(const NonCopyAble&) = delete;
-	};
-}
+// namespace handy
+// {
+// 	class NonCopyAble
+// 	{
+//         // 运行子类访问，但禁止外部直接实例化
+//         protected:
+//             // 允许子类对象正常构造和析构
+//             NonCopyAble() = default;
+//             ~NonCopyAble() = default;
+//             // 禁止子类进行拷贝构造和复制
+//             NonCopyAble(const NonCopyAble&) = delete;
+//             NonCopyAble& operator=(const NonCopyAble&) = delete;
+// 	};
+// }
 
 // 日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑
 #ifdef NDEBUG
@@ -109,7 +110,7 @@ namespace handy
             }
 
             // 析构函数
-            ~Logger ()
+            ~Logger () noexcept
             {
                 closeLogFile();
             }

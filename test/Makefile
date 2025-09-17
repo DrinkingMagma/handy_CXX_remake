@@ -1,27 +1,35 @@
-# 编译器
+# 编译器与编译选项
 CXX = g++
-# C++ 标准 + 线程库选项（-pthread 同时用于编译和链接）
-CXXFLAGS = -std=c++11 -Wall -pthread
-# 头文件搜索路径（指向 logger.h 所在目录）
-INCLUDES = -I../handy
-# 源文件（测试代码）
-SRCS = logger_test.cpp
-# 生成的可执行文件名
-TARGET = logger_test
-# 依赖的目标文件（logger 核心实现）
-HANDY_OBJ = ../handy/logger.o
+CXXFLAGS = -std=c++17 -Wall -pthread  # 编译选项：C++17标准、警告、线程支持
+INCLUDES = -I../handy # 头文件路径
 
-# 默认目标：编译所有
-all: $(TARGET)
+# 自动查找所有以_test结尾的cpp文件
+TEST_SRCS = $(wildcard *_test.cpp)
 
-# 链接生成可执行文件（此处可额外加 -pthread，确保链接时生效）
-$(TARGET): $(SRCS) $(HANDY_OBJ)
+# 从源文件生成对应的可执行文件名（例如：logger_test.cpp → logger_test）
+TARGETS = $(TEST_SRCS:.cpp=)
+
+# 核心依赖目标文件（handy中的logger和utils）
+HANDY_OBJS = ../handy/logger.o ../handy/utils.o
+
+# 默认目标：编译所有测试程序
+all: $(TARGETS)
+
+# 自动生成每个测试程序的编译规则
+# $@: 目标文件名（如logger_test）
+# $<: 源文件（如logger_test.cpp）
+$(TARGETS): %: %.cpp $(HANDY_OBJS)
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $@ $^ -pthread
 
-# 编译 logger.cpp 生成目标文件（依赖 logger.h）
+# 编译handy模块的logger
 ../handy/logger.o: ../handy/logger.cpp ../handy/logger.h
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c -o $@ $<
 
-# 清理生成的文件（可执行文件 + 目标文件）
+# 编译handy模块的utils
+../handy/utils.o: ../handy/utils.cpp ../handy/utils.h
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c -o $@ $<
+
+# 清理生成文件
 clean:
-	rm -f $(TARGET) *.o ../handy/*.o
+	rm -f $(TARGETS) ../handy/*.o *.log*
+    
