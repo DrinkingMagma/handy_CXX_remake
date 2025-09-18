@@ -19,7 +19,9 @@ namespace handy
 {
 // -------------------------- 线程局部存储（TLS）辅助函数 --------------------------
     // 线程局部存储的tm结构，避免多线程竞争（static限定在命名空间内可见）
+    // 线程特定数据的标识符（所有线程都可以访问该键、但每个线程通过该键存储的数据是独立的）
     static pthread_key_t g_tmKey;
+    // 标记初始化是否完成
     static pthread_once_t g_tmKeyOnce = PTHREAD_ONCE_INIT;
 
     /**

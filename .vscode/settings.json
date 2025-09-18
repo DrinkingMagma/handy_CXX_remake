@@ -52,7 +52,8 @@
         "cstring": "cpp",
         "forward_list": "cpp",
         "list": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "cinttypes": "cpp"
     },
     "makefile.configureOnOpen": false
 }

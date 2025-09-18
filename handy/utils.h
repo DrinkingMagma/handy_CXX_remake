@@ -112,6 +112,7 @@ namespace handy
             /**
              * @brief 构造函数，注册退出时执行的函数
              * @param functor 要执行的函数对象
+             * @note explicit: 禁止隐式转换，必须显示调用构造函数
             */
             explicit ExitCaller(std::function<void()>&& functor) : m_functor(std::move(functor)) {}
 
