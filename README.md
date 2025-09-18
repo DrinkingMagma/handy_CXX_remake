@@ -14,8 +14,8 @@
   - [x] 实现字符串格式化函数（参考 util::format 实现）
   - [x] 系统工具函数（时间转换、错误处理等）
   - [x] 非拷贝基类（noncopyable）
-- [ ] slice.h
-  - [ ] 轻量级字符串视图实现（支持 slice 相关操作）
+- [x] slice.h
+  - [x] 轻量级字符串视图实现（支持 slice 相关操作）
 - [ ] conf.h/conf.cpp
   - [ ] 配置文件解析功能（兼容 test/files 中的 ini 格式）
   - [ ] 键值对读取接口（参考 daemon.cpp 中的配置读取逻辑）
