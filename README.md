@@ -16,9 +16,9 @@
   - [x] 非拷贝基类（noncopyable）
 - [x] slice.h
   - [x] 轻量级字符串视图实现（支持 slice 相关操作）
-- [ ] conf.h/conf.cpp
-  - [ ] 配置文件解析功能（兼容 test/files 中的 ini 格式）
-  - [ ] 键值对读取接口（参考 daemon.cpp 中的配置读取逻辑）
+- [x] conf.h/conf.cpp
+  - [x] 配置文件解析功能（兼容 test/files 中的 ini 格式）
+  - [x] 键值对读取接口（参考 daemon.cpp 中的配置读取逻辑）
 
 #### 3. 事件循环核心 (难度: ★★★☆☆)
 
