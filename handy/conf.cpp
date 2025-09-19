@@ -254,7 +254,9 @@ namespace handy
                 if(!key.empty())
                 {
                     // 将续行的内容添加到上一个键的值列表中
-                    m_values[makeKey(section, key)].push_back(scanner.consumeTill('\0'));
+                    Slice val = scanner.consumeTill('\0');
+                    val.trimSpace();
+                    m_values[makeKey(section, key)].push_back(val);
                 }
                 else
                     err = 1;

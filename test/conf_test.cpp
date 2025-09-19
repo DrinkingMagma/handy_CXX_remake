@@ -173,10 +173,15 @@ IPs = 192.168.1.1
     std::list<std::string> expectedItems = {"item1", "item2", "item3"};
     
     bool itemsMatch = (items == expectedItems);
-    for(int i = 0; i < items.size(); i++)
-    {
-        DEBUG("items[%d]=%s, expectedItems[%d]=%s", i, items[i].c_str(), i, expectedItems[i].c_str());
+    
+    // 同时遍历两个列表（需确保长度相同）
+    auto expIt = expectedItems.begin();
+    for (const auto& item : items) {
+        if (expIt == expectedItems.end()) break; // 避免越界
+        DEBUG("item=%s, expected=%s", item.c_str(), expIt->c_str());
+        ++expIt;
     }
+
     DEBUG("多行值Items测试: 数量=%zu（预期: 3，%s）", 
           items.size(), itemsMatch ? "通过" : "失败");
 
