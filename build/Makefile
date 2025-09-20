@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = /root/C++/handy_CXX_remake/build
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	@echo "Running external command ..."
 	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
@@ -77,7 +77,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	@echo "Running external command ..."
 	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
@@ -116,32 +116,6 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named handy
-
-# Build rule for target.
-handy: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 handy
-.PHONY : handy
-
-# fast build rule for target.
-handy/fast:
-	$(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/build
-.PHONY : handy/fast
-
-#=============================================================================
-# Target rules for targets named logger_test
-
-# Build rule for target.
-logger_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logger_test
-.PHONY : logger_test
-
-# fast build rule for target.
-logger_test/fast:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/logger_test.dir/build.make test/CMakeFiles/logger_test.dir/build
-.PHONY : logger_test/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -150,8 +124,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... handy"
-	@echo "... logger_test"
 .PHONY : help
 
 

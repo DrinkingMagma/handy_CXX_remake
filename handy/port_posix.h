@@ -6,6 +6,7 @@
 #include <netinet/in.h>
 #include <string>
 #include <cstdint>
+#include <endian.h>
 
 namespace handy
 {
@@ -15,7 +16,7 @@ namespace handy
          * @brief 表示当前系统是否为小端字节序
          * @details 非零值表示系统采用小端字节序，零值表示大端字节序
         */
-        static const int kLittleEndian = __LITTLE_ENDIAN__;
+        static const int kLittleEndian = (__BYTE_ORDER == __LITTLE_ENDIAN);
 
         /**
          * @brief 将16位无符号整数从主机字节序转换为大端字节序（网络字节序）
@@ -131,7 +132,7 @@ namespace handy
         inline int16_t betoh(int16_t v)
         { 
             // 字节序的转换是双向操作
-            static_cast<int16_t>(betoh(static_cast<uint16_t>(v)));
+            return static_cast<int16_t>(betoh(static_cast<uint16_t>(v)));
         }
 
         /**
@@ -142,7 +143,7 @@ namespace handy
         inline int32_t betoh(int32_t v)
         { 
             // 字节序的转换是双向操作
-            static_cast<int32_t>(betoh(static_cast<uint32_t>(v)));
+            return static_cast<int32_t>(betoh(static_cast<uint32_t>(v)));
         }
 
         /**
@@ -153,7 +154,7 @@ namespace handy
         inline int64_t betoh(int64_t v)
         { 
             // 字节序的转换是双向操作
-            static_cast<int64_t>(betoh(static_cast<uint64_t>(v)));
+            return static_cast<int64_t>(betoh(static_cast<uint64_t>(v)));
         }
 
         /**
@@ -163,7 +164,7 @@ namespace handy
          * @return 成功返回true，失败返回false
          * @details 线程安全的主机名解析函数，支持IPv4地址解析
         */
-        bool getHostByName(const std::string& host, struct in_addr* result);
+        bool getHostByName(const std::string& host, struct in_addr& result);
 
         /**
          * @brief 获取当前线程的唯一标识

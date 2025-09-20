@@ -1,0 +1,39 @@
+[2025-09-20 21:49:59.406] [INFO] [port_posix_test.cpp:23 initTestLogger] === port_posix_test 测试开始 ===
+[2025-09-20 21:49:59.406] [DEBUG] [port_posix_test.cpp:31 test_htobe_betoh_16bit] === 开始测试16位整数字节序转换 ===
+[2025-09-20 21:49:59.406] [DEBUG] [port_posix_test.cpp:40 test_htobe_betoh_16bit] 无符号16位测试: 原始=0x1234 → 网络序=0x3412 → 恢复=0x1234（通过）
+[2025-09-20 21:49:59.406] [DEBUG] [port_posix_test.cpp:49 test_htobe_betoh_16bit] 有符号16位测试: 原始=-4660 → 网络序=-13075 → 恢复=-4660（通过）
+[2025-09-20 21:49:59.406] [DEBUG] [port_posix_test.cpp:51 test_htobe_betoh_16bit] === 16位整数字节序转换测试结束 ===
+
+[2025-09-20 21:49:59.406] [DEBUG] [port_posix_test.cpp:58 test_htobe_betoh_32bit] === 开始测试32位整数字节序转换 ===
+[2025-09-20 21:49:59.406] [DEBUG] [port_posix_test.cpp:67 test_htobe_betoh_32bit] 无符号32位测试: 原始=0x12345678 → 网络序=0x78563412 → 恢复=0x12345678（通过）
+[2025-09-20 21:49:59.406] [DEBUG] [port_posix_test.cpp:76 test_htobe_betoh_32bit] 有符号32位测试: 原始=-305419896 → 网络序=-2002138131 → 恢复=-305419896（通过）
+[2025-09-20 21:49:59.406] [DEBUG] [port_posix_test.cpp:78 test_htobe_betoh_32bit] === 32位整数字节序转换测试结束 ===
+
+[2025-09-20 21:49:59.406] [DEBUG] [port_posix_test.cpp:85 test_htobe_betoh_64bit] === 开始测试64位整数字节序转换 ===
+[2025-09-20 21:49:59.406] [DEBUG] [port_posix_test.cpp:94 test_htobe_betoh_64bit] 无符号64位测试: 原始=0x123456789abcdef0 → 网络序=0xf0debc9a78563412 → 恢复=0x123456789abcdef0（通过）
+[2025-09-20 21:49:59.406] [DEBUG] [port_posix_test.cpp:103 test_htobe_betoh_64bit] 有符号64位测试: 原始=-1311768467463790320 → 网络序=1162284282185108461 → 恢复=-1311768467463790320（通过）
+[2025-09-20 21:49:59.406] [DEBUG] [port_posix_test.cpp:105 test_htobe_betoh_64bit] === 64位整数字节序转换测试结束 ===
+
+[2025-09-20 21:49:59.406] [DEBUG] [port_posix_test.cpp:113 test_getHostByName] === 开始测试主机名解析功能 ===
+[2025-09-20 21:49:59.406] [DEBUG] [port_posix_test.cpp:120 test_getHostByName] IP字符串解析测试: 输入=192.168.1.1 → 输出=192.168.1.1（通过）
+[2025-09-20 21:49:59.451] [DEBUG] [port_posix_test.cpp:127 test_getHostByName] 域名解析测试: 输入=www.baidu.com → 输出=103.235.46.102（通过）
+[2025-09-20 21:49:59.496] [DEBUG] [port_posix_test.cpp:133 test_getHostByName] 无效主机名解析测试: 输入=invalid.example.invalid → 预期失败（通过）
+[2025-09-20 21:49:59.496] [DEBUG] [port_posix_test.cpp:135 test_getHostByName] === 主机名解析功能测试结束 ===
+
+[2025-09-20 21:49:59.496] [DEBUG] [port_posix_test.cpp:142 test_getHostByName_threadSafe] === 开始测试主机名解析线程安全 ===
+[2025-09-20 21:53:41.657] [DEBUG] [port_posix_test.cpp:176 test_getHostByName_threadSafe] 线程安全测试: 总解析次数=1000（预期: 1000），无崩溃即线程安全（计数一致）
+[2025-09-20 21:53:41.657] [DEBUG] [port_posix_test.cpp:178 test_getHostByName_threadSafe] === 主机名解析线程安全测试结束 ===
+
+[2025-09-20 21:53:41.657] [DEBUG] [port_posix_test.cpp:186 test_getCurrentThreadId] === 开始测试线程ID获取功能 ===
+[2025-09-20 21:53:41.657] [DEBUG] [port_posix_test.cpp:191 test_getCurrentThreadId] 主线程ID测试: 主线程ID=0x23cb8（非0即有效，通过）
+[2025-09-20 21:53:42.658] [DEBUG] [port_posix_test.cpp:233 test_getCurrentThreadId] 多线程ID测试: 子线程ID列表=[146673, 146674, 146675]（ID唯一且有效）
+[2025-09-20 21:53:42.658] [DEBUG] [port_posix_test.cpp:235 test_getCurrentThreadId] === 线程ID获取功能测试结束 ===
+
+[2025-09-20 21:53:42.658] [DEBUG] [port_posix_test.cpp:243 test_addr_string_convert] === 开始测试IP地址与字符串互转 ===
+[2025-09-20 21:53:42.658] [DEBUG] [port_posix_test.cpp:251 test_addr_string_convert] in_addr→字符串测试: 输入=0xc0a80101 → 输出=192.168.1.1（通过）
+[2025-09-20 21:53:42.658] [DEBUG] [port_posix_test.cpp:258 test_addr_string_convert] 字符串→in_addr测试1: 输入=8.8.8.8 → 输出=8.8.8.8（通过）
+[2025-09-20 21:53:42.658] [DEBUG] [port_posix_test.cpp:264 test_addr_string_convert] 无效IP转换测试: 输入=256.256.256.256 → 预期失败（通过）
+[2025-09-20 21:53:42.658] [DEBUG] [port_posix_test.cpp:270 test_addr_string_convert] 空指针处理测试: 输入=nullptr → 输出=（通过）
+[2025-09-20 21:53:42.658] [DEBUG] [port_posix_test.cpp:272 test_addr_string_convert] === IP地址与字符串互转测试结束 ===
+
+[2025-09-20 21:53:42.658] [INFO] [port_posix_test.cpp:290 run_all_tests] === port_posix_test 所有测试执行完成 ===

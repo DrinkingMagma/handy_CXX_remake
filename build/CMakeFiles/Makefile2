@@ -63,101 +63,16 @@ CMAKE_BINARY_DIR = /root/C++/handy_CXX_remake/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: handy/all
-all: test/all
+all:
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: handy/preinstall
-preinstall: test/preinstall
+preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: handy/clean
-clean: test/clean
+clean:
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory handy
-
-# Recursive "all" directory target.
-handy/all: handy/CMakeFiles/handy.dir/all
-.PHONY : handy/all
-
-# Recursive "preinstall" directory target.
-handy/preinstall:
-.PHONY : handy/preinstall
-
-# Recursive "clean" directory target.
-handy/clean: handy/CMakeFiles/handy.dir/clean
-.PHONY : handy/clean
-
-#=============================================================================
-# Directory level rules for directory test
-
-# Recursive "all" directory target.
-test/all: test/CMakeFiles/logger_test.dir/all
-.PHONY : test/all
-
-# Recursive "preinstall" directory target.
-test/preinstall:
-.PHONY : test/preinstall
-
-# Recursive "clean" directory target.
-test/clean: test/CMakeFiles/logger_test.dir/clean
-.PHONY : test/clean
-
-#=============================================================================
-# Target rules for target handy/CMakeFiles/handy.dir
-
-# All Build rule for target.
-handy/CMakeFiles/handy.dir/all:
-	$(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/depend
-	$(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=1,2 "Built target handy"
-.PHONY : handy/CMakeFiles/handy.dir/all
-
-# Build rule for subdir invocation for target.
-handy/CMakeFiles/handy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/C++/handy_CXX_remake/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 handy/CMakeFiles/handy.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/C++/handy_CXX_remake/build/CMakeFiles 0
-.PHONY : handy/CMakeFiles/handy.dir/rule
-
-# Convenience name for target.
-handy: handy/CMakeFiles/handy.dir/rule
-.PHONY : handy
-
-# clean rule for target.
-handy/CMakeFiles/handy.dir/clean:
-	$(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/clean
-.PHONY : handy/CMakeFiles/handy.dir/clean
-
-#=============================================================================
-# Target rules for target test/CMakeFiles/logger_test.dir
-
-# All Build rule for target.
-test/CMakeFiles/logger_test.dir/all: handy/CMakeFiles/handy.dir/all
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/logger_test.dir/build.make test/CMakeFiles/logger_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/logger_test.dir/build.make test/CMakeFiles/logger_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=3,4 "Built target logger_test"
-.PHONY : test/CMakeFiles/logger_test.dir/all
-
-# Build rule for subdir invocation for target.
-test/CMakeFiles/logger_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/C++/handy_CXX_remake/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/logger_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/C++/handy_CXX_remake/build/CMakeFiles 0
-.PHONY : test/CMakeFiles/logger_test.dir/rule
-
-# Convenience name for target.
-logger_test: test/CMakeFiles/logger_test.dir/rule
-.PHONY : logger_test
-
-# clean rule for target.
-test/CMakeFiles/logger_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/logger_test.dir/build.make test/CMakeFiles/logger_test.dir/clean
-.PHONY : test/CMakeFiles/logger_test.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
