@@ -11,7 +11,7 @@ TEST_SRCS = $(wildcard *_test.cpp)
 TARGETS = $(TEST_SRCS:.cpp=)
 
 # 核心依赖目标文件（handy中的logger和utils）
-HANDY_OBJS = ../handy/logger.o ../handy/utils.o ../handy/conf.o ../handy/port_posix.o
+HANDY_OBJS = ../handy/logger.o ../handy/utils.o ../handy/conf.o ../handy/port_posix.o ../handy/net.o
 
 # 默认目标：编译所有测试程序
 all: $(TARGETS)
@@ -36,6 +36,10 @@ $(TARGETS): %: %.cpp $(HANDY_OBJS)
 
 # 编译handy模块的port_posix
 ../handy/port_posix.o: ../handy/port_posix.cpp ../handy/port_posix.h 
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c -o $@ $<
+
+# 编译handy模块的net
+../handy/net.o: ../handy/net.cpp ../handy/net.h 
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c -o $@ $<
 
 # 清理生成文件

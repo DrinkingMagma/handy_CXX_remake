@@ -1,4 +1,3 @@
-#pragma once
 #include "net.h"
 #include "logger.h"
 #include "utils.h"
@@ -178,10 +177,10 @@ namespace handy
         unsigned short portHost = Net::ntoh(m_addr.sin_port);
 
         return utils::format("%d.%d.%d.%d:%d", 
-                (ipHost >> 0) & 0xff,
-                (ipHost >> 8) & 0xff,
-                (ipHost >> 16) & 0xff,
                 (ipHost >> 24) & 0xff,
+                (ipHost >> 16) & 0xff,
+                (ipHost >> 8) & 0xff,
+                (ipHost >> 0) & 0xff,
                 portHost);
     }
 
@@ -193,10 +192,10 @@ namespace handy
         uint32_t ipHost = Net::ntoh(m_addr.sin_addr.s_addr);
 
         return utils::format("%d.%d.%d.%d", 
-                (ipHost >> 0) & 0xff,
-                (ipHost >> 8) & 0xff,
+                (ipHost >> 24) & 0xff,
                 (ipHost >> 16) & 0xff,
-                (ipHost >> 24) & 0xff);
+                (ipHost >> 8) & 0xff,
+                (ipHost >> 0) & 0xff);
     }
 
     unsigned short Ipv4Addr::port() const
@@ -260,19 +259,38 @@ namespace handy
     }
 
     Buffer::Buffer(Buffer&& other) noexcept
-        : m_buf(nullptr), m_b(0), m_e(0), m_cap(0), m_exp(512), m_mutex(new std::mutex())
+        : m_buf(other.m_buf), m_b(other.m_b), m_e(other.m_e), 
+        m_cap(other.m_cap), m_exp(other.m_exp), m_mutex(std::move(other.m_mutex))
     {
-        std::lock_guard<std::mutex> lock(*other.m_mutex); 
-        swap(other);
+        // 将other的成员重置为“空状态”，避免析构时重复释放
+        other.m_buf = nullptr;
+        other.m_b = 0;
+        other.m_e = 0;
+        other.m_cap = 0;
+        other.m_exp = 512;
+        other.m_mutex.reset(new std::mutex());  // 确保other后续使用时锁有效
     }
 
     Buffer& Buffer::operator=(Buffer&& other) noexcept
     {
         if(this != &other)
         {
-            std::lock_guard<std::mutex> lock(*m_mutex);
-            std::lock_guard<std::mutex> otherLock(*other.m_mutex);
-            swap(other);
+            std::lock_guard<std::mutex> lock(*m_mutex);  // 仅对当前对象加锁（保护自身资源）
+            // 转移other的资源
+            m_buf = other.m_buf;
+            m_b = other.m_b;
+            m_e = other.m_e;
+            m_cap = other.m_cap;
+            m_exp = other.m_exp;
+            m_mutex = std::move(other.m_mutex);
+            
+            // 重置other
+            other.m_buf = nullptr;
+            other.m_b = 0;
+            other.m_e = 0;
+            other.m_cap = 0;
+            other.m_exp = 512;
+            other.m_mutex.reset(new std::mutex());
         }
         return *this;
     }
@@ -317,6 +335,22 @@ namespace handy
         return *this;
     }
 
+    Buffer& Buffer::appendUnSafe(const char* p, size_t len)
+    {
+        if(len == 0 || !p)
+            return *this;
+        
+        char* dst = makeRoom(len);
+        memcpy(dst, p, len);
+        m_e += len;
+        return *this;
+    }
+
+    Buffer& Buffer::append(const char* p)
+    {
+        return append(p, strlen(p));
+    }
+
     Buffer& Buffer::append(Slice slice)
     {
         return append(slice.data(), slice.size());
@@ -353,13 +387,18 @@ namespace handy
         if(this == &other)
             return *this;
 
-        std::lock_guard<std::mutex> lock(*m_mutex);
-        std::lock_guard<std::mutex> otherLock(*other.m_mutex);
+        // 按锁地址排序，确保加锁顺序固定
+        std::mutex* lock1 = m_mutex.get();
+        std::mutex* lock2 = other.m_mutex.get();
+        if (lock1 > lock2) std::swap(lock1, lock2);
 
-        if(other.empty())
+        std::lock_guard<std::mutex> lockA(*lock1);
+        std::lock_guard<std::mutex> lockB(*lock2);
+
+        if(other.m_b == other.m_e)
             return *this;
 
-        if(empty())
+        if(m_b == m_e)
         {
             std::swap(m_buf, other.m_buf);
             std::swap(m_cap, other.m_cap);
@@ -368,7 +407,7 @@ namespace handy
         }
         else
         {
-            append(other.m_buf + other.m_b, other.m_e - other.m_b);
+            appendUnSafe(other.m_buf + other.m_b, other.m_e - other.m_b);
             other.m_b = other.m_e;
             delete[] other.m_buf;
             other.m_buf = nullptr;

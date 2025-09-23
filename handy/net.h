@@ -55,9 +55,9 @@ namespace handy
         static T ntoh(T v)
         {
             static_assert(
-                std::is_name<T, int16_t>::value || std::is_name<T, uint16_t>::value ||
-                std::is_name<T, int32_t>::value || std::is_name<T, uint32_t>::value ||
-                std::is_name<T, int64_t>::value || std::is_name<T, uint64_t>::value,
+                std::is_same<T, int16_t>::value || std::is_same<T, uint16_t>::value ||
+                std::is_same<T, int32_t>::value || std::is_same<T, uint32_t>::value ||
+                std::is_same<T, int64_t>::value || std::is_same<T, uint64_t>::value,
                 "Net::ntoh only supports 16/32/64-bit integers"
             );
             return port::betoh(v);
@@ -322,12 +322,27 @@ namespace handy
             std::string data() const;
 
             /**
-             * @brief 追加数据到缓冲区
+             * @brief 将指定长度的数据追加到缓冲区
              * @param p 指向数据的指针
              * @param len 数据长度（字节数）
              * @return Buffer& 当前缓冲区的引用
             */
             Buffer& append(const char* p, size_t len);
+
+
+            /**
+             * @brief 追加字符串中的数据到缓冲区(未加锁版本，用于在内部函数中调用，防止重复加锁导致的死锁)
+             * @param str 包含数据的字符串
+             * @return Buffer& 当前缓冲区的引用
+            */
+            Buffer& appendUnSafe(const char* p, size_t len);
+            
+            /**
+             * @brief 将char*类型的数据追加到缓冲区中
+             * @param p 待追加的char*数据
+             * @return Buffer& 当前缓冲区的引用
+            */
+            Buffer& append(const char* p);
 
             /**
              * @brief 追加Slice中的数据到缓冲区
