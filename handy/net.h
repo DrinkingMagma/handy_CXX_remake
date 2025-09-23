@@ -112,7 +112,7 @@ namespace handy
     class Ipv4Addr
     {
         private:
-            // 内部存储的socketaddr_in结构体
+            // 内部存储的socketaddr_in结构体(网络字节序)
             struct sockaddr_in m_addr;
 
             /**
@@ -334,7 +334,7 @@ namespace handy
              * @param slice 包含数据的slice对象
              * @return Buffer& 当前缓冲区的引用
             */
-            Buffer& append(Slice& slice);
+            Buffer& append(Slice slice);
 
             /**
              * @brief 追加字符串中的数据到缓冲区
