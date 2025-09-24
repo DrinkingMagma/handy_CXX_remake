@@ -17,6 +17,9 @@ namespace handy
     class Slice
     {
         public:
+            // 静态常量：表示“未找到”的位置
+            static constexpr size_t npos = static_cast<size_t>(-1);
+
             // -------------------------- 构造函数（严格空指针校验） --------------------------
             /**
              * @brief 默认构造：空视图
@@ -186,6 +189,25 @@ namespace handy
                 Slice res(m_pb, sz);
                 m_pb += sz;
                 return res;
+            }
+
+            /**
+             * @brief 查找字符位置
+             * @param ch 要查找的字符
+             * @return size_t 位置索引，若未找到返回 npos
+            */
+            size_t find(char ch) const noexcept
+            {
+                const char* p = m_pb;
+                while(p < m_pe)
+                {
+                    if(*p == ch)
+                    {
+                        return static_cast<size_t>(p - m_pb);
+                    }
+                    ++p;
+                }
+                return npos;
             }
 
             /**
