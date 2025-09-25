@@ -53,6 +53,10 @@ void test_LineCodec_basic() {
     buf.append("test_without_cr\n");
     decodeLen = codec.tryDecode(Slice(buf.peek()), msg);
     bool decodeOk2 = (decodeLen == 15) && (msg.toString() == "test_without_cr");
+    if(decodeLen != 15)
+        DEBUG("length is not same, decodeLen = %d", decodeLen);
+    if(msg.toString() != "test_without_cr")
+        DEBUG("msg is not same, msg = %s", msg.toString().c_str());
     DEBUG("LineCodec解码测试2: 输入=test_without_cr\\n → 解析=%s（%s）",
           msg.toString().c_str(), decodeOk2 ? "通过" : "失败");
 
@@ -105,21 +109,21 @@ void test_LengthCodec_basic() {
 
     // 测试1：编码普通消息
     std::string testStr = "hello_length_codec";
-    codec.encode(testStr, buf);
+    codec.encode(Slice(testStr), buf);
     
     // 验证头部+数据格式：mBdT(4) + 长度(4) + 数据
-    bool headerOk = (memcmp(buf.data().c_str(), LengthCodec::kMagic, 4) == 0);
+    bool headerOk = (memcmp(buf.peek(), LengthCodec::kMagic, 4) == 0);
     int32_t netLen = 0;
-    memcpy(&netLen, buf.data().c_str() + 4, sizeof(netLen));
+    memcpy(&netLen, buf.peek() + 4, sizeof(netLen));
     int32_t hostLen = Net::ntoh(netLen);
     bool lenOk = (hostLen == static_cast<int32_t>(testStr.size()));
-    bool dataOk = (std::string(buf.data().c_str() + 8, testStr.size()) == testStr);
+    bool dataOk = (std::string(buf.peek() + 8, testStr.size()) == testStr);
     bool encodeOk = headerOk && lenOk && dataOk;
     DEBUG("LengthCodec编码测试: 输入长度=%zu → 头部验证=%s，长度验证=%s（%s）",
           testStr.size(), headerOk ? "通过" : "失败", lenOk ? "通过" : "失败", encodeOk ? "通过" : "失败");
 
     // 测试2：解码完整消息
-    int decodeLen = codec.tryDecode(Slice(buf.data()), msg);
+    int decodeLen = codec.tryDecode(Slice(buf.peek()), msg);
     size_t totalLen = 8 + testStr.size();  // 头部8字节+数据长度
     bool decodeOk1 = (decodeLen == static_cast<int>(totalLen)) && (msg.toString() == testStr);
     DEBUG("LengthCodec解码测试1: 总长度=%zu → 解析长度=%d，内容=%s（%s）",
@@ -128,7 +132,7 @@ void test_LengthCodec_basic() {
     // 测试3：解码不完整消息（头部不足）
     buf.clear();
     buf.append("mBdT12");  // 仅6字节（不足8字节头部）
-    decodeLen = codec.tryDecode(Slice(buf.data()), msg);
+    decodeLen = codec.tryDecode(Slice(buf.peek()), msg);
     bool decodeOk2 = (decodeLen == 0);  // 应返回0表示不完整
     DEBUG("LengthCodec解码测试2: 头部不完整 → 返回值=%d（%s）",
           decodeLen, decodeOk2 ? "通过" : "失败");

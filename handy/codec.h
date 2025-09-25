@@ -114,6 +114,15 @@ namespace handy
                 return m_maxMsgLen;
             }
 
+            /**
+             * @brief 获取当前最大消息长度（非线程安全）
+             * @return size_t 最大消息长度（字节）
+            */
+            size_t getMaxMsgLenUnSafe() const
+            {
+                return m_maxMsgLen;
+            }
+
             int tryDecode(Slice data, Slice& msg) override;
             void encode(Slice msg, Buffer& buf) override;
             CodecBase* clone() const override { return new LengthCodec(); }

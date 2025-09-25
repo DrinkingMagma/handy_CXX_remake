@@ -1,4 +1,5 @@
 #include "codec.h"
+#include <iostream>
 
 namespace handy
 {
@@ -78,7 +79,7 @@ namespace handy
         int32_t hostLen = Net::ntoh(netLen);
 
         // 4. 检查长度合法性（避免负数、0、超最大限制）
-        size_t maxLen = getMaxMsgLen();
+        size_t maxLen = getMaxMsgLenUnSafe();
         if(hostLen <= 0 || static_cast<size_t>(hostLen) > maxLen)
             return static_cast<int>(LengthCodec::DecodeErr::kInvalidLength);
 
@@ -98,7 +99,7 @@ namespace handy
 
         // 1. 检查消息长度是否超出限制
         size_t msgLen = msg.size();
-        size_t maxLen = getMaxMsgLen();
+        size_t maxLen = getMaxMsgLenUnSafe();
         constexpr size_t MAX_INT32 = static_cast<size_t>(INT32_MAX);
         if(msgLen > maxLen || msgLen > MAX_INT32)
         {
