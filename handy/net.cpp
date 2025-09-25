@@ -323,6 +323,12 @@ namespace handy
         return std::string(m_buf + m_b, m_e - m_b);
     }
 
+    const char* Buffer::peek() const 
+    {
+        std::lock_guard<std::mutex> lock(*m_mutex);
+        return m_buf + m_b;
+    }
+
     Buffer& Buffer::append(const char* p, size_t len)
     {
         if(len == 0 || !p)

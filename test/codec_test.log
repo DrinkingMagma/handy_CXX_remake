@@ -1,0 +1,14 @@
+[2025-09-25 12:01:03.700] [INFO] [codec_test.cpp:25 initTestLogger] === codec_test 测试开始 ===
+[2025-09-25 12:01:03.700] [DEBUG] [codec_test.cpp:33 test_LineCodec_basic] === 开始LineCodec基本功能测试 ===
+[2025-09-25 12:01:03.700] [DEBUG] [codec_test.cpp:43 test_LineCodec_basic] LineCodec编码测试1: 输入=hello_line_codec → 输出=hello_line_codec
+（通过）
+[2025-09-25 12:01:03.700] [DEBUG] [codec_test.cpp:49 test_LineCodec_basic] LineCodec解码测试1: 输入=hello_line_codec
+ → 解析=hello_line_codec（长度=18，通过）
+[2025-09-25 12:01:03.701] [DEBUG] [codec_test.cpp:57 test_LineCodec_basic] LineCodec解码测试2: 输入=test_without_cr\n → 解析=test_without_cr（失败）
+[2025-09-25 12:01:03.701] [DEBUG] [codec_test.cpp:65 test_LineCodec_basic] LineCodec解码测试3: 不完整消息 → 返回值=0（通过）
+[2025-09-25 12:01:03.701] [DEBUG] [codec_test.cpp:73 test_LineCodec_basic] LineCodec EOT测试: 单独EOT → 解析长度=1（通过）
+[2025-09-25 12:01:03.701] [DEBUG] [codec_test.cpp:81 test_LineCodec_basic] LineCodec非法EOT测试: EOT混合数据 → 返回值=0（通过）
+[2025-09-25 12:01:03.701] [DEBUG] [codec_test.cpp:91 test_LineCodec_basic] LineCodec异常测试: 编码含\n的消息 → 捕获预期异常（通过）
+[2025-09-25 12:01:03.701] [DEBUG] [codec_test.cpp:93 test_LineCodec_basic] === LineCodec基本功能测试结束 ===
+
+[2025-09-25 12:01:03.701] [DEBUG] [codec_test.cpp:101 test_LengthCodec_basic] === 开始LengthCodec基本功能测试 ===

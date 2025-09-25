@@ -228,7 +228,7 @@ namespace handy
 
             /**
              * @brief 确保缓冲区有足够空间容纳指定长度的数据
-             * @param len 需要的空间大小（字节数）
+             * @param len 需要添加的空间大小（字节数）
              * @return char* 指向可写入数据位置的指针
              * @note 内部方法，调用前需先加锁
             */
@@ -320,6 +320,13 @@ namespace handy
              * @note 返回的是数据副本，避免外部直接操作内部数据
             */
             std::string data() const;
+
+            /**
+             * @brief 返回内部缓冲区的只读指针
+             * @return const char* 内部缓冲区的只读指针
+             * @note 无法修改内部数据
+            */
+            const char* peek() const;
 
             /**
              * @brief 将指定长度的数据追加到缓冲区

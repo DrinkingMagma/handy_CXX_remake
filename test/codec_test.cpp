@@ -7,6 +7,7 @@
 #include <cassert>
 #include <stdexcept>
 #include <string>
+#include <iostream>
 
 // 测试用全局原子变量（用于多线程测试计数）
 std::atomic<int> g_codecTestCount(0);
@@ -42,7 +43,7 @@ void test_LineCodec_basic() {
           testStr.c_str(), buf.data().c_str(), encodeOk ? "通过" : "失败");
 
     // 测试2：解码完整消息（带\r\n）
-    int decodeLen = codec.tryDecode(Slice(buf.data()), msg);
+    size_t decodeLen = codec.tryDecode(Slice(buf.peek()), msg);
     bool decodeOk1 = (decodeLen == testStr.size() + 2) && (msg.toString() == testStr);
     DEBUG("LineCodec解码测试1: 输入=%s → 解析=%s（长度=%d，%s）",
           buf.data().c_str(), msg.toString().c_str(), decodeLen, decodeOk1 ? "通过" : "失败");
@@ -50,7 +51,7 @@ void test_LineCodec_basic() {
     // 测试3：解码带\n的消息
     buf.clear();
     buf.append("test_without_cr\n");
-    decodeLen = codec.tryDecode(Slice(buf.data()), msg);
+    decodeLen = codec.tryDecode(Slice(buf.peek()), msg);
     bool decodeOk2 = (decodeLen == 15) && (msg.toString() == "test_without_cr");
     DEBUG("LineCodec解码测试2: 输入=test_without_cr\\n → 解析=%s（%s）",
           msg.toString().c_str(), decodeOk2 ? "通过" : "失败");
@@ -107,12 +108,12 @@ void test_LengthCodec_basic() {
     codec.encode(testStr, buf);
     
     // 验证头部+数据格式：mBdT(4) + 长度(4) + 数据
-    bool headerOk = (memcmp(buf.data(), LengthCodec::kMagic, 4) == 0);
+    bool headerOk = (memcmp(buf.data().c_str(), LengthCodec::kMagic, 4) == 0);
     int32_t netLen = 0;
-    memcpy(&netLen, buf.data() + 4, sizeof(netLen));
+    memcpy(&netLen, buf.data().c_str() + 4, sizeof(netLen));
     int32_t hostLen = Net::ntoh(netLen);
     bool lenOk = (hostLen == static_cast<int32_t>(testStr.size()));
-    bool dataOk = (std::string(buf.data() + 8, testStr.size()) == testStr);
+    bool dataOk = (std::string(buf.data().c_str() + 8, testStr.size()) == testStr);
     bool encodeOk = headerOk && lenOk && dataOk;
     DEBUG("LengthCodec编码测试: 输入长度=%zu → 头部验证=%s，长度验证=%s（%s）",
           testStr.size(), headerOk ? "通过" : "失败", lenOk ? "通过" : "失败", encodeOk ? "通过" : "失败");
@@ -135,8 +136,7 @@ void test_LengthCodec_basic() {
     // 测试4：解码不完整消息（数据不足）
     buf.clear();
     codec.encode("long_message", buf);
-    buf.resize(10);  // 截断数据部分
-    decodeLen = codec.tryDecode(Slice(buf.data()), msg);
+    decodeLen = codec.tryDecode(Slice(buf.data().c_str(), 10), msg);
     bool decodeOk3 = (decodeLen == 0);  // 应返回0表示不完整
     DEBUG("LengthCodec解码测试3: 数据不完整 → 返回值=%d（%s）",
           decodeLen, decodeOk3 ? "通过" : "失败");

@@ -92,7 +92,7 @@ namespace handy
                 m_pe = s + std::strlen(s);
             }
 
-            // 禁止拷贝/移动（可选：若需传递可开启，当前默认禁止避免意外）
+            // 是否禁止拷贝/移动
             Slice(const Slice&) = default;
             Slice& operator=(const Slice&) = default;
             Slice(Slice&&) = default;
