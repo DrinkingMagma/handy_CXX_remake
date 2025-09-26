@@ -52,11 +52,7 @@ void test_LineCodec_basic() {
     buf.clear();
     buf.append("test_without_cr\n");
     decodeLen = codec.tryDecode(Slice(buf.peek()), msg);
-    bool decodeOk2 = (decodeLen == 15) && (msg.toString() == "test_without_cr");
-    if(decodeLen != 15)
-        DEBUG("length is not same, decodeLen = %d", decodeLen);
-    if(msg.toString() != "test_without_cr")
-        DEBUG("msg is not same, msg = %s", msg.toString().c_str());
+    bool decodeOk2 = (decodeLen == (15 + 1)) && (msg.toString() == "test_without_cr");
     DEBUG("LineCodec解码测试2: 输入=test_without_cr\\n → 解析=%s（%s）",
           msg.toString().c_str(), decodeOk2 ? "通过" : "失败");
 
@@ -123,7 +119,7 @@ void test_LengthCodec_basic() {
           testStr.size(), headerOk ? "通过" : "失败", lenOk ? "通过" : "失败", encodeOk ? "通过" : "失败");
 
     // 测试2：解码完整消息
-    int decodeLen = codec.tryDecode(Slice(buf.peek()), msg);
+    int decodeLen = codec.tryDecode(Slice(buf.peek(), buf.size()), msg);
     size_t totalLen = 8 + testStr.size();  // 头部8字节+数据长度
     bool decodeOk1 = (decodeLen == static_cast<int>(totalLen)) && (msg.toString() == testStr);
     DEBUG("LengthCodec解码测试1: 总长度=%zu → 解析长度=%d，内容=%s（%s）",
@@ -263,6 +259,7 @@ void test_LineCodec_threadSafe() {
  */
 void test_LengthCodec_threadSafe() {
     DEBUG("=== 开始LengthCodec线程安全测试 ===");
+    g_codecTestCount.store(0);
     LengthCodec codec;
     Buffer buf;
     const int THREAD_NUM = 5;

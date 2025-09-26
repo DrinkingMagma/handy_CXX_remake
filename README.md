@@ -39,15 +39,15 @@
   - [ ] TCP 连接基类（TcpConn，参考 echo.cpp 连接逻辑）
   - [ ] 连接状态管理（Connected/Closed 等状态处理）
   - [ ] 数据发送/接收缓冲区（参考 Buffer 类实现）
-- [ ] net.h/net.cpp
-  - [ ] 地址解析、套接字操作封装
+- [x] net.h/net.cpp
+  - [x] 地址解析、套接字操作封装
   - [ ] TCP 服务器基类（TcpServer，参考 echo.cpp 服务器实现）
 
 #### 5. 协议编解码 (难度: ★★☆☆☆)
 
-- [ ] codec.h/codec.cpp
-  - [ ] 行协议编解码器（LineCodec，参考 hsha.cpp）
-  - [ ] 长度前缀协议编解码器（LengthCodec，参考 codec-svr.cpp）
+- [x] codec.h/codec.cpp
+  - [x] 行协议编解码器（LineCodec，参考 hsha.cpp）
+  - [x] 长度前缀协议编解码器（LengthCodec，参考 codec-svr.cpp）
 - [ ] protobuf 支持（参考 protobuf 目录）
   - [ ] ProtoMsgCodec 实现（消息序列化/反序列化）
   - [ ] 与 protobuf 库的集成（.proto 文件处理）

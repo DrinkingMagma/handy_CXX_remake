@@ -125,11 +125,20 @@ namespace handy
 
             int tryDecode(Slice data, Slice& msg) override;
             void encode(Slice msg, Buffer& buf) override;
-            CodecBase* clone() const override { return new LengthCodec(); }
+            CodecBase* clone() const override 
+            {
+                std::lock_guard<std::mutex> lock(m_mutex);
+                return new LengthCodec(m_maxMsgLen);
+            }
         private:
             // 检查魔法字的合法性
             bool checkMagic(const char* header) const;
             // 单条消息最大长度（线程安全访问）
             size_t m_maxMsgLen;
+
+            /**
+             * @brief 用于clone的私有构造函数
+            */
+            explicit LengthCodec(size_t maxMsgLen) : m_maxMsgLen(maxMsgLen) {}
     };
 } // namespace handy
