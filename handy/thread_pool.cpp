@@ -114,11 +114,13 @@ ThreadPool::~ThreadPool()
 
 void ThreadPool::start()
 {
-    if(m_isStarted.exchange(true))
-        return;
-    
+    // 先检查当前线程池是否退出
     if(m_isExited)
         throw std::logic_error("ThreadPool::start(): thread pool is exited");
+
+    // 再检查是否已启动，确保只启动一次
+    if(m_isStarted.exchange(true))
+        return;
 
     // 创建工作线程
     const size_t threadNum = m_threads.capacity();
@@ -140,14 +142,31 @@ void ThreadPool::exit()
 
 void ThreadPool::join()
 {
-    if(!m_isStarted || !m_isExited)
-        throw std::logic_error("ThreadPool::join(): thread pool is not started or not exited");
+    // 检查线程池状态是否合法
+    if (!m_isStarted)
+    {
+        WARN("ThreadPool::join(): thread pool is not started");
+        return;
+    }
+    
+    if (!m_isExited)
+    {
+        WARN("ThreadPool::join(): thread pool is not exited");
+        return;
+    }
 
     // 逐个等待所有线程结束
-    for(auto& thread : m_threads)
+    for (auto& thread : m_threads)
     {
-        if(thread.joinable())
-            thread.join();
+        if (thread.joinable())
+        {
+            try {
+                thread.join();
+            } catch (const std::system_error& e) {
+                // 捕获join()可能抛出的系统错误（如线程已被join）
+                WARN("ThreadPool::join(): failed to join thread: %s", e.what());
+            }
+        }
     }
 
     m_threads.clear();

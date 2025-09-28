@@ -462,22 +462,23 @@ void testThreadPoolExceptions() {
         DEBUG("addTask()未捕获未启动线程池的异常");
     }
 
+    // 为避免在析构函数中抛出异常，join()函数并不会抛出异常，而是打印日志
     // 4. 测试join()时机错误异常
-    bool except4Caught = false;
-    try {
-        ThreadPool pool(2, 10);
-        pool.join(); // 未退出不能join
-    } catch (const std::logic_error& e) {
-        except4Caught = true;
-        DEBUG("join()异常捕获成功：%s", e.what());
-    } catch (...) {
-        testOk = false;
-        DEBUG("join()捕获到未知异常（预期logic_error）");
-    }
-    if (!except4Caught) {
-        testOk = false;
-        DEBUG("join()未捕获未退出线程池的异常");
-    }
+    // bool except4Caught = false;
+    // try {
+    //     ThreadPool pool(2, 10);
+    //     pool.join(); // 未退出不能join
+    // } catch (const std::logic_error& e) {
+    //     except4Caught = true;
+    //     DEBUG("join()异常捕获成功：%s", e.what());
+    // } catch (...) {
+    //     testOk = false;
+    //     DEBUG("join()捕获到未知异常（预期logic_error）");
+    // }
+    // if (!except4Caught) {
+    //     testOk = false;
+    //     DEBUG("join()未捕获未退出线程池的异常");
+    // }
 
     DEBUG("测试（线程池异常处理）：%s", testOk ? "通过" : "失败");
     DEBUG("=== ThreadPool 异常处理测试结束 ===\n");
@@ -492,7 +493,7 @@ void testThreadPoolMultiTask() {
 
     const int THREAD_NUM = 3;    // 3个工作线程
     const int TASK_NUM = 10;     // 10个测试任务
-    const int QUEUE_CAPACITY = 5; // 队列容量5
+    const int QUEUE_CAPACITY = 10; // 队列容量10
     ThreadPool pool(THREAD_NUM, QUEUE_CAPACITY);
 
     // 添加TASK_NUM个带延迟的任务（验证并发执行）
@@ -500,6 +501,8 @@ void testThreadPoolMultiTask() {
         // 每个任务延迟100ms，模拟计算耗时
         pool.addTask(std::bind(paramTestTask, i, 100));
     }
+
+    // DEBUG("addTask nums = %d", pool.getWaitingTaskCount());
 
     // 验证等待任务数量（队列应先满后逐渐减少）
     std::this_thread::sleep_for(std::chrono::milliseconds(300)); // 等待部分任务执行

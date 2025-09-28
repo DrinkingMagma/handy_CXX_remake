@@ -52,6 +52,6 @@ $(TARGETS): %: %.cpp $(HANDY_OBJS)
 
 # 清理生成文件
 clean:
-	rm -f $(TARGETS) ../handy/*.o *.log*
-# rm -f *.log*
+# rm -f $(TARGETS) ../handy/*.o *.log*
+	# rm -f *.log*
     
