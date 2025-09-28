@@ -11,7 +11,7 @@ TEST_SRCS = $(wildcard *_test.cpp)
 TARGETS = $(TEST_SRCS:.cpp=)
 
 # 核心依赖目标文件（handy中的logger和utils）
-HANDY_OBJS = ../handy/logger.o ../handy/utils.o ../handy/conf.o ../handy/port_posix.o ../handy/net.o ../handy/codec.o
+HANDY_OBJS = ../handy/logger.o ../handy/utils.o ../handy/conf.o ../handy/port_posix.o ../handy/net.o ../handy/codec.o ../handy/thread_pool.o
 
 # 默认目标：编译所有测试程序
 all: $(TARGETS)
@@ -44,6 +44,10 @@ $(TARGETS): %: %.cpp $(HANDY_OBJS)
 
 # 编译handy模块的net
 ../handy/codec.o: ../handy/codec.cpp ../handy/codec.h 
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c -o $@ $<
+
+# 编译handy模块的thread_pool
+../handy/thread_pool.o: ../handy/thread_pool.cpp ../handy/thread_pool.h 
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c -o $@ $<
 
 # 清理生成文件

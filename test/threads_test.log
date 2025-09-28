@@ -1,0 +1,57 @@
+[2025-09-28 12:18:47.575] [INFO] [thread_pool_test.cpp:27 initTestLogger] === threads_test 测试开始 ===
+[2025-09-28 12:18:47.575] [DEBUG] [thread_pool_test.cpp:73 testSafeQueueBasic] === 开始测试 SafeQueue 基础功能 ===
+[2025-09-28 12:18:47.575] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=1
+[2025-09-28 12:18:47.575] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=2
+[2025-09-28 12:18:47.575] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=3
+[2025-09-28 12:18:47.575] [DEBUG] [thread_pool_test.cpp:111 testSafeQueueBasic] 测试1（无容量限制队列）：通过
+[2025-09-28 12:18:47.575] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=4
+[2025-09-28 12:18:47.575] [DEBUG] [thread_pool_test.cpp:151 testSafeQueueBasic] 测试2（有容量限制队列）：通过
+[2025-09-28 12:18:47.575] [DEBUG] [thread_pool_test.cpp:176 testSafeQueueBasic] 测试3（队列exit功能）：通过
+[2025-09-28 12:18:47.575] [DEBUG] [thread_pool_test.cpp:177 testSafeQueueBasic] === SafeQueue 基础功能测试结束 ===
+
+[2025-09-28 12:18:47.575] [DEBUG] [thread_pool_test.cpp:184 testSafeQueueTimeout] === 开始测试 SafeQueue 超时等待功能 ===
+[2025-09-28 12:18:48.075] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=1
+[2025-09-28 12:18:48.075] [DEBUG] [thread_pool_test.cpp:231 testSafeQueueTimeout] 测试（超时等待功能）：通过
+[2025-09-28 12:18:48.075] [DEBUG] [thread_pool_test.cpp:232 testSafeQueueTimeout] === SafeQueue 超时等待功能测试结束 ===
+
+[2025-09-28 12:18:48.075] [DEBUG] [thread_pool_test.cpp:239 testSafeQueueMultiThread] === 开始测试 SafeQueue 多生产者多消费者线程安全 ===
+[2025-09-28 12:18:48.076] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=1
+[2025-09-28 12:18:48.076] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=3
+[2025-09-28 12:18:48.076] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=2
+[2025-09-28 12:18:48.126] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=4
+[2025-09-28 12:18:48.126] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=5
+[2025-09-28 12:18:48.127] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=6
+[2025-09-28 12:18:48.176] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=7
+[2025-09-28 12:18:48.176] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=8
+[2025-09-28 12:18:48.176] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=9
+[2025-09-28 12:18:48.226] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=10
+[2025-09-28 12:18:48.226] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=11
+[2025-09-28 12:18:48.226] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=12
+[2025-09-28 12:18:48.276] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=13
+[2025-09-28 12:18:48.276] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=14
+[2025-09-28 12:18:48.276] [DEBUG] [thread_pool_test.cpp:255 operator()] 多线程任务执行：生产者计数=15
+[2025-09-28 12:18:48.376] [DEBUG] [thread_pool_test.cpp:292 testSafeQueueMultiThread] 生产者任务总数：实际=15，预期=15
+[2025-09-28 12:18:48.376] [DEBUG] [thread_pool_test.cpp:293 testSafeQueueMultiThread] 消费者任务总数：实际=15，预期=15
+[2025-09-28 12:18:48.377] [DEBUG] [thread_pool_test.cpp:294 testSafeQueueMultiThread] 测试（多生产者多消费者线程安全）：通过
+[2025-09-28 12:18:48.377] [DEBUG] [thread_pool_test.cpp:295 testSafeQueueMultiThread] === SafeQueue 多生产者多消费者线程安全测试结束 ===
+
+[2025-09-28 12:18:48.377] [DEBUG] [thread_pool_test.cpp:303 testThreadPoolBasic] === 开始测试 ThreadPool 基础功能 ===
+[2025-09-28 12:18:48.377] [DEBUG] [thread_pool_test.cpp:312 testThreadPoolBasic] 立即启动线程池：isStarted=1，isExited=0
+[2025-09-28 12:18:48.377] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=1
+[2025-09-28 12:18:48.377] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=3
+[2025-09-28 12:18:48.377] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=4
+[2025-09-28 12:18:48.377] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=5
+[2025-09-28 12:18:48.377] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=2
+[2025-09-28 12:18:48.480] [DEBUG] [thread_pool_test.cpp:350 testThreadPoolBasic] 立即启动线程池退出后：isExited=1
+[2025-09-28 12:18:48.480] [DEBUG] [thread_pool_test.cpp:355 testThreadPoolBasic] 延迟启动线程池：isStarted=0，isExited=0
+[2025-09-28 12:18:48.480] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=1
+[2025-09-28 12:18:48.480] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=3
+[2025-09-28 12:18:48.480] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=4
+[2025-09-28 12:18:48.480] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=5
+[2025-09-28 12:18:48.480] [DEBUG] [thread_pool_test.cpp:53 baseTestTask] 基础任务执行：当前计数=2
+[2025-09-28 12:18:48.580] [DEBUG] [thread_pool_test.cpp:401 testThreadPoolBasic] 测试（线程池基础功能）：通过
+[2025-09-28 12:18:48.580] [DEBUG] [thread_pool_test.cpp:402 testThreadPoolBasic] === ThreadPool 基础功能测试结束 ===
+
+[2025-09-28 12:18:48.580] [DEBUG] [thread_pool_test.cpp:409 testThreadPoolExceptions] === 开始测试 ThreadPool 异常处理 ===
+[2025-09-28 12:18:48.580] [DEBUG] [thread_pool_test.cpp:420 testThreadPoolExceptions] 构造函数异常1捕获成功：ThreadPool::ThreadPool(): threadNum must be greater than 0
+[2025-09-28 12:18:48.580] [DEBUG] [thread_pool_test.cpp:445 testThreadPoolExceptions] start()未捕获已退出线程池的异常
