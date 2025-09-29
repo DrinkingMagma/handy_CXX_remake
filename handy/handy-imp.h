@@ -9,7 +9,7 @@
 namespace handy
 {
     class Channel;          // 事件通道抽象类
-    class TcpConnection;    // TCP连接抽象类
+    class TcpConn;    // TCP连接抽象类
     class TCPServer;        // TCP服务器抽象类
     class IdleIdImp;        // 空闲资源ID实现类
     struct EventsImp;        // 事件实现结构体
