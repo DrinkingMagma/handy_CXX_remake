@@ -273,6 +273,93 @@ namespace handy
             */
             void close();
 
+            /**
+             * @brief 注册读事件回调函数（右值引用）
+             * @param readcb 读事件触发时执行的回调（非空）
+            */
+            void onRead(Task&& readcb)
+            {
+                m_readcb = std::move(readcb);
+            }
+
+            /**
+             * @brief 注册读事件回调函数（左值引用）
+             * @param readcb 读事件触发时执行的回调（非空）
+            */
+            void onRead(const Task& readcb)
+            {
+                m_readcb = readcb;
+            }
+
+            /**
+             * @brief 注册写事件回调函数（右值引用）
+             * @param writecb 写事件触发时执行的回调（非空）
+            */
+            void onWrite(Task&& writecb)
+            {
+                m_writecb = std::move(writecb);
+            }
+
+            /**
+             * @brief 注册写事件回调函数（左值引用）
+             * @param writecb 写事件触发时执行的回调（非空）
+            */
+            void onWrite(const Task& writecb)
+            {
+                m_writecb = writecb;
+            }
+
+            /**
+             * @brief 启用/禁用读事件监听
+             * @param enable true: 启用；false: 禁用
+            */
+            void enableRead(bool enable);
+
+            /**
+             * @brief 启用/禁用写事件监听
+             * @param enable true: 启用；false: 禁用
+            */
+            void enableWrite(bool enable);
+
+            /**
+             * @brief 同时控制读/写事件监听
+             * @param readEnable true: 启用读事件监听；false: 禁用读事件监听
+             * @param writeEnable true: 启用写事件监听；false: 禁用写事件监听
+            */
+            void enableReadWrite(bool readEnable, bool writeEnable);
+
+            /**
+             * @brief 检查是否启用读事件监听
+             * @return bool true: 已启用；false: 未启用
+            */
+            bool isReadEnabled() const;
+
+            /**
+             * @brief 检查是否启用写事件监听
+             * @return bool true: 已启用；false: 未启用
+            */
+            bool isWriteEnabled() const;
+
+            /**
+             * @brief 处理读事件（调用注册的读事件回调函数）
+             * @note 仅在Poller检测到可读事件时调用，需确保m_readcb非空
+            */
+            void handleRead()
+            {
+                if(m_readcb)
+                    m_readcb();
+            }
+
+            /**
+             * @brief 处理写事件（调用注册的写事件回调函数）
+             * @note 仅在Poller检测到可写事件时调用，需确保m_writecb非空
+            */
+            void handleWrite()
+            {
+                if(m_writecb)
+                    m_writecb();
+            }
+
         private:
             EventBase* m_base;      // 关联的事件派发器（非空）
             PollerBase* m_poller;   // 关联的轮询器（从EventBase中获取）

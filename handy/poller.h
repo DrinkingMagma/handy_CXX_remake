@@ -3,6 +3,7 @@
 #include "logger.h"
 #include "non_copy_able.h"
 #include <poll.h>
+#include "event_base.h"
 
 namespace handy 
 {
