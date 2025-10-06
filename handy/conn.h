@@ -123,6 +123,34 @@ namespace handy
                 return m_state;
             }
 
+            /**
+             * @brief 获取输入缓冲区
+             * @return Buffer& 输入缓冲区引用
+            */
+            Buffer& getInputBuffer() { return m_input; }
+
+            /**
+             * @brief 获取输出缓冲区
+             * @return Buffer& 输出缓冲区引用
+            */
+            Buffer& getOutputBuffer() { return m_output; }
+
+            /**
+             * @brief 获取通道对象
+             * @return Channel* 通道对象指针
+            */
+            Channel* getChannel() const {return m_channel; }
+
+            /**
+             * @brief 判断当前连接是否可写
+             * @return bool true: 可写, false: 不可写
+            */
+            bool isWriteRnable() const
+            {
+                std::lock_guard<std::mutex> lk(m_ChannelMutex);
+                return m_channel ? m_channel->isWriteEnabled() : false;
+            }
+
         private:
             EventBase* m_base;                      // 所属的事件循环
             Channel* m_channel;                     // 关联的事件通道
