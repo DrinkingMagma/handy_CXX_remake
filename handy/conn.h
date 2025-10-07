@@ -295,7 +295,7 @@ namespace handy
             int m_connectTimeout_ms;                   // 连接超时时间
             int m_reconnectInterval_ms;                // 重连间隔时间
             mutable std::mutex m_intervalMutex;     // 重连间隔的互斥锁
-            int64_t m_connectedTime;                // 连接建立时间
+            int64_t m_connectedTime_ms;                // 连接建立时间
             std::unique_ptr<CodecBase> m_codec;     // 编解码器
 
             /**
