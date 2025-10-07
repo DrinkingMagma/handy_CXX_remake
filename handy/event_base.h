@@ -9,11 +9,11 @@
 
 namespace handy
 {
-    typedef std::shared_ptr<TcpConn> tcpConnPtr;   // TCP连接指针
-    typedef std::shared_ptr<TCPServer> tCPServerPtr; // TCP服务器指针（管理服务器生命周期）
-    typedef std::function<void(const tcpConnPtr&)> tcpCallBack; // TCP连接相关回调（如连接建立/关闭）
-    typedef std::function<void(const tcpConnPtr&, Slice msg)> msgCallBack;  // 消息处理回调（接受连接与消息切片）
-    typedef std::function<void()> task; // 通用任务回调（无参数无返回值，用于异步任务/事件处理）
+    typedef std::shared_ptr<TcpConn> TcpConnPtr;   // TCP连接指针
+    typedef std::shared_ptr<TCPServer> TcpServerPtr; // TCP服务器指针（管理服务器生命周期）
+    typedef std::function<void(const TcpConnPtr&)> TcpCallBack; // TCP连接相关回调（如连接建立/关闭）
+    typedef std::function<void(const TcpConnPtr&, Slice)> MsgCallBack;  // 消息处理回调（接受连接与消息切片）
+    typedef std::function<void()> Task; // 通用任务回调（无参数无返回值，用于异步任务/事件处理）
     typedef std::pair<int64_t, int64_t> TimerId; // 定时任务ID类型。唯一标识一个定时器
     typedef std::unique_ptr<IdleIdImp> IdleId;   // 管理空闲连接的唯一标识
 
@@ -279,7 +279,7 @@ namespace handy
             */
             void onRead(Task&& readcb)
             {
-                m_readcb = std::move(readcb);
+                m_readCB = std::move(readcb);
             }
 
             /**
@@ -288,7 +288,7 @@ namespace handy
             */
             void onRead(const Task& readcb)
             {
-                m_readcb = readcb;
+                m_readCB = readcb;
             }
 
             /**
@@ -297,7 +297,7 @@ namespace handy
             */
             void onWrite(Task&& writecb)
             {
-                m_writecb = std::move(writecb);
+                m_writeCB = std::move(writecb);
             }
 
             /**
@@ -306,7 +306,7 @@ namespace handy
             */
             void onWrite(const Task& writecb)
             {
-                m_writecb = writecb;
+                m_writeCB = writecb;
             }
 
             /**
@@ -338,7 +338,7 @@ namespace handy
              * @brief 检查是否启用写事件监听
              * @return bool true: 已启用；false: 未启用
             */
-            bool isWriteEnabled() const;
+            bool isWritable() const;
 
             /**
              * @brief 处理读事件（调用注册的读事件回调函数）
@@ -346,8 +346,8 @@ namespace handy
             */
             void handleRead()
             {
-                if(m_readcb)
-                    m_readcb();
+                if(m_readCB)
+                    m_readCB();
             }
 
             /**
@@ -356,8 +356,8 @@ namespace handy
             */
             void handleWrite()
             {
-                if(m_writecb)
-                    m_writecb();
+                if(m_writeCB)
+                    m_writeCB();
             }
 
         private:
@@ -366,8 +366,8 @@ namespace handy
             int m_fd;               // 关联的文件描述符（非负，-1标识已关闭）
             short m_events;         // 当前关注的事件掩码（EPOLLIN/EPOLLOUT等）
             int64_t m_id;           // 通道唯一ID（全局原子生成）
-            Task m_readcb;          // 读事件回调
-            Task m_writecb;         // 写事件回调
+            Task m_readCB;          // 读事件回调
+            Task m_writeCB;         // 写事件回调
             Task m_errorcb;         // 错误事件回调
 
             friend class PollerEpoll;
