@@ -232,34 +232,34 @@ namespace handy
              * @return char* 指向可写入数据位置的指针
              * @note 内部方法，调用前需先加锁
             */
-            char* makeRoom(size_t len);
+            char* _makeRoom(size_t len);
 
             /**
              * @brief 扩展缓冲区容量
              * @param len 至少需要新增的空间大小（字节数）
              * @note 内部方法，调用前需先加锁
             */
-            void expand(size_t len);
+            void _expand(size_t len);
 
             /**
              * @brief 将数据移动到缓冲区头部，减少内存碎片
              * @note 内部方法，调用前需先加锁
             */
-            void moveHead();
+            void _moveHead();
 
             /**
              * @brief 从另一个缓冲区深拷贝数据和状态
              * @param other 被拷贝的缓冲区
              * @note 内部方法，调用前需确保已释放当前资源且加锁
             */
-            void copyFrom(const Buffer& other);
+            void _copyFrom(const Buffer& other);
 
             /**
              * @brief 交换两个缓冲区的资源
              * @param other 要交换的缓冲区
              * @note 内部方法，调用前需加锁
             */
-            void swap(Buffer& other) noexcept;
+            void _swap(Buffer& other) noexcept;
         public:
             /**
              * @brief 默认构造函数，初始化一个空缓冲区，期望增长大小为512字节
@@ -322,11 +322,42 @@ namespace handy
             std::string data() const;
 
             /**
+             * @brief 获取缓冲区中的数据开头指针
+             * @return char* 指向缓冲区开头的指针
+            */
+            char* begin() const;
+
+            /**
+             * @brief 获取缓冲区中的数据末尾指针
+             * @return char* 指向缓冲区中的数据末尾的指针
+            */
+            char *end() const;
+
+            /**
+             * @brief 返回缓冲区中当前剩余的可用空间（字节数）
+             * @return size_t 缓冲区中当前剩余的可用空间（字节数）
+            */
+            size_t space() const;
+
+            /**
              * @brief 返回内部缓冲区的只读指针
              * @return const char* 内部缓冲区的只读指针
              * @note 无法修改内部数据
             */
             const char* peek() const;
+
+            /**
+             * @brief 当缓冲区剩余空间小于m_exp时，扩展缓冲区
+             * @note 用于按照m_exp扩展缓冲区
+            */
+            void makeRoom();
+
+            /**
+             * @brief 更新缓冲区的实际数据长度
+             * @param sz 新增的数据长度
+             * @note 用于向缓冲区添加数据后，未更新缓冲区的实际数据长度的场景
+            */
+            void addSize(size_t len);
 
             /**
              * @brief 将指定长度的数据追加到缓冲区
@@ -335,7 +366,6 @@ namespace handy
              * @return Buffer& 当前缓冲区的引用
             */
             Buffer& append(const char* p, size_t len);
-
 
             /**
              * @brief 追加字符串中的数据到缓冲区(未加锁版本，用于在内部函数中调用，防止重复加锁导致的死锁)

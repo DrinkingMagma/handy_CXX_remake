@@ -14,7 +14,7 @@ namespace handy
     class IdleIdImp;        // 空闲资源ID实现类
     struct EventsImp;        // 事件实现结构体
     struct EventBase;        // 事件循环基类结构体
-    typedef std::unique_ptr<IdleIdImp> IdleId;      // 空闲资源ID的智能指针类型
+    typedef std::unique_ptr<IdleIdImp> IdleIdPtr;      // 空闲资源ID的智能指针类型
     typedef std::pair<int64_t, int64_t> TimerId;    // 定时任务ID类型
 
     /**

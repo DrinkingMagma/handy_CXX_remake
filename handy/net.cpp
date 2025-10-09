@@ -245,7 +245,7 @@ namespace handy
         : m_buf(nullptr), m_b(0), m_e(0), m_cap(0), m_exp(512), m_mutex(new std::mutex())
     {
         std::lock_guard<std::mutex> lock(*other.m_mutex); 
-        copyFrom(other);
+        _copyFrom(other);
     }
 
     Buffer& Buffer::operator=(const Buffer& other)
@@ -253,7 +253,7 @@ namespace handy
         if(this != &other)
         {
             Buffer tmp(other);
-            swap(tmp);
+            _swap(tmp);
         }
         return *this;
     }
@@ -323,10 +323,41 @@ namespace handy
         return std::string(m_buf + m_b, m_e - m_b);
     }
 
+    char *Buffer::begin() const
+    {
+        std::lock_guard<std::mutex> lock(*m_mutex);
+        return m_buf + m_b;
+    }
+
+    char *Buffer::end() const
+    { 
+    std::lock_guard<std::mutex> lock(*m_mutex);
+    return m_buf + m_e; 
+    }
+
+    size_t Buffer::space() const
+    {
+        std::lock_guard<std::mutex> lock(*m_mutex);
+        return m_cap - m_e;
+    }
+
     const char* Buffer::peek() const 
     {
         std::lock_guard<std::mutex> lock(*m_mutex);
         return m_buf + m_b;
+    }
+
+    void Buffer::makeRoom()
+    {
+        std::lock_guard<std::mutex> lock(*m_mutex);
+        if(space() < m_exp)
+            _expand(0);
+    }
+
+    void Buffer::addSize(size_t len)
+    {
+        std::lock_guard<std::mutex> lock(*m_mutex);
+        m_e += len;
     }
 
     Buffer& Buffer::append(const char* p, size_t len)
@@ -335,7 +366,7 @@ namespace handy
             return *this;
         
         std::lock_guard<std::mutex> lock(*m_mutex);
-        char* dst = makeRoom(len);
+        char* dst = _makeRoom(len);
         memcpy(dst, p, len);
         m_e += len;
         return *this;
@@ -346,7 +377,7 @@ namespace handy
         if(len == 0 || !p)
             return *this;
         
-        char* dst = makeRoom(len);
+        char* dst = _makeRoom(len);
         memcpy(dst, p, len);
         m_e += len;
         return *this;
@@ -435,20 +466,20 @@ namespace handy
         return Slice(m_buf + m_b, m_e - m_b);
     }
 
-    char* Buffer::makeRoom(size_t len)
+    char* Buffer::_makeRoom(size_t len)
     {
         if(m_e + len <= m_cap)
             return m_buf + m_e;
 
         size_t currentSize = m_e - m_b;
         if(currentSize + len < m_cap / 2)
-            moveHead();
+            _moveHead();
         else
-            expand(len);
+            _expand(len);
         return m_buf + m_e;
     }
 
-    void Buffer::expand(size_t len)
+    void Buffer::_expand(size_t len)
     {
         size_t currentSize = m_e - m_b;
         size_t newCap = std::max(m_exp, std::max(2 * m_cap, currentSize + len));
@@ -464,7 +495,7 @@ namespace handy
         m_cap = newCap;
     }
 
-    void Buffer::moveHead()
+    void Buffer::_moveHead()
     {
         if(m_b == 0)
             return;
@@ -475,7 +506,7 @@ namespace handy
         m_b = 0;
     }
 
-    void Buffer::copyFrom(const Buffer& other)
+    void Buffer::_copyFrom(const Buffer& other)
     {
         m_b = other.m_b;
         m_e = other.m_e;
@@ -491,7 +522,7 @@ namespace handy
             m_buf = nullptr;
     }
 
-    void Buffer::swap(Buffer& other) noexcept
+    void Buffer::_swap(Buffer& other) noexcept
     {
         std::swap(m_buf, other.m_buf);
         std::swap(m_b, other.m_b);

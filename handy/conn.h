@@ -316,7 +316,7 @@ namespace handy
              * @param len 数据长度
              * @return ssize_t 实际发送的字节数
             */
-            ssize_t _send(const Buffer* buf, size_t len);
+            ssize_t _send(const char* buf, size_t len);
 
             /**
              * @brief 清理连接资源
@@ -325,7 +325,7 @@ namespace handy
             void _cleanUp(const TcpConnPtr& conn);
 
             /**
-             * @brief 连接到指定的主机和端口
+             * @brief 主动连接到指定的主机和端口
              * @param base 事件循环
              * @param peerHost 目标主机名或IP地址
              * @param peerPort 目标端口号

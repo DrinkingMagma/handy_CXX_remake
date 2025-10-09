@@ -13,9 +13,7 @@ namespace handy
     typedef std::shared_ptr<TCPServer> TcpServerPtr; // TCP服务器指针（管理服务器生命周期）
     typedef std::function<void(const TcpConnPtr&)> TcpCallBack; // TCP连接相关回调（如连接建立/关闭）
     typedef std::function<void(const TcpConnPtr&, Slice)> MsgCallBack;  // 消息处理回调（接受连接与消息切片）
-    typedef std::function<void()> Task; // 通用任务回调（无参数无返回值，用于异步任务/事件处理）
-    typedef std::pair<int64_t, int64_t> TimerId; // 定时任务ID类型。唯一标识一个定时器
-    typedef std::unique_ptr<IdleIdImp> IdleId;   // 管理空闲连接的唯一标识
+    typedef std::function<void()> Task; // 通用任务回调（无参数无返回值，用于异步任务/事件处理
 
     /**
      * @class EventBases
