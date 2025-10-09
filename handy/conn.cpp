@@ -15,8 +15,8 @@ namespace handy
         m_connectTimeout_ms(0),
         m_reconnectInterval_ms(-1),
         m_connectedTime_ms(0),
-        m_local(0),
-        m_peer(0) {}
+        m_local(0u),
+        m_peer(0u) {}
 
     TcpConn::~TcpConn()
     {
@@ -425,5 +425,225 @@ namespace handy
         }
 
         return sended;
+    }
+
+    void TcpConn::send(Buffer& buf)
+    {
+        if(buf.empty())
+            return;
+
+        bool isChannelValid = false;
+        {
+            std::lock_guard<std::mutex> lock(m_ChannelMutex);
+            isChannelValid = (m_channel != nullptr);
+        }
+
+        if(!isChannelValid)
+        {
+            WARN("Sending data to a closed connection: %s -> %s, %lu bytes lost",
+                    m_local.toString().c_str(), m_peer.toString().c_str(), buf.size());
+            return;
+        }
+
+        bool isWritable = false;
+        {
+            std::lock_guard<std::mutex> lock(m_ChannelMutex);
+            if(m_channel)
+                isWritable = m_channel->isWritable();
+        }
+
+        if(isWritable)
+        {
+            // 若通道启用写事件，则将数据追加到输出缓冲区中
+            m_outputBuffer.absorb(buf);
+        }
+        // 尝试直接发送数据
+        else
+        {
+            ssize_t sended = _send(buf.begin(), buf.size());
+            buf.consume(sended);
+
+            // 若还有未发送的数据，则追加到输出缓冲区中，并启用写事件监听
+            if(buf.size() > 0)
+            {
+                m_outputBuffer.absorb(buf);
+
+                {
+                    std::lock_guard<std::mutex> lock(m_ChannelMutex);
+                    if(m_channel && !m_channel->isWritable())
+                        m_channel->enableWrite(true);
+                }
+            }
+        }
+    }
+
+    void TcpConn::send(const char* buf, size_t len)
+    {
+        if(len == 0)
+            return;
+        
+        bool isChannelValid = false;
+        {
+            std::lock_guard<std::mutex> lock(m_ChannelMutex);
+            isChannelValid = (m_channel != nullptr);
+        }
+
+        if(!isChannelValid)
+        {
+            WARN("Sending data to a closed connection: %s -> %s, %lu bytes lost",
+                    m_local.toString().c_str(), m_peer.toString().c_str(), len);
+            return;
+        }
+
+        // 若输出缓冲区为空，尝试直接发送
+        if(m_outputBuffer.empty())
+        {
+            ssize_t sended = _send(buf, len);
+            buf += sended;
+            len -= sended;
+        }
+
+        // 将剩余数据加入输出缓冲区
+        if(len > 0)
+        {
+            m_outputBuffer.append(buf, len);
+        }
+    }
+
+    void TcpConn::addIdleCB(int idle_ms, const TcpCallBack& cb)
+    {
+        if(!m_base || idle_ms <= 0)
+            return;
+
+        TcpConnPtr conn = shared_from_this();
+
+        IdleId id = m_base->runAfter(idle_ms, [conn, idle_ms, cb]()
+            {
+                // 检查连接是否仍然活跃
+                if(conn->getState() == State::CONNECTED)
+                {
+                    cb(conn);
+                    // 重新注册空闲回调
+                    conn->addIdleCB(idle_ms, cb);
+                }
+            });
+        
+        m_idleIds.push_back(id);
+    }
+
+    void TcpConn::onMsg(std::unique_ptr<CodecBase> codec, const MsgCallBack& cb)
+    {
+        std::lock_guard<std::mutex> lock(m_callBacksMutex);
+        FATAL_IF(m_readCB, "onMsg and onReadable are mutually exclusive");
+
+        m_codec = std::move(codec);
+        m_readCB = [cb](const TcpConnPtr& conn)
+        {
+            int r = 1;
+            while(r > 0)
+            {
+                Slice msg;
+                r = conn->m_codec->tryDecode(conn->getInputBuffer(), msg);
+                // 若解码错误，关闭连接
+                if(r < 0)
+                {
+                    conn->m_channel->close();
+                    break;
+                }
+                else if(r > 0)
+                {
+                    TRACE("Decoded a message. Original length: %d, message length: %ld",
+                            r, msg.size());
+                    cb(conn, msg);
+                    conn->getInputBuffer().consume(r);
+                }
+            }
+        };
+    }
+
+    void TcpConn::sendMsg(const Slice& msg)
+    {
+        if(m_codec)
+        {
+            m_codec->encode(msg, getOutputBuffer());
+            sendOutputBuffer();
+        }
+        else
+            ERROR("sendMsg called without codec");
+    }
+
+    void TcpConn::closeNow()
+    {
+        Channel* ch = nullptr;
+        {
+            std::lock_guard<std::mutex> lock(m_ChannelMutex);
+            ch = m_channel;
+            m_channel = nullptr;
+        }
+        if(ch)
+        {
+            ch->close();
+            delete ch;
+        }
+    }
+
+    void TcpConn::_reconnect()
+    {
+        if(m_destPort <= 0 || !m_base || m_base->exited())
+            return;
+
+        int interval_ms;
+        {
+            std::lock_guard<std::mutex> lock(m_intervalMutex);
+            interval_ms = m_reconnectInterval_ms;
+        }
+
+        TcpConnPtr conn = shared_from_this();
+        if(interval_ms == 0)
+        {
+            m_base->safeCall([conn]()
+            {
+                conn->_connect(conn->m_base, conn->m_destHost, 
+                    conn->m_destPort, conn->m_connectTimeout_ms, conn->m_localIp);
+            });
+        }
+        else
+        {
+            m_base->runAfter(interval_ms, [conn]()
+            {
+                conn->_connect(conn->m_base, conn->m_destHost, 
+                    conn->m_destPort, conn->m_connectTimeout_ms, conn->m_localIp);
+            });
+        }
+    }
+
+    TcpServer::TcpServer(EventBases* bases) :
+        m_bases(bases),
+        m_listenChannel(nullptr),
+        m_addr(0u),
+        m_createCB([](){ return TcpConnPtr(new TcpConn); })
+        {
+            m_base = bases->allocBase();
+            FATAL_IF(!m_base, "Failed to allocate event base");
+        }
+
+    TcpServer::~TcpServer()
+    {
+        std::lock_guard<std::mutex> lock(m_ChannelMutex);
+        delete m_listenChannel;
+    }
+
+    int TcpServer::bind(const std::string& host, unsigned short port, bool isReusePort)
+    {
+        m_addr = Ipv4Addr(host, port);
+
+        int fd = socket(AF_INET, SOCK_STREAM, 0);
+        FATAL_IF(fd < 0, "socket creation failed: errno=%d, msg=%s", errno, strerror(errno));
+
+        // 设置地址重用
+        int r = Net::setReuseAddr(fd);
+        FATAL_IF(!r, "Failed to set SO_REUSEADDR: errno=%d, msg=%s", errno, strerror(errno));
+
+        
     }
 }   // namespace handy
