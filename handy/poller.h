@@ -7,6 +7,11 @@
 
 namespace handy 
 {
+    
+    static constexpr int kMaxEvents = 2048;        // 单次轮询最大处理事件数（限制单次处理的事件数）(静态常量，避免宏定义）)
+    static constexpr int kReadEvent = POLLIN;      // 读事件标识（映射POLLIN）
+    static constexpr int kWriteEvent = POLLOUT;    // 写事件标识（映射POLLOUT）
+
     /**
      * @brief 事件轮询器基类（抽象类）
      * @details 1. 定义I/O事件轮询的统一接口，屏蔽不同操作系统(Linux/macOS)的底层差异
@@ -69,9 +74,6 @@ namespace handy
             static std::atomic<int64_t> globalId;   // 静态原子变量，确保多线程环境下ID唯一递增
             const int64_t m_id;                 // 轮询器唯一标识符（构造时生成）
             int m_lastActive;                   // 最后一次活跃事件的索引（用于遍历）
-            static constexpr int kMaxEvents = 2048;               // 单次轮询最大处理事件数（限制单次处理的事件数）(静态常量，避免宏定义）)
-            static constexpr int kReadEvent = POLLIN;      // 读事件标识（映射POLLIN）
-            static constexpr int kWriteEvent = POLLOUT;    // 写事件标识（映射POLLOUT）
 
     };
 

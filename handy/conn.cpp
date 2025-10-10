@@ -5,6 +5,9 @@
 #include "poller.h"
 #include <fcntl.h>
 
+// TCP连接请求的最大等待队列长度
+#define MAX_WAIT_QUEUE_LENGTH 20
+
 namespace handy
 {
     TcpConn::TcpConn() :
@@ -24,7 +27,7 @@ namespace handy
         TRACE("TcpConn destroyed: %s -> %s", m_local.toString().c_str(), m_peer.toString().c_str());
     }
 
-    void TcpConn::_attach(EventBase* base, int fd, const Ipv4Addr& localIp, const Ipv4Addr& peerIp)
+    void TcpConn::attach(EventBase* base, int fd, const Ipv4Addr& localIp, const Ipv4Addr& peerIp)
     {
         {
             std::lock_guard<std::mutex> lock(m_stateMutex);
@@ -47,7 +50,7 @@ namespace handy
         {
             std::lock_guard<std::mutex> lock(m_ChannelMutex);
             delete m_channel;
-            m_channel = new Channel(base, fd, POLLIN | POLLOUT);
+            m_channel = new Channel(base, fd, kReadEvent | kWriteEvent);
         }
 
         TRACE("TcpConn attached: %s -> %s, fd: %d",
@@ -117,7 +120,7 @@ namespace handy
             std::lock_guard<std::mutex> lock(m_stateMutex);
             m_state = State::HAND_SHAKING;
         }
-        _attach(base, fd, Ipv4Addr(local), addr);
+        attach(base, fd, Ipv4Addr(local), addr);
 
         if(timeout_ms > 0)
         {
@@ -641,9 +644,184 @@ namespace handy
         FATAL_IF(fd < 0, "socket creation failed: errno=%d, msg=%s", errno, strerror(errno));
 
         // 设置地址重用
-        int r = Net::setReuseAddr(fd);
-        FATAL_IF(!r, "Failed to set SO_REUSEADDR: errno=%d, msg=%s", errno, strerror(errno));
+        int r = Net::setReuseAddr(fd, true);
+        FATAL_IF(!r, "Failed to set SO_REUSEADDR: errno=%d, msg=%s", r, strerror(r));
 
-        
+        // 设置端口重用
+        if(isReusePort)
+        {
+            r = Net::setReusePort(fd, true);
+            FATAL_IF(!r, "Failed to set SO_REUSEPORT: errno=%d, msg=%s", r, strerror(r));
+        }
+
+        // 设置FD_CLOEXEC标识
+        r = utils::addFdFlag(fd, FD_CLOEXEC);
+        FATAL_IF(r, "Failed to set FD_CLOEXEC: errno=%d, msg=%s", errno, strerror(errno));
+
+        // 绑定地址
+        r = ::bind(fd, (struct sockaddr*)&m_addr.getAddr(), sizeof(struct sockaddr));
+        if(r != 0)
+        {
+            close(fd);
+            ERROR("Bind to addr(%s) failed: errno=%d, msg=%s", m_addr.toString().c_str(), errno, strerror(errno));
+            return errno;
+        }
+
+        // 开始监听
+        r = listen(fd, MAX_WAIT_QUEUE_LENGTH);
+        FATAL_IF(r, "Listen failed: errno=%d, msg=%s", errno, strerror(errno));
+
+        INFO("Listening on fd %d at %s", fd, m_addr.toString().c_str());
+
+        // 创建监听通道
+        {
+            std::lock_guard<std::mutex> lock(m_ChannelMutex);
+            m_listenChannel = new Channel(m_base, fd, kReadEvent);
+            m_listenChannel->onRead([this]() {
+                this->_handleAccept();
+            });
+        }
+
+        return 0;
+    }
+
+    TcpServer::Ptr TcpServer::startServer(EventBases* bases, const std::string& host,
+                                    unsigned short port, bool isReusePort)
+    {
+        Ptr p(new TcpServer(bases));
+        int r = p->bind(host, port, isReusePort);
+        return (r == 0) ? p : nullptr;
+    }
+
+    void TcpServer::_handleAccept()
+    {
+        int listenFd = -1;
+        {
+            std::lock_guard<std::mutex> lock(m_ChannelMutex);
+            if(m_listenChannel)
+            {
+                listenFd = m_listenChannel->getFd();
+            }
+        }
+
+        if(listenFd < 0)
+            return;
+
+        struct sockaddr_in remoteAddr;
+        socklen_t remoteSize = sizeof(remoteAddr);
+        int curFd;
+
+        // 处理所有待接受的连接
+        while((curFd = accept(listenFd, (struct sockaddr*)&remoteAddr, &remoteSize)) >= 0)
+        {
+            // 获取对端地址
+            sockaddr_in local, peer;
+            socklen_t addrSize = sizeof(peer);
+            int r = getpeername(curFd, (struct sockaddr*)&peer, &addrSize);
+            if(r < 0)
+            {
+                close(curFd);
+                ERROR("getpeername failed: errno=%d, msg=%s", errno, strerror(errno));
+                continue;
+            }
+
+            // 获取本地地址
+            r = getsockname(curFd, (struct sockaddr*)&local, &addrSize);
+            if(r < 0)
+            {
+                close(curFd);
+                ERROR("getsockname failed: errno=%d, msg=%s", errno, strerror(errno));
+                continue;
+            }
+
+            // 设置FD_CLOEXEC标志
+            r = utils::addFdFlag(curFd, FD_CLOEXEC);
+            if(r != 0)
+            {
+                close(curFd);
+                ERROR("Failed to set FD_CLOEXEC flag: errno=%d, msg=%s", errno, strerror(errno));
+                continue;
+            }
+
+            // 从事件循环组中分配一个事件循环
+            EventBase* base = m_bases->allocBase();
+            FATAL_IF(!base, "Failed to allocate EventBase");
+
+            // 创建连接并初始化
+            auto addConn = [=]()
+            {
+                TcpConnPtr conn;
+                {
+                    std::lock_guard<std::mutex> lock(m_callBacksMutex);
+                    conn = m_createCB();
+                }
+
+                if(conn)
+                {
+                    conn->attach(base, curFd, Ipv4Addr(local), Ipv4Addr(peer));
+
+                    {
+                        std::lock_guard<std::mutex> lock(m_callBacksMutex);
+                        if(m_stateCB)
+                            conn->onState(m_stateCB);
+                        if(m_readCB)
+                            conn->onReadable(m_readCB);
+                        if(m_msgCB && m_codec)
+                        {
+                            handy::CodecBase* clonedRaw = m_codec->clone();
+                            conn->onMsg(std::unique_ptr<handy::CodecBase>(clonedRaw), m_msgCB);
+                        }
+                    }
+                }
+                else
+                {
+                    close(curFd);
+                    ERROR("Failed to accept new connection");
+                }
+            };
+
+            // 在适当的事件循环中执行连接初始化
+            if(base == m_base)
+                addConn();
+            else
+                base->safeCall(std::move(addConn));
+        }
+
+        if(errno != EAGAIN && errno != EINTR)
+            WARN("appcet failed: errno=%d, msg=%s", errno, strerror(errno));
+    }
+
+    HSHA::HSHA(int threads) : m_threadPool(threads) {}
+
+    HSHA::Ptr HSHA::startServer(EventBase* base, const std::string& host, 
+                                    unsigned short port, int threads)
+    {
+        Ptr p = Ptr(new HSHA(threads));
+        p->m_server = TcpServer::startServer(base, host, port);
+        return p->m_server ? p : NULL;
+    }
+
+    void HSHA::onMsg(std::unique_ptr<CodecBase> codec, const RetMsgCallBack &cb)
+    {
+        if(!m_server)
+            return;
+
+        m_server->onConnMsg(std::move(codec), [this, cb](const TcpConnPtr& conn, const Slice& msg)
+        {
+            std::string input = msg.toString();
+            m_threadPool.addTask([=]()
+            {
+                std::string output = cb(conn, input);
+                if(output.size() > 0)
+                {
+                    m_server->getBase()->safeCall([=]()
+                    {
+                        // 检查连接是否有效
+                        if(conn->getState() == TcpConn::State::CONNECTED)
+                            conn->sendMsg(output);
+                    });
+                }
+            });
+        });
     }
 }   // namespace handy

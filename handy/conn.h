@@ -270,6 +270,15 @@ namespace handy
             */
             std::string getPeerStr() const { return m_peer.toString(); }
 
+            /**
+             * @brief 将连接与已有的文件描述符进行关联
+             * @param base 事件循环
+             * @param fd 文件描述符
+             * @param localIp 本地IP地址
+             * @param peerIp 对端IP地址
+            */
+            void attach(EventBase* base, int fd, const Ipv4Addr& localIp, const Ipv4Addr& peerIp);
+
         private:
             EventBase* m_base;                      // 所属的事件循环
             Channel* m_channel;                     // 关联的事件通道
@@ -339,15 +348,6 @@ namespace handy
              * @brief 重连
             */
             void _reconnect();
-
-            /**
-             * @brief 将连接与已有的文件描述符进行关联
-             * @param base 事件循环
-             * @param fd 文件描述符
-             * @param localIp 本地IP地址
-             * @param peerIp 对端IP地址
-            */
-            void _attach(EventBase* base, int fd, const Ipv4Addr& localIp, const Ipv4Addr& peerIp);
 
             /**
              * @brief 读取数据的内部实现
@@ -464,7 +464,7 @@ namespace handy
              * @param cb 回调函数
              * @note 与onConnRead冲突，只能调用一个
             */
-            void setConnMsgCallBack(std::unique_ptr<CodecBase> codec, const MsgCallBack& cb)
+            void onConnMsg(std::unique_ptr<CodecBase> codec, const MsgCallBack& cb)
             {
                 std::lock_guard<std::mutex> lock(m_callBacksMutex);
                 m_codec = std::move(codec);
@@ -507,7 +507,7 @@ namespace handy
              * @return Ptr 服务器的智能指针，nullptr表示启动失败
             */
             static Ptr startServer(EventBase* base, const std::string& host,
-                                     int port, int threads);
+                                     unsigned short port, int threads);
 
             /**
              * @brief 构造函数
@@ -534,7 +534,7 @@ namespace handy
              * @param codec 消息编解码器，所有权转移给HSHA
              * @param cb 消息处理函数
             */
-            void onMsg(std::unique_ptr<CodecBase> codec, const MsgCallBack& cb);
+            void onMsg(std::unique_ptr<CodecBase> codec, const RetMsgCallBack& cb);
 
         private:
             TcpServer::Ptr m_server;          // TCP服务器对象
