@@ -265,6 +265,12 @@ namespace handy
             void closeNow();
 
             /**
+             * @brief 清理连接资源
+             * @param conn 当前连接的智能指针
+            */
+            void cleanup(const TcpConnPtr& conn);
+
+            /**
              * @brief 获取远程地址的字符串表示
              * @return std::string 远程地址字符串
             */
@@ -326,12 +332,6 @@ namespace handy
              * @return ssize_t 实际发送的字节数
             */
             ssize_t _send(const char* buf, size_t len);
-
-            /**
-             * @brief 清理连接资源
-             * @param conn 当前连接的智能指针
-            */
-            void _cleanUp(const TcpConnPtr& conn);
 
             /**
              * @brief 主动连接到指定的主机和端口

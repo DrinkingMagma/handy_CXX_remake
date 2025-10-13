@@ -147,7 +147,7 @@ namespace handy
         }
     }
 
-    void TcpConn::_cleanUp(const TcpConnPtr& conn)
+    void TcpConn::cleanup(const TcpConnPtr& conn)
     {   
         // 处理剩余的输入数据
         {
@@ -188,7 +188,7 @@ namespace handy
         }
         if(interval_ms >= 0 && m_base && !m_base->exited())
         {
-            _reconnect;
+            _reconnect();
             return;
         }
 
@@ -264,7 +264,7 @@ namespace handy
             // 若连接关闭或出错
             else if(fd == -1 || rd == 0 || rd == -1)
             {
-                _cleanUp(conn);
+                cleanup(conn);
                 break;
             }
             // rd大于0，即获取到了数据，需修改缓冲区的实际数据长度
@@ -290,7 +290,7 @@ namespace handy
 
         if(fd < 0)
         {
-            _cleanUp(conn);
+            cleanup(conn);
             return -1;
         }
 
@@ -327,7 +327,7 @@ namespace handy
         else
         {
             TRACE("Poll on fd %d returned %d, revents: %d", fd, r, pFd.revents);
-            _cleanUp(conn);
+            cleanup(conn);
             return -1;
         }
 
