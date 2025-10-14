@@ -63,10 +63,10 @@ namespace handy
 
             /**
              * @brief 取消定时器
-             * @param timerId 要取消的定时器ID
+             * @param timerIdpair 要取消的定时器ID
              * @return bool true：取消成功，false：定时器不存在/已过期
             */
-            bool cancel(TimerId timerId);
+            bool cancel(TimerId timerIdpair);
 
             /**
              * @brief 在执行时间戳执行任务（支持周期性）
@@ -155,6 +155,19 @@ namespace handy
             EventBase* allocBase() override
             {
                 return this;
+            }
+
+            /**
+             * @brief 获取poller
+            */
+            PollerBase* getPoller() const;
+
+            /**
+             * @brief 获取EventsImp对象指针
+            */
+            EventsImp* getImp() const
+            {
+                return m_imp.get();
             }
         private:
             std::unique_ptr<EventsImp> m_imp; // 事件派发器内部实现对象
@@ -375,9 +388,9 @@ namespace handy
     /**
      * @brief 注销空闲连接（委托给EventBase实现）
      * @param base 关联的事件派发器（非空）
-     * @param idleId 要注销的空闲连接（非空）
+     * @param idleIdPtr 要注销的空闲连接（非空）
     */
-    void handyUnregisterIdle(EventBase* base, const IdleId& idleId);
+    void handleUnregisterIdle(EventBase* base, const IdleId& idleIdPtr);
 
     /**
      * @brief 更新空闲连接状态（委托给EventBase实现）
@@ -385,5 +398,5 @@ namespace handy
      * @param idleId 要更新的空闲连接（非空）
      * @details 重置空闲连接的最后活跃事件，避免被判定为超时
     */
-    void handyUpdateIdle(EventBase* base, const IdleId& idleId);
+    void handleUpdateIdle(EventBase* base, const IdleId& idleIdPtr);
 } // namespace handy

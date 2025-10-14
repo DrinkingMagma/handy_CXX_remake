@@ -18,7 +18,7 @@ namespace handy
         {
             int64_t at;             // 下一次超时时间戳（毫秒）
             int64_t interval_ms;    // 定时器重复间隔（毫秒）
-            TimerIdPair timerIdPair;        // 当前周期的定时器ID（用于取消）
+            TimerId timerIdPair;        // 当前周期的定时器ID（用于取消）
             Task task;              // 定时器触发时执行的任务（回调函数）
         };
 
@@ -58,13 +58,13 @@ namespace handy
     {
         EventBase* m_base;          // 关联的EventBase对象（非空）
         PollerBase* m_poller;       // I/O多路复用器（epoll/kqueue）
-        std::atomic<bool> m_exited; // 事件循环退出标志（原子操作，线程安全）
+        std::atomic<bool> m_exit; // 事件循环退出标志（原子操作，线程安全）
         int m_wakeupFds[2];          // 唤醒事件循环的管道（0：读端，1：写端）
         int m_nextTimeout_ms;          // 下一个定时器的超时时间（毫秒，用于Poller等待）
         SafeQueue<Task> m_tasks;    // 异步任务队列（线程安全，支持跨线程投递）
 
-        std::map<TimerIdPair, TimerRepeatable> m_timerReps;     // 可重复定时器映射
-        std::map<TimerIdPair, Task> m_timers;                   // 一次性任务定时器映射
+        std::map<TimerId, TimerRepeatable> m_timerReps;     // 可重复定时器映射
+        std::map<TimerId, Task> m_timers;                   // 一次性任务定时器映射
         std::atomic<int64_t> m_timerSeq;                    // 定时器序列号（用于生成定时器ID）
 
         std::map<int, std::list<IdleNode>> m_idleConns;     // 空闲连接映射（key：空闲超时时间，单位:s；list按照最后活跃时间排序，最早超时的连接在前面）
@@ -81,7 +81,7 @@ namespace handy
         EventsImp(EventBase* base, int taskCap)
             : m_base(base)
             , m_poller(createPoller())
-            , m_exited(false)
+            , m_exit(false)
             , m_tasks(taskCap)
             , m_timerSeq(0)
             , m_idleEnabled(false)
@@ -210,9 +210,9 @@ namespace handy
          * @param idle_s 空闲超时时间（单位：秒）
          * @param conn 要管理的TCP连接（非空）
          * @param cb 空闲超时回调（非空）
-         * @return IdleIdPtr 空闲连接ID的智能指针（用于后续更新/注销）
+         * @return IdleId 空闲连接ID的智能指针（用于后续更新/注销）
         */
-        IdleIdPtr registerIdle(int idle_s, const TcpConnPtr& conn, const TcpCallBack& cb)
+        IdleId registerIdle(int idle_s, const TcpConnPtr& conn, const TcpCallBack& cb)
         {
             if(idle_s <= 0 || !conn || !cb)
                 throw std::invalid_argument(
@@ -230,14 +230,14 @@ namespace handy
             connList.push_back({conn, utils::timeMilli() / 1000, cb});
 
             TRACE("Idle connection registered: idle_s=%d", idle_s);
-            return IdleIdPtr(new IdleIdImp(&connList, --connList.end()));
+            return IdleId(new IdleIdImp(&connList, --connList.end()));
         }
 
         /**
          * @brief 注销空闲连接（从空闲管理中移除）
          * @param idleIdPtr 要注销的空闲连接ID指针（非空）
         */
-        void unregisterIdle(const IdleIdPtr& idleIdPtr)
+        void unregisterIdle(const IdleId& idleIdPtr)
         {
             if(!idleIdPtr)
                 return;
@@ -252,7 +252,7 @@ namespace handy
          * @param idleIdPtr 要更新的空闲连接ID指针（非空）
          * @note 更新后会将连接放入空闲连接列表的末尾
         */
-        void updateIdle(const IdleIdPtr& idleIdPtr)
+        void updateIdle(const IdleId& idleIdPtr)
         {
             if(!idleIdPtr)
                 return;
@@ -269,7 +269,7 @@ namespace handy
         void handleTimeoutTimers()
         {
             int64_t now_ms = utils::timeMilli();
-            TimerIdPair maxTimerId{now_ms, std::numeric_limits<int64_t>::max()};
+            TimerId maxTimerId{now_ms, std::numeric_limits<int64_t>::max()};
 
             // 处理一次性定时器（按时间戳排序，遍历已超时的任务）
             auto it = m_timers.begin();
@@ -297,7 +297,7 @@ namespace handy
          * @brief 刷新下一个定时器的超时时间
          * @param  tip 可选参数：新添加的定时器ID，优化刷新逻辑
         */
-        void refreshNearestTimer(const TimerIdPair* tip = nullptr)
+        void refreshNearestTimer(const TimerId* tip = nullptr)
         {
             if(m_timers.empty())
             {
@@ -348,28 +348,60 @@ namespace handy
         }
 
         /**
+         * @brief 取消定时器（支持一次性/周期性定时器）
+         * @param timerIdPair 要取消的定时器ID
+         * @return bool true: 成功取消定时器，false: 定时器不存在
+        */
+        bool cancel(TimerId timerIdPair)
+        {
+            // 处理周期性定时器
+            if(timerIdPair.first < 0)
+            {
+                auto repIt = m_timerReps.find(timerIdPair);
+                if(repIt == m_timerReps.end())
+                    return false;
+
+                // 移除当前周期的一次性定时器
+                m_timers.erase(repIt->second.timerIdPair);
+                // 移除周期性定时器的管理信息
+                m_timerReps.erase(repIt);
+                refreshNearestTimer();
+                return true;
+            }
+
+            // 处理一次性定时器
+            auto timerIt = m_timers.find(timerIdPair);
+            if(timerIt == m_timers.end())
+                return false;
+
+            m_timers.erase(timerIt);
+            refreshNearestTimer();
+            return true;
+        }
+
+        /**
          * @brief 注册定时器（支持一次性/周期性定时器）
          * @param timestamp_ms 定时器超时时间戳（毫秒）
          * @param task 定时器回调函数（非空）
          * @param interval_ms 定时器间隔时间戳（毫秒；0：一次性定时器，>0：周期性定时器）
-         * @return TimerIdPair 定时器ID（事件循环已退出时返回无效的定时器ID）
+         * @return TimerId 定时器ID（事件循环已退出时返回无效的定时器ID）
         */
-        TimerIdPair runAt(int64_t timestamp_ms, Task&& task, int64_t interval_ms)
+        TimerId runAt(int64_t timestamp_ms, Task&& task, int64_t interval_ms)
         {
             // 已退出或任务为空，返回无效ID
-            if(m_exited || !task)
-                return TimerIdPair();
+            if(m_exit || !task)
+                return TimerId();
 
             // 处理可重复定时器
             if(interval_ms > 0)
             {
                 // 生成可重复定时器的自定义ID（first为负数，区分于一次性定时器）
-                TimerIdPair rep{-timestamp_ms, ++m_timerSeq};
+                TimerId rep{-timestamp_ms, ++m_timerSeq};
                 auto [it, inserted] = m_timerReps.emplace(
                     rep, TimerRepeatable{
                         timestamp_ms, interval_ms, {timestamp_ms, ++m_timerSeq}, std::move(task)});
                 if(!inserted)
-                    return TimerIdPair();
+                    return TimerId();
 
                 TimerRepeatable* tr = &it->second;
                 // 注册当前周期的一次性定时器
@@ -381,7 +413,7 @@ namespace handy
                 return rep;
             }
 
-            TimerIdPair tid{timestamp_ms, ++m_timerSeq};
+            TimerId tid{timestamp_ms, ++m_timerSeq};
             m_timers.emplace(tid, std::move(task));
             refreshNearestTimer(&tid);
 
@@ -389,5 +421,338 @@ namespace handy
                 tid.first, tid.second);
             return tid;
         }
+
+        /**
+         * @brief 启动事件循环（阻塞，直到next()被调用）
+        */
+        void loop()
+        {
+            TRACE("EventBase loop started: base=%p", m_base);
+            // 每次最多等待10秒，避免永久阻塞
+            while(!m_exit)
+                loopOnce(10000);
+            TRACE("EventBase loop exited: base=%p", m_base);
+
+            // 清理资源
+            m_timerReps.clear();
+            m_timers.clear();
+            m_idleConns.clear();
+
+            // 执行最后一次循环，清理剩余连接
+            loopOnce(0);
+        }
+
+        /**
+         * @brief 执行一次事件循环
+         * @param waitTime_ms 最大等待时间（毫秒）
+        */
+        void loopOnce(int waitTime_ms)
+        {
+            // 等待I/O事件（最多等待m_nextTimeout_ms，避免错过定时器）
+            int autualWaitTime_ms = std::min(waitTime_ms, m_nextTimeout_ms);
+            m_poller->loopOnce(autualWaitTime_ms);
+
+            // 处理已超时的定时器
+            handleTimeoutTimers();
+        }
+
+        /**
+         * @brief 唤醒事件循环（向唤醒管道中写入数据）
+        */
+        void wakeup()
+        {
+            char dummy = '\0';
+            ssize_t r = ::write(m_wakeupFds[1], &dummy, 1);
+            if(r != 1)
+                ERROR("write wakeup pipe error: r=%zd, errno=%d, msg=%s", r, errno, strerror(errno));
+        }
     };
+
+    EventBase::EventBase(int taskCapacity)
+    {
+        try
+        {
+            m_imp = std::make_unique<EventsImp>(this, taskCapacity);
+            m_imp->init();
+        }
+        catch(const std::exception& e)
+        {
+            FATAL("EventBase create failed: %s", e.what());
+            // 重新抛出，让调用者感知错误
+            throw;
+        }
+    }
+
+    EventBase::~EventBase()
+    {
+        // unique_ptr析构时会自动调用delete释放m_imp，无需手动处理
+    }
+
+    void EventBase::loopOnce(int waitTime_ms)
+    {
+        if(m_imp)
+            m_imp->loopOnce(waitTime_ms);
+    }
+
+    void EventBase::loop()
+    {
+        if(m_imp)
+            m_imp->loop();
+    }
+
+    bool EventBase::cancel(TimerId timerIdPair)
+    {
+        return m_imp ? m_imp->cancel(timerIdPair) : false;
+    }
+
+    TimerId EventBase::runAt(int64_t timestamp_ms, Task&& task, int64_t interval_ms)
+    {
+        return m_imp ? m_imp->runAt(timestamp_ms, std::move(task), interval_ms) : TimerId();
+    }
+
+    EventBase& EventBase::exit()
+    {
+        if(m_imp)
+        {
+            m_imp->m_exit = true;
+            m_imp->wakeup();
+        }
+        return *this;
+    }
+
+    bool EventBase::exited()
+    {
+        return m_imp ? m_imp->m_exit.load() : true;
+    }
+
+    void EventBase::wakeup()
+    {
+        if(m_imp)
+            m_imp->wakeup();
+    }
+
+    void EventBase::safeCall(Task&& task)
+    {
+        if(m_imp && task)
+        {
+            m_imp->m_tasks.push(std::move(task));
+            m_imp->wakeup();
+        }
+    }
+    PollerBase* EventBase::getPoller() const
+    {
+        return m_imp ? m_imp->m_poller : nullptr;
+    }
+
+    MultiBase::MultiBase(int sz)
+        : m_id(0)
+        , m_bases(sz > 0 ? sz : 1)
+        , m_threads(m_bases.size() - 1) 
+    {
+        if(sz <= 0)
+            WARN("MultiBase size=%d is invalid, using default size=1", sz);
+    }
+
+    MultiBase::~MultiBase()
+    {
+        // 确保所有子线程安全退出
+        exit();
+        for(auto& th : m_threads)
+        {
+            if(th.joinable())
+                th.join();
+        }
+    }
+
+    void MultiBase::loop()
+    {
+        // 启动子线程
+        for(size_t i = 0; i < m_threads.size(); ++i)
+        {
+            m_threads[i] = std::thread([this, i]()
+            {
+                m_bases[i].loop();
+            });
+        }
+
+        // 主线程运行最后一个EventBase
+        m_bases.back().loop();
+
+        // 等待所有子线程退出
+        for(auto& th : m_threads)
+        {
+            if(th.joinable())
+                th.join();
+        }
+    }
+
+    MultiBase& MultiBase::exit()
+    {
+        for(auto& base : m_bases)
+            base.exit();
+        return *this;
+    }
+
+    EventBase* MultiBase::allocBase()
+    {
+        // 轮询分配EventBase（原子操作保证线程安全）
+        int idx = m_id++ % m_bases.size();
+        return &m_bases[idx];
+    }
+
+    Channel::Channel(EventBase* base, int fd, int events)
+        :  m_base(base)
+        , m_fd(fd)
+        , m_events(static_cast<short>(events))
+    {
+        if(!base || fd < 0)
+            throw std::invalid_argument("Channel create failed: base is null or fd is invalid");
+
+        // 设置fd为非阻塞模式（I/O多路复用需非阻塞fd）
+        if(Net::setNonBlock(m_fd) < 0)
+        {
+            throw std::runtime_error(
+                utils::format("Channel set non-block failed: fd=%d, errno=%d, msg=%s",
+                m_fd, errno, strerror(errno))
+            );
+        }
+
+        // 生成全局唯一ID
+        static std::atomic<int64_t>globalId(0);
+        m_id = ++globalId;
+
+        // 获取Polller并注册事件
+        m_poller = m_base->getPoller();
+        m_poller->addChannel(this);
+
+        TRACE("Channel created: id=%lld, fd=%d, events=0x%x",
+            m_id, m_fd, m_events);
+    }
+
+    Channel::~Channel()
+    {
+        close();
+        TRACE("Channel destroyed: id=%lld, fd=%d", m_id, m_fd); 
+    }
+
+    void Channel::close()
+    {
+        if(m_fd >= 0)
+        {
+            TRACE("Channel closing: id=%lld, fd=%d", m_id, m_fd);
+
+            // 删除Polller中的事件并关闭fd
+            m_poller->removeChannel(this);
+            ::close(m_fd);
+            m_fd = -1;
+
+            // 处理剩余的读事件（避免数据残留）
+            handleRead();
+        }
+    }
+
+    void Channel::enableRead(bool enable)
+    {
+        if(enable)
+            m_events |= kReadEvent;
+        else
+            m_events &= ~kReadEvent;
+        m_poller->updateChannel(this);
+        TRACE("Channel enableRead: id=%lld, fd=%d, events=0x%x",
+            m_id, m_fd, m_events);
+    }
+
+    void Channel::enableWrite(bool enable)
+    {
+        if(enable)
+            m_events |= kWriteEvent;
+        else
+            m_events &= ~kWriteEvent;
+        m_poller->updateChannel(this);
+        TRACE("Channel enableWrite: id=%lld, fd=%d, events=0x%x",
+            m_id, m_fd, m_events);
+    }
+
+    void Channel::enableReadWrite(bool readEnable, bool writeEnable)
+    {
+        enableRead(readEnable);
+        enableWrite(writeEnable);
+    }
+
+    bool Channel::isReadEnabled() const
+    {
+        return m_events & kReadEvent;
+    }
+
+    bool Channel::isWritable() const
+    {
+        return m_events & kWriteEvent;
+    }
+
+    void handleUnregisterIdle(EventBase* base, const IdleId& idleIdPtr)
+    {
+        if(base && idleIdPtr)
+            base->getImp()->unregisterIdle(idleIdPtr);
+    }
+
+    void handleUpdateIdle(EventBase* base, const IdleId& idleIdPtr)
+    {
+        if(base && idleIdPtr)
+            base->getImp()->updateIdle(idleIdPtr);
+    }
+
+    void TcpConn::addIdleCB(int idle_ms, const TcpCallBack& cb)
+    {
+        if(m_channel && getBase())
+        {
+            m_idleIds.push_back(
+                getBase()->getImp()->registerIdle(idle_ms, shared_from_this(), cb)
+            );
+        }   
+    }
+
+    void TcpConn::_reconnect()
+    {
+        auto conn = shared_from_this();
+        EventBase* base = getBase();
+        if(!base)
+        {
+            ERROR("TcpConn::_reconnect: base is null");
+            return;
+        }
+
+        // 添加到重连集合中
+        {
+            std::lock_guard<std::mutex> lock(base->getImp()->m_reconnectMutex);
+            base->getImp()->m_reconnectConns.insert(conn);
+        }
+
+        // 计算重连间隔
+        int64_t now_ms = utils::timeMilli();
+        int64_t interval = m_reconnectInterval_ms - (now_ms - m_connectedTime_ms);
+        interval = std::max(interval, 0L);
+
+        INFO("TcpConn reconnect scheduled: interval=%lld ms", interval);
+
+        // 注册重连任务
+        base->runAfter(interval, [this, conn, base]() {
+            // 从重连任务中移除
+            {
+                std::lock_guard<std::mutex> lock(base->getImp()->m_reconnectMutex);
+                base->getImp()->m_reconnectConns.erase(conn);
+            }
+
+            // 执行重连
+            _connect(base, m_destHost, static_cast<unsigned short>(m_destPort), m_connectTimeout_ms, m_localIp);
+        });
+
+        // 清理当前的Channel
+        Channel* ch = nullptr;
+        {
+            std::lock_guard<std::mutex> lock(m_ChannelMutex);
+            ch = m_channel;
+            m_channel = nullptr;
+        }
+        delete ch;
+    }
 }   // namespace handy

@@ -20,10 +20,6 @@ namespace handy
     using MsgCallBack = std::function<void(const TcpConnPtr&, const Slice&)>;
     // 带返回值的消息回调函数类型定义
     using RetMsgCallBack = std::function<std::string(const TcpConnPtr&, const std::string&)>;
-    // 空闲回调ID类型定义
-    using IdleId = uint64_t;
-    // 定时器ID类型定义
-    using TimerId = uint64_t;
 
     /**
      * @class TcpConn

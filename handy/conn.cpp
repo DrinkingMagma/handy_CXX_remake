@@ -14,7 +14,7 @@ namespace handy
         m_base(nullptr),
         m_channel(nullptr),
         m_state(State::INVALID),
-        m_destPort(0),
+        m_destPort(-1),
         m_connectTimeout_ms(0),
         m_reconnectInterval_ms(-1),
         m_connectedTime_ms(0),
@@ -196,7 +196,7 @@ namespace handy
         for(const auto& idleId : m_idleIds)
         {
             if(m_base)
-                handyUnregisterIdle(m_base, idleId);
+                handleUnregisterIdle(m_base, idleId);
         }
         m_idleIds.clear();
 
@@ -252,7 +252,7 @@ namespace handy
             else if(rd == -1 && (errno == EAGAIN || errno == EWOULDBLOCK))
             {
                 for(const auto& idleId : m_idleIds)
-                    handyUpdateIdle(m_base, idleId);
+                    handleUpdateIdle(m_base, idleId);
 
                 {
                     std::lock_guard<std::mutex> lock(m_callBacksMutex);
@@ -513,27 +513,6 @@ namespace handy
         }
     }
 
-    void TcpConn::addIdleCB(int idle_ms, const TcpCallBack& cb)
-    {
-        if(!m_base || idle_ms <= 0)
-            return;
-
-        TcpConnPtr conn = shared_from_this();
-
-        IdleId id = m_base->runAfter(idle_ms, [conn, idle_ms, cb]()
-            {
-                // 检查连接是否仍然活跃
-                if(conn->getState() == State::CONNECTED)
-                {
-                    cb(conn);
-                    // 重新注册空闲回调
-                    conn->addIdleCB(idle_ms, cb);
-                }
-            });
-        
-        m_idleIds.push_back(id);
-    }
-
     void TcpConn::onMsg(std::unique_ptr<CodecBase> codec, const MsgCallBack& cb)
     {
         std::lock_guard<std::mutex> lock(m_callBacksMutex);
@@ -587,36 +566,6 @@ namespace handy
         {
             ch->close();
             delete ch;
-        }
-    }
-
-    void TcpConn::_reconnect()
-    {
-        if(m_destPort <= 0 || !m_base || m_base->exited())
-            return;
-
-        int interval_ms;
-        {
-            std::lock_guard<std::mutex> lock(m_intervalMutex);
-            interval_ms = m_reconnectInterval_ms;
-        }
-
-        TcpConnPtr conn = shared_from_this();
-        if(interval_ms == 0)
-        {
-            m_base->safeCall([conn]()
-            {
-                conn->_connect(conn->m_base, conn->m_destHost, 
-                    conn->m_destPort, conn->m_connectTimeout_ms, conn->m_localIp);
-            });
-        }
-        else
-        {
-            m_base->runAfter(interval_ms, [conn]()
-            {
-                conn->_connect(conn->m_base, conn->m_destHost, 
-                    conn->m_destPort, conn->m_connectTimeout_ms, conn->m_localIp);
-            });
         }
     }
 
