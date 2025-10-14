@@ -22,23 +22,23 @@
 
 #### 3. 事件循环核心 (难度: ★★★☆☆)
 
-- [ ] event_base.h/event_base.cpp
-  - [ ] 事件循环基类实现（EventBase 核心逻辑）
-  - [ ] 定时器管理（runAfter/runAt/cancel，参考 timer.cpp）
+- [x] event_base.h/event_base.cpp
+  - [x] 事件循环基类实现（EventBase 核心逻辑）
+  - [x] 定时器管理（runAfter/runAt/cancel，参考 timer.cpp）
   - [ ] 信号处理（Signal::signal，参考示例中的信号处理）
-- [ ] poller.h/poller.cpp
-  - [ ] 跨平台 I/O 多路复用封装
-    - [ ] Linux: epoll（参考 raw-examples/epoll.cpp）
-    - [ ] MacOS: kqueue（参考 raw-examples/kqueue.cpp）
-- [ ] port_posix.h/port_posix.cpp
-  - [ ] 平台相关系统调用封装（兼容 Linux/MacOS）
+- [x] poller.h/poller.cpp
+  - [x] 跨平台 I/O 多路复用封装
+    - [x] Linux: epoll（参考 raw-examples/epoll.cpp）
+    - [x] MacOS: kqueue（参考 raw-examples/kqueue.cpp）
+- [x] port_posix.h/port_posix.cpp
+  - [x] 平台相关系统调用封装（兼容 Linux/MacOS）
 
 #### 4. 网络连接基础 (难度: ★★★☆☆)
 
-- [ ] conn.h/conn.cpp
-  - [ ] TCP 连接基类（TcpConn，参考 echo.cpp 连接逻辑）
-  - [ ] 连接状态管理（Connected/Closed 等状态处理）
-  - [ ] 数据发送/接收缓冲区（参考 Buffer 类实现）
+- [x] conn.h/conn.cpp
+  - [x] TCP 连接基类（TcpConn，参考 echo.cpp 连接逻辑）
+  - [x] 连接状态管理（Connected/Closed 等状态处理）
+  - [x] 数据发送/接收缓冲区（参考 Buffer 类实现）
 - [x] net.h/net.cpp
   - [x] 地址解析、套接字操作封装
   - [ ] TCP 服务器基类（TcpServer，参考 echo.cpp 服务器实现）
@@ -63,9 +63,9 @@
 
 #### 7. 扩展模块 (难度: ★★★☆☆)
 
-- [ ] threads.h/threads.h
-  - [ ] 线程池实现
-  - [ ] 半同步半异步模式（HSHA）支持（参考 hsha.cpp/udp-hsha.cpp）
+- [x] threads.h/threads.h
+  - [x] 线程池实现
+  - [x] 半同步半异步模式（HSHA）支持（参考 hsha.cpp/udp-hsha.cpp）
 - [ ] stat-svr.h/stat-svr.cpp
   - [ ] 状态监控服务器（参考 stat.cpp）
   - [ ] 页面展示接口（onPage 函数实现）
