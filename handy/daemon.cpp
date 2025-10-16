@@ -4,42 +4,48 @@
 */
 
 #include "daemon.h"
+#include "utils.h"
 #include <cstring>
 #include <fcntl.h>
 #include <unistd.h>
+#include <cstdlib>
+#include <unistd.h>
+#include <map>
+#include <mutex>
 
 namespace handy
 {
-    namespace
-    {
-        /**
-         * @brief 作用域结束时自动执行清理操作的辅助类
-        */
-        class ExitCaller
-        {
-            public:
-                /**
-                 * @brief 构造函数，存储要执行的清理函数
-                 * @param functor 清理函数对象
-                */
-                explicit ExitCaller(std::function<void()>&& functor)
-                    : m_functor(std::move(functor)) {}
+    // delete for utils.h have same ExitCaller class
+    // namespace
+    // {
+    //     /**
+    //      * @brief 作用域结束时自动执行清理操作的辅助类
+    //     */
+    //     class ExitCaller
+    //     {
+    //         public:
+    //             /**
+    //              * @brief 构造函数，存储要执行的清理函数
+    //              * @param functor 清理函数对象
+    //             */
+    //             explicit ExitCaller(std::function<void()>&& functor)
+    //                 : m_functor(std::move(functor)) {}
 
-                /**
-                 * @brief 析构函数，执行清理操作
-                */
-                ~ExitCaller() { m_functor(); }
+    //             /**
+    //              * @brief 析构函数，执行清理操作
+    //             */
+    //             ~ExitCaller() { m_functor(); }
 
-                // 禁止拷贝和移动
-                ExitCaller(const ExitCaller&) = delete;
-                ExitCaller& operator=(const ExitCaller&) = delete;
-                ExitCaller(ExitCaller&&) = delete;
-                ExitCaller& operator=(ExitCaller&&) = delete;
-            private:
-                // 存储的清理函数
-                std::function<void()> m_functor;
-        };
-    }   // namespace
+    //             // 禁止拷贝和移动
+    //             ExitCaller(const ExitCaller&) = delete;
+    //             ExitCaller& operator=(const ExitCaller&) = delete;
+    //             ExitCaller(ExitCaller&&) = delete;
+    //             ExitCaller& operator=(ExitCaller&&) = delete;
+    //         private:
+    //             // 存储的清理函数
+    //             std::function<void()> m_functor;
+    //     };
+    // }   // namespace
 
     int Daemon::_writePidFile(const char* pidFilePath)
     {
@@ -85,6 +91,14 @@ namespace handy
                 pidFilePath, errno, strerror(errno));
             return -1;
         }
+
+        // 强制刷新数据到磁盘，确保写入生效
+        if (fsync(lfp) < 0) {
+            fprintf(stderr, "Fsync pid file failed: %s\n", strerror(errno));
+            return -1;
+        }
+
+        // fprintf(stdout, "Write pid(%s) to pid file(%s) success\n", str, pidFilePath);
 
         return 0;
     }
@@ -160,6 +174,7 @@ namespace handy
             }
             // 进程不存在，清理旧的PID文件
             unlink(pidFilePath);
+            fprintf(stderr, "Daemon is not running, but pid file(%s) exists, remove it\n", pidFilePath);
         }
 
         // 检查当前是否已经是守护进程
@@ -238,11 +253,18 @@ namespace handy
             close(stdinFd);
             close(stdoutFd);
             close(stderrFd);
+            fprintf(stderr, "Write pid to pid file(%s) failed\n", pidFilePath);
             return ret;
         }
 
+        fprintf(stderr, "Start daemon process, pid=%d\n", getpid());
+
         // 注册进程退出时删除PID文件的清理函数
-        static ExitCaller del([pidFilePath]() { unlink(pidFilePath); });
+        static ExitCaller del([pidFilePath]() { unlink(pidFilePath); fprintf(stderr, "Delete pid file(%s) when exit\n", pidFilePath); });
+
+        // while (true) {
+        //     sleep(3600);  // 阻塞进程，避免退出
+        // }
 
         return 0;
     }
@@ -364,7 +386,10 @@ namespace handy
         {
             ret = stop(pidFilePath);
             if(ret == 0)
+            {
+                fprintf(stdout, "Stop daemon process successfully\n");
                 exit(0);
+            }
         }
         else if(strcasecmp(cmd, "restart") == 0)
         {
@@ -400,5 +425,77 @@ namespace handy
         {
             return;
         }
+
+        // 子进程，等待父进程退出
+        while (true)
+        {
+            if(kill(parentPid, 0) < 0)
+            {
+                if(errno == ESRCH)
+                {
+                    break;
+                }
+                const char* msg = utils::format("Wait parent process(pid=%d) exit failed: errno=%d, msg=%s\n", parentPid, errno, strerror(errno)).c_str();
+                write(STDERR_FILENO, msg, strlen(msg));
+                _exit(1);
+            }
+            usleep(10 * 1000); // 10ms
+        }
+
+        // 执行新程序
+        execvp(argv[0], const_cast<char* const*>(argv));
+
+        // 若存在返回，说明执行失败
+        fprintf(stderr, "Execute new program(%s) failed: errno=%d, msg=%s\n", argv[0], errno, strerror(errno));
+        _exit(1);
     }
+
+    namespace
+    {
+        // 存储信号处理函数的映射表
+        std::map<int, std::function<void()>> signalHandlers;
+        // 保护型号处理函数映射表的互斥锁
+        std::mutex signalHandlersMutex;
+    } // namespace
+
+    void Signal::_signalHandler(int sig)
+    {
+        std::lock_guard<std::mutex> lock(signalHandlersMutex);
+        auto it = signalHandlers.find(sig);
+        if(it != signalHandlers.end() && it->second)
+        {
+            try
+            {
+                it->second();
+            }
+            catch(...)
+            {
+                // 捕获所有异常，防止信号处理函数抛出异常导致程序终止
+                fprintf(stderr, "Exception caught in signal handler for signal(%d)\n", sig);
+            }
+        }
+    }
+
+    void Signal::signal(int sig, const std::function<void()>& handler)
+    {
+        std::lock_guard<std::mutex> lock(signalHandlersMutex);
+
+        // 保存新的信号处理函数
+        signalHandlers[sig] = handler;
+
+        // 设置信号处理函数
+        struct sigaction sa;
+        std::memset(&sa, 0, sizeof(sa));
+        sa.sa_handler = &Signal::_signalHandler;
+        sigemptyset(&sa.sa_mask);
+        // 不使用SA_RESTART，避免中断系统调用后自动重启
+        sa.sa_flags = 0;
+
+        if(sigaction(sig, &sa, nullptr) < 0)
+        {
+            fprintf(stderr, "Set signal handler for signal(%d) failed: errno=%d, msg=%s\n", sig, errno, strerror(errno));
+            signalHandlers.erase(sig);
+        }
+    }
+    
 }   // namespace handy

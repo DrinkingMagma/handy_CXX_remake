@@ -1,0 +1,87 @@
+[2025-10-16 19:21:59.752] [INFO] [daemon_test.cpp:28 initTestLogger] === daemon_test 测试开始 ===
+[2025-10-16 19:21:59.752] [DEBUG] [daemon_test.cpp:191 test_get_pid_from_file] === 开始测试 getPidFromFile 函数 ===
+[2025-10-16 19:21:59.752] [DEBUG] [daemon_test.cpp:197 test_get_pid_from_file] 测试1（文件不存在）：返回值=-1（预期-1，通过）
+[2025-10-16 19:21:59.752] [DEBUG] [daemon_test.cpp:210 test_get_pid_from_file] 测试2（合法PID文件）：返回值=26250（预期26250，通过）
+[2025-10-16 19:21:59.752] [DEBUG] [daemon_test.cpp:223 test_get_pid_from_file] 测试3（非法内容）：返回值=-1（预期-1，通过）
+[2025-10-16 19:21:59.752] [DEBUG] [daemon_test.cpp:229 test_get_pid_from_file] === getPidFromFile 函数测试结束 ===
+
+[2025-10-16 19:21:59.752] [DEBUG] [daemon_test.cpp:54 test_start] === 开始测试 start 功能 ===
+[2025-10-16 19:22:00.753] [DEBUG] [daemon_test.cpp:82 test_start] 启动后PID文件检查：存在（PID=26253）
+[2025-10-16 19:22:00.753] [DEBUG] [daemon_test.cpp:83 test_start] 守护进程存活检查：存活
+[2025-10-16 19:22:00.763] [DEBUG] [daemon_test.cpp:91 test_start] start功能测试：通过
+[2025-10-16 19:22:00.763] [DEBUG] [daemon_test.cpp:92 test_start] === start 功能测试结束 ===
+
+[2025-10-16 19:22:00.763] [DEBUG] [daemon_test.cpp:99 test_stop] === 开始测试 stop 功能 ===
+[2025-10-16 19:22:00.764] [ERROR] [daemon_test.cpp:110 test_stop] 启动守护进程失败，无法测试stop功能
+[2025-10-16 19:22:00.764] [DEBUG] [daemon_test.cpp:141 test_restart] === 开始测试 restart 功能 ===
+[2025-10-16 19:22:00.764] [ERROR] [daemon_test.cpp:152 test_restart] 启动初始守护进程失败，无法测试restart功能
+[2025-10-16 19:22:00.764] [DEBUG] [daemon_test.cpp:291 test_start_protection] === 开始测试 重复启动防护 功能 ===
+[2025-10-16 19:22:00.766] [ERROR] [daemon_test.cpp:110 test_stop] 启动守护进程失败，无法测试stop功能
+[2025-10-16 19:22:00.766] [DEBUG] [daemon_test.cpp:141 test_restart] === 开始测试 restart 功能 ===
+[2025-10-16 19:22:00.766] [DEBUG] [daemon_test.cpp:324 test_start_protection] 重复启动返回值检查：失败（符合预期）
+[2025-10-16 19:22:00.766] [DEBUG] [daemon_test.cpp:327 test_start_protection] 重复启动防护功能测试：通过
+[2025-10-16 19:22:00.766] [DEBUG] [daemon_test.cpp:328 test_start_protection] === 重复启动防护 功能测试结束 ===
+
+[2025-10-16 19:22:00.766] [DEBUG] [daemon_test.cpp:236 test_signal_handler] === 开始测试 signal 处理功能 ===
+[2025-10-16 19:22:00.767] [ERROR] [daemon_test.cpp:152 test_restart] 启动初始守护进程失败，无法测试restart功能
+[2025-10-16 19:22:00.767] [DEBUG] [daemon_test.cpp:291 test_start_protection] === 开始测试 重复启动防护 功能 ===
+[2025-10-16 19:22:00.767] [ERROR] [daemon_test.cpp:303 test_start_protection] 第一次启动失败，无法测试重复启动防护
+[2025-10-16 19:22:00.767] [DEBUG] [daemon_test.cpp:236 test_signal_handler] === 开始测试 signal 处理功能 ===
+[2025-10-16 19:22:00.768] [ERROR] [daemon_test.cpp:152 test_restart] 启动初始守护进程失败，无法测试restart功能
+[2025-10-16 19:22:00.768] [DEBUG] [daemon_test.cpp:291 test_start_protection] === 开始测试 重复启动防护 功能 ===
+[2025-10-16 19:22:00.770] [DEBUG] [daemon_test.cpp:155 test_restart] 初始守护进程PID：26275
+[2025-10-16 19:22:00.770] [DEBUG] [daemon_test.cpp:173 test_restart] 重启后新PID：-1（旧PID：26275）
+[2025-10-16 19:22:00.770] [DEBUG] [daemon_test.cpp:174 test_restart] 旧进程停止检查：未停止
+[2025-10-16 19:22:00.770] [DEBUG] [daemon_test.cpp:175 test_restart] 新进程存活检查：未存活
+[2025-10-16 19:22:00.770] [DEBUG] [daemon_test.cpp:183 test_restart] restart功能测试：失败
+[2025-10-16 19:22:00.770] [DEBUG] [daemon_test.cpp:184 test_restart] === restart 功能测试结束 ===
+
+[2025-10-16 19:22:00.770] [DEBUG] [daemon_test.cpp:291 test_start_protection] === 开始测试 重复启动防护 功能 ===
+[2025-10-16 19:22:00.771] [ERROR] [daemon_test.cpp:303 test_start_protection] 第一次启动失败，无法测试重复启动防护
+[2025-10-16 19:22:00.771] [DEBUG] [daemon_test.cpp:236 test_signal_handler] === 开始测试 signal 处理功能 ===
+[2025-10-16 19:22:00.771] [ERROR] [daemon_test.cpp:303 test_start_protection] 第一次启动失败，无法测试重复启动防护
+[2025-10-16 19:22:00.771] [DEBUG] [daemon_test.cpp:236 test_signal_handler] === 开始测试 signal 处理功能 ===
+[2025-10-16 19:22:00.773] [DEBUG] [daemon_test.cpp:173 test_restart] 重启后新PID：-1（旧PID：26275）
+[2025-10-16 19:22:00.773] [DEBUG] [daemon_test.cpp:174 test_restart] 旧进程停止检查：未停止
+[2025-10-16 19:22:00.773] [DEBUG] [daemon_test.cpp:175 test_restart] 新进程存活检查：未存活
+[2025-10-16 19:22:00.773] [DEBUG] [daemon_test.cpp:183 test_restart] restart功能测试：失败
+[2025-10-16 19:22:00.773] [DEBUG] [daemon_test.cpp:184 test_restart] === restart 功能测试结束 ===
+
+[2025-10-16 19:22:00.773] [DEBUG] [daemon_test.cpp:291 test_start_protection] === 开始测试 重复启动防护 功能 ===
+[2025-10-16 19:22:00.774] [ERROR] [daemon_test.cpp:303 test_start_protection] 第一次启动失败，无法测试重复启动防护
+[2025-10-16 19:22:00.774] [DEBUG] [daemon_test.cpp:236 test_signal_handler] === 开始测试 signal 处理功能 ===
+[2025-10-16 19:22:01.766] [DEBUG] [daemon_test.cpp:269 test_signal_handler] 向守护进程（PID=26291）发送SIGUSR1信号
+[2025-10-16 19:22:01.767] [DEBUG] [daemon_test.cpp:269 test_signal_handler] 向守护进程（PID=26291）发送SIGUSR1信号
+[2025-10-16 19:22:01.771] [DEBUG] [daemon_test.cpp:269 test_signal_handler] 向守护进程（PID=26291）发送SIGUSR1信号
+[2025-10-16 19:22:01.772] [DEBUG] [daemon_test.cpp:269 test_signal_handler] 向守护进程（PID=26291）发送SIGUSR1信号
+[2025-10-16 19:22:01.774] [DEBUG] [daemon_test.cpp:269 test_signal_handler] 向守护进程（PID=26291）发送SIGUSR1信号
+[2025-10-16 19:22:02.767] [DEBUG] [daemon_test.cpp:279 test_signal_handler] 信号处理后进程状态：已退出
+[2025-10-16 19:22:02.767] [DEBUG] [daemon_test.cpp:280 test_signal_handler] 信号处理后PID文件：未删除
+[2025-10-16 19:22:02.767] [DEBUG] [daemon_test.cpp:283 test_signal_handler] signal处理功能测试：失败
+[2025-10-16 19:22:02.767] [DEBUG] [daemon_test.cpp:284 test_signal_handler] === signal 处理功能测试结束 ===
+
+[2025-10-16 19:22:02.767] [INFO] [daemon_test.cpp:46 destroyTestLogger] === daemon_test 测试结束 ===
+[2025-10-16 19:22:02.768] [DEBUG] [daemon_test.cpp:279 test_signal_handler] 信号处理后进程状态：已退出
+[2025-10-16 19:22:02.768] [DEBUG] [daemon_test.cpp:280 test_signal_handler] 信号处理后PID文件：已删除
+[2025-10-16 19:22:02.768] [DEBUG] [daemon_test.cpp:283 test_signal_handler] signal处理功能测试：通过
+[2025-10-16 19:22:02.768] [DEBUG] [daemon_test.cpp:284 test_signal_handler] === signal 处理功能测试结束 ===
+
+[2025-10-16 19:22:02.768] [INFO] [daemon_test.cpp:46 destroyTestLogger] === daemon_test 测试结束 ===
+[2025-10-16 19:22:02.771] [DEBUG] [daemon_test.cpp:279 test_signal_handler] 信号处理后进程状态：已退出
+[2025-10-16 19:22:02.771] [DEBUG] [daemon_test.cpp:280 test_signal_handler] 信号处理后PID文件：已删除
+[2025-10-16 19:22:02.771] [DEBUG] [daemon_test.cpp:283 test_signal_handler] signal处理功能测试：通过
+[2025-10-16 19:22:02.771] [DEBUG] [daemon_test.cpp:284 test_signal_handler] === signal 处理功能测试结束 ===
+
+[2025-10-16 19:22:02.771] [INFO] [daemon_test.cpp:46 destroyTestLogger] === daemon_test 测试结束 ===
+[2025-10-16 19:22:02.772] [DEBUG] [daemon_test.cpp:279 test_signal_handler] 信号处理后进程状态：已退出
+[2025-10-16 19:22:02.772] [DEBUG] [daemon_test.cpp:280 test_signal_handler] 信号处理后PID文件：已删除
+[2025-10-16 19:22:02.772] [DEBUG] [daemon_test.cpp:283 test_signal_handler] signal处理功能测试：通过
+[2025-10-16 19:22:02.772] [DEBUG] [daemon_test.cpp:284 test_signal_handler] === signal 处理功能测试结束 ===
+
+[2025-10-16 19:22:02.772] [INFO] [daemon_test.cpp:46 destroyTestLogger] === daemon_test 测试结束 ===
+[2025-10-16 19:22:02.774] [DEBUG] [daemon_test.cpp:279 test_signal_handler] 信号处理后进程状态：已退出
+[2025-10-16 19:22:02.774] [DEBUG] [daemon_test.cpp:280 test_signal_handler] 信号处理后PID文件：已删除
+[2025-10-16 19:22:02.774] [DEBUG] [daemon_test.cpp:283 test_signal_handler] signal处理功能测试：通过
+[2025-10-16 19:22:02.774] [DEBUG] [daemon_test.cpp:284 test_signal_handler] === signal 处理功能测试结束 ===
+
+[2025-10-16 19:22:02.774] [INFO] [daemon_test.cpp:46 destroyTestLogger] === daemon_test 测试结束 ===
