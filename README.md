@@ -25,7 +25,7 @@
 - [x] event_base.h/event_base.cpp
   - [x] 事件循环基类实现（EventBase 核心逻辑）
   - [x] 定时器管理（runAfter/runAt/cancel，参考 timer.cpp）
-  - [ ] 信号处理（Signal::signal，参考示例中的信号处理）
+  - [x] 信号处理（Signal::signal，参考示例中的信号处理）
 - [x] poller.h/poller.cpp
   - [x] 跨平台 I/O 多路复用封装
     - [x] Linux: epoll（参考 raw-examples/epoll.cpp）
