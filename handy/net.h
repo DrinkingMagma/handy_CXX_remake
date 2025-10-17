@@ -136,6 +136,12 @@ namespace handy
             */
             explicit Ipv4Addr(unsigned short port = 0);
 
+            // /**
+            //  * @brief 构造函数
+            //  * @note 用于外部使用默认构造函数
+            // */
+            // Ipv4Addr() { Ipv4Addr(0); }
+
             /**
              * @brief 通过sockaddr_in结构体初始化IPv4地址
              * @param addr 已初始化的sockaddr_in结构体
@@ -351,6 +357,12 @@ namespace handy
              * @note 用于按照m_exp扩展缓冲区
             */
             void makeRoom();
+
+            /**
+             * @brief 确保缓冲区有足够空间来存储指定长度的数据
+             * @return char* 当前最后有效数据的位置指针
+            */
+            char* makeRoom(size_t len);
 
             /**
              * @brief 更新缓冲区的实际数据长度

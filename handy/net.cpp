@@ -354,6 +354,19 @@ namespace handy
             _expand(0);
     }
 
+    char* Buffer::makeRoom(size_t len)
+    {
+        std::lock_guard<std::mutex> lock(*m_mutex);
+        if(m_e + len > m_cap)
+        {
+            if(size() + len < m_exp / 2)
+                _moveHead();
+            else
+                _expand(len);
+        }
+        return end();
+    }
+
     void Buffer::addSize(size_t len)
     {
         std::lock_guard<std::mutex> lock(*m_mutex);
