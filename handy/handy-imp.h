@@ -5,15 +5,16 @@
 #include "codec.h"
 #include "threads.h"
 #include "non_copy_able.h"
+#include <type_traits>  // 提供 std::is_default_constructible、std::is_abstract 等
 
 namespace handy
 {
     class Channel;          // 事件通道抽象类
     class TcpConn;    // TCP连接抽象类
     class TCPServer;        // TCP服务器抽象类
-    class IdleIdImp;        // 空闲资源ID实现类
+    struct IdleIdImp;        // 空闲资源ID实现结构体
     struct EventsImp;        // 事件实现结构体
-    struct EventBase;        // 事件循环基类结构体
+    class EventBase;        // 事件循环基类结构体
     typedef std::unique_ptr<IdleIdImp> IdleId;      // 空闲资源ID的智能指针类型
     typedef std::pair<int64_t, int64_t> TimerId;    // 定时任务ID类型<超时时间戳，序列号（自增整数）>
 
@@ -48,11 +49,11 @@ namespace handy
             T& context()
             {
                 // 编译器检查：确保T有默认构造函数（C++及以上支持）
-                static_assert<std::is_default_constructible<T>::value, 
-                                "Context type T must have a default constructor">;
+                static_assert(std::is_default_constructible<T>::value, 
+                                "Context type T must have a default constructor");
                 // 获取或创建指定类型的上下文(避免创建抽象类实例)
-                static_assert<!std::is_abstract<T>::value, 
-                                "Context type T must not be an abstract class">;
+                static_assert(!std::is_abstract<T>::value, 
+                                "Context type T must not be an abstract class");
                 
                 // 第一重检查：无锁读取当前上下文指针（内存序：acquire，确保读取到最新值）
                 void* currentCtx = m_ctx.load(std::memory_order_acquire);

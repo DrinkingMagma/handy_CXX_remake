@@ -12,6 +12,8 @@
 #include "non_copy_able.h"
 #include <vector>
 #include <thread>
+#include <condition_variable>
+#include <list>
 
 namespace handy 
 {

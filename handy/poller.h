@@ -26,7 +26,7 @@ namespace handy
              * @brief 构造函数
              * @details 初始化最后活跃事件索引，生成唯一的轮询器ID（线程安全）
             */
-            PollerBase() : m_lastActive(-1), m_id(globalId++){}
+            PollerBase() : m_id(globalId++), m_lastActive(-1){}
 
             /**
              * @brief 析构函数（纯虚函数）
