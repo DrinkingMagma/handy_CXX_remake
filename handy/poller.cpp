@@ -14,6 +14,8 @@
 
 namespace handy
 {
+    std::atomic<int64_t> handy::PollerBase::globalId(0); 
+    
     #ifdef OS_LINUX
         /**
          * @brief Linux平台基于epoll实现的事件轮询器

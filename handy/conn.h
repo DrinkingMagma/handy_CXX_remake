@@ -16,8 +16,6 @@ namespace handy
     using TcpConnPtr = std::shared_ptr<TcpConn>;
     // TCP回调函数类型定义
     using TcpCallBack = std::function<void(const TcpConnPtr&)>;
-    // 消息回调函数类型定义
-    using MsgCallBack = std::function<void(const TcpConnPtr&, const Slice&)>;
     // 带返回值的消息回调函数类型定义
     using RetMsgCallBack = std::function<std::string(const TcpConnPtr&, const std::string&)>;
 
@@ -65,7 +63,7 @@ namespace handy
                                                 int timeout_ms = 0, const std::string& localIp = "")
             {
                 TcpConnPtr conn(std::make_shared<C>());
-                conn->connect(base, destHost, destPort, timeout_ms, localIp);
+                conn->_connect(base, destHost, destPort, timeout_ms, localIp);
                 return conn;
             }
 
@@ -287,8 +285,8 @@ namespace handy
             mutable std::mutex m_ChannelMutex;      // 保护m_channel的互斥锁
             Buffer m_inputBuffer;                   // 输入缓冲区
             Buffer m_outputBuffer;                  // 输出缓冲区
-            Ipv4Addr m_local;                       // 本地地址
-            Ipv4Addr m_peer;                        // 对端地址
+            Ipv4Addr m_local = Ipv4Addr(0);                       // 本地地址
+            Ipv4Addr m_peer = Ipv4Addr(0);                        // 对端地址
             State m_state;                          // 连接状态
             mutable std::mutex m_stateMutex;        // 保护m_state的互斥锁
             TcpCallBack m_readCB;                   // 读回调函数
@@ -470,7 +468,7 @@ namespace handy
         private:
             EventBase* m_base;                      // 事件循环对象
             EventBases* m_bases;                    // 事件循环对象组
-            Ipv4Addr m_addr;                        // 绑定的服务器地址
+            Ipv4Addr m_addr = Ipv4Addr(0);                        // 绑定的服务器地址
             Channel* m_listenChannel;               // 监听通道
             mutable std::mutex m_ChannelMutex;      // 监听通道的互斥锁
             TcpCallBack m_stateCB;                  // 连接状态回调函数

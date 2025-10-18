@@ -109,9 +109,9 @@ namespace handy
             buf.addSize(static_cast<size_t>(rn));
             TRACE("Udp server(fd=%d) recvfrom %ld bytes from %s", fd, rn, Ipv4Addr(remoteAddr).toString().c_str());
 
-            if(m_msgCallback)
+            if(m_serverMsgCallback)
             {
-                m_msgCallback(shared_from_this(), buf, Ipv4Addr(remoteAddr));
+                m_serverMsgCallback(shared_from_this(), buf, Ipv4Addr(remoteAddr));
             }
         });
 
@@ -253,9 +253,9 @@ namespace handy
             TRACE("UDP connection(fd=%d) read %ld bytes from %s", fd, rn, conn->m_peer.toString().c_str());
             input.addSize(static_cast<size_t>(rn));
 
-            if(conn->m_msgCallback)
+            if(conn->m_udpMsgCallback)
             {
-                conn->m_msgCallback(conn, input);
+                conn->m_udpMsgCallback(conn, input);
             }
         });
 

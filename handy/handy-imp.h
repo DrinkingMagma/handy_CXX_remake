@@ -3,7 +3,7 @@
 #include "net.h"
 #include "utils.h"
 #include "codec.h"
-#include "threads.h"
+#include "thread_pool.h"
 #include "non_copy_able.h"
 #include <type_traits>  // 提供 std::is_default_constructible、std::is_abstract 等
 
@@ -12,6 +12,7 @@ namespace handy
     class Channel;          // 事件通道抽象类
     class TcpConn;    // TCP连接抽象类
     class TCPServer;        // TCP服务器抽象类
+    class PollerBase;       // 事件轮询抽象类
     struct IdleIdImp;        // 空闲资源ID实现结构体
     struct EventsImp;        // 事件实现结构体
     class EventBase;        // 事件循环基类结构体

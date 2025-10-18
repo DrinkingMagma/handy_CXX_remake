@@ -12,8 +12,45 @@ namespace handy
     typedef std::shared_ptr<TcpConn> TcpConnPtr;   // TCP连接指针
     typedef std::shared_ptr<TCPServer> TcpServerPtr; // TCP服务器指针（管理服务器生命周期）
     typedef std::function<void(const TcpConnPtr&)> TcpCallBack; // TCP连接相关回调（如连接建立/关闭）
-    typedef std::function<void(const TcpConnPtr&, Slice)> MsgCallBack;  // 消息处理回调（接受连接与消息切片）
+    typedef std::function<void(const TcpConnPtr&, const Slice&)> MsgCallBack;  // 消息处理回调（接受连接与消息切片）
     typedef std::function<void()> Task; // 通用任务回调（无参数无返回值，用于异步任务/事件处理
+    
+    // 可重复定时器结构体（存储重读定时器的核心信息）
+    struct TimerRepeatable
+    {
+        int64_t at;             // 下一次超时时间戳（毫秒）
+        int64_t interval_ms;    // 定时器重复间隔（毫秒）
+        TimerId timerIdPair;        // 当前周期的定时器ID（用于取消）
+        Task task;              // 定时器触发时执行的任务（回调函数）
+    };
+
+    // 空闲连接节点结构体（存储单个空闲连接的管理信息）
+    struct IdleNode
+    {
+        TcpConnPtr conn;        // 空闲连接的智能指针（需确保连接不被提前释放）
+        int64_t lastUpdatedTimestamp_s;  // 最后一次活跃时间戳（单位：秒）
+        TcpCallBack cb;         // 空闲超时触发的回调函数（如关闭连接/发送心跳）
+    };
+
+    /**
+     * @brief 空闲连接ID实现结构体（封装空闲连接的列表迭代器）
+    */
+    struct IdleIdImp
+    {
+        // 空闲连接列表迭代器类型
+        using Iter = std::list<IdleNode>::iterator;
+
+        /**
+         * @brief 构造函数，初始化空闲连接ID
+         * @param lst 空闲连接列表指针（非空，生命周期需长于IdleIdImp）
+         * @param iter 列表中的迭代器（指向具体的空闲连接节点）
+        */
+        IdleIdImp(std::list<IdleNode>* lst, Iter iter)
+            : m_lst(lst), m_iter(iter) {}
+
+        std::list<IdleNode>* m_lst;     // 空闲连接列表指针
+        Iter m_iter;                    // 列表迭代器(指向当前空闲的连接节点)
+    };
 
     /**
      * @class EventBases

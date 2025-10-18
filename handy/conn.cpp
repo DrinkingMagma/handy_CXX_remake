@@ -17,9 +17,7 @@ namespace handy
         m_destPort(-1),
         m_connectTimeout_ms(0),
         m_reconnectInterval_ms(-1),
-        m_connectedTime_ms(0),
-        m_local(0u),
-        m_peer(0u) {}
+        m_connectedTime_ms(0) {}
 
     TcpConn::~TcpConn()
     {
@@ -572,7 +570,6 @@ namespace handy
     TcpServer::TcpServer(EventBases* bases) :
         m_bases(bases),
         m_listenChannel(nullptr),
-        m_addr(0u),
         m_createCB([](){ return TcpConnPtr(new TcpConn); })
         {
             m_base = bases->allocBase();

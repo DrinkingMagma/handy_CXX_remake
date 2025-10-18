@@ -1,0 +1,8 @@
+[2025-10-18 17:13:44.517] [INFO] [udp_test.cpp:28 initTestLogger] === udp_test 测试开始 ===
+[2025-10-18 17:13:44.517] [DEBUG] [udp_test.cpp:37 test_udp_server_basic] === 开始测试 UdpServer 基础功能 ===
+[2025-10-18 17:13:44.517] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2025-10-18 17:13:44.517] [ERROR] [../handy/udp.cpp:44 bind] Set reuse addr failed: errno=0, msg=Success
+[2025-10-18 17:13:44.517] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[1] created, epoll_fd=7
+[2025-10-18 17:13:44.517] [ERROR] [../handy/udp.cpp:201 createConnection] Set non-block failed: errno=0, msg=Success
+[2025-10-18 17:13:44.517] [ERROR] [udp_test.cpp:70 operator()] UdpConn 创建失败
+[2025-10-18 17:13:44.517] [INFO] [../handy/poller.cpp:97 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[1] destroying, epoll_fd=7

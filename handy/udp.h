@@ -28,7 +28,7 @@ namespace handy
              * @param conn 当前UdpConn的智能指针
              * @param buf 接收到的数据缓冲区
             */
-            using MsgCallBack = std::function<void(const UdpConn::Ptr&, Buffer)>;
+            using UdpMsgCallBack = std::function<void(const UdpConn::Ptr&, Buffer)>;
 
             /**
              * @brief 创建新的UDP连接
@@ -85,7 +85,7 @@ namespace handy
              * @brief 设置消息处理回调函数
              * @param cb 回调函数
             */
-            void onMsg(const MsgCallBack& cb) { m_msgCallback = cb; }
+            void onMsg(const UdpMsgCallBack& cb) { m_udpMsgCallback = cb; }
 
             /**
              * @brief 关闭当前UDP连接
@@ -113,7 +113,7 @@ namespace handy
             AutoContext m_ctx;                  // 自动上下文对象
             std::string m_destHost;             // 目标主机地址
             int m_destPort = 0;                 // 目标主机端口
-            MsgCallBack m_msgCallback;          // 消息处理回调函数
+            UdpMsgCallBack m_udpMsgCallback;          // 消息处理回调函数
 
             /**
              * @brief 构造函数，私有以确保只能通过createConnection方法创建
@@ -143,7 +143,7 @@ namespace handy
              * @param buf 接收到的数据缓冲区
              * @param addr 发送方地址
             */
-            using MsgCallBack = std::function<void(const UdpServer::Ptr&, Buffer, Ipv4Addr)>;
+            using ServerMsgCallBack = std::function<void(const UdpServer::Ptr&, Buffer, Ipv4Addr)>;
 
             /**
              * @brief 构造哈桑农户
@@ -220,14 +220,14 @@ namespace handy
              * @brief 设置消息处理回调函数
              * @param cb 回调函数
             */
-            void onMsg(const MsgCallBack& cb) { m_msgCallback = cb; }
+            void onMsg(const ServerMsgCallBack& cb) { m_serverMsgCallback = cb; }
         
         private:
             EventBase* m_base = nullptr;        // 关联的事件循环对象
             EventBases* m_bases = nullptr;      // 事件循环对象集合
             Ipv4Addr m_addr = Ipv4Addr(0);                    // 服务器绑定的地址
             Channel* m_channel = nullptr;       // 通道对象
-            MsgCallBack m_msgCallback;          // 消息处理回调函数
+            ServerMsgCallBack m_serverMsgCallback;          // 消息处理回调函数
     };
 
     /**
