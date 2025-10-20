@@ -39,7 +39,7 @@ namespace handy
 
         // 设置地址复用
         int r = Net::setReuseAddr(fd, true);
-        if(r != 0)
+        if(r != 1)
         {
             ERROR("Set reuse addr failed: errno=%d, msg=%s", errno, strerror(errno));
             close(fd);
@@ -50,7 +50,7 @@ namespace handy
         if(isReusePort)
         {
             r = Net::setReusePort(fd, true);
-            if(r != 0)
+            if(r != 1)
             {
                 ERROR("Set reuse port failed: errno=%d, msg=%s", errno, strerror(errno));
                 close(fd);
@@ -78,14 +78,14 @@ namespace handy
         }
 
         // 设置非阻塞模式
-        if(Net::setNonBlock(fd) != 0)
+        if(Net::setNonBlock(fd) != 1)
         {
             ERROR("Set non-block failed: errno=%d, msg=%s", errno, strerror(errno));
             close(fd);
             return errno;
         }
 
-        INFO("UDP server(fd=%s) bind to %s success", fd, m_addr.toString().c_str());
+        INFO("UDP server(fd=%d) bind to %s success", fd, m_addr.toString().c_str());
 
         // 创建通道并设置读事件回调
         m_channel = new Channel(m_base, fd, kReadEvent);
@@ -129,6 +129,7 @@ namespace handy
 
         Ptr server(new UdpServer(bases));
         int r = server->bind(host, port, isReusePort);
+
         if(r != 0)
         {
             ERROR("UdpServer bind failed: errno=%d, msg=%s", r, strerror(r));
@@ -196,7 +197,7 @@ namespace handy
         }
 
         // 设置为非阻塞模式
-        if(Net::setNonBlock(fd) != 0)
+        if(Net::setNonBlock(fd) != 1)
         {
             ERROR("Set non-block failed: errno=%d, msg=%s", errno, strerror(errno));
             ::close(fd);

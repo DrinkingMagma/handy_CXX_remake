@@ -224,7 +224,7 @@ namespace handy
         
         private:
             EventBase* m_base = nullptr;        // 关联的事件循环对象
-            EventBases* m_bases = nullptr;      // 事件循环对象集合
+            EventBases* m_bases = nullptr;      // 事件循环对象基类
             Ipv4Addr m_addr = Ipv4Addr(0);                    // 服务器绑定的地址
             Channel* m_channel = nullptr;       // 通道对象
             ServerMsgCallBack m_serverMsgCallback;          // 消息处理回调函数

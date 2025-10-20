@@ -1,5 +1,5 @@
 # 编译器与编译选项
-CXX = g++
+CXX = g++ -g
 # 编译选项：C++17标准、警告、线程支持
 CXXFLAGS = -std=c++17 -Wall -pthread
 INCLUDES = -I../handy # 头文件路径
