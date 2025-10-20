@@ -394,8 +394,12 @@ namespace handy
             */
             void handleRead()
             {
+                TRACE("Channel::handleRead: will call m_readCB");
                 if(m_readCB)
                     m_readCB();
+                else
+                    WARN("Channel::handleRead: m_readCB is null");
+                TRACE("Channel::handleRead: done call m_readCB");
             }
 
             /**
@@ -404,8 +408,12 @@ namespace handy
             */
             void handleWrite()
             {
+                TRACE("Channel::handleRead: will call m_writeCB");
                 if(m_writeCB)
                     m_writeCB();
+                else
+                    WARN("Channel::handleWrite: m_writeCB is null");
+                TRACE("Channel::handleWrite: done call m_writeCB");
             }
 
         private:

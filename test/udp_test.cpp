@@ -24,7 +24,7 @@ std::string g_testResponse = "Received: Hello UDP Test";
 // 测试辅助函数
 void initTestLogger() {
     Logger::getInstance().setLogFileName("udp_test.log");
-    Logger::getInstance().setLogLevel(Logger::LogLevel::LDEBUG);
+    Logger::getInstance().setLogLevel(Logger::LogLevel::LALL);
     INFO("=== udp_test 测试开始 ===");
 }
 
@@ -45,10 +45,12 @@ void test_udp_server_basic() {
         ERROR("UdpServer 启动失败");
         return;
     }
+    INFO("UdpServer 启动成功");
+    g_serverReady = true;
 
-    // 设置消息回调
+    // 设置消息处理回调
     server->onMsg([&](const UdpServer::Ptr& srv, Buffer buf, Ipv4Addr peer) {
-        std::string recvMsg(buf.data(), buf.size());
+        std::string recvMsg(buf.peek(), buf.size());
         DEBUG("服务器收到消息: %s 来自 %s", recvMsg.c_str(), peer.toString().c_str());
         
         if (recvMsg == g_testMsg) {
@@ -70,6 +72,7 @@ void test_udp_server_basic() {
             ERROR("UdpConn 创建失败");
             return;
         }
+        INFO("UdpConn 创建成功");
 
         conn->onMsg([&](const UdpConn::Ptr&, Buffer buf) {
             std::string resp(buf.data(), buf.size());

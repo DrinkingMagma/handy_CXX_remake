@@ -331,8 +331,8 @@ namespace handy
 
     char *Buffer::end() const
     { 
-    std::lock_guard<std::mutex> lock(*m_mutex);
-    return m_buf + m_e; 
+        std::lock_guard<std::mutex> lock(*m_mutex);
+        return m_buf + m_e; 
     }
 
     size_t Buffer::space() const
@@ -359,12 +359,12 @@ namespace handy
         std::lock_guard<std::mutex> lock(*m_mutex);
         if(m_e + len > m_cap)
         {
-            if(size() + len < m_exp / 2)
+            if(_size() + len < m_exp / 2)
                 _moveHead();
             else
                 _expand(len);
         }
-        return end();
+        return m_buf + m_e;
     }
 
     void Buffer::addSize(size_t len)

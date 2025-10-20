@@ -1,1 +1,1 @@
-make: Nothing to be done for 'all'.
+g++ -g -std=c++17 -Wall -pthread -I../handy  -o udp_test udp_test.cpp ../handy/logger.o ../handy/utils.o ../handy/conf.o ../handy/port_posix.o ../handy/net.o ../handy/codec.o ../handy/thread_pool.o ../handy/daemon.o ../handy/udp.o ../handy/event_base.o ../handy/poller.o ../handy/conn.o -pthread

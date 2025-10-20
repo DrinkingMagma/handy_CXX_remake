@@ -201,14 +201,14 @@ namespace handy
             m_lastActive = epoll_wait(m_epollFd, m_activeEvs, kMaxEvents, waitTime_ms);
             const int64_t usedTime_ms = utils::timeMilli() - startTime_ms;
 
-            TRACE("poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[%lld] epoll_wait, waitTime_ms=%d, return=%d, usedTime_ms=%d, errno=%d",
-                    static_cast<long long>(getId()), waitTime_ms, m_lastActive, usedTime_ms, errno);
+            TRACE("poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[%lld] epoll_wait, waitTime_ms=%d, m_lastActive=%d, usedTime_ms=%d",
+                    static_cast<long long>(getId()), waitTime_ms, m_lastActive, usedTime_ms);
 
             // 错误处理：排除信号中断（EINTR是正常情况）
             if(m_lastActive < 0 && errno != EINTR)
             {
                 throw std::runtime_error(
-                    utils::format("poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[%lld] epoll_wait failed, waitTime_ms=%d, usedTime_ms=%d, errno=%d, error=%s",
+                    utils::format("poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[%lld] epoll_wait failed, waitTime_ms=%d, usedTime_ms=%d, errno=%d, msg=%s",
                                     static_cast<long long>(getId()), waitTime_ms, usedTime_ms, errno, strerror(errno))
                 );
             }

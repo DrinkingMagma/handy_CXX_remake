@@ -431,6 +431,7 @@ namespace handy
     {
         try
         {
+            // 创建事件派发器内部实现
             m_imp = std::make_unique<EventsImp>(this, taskCapacity);
             m_imp->init();
         }
@@ -575,6 +576,7 @@ namespace handy
                 m_fd, errno, strerror(errno))
             );
         }
+        TRACE("Channel set non-block: fd=%d success", fd);
 
         // 生成全局唯一ID
         static std::atomic<int64_t>globalId(0);

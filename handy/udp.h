@@ -146,8 +146,8 @@ namespace handy
             using ServerMsgCallBack = std::function<void(const UdpServer::Ptr&, Buffer, Ipv4Addr)>;
 
             /**
-             * @brief 构造哈桑农户
-             * @param m_bases 事件循环对象集合智能指针
+             * @brief 构造函数，通过m_bases->allocBase()获取具体的事件循环对象
+             * @param m_bases 事件循环对象智能指针
             */
             explicit UdpServer(EventBases* m_bases);
 
