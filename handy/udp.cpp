@@ -251,8 +251,10 @@ namespace handy
         // 设置读事件回调
         conn->m_channel->onRead([conn]() 
         { 
+            TRACE("UDP connection(fd=%d) recving...");
             if(!conn->m_channel || conn->m_channel->getFd() < 0)
             {
+                WARN("conn closing: conn->m_channel=%p, conn->m_channel->getFd()=%d", conn->m_channel, conn->m_channel->getFd());
                 conn->close();
                 return;
             }
