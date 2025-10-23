@@ -15,8 +15,8 @@ namespace handy
     */
     struct EventsImp
     {
-        EventBase* m_base;          // 关联的EventBase对象（非空）
         PollerBase* m_poller;       // I/O多路复用器（epoll/kqueue）
+        EventBase* m_base;          // 关联的EventBase对象（非空）
         std::atomic<bool> m_exit; // 事件循环退出标志（原子操作，线程安全）
         int m_wakeupFds[2];          // 唤醒事件循环的管道（0：读端，1：写端）
         int m_nextTimeout_ms;          // 下一个定时器的超时时间（毫秒，用于Poller等待）
@@ -38,8 +38,8 @@ namespace handy
          * @throw std::runtime_error 唤醒管道创建失败
         */
         EventsImp(EventBase* base, int taskCap)
-            : m_base(base)
-            , m_poller(createPoller())
+            : m_poller(createPoller())
+            , m_base(base)
             , m_exit(false)
             , m_tasks(taskCap)
             , m_timerSeq(0)
@@ -69,10 +69,13 @@ namespace handy
         */
         ~EventsImp()
         {
+            TRACE("Ready to delete m_poller");
+            delete m_poller;
+            TRACE("Rm_poller have been deleted");
+
             ::close(m_wakeupFds[0]);
             ::close(m_wakeupFds[1]);
-
-            delete m_poller;
+            TRACE("readFd=%d, writeFd=%d closed", m_wakeupFds[0], m_wakeupFds[1]);
 
             std::lock_guard<std::mutex> lock(m_reconnectMutex);
             for(const auto& conn : m_reconnectConns)
@@ -91,7 +94,7 @@ namespace handy
             {
                 char buf[1024];
                 // 读取唤醒管道数据（清空管道，避免重复唤醒)
-                ssize_t r = ::read(m_wakeupFds[0], buf, sizeof(buf));
+                ssize_t r = wakeupCh->getFd() >= 0 ? ::read(wakeupCh->getFd(), buf, sizeof(buf)) : 0;
                 if(r > 0)
                 {
                     // 处理所有异步任务（捕获异常，避免单个任务崩溃影响循环）
@@ -412,7 +415,9 @@ namespace handy
             m_poller->loopOnce(autualWaitTime_ms);
 
             // 处理已超时的定时器
+            TRACE("Ready to handle timeout timers");
             handleTimeoutTimers();
+            TRACE("Timeout timers handled");
         }
 
         /**
@@ -424,6 +429,7 @@ namespace handy
             ssize_t r = ::write(m_wakeupFds[1], &dummy, 1);
             if(r != 1)
                 ERROR("write wakeup pipe error: r=%zd, errno=%d, msg=%s", r, errno, strerror(errno));
+            TRACE("write wakeup pipe(%d) success", m_wakeupFds[1]);
         }
     };
 
@@ -445,6 +451,7 @@ namespace handy
 
     EventBase::~EventBase()
     {
+        TRACE("EventBase destroying: base=%p", this);
         // unique_ptr析构时会自动调用delete释放m_imp，无需手动处理
     }
 
@@ -604,7 +611,12 @@ namespace handy
 
             // 删除Polller中的事件并关闭fd
             m_poller->removeChannel(this);
-            ::close(m_fd);
+            if(::close(m_fd) < 0)
+            {
+                WARN("Channel close failed: fd=%d, errno=%d, msg=%s",
+                    m_fd, errno, strerror(errno));
+            }
+            TRACE("Channel closed: fd=%d", m_fd);
             m_fd = -1;
 
             // 处理剩余的读事件（避免数据残留）

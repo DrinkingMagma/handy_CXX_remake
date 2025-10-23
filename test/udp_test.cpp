@@ -75,22 +75,31 @@ void test_udp_server_basic() {
         INFO("UdpConn 创建成功");
 
         conn->onMsg([&](const UdpConn::Ptr&, Buffer buf) {
-            std::string resp(buf.data(), buf.size());
+            std::string resp(buf.peek(), buf.size());
             DEBUG("客户端收到响应: %s", resp.c_str());
             if (resp == g_testResponse) {
                 g_msgReceived = true;
                 clientBase.exit();
             }
+            else
+            {
+                ERROR("resp(%s) != g_testResponse(%s)", resp.c_str(), g_testResponse.c_str());
+            }
         });
 
         conn->send(g_testMsg);
+        DEBUG("Ready to loop");
         clientBase.loop();
+        sleep(2);
+        DEBUG("Client base exiting");
     });
 
     g_serverReady = true;
     // 运行事件循环一段时间
-    base->runAfter(1000, [base]() { base->exit(); });
+    DEBUG("Server eventbase exiting");
+    base->runAfter(2000, [base]() { base->exit(); });
     base->loop();
+    DEBUG("Server eventbase exited");
     client.join();
 
     DEBUG("测试1（服务器客户端通信）：%s", (testOk && g_msgReceived) ? "通过" : "失败");
@@ -112,7 +121,7 @@ void test_udp_conn() {
     }
 
     server->onMsg([&](const UdpServer::Ptr& srv, Buffer buf, Ipv4Addr peer) {
-        std::string msg(buf.data(), buf.size());
+        std::string msg(buf.peek(), buf.size());
         DEBUG("服务器收到消息: %s", msg.c_str());
         srv->sendTo(msg, peer); // 回声服务
     });
@@ -125,7 +134,7 @@ void test_udp_conn() {
     }
 
     conn->onMsg([&](const UdpConn::Ptr&, Buffer buf) {
-        std::string resp(buf.data(), buf.size());
+        std::string resp(buf.peek(), buf.size());
         DEBUG("客户端收到回声: %s", resp.c_str());
         if (resp == g_testMsg) {
             testOk = true;
@@ -172,7 +181,7 @@ void test_hshau_server() {
         }
 
         conn->onMsg([&](const UdpConn::Ptr&, Buffer buf) {
-            std::string resp(buf.data(), buf.size());
+            std::string resp(buf.peek(), buf.size());
             DEBUG("HSHAU客户端收到: %s", resp.c_str());
             if (resp == "HSHAU: " + g_testMsg) {
                 testOk = true;

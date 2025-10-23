@@ -72,7 +72,7 @@ namespace handy
             private:
                 int m_epollFd;                           // epoll实例文件描述符
                 std::set<Channel*> m_liveChannels;   // 当前活跃Channel集合（需线程安全保护）
-                std::mutex m_channelMutex;          // 线程安全保护
+                std::recursive_mutex m_channelMutex;          // 线程安全保护
                 struct epoll_event m_activeEvs[kMaxEvents]; // 活跃事件数组
 
         };
@@ -96,12 +96,11 @@ namespace handy
             INFO("PollerEpoll::~PollerEpoll(): PollerEpoll[%lld] destroying, epoll_fd=%d",
                     static_cast<long long>(getId()), m_epollFd);
             
-            std::lock_guard<std::mutex> lock(m_channelMutex);
-            // 遍历并关闭所有活跃的Channel
-            while(!m_liveChannels.empty())
-            {
+            // 加锁保护：遍历并关闭所有活跃 Channel
+            std::lock_guard<std::recursive_mutex> lock(m_channelMutex);
+            while (!m_liveChannels.empty()) {
                 Channel* ch = *m_liveChannels.begin();
-                ch->close(); // 触发Channel自身的资源释放
+                ch->close();  // 触发 Channel 自身的资源释放
                 m_liveChannels.erase(ch);
             }
 
@@ -138,7 +137,7 @@ namespace handy
                 );
             }
 
-            std::lock_guard<std::mutex> lock(m_channelMutex);
+            std::lock_guard<std::recursive_mutex> lock(m_channelMutex);
             m_liveChannels.insert(ch);
         }
 
@@ -151,7 +150,7 @@ namespace handy
                     static_cast<long long>(getId()), static_cast<long long>(ch->getId()), ch->getFd());
 
             // ps: epoll 无需显式删除已关闭的 fd（fd 关闭后会自动从 epoll 中移除）
-            std::lock_guard<std::mutex> lock(m_channelMutex);
+            std::lock_guard<std::recursive_mutex> lock(m_channelMutex);
             m_liveChannels.erase(ch);
 
             // 清理活跃事件数组中残留的Channel指针，避免野指针

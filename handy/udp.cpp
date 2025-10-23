@@ -257,9 +257,13 @@ namespace handy
                 return;
             }
 
+            TRACE("UDP connection(fd=%d) recving...");
+
             Buffer input;
             int fd = conn->m_channel->getFd();
+            TRACE("UDP connection(fd=%d) recvfrom %s", fd, conn->m_peer.toString().c_str());
             ssize_t rn = ::read(fd, input.makeRoom(kUdpPacketSize), kUdpPacketSize);
+            TRACE("UDP connection(fd=%d) recvfrom %ld bytes from %s", fd, rn, conn->m_peer.toString().c_str());
             if(rn < 0)
             {
                 ERROR("UDP connection(fd=%d) read failed: errno=%d, msg=%s", 

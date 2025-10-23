@@ -1,236 +1,225 @@
-[2025-10-20 16:30:40.219] [INFO] [udp_test.cpp:28 initTestLogger] === udp_test 测试开始 ===
-[2025-10-20 16:30:40.219] [DEBUG] [udp_test.cpp:37 test_udp_server_basic] === 开始测试 UdpServer 基础功能 ===
-[2025-10-20 16:30:40.219] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
-[2025-10-20 16:30:40.219] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=5, writeFd=6
-[2025-10-20 16:30:40.219] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=5 success
-[2025-10-20 16:30:40.219] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[1], fd=5, events=0x1
-[2025-10-20 16:30:40.219] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=1, fd=5, events=0x1
-[2025-10-20 16:30:40.219] [INFO] [../handy/udp.cpp:89 bind] UDP server(fd=7) bind to 127.0.0.1:12345 success
-[2025-10-20 16:30:40.219] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=7 success
-[2025-10-20 16:30:40.219] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[2], fd=7, events=0x1
-[2025-10-20 16:30:40.219] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=2, fd=7, events=0x1
-[2025-10-20 16:30:40.219] [INFO] [udp_test.cpp:48 test_udp_server_basic] UdpServer 启动成功
-[2025-10-20 16:30:40.219] [TRACE] [../handy/event_base.cpp:273 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=1000 ms
-[2025-10-20 16:30:40.219] [TRACE] [../handy/event_base.cpp:380 runAt] One-shot timer registered: timerIdPair={1760949041219, 1}
-[2025-10-20 16:30:40.219] [TRACE] [../handy/event_base.cpp:389 loop] EventBase loop started: base=0xec94a0
-[2025-10-20 16:30:40.219] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[1] created, epoll_fd=8
-[2025-10-20 16:30:40.219] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=9, writeFd=10
-[2025-10-20 16:30:40.219] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=9 success
-[2025-10-20 16:30:40.219] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[3], fd=9, events=0x1
-[2025-10-20 16:30:40.219] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=3, fd=9, events=0x1
-[2025-10-20 16:30:40.219] [TRACE] [../handy/udp.cpp:241 createConnection] UDP connection(fd=11) connect to 127.0.0.1:12345 success
-[2025-10-20 16:30:40.219] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=11 success
-[2025-10-20 16:30:40.219] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[4], fd=11, events=0x1
-[2025-10-20 16:30:40.219] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=4, fd=11, events=0x1
-[2025-10-20 16:30:40.219] [INFO] [udp_test.cpp:75 operator()] UdpConn 创建成功
-[2025-10-20 16:30:40.220] [TRACE] [../handy/udp.cpp:320 send] UDP connection(fd=11) send 14 bytes to 127.0.0.1:12345 success
-[2025-10-20 16:30:40.220] [TRACE] [../handy/event_base.cpp:389 loop] EventBase loop started: base=0x7f0b41d8ddb0
-[2025-10-20 16:30:40.220] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=0, m_lastActive=0, usedTime_ms=0
-[2025-10-20 16:30:40.220] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=1000, m_lastActive=1, usedTime_ms=1
-[2025-10-20 16:30:40.220] [TRACE] [../handy/poller.cpp:231 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[2], fd=7
-[2025-10-20 16:30:40.220] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readcb
-[2025-10-20 16:30:40.220] [TRACE] [../handy/udp.cpp:102 operator()] Udp server(fd=7) recving...
-[2025-10-20 16:30:40.220] [TRACE] [../handy/udp.cpp:111 operator()] Udp server(fd=7) recvfrom 14 bytes from 127.0.0.1:44516
-[2025-10-20 16:30:40.220] [DEBUG] [udp_test.cpp:54 operator()] 服务器收到消息:  来自 127.0.0.1:44516
-[2025-10-20 16:30:40.220] [TRACE] [../handy/event_base.cpp:273 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=999 ms
-[2025-10-20 16:30:41.219] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=999, m_lastActive=0, usedTime_ms=999
-[2025-10-20 16:30:41.219] [TRACE] [../handy/event_base.cpp:393 loop] EventBase loop exited: base=0xec94a0
-[2025-10-20 16:30:41.219] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=0, m_lastActive=1, usedTime_ms=0
-[2025-10-20 16:30:41.219] [TRACE] [../handy/poller.cpp:231 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[1], fd=5
-[2025-10-20 16:30:41.219] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readcb
-[2025-10-20 16:30:50.229] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10009
-[2025-10-20 21:43:02.144] [INFO] [udp_test.cpp:28 initTestLogger] === udp_test 测试开始 ===
-[2025-10-20 21:43:02.144] [DEBUG] [udp_test.cpp:37 test_udp_server_basic] === 开始测试 UdpServer 基础功能 ===
-[2025-10-20 21:43:02.144] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
-[2025-10-20 21:43:02.144] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=5, writeFd=6
-[2025-10-20 21:43:02.144] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=5 success
-[2025-10-20 21:43:02.144] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[1], fd=5, events=0x1
-[2025-10-20 21:43:02.144] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=1, fd=5, events=0x1
-[2025-10-20 21:43:02.144] [INFO] [../handy/udp.cpp:89 bind] UDP server(fd=7) bind to 127.0.0.1:12345 success
-[2025-10-20 21:43:02.144] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=7 success
-[2025-10-20 21:43:02.144] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[2], fd=7, events=0x1
-[2025-10-20 21:43:02.144] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=2, fd=7, events=0x1
-[2025-10-20 21:43:02.144] [INFO] [udp_test.cpp:48 test_udp_server_basic] UdpServer 启动成功
-[2025-10-20 21:43:02.144] [TRACE] [../handy/event_base.cpp:273 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=1000 ms
-[2025-10-20 21:43:02.145] [TRACE] [../handy/event_base.cpp:380 runAt] One-shot timer registered: timerIdPair={1760967783144, 1}
-[2025-10-20 21:43:02.145] [TRACE] [../handy/event_base.cpp:389 loop] EventBase loop started: base=0xbd94a0
-[2025-10-20 21:43:02.145] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[1] created, epoll_fd=8
-[2025-10-20 21:43:02.145] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=9, writeFd=10
-[2025-10-20 21:43:02.145] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=9 success
-[2025-10-20 21:43:02.145] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[3], fd=9, events=0x1
-[2025-10-20 21:43:02.145] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=3, fd=9, events=0x1
-[2025-10-20 21:43:02.145] [TRACE] [../handy/udp.cpp:242 createConnection] UDP connection(fd=11) connect to 127.0.0.1:12345 success
-[2025-10-20 21:43:02.145] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=11 success
-[2025-10-20 21:43:02.145] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[4], fd=11, events=0x1
-[2025-10-20 21:43:02.145] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=4, fd=11, events=0x1
-[2025-10-20 21:43:02.145] [INFO] [udp_test.cpp:75 operator()] UdpConn 创建成功
-[2025-10-20 21:43:02.145] [TRACE] [../handy/udp.cpp:321 send] UDP connection(fd=11) send 14 bytes to 127.0.0.1:12345 success
-[2025-10-20 21:43:02.145] [TRACE] [../handy/event_base.cpp:389 loop] EventBase loop started: base=0x7f80b4763db0
-[2025-10-20 21:43:02.145] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=0, m_lastActive=0, usedTime_ms=0
-[2025-10-20 21:43:02.145] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=1000, m_lastActive=1, usedTime_ms=0
-[2025-10-20 21:43:02.145] [TRACE] [../handy/poller.cpp:231 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[2], fd=7
-[2025-10-20 21:43:02.145] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
-[2025-10-20 21:43:02.145] [TRACE] [../handy/udp.cpp:102 operator()] Udp server(fd=7) recving...
-[2025-10-20 21:43:02.145] [TRACE] [../handy/udp.cpp:111 operator()] Udp server(fd=7) recvfrom 14 bytes from 127.0.0.1:45317
-[2025-10-20 21:43:02.145] [TRACE] [../handy/udp.cpp:112 operator()] Udp server(fd=7) recvfrom �F���
-[2025-10-20 21:43:02.145] [DEBUG] [udp_test.cpp:54 operator()] 服务器收到消息:  来自 127.0.0.1:45317
-[2025-10-20 21:43:02.145] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
-[2025-10-20 21:43:02.145] [TRACE] [../handy/event_base.cpp:273 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=999 ms
-[2025-10-20 21:43:03.146] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=999, m_lastActive=0, usedTime_ms=1001
-[2025-10-20 21:43:03.146] [TRACE] [../handy/event_base.cpp:393 loop] EventBase loop exited: base=0xbd94a0
-[2025-10-20 21:43:03.146] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=0, m_lastActive=1, usedTime_ms=0
-[2025-10-20 21:43:03.146] [TRACE] [../handy/poller.cpp:231 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[1], fd=5
-[2025-10-20 21:43:03.146] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
-[2025-10-20 21:43:03.146] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
-[2025-10-20 21:43:30.407] [INFO] [udp_test.cpp:28 initTestLogger] === udp_test 测试开始 ===
-[2025-10-20 21:43:30.407] [DEBUG] [udp_test.cpp:37 test_udp_server_basic] === 开始测试 UdpServer 基础功能 ===
-[2025-10-20 21:43:30.407] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
-[2025-10-20 21:43:30.407] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=5, writeFd=6
-[2025-10-20 21:43:30.407] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=5 success
-[2025-10-20 21:43:30.407] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[1], fd=5, events=0x1
-[2025-10-20 21:43:30.407] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=1, fd=5, events=0x1
-[2025-10-20 21:43:30.407] [INFO] [../handy/udp.cpp:89 bind] UDP server(fd=7) bind to 127.0.0.1:12345 success
-[2025-10-20 21:43:30.407] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=7 success
-[2025-10-20 21:43:30.407] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[2], fd=7, events=0x1
-[2025-10-20 21:43:30.408] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=2, fd=7, events=0x1
-[2025-10-20 21:43:30.408] [INFO] [udp_test.cpp:48 test_udp_server_basic] UdpServer 启动成功
-[2025-10-20 21:43:30.408] [TRACE] [../handy/event_base.cpp:273 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=1000 ms
-[2025-10-20 21:43:30.408] [TRACE] [../handy/event_base.cpp:380 runAt] One-shot timer registered: timerIdPair={1760967811408, 1}
-[2025-10-20 21:43:30.408] [TRACE] [../handy/event_base.cpp:389 loop] EventBase loop started: base=0x8fa4a0
-[2025-10-20 21:43:30.408] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[1] created, epoll_fd=8
-[2025-10-20 21:43:30.408] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=9, writeFd=10
-[2025-10-20 21:43:30.408] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=9 success
-[2025-10-20 21:43:30.408] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[3], fd=9, events=0x1
-[2025-10-20 21:43:30.408] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=3, fd=9, events=0x1
-[2025-10-20 21:43:30.408] [TRACE] [../handy/udp.cpp:242 createConnection] UDP connection(fd=11) connect to 127.0.0.1:12345 success
-[2025-10-20 21:43:30.408] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=11 success
-[2025-10-20 21:43:30.408] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[4], fd=11, events=0x1
-[2025-10-20 21:43:30.408] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=4, fd=11, events=0x1
-[2025-10-20 21:43:30.408] [INFO] [udp_test.cpp:75 operator()] UdpConn 创建成功
-[2025-10-20 21:43:30.408] [TRACE] [../handy/udp.cpp:321 send] UDP connection(fd=11) send 14 bytes to 127.0.0.1:12345 success
-[2025-10-20 21:43:30.408] [TRACE] [../handy/event_base.cpp:389 loop] EventBase loop started: base=0x7fa87a961db0
-[2025-10-20 21:43:30.408] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=0, m_lastActive=0, usedTime_ms=0
-[2025-10-20 21:43:30.408] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=1000, m_lastActive=1, usedTime_ms=0
-[2025-10-20 21:43:30.408] [TRACE] [../handy/poller.cpp:231 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[2], fd=7
-[2025-10-20 21:43:30.408] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
-[2025-10-20 21:43:30.408] [TRACE] [../handy/udp.cpp:102 operator()] Udp server(fd=7) recving...
-[2025-10-20 21:43:30.408] [TRACE] [../handy/udp.cpp:111 operator()] Udp server(fd=7) recvfrom 14 bytes from 127.0.0.1:63786
-[2025-10-20 21:43:30.408] [TRACE] [../handy/udp.cpp:112 operator()] Udp server(fd=7) recvfrom Hello UDP Test
-[2025-10-20 21:43:30.408] [DEBUG] [udp_test.cpp:54 operator()] 服务器收到消息:  来自 127.0.0.1:63786
-[2025-10-20 21:43:30.408] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
-[2025-10-20 21:43:30.408] [TRACE] [../handy/event_base.cpp:273 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=1000 ms
-[2025-10-20 21:43:31.409] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=1000, m_lastActive=0, usedTime_ms=1001
-[2025-10-20 21:43:31.409] [TRACE] [../handy/event_base.cpp:393 loop] EventBase loop exited: base=0x8fa4a0
-[2025-10-20 21:43:31.410] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=0, m_lastActive=1, usedTime_ms=0
-[2025-10-20 21:43:31.410] [TRACE] [../handy/poller.cpp:231 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[1], fd=5
-[2025-10-20 21:43:31.410] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
-[2025-10-20 21:43:31.410] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
-[2025-10-20 21:45:19.361] [INFO] [udp_test.cpp:28 initTestLogger] === udp_test 测试开始 ===
-[2025-10-20 21:45:19.361] [DEBUG] [udp_test.cpp:37 test_udp_server_basic] === 开始测试 UdpServer 基础功能 ===
-[2025-10-20 21:45:19.361] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
-[2025-10-20 21:45:19.361] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=5, writeFd=6
-[2025-10-20 21:45:19.361] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=5 success
-[2025-10-20 21:45:19.361] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[1], fd=5, events=0x1
-[2025-10-20 21:45:19.361] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=1, fd=5, events=0x1
-[2025-10-20 21:45:19.361] [INFO] [../handy/udp.cpp:89 bind] UDP server(fd=7) bind to 127.0.0.1:12345 success
-[2025-10-20 21:45:19.361] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=7 success
-[2025-10-20 21:45:19.361] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[2], fd=7, events=0x1
-[2025-10-20 21:45:19.361] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=2, fd=7, events=0x1
-[2025-10-20 21:45:19.361] [INFO] [udp_test.cpp:48 test_udp_server_basic] UdpServer 启动成功
-[2025-10-20 21:45:19.361] [TRACE] [../handy/event_base.cpp:273 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=1000 ms
-[2025-10-20 21:45:19.361] [TRACE] [../handy/event_base.cpp:380 runAt] One-shot timer registered: timerIdPair={1760967920361, 1}
-[2025-10-20 21:45:19.361] [TRACE] [../handy/event_base.cpp:389 loop] EventBase loop started: base=0x92a4a0
-[2025-10-20 21:45:19.361] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[1] created, epoll_fd=8
-[2025-10-20 21:45:19.361] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=9, writeFd=10
-[2025-10-20 21:45:19.361] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=9 success
-[2025-10-20 21:45:19.361] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[3], fd=9, events=0x1
-[2025-10-20 21:45:19.361] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=3, fd=9, events=0x1
-[2025-10-20 21:45:19.361] [TRACE] [../handy/udp.cpp:242 createConnection] UDP connection(fd=11) connect to 127.0.0.1:12345 success
-[2025-10-20 21:45:19.361] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=11 success
-[2025-10-20 21:45:19.361] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[4], fd=11, events=0x1
-[2025-10-20 21:45:19.361] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=4, fd=11, events=0x1
-[2025-10-20 21:45:19.361] [INFO] [udp_test.cpp:75 operator()] UdpConn 创建成功
-[2025-10-20 21:45:19.362] [TRACE] [../handy/udp.cpp:321 send] UDP connection(fd=11) send 14 bytes to 127.0.0.1:12345 success
-[2025-10-20 21:45:19.362] [TRACE] [../handy/event_base.cpp:389 loop] EventBase loop started: base=0x7fd84060ddb0
-[2025-10-20 21:45:19.362] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=0, m_lastActive=0, usedTime_ms=0
-[2025-10-20 21:45:19.362] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=1000, m_lastActive=1, usedTime_ms=1
-[2025-10-20 21:45:19.362] [TRACE] [../handy/poller.cpp:231 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[2], fd=7
-[2025-10-20 21:45:19.362] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
-[2025-10-20 21:45:19.362] [TRACE] [../handy/udp.cpp:102 operator()] Udp server(fd=7) recving...
-[2025-10-20 21:45:19.362] [TRACE] [../handy/udp.cpp:111 operator()] Udp server(fd=7) recvfrom 14 bytes from 127.0.0.1:17231
-[2025-10-20 21:45:19.362] [TRACE] [../handy/udp.cpp:112 operator()] Udp server(fd=7) recvfrom Hello UDP Test
-[2025-10-20 21:45:19.362] [DEBUG] [udp_test.cpp:54 operator()] 服务器收到消息: Hello UDP Test 来自 127.0.0.1:17231
-[2025-10-20 21:45:19.362] [TRACE] [../handy/udp.cpp:174 sendTo] UdpServer(fd=7) send 24 bytes to 127.0.0.1:17231 success
-[2025-10-20 21:45:19.362] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
-[2025-10-20 21:45:19.362] [TRACE] [../handy/event_base.cpp:273 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=999 ms
-[2025-10-20 21:45:19.362] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=0
-[2025-10-20 21:45:19.362] [TRACE] [../handy/poller.cpp:231 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[1] handle read: Channel[4], fd=11
-[2025-10-20 21:45:19.362] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
-[2025-10-20 21:45:19.362] [TRACE] [../handy/udp.cpp:270 operator()] UDP connection(fd=11) read 24 bytes from 127.0.0.1:12345
-[2025-10-20 21:45:19.362] [DEBUG] [udp_test.cpp:79 operator()] 客户端收到响应: 
-[2025-10-20 21:45:19.362] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
-[2025-10-20 21:45:20.361] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=999, m_lastActive=0, usedTime_ms=999
-[2025-10-20 21:45:20.362] [TRACE] [../handy/event_base.cpp:393 loop] EventBase loop exited: base=0x92a4a0
-[2025-10-20 21:45:20.362] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=0, m_lastActive=1, usedTime_ms=0
-[2025-10-20 21:45:20.362] [TRACE] [../handy/poller.cpp:231 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[1], fd=5
-[2025-10-20 21:45:20.362] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
-[2025-10-20 21:45:20.362] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
-[2025-10-20 21:45:29.372] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10010
-[2025-10-20 21:45:39.381] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10009
-[2025-10-20 21:45:49.391] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10009
-[2025-10-20 21:55:37.471] [INFO] [udp_test.cpp:28 initTestLogger] === udp_test 测试开始 ===
-[2025-10-20 21:55:37.471] [DEBUG] [udp_test.cpp:37 test_udp_server_basic] === 开始测试 UdpServer 基础功能 ===
-[2025-10-20 21:55:37.471] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
-[2025-10-20 21:55:37.471] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=5, writeFd=6
-[2025-10-20 21:55:37.471] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=5 success
-[2025-10-20 21:55:37.471] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[1], fd=5, events=0x1
-[2025-10-20 21:55:37.471] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=1, fd=5, events=0x1
-[2025-10-20 21:55:37.471] [INFO] [../handy/udp.cpp:89 bind] UDP server(fd=7) bind to 127.0.0.1:12345 success
-[2025-10-20 21:55:37.471] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=7 success
-[2025-10-20 21:55:37.471] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[2], fd=7, events=0x1
-[2025-10-20 21:55:37.471] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=2, fd=7, events=0x1
-[2025-10-20 21:55:37.471] [INFO] [udp_test.cpp:48 test_udp_server_basic] UdpServer 启动成功
-[2025-10-20 21:55:37.472] [TRACE] [../handy/event_base.cpp:273 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=1000 ms
-[2025-10-20 21:55:37.472] [TRACE] [../handy/event_base.cpp:380 runAt] One-shot timer registered: timerIdPair={1760968538472, 1}
-[2025-10-20 21:55:37.472] [TRACE] [../handy/event_base.cpp:389 loop] EventBase loop started: base=0x1a364a0
-[2025-10-20 21:55:37.472] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[1] created, epoll_fd=8
-[2025-10-20 21:55:37.472] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=9, writeFd=10
-[2025-10-20 21:55:37.472] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=9 success
-[2025-10-20 21:55:37.472] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[3], fd=9, events=0x1
-[2025-10-20 21:55:37.472] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=3, fd=9, events=0x1
-[2025-10-20 21:55:37.472] [TRACE] [../handy/udp.cpp:242 createConnection] UDP connection(fd=11) connect to 127.0.0.1:12345 success
-[2025-10-20 21:55:37.472] [TRACE] [../handy/event_base.cpp:579 Channel] Channel set non-block: fd=11 success
-[2025-10-20 21:55:37.472] [TRACE] [../handy/poller.cpp:130 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[4], fd=11, events=0x1
-[2025-10-20 21:55:37.472] [TRACE] [../handy/event_base.cpp:590 Channel] Channel created: id=4, fd=11, events=0x1
-[2025-10-20 21:55:37.472] [INFO] [udp_test.cpp:75 operator()] UdpConn 创建成功
-[2025-10-20 21:55:37.472] [TRACE] [../handy/udp.cpp:321 send] UDP connection(fd=11) send 14 bytes to 127.0.0.1:12345 success
-[2025-10-20 21:55:37.472] [TRACE] [../handy/event_base.cpp:389 loop] EventBase loop started: base=0x7f49fe475db0
-[2025-10-20 21:55:37.472] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=0, m_lastActive=0, usedTime_ms=0
-[2025-10-20 21:55:37.472] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=1000, m_lastActive=1, usedTime_ms=0
-[2025-10-20 21:55:37.472] [TRACE] [../handy/poller.cpp:231 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[2], fd=7
-[2025-10-20 21:55:37.472] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
-[2025-10-20 21:55:37.472] [TRACE] [../handy/udp.cpp:102 operator()] Udp server(fd=7) recving...
-[2025-10-20 21:55:37.472] [TRACE] [../handy/udp.cpp:111 operator()] Udp server(fd=7) recvfrom 14 bytes from 127.0.0.1:63654
-[2025-10-20 21:55:37.472] [TRACE] [../handy/udp.cpp:112 operator()] Udp server(fd=7) recvfrom Hello UDP Test
-[2025-10-20 21:55:37.472] [DEBUG] [udp_test.cpp:54 operator()] 服务器收到消息: Hello UDP Test 来自 127.0.0.1:63654
-[2025-10-20 21:55:37.472] [TRACE] [../handy/udp.cpp:174 sendTo] UdpServer(fd=7) send 24 bytes to 127.0.0.1:63654 success
-[2025-10-20 21:55:37.472] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
-[2025-10-20 21:55:37.472] [TRACE] [../handy/event_base.cpp:273 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=1000 ms
-[2025-10-20 21:55:37.473] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=1
-[2025-10-20 21:55:37.473] [TRACE] [../handy/poller.cpp:231 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[1] handle read: Channel[4], fd=11
-[2025-10-20 21:55:37.473] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
-[2025-10-20 21:55:37.473] [TRACE] [../handy/udp.cpp:270 operator()] UDP connection(fd=11) read 24 bytes from 127.0.0.1:12345
-[2025-10-20 21:55:37.473] [DEBUG] [udp_test.cpp:79 operator()] 客户端收到响应: 
-[2025-10-20 21:55:37.473] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
-[2025-10-20 21:55:38.473] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=1000, m_lastActive=0, usedTime_ms=1001
-[2025-10-20 21:55:38.473] [TRACE] [../handy/event_base.cpp:393 loop] EventBase loop exited: base=0x1a364a0
-[2025-10-20 21:55:38.474] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=0, m_lastActive=1, usedTime_ms=0
-[2025-10-20 21:55:38.474] [TRACE] [../handy/poller.cpp:231 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[1], fd=5
-[2025-10-20 21:55:38.474] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
-[2025-10-20 21:55:38.474] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
-[2025-10-20 21:55:47.481] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10008
-[2025-10-20 21:55:57.492] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10010
-[2025-10-20 21:56:07.502] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10010
-[2025-10-20 21:56:17.512] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10010
-[2025-10-20 21:56:27.523] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10010
-[2025-10-20 21:56:37.533] [TRACE] [../handy/poller.cpp:205 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10010
+[2025-10-23 11:50:48.414] [INFO] [udp_test.cpp:28 initTestLogger] === udp_test 测试开始 ===
+[2025-10-23 11:50:48.414] [DEBUG] [udp_test.cpp:37 test_udp_server_basic] === 开始测试 UdpServer 基础功能 ===
+[2025-10-23 11:50:48.414] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2025-10-23 11:50:48.414] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=5, writeFd=6
+[2025-10-23 11:50:48.414] [TRACE] [../handy/event_base.cpp:586 Channel] Channel set non-block: fd=5 success
+[2025-10-23 11:50:48.414] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[1], fd=5, events=0x1
+[2025-10-23 11:50:48.414] [TRACE] [../handy/event_base.cpp:597 Channel] Channel created: id=1, fd=5, events=0x1
+[2025-10-23 11:50:48.414] [INFO] [../handy/udp.cpp:89 bind] UDP server(fd=7) bind to 127.0.0.1:12345 success
+[2025-10-23 11:50:48.414] [TRACE] [../handy/event_base.cpp:586 Channel] Channel set non-block: fd=7 success
+[2025-10-23 11:50:48.414] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[2], fd=7, events=0x1
+[2025-10-23 11:50:48.414] [TRACE] [../handy/event_base.cpp:597 Channel] Channel created: id=2, fd=7, events=0x1
+[2025-10-23 11:50:48.414] [INFO] [udp_test.cpp:48 test_udp_server_basic] UdpServer 启动成功
+[2025-10-23 11:50:48.414] [DEBUG] [udp_test.cpp:99 test_udp_server_basic] Server eventbase exiting
+[2025-10-23 11:50:48.414] [TRACE] [../handy/event_base.cpp:276 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=2000 ms
+[2025-10-23 11:50:48.414] [TRACE] [../handy/event_base.cpp:383 runAt] One-shot timer registered: timerIdPair={1761191450414, 1}
+[2025-10-23 11:50:48.414] [TRACE] [../handy/event_base.cpp:392 loop] EventBase loop started: base=0x1bfc4a0
+[2025-10-23 11:50:48.415] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[1] created, epoll_fd=8
+[2025-10-23 11:50:48.415] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=9, writeFd=10
+[2025-10-23 11:50:48.415] [TRACE] [../handy/event_base.cpp:586 Channel] Channel set non-block: fd=9 success
+[2025-10-23 11:50:48.415] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[3], fd=9, events=0x1
+[2025-10-23 11:50:48.415] [TRACE] [../handy/event_base.cpp:597 Channel] Channel created: id=3, fd=9, events=0x1
+[2025-10-23 11:50:48.415] [TRACE] [../handy/udp.cpp:242 createConnection] UDP connection(fd=11) connect to 127.0.0.1:12345 success
+[2025-10-23 11:50:48.415] [TRACE] [../handy/event_base.cpp:586 Channel] Channel set non-block: fd=11 success
+[2025-10-23 11:50:48.415] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[4], fd=11, events=0x1
+[2025-10-23 11:50:48.415] [TRACE] [../handy/event_base.cpp:597 Channel] Channel created: id=4, fd=11, events=0x1
+[2025-10-23 11:50:48.415] [INFO] [udp_test.cpp:75 operator()] UdpConn 创建成功
+[2025-10-23 11:50:48.415] [TRACE] [../handy/udp.cpp:321 send] UDP connection(fd=11) send 14 bytes to 127.0.0.1:12345 success
+[2025-10-23 11:50:48.415] [DEBUG] [udp_test.cpp:91 operator()] Ready to loop
+[2025-10-23 11:50:48.415] [TRACE] [../handy/event_base.cpp:392 loop] EventBase loop started: base=0x7f713fa1bdb0
+[2025-10-23 11:50:48.415] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=0, m_lastActive=0, usedTime_ms=0
+[2025-10-23 11:50:48.415] [TRACE] [../handy/event_base.cpp:418 loopOnce] Ready to handle timeout timers
+[2025-10-23 11:50:48.415] [TRACE] [../handy/event_base.cpp:420 loopOnce] Timeout timers handled
+[2025-10-23 11:50:48.415] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=2000, m_lastActive=1, usedTime_ms=1
+[2025-10-23 11:50:48.415] [TRACE] [../handy/poller.cpp:230 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[2], fd=7
+[2025-10-23 11:50:48.415] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-10-23 11:50:48.415] [TRACE] [../handy/udp.cpp:102 operator()] Udp server(fd=7) recving...
+[2025-10-23 11:50:48.415] [TRACE] [../handy/udp.cpp:111 operator()] Udp server(fd=7) recvfrom 14 bytes from 127.0.0.1:33092
+[2025-10-23 11:50:48.415] [TRACE] [../handy/udp.cpp:112 operator()] Udp server(fd=7) recvfrom Hello UDP Test
+[2025-10-23 11:50:48.415] [DEBUG] [udp_test.cpp:54 operator()] 服务器收到消息: Hello UDP Test 来自 127.0.0.1:33092
+[2025-10-23 11:50:48.415] [TRACE] [../handy/udp.cpp:174 sendTo] UdpServer(fd=7) send 24 bytes to 127.0.0.1:33092 success
+[2025-10-23 11:50:48.415] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-10-23 11:50:48.415] [TRACE] [../handy/event_base.cpp:418 loopOnce] Ready to handle timeout timers
+[2025-10-23 11:50:48.415] [TRACE] [../handy/event_base.cpp:276 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=1999 ms
+[2025-10-23 11:50:48.415] [TRACE] [../handy/event_base.cpp:420 loopOnce] Timeout timers handled
+[2025-10-23 11:50:48.416] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=1
+[2025-10-23 11:50:48.416] [TRACE] [../handy/poller.cpp:230 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[1] handle read: Channel[4], fd=11
+[2025-10-23 11:50:48.416] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-10-23 11:50:48.416] [TRACE] [../handy/udp.cpp:270 operator()] UDP connection(fd=11) read 24 bytes from 127.0.0.1:12345
+[2025-10-23 11:50:48.416] [DEBUG] [udp_test.cpp:79 operator()] 客户端收到响应: Received: Hello UDP Test
+[2025-10-23 11:50:48.416] [TRACE] [../handy/event_base.cpp:432 wakeup] write wakeup pipe(10) success
+[2025-10-23 11:50:48.416] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-10-23 11:50:48.416] [TRACE] [../handy/event_base.cpp:418 loopOnce] Ready to handle timeout timers
+[2025-10-23 11:50:48.416] [TRACE] [../handy/event_base.cpp:420 loopOnce] Timeout timers handled
+[2025-10-23 11:50:48.416] [TRACE] [../handy/event_base.cpp:396 loop] EventBase loop exited: base=0x7f713fa1bdb0
+[2025-10-23 11:50:48.416] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=0, m_lastActive=1, usedTime_ms=0
+[2025-10-23 11:50:48.416] [TRACE] [../handy/poller.cpp:230 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[1] handle read: Channel[3], fd=9
+[2025-10-23 11:50:48.416] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-10-23 11:50:48.416] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-10-23 11:50:48.416] [TRACE] [../handy/event_base.cpp:418 loopOnce] Ready to handle timeout timers
+[2025-10-23 11:50:48.416] [TRACE] [../handy/event_base.cpp:420 loopOnce] Timeout timers handled
+[2025-10-23 11:50:50.416] [DEBUG] [udp_test.cpp:94 operator()] Client base exiting
+[2025-10-23 11:50:50.416] [TRACE] [../handy/event_base.cpp:454 ~EventBase] EventBase destroying: base=0x7f713fa1bdb0
+[2025-10-23 11:50:50.416] [TRACE] [../handy/event_base.cpp:72 ~EventsImp] Ready to delete m_poller
+[2025-10-23 11:50:50.416] [INFO] [../handy/poller.cpp:97 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[1] destroying, epoll_fd=8
+[2025-10-23 11:50:50.416] [TRACE] [../handy/event_base.cpp:610 close] Channel closing: id=3, fd=9
+[2025-10-23 11:50:50.416] [TRACE] [../handy/poller.cpp:150 removeChannel] PollerEpoll::removeChannel(): PollerEpoll[1] remove Channel[3], fd=9
+[2025-10-23 11:50:50.416] [TRACE] [../handy/event_base.cpp:619 close] Channel closed: fd=9
+[2025-10-23 11:50:50.416] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-10-23 11:50:50.416] [TRACE] [../handy/event_base.cpp:603 ~Channel] Channel destroyed: id=3, fd=-1
+[2025-10-23 11:50:50.416] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-10-23 11:50:50.416] [TRACE] [../handy/event_base.cpp:610 close] Channel closing: id=4, fd=11
+[2025-10-23 11:50:50.416] [TRACE] [../handy/poller.cpp:150 removeChannel] PollerEpoll::removeChannel(): PollerEpoll[1] remove Channel[4], fd=11
+[2025-10-23 11:50:50.416] [TRACE] [../handy/event_base.cpp:619 close] Channel closed: fd=11
+[2025-10-23 11:50:50.416] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-10-23 15:24:54.368] [INFO] [udp_test.cpp:28 initTestLogger] === udp_test 测试开始 ===
+[2025-10-23 15:24:54.369] [DEBUG] [udp_test.cpp:37 test_udp_server_basic] === 开始测试 UdpServer 基础功能 ===
+[2025-10-23 15:24:54.369] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2025-10-23 15:24:54.369] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=5, writeFd=6
+[2025-10-23 15:24:54.369] [TRACE] [../handy/event_base.cpp:586 Channel] Channel set non-block: fd=5 success
+[2025-10-23 15:24:54.369] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[1], fd=5, events=0x1
+[2025-10-23 15:24:54.369] [TRACE] [../handy/event_base.cpp:597 Channel] Channel created: id=1, fd=5, events=0x1
+[2025-10-23 15:24:54.369] [INFO] [../handy/udp.cpp:89 bind] UDP server(fd=7) bind to 127.0.0.1:12345 success
+[2025-10-23 15:24:54.369] [TRACE] [../handy/event_base.cpp:586 Channel] Channel set non-block: fd=7 success
+[2025-10-23 15:24:54.369] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[2], fd=7, events=0x1
+[2025-10-23 15:24:54.369] [TRACE] [../handy/event_base.cpp:597 Channel] Channel created: id=2, fd=7, events=0x1
+[2025-10-23 15:24:54.369] [INFO] [udp_test.cpp:48 test_udp_server_basic] UdpServer 启动成功
+[2025-10-23 15:24:54.369] [DEBUG] [udp_test.cpp:99 test_udp_server_basic] Server eventbase exiting
+[2025-10-23 15:24:54.369] [TRACE] [../handy/event_base.cpp:276 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=2000 ms
+[2025-10-23 15:24:54.369] [TRACE] [../handy/event_base.cpp:383 runAt] One-shot timer registered: timerIdPair={1761204296369, 1}
+[2025-10-23 15:24:54.369] [TRACE] [../handy/event_base.cpp:392 loop] EventBase loop started: base=0x99f4a0
+[2025-10-23 15:24:54.369] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[1] created, epoll_fd=8
+[2025-10-23 15:24:54.369] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=9, writeFd=10
+[2025-10-23 15:24:54.369] [TRACE] [../handy/event_base.cpp:586 Channel] Channel set non-block: fd=9 success
+[2025-10-23 15:24:54.369] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[3], fd=9, events=0x1
+[2025-10-23 15:24:54.369] [TRACE] [../handy/event_base.cpp:597 Channel] Channel created: id=3, fd=9, events=0x1
+[2025-10-23 15:24:54.369] [TRACE] [../handy/udp.cpp:242 createConnection] UDP connection(fd=11) connect to 127.0.0.1:12345 success
+[2025-10-23 15:24:54.369] [TRACE] [../handy/event_base.cpp:586 Channel] Channel set non-block: fd=11 success
+[2025-10-23 15:24:54.369] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[4], fd=11, events=0x1
+[2025-10-23 15:24:54.369] [TRACE] [../handy/event_base.cpp:597 Channel] Channel created: id=4, fd=11, events=0x1
+[2025-10-23 15:24:54.369] [INFO] [udp_test.cpp:75 operator()] UdpConn 创建成功
+[2025-10-23 15:24:54.370] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=2000, m_lastActive=1, usedTime_ms=1
+[2025-10-23 15:24:54.370] [TRACE] [../handy/poller.cpp:230 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[2], fd=7
+[2025-10-23 15:24:54.370] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-10-23 15:24:54.370] [TRACE] [../handy/udp.cpp:102 operator()] Udp server(fd=7) recving...
+[2025-10-23 15:24:54.370] [TRACE] [../handy/udp.cpp:111 operator()] Udp server(fd=7) recvfrom 14 bytes from 127.0.0.1:32963
+[2025-10-23 15:24:54.370] [TRACE] [../handy/udp.cpp:112 operator()] Udp server(fd=7) recvfrom Hello UDP Test
+[2025-10-23 15:24:54.370] [DEBUG] [udp_test.cpp:54 operator()] 服务器收到消息: Hello UDP Test 来自 127.0.0.1:32963
+[2025-10-23 15:24:54.370] [TRACE] [../handy/udp.cpp:174 sendTo] UdpServer(fd=7) send 24 bytes to 127.0.0.1:32963 success
+[2025-10-23 15:24:54.370] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-10-23 15:24:54.370] [TRACE] [../handy/event_base.cpp:418 loopOnce] Ready to handle timeout timers
+[2025-10-23 15:24:54.370] [TRACE] [../handy/event_base.cpp:276 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=1999 ms
+[2025-10-23 15:24:54.370] [TRACE] [../handy/event_base.cpp:420 loopOnce] Timeout timers handled
+[2025-10-23 15:24:54.370] [TRACE] [../handy/udp.cpp:325 send] UDP connection(fd=11) send 14 bytes to 127.0.0.1:12345 success
+[2025-10-23 15:24:54.370] [DEBUG] [udp_test.cpp:91 operator()] Ready to loop
+[2025-10-23 15:24:54.370] [TRACE] [../handy/event_base.cpp:392 loop] EventBase loop started: base=0x7ff6f3d8adb0
+[2025-10-23 15:24:54.370] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=0, m_lastActive=1, usedTime_ms=0
+[2025-10-23 15:24:54.370] [TRACE] [../handy/poller.cpp:230 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[1] handle read: Channel[4], fd=11
+[2025-10-23 15:24:54.370] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-10-23 15:24:54.370] [TRACE] [../handy/udp.cpp:260 operator()] UDP connection(fd=9) recving...
+[2025-10-23 15:24:54.370] [TRACE] [../handy/udp.cpp:264 operator()] UDP connection(fd=11) recvfrom 127.0.0.1:12345
+[2025-10-23 15:24:54.370] [TRACE] [../handy/udp.cpp:266 operator()] UDP connection(fd=11) recvfrom 24 bytes from 127.0.0.1:12345
+[2025-10-23 15:24:54.370] [TRACE] [../handy/udp.cpp:274 operator()] UDP connection(fd=11) read 24 bytes from 127.0.0.1:12345
+[2025-10-23 15:24:54.370] [DEBUG] [udp_test.cpp:79 operator()] 客户端收到响应: Received: Hello UDP Test
+[2025-10-23 15:24:54.370] [TRACE] [../handy/event_base.cpp:432 wakeup] write wakeup pipe(10) success
+[2025-10-23 15:24:54.370] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-10-23 15:24:54.370] [TRACE] [../handy/event_base.cpp:418 loopOnce] Ready to handle timeout timers
+[2025-10-23 15:24:54.370] [TRACE] [../handy/event_base.cpp:420 loopOnce] Timeout timers handled
+[2025-10-23 15:24:54.370] [TRACE] [../handy/event_base.cpp:396 loop] EventBase loop exited: base=0x7ff6f3d8adb0
+[2025-10-23 15:24:54.370] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=0, m_lastActive=1, usedTime_ms=0
+[2025-10-23 15:24:54.370] [TRACE] [../handy/poller.cpp:230 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[1] handle read: Channel[3], fd=9
+[2025-10-23 15:24:54.371] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-10-23 15:24:54.371] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-10-23 15:24:54.371] [TRACE] [../handy/event_base.cpp:418 loopOnce] Ready to handle timeout timers
+[2025-10-23 15:24:54.371] [TRACE] [../handy/event_base.cpp:420 loopOnce] Timeout timers handled
+[2025-10-23 15:24:56.371] [DEBUG] [udp_test.cpp:94 operator()] Client base exiting
+[2025-10-23 15:24:56.371] [TRACE] [../handy/event_base.cpp:454 ~EventBase] EventBase destroying: base=0x7ff6f3d8adb0
+[2025-10-23 15:24:56.371] [TRACE] [../handy/event_base.cpp:72 ~EventsImp] Ready to delete m_poller
+[2025-10-23 15:24:56.371] [INFO] [../handy/poller.cpp:97 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[1] destroying, epoll_fd=8
+[2025-10-23 15:24:56.371] [TRACE] [../handy/event_base.cpp:610 close] Channel closing: id=3, fd=9
+[2025-10-23 15:24:56.371] [TRACE] [../handy/poller.cpp:150 removeChannel] PollerEpoll::removeChannel(): PollerEpoll[1] remove Channel[3], fd=9
+[2025-10-23 15:24:56.371] [TRACE] [../handy/event_base.cpp:619 close] Channel closed: fd=9
+[2025-10-23 15:24:56.371] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-10-23 15:24:56.371] [TRACE] [../handy/event_base.cpp:603 ~Channel] Channel destroyed: id=3, fd=-1
+[2025-10-23 15:24:56.371] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-10-23 15:24:56.371] [TRACE] [../handy/event_base.cpp:610 close] Channel closing: id=4, fd=11
+[2025-10-23 15:24:56.371] [TRACE] [../handy/poller.cpp:150 removeChannel] PollerEpoll::removeChannel(): PollerEpoll[1] remove Channel[4], fd=11
+[2025-10-23 15:24:56.371] [TRACE] [../handy/event_base.cpp:619 close] Channel closed: fd=11
+[2025-10-23 15:24:56.371] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-10-23 15:36:19.710] [INFO] [udp_test.cpp:28 initTestLogger] === udp_test 测试开始 ===
+[2025-10-23 15:36:19.710] [DEBUG] [udp_test.cpp:37 test_udp_server_basic] === 开始测试 UdpServer 基础功能 ===
+[2025-10-23 15:36:19.710] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2025-10-23 15:36:19.710] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=5, writeFd=6
+[2025-10-23 15:36:19.710] [TRACE] [../handy/event_base.cpp:586 Channel] Channel set non-block: fd=5 success
+[2025-10-23 15:36:19.710] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[1], fd=5, events=0x1
+[2025-10-23 15:36:19.710] [TRACE] [../handy/event_base.cpp:597 Channel] Channel created: id=1, fd=5, events=0x1
+[2025-10-23 15:36:19.710] [INFO] [../handy/udp.cpp:89 bind] UDP server(fd=7) bind to 127.0.0.1:12345 success
+[2025-10-23 15:36:19.710] [TRACE] [../handy/event_base.cpp:586 Channel] Channel set non-block: fd=7 success
+[2025-10-23 15:36:19.710] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[2], fd=7, events=0x1
+[2025-10-23 15:36:19.710] [TRACE] [../handy/event_base.cpp:597 Channel] Channel created: id=2, fd=7, events=0x1
+[2025-10-23 15:36:19.710] [INFO] [udp_test.cpp:48 test_udp_server_basic] UdpServer 启动成功
+[2025-10-23 15:36:19.710] [DEBUG] [udp_test.cpp:99 test_udp_server_basic] Server eventbase exiting
+[2025-10-23 15:36:19.710] [TRACE] [../handy/event_base.cpp:276 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=2000 ms
+[2025-10-23 15:36:19.710] [TRACE] [../handy/event_base.cpp:383 runAt] One-shot timer registered: timerIdPair={1761204981710, 1}
+[2025-10-23 15:36:19.710] [TRACE] [../handy/event_base.cpp:392 loop] EventBase loop started: base=0xec64a0
+[2025-10-23 15:36:19.711] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[1] created, epoll_fd=8
+[2025-10-23 15:36:19.711] [TRACE] [../handy/event_base.cpp:64 EventsImp] Wakeup pipe initialized: readFd=9, writeFd=10
+[2025-10-23 15:36:19.711] [TRACE] [../handy/event_base.cpp:586 Channel] Channel set non-block: fd=9 success
+[2025-10-23 15:36:19.711] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[3], fd=9, events=0x1
+[2025-10-23 15:36:19.711] [TRACE] [../handy/event_base.cpp:597 Channel] Channel created: id=3, fd=9, events=0x1
+[2025-10-23 15:36:19.711] [TRACE] [../handy/udp.cpp:242 createConnection] UDP connection(fd=11) connect to 127.0.0.1:12345 success
+[2025-10-23 15:36:19.711] [TRACE] [../handy/event_base.cpp:586 Channel] Channel set non-block: fd=11 success
+[2025-10-23 15:36:19.711] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[4], fd=11, events=0x1
+[2025-10-23 15:36:19.711] [TRACE] [../handy/event_base.cpp:597 Channel] Channel created: id=4, fd=11, events=0x1
+[2025-10-23 15:36:19.711] [INFO] [udp_test.cpp:75 operator()] UdpConn 创建成功
+[2025-10-23 15:36:19.711] [TRACE] [../handy/udp.cpp:325 send] UDP connection(fd=11) send 14 bytes to 127.0.0.1:12345 success
+[2025-10-23 15:36:19.711] [DEBUG] [udp_test.cpp:91 operator()] Ready to loop
+[2025-10-23 15:36:19.711] [TRACE] [../handy/event_base.cpp:392 loop] EventBase loop started: base=0x7f6e0d4d5db0
+[2025-10-23 15:36:19.711] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=0, m_lastActive=0, usedTime_ms=0
+[2025-10-23 15:36:19.711] [TRACE] [../handy/event_base.cpp:418 loopOnce] Ready to handle timeout timers
+[2025-10-23 15:36:19.711] [TRACE] [../handy/event_base.cpp:420 loopOnce] Timeout timers handled
+[2025-10-23 15:36:19.711] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=2000, m_lastActive=1, usedTime_ms=1
+[2025-10-23 15:36:19.711] [TRACE] [../handy/poller.cpp:230 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[2], fd=7
+[2025-10-23 15:36:19.711] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-10-23 15:36:19.711] [TRACE] [../handy/udp.cpp:102 operator()] Udp server(fd=7) recving...
+[2025-10-23 15:36:19.711] [TRACE] [../handy/udp.cpp:111 operator()] Udp server(fd=7) recvfrom 14 bytes from 127.0.0.1:19265
+[2025-10-23 15:36:19.711] [TRACE] [../handy/udp.cpp:112 operator()] Udp server(fd=7) recvfrom Hello UDP Test
+[2025-10-23 15:36:19.711] [DEBUG] [udp_test.cpp:54 operator()] 服务器收到消息: Hello UDP Test 来自 127.0.0.1:19265
+[2025-10-23 15:36:19.711] [TRACE] [../handy/udp.cpp:174 sendTo] UdpServer(fd=7) send 24 bytes to 127.0.0.1:19265 success
+[2025-10-23 15:36:19.711] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-10-23 15:36:19.711] [TRACE] [../handy/event_base.cpp:418 loopOnce] Ready to handle timeout timers
+[2025-10-23 15:36:19.711] [TRACE] [../handy/event_base.cpp:276 refreshNearestTimer] Nearest timer refreshed: m_nextTimeout=1999 ms
+[2025-10-23 15:36:19.711] [TRACE] [../handy/event_base.cpp:420 loopOnce] Timeout timers handled
+[2025-10-23 15:36:19.711] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=0
+[2025-10-23 15:36:19.711] [TRACE] [../handy/poller.cpp:230 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[1] handle read: Channel[4], fd=11
+[2025-10-23 15:36:19.711] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-10-23 15:36:19.711] [TRACE] [../handy/udp.cpp:260 operator()] UDP connection(fd=9) recving...
+[2025-10-23 15:36:19.711] [TRACE] [../handy/udp.cpp:264 operator()] UDP connection(fd=11) recvfrom 127.0.0.1:12345
+[2025-10-23 15:36:19.711] [TRACE] [../handy/udp.cpp:266 operator()] UDP connection(fd=11) recvfrom 24 bytes from 127.0.0.1:12345
+[2025-10-23 15:36:19.711] [TRACE] [../handy/udp.cpp:274 operator()] UDP connection(fd=11) read 24 bytes from 127.0.0.1:12345
+[2025-10-23 15:36:19.712] [DEBUG] [udp_test.cpp:79 operator()] 客户端收到响应: Received: Hello UDP Test
+[2025-10-23 15:36:19.712] [TRACE] [../handy/event_base.cpp:432 wakeup] write wakeup pipe(10) success
+[2025-10-23 15:36:19.712] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-10-23 15:36:19.712] [TRACE] [../handy/event_base.cpp:418 loopOnce] Ready to handle timeout timers
+[2025-10-23 15:36:19.712] [TRACE] [../handy/event_base.cpp:420 loopOnce] Timeout timers handled
+[2025-10-23 15:36:19.712] [TRACE] [../handy/event_base.cpp:396 loop] EventBase loop exited: base=0x7f6e0d4d5db0
+[2025-10-23 15:36:19.712] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=0, m_lastActive=1, usedTime_ms=0
+[2025-10-23 15:36:19.712] [TRACE] [../handy/poller.cpp:230 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[1] handle read: Channel[3], fd=9
+[2025-10-23 15:36:19.712] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-10-23 15:36:19.712] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-10-23 15:36:19.712] [TRACE] [../handy/event_base.cpp:418 loopOnce] Ready to handle timeout timers
+[2025-10-23 15:36:19.712] [TRACE] [../handy/event_base.cpp:420 loopOnce] Timeout timers handled
+[2025-10-23 15:36:21.712] [DEBUG] [udp_test.cpp:94 operator()] Client base exiting
+[2025-10-23 15:36:21.712] [TRACE] [../handy/event_base.cpp:454 ~EventBase] EventBase destroying: base=0x7f6e0d4d5db0
+[2025-10-23 15:36:21.712] [TRACE] [../handy/event_base.cpp:72 ~EventsImp] Ready to delete m_poller
+[2025-10-23 15:36:21.712] [INFO] [../handy/poller.cpp:97 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[1] destroying, epoll_fd=8
+[2025-10-23 15:36:21.712] [TRACE] [../handy/event_base.cpp:610 close] Channel closing: id=3, fd=9
+[2025-10-23 15:36:21.712] [TRACE] [../handy/poller.cpp:150 removeChannel] PollerEpoll::removeChannel(): PollerEpoll[1] remove Channel[3], fd=9
+[2025-10-23 15:36:21.712] [TRACE] [../handy/event_base.cpp:619 close] Channel closed: fd=9
+[2025-10-23 15:36:21.712] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-10-23 15:36:21.712] [TRACE] [../handy/event_base.cpp:603 ~Channel] Channel destroyed: id=3, fd=-1
+[2025-10-23 15:36:21.712] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-10-23 15:36:21.712] [TRACE] [../handy/event_base.cpp:610 close] Channel closing: id=4, fd=11
+[2025-10-23 15:36:21.712] [TRACE] [../handy/poller.cpp:150 removeChannel] PollerEpoll::removeChannel(): PollerEpoll[1] remove Channel[4], fd=11
+[2025-10-23 15:36:21.712] [TRACE] [../handy/event_base.cpp:619 close] Channel closed: fd=11
+[2025-10-23 15:36:21.712] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
