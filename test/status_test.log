@@ -1,0 +1,24 @@
+[2025-10-24 20:30:23.746] [INFO] [status_test.cpp:27 initTestLogger] === status_test 测试开始 ===
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:42 testConstructors] === 开始测试Status构造函数 ===
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:47 testConstructors] 测试1（默认构造）：通过
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:52 testConstructors] 测试2（错误码+消息构造）：通过
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:57 testConstructors] 测试3（std::string消息构造）：通过
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:62 testConstructors] 测试4（空消息处理）：通过
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:64 testConstructors] === Status构造函数测试结束 ===
+
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:71 testCopyAndMove] === 开始测试拷贝和移动语义 ===
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:77 testCopyAndMove] 测试1（拷贝构造）：通过
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:83 testCopyAndMove] 测试2（拷贝赋值）：通过
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:89 testCopyAndMove] 测试3（移动构造）：通过
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:95 testCopyAndMove] 测试4（移动赋值）：通过
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:97 testCopyAndMove] === 拷贝和移动语义测试结束 ===
+
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:104 testStaticCreators] === 开始测试静态创建函数 ===
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:110 testStaticCreators] 测试1（fromSystem()）：失败
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:115 testStaticCreators] 测试2（fromSystem(int)）：失败
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:120 testStaticCreators] 测试3（fromFormat()）：通过
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:126 testStaticCreators] 测试4（ioError()）：通过
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:131 testStaticCreators] 测试5（fromFormat空字符串）：通过
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:133 testStaticCreators] === 静态创建函数测试结束 ===
+
+[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:140 testUtils] === 开始测试工具函数 ===
