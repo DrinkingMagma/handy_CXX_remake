@@ -251,11 +251,12 @@ namespace handy
         // 设置读事件回调
         conn->m_channel->onRead([conn]() 
         { 
-            TRACE("UDP connection(fd=%d) recving...");
+            TRACE("UDP connection(fd=%d) recving...", conn->m_channel->getFd());
             if(!conn->m_channel || conn->m_channel->getFd() < 0)
             {
                 WARN("conn closing: conn->m_channel=%p, conn->m_channel->getFd()=%d", conn->m_channel, conn->m_channel->getFd());
                 conn->close();
+                TRACE("conn closed");
                 return;
             }
 
@@ -379,7 +380,7 @@ namespace handy
 
         m_server->onMsg([this, cb](const UdpServer::Ptr& server, Buffer buf, Ipv4Addr peerAddr)
         {
-            std::string input(buf.data(), buf.size());
+            std::string input(buf.peek(), buf.size());
 
             // 提交任务到线程池
             m_threadPool.addTask([=]()

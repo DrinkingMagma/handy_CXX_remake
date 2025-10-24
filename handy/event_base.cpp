@@ -7,6 +7,7 @@
 #include <map>
 #include <set>
 #include <fcntl.h>
+#include <signal.h>
 
 namespace handy
 {
@@ -45,6 +46,9 @@ namespace handy
             , m_timerSeq(0)
             , m_idleEnabled(false)
         {
+            // 忽略 SIGPIPE：触发 SIGPIPE 时不退出，而是捕获错误并处理
+            signal(SIGPIPE, SIG_IGN);
+
             // 创建唤醒管道（用于跨线程唤醒事件循环）
             int r = pipe(m_wakeupFds);
             if(r < 0)
@@ -429,7 +433,7 @@ namespace handy
             ssize_t r = ::write(m_wakeupFds[1], &dummy, 1);
             if(r != 1)
                 ERROR("write wakeup pipe error: r=%zd, errno=%d, msg=%s", r, errno, strerror(errno));
-            TRACE("write wakeup pipe(%d) success", m_wakeupFds[1]);
+            TRACE("write wakeup pipe(fd=%d) success", m_wakeupFds[1]);
         }
     };
 

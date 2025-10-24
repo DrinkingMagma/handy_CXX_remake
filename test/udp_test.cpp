@@ -11,6 +11,7 @@
 #include <chrono>
 #include <memory>
 #include <functional>
+#include <signal.h>
 
 using namespace handy;
 
