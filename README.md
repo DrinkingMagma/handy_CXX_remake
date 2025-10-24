@@ -54,9 +54,9 @@
 
 #### 6. 高级网络功能 (难度: ★★★★☆)
 
-- [ ] udp.h/udp.cpp
-  - [ ] UDP 连接封装（参考 udp-cli.cpp/udp-svr.cpp）
-  - [ ] UDP 服务器实现（UdpServer）
+- [x] udp.h/udp.cpp
+  - [x] UDP 连接封装（参考 udp-cli.cpp/udp-svr.cpp）
+  - [x] UDP 服务器实现（UdpServer）
 - [ ] http.h/http.cpp
   - [ ] HTTP 协议解析与封装
   - [ ] HTTP 服务器基础功能（参考 http-hello.cpp）
