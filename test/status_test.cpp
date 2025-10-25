@@ -106,11 +106,13 @@ void testStaticCreators() {
     // 测试1：fromSystem()（基于当前errno）
     errno = EIO;  // 设置已知错误码
     Status s1 = Status::fromSystem();
+    DEBUG("s1.code()=%d, s1.msg()=%s", s1.code(), s1.msg());
     bool test1Ok = (s1.code() == EIO && strstr(s1.msg(), "Input/output error") != nullptr);
     DEBUG("测试1（fromSystem()）：%s", test1Ok ? "通过" : "失败");
 
     // 测试2：fromSystem(int err)（指定错误码）
     Status s2 = Status::fromSystem(ENOENT);
+    DEBUG("s2.code()=%d, s2.msg()=%s", s2.code(), s2.msg());
     bool test2Ok = (s2.code() == ENOENT && strstr(s2.msg(), "No such file") != nullptr);
     DEBUG("测试2（fromSystem(int)）：%s", test2Ok ? "通过" : "失败");
 

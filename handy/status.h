@@ -6,6 +6,8 @@
 #include <string>
 #include "utils.h"
 #include <cstdarg>
+#include <iostream>
+#include <type_traits>
 
 namespace handy
 {
@@ -19,7 +21,17 @@ namespace handy
     {
         // 线程局部存储，避免线程竞争
         static thread_local char buf[256];
-        return strerror_r(errno, buf, sizeof(buf)) == 0 ? buf : "Unknown error";
+        // 兼容XSI版本：返回值为指向错误信息的指针
+        const char* ret = strerror_r(errno, buf, sizeof(buf));
+        // 若返回的指针在buf范围内，说明成功（XSI版本逻辑）
+        if (ret >= buf && ret < buf + sizeof(buf)) {
+            return ret;
+        }
+        // 否则使用POSIX版本的判断（返回0表示成功）
+        if (ret == nullptr) { // 部分实现中失败返回nullptr
+            return "Unknown error";
+        }
+        return ret;
     }
 
     /**
@@ -121,7 +133,18 @@ namespace handy
             static Status fromSystem(int err)
             {
                 thread_local char buf[256];
-                const char* msg = strerror_r(err, buf, sizeof(buf)) == 0 ? buf : "Unknown error";
+                const char* msg;
+
+                // 利用返回值类型自动适配POSIX/XSI版本
+                auto ret = strerror_r(err, buf, sizeof(buf));
+                
+                // POSIX版（返回int）：0表示成功；XSI版（返回char*）：非空即有效
+                if constexpr (std::is_same_v<decltype(ret), int>) {
+                    msg = (ret == 0) ? buf : "Unknown error";
+                } else {
+                    msg = ret;  // XSI版直接使用返回的指针（内部已处理成功/失败）
+                }
+
                 return Status(err, msg);
             }
 
@@ -175,7 +198,7 @@ namespace handy
             */
             std::string toString() const
             {
-                return utils::format("error code: %d, error msg: %s");
+                return utils::format("error code: %d, error msg: %s", code(), msg());
             }
 
         private:

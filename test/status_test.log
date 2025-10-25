@@ -1,24 +1,39 @@
-[2025-10-24 20:30:23.746] [INFO] [status_test.cpp:27 initTestLogger] === status_test 测试开始 ===
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:42 testConstructors] === 开始测试Status构造函数 ===
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:47 testConstructors] 测试1（默认构造）：通过
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:52 testConstructors] 测试2（错误码+消息构造）：通过
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:57 testConstructors] 测试3（std::string消息构造）：通过
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:62 testConstructors] 测试4（空消息处理）：通过
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:64 testConstructors] === Status构造函数测试结束 ===
+[2025-10-25 16:19:45.665] [INFO] [status_test.cpp:27 initTestLogger] === status_test 测试开始 ===
+[2025-10-25 16:19:45.665] [DEBUG] [status_test.cpp:42 testConstructors] === 开始测试Status构造函数 ===
+[2025-10-25 16:19:45.665] [DEBUG] [status_test.cpp:47 testConstructors] 测试1（默认构造）：通过
+[2025-10-25 16:19:45.665] [DEBUG] [status_test.cpp:52 testConstructors] 测试2（错误码+消息构造）：通过
+[2025-10-25 16:19:45.665] [DEBUG] [status_test.cpp:57 testConstructors] 测试3（std::string消息构造）：通过
+[2025-10-25 16:19:45.665] [DEBUG] [status_test.cpp:62 testConstructors] 测试4（空消息处理）：通过
+[2025-10-25 16:19:45.665] [DEBUG] [status_test.cpp:64 testConstructors] === Status构造函数测试结束 ===
 
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:71 testCopyAndMove] === 开始测试拷贝和移动语义 ===
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:77 testCopyAndMove] 测试1（拷贝构造）：通过
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:83 testCopyAndMove] 测试2（拷贝赋值）：通过
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:89 testCopyAndMove] 测试3（移动构造）：通过
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:95 testCopyAndMove] 测试4（移动赋值）：通过
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:97 testCopyAndMove] === 拷贝和移动语义测试结束 ===
+[2025-10-25 16:19:45.665] [DEBUG] [status_test.cpp:71 testCopyAndMove] === 开始测试拷贝和移动语义 ===
+[2025-10-25 16:19:45.665] [DEBUG] [status_test.cpp:77 testCopyAndMove] 测试1（拷贝构造）：通过
+[2025-10-25 16:19:45.665] [DEBUG] [status_test.cpp:83 testCopyAndMove] 测试2（拷贝赋值）：通过
+[2025-10-25 16:19:45.665] [DEBUG] [status_test.cpp:89 testCopyAndMove] 测试3（移动构造）：通过
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:95 testCopyAndMove] 测试4（移动赋值）：通过
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:97 testCopyAndMove] === 拷贝和移动语义测试结束 ===
 
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:104 testStaticCreators] === 开始测试静态创建函数 ===
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:110 testStaticCreators] 测试1（fromSystem()）：失败
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:115 testStaticCreators] 测试2（fromSystem(int)）：失败
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:120 testStaticCreators] 测试3（fromFormat()）：通过
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:126 testStaticCreators] 测试4（ioError()）：通过
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:131 testStaticCreators] 测试5（fromFormat空字符串）：通过
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:133 testStaticCreators] === 静态创建函数测试结束 ===
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:104 testStaticCreators] === 开始测试静态创建函数 ===
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:109 testStaticCreators] s1.code()=5, s1.msg()=Input/output error
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:111 testStaticCreators] 测试1（fromSystem()）：通过
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:115 testStaticCreators] s2.code()=2, s2.msg()=No such file or directory
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:117 testStaticCreators] 测试2（fromSystem(int)）：通过
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:122 testStaticCreators] 测试3（fromFormat()）：通过
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:128 testStaticCreators] 测试4（ioError()）：通过
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:133 testStaticCreators] 测试5（fromFormat空字符串）：通过
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:135 testStaticCreators] === 静态创建函数测试结束 ===
 
-[2025-10-24 20:30:23.746] [DEBUG] [status_test.cpp:140 testUtils] === 开始测试工具函数 ===
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:142 testUtils] === 开始测试工具函数 ===
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:148 testUtils] 测试1（toString()）：通过
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:154 testUtils] 测试2（成功状态toString()）：通过
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:156 testUtils] === 工具函数测试结束 ===
+
+[2025-10-25 16:19:45.666] [DEBUG] [status_test.cpp:163 testMemoryFailure] === 开始测试内存分配失败处理 ===
+[2025-10-25 16:19:58.352] [DEBUG] [status_test.cpp:175 testMemoryFailure] 测试1（大内存分配容错）：通过
+[2025-10-25 16:19:58.357] [DEBUG] [status_test.cpp:177 testMemoryFailure] === 内存分配失败处理测试结束 ===
+
+[2025-10-25 16:19:58.357] [DEBUG] [status_test.cpp:184 testThreadSafe] === 开始测试线程安全特性 ===
+[2025-10-25 16:19:58.387] [DEBUG] [status_test.cpp:224 testThreadSafe] 线程安全测试：总执行次数=10000（预期：10000，通过）
+[2025-10-25 16:19:58.387] [DEBUG] [status_test.cpp:226 testThreadSafe] === 线程安全特性测试结束 ===
+
+[2025-10-25 16:19:58.387] [INFO] [status_test.cpp:34 destroyTestLogger] === status_test 测试结束 ===
