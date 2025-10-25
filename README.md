@@ -69,9 +69,9 @@
 - [ ] stat-svr.h/stat-svr.cpp
   - [ ] 状态监控服务器（参考 stat.cpp）
   - [ ] 页面展示接口（onPage 函数实现）
-- [ ] daemon.h/daemon.cpp
-  - [ ] 守护进程模式支持（参考 daemon.cpp）
-  - [ ] 进程管理（启动/停止/重启）
+- [x] daemon.h/daemon.cpp
+  - [x] 守护进程模式支持（参考 daemon.cpp）
+  - [x] 进程管理（启动/停止/重启）
 
 #### 8. 文件操作模块 (难度: ★★☆☆☆)
 
