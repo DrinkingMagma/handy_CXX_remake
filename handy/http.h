@@ -249,8 +249,20 @@ namespace handy
 
            /**
             * @brief 获取当前请求对象
-            * @return HttpRequest
+            * @return HttpRequest& 请求对象引用
            */
+           HttpRequest& getRequest() const;
+
+           /**
+            * @brief 获取当前响应对象
+            * @return HttpResponse& 响应对象引用
+           */
+           HttpResponse& getResponse() const;
+
+           /**
+            * @brief 发送当前请求对象
+           */
+           void sendRequest() const { sendRequest(getRequest()); }
 
         private:
             // HTTP上下文，存储请求和响应对象
