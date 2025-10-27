@@ -55,12 +55,27 @@ namespace handy
             */
             std::string getHeader(const std::string& name) const
             {
-                return getValueFromMap(m_headers, name);
+                return _getValueFromMap(m_headers, name);
             }
+
+            /**
+             * @brief 获取消息体内容
+             * @return Slice 消息体切片（优先使用m_body2，当其不存在时使用m_body）
+            */
+            Slice getBody() const
+            {
+                return m_body2.empty() ? Slice(m_body) : m_body2;
+            }
+
+            /**
+             * @brief 获取已解析的字节数（仅当tryDecode返回Complete时有效）
+             * @return 已解析的字节数
+            */
+            size_t getScannedBytes() const { return m_scannedLen; }
         protected:
             std::map<std::string, std::string> m_headers;   // 头部字段（键为小写）
             std::string m_version;                          // HTTP版本（如"HTTP/1.1"）
-            std::string body;                               // 消息体(复制模式)
+            std::string m_body;                               // 消息体(复制模式)
             Slice m_body2;                                  // 消息体（引用模式）
             bool m_completed;                               // 消息解析完成标志
             size_t m_contentLen;                            // 消息体长度（从Content-Length中获取）
@@ -76,7 +91,7 @@ namespace handy
             Result _tryDecode(Slice buf, bool isCopyBody, Slice& line1);
 
             /**
-             * @brief 从映射表中获取指定键的值（不区分大小写）
+             * @brief 内部函数，从映射表中获取指定键的值（不区分大小写）
              * @param map 键值对映射表
              * @param name 键名
              * @return std::string 键对应的值（空字符串表示未找到）
@@ -84,5 +99,180 @@ namespace handy
             std::string _getValueFromMap(const std::map<std::string, std::string>& map,
                                             const std::string& name) const;
 
+    };
+
+    /**
+     * @class HttpRequest
+     * @brief HTTP请求类，继承自HttpMsg
+     * @note 包含HTTP请求特有的方法、URI、查询参数等信息
+    */
+    class HttpRequest : public HttpMsg
+    {
+        public:
+            /**
+             * @brief 默认构造函数
+            */
+            HttpRequest() { clear(); }
+
+            /**
+             * @brief 编码请求到缓冲区
+             * @param [out] buf 输出缓冲区
+             * @return int 编码的字节数
+            */
+            int encode(Buffer& buf) override;
+
+            /**
+             * @brief 从缓冲区解码请求
+             * @param buf 输入缓冲区
+             * @param isCopyBody
+             * @return 解析状态
+            */
+            Result tryDecode(Slice buf, bool isCopyBody=true) override;
+
+            /**
+             * @brief 清空请求所有字段
+            */
+            void clear() override;
+
+            /**
+             * @brief 获取指定查询参数的值
+             * @param name 参数名
+             * @return 参数值(空字符串表示未找到)
+            */
+            std::string getArg(const std::string& name) const{
+                return _getValueFromMap(m_args, name);
+            }
+
+            std::map<std::string, std::string> m_args;  // 查询参数
+            std::string m_method;                       // 请求方法（如“GET”、“POST”等）
+            std::string m_uri;                          // 路径部分（不含查询字符串）
+            std::string m_queryUri;                     // 完整URI（含查询字符串）
+    };
+
+    /**
+     * @class HttpResponse
+     * @brief HTTP响应类，继承自HttpMsg
+     * @note 包含HTTP响应特有的状态码、状态描述等信息
+    */
+    class HttpResponse : public HttpMsg 
+    {
+        public: 
+            /**
+             * @brief 默认构造函数
+            */
+            HttpResponse() { clear(); }
+
+            /**
+             * @brief 编码响应到缓冲区
+             * @param [out] buf 输出缓冲区
+             * @return int 编码的字节数
+            */
+            int encode(Buffer& buf) override;
+
+            /**
+             * @brief 从缓冲区解码响应
+             * @param buf 输入缓冲区
+             * @param isCopyBody 是否复制消息体
+             * @return 解析状态
+            */
+            Result tryDecode(Slice buf, bool isCopyBody=true) override;
+
+            /**
+             * @brief 清空响应所有字段
+            */
+            void clear() override;
+
+            /**
+             * @brief 设置404 Not Found状态
+            */
+            void setNotFound() { setStatus(404, "Not Found"); }
+
+            /**
+             * @brief 设置响应码和状态
+             * @param status 状态码（如200、404、500）
+             * @param msg 状态描述（如"OK"、"Not Found"、"Internal Server Error"）
+            */
+            void setStatus(int status, const std::string& msg="") {
+                m_status = status;
+                m_statusMsg = msg.empty() ? _getDefaultStatusMsg(status) : msg;
+                // 默认消息体为状态描述
+                m_body = m_statusMsg;
+            }
+
+            int m_status;               // 状态码
+            std::string m_statusMsg;   // 状态描述
+
+        private:
+            /**
+             * @brief 获取状态码对应的默认描述
+             * @param status 状态码
+             * @return std::string 默认状态描述
+            */
+            std::string _getDefaultStatusMsg(int status) const;
+    };
+
+    /**
+     * @class HttpConnPtr
+     * @brief Http连接智能指针封装，关联底层TCP连接
+     * @note 提供HTTP请求/响应的便捷操作接口
+    */
+    class HttpConnPtr
+    {
+        public:
+            // HTTP消息处理回调函数类型
+            using HttpCallBack = std::function<void(const HttpConnPtr&)>;
+
+            /**
+             * @brief 构造函数，从TCP连接指针创建
+             * @param tcpConn TCP连接智能指针
+            */
+            explicit HttpConnPtr(const TcpConnPtr& tcpConn) : m_tcp(tcpConn) {}
+
+            /**
+             * @brief 隐式转换为TCP连接指针
+             * @return TcpConnPtr 底层TCP连接智能指针
+            */
+           operator TcpConnPtr() const { return m_tcp; }
+
+           /**
+            * @brief 重置->运算符，访问底层TCP连接
+            * @return TcpConn* 底层TCP连接指针
+           */
+           TcpConn* operator->() const { return m_tcp.get(); }
+
+           /**
+            * @brief 重载<运算符，用于容器排序
+            * @param other 另一个HttpConnPtr对象
+            * @return bool m_tcp的比较结果
+           */
+           bool operator<(const HttpConnPtr& other) const { return m_tcp < other.m_tcp; }
+
+           /**
+            * @brief 获取当前请求对象
+            * @return HttpRequest
+           */
+
+        private:
+            // HTTP上下文，存储请求和响应对象
+            struct HttpContext
+            {
+                HttpRequest req;    // 请求对象
+                HttpResponse resp;   // 响应对象
+            };
+
+            TcpConnPtr m_tcp;   // 底层TCP连接
+
+            /**
+             * @brief 处理读事件，解析HTTP消息
+             * @param cb 消息处理回调
+            */
+            void handleRead(const HttpCallBack& cb) const;
+
+            /**
+             * @brief 记录输出日志
+             * @param title 日志标题
+            */
+            void logOutput(const char* title) const;
+            
     };
 } // namespace handy
