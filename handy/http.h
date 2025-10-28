@@ -41,7 +41,7 @@ namespace handy
              * @param isCopyBody 是否赋值消息体（true: 将消息体复制到m_body, false: 使用m_body2进行引用）
              * @return Result 解析状态
             */
-            virtual Result tryDecode(Slice buf, bool isCopyBody=true) 0;
+            virtual Result tryDecode(Slice buf, bool isCopyBody=true) = 0;
 
             /**
              * @brief 清空消息所有字段，恢复初始状态
@@ -264,6 +264,40 @@ namespace handy
            */
            void sendRequest() const { sendRequest(getRequest()); }
 
+           /**
+            * @brief 发送指定的请求对象
+            * @param req 要发送的请求对象
+           */
+           void sendRequest(HttpRequest& req) const;
+
+           /**
+            * @brief 发送当前响应对象
+           */
+           void sendResponse() const { sendResponse(getResponse()); }
+
+           /**
+            * @brief 发送指定响应的对象
+            * @param res 要发送的响应对象
+           */
+           void sendResponse(HttpResponse& res) const;
+
+           /**
+            * @brief 发送文件作为响应
+            * @param filename 文件名
+           */
+           void sendFile(const std::string& filename) const;
+
+           /**
+            * @brief 清楚当前连接的请求/响应数据
+           */
+           void clearData() const;
+
+           /**
+            * @brief 注册HTTP消息处理回调
+            * @param cb 回调函数
+           */
+           void onHttpMsg(const HttpCallBack& cb) const;
+
         private:
             // HTTP上下文，存储请求和响应对象
             struct HttpContext
@@ -286,5 +320,66 @@ namespace handy
             */
             void logOutput(const char* title) const;
             
+    };
+
+    /**
+     * @class HttpServer
+     * @brief HTTP服务器类，继承自Tcpserver
+     * @note 提供HTTP请求路由、连接管理等功能
+    */
+    class HttpServer : public TcpServer 
+    {
+        public: 
+            /**
+             * @brief 构造函数
+             * @param bases 时间循环管理器
+            */
+            explicit HttpServer(EventBases* bases);
+
+            /**
+             * @brief 设置连接类型（模板方法）
+             * @tparam Conn 连接类型（需继承自TcpConn）
+            */
+            template <class Conn = TcpConn>
+            void setConnType()
+            {
+                m_connCreate = []() { return TcpConnPtr(new Conn); }
+            }
+
+            /**
+             * @brief 注册GET请求处理回调
+             * @param uri 请求路径
+             * @param cb 处理回调
+            */
+            void onGet(const std::string& uri, const HttpConnPtr::HttpCallBack& cb)
+            {
+                m_routeTable["GET"][uri] = cb;
+            }
+
+            /**
+             * @brief 注册指定方法的请求处理回调
+             * @param method 请求方法（如"POST"、"PUT"）
+             * @param uri 请求路径
+             * @param cb 处理回调
+            */
+            void onRequest(const std::string& method, const std::string& uri, const HttpConnPtr::HttpCallBack& cb)
+            {
+                m_routeTable[method][uri] = cb;
+            }
+
+            /**
+             * @brief 设置默认请求处理回调（当无匹配路由时调用）
+             * @param cb 处理回调
+            */
+            void onDefaultRequest(const HttpConnPtr::HttpCallBack& cb)
+            {
+                m_defaultHandler = cb;
+            }
+
+        private:
+            HttpConnPtr::HttpCallBack m_defaultHandler; // 默认处理器
+            std::function<TcpConnPtr()> m_connCreate;   // 连接创建器
+            // 路由表
+            std::map<std::string, std::map<std::string, HttpConnPtr::HttpCallBack>> m_routeTable;
     };
 } // namespace handy
