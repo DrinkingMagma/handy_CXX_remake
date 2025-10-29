@@ -85,10 +85,10 @@ namespace handy
              * @brief 内部解析辅助函数，处理通用HTTP消息结构
              * @param buf 输入缓冲区
              * @param isCopyBody 是否复制消息体
-             * @param [out] line1 存储消息的第一行（请求行/状态行）
+             * @param [out] firstLine 存储消息的第一行（请求行/状态行）
              * @return Result 解析状态 
             */
-            Result _tryDecode(Slice buf, bool isCopyBody, Slice* line1);
+            Result _tryDecode(Slice buf, bool isCopyBody, Slice* firstLine);
 
             /**
              * @brief 内部函数，从映射表中获取指定键的值（不区分大小写）

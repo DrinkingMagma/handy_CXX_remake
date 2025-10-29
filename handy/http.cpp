@@ -4,6 +4,7 @@
 #include "status.h"
 #include "file.h"
 #include <string>
+#include <unordered_map>
 
 namespace handy
 {
@@ -27,7 +28,7 @@ namespace handy
         return (it != mapTable.end()) ? it->second : "";
     }
 
-    HttpMsg::Result HttpMsg::_tryDecode(Slice buf, bool isCopyBody, Slice* line1)
+    HttpMsg::Result HttpMsg::_tryDecode(Slice buf, bool isCopyBody, Slice* firstLine)
     {
         if(m_completed)
             return Result::Complete;
@@ -46,7 +47,7 @@ namespace handy
                     // 提取头部内容（不含结束标记）
                     Slice header(data, m_scannedLen);
                     // 提取第一行（请求行/状态行）
-                    *line1 = header.eatLine();
+                    *firstLine = header.eatLine();
 
                     // 解析头部字段
                     while (header.size() > 0)
@@ -113,6 +114,183 @@ namespace handy
 
     int HttpRequest::encode(Buffer& buf)
     {
-        
+        size_t initialSize = buf.size();
+
+        // 写入请求行（方法 URI HTTP版本）
+        buf.append(utils::format("%s %s %s\r\n", m_method.c_str(), m_queryUri.c_str(), m_version.c_str()));
+
+        // 写入头部字段
+        for(const auto& kv : m_headers)
+        {
+            buf.append(utils::format("%s: %s\r\n", kv.first.c_str(), kv.second.c_str()));
+        }
+
+        // 写入默认头部（Connection: Keep-Alive 和 Content-Length）
+        buf.append("Connection: Keep-Alive\r\n");
+        buf.append(utils::format("Content-Length: %zu\r\n", getBody().size()));
+
+        // 写入空行分隔头部和消息体
+        buf.append("\r\n");
+
+        // 写入消息体
+        buf.append(getBody());
+
+        return buf.size() - initialSize;
+    }
+
+    HttpMsg::Result HttpRequest::tryDecode(Slice buf, bool isCopyBody)
+    {
+        Slice firstLine;
+        Result result = _tryDecode(buf, isCopyBody, &firstLine);
+
+        if(!firstLine.empty())
+        {
+            // 解析请求行：方法 URI 版本
+            m_method = firstLine.eatWord();
+            m_queryUri = firstLine.eatWord();
+            m_version = firstLine.eatWord();
+
+            // 验证URI格式（必须以'/'开头）
+            if(m_queryUri.empty() || m_queryUri[0] != '/')
+            {
+                ERROR("Invalid URI: %.*s (must start with '/')", (int)m_queryUri.size(), m_queryUri.data());
+                m_method.clear();
+                m_queryUri.clear();
+                m_version.clear();
+                return Result::Error;
+            }
+
+            // 解析URI中的查询参数（分割?前后部分）
+            size_t queryPos = m_queryUri.find('?');
+            if(queryPos != std::string::npos)
+            {
+                m_uri = m_queryUri.substr(0, queryPos);
+                Slice queryStr(m_queryUri.data() + queryPos + 1, m_queryUri.size() - queryPos - 1);
+
+                // 解析键值对（格式：key1=value1&key2=value2&...）
+                size_t pos = 0;
+                while(pos < queryStr.size())
+                {
+                    // 查找=的位置
+                    size_t eqPos = queryStr.find('=', pos);
+                    size_t andPos = queryStr.find('&', pos);
+                    size_t keyEnd = Slice::npos;
+
+                    // 确定keyEnd为两者中较小的有效位置
+                    if(eqPos != Slice::npos && andPos != Slice::npos)
+                    {
+                        keyEnd = std::min(eqPos, andPos);
+                    }
+                    else if(eqPos != Slice::npos)
+                    {
+                        keyEnd = eqPos;
+                    }
+                    else if(andPos != Slice::npos)
+                    {
+                        keyEnd = andPos;
+                    }
+                    else
+                    {
+                        // 未找到
+                        keyEnd = queryStr.size();
+                    }
+
+                    Slice key = queryStr.sub(pos, keyEnd - pos);
+                    if(key.empty())
+                    {
+                        pos = keyEnd + 1;
+                        continue;
+                    }
+
+                    // 找到value结束位置（&）
+                    pos = keyEnd + (keyEnd < queryStr.size() && queryStr[keyEnd] == '=' ? 1 : 0);
+                    size_t valEnd = queryStr.find('&', pos);
+                    if(valEnd == Slice::npos)
+                        valEnd = queryStr.size();
+                    Slice val = queryStr.sub(pos, valEnd - pos);
+
+                    // 存入参数映射
+                    m_args[std::string(key.data(), key.size())] = std::string(val.data(), val.size());
+                    pos = valEnd + 1;
+                }
+            }
+            else
+            {
+                // 无查询参数，URI即为路径
+                m_uri = m_queryUri;
+            }
+        }
+        return result;
+    }
+
+    void HttpRequest::clear()
+    {
+        HttpMsg::clear();
+        m_args.clear();
+        m_method = "GET";
+        m_uri.clear();
+        m_queryUri.clear();
+    }
+
+    std::string HttpResponse::_getDefaultStatusMsg(int status) const
+    {
+        static const std::unordered_map<int, std::string> statusMsgs = {
+            {200, "OK"},
+            {201, "Created"},
+            {400, "Bad Request"},
+            {404, "Not Found"},
+            {500, "Internal Server Error"}
+        };
+
+        auto it = statusMsgs.find(status);
+        return (it != statusMsgs.end()) ? it->second : "Unknown Status";
+    }
+
+    int HttpResponse::encode(Buffer& buf)
+    {
+        size_t initialSize = buf.size();
+
+        // 写入状态行（版本 状态码 描述）
+        buf.append(utils::format("%s %d %s\r\n", m_version.c_str(), m_status, m_statusMsg.c_str()));
+    
+        // 写入头部字段
+        for(const auto it : m_headers)
+        {
+            buf.append(utils::format("%s: %s\r\n", it.first.c_str(), it.second.c_str()));
+        }
+
+        // 写入默认头部
+        buf.append("Connection: Keep-Alive\r\n");
+        buf.append(utils::format("Content-Length: %zu\r\n", getBody().size()));
+
+        // 写入空行和消息体
+        buf.append("\r\n");
+        buf.append(getBody());
+
+        return buf.size() - initialSize;
+    }
+
+    HttpMsg::Result HttpResponse::tryDecode(Slice buf, bool isCopyBody)
+    {
+        Slice firstLine;
+        Result result = _tryDecode(buf, isCopyBody, &firstLine);
+
+        if(!firstLine.empty())
+        {
+            // 解析状态行：版本 状态码 描述
+            m_version = firstLine.eatWord();
+            Slice statusCodeStr = firstLine.eatWord();
+            m_status = stoi(std::string(statusCodeStr.data(), statusCodeStr.size()));
+            m_statusMsg = firstLine.eatWord().toString();
+        }
+
+        return result;
+    }
+
+    void HttpResponse::clear()
+    {
+        HttpMsg::clear();
+        m_status = 200;
+        m_statusMsg = "OK";
     }
 } // namespace handy

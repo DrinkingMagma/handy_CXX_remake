@@ -211,6 +211,27 @@ namespace handy
             }
 
             /**
+             * @brief 从指定索引开始查找字符位置
+             * @param ch 要查找的字符
+             * @param pos 查找的起始索引
+             * @return size_t 索引位置，未找到返回npos
+            */
+            size_t find(char ch, size_t pos = 0) noexcept
+            {
+                if(pos >= size())
+                    return npos;
+
+                const char* p = m_pb + pos;
+                while(p < m_pe)
+                {
+                    if(*p == ch)
+                        return static_cast<size_t>(p - m_pb);
+                    ++p;
+                }
+                return npos;
+            }
+
+            /**
              * @brief 吞噬一个单词（跳过前导空白，直到下一个空白)
              * @return 单词的子视图（无空白）
             */
