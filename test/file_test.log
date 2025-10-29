@@ -1,0 +1,49 @@
+[2025-10-29 10:52:28.615] [INFO] [file_test.cpp:28 initTestLogger] === file_test 测试开始 ===
+[2025-10-29 10:52:28.615] [INFO] [file_test.cpp:46 cleanTestFiles] 测试文件清理完成
+[2025-10-29 10:52:28.615] [DEBUG] [file_test.cpp:72 test_file_content] === 开始测试文件内容读写 ===
+[2025-10-29 10:52:28.616] [DEBUG] [file_test.cpp:59 checkStatus] writeContent 正常写入: 通过
+[2025-10-29 10:52:28.616] [DEBUG] [file_test.cpp:59 checkStatus] getContent 正常读取: 通过
+[2025-10-29 10:52:28.616] [DEBUG] [file_test.cpp:85 test_file_content] getContent 内容匹配: 通过
+[2025-10-29 10:52:28.617] [DEBUG] [file_test.cpp:59 checkStatus] getContent 读取不存在文件: 通过
+[2025-10-29 10:52:28.617] [DEBUG] [file_test.cpp:91 test_file_content] === 文件内容读写测试结束 ===
+
+[2025-10-29 10:52:28.617] [DEBUG] [file_test.cpp:98 test_rename_save] === 开始测试安全写入 ===
+[2025-10-29 10:52:28.619] [DEBUG] [file_test.cpp:59 checkStatus] renameSave 正常写入: 通过
+[2025-10-29 10:52:28.619] [DEBUG] [file_test.cpp:113 test_rename_save] renameSave 临时文件删除: 通过
+[2025-10-29 10:52:28.619] [DEBUG] [file_test.cpp:119 test_rename_save] renameSave 内容正确: 通过
+[2025-10-29 10:52:28.619] [DEBUG] [file_test.cpp:121 test_rename_save] === 安全写入测试结束 ===
+
+[2025-10-29 10:52:28.619] [DEBUG] [file_test.cpp:128 test_directory_operations] === 开始测试目录操作 ===
+[2025-10-29 10:52:28.619] [DEBUG] [file_test.cpp:59 checkStatus] createDir 正常创建: 通过
+[2025-10-29 10:52:28.619] [DEBUG] [file_test.cpp:59 checkStatus] createDir 重复创建: 通过
+[2025-10-29 10:52:28.620] [DEBUG] [file_test.cpp:146 test_directory_operations] createDir 子文件创建: 通过
+[2025-10-29 10:52:28.620] [DEBUG] [file_test.cpp:59 checkStatus] getChildren 正常获取: 通过
+[2025-10-29 10:52:28.620] [DEBUG] [file_test.cpp:153 test_directory_operations] getChildren 内容正确: 通过
+[2025-10-29 10:52:28.620] [DEBUG] [file_test.cpp:59 checkStatus] deleteDir 删除非空目录: 通过
+[2025-10-29 10:52:28.620] [DEBUG] [file_test.cpp:59 checkStatus] deleteDir 删除空目录: 通过
+[2025-10-29 10:52:28.620] [DEBUG] [file_test.cpp:166 test_directory_operations] === 目录操作测试结束 ===
+
+[2025-10-29 10:52:28.620] [DEBUG] [file_test.cpp:173 test_file_attributes] === 开始测试文件属性操作 ===
+[2025-10-29 10:52:28.621] [DEBUG] [file_test.cpp:181 test_file_attributes] exists 存在文件: 通过
+[2025-10-29 10:52:28.621] [DEBUG] [file_test.cpp:184 test_file_attributes] exists 不存在文件: 通过
+[2025-10-29 10:52:28.621] [DEBUG] [file_test.cpp:59 checkStatus] getFileSize 正常文件: 通过
+[2025-10-29 10:52:28.621] [DEBUG] [file_test.cpp:190 test_file_attributes] getFileSize 大小正确: 通过
+[2025-10-29 10:52:28.622] [DEBUG] [file_test.cpp:59 checkStatus] getFileSize 目录类型: 通过
+[2025-10-29 10:52:28.622] [DEBUG] [file_test.cpp:59 checkStatus] rename 正常重命名: 通过
+[2025-10-29 10:52:28.622] [DEBUG] [file_test.cpp:204 test_file_attributes] rename 结果正确: 通过
+[2025-10-29 10:52:28.623] [DEBUG] [file_test.cpp:206 test_file_attributes] === 文件属性操作测试结束 ===
+
+[2025-10-29 10:52:28.623] [DEBUG] [file_test.cpp:213 test_error_handling] === 开始测试错误处理 ===
+[2025-10-29 10:52:28.623] [DEBUG] [file_test.cpp:59 checkStatus] getChildren 空指针参数: 通过
+[2025-10-29 10:52:28.623] [DEBUG] [file_test.cpp:59 checkStatus] getFileSize 空指针参数: 通过
+[2025-10-29 10:52:28.623] [DEBUG] [file_test.cpp:59 checkStatus] deleteFile 不存在文件: 通过
+[2025-10-29 10:52:28.623] [DEBUG] [file_test.cpp:59 checkStatus] deleteDir 不存在目录: 通过
+[2025-10-29 10:52:28.623] [DEBUG] [file_test.cpp:231 test_error_handling] === 错误处理测试结束 ===
+
+[2025-10-29 10:52:28.623] [DEBUG] [file_test.cpp:238 test_thread_safe] === 开始测试文件操作线程安全 ===
+[2025-10-29 10:52:28.770] [DEBUG] [file_test.cpp:282 test_thread_safe] 线程安全测试：总成功次数=200（预期：200，通过）
+[2025-10-29 10:52:28.770] [DEBUG] [file_test.cpp:284 test_thread_safe] === 文件操作线程安全测试结束 ===
+
+[2025-10-29 10:52:28.770] [INFO] [file_test.cpp:46 cleanTestFiles] 测试文件清理完成
+[2025-10-29 10:52:28.770] [INFO] [file_test.cpp:303 run_all_tests] === file_test 测试结束 ===
+

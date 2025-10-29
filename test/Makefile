@@ -11,7 +11,7 @@ TEST_SRCS = $(wildcard *_test.cpp)
 TARGETS = $(TEST_SRCS:.cpp=)
 
 # 核心依赖目标文件
-HANDY_OBJS = ../handy/logger.o ../handy/utils.o ../handy/conf.o ../handy/port_posix.o ../handy/net.o ../handy/codec.o ../handy/thread_pool.o ../handy/daemon.o ../handy/udp.o ../handy/event_base.o ../handy/poller.o ../handy/conn.o
+HANDY_OBJS = ../handy/logger.o ../handy/utils.o ../handy/conf.o ../handy/port_posix.o ../handy/net.o ../handy/codec.o ../handy/thread_pool.o ../handy/daemon.o ../handy/udp.o ../handy/event_base.o ../handy/poller.o ../handy/conn.o ../handy/file.o
 
 # 默认目标：编译所有测试程序
 all: $(TARGETS)
@@ -68,6 +68,10 @@ $(TARGETS): %: %.cpp $(HANDY_OBJS)
 
 # 编译handy模块的udp
 ../handy/udp.o: ../handy/udp.cpp ../handy/udp.h 
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c -o $@ $<
+
+# 编译handy模块的file
+../handy/file.o: ../handy/file.cpp ../handy/file.h 
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c -o $@ $<
 
 # 清理生成文件

@@ -1,6 +1,9 @@
 #include "file.h"
 #include <fcntl.h>
 #include <unistd.h>
+#include <dirent.h>
+#include <algorithm>
+#include <sys/stat.h>
 
 namespace handy 
 {
@@ -74,5 +77,104 @@ namespace handy
             return st;
 
         // 原子重命名（确保目标文件要么是旧版本要么是新版本，避免中间态）
+        if(::rename(tmpFilename.c_str(), targetFilename.c_str()) < 0)
+            return Status::ioError("rename", tmpFilename + " -> " + targetFilename);
+
+        return Status();
+    }
+
+    Status File::getChildren(const std::string& dir, std::vector<std::string>* result)
+    { 
+        if(!result)
+            return Status::fromFormat(EINVAL, "result pointer cannot be null");
+        result->clear();
+
+        // 打开目录
+        DIR* dirPtr = opendir(dir.c_str());
+        if(!dirPtr)
+            return Status::ioError("opendir", dir);
+
+        struct DirGuard
+        {
+            DIR* dir;
+            ~DirGuard() { closedir(dir); }
+        }  guard{dirPtr};
+
+        // 实现清空错误码，避免遗留的错误码影响逻辑
+        errno = 0;
+        // 遍历目录项
+        dirent* entry;
+        while((entry = readdir(dirPtr)) != nullptr)
+        {
+            std::string name(entry->d_name);
+            // 跳过.（当前目录）和..（父目录）
+            if(name != "." && name != "..")
+                result->push_back(name);
+        }
+
+        // 检查readdir()是否出错
+        if(errno != 0)
+            return Status::ioError("readdir", dir);
+
+        // 排序目录项（确保结果一致性）
+        sort(result->begin(), result->end());
+
+        return Status();
+    }
+
+    Status File::deleteFile(const std::string& filename)
+    {
+        if(unlink(filename.c_str()) < 0)
+            return Status::ioError("unlink", filename); 
+        return Status();
+    }
+
+    Status File::createDir(const std::string& dirname)
+    {
+        if(mkdir(dirname.c_str(), 0755) < 0)
+            return Status::ioError("mkdir", dirname);
+        return Status();
+    }
+
+    Status File::deleteDir(const std::string& dirname)
+    {
+        if(rmdir(dirname.c_str()) < 0)
+            return Status::ioError("rmdir", dirname);
+        return Status();
+    }
+
+    Status File::getFileSize(const std::string& filename, uint64_t* size)
+    {
+        if(!size)
+            return Status::fromFormat(EINVAL, "size pointer cannot be null");
+
+        struct stat fileStat;
+        if(stat(filename.c_str(), &fileStat) < 0)
+        {
+            *size = 0;
+            return Status::ioError("stat", filename);
+        }
+
+        // 检查是否为常规文件
+        if(!S_ISREG(fileStat.st_mode))
+        {
+            *size = 0;
+            return Status::fromFormat(EINVAL, "%s is not a regular file", filename.c_str());
+        }
+
+        *size = static_cast<uint64_t>(fileStat.st_size);
+        return Status();
+    }
+
+    Status File::rename(const std::string& src, const std::string& dst)
+    { 
+        if(::rename(src.c_str(), dst.c_str()) < 0)
+            return Status::ioError("rename", src + " -> " + dst);
+        return Status();
+    }
+
+    bool File::exists(const std::string& path)
+    {
+        return access(path.c_str(), F_OK) == 0;
     }
 }   // namespace handy

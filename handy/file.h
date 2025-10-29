@@ -78,7 +78,7 @@ namespace handy
              * @param[out] size 文件大小（字节）
              * @return Status 操作结果状态
             */
-            static Status getFileSize(const std::string& filename, uint64_t size);
+            static Status getFileSize(const std::string& filename, uint64_t* size);
 
             /**
              * @brief 重名名文件或目录
