@@ -88,16 +88,16 @@ namespace handy
              * @param [out] line1 存储消息的第一行（请求行/状态行）
              * @return Result 解析状态 
             */
-            Result _tryDecode(Slice buf, bool isCopyBody, Slice& line1);
+            Result _tryDecode(Slice buf, bool isCopyBody, Slice* line1);
 
             /**
              * @brief 内部函数，从映射表中获取指定键的值（不区分大小写）
-             * @param map 键值对映射表
-             * @param name 键名
+             * @param mapTable 键值对映射表
+             * @param key 键名
              * @return std::string 键对应的值（空字符串表示未找到）
             */
-            std::string _getValueFromMap(const std::map<std::string, std::string>& map,
-                                            const std::string& name) const;
+            std::string _getValueFromMap(const std::map<std::string, std::string>& mapTable,
+                                            const std::string& key) const;
 
     };
 

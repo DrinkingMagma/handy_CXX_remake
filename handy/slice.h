@@ -211,7 +211,7 @@ namespace handy
             }
 
             /**
-             * @brief 吞噬一个单词（跳过前导空白，知道下一个空白)
+             * @brief 吞噬一个单词（跳过前导空白，直到下一个空白)
              * @return 单词的子视图（无空白）
             */
             Slice eatWord() noexcept
@@ -252,6 +252,23 @@ namespace handy
 
                 // 不含换行符
                 return Slice(p, m_pb - 1);
+            }
+
+            /**
+             * @brief 吞噬直到终止符号出现(终止符号也会被吞噬)
+             * @param ch 目标终止符号
+             * @return 吞噬内容的子视图（含终止符号）
+            */
+            Slice eatUntil(char ch)
+            {
+                const char* start = m_pb;
+                while(m_pb < m_pe && *m_pb != ch)
+                    ++m_pb;
+
+                // 若找到终止符号
+                if(m_pb < m_pe)
+                    ++m_pb;
+                return Slice(start, m_pb);
             }
             
             /**
