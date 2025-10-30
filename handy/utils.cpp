@@ -4,6 +4,7 @@
 #include <chrono>
 #include <cstdarg>
 #include <fcntl.h>
+#include <unordered_map>
 
 // 使用std命名空间显式限定（避免using namespace std潜在冲突）
 using std::string;
@@ -220,5 +221,85 @@ namespace handy
         }
 
         return 0;
+    }
+
+    const std::unordered_map<std::string, std::string>& utils::getMimeMap() 
+    {
+        static const std::unordered_map<std::string, std::string> mime_map = {
+            // 文本类型
+            {".txt", "text/plain"},
+            {".html", "text/html"},
+            {".htm", "text/html"},
+            {".css", "text/css"},
+            {".js", "text/javascript"},
+            {".json", "application/json"},
+            {".xml", "text/xml"},
+            {".md", "text/markdown"},
+            {".csv", "text/csv"},
+            
+            // 图片类型
+            {".jpg", "image/jpeg"},
+            {".jpeg", "image/jpeg"},
+            {".png", "image/png"},
+            {".gif", "image/gif"},
+            {".bmp", "image/bmp"},
+            {".webp", "image/webp"},
+            {".svg", "image/svg+xml"},
+            
+            // 音频类型
+            {".mp3", "audio/mpeg"},
+            {".wav", "audio/wav"},
+            {".ogg", "audio/ogg"},
+            {".flac", "audio/flac"},
+            
+            // 视频类型
+            {".mp4", "video/mp4"},
+            {".avi", "video/x-msvideo"},
+            {".mov", "video/quicktime"},
+            {".mkv", "video/x-matroska"},
+            {".flv", "video/x-flv"},
+            
+            // 文档类型
+            {".pdf", "application/pdf"},
+            {".doc", "application/msword"},
+            {".docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"},
+            {".xls", "application/vnd.ms-excel"},
+            {".xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"},
+            {".ppt", "application/vnd.ms-powerpoint"},
+            {".pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation"},
+            
+            // 压缩文件类型
+            {".zip", "application/zip"},
+            {".rar", "application/x-rar-compressed"},
+            {".tar", "application/x-tar"},
+            {".gz", "application/gzip"},
+            {".7z", "application/x-7z-compressed"},
+            
+            // 二进制流（默认 fallback）
+            {"", "application/octet-stream"}
+        };
+        return mime_map;
+    }
+
+    std::string utils::getMimeType(const std::string& filename)
+    {
+        size_t dotPos = filename.find_first_of('.');
+        std::string ext;
+
+        if(dotPos != std::string::npos && dotPos < filename.size() - 1)
+        {
+            // 提取扩展名并转换为小写
+            ext = filename.substr(dotPos);
+            std::transform(ext.begin(), ext.end(), ext.begin(), ::tolower);
+        }
+
+        // 从映射表中查找，未找到则返回默认值
+        const auto& mimeMap = getMimeMap();
+        auto it = mimeMap.find(ext);
+        if(it != mimeMap.end())
+            return it->second;
+        // 未知类型默认二进制流
+        else
+            return "application/octet-stream";
     }
 }

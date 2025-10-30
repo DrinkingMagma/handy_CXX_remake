@@ -81,10 +81,10 @@ namespace handy
                     // 跳过头部结束标记
                     m_scannedLen += 4;
                     // 解析内容长度
-                    m_contentLen = stoull(getHeader("content-length"), nullptr, 10);
+                    m_contentLen = stoull(getHeaderValue("content-length"), nullptr, 10);
 
                     // 检查是否需要发送100 Continue
-                    if(bufSize < m_scannedLen + m_contentLen && !getHeader("expect").empty())
+                    if(bufSize < m_scannedLen + m_contentLen && !getHeaderValue("expect").empty())
                         return Result::Continue100;
                     break;
                 }
@@ -292,5 +292,166 @@ namespace handy
         HttpMsg::clear();
         m_status = 200;
         m_statusMsg = "OK";
+    }
+
+    HttpRequest& HttpConnPtr::getRequest() const
+    {
+        return m_tcp->getInternalContext().context<HttpContext>().req;
+    }
+
+    HttpResponse& HttpConnPtr::getResponse() const
+    {
+        return m_tcp->getInternalContext().context<HttpContext>().resp;
+    }
+
+    void HttpConnPtr::sendRequest(HttpRequest& req) const
+    {
+        req.encode(m_tcp->getOutputBuffer());
+        logOutput("HTTP Request");
+        clearData();
+        m_tcp->sendOutputBuffer();
+    }
+
+    void HttpConnPtr::sendResponse(HttpResponse& resp) const
+    {
+        resp.encode(m_tcp->getOutputBuffer());
+        logOutput("HTTP Response");
+        clearData();
+        m_tcp->sendOutputBuffer();
+    }
+
+    void HttpConnPtr::sendFile(const std::string& filename) const
+    {
+        std::string content;
+        Status st = File::getContent(filename, content);
+        HttpResponse& resp = getResponse();
+
+        if(st.code() == ENOENT)
+            resp.setNotFound();
+        else if(!st.ok())
+            resp.setStatus(500, st.msg());
+        else
+        {
+            resp.getBody() = Slice(content);
+            resp.getHeaders()["Content-Type"]= utils::getMimeType(filename);
+        }
+
+        sendResponse();
+    }
+
+    void HttpConnPtr::clearData() const
+    {
+        // 客户端：清除响应数据
+        if(m_tcp->isClient())
+        {
+            m_tcp->getInputBuffer().consume(getResponse().getScannedBytes());
+            getResponse().clear();
+        }
+        // 服务端：清除请求数据
+        else
+        {
+            m_tcp->getInputBuffer().consume(getRequest().getScannedBytes());
+            getRequest().clear();
+        }
+    }
+
+    void HttpConnPtr::onHttpMsg(const HttpCallBack& cb) const
+    {
+        m_tcp->onReadable([cb](const TcpConnPtr& tcp) {
+            HttpConnPtr httpConn(tcp);
+            httpConn.handleRead(cb);
+        }); 
+    }
+
+    void HttpConnPtr::handleRead(const HttpCallBack& cb) const
+    {
+        // 服务端处理请求
+        if(!m_tcp->isClient())
+        {
+            HttpRequest& req = getRequest();
+            HttpMsg::Result result = req.tryDecode(m_tcp->getInputBuffer());
+
+            if(result == HttpMsg::Result::Error)
+            {
+                m_tcp->close();
+                return;
+            }
+            else if(result == HttpMsg::Result::Continue100)
+            {
+                // 发送100 Continue响应
+                m_tcp->send("HTTP/1.1 100 Continue\r\n\r\n");
+            }
+            else if(result == HttpMsg::Result::Complete)
+            {
+                INFO("Received HTTP request: %s %s %s",
+                    req.m_method.c_str(), req.m_uri.c_str(), req.getVersion().c_str());
+                TRACE("Request data:\n%.*s", (int)m_tcp->getInputBuffer().size(), m_tcp->getInputBuffer().data());
+                // 调用请求处理回调函数
+                cb(*this);
+            }
+        }
+        // 客户端处理响应
+        else
+        {
+            HttpResponse& resp = getResponse();
+            HttpMsg::Result result = resp.tryDecode(m_tcp->getInputBuffer());
+
+            if(result == HttpMsg::Result::Error)
+            {
+                m_tcp->close();
+                return;
+            }
+            else if(result == HttpMsg::Result::Complete)
+            {
+                INFO("Received HTTP response: %d %s", resp.m_status, resp.m_statusMsg.c_str());
+                TRACE("Response data:\n%.*s", (int)m_tcp->getInputBuffer().size(), m_tcp->getInputBuffer().data());
+                cb(*this);
+            }
+        }
+    }
+
+    void HttpConnPtr::logOutput(const char* title) const
+    {
+        Buffer& output = m_tcp->getOutputBuffer();
+        TRACE("%s:\n%.*s", title, (int)output.size(), output.data());
+    }
+
+    HttpServer::HttpServer(EventBases* bases) : TcpServer(bases)
+    {
+        // 默认404处理器
+        m_defaultHandler = [](const HttpConnPtr& conn) {
+            HttpResponse& resp = conn.getResponse();
+            resp.setNotFound();
+            conn.sendResponse();
+        };
+
+        // 默认连接创建器
+        m_connCreator = []() { return TcpConnPtr(new TcpConn); };
+
+        // 注册连接创建回调
+        onConnCreate([this]() {
+            TcpConnPtr tcpConn = m_connCreator();
+            HttpConnPtr httpConn (tcpConn);
+
+            // 设置HTTP消息处理逻辑
+            httpConn.onHttpMsg([this](const HttpConnPtr& conn) {
+                const HttpRequest& req = conn.getRequest();
+                auto methodIt = m_routeTable.find(req.m_uri);
+                if(methodIt != m_routeTable.end())
+                {
+                    auto uriIt = methodIt->second.find(req.m_uri);
+                    if(uriIt != methodIt->second.end())
+                    {
+                        // 调用匹配的路由处理器
+                        uriIt->second(conn);
+                        return;
+                    }
+                }
+                // 若无匹配路由，调用默认处理器
+                m_defaultHandler(conn);
+            });
+
+            return tcpConn;
+        });
     }
 } // namespace handy

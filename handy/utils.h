@@ -3,6 +3,7 @@
 #include <string>
 #include <cstring>
 #include <functional>
+#include <algorithm>
 
 namespace handy
 {
@@ -99,6 +100,18 @@ namespace handy
          * @note 2. 使用fcntl的F_GETFD/F_SETFD操作，保证原子性
          */
         static int addFdFlag(int fd, int flag) noexcept;
+
+        /**
+         * @brief 初始化MIME类型映射表
+        */
+        static const std::unordered_map<std::string, std::string>& getMimeMap() noexcept;
+
+        /**
+         * @brief 更具文件名获取对应的MIME类型
+         * @param filename 文件名（包含文件后缀）
+         * @return MIME类型字符串，未知类型返回"application/octet-stream"
+        */
+        static std::string getMimeType(const std::string& filename) noexcept;
     };
 
     /**

@@ -49,11 +49,20 @@ namespace handy
             virtual void clear();
 
             /**
-             * @brief 获取指定头部字段的值
+             * @brief 获取头部字段
+             * @return std::map<std::string, std::string> 头部字段m_headers
+            */
+            std::map<std::string, std::string> getHeaders() const
+            {
+                return m_headers;
+            }
+
+            /**
+             * @brief 获取指定头部字段对应的值
              * @param name 头部字段名（不区分大小写）
              * @return std::string 头部字段值（空字符串表示未找到）
             */
-            std::string getHeader(const std::string& name) const
+            std::string getHeaderValue(const std::string& name) const
             {
                 return _getValueFromMap(m_headers, name);
             }
@@ -72,6 +81,12 @@ namespace handy
              * @return 已解析的字节数
             */
             size_t getScannedBytes() const { return m_scannedLen; }
+
+            /**
+             * @brief 获取HTTP版本
+             * @return std::string HTTP版本
+            */
+            std::string getVersion() const { return m_version; }
         protected:
             std::map<std::string, std::string> m_headers;   // 头部字段（键为小写）
             std::string m_version;                          // HTTP版本（如"HTTP/1.1"）
@@ -343,7 +358,7 @@ namespace handy
             template <class Conn = TcpConn>
             void setConnType()
             {
-                m_connCreate = []() { return TcpConnPtr(new Conn); }
+                m_connCreator = []() { return TcpConnPtr(new Conn); }
             }
 
             /**
@@ -378,7 +393,7 @@ namespace handy
 
         private:
             HttpConnPtr::HttpCallBack m_defaultHandler; // 默认处理器
-            std::function<TcpConnPtr()> m_connCreate;   // 连接创建器
+            std::function<TcpConnPtr()> m_connCreator;   // 连接创建器
             // 路由表
             std::map<std::string, std::map<std::string, HttpConnPtr::HttpCallBack>> m_routeTable;
     };
