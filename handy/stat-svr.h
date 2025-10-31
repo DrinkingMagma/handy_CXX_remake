@@ -69,11 +69,84 @@ namespace handy
             * @param desc 描述信息（用于生成首页帮助）
             * @param cb 处理回调函数
            */
-           void OnRequest(StatType type, const std::string& key, const std::string& desc, const StatCallBack& cb);
+           void onRequest(StatType type, const std::string& key, const std::string& desc, const StatCallBack& cb);
 
            /**
-            * @brief 
+            * @brief 注册信息类型的请求处理回调函数（适配InfoCallBack）
+            * @param type 请求类型（STATE/PAGE/CMD）
+            * @param key 唯一标识（用于HTTP路径匹配）
+            * @param desc 描述信息（用于生成首页帮助）
+            * @param cb 信息获取回调函数
            */
+           void onRequest(StatType type, const std::string& key, const std::string& desc, const InfoCallBack& cb);
+
+           /**
+            * @brief 注册状态信息回调（快捷接口）
+            * @param state 状态标识
+            * @param desc 状态描述
+            * @param cb 信息获取回调函数
+           */
+           void onState(const std::string& state, const std::string& desc, const InfoCallBack& cb)
+           {
+                onRequest(StatType::STATE, state, desc, cb);
+           }
+
+           /**
+            * @brief 注册数值型状态信息回调（快捷接口）
+            * @param state 状态标识
+            * @param desc 状态描述
+            * @param cb 信息获取回调函数
+           */
+           void onState(const std::string& state, const std::string& desc, const IntCallBack& cb)
+           {
+                onRequest(StatType::STATE, state, desc, [cb] {
+                    return utils::format("%ld", cb());
+                });
+           }
+
+           /**
+            * @brief 注册页面信息回调（快捷接口）
+            * @param page 页面标识（对应HTTP路径）
+            * @param desc 页面描述
+            * @param cb 页面内容获取回调函数
+           */
+           void onPage(const std::string& page, const std::string& desc, const InfoCallBack& cb)
+           {
+                onRequest(StatType::PAGE, page, desc, cb);
+           }
+
+           /**
+            * @brief 注册页面文件（将文件内容作为页面响应）
+            * @param page 页面标识（对应HTTP路径）
+            * @param desc 页面描述
+            * @param file 本地文件路径
+           */
+           void onPageFile(const std::string& page, const std::string& desc, const std::string& file);
+
+           /**
+            * @brief 注册命令处理回调（快捷接口）
+            * @param cmd 命令标识
+            * @param desc 命令描述
+            * @param cb 命令处理回调函数
+           */
+           void onCmd(const std::string& cmd, const std::string& desc, const InfoCallBack& cb)
+           {
+                onRequest(StatType::CMD, cmd, desc, cb);
+           }
+
+           /**
+            * @brief 注册数值型命令处理回调（快捷接口）
+            * @param cmd 命令标识
+            * @param desc 命令描述
+            * @param cb 命令结果数值获取回调函数
+           */
+           void onCmd(const std::string& cmd, const std::string& desc, const IntCallBack& cb)
+           {
+                onRequest(StatType::CMD, cmd, desc, [cb] 
+                {
+                    return utils::format("%lld", cb());
+                });
+           }
         private:
             HttpServer m_server;        // 内部HTTP服务器实例
             // 存储回调函数及描述的结构体

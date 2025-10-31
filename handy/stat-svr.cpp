@@ -26,4 +26,9 @@ namespace handy
     {
         return utils::format("<a href=\"/%s\">%s</a>", path.c_str(), path.c_str());
     }
+
+    StatServer::StatServer(EventBase* base) : m_server(base)
+    {
+        
+    }
 } // namespace handy
