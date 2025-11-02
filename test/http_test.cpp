@@ -1,6 +1,6 @@
 // http_test.cpp
 #include "http.h"
-#include "buffer.h"
+#include "net.h"
 #include "logger.h"
 #include <cstdio>
 #include <cstring>
@@ -70,7 +70,7 @@ void testHttpRequestBasic() {
     // 测试clear()
     req.clear();
     bool test5 = (req.m_method == "GET" && req.m_uri.empty() && 
-                 req.m_headers.empty() && req.getBody().empty());
+                 req.getHeaders().empty() && req.getBody().empty());
     DEBUG("测试5（clear()）：%s", test5 ? "通过" : "失败");
 
     DEBUG("=== HttpRequest 基础操作测试结束 ===\n");
@@ -98,9 +98,9 @@ void testHttpRequestEncode() {
                           "\r\n"
                           "test data";
     
-    bool test1 = (buf.toString() == expected);
+    bool test1 = (buf.data() == expected);
     DEBUG("测试1（完整编码）：%s", test1 ? "通过" : "失败");
-    DEBUG("实际输出:\n%s", buf.toString().c_str());
+    DEBUG("实际输出:\n%s", buf.data().c_str());
     DEBUG("预期输出:\n%s", expected.c_str());
 
     bool test2 = (len == expected.size());
@@ -210,7 +210,7 @@ void testHttpResponseBasic() {
     // 测试clear()
     resp.clear();
     bool test5 = (resp.m_status == 200 && resp.m_statusMsg == "OK" &&
-                 resp.m_headers.empty() && resp.getBody().empty());
+                 resp.getHeaders().empty() && resp.getBody().empty());
     DEBUG("测试5（clear()）：%s", test5 ? "通过" : "失败");
 
     DEBUG("=== HttpResponse 基础操作测试结束 ===\n");
@@ -237,9 +237,9 @@ void testHttpResponseEncode() {
                           "\r\n"
                           "{\"status\":\"success\"}";
     
-    bool test1 = (buf.toString() == expected);
+    bool test1 = (buf.data() == expected);
     DEBUG("测试1（完整编码）：%s", test1 ? "通过" : "失败");
-    DEBUG("实际输出:\n%s", buf.toString().c_str());
+    DEBUG("实际输出:\n%s", buf.data().c_str());
     DEBUG("预期输出:\n%s", expected.c_str());
 
     bool test2 = (len == expected.size());
@@ -250,7 +250,7 @@ void testHttpResponseEncode() {
     resp404.setNotFound();
     Buffer buf404;
     resp404.encode(buf404);
-    bool test3 = (buf404.toString().find("404 Not Found") != std::string::npos);
+    bool test3 = (buf404.data().find("404 Not Found") != std::string::npos);
     DEBUG("测试3（404响应编码）：%s", test3 ? "通过" : "失败");
 
     DEBUG("=== HttpResponse 编码功能测试结束 ===\n");
@@ -311,8 +311,8 @@ void testHttpResponseDecode() {
 void testHttpServerRouting() {
     DEBUG("=== 开始测试 HttpServer 路由功能 ===");
 
-    EventBases bases;
-    HttpServer server(&bases);
+    EventBase base;
+    HttpServer server(&base);
     
     // 注册测试路由
     bool getCalled = false;
@@ -359,13 +359,13 @@ void testHttpServerRouting() {
     postReq.m_uri = "/test/post";
     postReq.m_queryUri = "/test/post";
     
-    auto mockPostHandler = server.m_routeTable["POST"]["/test/post"];
+    auto mockPostHandler = server.addRoute("POST","/test/post");
     mockPostHandler(mockHttpConn);
     bool test2 = postCalled;
     DEBUG("测试2（POST路由匹配）：%s", test2 ? "通过" : "失败");
 
     // 模拟默认路由
-    server.m_defaultHandler(mockHttpConn);
+    server.setDefaultHandler(mockHttpConn);
     bool test3 = defaultCalled;
     DEBUG("测试3（默认路由）：%s", test3 ? "通过" : "失败");
 

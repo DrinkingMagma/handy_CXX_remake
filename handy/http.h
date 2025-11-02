@@ -419,6 +419,28 @@ namespace handy
                 m_defaultHandler = cb;
             }
 
+            /**
+             * @brief 设置默认请求处理器
+             * @param handler 回调函数，接收HttpConnPtr参数（包含请求/响应信息）
+            */
+            void setDefaultHandler(const HttpConnPtr::HttpCallBack& handler)
+            {
+                m_defaultHandler = handler;
+            }
+
+            /**
+             * @brief 增量添加路由
+             * @param method HTTP方法（如GET、POST、PUT、DELETE）
+             * @param path 路径（如"/api/test"）
+             * @param handler 该路由的请求处理回调
+            */
+            void addRoute(const std::string& method, const std::string& path, const HttpConnPtr::HttpCallBack& handler)
+            {
+                // 统一方法名大小写（转换为小写）
+                std::string lowerMethod = method;
+                std::transform(lowerMethod.begin(), lowerMethod.end(), lowerMethod.begin(), ::tolower);
+                m_routeTable[lowerMethod][path] = handler;
+            }
         private:
             HttpConnPtr::HttpCallBack m_defaultHandler; // 默认处理器
             std::function<TcpConnPtr()> m_connCreator;   // 连接创建器
