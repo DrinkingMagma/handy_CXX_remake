@@ -58,6 +58,25 @@ namespace handy
             }
 
             /**
+             * @brief 整体设置所有头信息（替换整个映射）
+             * @param headers 头部信息
+            */
+            void setHeaders(const std::map<std::string, std::string>& headers)
+            {
+                m_headers = headers;
+            }
+
+            /**
+             * @brief 设置单个头部字段（添加/覆盖单个键值对）
+             * @param key 头部字段名
+             * @param value 头部字段值
+            */
+            void setHeader(const std::string& key, const std::string& value)
+            {
+                m_headers[key] = value;
+            }
+
+            /**
              * @brief 获取指定头部字段对应的值
              * @param name 头部字段名（不区分大小写）
              * @return std::string 头部字段值（空字符串表示未找到）
@@ -74,6 +93,15 @@ namespace handy
             Slice getBody() const
             {
                 return m_body2.empty() ? Slice(m_body) : m_body2;
+            }
+
+            /**
+             * @brief 设置m_body消息体内容
+             * @param msg 消息体
+            */
+            void setBody(const std::string& msg)
+            {
+                m_body = msg;
             }
 
             /**
@@ -386,7 +414,7 @@ namespace handy
              * @brief 设置默认请求处理回调（当无匹配路由时调用）
              * @param cb 处理回调
             */
-            void onDefaultRequest(const HttpConnPtr::HttpCallBack& cb)
+            void onDefault(const HttpConnPtr::HttpCallBack& cb)
             {
                 m_defaultHandler = cb;
             }
