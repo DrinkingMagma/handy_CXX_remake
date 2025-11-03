@@ -58,7 +58,7 @@ namespace handy
             }
 
             /**
-             * @brief 整体设置所有头信息（替换整个映射）
+             * @brief 整体设置所有头信息（替换整个映射）(需保证key全为小写)
              * @param headers 头部信息
             */
             void setHeaders(const std::map<std::string, std::string>& headers)
@@ -72,8 +72,13 @@ namespace handy
              * @param value 头部字段值
             */
             void setHeader(const std::string& key, const std::string& value)
-            {
-                m_headers[key] = value;
+            {        
+                std::string lowerKey = key;
+                for(char& c : lowerKey)
+                    c = tolower(c);
+                
+                // 用小写 key 存储
+                m_headers[lowerKey] = value;
             }
 
             /**
@@ -386,7 +391,7 @@ namespace handy
             template <class Conn = TcpConn>
             void setConnType()
             {
-                m_connCreator = []() { return TcpConnPtr(new Conn); }
+                m_connCreator = []() { return TcpConnPtr(new Conn); };
             }
 
             /**
@@ -420,26 +425,32 @@ namespace handy
             }
 
             /**
-             * @brief 设置默认请求处理器
-             * @param handler 回调函数，接收HttpConnPtr参数（包含请求/响应信息）
+             * @brief 获取默认请求处理器
+             * @return handler 默认请求处理器
             */
-            void setDefaultHandler(const HttpConnPtr::HttpCallBack& handler)
+            const HttpConnPtr::HttpCallBack& getDefault()
             {
-                m_defaultHandler = handler;
+                return m_defaultHandler;
             }
 
             /**
-             * @brief 增量添加路由
-             * @param method HTTP方法（如GET、POST、PUT、DELETE）
-             * @param path 路径（如"/api/test"）
-             * @param handler 该路由的请求处理回调
+             * @brief 根据请求方法和路径在路由表中查找对应的处理器
+             * @param method 请求方法
+             * @param uri 请求路径
+             * @return HttpCallBack 对应方法的处理器，未找到返回默认处理器
             */
-            void addRoute(const std::string& method, const std::string& path, const HttpConnPtr::HttpCallBack& handler)
+            HttpConnPtr::HttpCallBack getHandler(const std::string& method, const std::string& uri)
             {
-                // 统一方法名大小写（转换为小写）
-                std::string lowerMethod = method;
-                std::transform(lowerMethod.begin(), lowerMethod.end(), lowerMethod.begin(), ::tolower);
-                m_routeTable[lowerMethod][path] = handler;
+                auto methodIt = m_routeTable.find(method);
+                if(methodIt != m_routeTable.end())
+                {
+                    auto uriIt = methodIt->second.find(uri);
+                    if(uriIt != methodIt->second.end())
+                    {
+                        return uriIt->second;
+                    }
+                }
+                return m_defaultHandler;
             }
         private:
             HttpConnPtr::HttpCallBack m_defaultHandler; // 默认处理器

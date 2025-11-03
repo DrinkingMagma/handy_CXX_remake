@@ -1,0 +1,34 @@
+[2025-11-03 15:26:42.216] [INFO] [http_test.cpp:27 initTestLogger] === http_test 测试开始 ===
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:42 testHttpRequestBasic] === 开始测试 HttpRequest 基础操作 ===
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:48 testHttpRequestBasic] 测试1（默认构造）：通过
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:56 testHttpRequestBasic] 测试2（设置方法和URI）：通过
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:63 testHttpRequestBasic] 测试3（设置头部）：通过
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:68 testHttpRequestBasic] 测试4（设置消息体）：通过
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:74 testHttpRequestBasic] 测试5（clear()）：通过
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:76 testHttpRequestBasic] === HttpRequest 基础操作测试结束 ===
+
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:83 testHttpRequestEncode] === 开始测试 HttpRequest 编码功能 ===
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:102 testHttpRequestEncode] 测试1（完整编码）：通过
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:103 testHttpRequestEncode] 实际输出:
+POST /submit?action=save HTTP/1.1
+content-type: text/plain
+Connection: Keep-Alive
+Content-Length: 9
+
+test data
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:104 testHttpRequestEncode] 预期输出:
+POST /submit?action=save HTTP/1.1
+content-type: text/plain
+Connection: Keep-Alive
+Content-Length: 9
+
+test data
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:107 testHttpRequestEncode] 测试2（编码长度）：通过
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:109 testHttpRequestEncode] === HttpRequest 编码功能测试结束 ===
+
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:116 testHttpRequestDecode] === 开始测试 HttpRequest 解码功能 ===
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:134 testHttpRequestDecode] res1: 2
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:135 testHttpRequestDecode] 测试1（GET请求解码）：通过
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:156 testHttpRequestDecode] 测试2（POST请求解码）：通过
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:165 testHttpRequestDecode] 测试3（不完整请求）：通过
+[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:176 testHttpRequestDecode] 测试4（100 Continue请求）：通过

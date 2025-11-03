@@ -223,7 +223,7 @@ namespace handy
         return 0;
     }
 
-    const std::unordered_map<std::string, std::string>& utils::getMimeMap() 
+    const std::unordered_map<std::string, std::string>& utils::getMimeMap() noexcept 
     {
         static const std::unordered_map<std::string, std::string> mime_map = {
             // 文本类型
@@ -281,7 +281,7 @@ namespace handy
         return mime_map;
     }
 
-    std::string utils::getMimeType(const std::string& filename)
+    std::string utils::getMimeType(const std::string& filename) noexcept
     {
         size_t dotPos = filename.find_first_of('.');
         std::string ext;

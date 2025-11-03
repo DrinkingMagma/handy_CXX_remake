@@ -52,8 +52,6 @@ namespace handy
                     // 解析头部字段
                     while (header.size() > 0)
                     {
-                        // 跳过前一行的"\r\n"
-                        header.eat(2);
                         Slice line = header.eatLine();
                         // 若为空，说明头部解析结束
                         if(line.empty())
@@ -195,7 +193,7 @@ namespace handy
                         keyEnd = queryStr.size();
                     }
 
-                    Slice key = queryStr.sub(pos, keyEnd - pos);
+                    Slice key = queryStr.sub(pos, keyEnd);
                     if(key.empty())
                     {
                         pos = keyEnd + 1;
@@ -207,7 +205,7 @@ namespace handy
                     size_t valEnd = queryStr.find('&', pos);
                     if(valEnd == Slice::npos)
                         valEnd = queryStr.size();
-                    Slice val = queryStr.sub(pos, valEnd - pos);
+                    Slice val = queryStr.sub(pos, valEnd);
 
                     // 存入参数映射
                     m_args[std::string(key.data(), key.size())] = std::string(val.data(), val.size());
@@ -220,6 +218,7 @@ namespace handy
                 m_uri = m_queryUri;
             }
         }
+
         return result;
     }
 

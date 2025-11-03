@@ -253,26 +253,32 @@ namespace handy
             }
 
             /**
-             * @brief 吞噬一行（直到 \n 或 \r，兼容 Windows/Linux 换行）
+             * @brief 吞噬一行（直到\n或\r，兼容 Windows/Linux 换行）
              * @return 行内容的子视图（不含换行符）
             */
-            Slice eatLine() noexcept
-            {
-                const char* p = m_pb;
-                // 跳过非换行字符
-                while(m_pb < m_pe && *m_pb != '\n' && *m_pb != '\r')
-                    ++m_pb;
-                // 跳过换行符本身（避免残留）
-                if(m_pb < m_pe && (*m_pb == '\n' || *m_pb == '\r'))
-                {
-                    ++m_pb;
-                    // 处理Windows 换行（\r\n）
-                    if(m_pb < m_pe && *m_pb == '\n' && *(m_pb - 1) == '\r')
-                        ++m_pb;
-                } 
+            Slice eatLine() noexcept {
+                const char* p = m_pb;  // 记录行起始位置
+                const char* end = m_pb;  // 记录行结束位置（不含换行符）
 
-                // 不含换行符
-                return Slice(p, m_pb - 1);
+                // 查找换行符，同时记录行内容的结束位置
+                while (m_pb < m_pe) {
+                    if (*m_pb == '\n' || *m_pb == '\r') {
+                        end = m_pb;  // 行内容到换行符前结束
+                        // 跳过当前换行符
+                        ++m_pb;
+                        // 处理Windows换行（\r\n）：若当前是'\n'且前一个是'\r'，再跳过'\n'
+                        if (m_pb < m_pe && *m_pb == '\n' && (m_pb - 1 >= p && *(m_pb - 1) == '\r')) {
+                            ++m_pb;
+                        }
+                        break;  // 找到换行符，退出循环
+                    } else {
+                        ++m_pb;
+                        end = m_pb;  // 未找到换行符，行内容到当前位置
+                    }
+                }
+
+                // 返回从起始位置到行结束位置的内容（长度为 end - p）
+                return Slice(p, end - p);
             }
 
             /**
