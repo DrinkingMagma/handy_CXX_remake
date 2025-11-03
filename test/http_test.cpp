@@ -239,7 +239,7 @@ void testHttpResponseEncode() {
     int len = resp.encode(buf);
     
     std::string expected = "HTTP/1.1 200 OK\r\n"
-                          "Content-Type: application/json\r\n"
+                          "content-type: application/json\r\n"
                           "Connection: Keep-Alive\r\n"
                           "Content-Length: 20\r\n"
                           "\r\n"
@@ -298,6 +298,9 @@ void testHttpResponseDecode() {
                  resp2.m_status == 404 &&
                  resp2.m_statusMsg == "Not Found" &&
                  resp2.getBody().toString() == "Not Found");
+
+    DEBUG("res2: %d\nresp2.m_status: %d\nresp2.m_statusMsg: %s\nresp2.getBody(): %s", 
+        res2, resp2.m_status, resp2.m_statusMsg.c_str(), resp2.getBody().toString().c_str());
     DEBUG("测试2（404响应解码）：%s", test2 ? "通过" : "失败");
 
     // 测试3：不完整响应
@@ -354,7 +357,7 @@ void testHttpServerRouting() {
     getReq.m_queryUri = "/test/get";
     
     // 模拟连接和请求处理（简化测试）
-    auto mockGetHandler = server.getHandler("GET","/test/post");
+    auto mockGetHandler = server.getHandler("GET","/test/get");
     TcpConnPtr mockTcpConn(new TcpConn);
     HttpConnPtr mockHttpConn(mockTcpConn);
     mockGetHandler(mockHttpConn);

@@ -1,34 +1,95 @@
-[2025-11-03 15:26:42.216] [INFO] [http_test.cpp:27 initTestLogger] === http_test 测试开始 ===
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:42 testHttpRequestBasic] === 开始测试 HttpRequest 基础操作 ===
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:48 testHttpRequestBasic] 测试1（默认构造）：通过
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:56 testHttpRequestBasic] 测试2（设置方法和URI）：通过
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:63 testHttpRequestBasic] 测试3（设置头部）：通过
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:68 testHttpRequestBasic] 测试4（设置消息体）：通过
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:74 testHttpRequestBasic] 测试5（clear()）：通过
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:76 testHttpRequestBasic] === HttpRequest 基础操作测试结束 ===
+[2025-11-03 19:17:35.193] [INFO] [http_test.cpp:27 initTestLogger] === http_test 测试开始 ===
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:42 testHttpRequestBasic] === 开始测试 HttpRequest 基础操作 ===
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:48 testHttpRequestBasic] 测试1（默认构造）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:56 testHttpRequestBasic] 测试2（设置方法和URI）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:63 testHttpRequestBasic] 测试3（设置头部）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:68 testHttpRequestBasic] 测试4（设置消息体）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:74 testHttpRequestBasic] 测试5（clear()）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:76 testHttpRequestBasic] === HttpRequest 基础操作测试结束 ===
 
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:83 testHttpRequestEncode] === 开始测试 HttpRequest 编码功能 ===
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:102 testHttpRequestEncode] 测试1（完整编码）：通过
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:103 testHttpRequestEncode] 实际输出:
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:83 testHttpRequestEncode] === 开始测试 HttpRequest 编码功能 ===
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:102 testHttpRequestEncode] 测试1（完整编码）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:103 testHttpRequestEncode] 实际输出:
 POST /submit?action=save HTTP/1.1
 content-type: text/plain
 Connection: Keep-Alive
 Content-Length: 9
 
 test data
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:104 testHttpRequestEncode] 预期输出:
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:104 testHttpRequestEncode] 预期输出:
 POST /submit?action=save HTTP/1.1
 content-type: text/plain
 Connection: Keep-Alive
 Content-Length: 9
 
 test data
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:107 testHttpRequestEncode] 测试2（编码长度）：通过
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:109 testHttpRequestEncode] === HttpRequest 编码功能测试结束 ===
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:107 testHttpRequestEncode] 测试2（编码长度）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:109 testHttpRequestEncode] === HttpRequest 编码功能测试结束 ===
 
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:116 testHttpRequestDecode] === 开始测试 HttpRequest 解码功能 ===
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:134 testHttpRequestDecode] res1: 2
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:135 testHttpRequestDecode] 测试1（GET请求解码）：通过
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:156 testHttpRequestDecode] 测试2（POST请求解码）：通过
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:165 testHttpRequestDecode] 测试3（不完整请求）：通过
-[2025-11-03 15:26:42.217] [DEBUG] [http_test.cpp:176 testHttpRequestDecode] 测试4（100 Continue请求）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:116 testHttpRequestDecode] === 开始测试 HttpRequest 解码功能 ===
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:134 testHttpRequestDecode] res1: 2
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:135 testHttpRequestDecode] 测试1（GET请求解码）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:156 testHttpRequestDecode] 测试2（POST请求解码）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:165 testHttpRequestDecode] 测试3（不完整请求）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:176 testHttpRequestDecode] 测试4（100 Continue请求）：通过
+[2025-11-03 19:17:35.193] [ERROR] [../handy/http.cpp:156 tryDecode] Invalid URI: invalid_uri (must start with '/')
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:183 testHttpRequestDecode] 测试5（无效URI）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:185 testHttpRequestDecode] === HttpRequest 解码功能测试结束 ===
+
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:193 testHttpResponseBasic] === 开始测试 HttpResponse 基础操作 ===
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:199 testHttpResponseBasic] 测试1（默认构造）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:204 testHttpResponseBasic] 测试2（设置状态）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:209 testHttpResponseBasic] 测试3（setNotFound()）：通过
+[2025-11-03 19:17:35.193] [DEBUG] [http_test.cpp:216 testHttpResponseBasic] 测试4（设置头部和消息体）：通过
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:222 testHttpResponseBasic] 测试5（clear()）：通过
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:224 testHttpResponseBasic] === HttpResponse 基础操作测试结束 ===
+
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:231 testHttpResponseEncode] === 开始测试 HttpResponse 编码功能 ===
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:249 testHttpResponseEncode] 测试1（完整编码）：通过
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:250 testHttpResponseEncode] 实际输出:
+HTTP/1.1 200 OK
+content-type: application/json
+Connection: Keep-Alive
+Content-Length: 20
+
+{"status":"success"}
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:251 testHttpResponseEncode] 预期输出:
+HTTP/1.1 200 OK
+content-type: application/json
+Connection: Keep-Alive
+Content-Length: 20
+
+{"status":"success"}
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:254 testHttpResponseEncode] 测试2（编码长度）：通过
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:262 testHttpResponseEncode] 测试3（404响应编码）：通过
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:264 testHttpResponseEncode] === HttpResponse 编码功能测试结束 ===
+
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:271 testHttpResponseDecode] === 开始测试 HttpResponse 解码功能 ===
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:287 testHttpResponseDecode] 测试1（200响应解码）：通过
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:303 testHttpResponseDecode] res2: 1
+resp2.m_status: 404
+resp2.m_statusMsg: Not Found
+resp2.getBody(): Not Found
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:304 testHttpResponseDecode] 测试2（404响应解码）：通过
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:313 testHttpResponseDecode] 测试3（不完整响应）：通过
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:315 testHttpResponseDecode] === HttpResponse 解码功能测试结束 ===
+
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:323 testHttpServerRouting] === 开始测试 HttpServer 路由功能 ===
+[2025-11-03 19:17:35.194] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2025-11-03 19:17:35.194] [DEBUG] [../handy/handy-imp.h:88 context] AutoContext::context(): Created context of type N5handy11HttpConnPtr11HttpContextE (address 0x128d9e0)
+[2025-11-03 19:17:35.194] [WARN] [../handy/conn.cpp:445 send] Sending data to a closed connection: 0.0.0.0:0 -> 0.0.0.0:0, 75 bytes lost
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:365 testHttpServerRouting] 测试1（GET路由匹配）：通过
+[2025-11-03 19:17:35.194] [WARN] [../handy/conn.cpp:445 send] Sending data to a closed connection: 0.0.0.0:0 -> 0.0.0.0:0, 151 bytes lost
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:376 testHttpServerRouting] 测试2（POST路由匹配）：通过
+[2025-11-03 19:17:35.194] [WARN] [../handy/conn.cpp:445 send] Sending data to a closed connection: 0.0.0.0:0 -> 0.0.0.0:0, 229 bytes lost
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:381 testHttpServerRouting] 测试3（默认路由）：通过
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:383 testHttpServerRouting] === HttpServer 路由功能测试结束 ===
+
+[2025-11-03 19:17:35.194] [DEBUG] [../handy/handy-imp.h:121 reset] AutoContext::reset(): Reset context (address 0x128d9e0)
+[2025-11-03 19:17:35.194] [INFO] [../handy/poller.cpp:97 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[0] destroying, epoll_fd=4
+[2025-11-03 19:17:35.194] [INFO] [../handy/poller.cpp:114 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[0] destroyed
+[2025-11-03 19:17:35.194] [DEBUG] [http_test.cpp:391 testHttpThreadSafe] === 开始测试 HTTP 线程安全 特性 ===
+[2025-11-03 19:17:35.196] [DEBUG] [http_test.cpp:436 testHttpThreadSafe] 线程安全测试：总执行次数=500（预期：500，通过）
+[2025-11-03 19:17:35.196] [DEBUG] [http_test.cpp:437 testHttpThreadSafe] === HTTP 线程安全 特性测试结束 ===
+
+[2025-11-03 19:17:35.196] [INFO] [http_test.cpp:34 destroyTestLogger] === http_test 测试结束 ===

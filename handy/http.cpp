@@ -79,7 +79,9 @@ namespace handy
                     // 跳过头部结束标记
                     m_scannedLen += 4;
                     // 解析内容长度
-                    m_contentLen = stoull(getHeaderValue("content-length"), nullptr, 10);
+                    std::string len = getHeaderValue("content-length");
+                    if(len != "")
+                        m_contentLen = stoull(len, nullptr, 10);
 
                     // 检查是否需要发送100 Continue
                     if(bufSize < m_scannedLen + m_contentLen && !getHeaderValue("expect").empty())
@@ -143,7 +145,7 @@ namespace handy
 
         if(!firstLine.empty())
         {
-            // 解析请求行：方法 URI 版本
+            // 解析请求行：方法URI版本
             m_method = firstLine.eatWord();
             m_queryUri = firstLine.eatWord();
             m_version = firstLine.eatWord();
@@ -280,7 +282,7 @@ namespace handy
             m_version = firstLine.eatWord();
             Slice statusCodeStr = firstLine.eatWord();
             m_status = stoi(std::string(statusCodeStr.data(), statusCodeStr.size()));
-            m_statusMsg = firstLine.eatWord().toString();
+            m_statusMsg = firstLine.trimSpace().toString();
         }
 
         return result;

@@ -56,7 +56,8 @@
         "cinttypes": "cpp",
         "cerrno": "cpp",
         "set": "cpp",
-        "csignal": "cpp"
+        "csignal": "cpp",
+        "future": "cpp"
     },
     "makefile.configureOnOpen": false
 }
