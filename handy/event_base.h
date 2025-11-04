@@ -408,7 +408,7 @@ namespace handy
             */
             void handleWrite()
             {
-                TRACE("Channel::handleRead: will call m_writeCB");
+                TRACE("Channel::handleWrite: will call m_writeCB");
                 if(m_writeCB)
                     m_writeCB();
                 else

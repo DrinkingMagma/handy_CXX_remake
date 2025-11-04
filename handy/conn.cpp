@@ -643,12 +643,17 @@ namespace handy
     {
         int listenFd = -1;
         {
+            DEBUG("get fd, lock.");
             std::lock_guard<std::mutex> lock(m_ChannelMutex);
+            DEBUG("get fd, lock.");
             if(m_listenChannel)
             {
+                DEBUG("get fd, lock.");
                 listenFd = m_listenChannel->getFd();
             }
+            DEBUG("geted fd, lock.");
         }
+        DEBUG("geted fd, unlock.");
 
         if(listenFd < 0)
             return;

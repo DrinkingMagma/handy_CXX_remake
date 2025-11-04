@@ -26,7 +26,7 @@ std::string g_testFileName = "stat_svr_test_temp.txt";
  */
 void initTestLogger() {
     Logger::getInstance().setLogFileName("stat_svr_test.log");
-    Logger::getInstance().setLogLevel(Logger::LogLevel::LDEBUG);
+    Logger::getInstance().setLogLevel(Logger::LogLevel::LALL);
     INFO("=== stat_svr_test 测试开始 ===");
 }
 
