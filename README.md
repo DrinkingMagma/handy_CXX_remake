@@ -57,9 +57,9 @@
 - [x] udp.h/udp.cpp
   - [x] UDP 连接封装（参考 udp-cli.cpp/udp-svr.cpp）
   - [x] UDP 服务器实现（UdpServer）
-- [ ] http.h/http.cpp
-  - [ ] HTTP 协议解析与封装
-  - [ ] HTTP 服务器基础功能（参考 http-hello.cpp）
+- [x] http.h/http.cpp
+  - [x] HTTP 协议解析与封装
+  - [x] HTTP 服务器基础功能（参考 http-hello.cpp）
 
 #### 7. 扩展模块 (难度: ★★★☆☆)
 
@@ -75,9 +75,9 @@
 
 #### 8. 文件操作模块 (难度: ★★☆☆☆)
 
-- [ ] file.h/file.cpp
-  - [ ] 文件读写操作封装（参考 file::writeContent 实现）
-  - [ ] 文件状态检查与处理
+- [x] file.h/file.cpp
+  - [x] 文件读写操作封装（参考 file::writeContent 实现）
+  - [x] 文件状态检查与处理
 
 #### 9. 示例与测试 (难度: ★★☆☆☆)
 

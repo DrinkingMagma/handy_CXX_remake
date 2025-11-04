@@ -103,7 +103,7 @@ namespace handy
                 for(const auto& entry : m_cmdCallBacks)
                 {
                     buf.append("<tr><td>")
-                        .append(entry.first)
+                        .append(queryLink(entry.first))
                         .append("</td><td>")
                         .append(entry.second.description)
                         .append("</td></tr>\n");

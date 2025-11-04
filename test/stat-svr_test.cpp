@@ -69,8 +69,9 @@ std::string simulateRequest(StatServer& server, const std::string& uri, const st
     
     // 客户端发送请求
     std::promise<std::string> respPromise;
-    TcpConnPtr client(&base);
-    client.onConnect([&](const TcpConnPtr& conn) {
+    
+    auto client = TcpConn::createConnection(&base, "127.0.0.1", 8080);
+    client->onWritable([&](const TcpConnPtr& conn) {
         HttpRequest req;
         req.m_method = "GET";
         req.m_uri = uri;
@@ -85,17 +86,15 @@ std::string simulateRequest(StatServer& server, const std::string& uri, const st
         conn->send(buf);
     });
     
-    client.onMessage([&](const TcpConnPtr& conn, Buffer& buf) {
+    client->onMsg(std::make_unique<LineCodec>(), [&](const TcpConnPtr& conn, const Slice& msg) {
         HttpResponse resp;
-        auto res = resp.tryDecode(Slice(buf.data()));
+        auto res = resp.tryDecode(msg);
         if (res == HttpMsg::Result::Complete) {
             respPromise.set_value(resp.getBody().toString());
             conn->close();
             base.exit();
         }
     });
-    
-    client.connect("127.0.0.1", 8080);
     
     // 等待响应
     std::string response = respPromise.get_future().get();
@@ -318,11 +317,11 @@ void testStatServerThreadSafe() {
     for (int i = 0; i < THREAD_NUM; ++i) {
         clientThreads.emplace_back([i]() {
             for (int j = 0; j < REQ_PER_THREAD; ++j) {
-                TcpClient client;
                 EventBase clientBase;
+                auto client = TcpConn::createConnection(&clientBase, "127.0.0.1", 8080);
                 std::promise<bool> reqPromise;
                 
-                client.onConnect([&](const TcpConnPtr& conn) {
+                client->onWritable([&](const TcpConnPtr& conn) {
                     HttpRequest req;
                     req.m_method = "GET";
                     req.m_queryUri = "/thread_safe_state";
@@ -331,16 +330,14 @@ void testStatServerThreadSafe() {
                     conn->send(buf);
                 });
                 
-                client.onMessage([&](const TcpConnPtr& conn, Buffer& buf) {
+                client->onMsg(std::make_unique<LineCodec>(), [&](const TcpConnPtr& conn, const Slice& msg) {
                     HttpResponse resp;
-                    if (resp.tryDecode(Slice(buf.data())) == HttpMsg::Result::Complete) {
+                    if (resp.tryDecode(msg) == HttpMsg::Result::Complete) {
                         reqPromise.set_value(true);
                         conn->close();
                         clientBase.exit();
                     }
                 });
-                
-                client.connect("127.0.0.1", 8080);
                 clientBase.loop();
                 reqPromise.get_future().get();
             }

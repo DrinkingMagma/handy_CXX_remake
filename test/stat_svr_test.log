@@ -1,0 +1,9 @@
+[2025-11-04 11:34:12.492] [INFO] [stat-svr_test.cpp:30 initTestLogger] === stat_svr_test 测试开始 ===
+[2025-11-04 11:34:12.492] [DEBUG] [stat-svr_test.cpp:110 testStatServerBasic] === 开始测试 StatServer 基本构造与绑定 ===
+[2025-11-04 11:34:12.492] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2025-11-04 11:34:12.492] [INFO] [../handy/conn.cpp:620 bind] Listening on fd 7 at 127.0.0.1:8080
+[2025-11-04 11:34:12.492] [DEBUG] [stat-svr_test.cpp:118 testStatServerBasic] 测试1（绑定端口）：通过
+[2025-11-04 11:34:12.493] [ERROR] [../handy/conn.cpp:612 bind] Bind to addr(127.0.0.1:8080) failed: errno=98, msg=Address already in use
+[2025-11-04 11:34:12.493] [DEBUG] [stat-svr_test.cpp:124 testStatServerBasic] 测试2（重复绑定）：通过
+[2025-11-04 11:34:12.493] [DEBUG] [stat-svr_test.cpp:126 testStatServerBasic] === StatServer 基本构造与绑定测试结束 ===
+

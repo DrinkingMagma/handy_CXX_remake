@@ -140,7 +140,12 @@ namespace handy
              * @brief 判断当前连接是否可写
              * @return bool true: 可写, false: 不可写
             */
-
+            bool isWritable() const
+            {
+                std::lock_guard<std::mutex> lk(m_ChannelMutex);
+                return m_channel ? m_channel->isWritable() : false;
+            }
+            
            /**
             * @brief 获取内部上下文
             * @return AutoContext& 内部上下文
@@ -148,12 +153,6 @@ namespace handy
             AutoContext& getInternalContext()
             {
                 return m_internalCtx;
-            }
-
-            bool isWritable() const
-            {
-                std::lock_guard<std::mutex> lk(m_ChannelMutex);
-                return m_channel ? m_channel->isWritable() : false;
             }
 
             /**
