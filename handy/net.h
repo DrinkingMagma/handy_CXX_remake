@@ -272,6 +272,12 @@ namespace handy
              * @return size_t 数据长度（字节数）
             */
             size_t _size() const { return m_e - m_b; }
+
+            /**
+             * @brief 返回缓冲区中当前剩余的可用空间（字节数）（需外部加锁）
+             * @return size_t 缓冲区中当前剩余的可用空间（字节数）
+            */
+            size_t _space() const { return m_cap - m_e; };
         public:
             /**
              * @brief 默认构造函数，初始化一个空缓冲区，期望增长大小为512字节

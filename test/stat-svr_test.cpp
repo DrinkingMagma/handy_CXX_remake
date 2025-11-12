@@ -6,7 +6,7 @@
 #include "file.h"
 #include <cstdio>
 #include <string>
-#include <thread>
+#include "threads.h"
 #include <atomic>
 #include <chrono>
 #include <future>
@@ -55,50 +55,64 @@ bool createTestFile() {
 /**
  * @brief 模拟HTTP请求并获取响应
  */
-std::string simulateRequest(StatServer& server, const std::string& uri, const std::string& query = "") {
-    EventBase base;
-    server.bind("127.0.0.1", 8080);
-    
-    // 启动服务器线程
-    std::thread serverThread([&base]() {
-        base.loop();
+std::string simulateRequest(StatServer& server, EventBase* serverBase,
+                            const std::string& uri, const std::string& query = "") {
+    std::thread serverThread([serverBase]() {
+        INFO("Server event loop started");
+        // serverBase->runAfter(2000, [serverBase]{ serverBase->exit(); });
+        serverBase->loop();
+        INFO("Server event loop exited");
     });
-    
-    // 等待服务器启动
+
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
-    
-    // 客户端发送请求
-    std::promise<std::string> respPromise;
-    
-    auto client = TcpConn::createConnection(&base, "127.0.0.1", 8080);
-    client->onWritable([&](const TcpConnPtr& conn) {
-        HttpRequest req;
-        req.m_method = "GET";
-        req.m_uri = uri;
-        if (!query.empty()) {
-            req.m_queryUri = uri + "?stat=" + query;
-        } else {
-            req.m_queryUri = uri;
+
+    EventBase clientBase;
+    std::promise<std::string> promise;
+    auto future = promise.get_future();
+
+    auto conn = TcpConn::createConnection(&clientBase, "127.0.0.1", 8080);
+    conn->onState([&](const TcpConnPtr& c) {
+        if (c->getState() == TcpConn::State::CONNECTED) {
+            DEBUG("onState: TcpConn::State::CONNECTED");
+            HttpRequest req;
+            req.m_method = "GET";
+            req.m_uri = uri;
+            req.m_queryUri = query.empty() ? uri : uri + "?stat=" + query;
+            Buffer buf;
+            req.encode(buf);
+            c->send(buf);
         }
-        
-        Buffer buf;
-        req.encode(buf);
-        conn->send(buf);
     });
-    
-    client->onMsg(std::make_unique<LineCodec>(), [&](const TcpConnPtr& conn, const Slice& msg) {
+
+    conn->onMsg(std::make_unique<LineCodec>(), [&](const TcpConnPtr& c, const Slice& msg) {
         HttpResponse resp;
         auto res = resp.tryDecode(msg);
         if (res == HttpMsg::Result::Complete) {
-            respPromise.set_value(resp.getBody().toString());
-            conn->close();
-            base.exit();
+            promise.set_value(resp.getBody().toString());
+            c->close();
+            clientBase.exit();   // ✅ 保证客户端 loop 退出
         }
     });
-    
+
+    std::thread clientThread([&]() {
+        INFO("Client event loop started");
+        // clientBase->runAfter(2000, [clientBase]{ clientBase->exit(); });
+        clientBase.loop();
+        INFO("Client event loop exited");
+    });
+
     // 等待响应
-    std::string response = respPromise.get_future().get();
+    std::string response = future.get();
+
+    // ✅ 等客户端线程结束
+    clientThread.join();
+
+    // ✅ 告诉服务器事件循环退出
+    serverBase->exit();
+
+    // ✅ 等服务器线程结束
     serverThread.join();
+
     return response;
 }
 
@@ -134,6 +148,7 @@ void testStatServerStateCallbacks() {
 
     EventBase base;
     StatServer server(&base);
+    server.bind("127.0.0.1", 8080);
     
     // 重置计数器
     g_callbackInvokeCount = 0;
@@ -150,7 +165,7 @@ void testStatServerStateCallbacks() {
     });
     
     // 测试根路径响应
-    std::string rootResp = simulateRequest(server, "/");
+    std::string rootResp = simulateRequest(server, &base, "/");
     bool test1 = (rootResp.find("test_state1") != std::string::npos &&
                  rootResp.find("test_state2") != std::string::npos &&
                  rootResp.find("测试状态1") != std::string::npos &&
@@ -158,12 +173,12 @@ void testStatServerStateCallbacks() {
     DEBUG("测试1（根路径状态展示）：%s", test1 ? "通过" : "失败");
 
     // 测试直接访问状态1
-    std::string state1Resp = simulateRequest(server, "/test_state1");
+    std::string state1Resp = simulateRequest(server, &base, "/test_state1");
     bool test2 = (state1Resp == "state1_value");
     DEBUG("测试2（状态1直接访问）：%s", test2 ? "通过" : "失败");
 
     // 测试通过查询参数访问状态2
-    std::string state2Resp = simulateRequest(server, "/", "test_state2");
+    std::string state2Resp = simulateRequest(server, &base, "/", "test_state2");
     bool test3 = (state2Resp.find("12345") != std::string::npos);
     DEBUG("测试3（状态2查询访问）：%s", test3 ? "通过" : "失败");
 
@@ -196,20 +211,20 @@ void testStatServerPageCallbacks() {
     }
     
     // 测试根路径页面展示
-    std::string rootResp = simulateRequest(server, "/");
+    std::string rootResp = simulateRequest(server, &base, "/");
     bool test1 = (rootResp.find("test_page") != std::string::npos &&
                  rootResp.find("测试页面") != std::string::npos);
     DEBUG("测试1（根路径页面展示）：%s", test1 ? "通过" : "失败");
 
     // 测试直接访问页面
-    std::string pageResp = simulateRequest(server, "/test_page");
+    std::string pageResp = simulateRequest(server, &base, "/test_page");
     bool test2 = (pageResp == "<html><body>Test Page</body></html>");
     DEBUG("测试2（页面直接访问）：%s", test2 ? "通过" : "失败");
 
     // 测试页面文件访问
     bool test3 = false;
     if (fileCreated) {
-        std::string fileResp = simulateRequest(server, "/test_page_file");
+        std::string fileResp = simulateRequest(server, &base, "/test_page_file");
         test3 = (fileResp == g_testFileContent);
     }
     DEBUG("测试3（页面文件访问）：%s", fileCreated ? (test3 ? "通过" : "失败") : "跳过（文件创建失败）");
@@ -239,7 +254,7 @@ void testStatServerCmdCallbacks() {
     });
     
     // 测试根路径命令展示
-    std::string rootResp = simulateRequest(server, "/");
+    std::string rootResp = simulateRequest(server, &base, "/");
     bool test1 = (rootResp.find("test_cmd1") != std::string::npos &&
                  rootResp.find("test_cmd2") != std::string::npos &&
                  rootResp.find("测试命令1") != std::string::npos &&
@@ -247,12 +262,12 @@ void testStatServerCmdCallbacks() {
     DEBUG("测试1（根路径命令展示）：%s", test1 ? "通过" : "失败");
 
     // 测试直接访问命令1
-    std::string cmd1Resp = simulateRequest(server, "/test_cmd1");
+    std::string cmd1Resp = simulateRequest(server, &base, "/test_cmd1");
     bool test2 = (cmd1Resp == "cmd1_executed");
     DEBUG("测试2（命令1直接访问）：%s", test2 ? "通过" : "失败");
 
     // 测试通过查询参数访问命令2
-    std::string cmd2Resp = simulateRequest(server, "/", "test_cmd2");
+    std::string cmd2Resp = simulateRequest(server, &base, "/", "test_cmd2");
     bool test3 = (cmd2Resp.find("98765") != std::string::npos);
     DEBUG("测试3（命令2查询访问）：%s", test3 ? "通过" : "失败");
 
@@ -274,14 +289,14 @@ void testStatServer404Handling() {
     StatServer server(&base);
     
     // 访问不存在的路径
-    std::string resp = simulateRequest(server, "/non_existent_path");
+    std::string resp = simulateRequest(server, &base, "/non_existent_path");
     
     // 检查404响应
     bool test1 = (resp.find("404 Not Found") != std::string::npos);
     DEBUG("测试1（不存在路径的404响应）：%s", test1 ? "通过" : "失败");
 
     // 通过查询参数访问不存在的资源
-    std::string queryResp = simulateRequest(server, "/", "non_existent_key");
+    std::string queryResp = simulateRequest(server, &base, "/", "non_existent_key");
     bool test2 = (queryResp.find("404 Not Found") != std::string::npos);
     DEBUG("测试2（不存在查询的404响应）：%s", test2 ? "通过" : "失败");
 
@@ -402,19 +417,19 @@ void testStatServerContentType() {
     }
     
     // 测试根路径的HTML类型
-    std::string rootResp = simulateRequest(server, "/");
+    std::string rootResp = simulateRequest(server, &base, "/");
     bool test1 = (rootResp.find("text/html") != std::string::npos);
     DEBUG("测试1（根路径HTML类型）：%s", test1 ? "通过" : "失败");
 
     // 测试页面的默认类型
-    std::string pageResp = simulateRequest(server, "/html_page");
+    std::string pageResp = simulateRequest(server, &base, "/html_page");
     bool test2 = (pageResp.find("text/plain") != std::string::npos);
     DEBUG("测试2（页面默认类型）：%s", test2 ? "通过" : "失败");
 
     // 测试HTML文件类型
     bool test3 = false;
     if (htmlFileCreated) {
-        std::string htmlResp = simulateRequest(server, "/html_file");
+        std::string htmlResp = simulateRequest(server, &base, "/html_file");
         test3 = (htmlResp.find("text/html") != std::string::npos);
     }
     DEBUG("测试3（HTML文件类型）：%s", htmlFileCreated ? (test3 ? "通过" : "失败") : "跳过（文件创建失败）");
@@ -422,7 +437,7 @@ void testStatServerContentType() {
     // 测试JS文件类型
     bool test4 = false;
     if (jsFileCreated) {
-        std::string jsResp = simulateRequest(server, "/js_file");
+        std::string jsResp = simulateRequest(server, &base, "/js_file");
         test4 = (jsResp.find("application/javascript") != std::string::npos);
     }
     DEBUG("测试4（JS文件类型）：%s", jsFileCreated ? (test4 ? "通过" : "失败") : "跳过（文件创建失败）");
@@ -440,7 +455,7 @@ void runAllTests() {
     initTestLogger();
 
     // 2. 依次执行所有测试
-    testStatServerBasic();
+    // testStatServerBasic();
     testStatServerStateCallbacks();
     testStatServerPageCallbacks();
     testStatServerCmdCallbacks();

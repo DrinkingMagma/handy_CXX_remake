@@ -36,11 +36,14 @@ namespace handy
         }
 
         m_base = base;
+        TcpConnPtr conn = shared_from_this();
 
         {
             std::lock_guard<std::mutex> lock(m_stateMutex);
             m_state = State::HAND_SHAKING;
         }
+        if(m_stateCB)
+            m_stateCB(conn);
 
         m_local = localIp;
         m_peer = peerIp;
@@ -54,13 +57,13 @@ namespace handy
         TRACE("TcpConn attached: %s -> %s, fd: %d",
                 m_local.toString().c_str(), m_peer.toString().c_str(), fd);
 
-        TcpConnPtr conn = shared_from_this();
         {
             std::lock_guard<std::mutex> lock(m_ChannelMutex);
             if(m_channel)
             {
                 m_channel->onRead([=]{ conn->_handleRead(conn); });
                 m_channel->onWrite([=]{ conn->_handleWrite(conn); });
+                TRACE("register readable and writable events");
             }
         }
     }
@@ -101,23 +104,36 @@ namespace handy
         {
             r = ::connect(fd, (struct sockaddr*)&addr.getAddr(), sizeof(struct sockaddr_in));
             if(r != 0 && errno != EINPROGRESS)
+            {
                 ERROR("Connect to %s failed: errno=%d, msg=%s", addr.toString().c_str(), errno, strerror(errno));
+                ::close(fd);
+                return;
+            }
+            TRACE("Client(fd=%d) connect to %s", fd, addr.toString().c_str());
         }
 
         sockaddr_in local;
+        memset(&local, 0, sizeof(local));
         socklen_t localLen = sizeof(local);
-        if(r == 0)
+        if(r == 0 || errno == EINPROGRESS)
         {
             // 获取socket实际绑定的本地地址（系统分配的地址和端口）
             r = getsockname(fd, (sockaddr*)&local, &localLen);
             if(r < 0)
+            {
                 ERROR("getsockname failed: errno=%d, msg=%s", errno, strerror(errno));
+                ::close(fd);
+                return;
+            }
         }
 
+        TcpConnPtr conn = shared_from_this();
         {
             std::lock_guard<std::mutex> lock(m_stateMutex);
             m_state = State::HAND_SHAKING;
         }
+        if(m_stateCB)
+            m_stateCB(conn);
         attach(base, fd, Ipv4Addr(local), addr);
 
         if(timeout_ms > 0)
@@ -161,7 +177,10 @@ namespace handy
                 m_state = State::FAILED;
             else
                 m_state = State::CLOSED;
+
         }
+        if(m_stateCB)
+            m_stateCB(conn);
         
         TRACE("TcpConn closing: %s -> %s, fd: %d. errno: %d, msg: %s",
                 m_local.toString().c_str(), m_peer.toString().c_str(),
@@ -170,13 +189,6 @@ namespace handy
         // 取消超时定时器
         if(m_base)
             m_base->cancel(m_timeoutId);
-
-        // 触发状态回调函数
-        {
-            std::lock_guard<std::mutex> lock(m_callBacksMutex);
-            if(m_stateCB)
-                m_stateCB(conn);
-        }
 
         // 处理重连
         int interval_ms;
@@ -244,18 +256,25 @@ namespace handy
                         (long long)m_channel->getId(), fd, rd);
             }
             // 若被信号中断，继续读取
-            else if(rd == -1 && errno == EINTR)
+            if(rd == -1 && errno == EINTR)
+            {
+                TRACE("Signal interruption, continue reading");
                 continue;
+            }
             // 若没有数据可读，则结束循环
             else if(rd == -1 && (errno == EAGAIN || errno == EWOULDBLOCK))
             {
+                TRACE("No data to read, doing m_readCB(if exist) and break");
                 for(const auto& idleId : m_idleIds)
                     handleUpdateIdle(m_base, idleId);
 
                 {
                     std::lock_guard<std::mutex> lock(m_callBacksMutex);
                     if(m_readCB && m_inputBuffer.size() > 0)
+                    {
+                        TRACE("Doing m_readCB");
                         m_readCB(conn);
+                    }
                 }
                 break;
             }
@@ -311,16 +330,12 @@ namespace handy
                 std::lock_guard<std::mutex> lock(m_stateMutex);
                 m_state = State::CONNECTED;
             }
+            if(m_stateCB)
+                m_stateCB(conn);
 
             m_connectedTime_ms = utils::timeMilli();
             TRACE("TcpConn connected: %s -> %s, fd: %d",
                     m_local.toString().c_str(), m_peer.toString().c_str(), fd);
-
-            {
-                std::lock_guard<std::mutex> lock(m_stateMutex);
-                if(m_stateCB)
-                    m_stateCB(conn);
-            }
         }
         else
         {
@@ -578,8 +593,16 @@ namespace handy
 
     TcpServer::~TcpServer()
     {
-        std::lock_guard<std::mutex> lock(m_ChannelMutex);
-        delete m_listenChannel;
+        Channel* ch;
+        {
+            std::lock_guard<std::mutex> lock(m_ChannelMutex);
+            ch = m_listenChannel;
+            m_listenChannel = nullptr;
+        }
+        if(ch)
+        {
+            delete ch;
+        }
     }
 
     int TcpServer::bind(const std::string& host, unsigned short port, bool isReusePort)
@@ -643,17 +666,12 @@ namespace handy
     {
         int listenFd = -1;
         {
-            DEBUG("get fd, lock.");
             std::lock_guard<std::mutex> lock(m_ChannelMutex);
-            DEBUG("get fd, lock.");
             if(m_listenChannel)
             {
-                DEBUG("get fd, lock.");
                 listenFd = m_listenChannel->getFd();
             }
-            DEBUG("geted fd, lock.");
         }
-        DEBUG("geted fd, unlock.");
 
         if(listenFd < 0)
             return;

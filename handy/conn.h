@@ -540,6 +540,7 @@ namespace handy
             void onMsg(std::unique_ptr<CodecBase> codec, const RetMsgCallBack& cb);
 
         private:
+        
             TcpServer::Ptr m_server;          // TCP服务器对象
             ThreadPool m_threadPool;          // 线程池对象
     };

@@ -350,7 +350,7 @@ namespace handy
     void Buffer::makeRoom()
     {
         std::lock_guard<std::mutex> lock(*m_mutex);
-        if(space() < m_exp)
+        if(_space() < m_exp)
             _expand(0);
     }
 

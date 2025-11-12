@@ -1,21 +1,156 @@
-[2025-11-04 15:25:25.202] [INFO] [stat-svr_test.cpp:30 initTestLogger] === stat_svr_test 测试开始 ===
-[2025-11-04 15:25:25.202] [DEBUG] [stat-svr_test.cpp:110 testStatServerBasic] === 开始测试 StatServer 基本构造与绑定 ===
-[2025-11-04 15:25:25.202] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
-[2025-11-04 15:25:25.202] [TRACE] [../handy/event_base.cpp:68 EventsImp] Wakeup pipe initialized: readFd=5, writeFd=6
-[2025-11-04 15:25:25.202] [TRACE] [../handy/event_base.cpp:590 Channel] Channel set non-block: fd=5 success
-[2025-11-04 15:25:25.202] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[1], fd=5, events=0x1
-[2025-11-04 15:25:25.202] [TRACE] [../handy/event_base.cpp:601 Channel] Channel created: id=1, fd=5, events=0x1
-[2025-11-04 15:25:25.203] [INFO] [../handy/conn.cpp:620 bind] Listening on fd 7 at 127.0.0.1:8080
-[2025-11-04 15:25:25.203] [TRACE] [../handy/event_base.cpp:590 Channel] Channel set non-block: fd=7 success
-[2025-11-04 15:25:25.203] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[2], fd=7, events=0x1
-[2025-11-04 15:25:25.203] [TRACE] [../handy/event_base.cpp:601 Channel] Channel created: id=2, fd=7, events=0x1
-[2025-11-04 15:25:25.203] [DEBUG] [stat-svr_test.cpp:118 testStatServerBasic] 测试1（绑定端口）：通过
-[2025-11-04 15:25:25.203] [ERROR] [../handy/conn.cpp:612 bind] Bind to addr(127.0.0.1:8080) failed: errno=98, msg=Address already in use
-[2025-11-04 15:25:25.203] [DEBUG] [stat-svr_test.cpp:124 testStatServerBasic] 测试2（重复绑定）：通过
-[2025-11-04 15:25:25.203] [DEBUG] [stat-svr_test.cpp:126 testStatServerBasic] === StatServer 基本构造与绑定测试结束 ===
-
-[2025-11-04 15:25:25.203] [TRACE] [../handy/event_base.cpp:614 close] Channel closing: id=2, fd=7
-[2025-11-04 15:25:25.203] [TRACE] [../handy/poller.cpp:150 removeChannel] PollerEpoll::removeChannel(): PollerEpoll[0] remove Channel[2], fd=7
-[2025-11-04 15:25:25.203] [TRACE] [../handy/event_base.cpp:623 close] Channel closed: fd=7
-[2025-11-04 15:25:25.203] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
-[2025-11-04 15:25:25.203] [DEBUG] [../handy/conn.cpp:646 _handleAccept] get fd, lock.
+[2025-11-07 11:05:34.032] [INFO] [stat-svr_test.cpp:30 initTestLogger] === stat_svr_test 测试开始 ===
+[2025-11-07 11:05:34.032] [DEBUG] [stat-svr_test.cpp:147 testStatServerStateCallbacks] === 开始测试 StatServer 状态回调 ===
+[2025-11-07 11:05:34.032] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2025-11-07 11:05:34.032] [TRACE] [../handy/event_base.cpp:68 EventsImp] Wakeup pipe initialized: readFd=5, writeFd=6
+[2025-11-07 11:05:34.032] [TRACE] [../handy/event_base.cpp:590 Channel] Channel set non-block: fd=5 success
+[2025-11-07 11:05:34.032] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[1], fd=5, events=0x1
+[2025-11-07 11:05:34.032] [TRACE] [../handy/event_base.cpp:601 Channel] Channel created: id=1, fd=5, events=0x1
+[2025-11-07 11:05:34.032] [INFO] [../handy/conn.cpp:643 bind] Listening on fd 7 at 127.0.0.1:8080
+[2025-11-07 11:05:34.033] [TRACE] [../handy/event_base.cpp:590 Channel] Channel set non-block: fd=7 success
+[2025-11-07 11:05:34.033] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[2], fd=7, events=0x1
+[2025-11-07 11:05:34.033] [TRACE] [../handy/event_base.cpp:601 Channel] Channel created: id=2, fd=7, events=0x1
+[2025-11-07 11:05:34.033] [INFO] [stat-svr_test.cpp:61 operator()] Server event loop started
+[2025-11-07 11:05:34.034] [TRACE] [../handy/event_base.cpp:396 loop] EventBase loop started: base=0x7ffc18cf2bd0
+[2025-11-07 11:05:34.034] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=0, m_lastActive=0, usedTime_ms=0
+[2025-11-07 11:05:34.034] [TRACE] [../handy/event_base.cpp:422 loopOnce] Ready to handle timeout timers
+[2025-11-07 11:05:34.034] [TRACE] [../handy/event_base.cpp:424 loopOnce] Timeout timers handled
+[2025-11-07 11:05:34.133] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[1] created, epoll_fd=8
+[2025-11-07 11:05:34.133] [TRACE] [../handy/event_base.cpp:68 EventsImp] Wakeup pipe initialized: readFd=9, writeFd=10
+[2025-11-07 11:05:34.133] [TRACE] [../handy/event_base.cpp:590 Channel] Channel set non-block: fd=9 success
+[2025-11-07 11:05:34.133] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[3], fd=9, events=0x1
+[2025-11-07 11:05:34.133] [TRACE] [../handy/event_base.cpp:601 Channel] Channel created: id=3, fd=9, events=0x1
+[2025-11-07 11:05:34.133] [TRACE] [../handy/conn.cpp:112 _connect] Client(fd=11) connect to 127.0.0.1:8080
+[2025-11-07 11:05:34.133] [TRACE] [../handy/event_base.cpp:590 Channel] Channel set non-block: fd=11 success
+[2025-11-07 11:05:34.133] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[4], fd=11, events=0x5
+[2025-11-07 11:05:34.133] [TRACE] [../handy/event_base.cpp:601 Channel] Channel created: id=4, fd=11, events=0x5
+[2025-11-07 11:05:34.133] [TRACE] [../handy/conn.cpp:58 attach] TcpConn attached: 127.0.0.1:63472 -> 127.0.0.1:8080, fd: 11
+[2025-11-07 11:05:34.134] [TRACE] [../handy/conn.cpp:66 attach] register readable and writable events
+[2025-11-07 11:05:34.134] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=100
+[2025-11-07 11:05:34.134] [TRACE] [../handy/poller.cpp:230 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[2], fd=7
+[2025-11-07 11:05:34.134] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-11-07 11:05:34.134] [TRACE] [../handy/event_base.cpp:590 Channel] Channel set non-block: fd=12 success
+[2025-11-07 11:05:34.134] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[5], fd=12, events=0x5
+[2025-11-07 11:05:34.134] [TRACE] [../handy/event_base.cpp:601 Channel] Channel created: id=5, fd=12, events=0x5
+[2025-11-07 11:05:34.134] [TRACE] [../handy/conn.cpp:58 attach] TcpConn attached: 127.0.0.1:8080 -> 127.0.0.1:63472, fd: 12
+[2025-11-07 11:05:34.134] [TRACE] [../handy/conn.cpp:66 attach] register readable and writable events
+[2025-11-07 11:05:34.134] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-11-07 11:05:34.134] [TRACE] [../handy/event_base.cpp:422 loopOnce] Ready to handle timeout timers
+[2025-11-07 11:05:34.134] [TRACE] [../handy/event_base.cpp:424 loopOnce] Timeout timers handled
+[2025-11-07 11:05:34.134] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=0
+[2025-11-07 11:05:34.134] [TRACE] [../handy/poller.cpp:238 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle write: Channel[5], fd=12
+[2025-11-07 11:05:34.134] [TRACE] [../handy/event_base.h:411 handleWrite] Channel::handleRead: will call m_writeCB
+[2025-11-07 11:05:34.134] [TRACE] [../handy/poller.cpp:182 updateChannel] PollerEpoll::updateChannel(): PollerEpoll[0] update Channel[5], fd=12, read=1, write=1
+[2025-11-07 11:05:34.134] [TRACE] [../handy/event_base.cpp:639 enableRead] Channel enableRead: id=5, fd=12, events=0x5
+[2025-11-07 11:05:34.134] [TRACE] [../handy/poller.cpp:182 updateChannel] PollerEpoll::updateChannel(): PollerEpoll[0] update Channel[5], fd=12, read=1, write=0
+[2025-11-07 11:05:34.134] [TRACE] [../handy/event_base.cpp:650 enableWrite] Channel enableWrite: id=5, fd=12, events=0x1
+[2025-11-07 11:05:34.135] [TRACE] [../handy/conn.cpp:338 _handleHandshake] TcpConn connected: 127.0.0.1:8080 -> 127.0.0.1:63472, fd: 12
+[2025-11-07 11:05:34.135] [TRACE] [../handy/event_base.h:416 handleWrite] Channel::handleWrite: done call m_writeCB
+[2025-11-07 11:05:34.135] [TRACE] [../handy/event_base.cpp:422 loopOnce] Ready to handle timeout timers
+[2025-11-07 11:05:34.135] [TRACE] [../handy/event_base.cpp:424 loopOnce] Timeout timers handled
+[2025-11-07 11:05:34.135] [INFO] [stat-svr_test.cpp:98 operator()] Client event loop started
+[2025-11-07 11:05:34.135] [TRACE] [../handy/event_base.cpp:396 loop] EventBase loop started: base=0x7ffc18cf2800
+[2025-11-07 11:05:34.135] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=0, m_lastActive=1, usedTime_ms=0
+[2025-11-07 11:05:34.135] [TRACE] [../handy/poller.cpp:238 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[1] handle write: Channel[4], fd=11
+[2025-11-07 11:05:34.135] [TRACE] [../handy/event_base.h:411 handleWrite] Channel::handleRead: will call m_writeCB
+[2025-11-07 11:05:34.135] [TRACE] [../handy/poller.cpp:182 updateChannel] PollerEpoll::updateChannel(): PollerEpoll[1] update Channel[4], fd=11, read=1, write=1
+[2025-11-07 11:05:34.135] [TRACE] [../handy/event_base.cpp:639 enableRead] Channel enableRead: id=4, fd=11, events=0x5
+[2025-11-07 11:05:34.135] [TRACE] [../handy/poller.cpp:182 updateChannel] PollerEpoll::updateChannel(): PollerEpoll[1] update Channel[4], fd=11, read=1, write=0
+[2025-11-07 11:05:34.135] [TRACE] [../handy/event_base.cpp:650 enableWrite] Channel enableWrite: id=4, fd=11, events=0x1
+[2025-11-07 11:05:34.135] [DEBUG] [stat-svr_test.cpp:76 operator()] onState: TcpConn::State::CONNECTED
+[2025-11-07 11:05:34.136] [TRACE] [../handy/conn.cpp:412 _send] Channel 4, fd 11, wrote 61 bytes
+[2025-11-07 11:05:34.136] [TRACE] [../handy/conn.cpp:338 _handleHandshake] TcpConn connected: 127.0.0.1:63472 -> 127.0.0.1:8080, fd: 11
+[2025-11-07 11:05:34.136] [TRACE] [../handy/event_base.h:416 handleWrite] Channel::handleWrite: done call m_writeCB
+[2025-11-07 11:05:34.136] [TRACE] [../handy/event_base.cpp:422 loopOnce] Ready to handle timeout timers
+[2025-11-07 11:05:34.136] [TRACE] [../handy/event_base.cpp:424 loopOnce] Timeout timers handled
+[2025-11-07 11:05:34.136] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=1
+[2025-11-07 11:05:34.136] [TRACE] [../handy/poller.cpp:230 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[5], fd=12
+[2025-11-07 11:05:34.137] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-11-07 11:05:34.137] [TRACE] [../handy/conn.cpp:256 _handleRead] Channel  5, fd 12, read 61 bytes
+[2025-11-07 11:05:34.137] [TRACE] [../handy/conn.cpp:256 _handleRead] Channel  5, fd 12, read -1 bytes
+[2025-11-07 11:05:34.137] [TRACE] [../handy/conn.cpp:267 _handleRead] No data to read, doing m_readCB(if exist) and break
+[2025-11-07 11:05:34.137] [TRACE] [../handy/conn.cpp:275 _handleRead] Doing m_readCB
+[2025-11-07 11:05:34.137] [DEBUG] [../handy/handy-imp.h:88 context] AutoContext::context(): Created context of type N5handy11HttpConnPtr11HttpContextE (address 0x7fb07c001bb0)
+[2025-11-07 11:05:34.137] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-11-07 11:05:34.137] [TRACE] [../handy/event_base.cpp:422 loopOnce] Ready to handle timeout timers
+[2025-11-07 11:05:34.137] [TRACE] [../handy/event_base.cpp:424 loopOnce] Timeout timers handled
+[2025-11-07 11:05:44.145] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10009
+[2025-11-07 11:05:44.145] [TRACE] [../handy/event_base.cpp:422 loopOnce] Ready to handle timeout timers
+[2025-11-07 11:05:44.145] [TRACE] [../handy/event_base.cpp:424 loopOnce] Timeout timers handled
+[2025-11-07 11:05:44.147] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10010
+[2025-11-07 11:05:44.147] [TRACE] [../handy/event_base.cpp:422 loopOnce] Ready to handle timeout timers
+[2025-11-07 11:05:44.147] [TRACE] [../handy/event_base.cpp:424 loopOnce] Timeout timers handled
+[2025-11-07 11:06:00.149] [INFO] [stat-svr_test.cpp:30 initTestLogger] === stat_svr_test 测试开始 ===
+[2025-11-07 11:06:00.149] [DEBUG] [stat-svr_test.cpp:147 testStatServerStateCallbacks] === 开始测试 StatServer 状态回调 ===
+[2025-11-07 11:06:00.150] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2025-11-07 11:06:00.150] [TRACE] [../handy/event_base.cpp:68 EventsImp] Wakeup pipe initialized: readFd=5, writeFd=6
+[2025-11-07 11:06:00.150] [TRACE] [../handy/event_base.cpp:590 Channel] Channel set non-block: fd=5 success
+[2025-11-07 11:06:00.150] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[1], fd=5, events=0x1
+[2025-11-07 11:06:00.150] [TRACE] [../handy/event_base.cpp:601 Channel] Channel created: id=1, fd=5, events=0x1
+[2025-11-07 11:06:00.150] [INFO] [../handy/conn.cpp:643 bind] Listening on fd 7 at 127.0.0.1:8080
+[2025-11-07 11:06:00.150] [TRACE] [../handy/event_base.cpp:590 Channel] Channel set non-block: fd=7 success
+[2025-11-07 11:06:00.150] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[2], fd=7, events=0x1
+[2025-11-07 11:06:00.150] [TRACE] [../handy/event_base.cpp:601 Channel] Channel created: id=2, fd=7, events=0x1
+[2025-11-07 11:06:00.151] [INFO] [stat-svr_test.cpp:61 operator()] Server event loop started
+[2025-11-07 11:06:00.151] [TRACE] [../handy/event_base.cpp:396 loop] EventBase loop started: base=0x7fffffffd9b0
+[2025-11-07 11:06:00.151] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=0, m_lastActive=0, usedTime_ms=0
+[2025-11-07 11:06:00.151] [TRACE] [../handy/event_base.cpp:422 loopOnce] Ready to handle timeout timers
+[2025-11-07 11:06:00.151] [TRACE] [../handy/event_base.cpp:424 loopOnce] Timeout timers handled
+[2025-11-07 11:06:00.251] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[1] created, epoll_fd=8
+[2025-11-07 11:06:00.252] [TRACE] [../handy/event_base.cpp:68 EventsImp] Wakeup pipe initialized: readFd=9, writeFd=10
+[2025-11-07 11:06:00.252] [TRACE] [../handy/event_base.cpp:590 Channel] Channel set non-block: fd=9 success
+[2025-11-07 11:06:00.252] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[3], fd=9, events=0x1
+[2025-11-07 11:06:00.252] [TRACE] [../handy/event_base.cpp:601 Channel] Channel created: id=3, fd=9, events=0x1
+[2025-11-07 11:06:00.252] [TRACE] [../handy/conn.cpp:112 _connect] Client(fd=11) connect to 127.0.0.1:8080
+[2025-11-07 11:06:00.252] [TRACE] [../handy/event_base.cpp:590 Channel] Channel set non-block: fd=11 success
+[2025-11-07 11:06:00.252] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[1] add Channel[4], fd=11, events=0x5
+[2025-11-07 11:06:00.252] [TRACE] [../handy/event_base.cpp:601 Channel] Channel created: id=4, fd=11, events=0x5
+[2025-11-07 11:06:00.252] [TRACE] [../handy/conn.cpp:58 attach] TcpConn attached: 127.0.0.1:35710 -> 127.0.0.1:8080, fd: 11
+[2025-11-07 11:06:00.252] [TRACE] [../handy/conn.cpp:66 attach] register readable and writable events
+[2025-11-07 11:06:00.253] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=102
+[2025-11-07 11:06:00.253] [TRACE] [../handy/poller.cpp:230 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[2], fd=7
+[2025-11-07 11:06:00.253] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-11-07 11:06:00.253] [TRACE] [../handy/event_base.cpp:590 Channel] Channel set non-block: fd=12 success
+[2025-11-07 11:06:00.253] [TRACE] [../handy/poller.cpp:129 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[5], fd=12, events=0x5
+[2025-11-07 11:06:00.253] [TRACE] [../handy/event_base.cpp:601 Channel] Channel created: id=5, fd=12, events=0x5
+[2025-11-07 11:06:00.253] [TRACE] [../handy/conn.cpp:58 attach] TcpConn attached: 127.0.0.1:8080 -> 127.0.0.1:35710, fd: 12
+[2025-11-07 11:06:00.253] [TRACE] [../handy/conn.cpp:66 attach] register readable and writable events
+[2025-11-07 11:06:00.253] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-11-07 11:06:00.253] [TRACE] [../handy/event_base.cpp:422 loopOnce] Ready to handle timeout timers
+[2025-11-07 11:06:00.253] [TRACE] [../handy/event_base.cpp:424 loopOnce] Timeout timers handled
+[2025-11-07 11:06:00.253] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=0
+[2025-11-07 11:06:00.253] [TRACE] [../handy/poller.cpp:238 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle write: Channel[5], fd=12
+[2025-11-07 11:06:00.253] [TRACE] [../handy/event_base.h:411 handleWrite] Channel::handleRead: will call m_writeCB
+[2025-11-07 11:06:00.253] [TRACE] [../handy/poller.cpp:182 updateChannel] PollerEpoll::updateChannel(): PollerEpoll[0] update Channel[5], fd=12, read=1, write=1
+[2025-11-07 11:06:00.253] [TRACE] [../handy/event_base.cpp:639 enableRead] Channel enableRead: id=5, fd=12, events=0x5
+[2025-11-07 11:06:00.253] [TRACE] [../handy/poller.cpp:182 updateChannel] PollerEpoll::updateChannel(): PollerEpoll[0] update Channel[5], fd=12, read=1, write=0
+[2025-11-07 11:06:00.253] [TRACE] [../handy/event_base.cpp:650 enableWrite] Channel enableWrite: id=5, fd=12, events=0x1
+[2025-11-07 11:06:00.253] [TRACE] [../handy/conn.cpp:338 _handleHandshake] TcpConn connected: 127.0.0.1:8080 -> 127.0.0.1:35710, fd: 12
+[2025-11-07 11:06:00.253] [TRACE] [../handy/event_base.h:416 handleWrite] Channel::handleWrite: done call m_writeCB
+[2025-11-07 11:06:00.253] [TRACE] [../handy/event_base.cpp:422 loopOnce] Ready to handle timeout timers
+[2025-11-07 11:06:00.253] [TRACE] [../handy/event_base.cpp:424 loopOnce] Timeout timers handled
+[2025-11-07 11:06:00.254] [INFO] [stat-svr_test.cpp:98 operator()] Client event loop started
+[2025-11-07 11:06:00.254] [TRACE] [../handy/event_base.cpp:396 loop] EventBase loop started: base=0x7fffffffd5e0
+[2025-11-07 11:06:00.254] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[1] epoll_wait, waitTime_ms=0, m_lastActive=1, usedTime_ms=0
+[2025-11-07 11:06:00.254] [TRACE] [../handy/poller.cpp:238 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[1] handle write: Channel[4], fd=11
+[2025-11-07 11:06:00.254] [TRACE] [../handy/event_base.h:411 handleWrite] Channel::handleRead: will call m_writeCB
+[2025-11-07 11:06:00.254] [TRACE] [../handy/poller.cpp:182 updateChannel] PollerEpoll::updateChannel(): PollerEpoll[1] update Channel[4], fd=11, read=1, write=1
+[2025-11-07 11:06:00.254] [TRACE] [../handy/event_base.cpp:639 enableRead] Channel enableRead: id=4, fd=11, events=0x5
+[2025-11-07 11:06:00.254] [TRACE] [../handy/poller.cpp:182 updateChannel] PollerEpoll::updateChannel(): PollerEpoll[1] update Channel[4], fd=11, read=1, write=0
+[2025-11-07 11:06:00.254] [TRACE] [../handy/event_base.cpp:650 enableWrite] Channel enableWrite: id=4, fd=11, events=0x1
+[2025-11-07 11:06:00.254] [DEBUG] [stat-svr_test.cpp:76 operator()] onState: TcpConn::State::CONNECTED
+[2025-11-07 11:06:00.254] [TRACE] [../handy/conn.cpp:412 _send] Channel 4, fd 11, wrote 61 bytes
+[2025-11-07 11:06:00.254] [TRACE] [../handy/conn.cpp:338 _handleHandshake] TcpConn connected: 127.0.0.1:35710 -> 127.0.0.1:8080, fd: 11
+[2025-11-07 11:06:00.254] [TRACE] [../handy/event_base.h:416 handleWrite] Channel::handleWrite: done call m_writeCB
+[2025-11-07 11:06:00.254] [TRACE] [../handy/event_base.cpp:422 loopOnce] Ready to handle timeout timers
+[2025-11-07 11:06:00.254] [TRACE] [../handy/event_base.cpp:424 loopOnce] Timeout timers handled
+[2025-11-07 11:06:00.255] [TRACE] [../handy/poller.cpp:204 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=2
+[2025-11-07 11:06:00.255] [TRACE] [../handy/poller.cpp:230 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[5], fd=12
+[2025-11-07 11:06:00.255] [TRACE] [../handy/event_base.h:397 handleRead] Channel::handleRead: will call m_readCB
+[2025-11-07 11:06:00.255] [TRACE] [../handy/conn.cpp:256 _handleRead] Channel  5, fd 12, read 61 bytes
+[2025-11-07 11:06:00.255] [TRACE] [../handy/conn.cpp:256 _handleRead] Channel  5, fd 12, read -1 bytes
+[2025-11-07 11:06:00.255] [TRACE] [../handy/conn.cpp:267 _handleRead] No data to read, doing m_readCB(if exist) and break
+[2025-11-07 11:06:00.255] [TRACE] [../handy/conn.cpp:275 _handleRead] Doing m_readCB
+[2025-11-07 11:06:00.255] [DEBUG] [../handy/handy-imp.h:88 context] AutoContext::context(): Created context of type N5handy11HttpConnPtr11HttpContextE (address 0x7ffff0001bb0)
+[2025-11-07 11:06:00.255] [TRACE] [../handy/event_base.h:402 handleRead] Channel::handleRead: done call m_readCB
+[2025-11-07 11:06:00.255] [TRACE] [../handy/event_base.cpp:422 loopOnce] Ready to handle timeout timers
+[2025-11-07 11:06:00.255] [TRACE] [../handy/event_base.cpp:424 loopOnce] Timeout timers handled
