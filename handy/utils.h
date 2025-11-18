@@ -12,7 +12,7 @@ namespace handy
      * @note 提供字符串处理、时间获取、文件描述符操作等通用功能
      * @note 所有函数均为线程安全实现
     */
-    struct utils
+    struct Utils
     {
         /**
          * @brief 格式化字符串
@@ -107,7 +107,7 @@ namespace handy
         static const std::unordered_map<std::string, std::string>& getMimeMap() noexcept;
 
         /**
-         * @brief 更具文件名获取对应的MIME类型
+         * @brief 根据文件名获取对应的MIME类型
          * @param filename 文件名（包含文件后缀）
          * @return MIME类型字符串，未知类型返回"application/octet-stream"
         */

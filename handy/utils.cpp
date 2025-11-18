@@ -58,7 +58,7 @@ namespace handy
     }
 
 // -------------------------- utils类静态成员函数实现 --------------------------
-    string utils::format(const char* fmt, ...) noexcept
+    string Utils::format(const char* fmt, ...) noexcept
     {
         // 初始缓冲区大小（512字节，满足多数场景）
         const size_t initialBufSize = 512;
@@ -104,7 +104,7 @@ namespace handy
         
     }
 
-    int64_t utils::timeMicro() noexcept
+    int64_t Utils::timeMicro() noexcept
     {
         try
         {
@@ -119,7 +119,7 @@ namespace handy
         }
     }
 
-    int64_t utils::steadyMicro() noexcept
+    int64_t Utils::steadyMicro() noexcept
     {
         try
         {
@@ -132,7 +132,7 @@ namespace handy
         }
     }
 
-    string utils::readableTime(time_t t) noexcept
+    string Utils::readableTime(time_t t) noexcept
     {
         try
         {
@@ -162,7 +162,7 @@ namespace handy
         }
     }
 
-    int64_t utils::atoi(const char* b, const char* e) noexcept
+    int64_t Utils::atoi(const char* b, const char* e) noexcept
     {
         // 校验参数的合法性
         if(!b || !e || b >= e)
@@ -176,7 +176,7 @@ namespace handy
         return static_cast<int64_t>(val);
     }
 
-    int64_t utils::atoi2(const char* b, const char* e) noexcept
+    int64_t Utils::atoi2(const char* b, const char* e) noexcept
     {
         if(!b || !e || b >= e)
             return -1;
@@ -191,7 +191,7 @@ namespace handy
         return static_cast<int64_t>(val);
     }
 
-    int utils::addFdFlag(int fd, int flag) noexcept
+    int Utils::addFdFlag(int fd, int flag) noexcept
     {
         // 校验文件描述符的合法性
         if(fd < 0) 
@@ -223,7 +223,7 @@ namespace handy
         return 0;
     }
 
-    const std::unordered_map<std::string, std::string>& utils::getMimeMap() noexcept 
+    const std::unordered_map<std::string, std::string>& Utils::getMimeMap() noexcept 
     {
         static const std::unordered_map<std::string, std::string> mime_map = {
             // 文本类型
@@ -281,7 +281,7 @@ namespace handy
         return mime_map;
     }
 
-    std::string utils::getMimeType(const std::string& filename) noexcept
+    std::string Utils::getMimeType(const std::string& filename) noexcept
     {
         size_t dotPos = filename.find_first_of('.');
         std::string ext;

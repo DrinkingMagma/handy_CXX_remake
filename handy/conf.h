@@ -60,7 +60,7 @@ namespace handy
              double getReal(const std::string& section, const std::string& name, double defaultValue);
 
              /**
-              * @brief 获取布尔类型配置项
+              * @brief 获取布尔类型配置值
               * @param section 配置节名
               * @param name 配置键名
               * @param defaultValue 未找到或解析失败时的默认值

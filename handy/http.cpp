@@ -117,17 +117,17 @@ namespace handy
         size_t initialSize = buf.size();
 
         // 写入请求行（方法 URI HTTP版本）
-        buf.append(utils::format("%s %s %s\r\n", m_method.c_str(), m_queryUri.c_str(), m_version.c_str()));
+        buf.append(Utils::format("%s %s %s\r\n", m_method.c_str(), m_queryUri.c_str(), m_version.c_str()));
 
         // 写入头部字段
         for(const auto& kv : m_headers)
         {
-            buf.append(utils::format("%s: %s\r\n", kv.first.c_str(), kv.second.c_str()));
+            buf.append(Utils::format("%s: %s\r\n", kv.first.c_str(), kv.second.c_str()));
         }
 
         // 写入默认头部（Connection: Keep-Alive 和 Content-Length）
         buf.append("Connection: Keep-Alive\r\n");
-        buf.append(utils::format("Content-Length: %zu\r\n", getBody().size()));
+        buf.append(Utils::format("Content-Length: %zu\r\n", getBody().size()));
 
         // 写入空行分隔头部和消息体
         buf.append("\r\n");
@@ -252,17 +252,17 @@ namespace handy
         size_t initialSize = buf.size();
 
         // 写入状态行（版本 状态码 描述）
-        buf.append(utils::format("%s %d %s\r\n", m_version.c_str(), m_status, m_statusMsg.c_str()));
+        buf.append(Utils::format("%s %d %s\r\n", m_version.c_str(), m_status, m_statusMsg.c_str()));
     
         // 写入头部字段
         for(const auto it : m_headers)
         {
-            buf.append(utils::format("%s: %s\r\n", it.first.c_str(), it.second.c_str()));
+            buf.append(Utils::format("%s: %s\r\n", it.first.c_str(), it.second.c_str()));
         }
 
         // 写入默认头部
         buf.append("Connection: Keep-Alive\r\n");
-        buf.append(utils::format("Content-Length: %zu\r\n", getBody().size()));
+        buf.append(Utils::format("Content-Length: %zu\r\n", getBody().size()));
 
         // 写入空行和消息体
         buf.append("\r\n");
@@ -334,7 +334,7 @@ namespace handy
         else
         {
             resp.getBody() = Slice(content);
-            resp.getHeaders()["Content-Type"]= utils::getMimeType(filename);
+            resp.getHeaders()["Content-Type"]= Utils::getMimeType(filename);
         }
 
         sendResponse();

@@ -84,7 +84,7 @@ namespace handy
             if(m_epollFd < 0)
             {
                 throw std::runtime_error(
-                    utils::format("poller.cpp::PollerEpoll::PollerEpoll()::epoll_create1() failed: errno=%d, msg=%s",
+                    Utils::format("poller.cpp::PollerEpoll::PollerEpoll()::epoll_create1() failed: errno=%d, msg=%s",
                                     errno, strerror(errno)));
             }
             INFO("PollerEpoll::PollerEpoll(): PollerEpoll[%lld] created, epoll_fd=%d",
@@ -132,7 +132,7 @@ namespace handy
             if(ret != 0)
             {
                 throw std::runtime_error(
-                    utils::format("poller.cpp::PollerEpoll::addChannel(): PollerEpoll[%lld] epoll_ctl(EPOLL_CTL_ADD) failed, fd=%d, errno=%d, msg=%s",
+                    Utils::format("poller.cpp::PollerEpoll::addChannel(): PollerEpoll[%lld] epoll_ctl(EPOLL_CTL_ADD) failed, fd=%d, errno=%d, msg=%s",
                         static_cast<long long>(getId()), ch->getFd(), errno, strerror(errno))
                 );
             }
@@ -185,7 +185,7 @@ namespace handy
             if(ret != 0)
             {
                 throw std::runtime_error(
-                    utils::format("poller.cpp::PollerEpoll::updateChannel(): PollerEpoll[%lld] epoll_ctl(EPOLL_CTL_MOD) failed: fd=%d, errno=%d, mes=%s",
+                    Utils::format("poller.cpp::PollerEpoll::updateChannel(): PollerEpoll[%lld] epoll_ctl(EPOLL_CTL_MOD) failed: fd=%d, errno=%d, mes=%s",
                                     static_cast<long long>(getId()), ch->getFd(), errno, strerror(errno))
                 );
             }
@@ -194,11 +194,11 @@ namespace handy
         int PollerEpoll::loopOnce(int waitTime_ms)
         {
             // 记录轮询开始时间
-            const int64_t  startTime_ms = utils::timeMilli();
+            const int64_t  startTime_ms = Utils::timeMilli();
 
             // 等待事件
             m_lastActive = epoll_wait(m_epollFd, m_activeEvs, kMaxEvents, waitTime_ms);
-            const int64_t usedTime_ms = utils::timeMilli() - startTime_ms;
+            const int64_t usedTime_ms = Utils::timeMilli() - startTime_ms;
 
             TRACE("poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[%lld] epoll_wait, waitTime_ms=%d, m_lastActive=%d, usedTime_ms=%d",
                     static_cast<long long>(getId()), waitTime_ms, m_lastActive, usedTime_ms);
@@ -207,7 +207,7 @@ namespace handy
             if(m_lastActive < 0 && errno != EINTR)
             {
                 throw std::runtime_error(
-                    utils::format("poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[%lld] epoll_wait failed, waitTime_ms=%d, usedTime_ms=%d, errno=%d, msg=%s",
+                    Utils::format("poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[%lld] epoll_wait failed, waitTime_ms=%d, usedTime_ms=%d, errno=%d, msg=%s",
                                     static_cast<long long>(getId()), waitTime_ms, usedTime_ms, errno, strerror(errno))
                 );
             }
@@ -316,7 +316,7 @@ namespace handy
             m_kqueueFd = kqueue();
             if (m_kqueueFd < 0) {
                 throw std::runtime_error(
-                    utils::format("poller.cpp::PollerKqueue::PollerKqueue(): kqueue failed: errno=%d, msg=%s", 
+                    Utils::format("poller.cpp::PollerKqueue::PollerKqueue(): kqueue failed: errno=%d, msg=%s", 
                                 errno, strerror(errno)));
             }
             INFO("PollerKqueue[%lld] created, kqueue_fd=%d", 
@@ -378,7 +378,7 @@ namespace handy
             int ret = kevent(m_kqueueFd, ev, ev_count, nullptr, 0, &now);
             if (ret != 0) {
                 throw std::runtime_error(
-                    utils::format("poller.cpp::PollerKqueue::addChannel(): PollerKqueue[%lld] kevent(ADD) failed: fd=%d, errno=%d, msg=%s", 
+                    Utils::format("poller.cpp::PollerKqueue::addChannel(): PollerKqueue[%lld] kevent(ADD) failed: fd=%d, errno=%d, msg=%s", 
                                 static_cast<long long>(getId()), ch->fd(), errno, strerror(errno)));
             }
 
@@ -454,7 +454,7 @@ namespace handy
             int ret = kevent(m_kqueueFd, ev, ev_count, nullptr, 0, &now);
             if (ret != 0) {
                 throw std::runtime_error(
-                    utils::format("poller.cpp::PollerKqueue::updateChannel(): PollerKqueue[%lld] kevent(MOD) failed: fd=%d, errno=%d, msg=%s", 
+                    Utils::format("poller.cpp::PollerKqueue::updateChannel(): PollerKqueue[%lld] kevent(MOD) failed: fd=%d, errno=%d, msg=%s", 
                                 static_cast<long long>(getId()), ch->fd(), errno, strerror(errno)));
             }
         }
@@ -473,7 +473,7 @@ namespace handy
             }
 
             // 记录轮询开始时间（用于统计耗时）
-            const int64_t start_ms = utils::timeMilli();
+            const int64_t start_ms = Utils::timeMilli();
 
             // 调用 kevent 等待事件（根据 timeout 决定是否阻塞）
             last_active_ = kevent(
@@ -482,7 +482,7 @@ namespace handy
                 active_evs_, kMaxEvents,   // 活跃事件存储
                 (wait_ms < 0) ? nullptr : &timeout  // 超时参数
             );
-            const int64_t used_ms = utils::timeMilli() - start_ms;
+            const int64_t used_ms = Utils::timeMilli() - start_ms;
 
             // 日志：输出轮询结果
             trace("PollerKqueue[%lld] kevent: wait_ms=%d, return=%d, used_ms=%lld, errno=%d", 
@@ -492,7 +492,7 @@ namespace handy
             // 错误处理：排除信号中断（EINTR 是正常情况，无需抛出异常）
             if (last_active_ < 0 && errno != EINTR) {
                 throw std::runtime_error(
-                    utils::format("poller.cpp::PollerKqueue::loopOnce(): PollerKqueue[%lld] kevent failed: errno=%d, msg=%s", 
+                    Utils::format("poller.cpp::PollerKqueue::loopOnce(): PollerKqueue[%lld] kevent failed: errno=%d, msg=%s", 
                                 static_cast<long long>(getId()), errno, strerror(errno)));
             }
 

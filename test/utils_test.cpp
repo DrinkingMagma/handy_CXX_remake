@@ -39,18 +39,18 @@ void test_format() {
     DEBUG("=== 开始测试 format 函数 ===");
 
     // 测试1：基础类型格式化（int/string/double）
-    std::string test1 = utils::format("基础格式化：整数=%d, 字符串=%s, 浮点数=%.2f", 
+    std::string test1 = Utils::format("基础格式化：整数=%d, 字符串=%s, 浮点数=%.2f", 
                                      123, "test_str", 3.1415);
     DEBUG("测试1结果：%s（预期：基础格式化：整数=123, 字符串=test_str, 浮点数=3.14）", 
               test1.c_str());
 
     // 测试2：边界场景（空字符串、超长字符串）
-    std::string test2 = utils::format("空字符串测试：%s", "");
+    std::string test2 = Utils::format("空字符串测试：%s", "");
     DEBUG("测试2结果：%s（预期：空字符串测试：）", test2.c_str());
 
     // 测试3：最大缓冲区限制（1MB，此处用1024*1024长度字符串测试）
     std::string long_str(1024 * 1024 - 20, 'a');  // 预留20字节给格式化模板
-    std::string test3 = utils::format("超长字符串：%s", long_str.c_str());
+    std::string test3 = Utils::format("超长字符串：%s", long_str.c_str());
     if (test3.empty()) {
         WARN("测试3结果：超出最大缓冲区限制（符合预期）");
     } else {
@@ -66,11 +66,11 @@ void test_format() {
 void test_time_system() {
     DEBUG("=== 开始测试 timeMicro/timeMilli 函数 ===");
 
-    int64_t micro1 = utils::timeMicro();
-    int64_t milli1 = utils::timeMilli();
+    int64_t micro1 = Utils::timeMicro();
+    int64_t milli1 = Utils::timeMilli();
     std::this_thread::sleep_for(std::chrono::milliseconds(100));  // 睡眠100ms
-    int64_t micro2 = utils::timeMicro();
-    int64_t milli2 = utils::timeMilli();
+    int64_t micro2 = Utils::timeMicro();
+    int64_t milli2 = Utils::timeMilli();
 
     // 验证时间差在合理范围（90ms~110ms）
     int64_t micro_diff = micro2 - micro1;
@@ -89,11 +89,11 @@ void test_time_system() {
 void test_time_steady() {
     DEBUG("=== 开始测试 steadyMicro/steadyMilli 函数 ===");
 
-    int64_t micro1 = utils::steadyMicro();
-    int64_t milli1 = utils::steadyMilli();
+    int64_t micro1 = Utils::steadyMicro();
+    int64_t milli1 = Utils::steadyMilli();
     std::this_thread::sleep_for(std::chrono::milliseconds(150));  // 睡眠150ms
-    int64_t micro2 = utils::steadyMicro();
-    int64_t milli2 = utils::steadyMilli();
+    int64_t micro2 = Utils::steadyMicro();
+    int64_t milli2 = Utils::steadyMilli();
 
     // 验证稳定时钟差值（140ms~160ms，不受系统时间调整影响）
     int64_t micro_diff = micro2 - micro1;
@@ -114,17 +114,17 @@ void test_readable_time() {
 
     // 测试1：当前时间（验证格式）
     time_t now = time(nullptr);
-    std::string now_str = utils::readableTime(now);
+    std::string now_str = Utils::readableTime(now);
     DEBUG("当前时间测试：%s（格式预期：YYYY-MM-DD HH:MM:SS）", now_str.c_str());
 
     // 测试2：已知时间戳（2024-01-01 00:00:00 UTC）
     time_t test_time = 1704067200;  // 2024-01-01 00:00:00 UTC
-    std::string test_str = utils::readableTime(test_time);
+    std::string test_str = Utils::readableTime(test_time);
     DEBUG("已知时间戳测试：%s（预期：2024-01-01 08:00:00，取决于本地时区）", test_str.c_str());
 
     // 测试3：非法时间戳（边界值）
-    std::string invalid_str1 = utils::readableTime(-1);  // 负时间戳
-    std::string invalid_str2 = utils::readableTime(0x7FFFFFFFFFFFFFFF);  // 最大int64_t
+    std::string invalid_str1 = Utils::readableTime(-1);  // 负时间戳
+    std::string invalid_str2 = Utils::readableTime(0x7FFFFFFFFFFFFFFF);  // 最大int64_t
     DEBUG("非法时间戳测试1：%s（预期：invalid time 或合法格式）", invalid_str1.c_str());
     DEBUG("非法时间戳测试2：%s（预期：invalid time 或合法格式）", invalid_str2.c_str());
 
@@ -159,8 +159,8 @@ void test_atoi() {
         const char* b = c.str;
         const char* e = c.str + c.len;
 
-        int64_t atoi_res = utils::atoi(b, e);
-        int64_t atoi2_res = utils::atoi2(b, e);
+        int64_t atoi_res = Utils::atoi(b, e);
+        int64_t atoi2_res = Utils::atoi2(b, e);
 
         bool atoi_ok = (atoi_res == c.atoi_exp);
         bool atoi2_ok = (atoi2_res == c.atoi2_exp);
@@ -188,14 +188,14 @@ void test_add_fd_flag() {
     }
 
     // 测试1.1：添加 FD_CLOEXEC 标志（初始未设置）
-    int ret1 = utils::addFdFlag(fd, FD_CLOEXEC);
+    int ret1 = Utils::addFdFlag(fd, FD_CLOEXEC);
     int flags1 = fcntl(fd, F_GETFD);
     bool test1_ok = (ret1 == 0) && ((flags1 & FD_CLOEXEC) == FD_CLOEXEC);
     DEBUG("测试1（添加FD_CLOEXEC）：返回值=%d，当前标志=0x%x（%s）", 
               ret1, flags1, test1_ok ? "通过" : "失败");
 
     // 测试1.2：重复添加 FD_CLOEXEC 标志（应返回0，无操作）
-    int ret2 = utils::addFdFlag(fd, FD_CLOEXEC);
+    int ret2 = Utils::addFdFlag(fd, FD_CLOEXEC);
     int flags2 = fcntl(fd, F_GETFD);
     bool test2_ok = (ret2 == 0) && ((flags2 & FD_CLOEXEC) == FD_CLOEXEC);
     DEBUG("测试2（重复添加FD_CLOEXEC）：返回值=%d，当前标志=0x%x（%s）", 
@@ -203,7 +203,7 @@ void test_add_fd_flag() {
 
     // 测试1.3：非法FD（应返回-1，errno=EBADF）
     int invalid_fd = -1;
-    int ret3 = utils::addFdFlag(invalid_fd, FD_CLOEXEC);
+    int ret3 = Utils::addFdFlag(invalid_fd, FD_CLOEXEC);
     bool test3_ok = (ret3 == -1) && (errno == EBADF);
     DEBUG("测试3（非法FD=-1）：返回值=%d，errno=%d（%s）", 
               ret3, errno, test3_ok ? "通过" : "失败");
@@ -229,8 +229,8 @@ void test_thread_safe() {
     auto thread_func = []() {
         for (int i = 0; i < LOOP_NUM; ++i) {
             time_t now = time(nullptr);
-            std::string time_str = utils::readableTime(now);
-            std::string fmt_str = utils::format("线程%d-%d：time=%s", 
+            std::string time_str = Utils::readableTime(now);
+            std::string fmt_str = Utils::format("线程%d-%d：time=%s", 
                                                std::this_thread::get_id(), i, time_str.c_str());
             // 日志输出（间接验证无崩溃/乱码）
             DEBUG("%s", fmt_str.c_str());

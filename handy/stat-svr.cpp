@@ -14,7 +14,7 @@ namespace handy
     */
     static std::string queryLink(const std::string& path)
     {
-        return utils::format("<a href=\"/?stat=%s\">%s</a>", path.c_str(), path.c_str());
+        return Utils::format("<a href=\"/?stat=%s\">%s</a>", path.c_str(), path.c_str());
     }
 
     /**
@@ -24,7 +24,7 @@ namespace handy
     */
     static std::string pageLink(const std::string& path)
     {
-        return utils::format("<a href=\"/%s\">%s</a>", path.c_str(), path.c_str());
+        return Utils::format("<a href=\"/%s\">%s</a>", path.c_str(), path.c_str());
     }
 
     StatServer::StatServer(EventBase* base) : m_server(base)
@@ -113,7 +113,7 @@ namespace handy
                 // 添加子查询结果（如果有）
                 if(!resp.getBody().empty())
                 { 
-                    buf.append(utils::format("<br/>子查询 %s 结果:<br/>%s", query.c_str(), resp.getBody().toString().c_str()));
+                    buf.append(Utils::format("<br/>子查询 %s 结果:<br/>%s", query.c_str(), resp.getBody().toString().c_str()));
                 }
 
                 resp.setBody(buf.data());

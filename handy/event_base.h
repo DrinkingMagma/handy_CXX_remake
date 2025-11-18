@@ -135,7 +135,7 @@ namespace handy
             */
             TimerId runAfter(int64_t timestamp_ms, Task&& task, int64_t interval_ms = 0)
             {
-                return runAt(utils::timeMilli() + timestamp_ms, std::move(task), interval_ms);
+                return runAt(Utils::timeMilli() + timestamp_ms, std::move(task), interval_ms);
             }
 
             /**
@@ -147,7 +147,7 @@ namespace handy
             */
             TimerId runAfter(int64_t timestamp_ms, const Task& task, int64_t interval_ms = 0)
             {
-                return runAt(utils::timeMilli() + timestamp_ms, Task(task), interval_ms);
+                return runAt(Utils::timeMilli() + timestamp_ms, Task(task), interval_ms);
             }
 
             /**

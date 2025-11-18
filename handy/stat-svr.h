@@ -100,7 +100,7 @@ namespace handy
            void onState(const std::string& state, const std::string& desc, const IntCallBack& cb)
            {
                 onRequest(StatType::STATE, state, desc, [cb] {
-                    return utils::format("%ld", cb());
+                    return Utils::format("%ld", cb());
                 });
            }
 
@@ -144,7 +144,7 @@ namespace handy
            {
                 onRequest(StatType::CMD, cmd, desc, [cb] 
                 {
-                    return utils::format("%lld", cb());
+                    return Utils::format("%lld", cb());
                 });
            }
         private:

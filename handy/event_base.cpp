@@ -53,7 +53,7 @@ namespace handy
             int r = pipe(m_wakeupFds);
             if(r < 0)
             {
-                throw::std::runtime_error(utils::format(
+                throw::std::runtime_error(Utils::format(
                     "Wakeup pipe create failed: errno=%d, msg=%s",
                     errno, strerror(errno)));
             }
@@ -61,8 +61,8 @@ namespace handy
             // 设置管道为非阻塞+FD_CLOEXEC（避免进程替换后残留）
             Net::setNonBlock(m_wakeupFds[0]);
             Net::setNonBlock(m_wakeupFds[1]);
-            utils::addFdFlag(m_wakeupFds[0], FD_CLOEXEC);
-            utils::addFdFlag(m_wakeupFds[1], FD_CLOEXEC);
+            Utils::addFdFlag(m_wakeupFds[0], FD_CLOEXEC);
+            Utils::addFdFlag(m_wakeupFds[1], FD_CLOEXEC);
 
             TRACE("Wakeup pipe initialized: readFd=%d, writeFd=%d",
                 m_wakeupFds[0], m_wakeupFds[1]);
@@ -137,7 +137,7 @@ namespace handy
             if(!m_idleEnabled)
                 return;
 
-            int64_t now_s = utils::timeMilli() / 1000;
+            int64_t now_s = Utils::timeMilli() / 1000;
             for(auto& [idle_s, connList] : m_idleConns)
             {
                 while(!connList.empty())
@@ -193,7 +193,7 @@ namespace handy
 
             // 添加空闲连接到对应列表
             auto& connList = m_idleConns[idle_s];
-            connList.push_back({conn, utils::timeMilli() / 1000, cb});
+            connList.push_back({conn, Utils::timeMilli() / 1000, cb});
 
             TRACE("Idle connection registered: idle_s=%d", idle_s);
             return IdleId(new IdleIdImp(&connList, --connList.end()));
@@ -223,7 +223,7 @@ namespace handy
             if(!idleIdPtr)
                 return;
 
-            idleIdPtr->m_iter->lastUpdatedTimestamp_s = utils::timeMilli() / 1000;
+            idleIdPtr->m_iter->lastUpdatedTimestamp_s = Utils::timeMilli() / 1000;
             idleIdPtr->m_lst->splice(idleIdPtr->m_lst->end(), *idleIdPtr->m_lst, idleIdPtr->m_iter);
 
             TRACE("Idle connection updated: updateTime=%lld", idleIdPtr->m_iter->lastUpdatedTimestamp_s);
@@ -234,7 +234,7 @@ namespace handy
         */
         void handleTimeoutTimers()
         {
-            int64_t now_ms = utils::timeMilli();
+            int64_t now_ms = Utils::timeMilli();
             TimerId maxTimerId{now_ms, std::numeric_limits<int64_t>::max()};
 
             // 处理一次性定时器（按时间戳排序，遍历已超时的任务）
@@ -274,7 +274,7 @@ namespace handy
 
             // 获取最早超时的定时器
             const auto& earlistTimerIdPair = m_timers.begin()->first;
-            int64_t now_ms = utils::timeMilli();
+            int64_t now_ms = Utils::timeMilli();
             m_nextTimeout_ms = std::max(earlistTimerIdPair.first - now_ms, int64_t{0});
 
             TRACE("Nearest timer refreshed: m_nextTimeout=%d ms", m_nextTimeout_ms);
@@ -583,7 +583,7 @@ namespace handy
         if(!Net::setNonBlock(m_fd))
         {
             throw std::runtime_error(
-                utils::format("Channel set non-block failed: fd=%d, errno=%d, msg=%s",
+                Utils::format("Channel set non-block failed: fd=%d, errno=%d, msg=%s",
                 m_fd, errno, strerror(errno))
             );
         }
@@ -705,7 +705,7 @@ namespace handy
         }
 
         // 计算重连间隔
-        int64_t now_ms = utils::timeMilli();
+        int64_t now_ms = Utils::timeMilli();
         int64_t interval = m_reconnectInterval_ms - (now_ms - m_connectedTime_ms);
         interval = std::max(interval, 0L);
 

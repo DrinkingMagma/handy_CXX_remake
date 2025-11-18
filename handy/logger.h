@@ -8,7 +8,7 @@
 // 日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑
 #ifdef NDEBUG
 // 若当前为发布模式（Release）
-// 只有当当前日志级别小于等于日志系统设置的级别是时，才进行日志记录 
+// 只有当当前日志级别小于等于日志系统设置的级别时，才进行日志记录 
 #define HLOG(level, fmt, ...)                                                               \
     do {                                                                                    \
         if(level <= handy::Logger::getInstance().getLogLevel())                             \
@@ -165,7 +165,7 @@ namespace handy
                 m_maxLogFileSize = maxLogFileSize_MB * 1024 * 1024;
             }
         private:
-            // 是有构造函数
+            // 构造函数
             Logger() : 
                 m_fd(stdout),
                 m_level(LINFO),

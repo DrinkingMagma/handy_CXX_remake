@@ -60,7 +60,7 @@ namespace handy
         }
 
         // 设置FD_CLOEXEC标志
-        r = utils::addFdFlag(fd, FD_CLOEXEC);
+        r = Utils::addFdFlag(fd, FD_CLOEXEC);
         if(r != 0)
         {
             ERROR("Set FD_CLOEXEC failed: errno=%d, msg=%s", errno, strerror(errno));
@@ -221,7 +221,7 @@ namespace handy
         }
 
         // 设置FD_CLOEXEC标志
-        int r = utils::addFdFlag(fd, FD_CLOEXEC);
+        int r = Utils::addFdFlag(fd, FD_CLOEXEC);
         if(r != 0)
         {
             ERROR("Set FD_CLOEXEC failed: errno=%d, msg=%s", errno, strerror(errno));

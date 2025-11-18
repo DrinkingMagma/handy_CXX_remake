@@ -176,7 +176,7 @@ namespace handy
         uint32_t ipHost = Net::ntoh(m_addr.sin_addr.s_addr);
         unsigned short portHost = Net::ntoh(m_addr.sin_port);
 
-        return utils::format("%d.%d.%d.%d:%d", 
+        return Utils::format("%d.%d.%d.%d:%d", 
                 (ipHost >> 24) & 0xff,
                 (ipHost >> 16) & 0xff,
                 (ipHost >> 8) & 0xff,
@@ -191,7 +191,7 @@ namespace handy
 
         uint32_t ipHost = Net::ntoh(m_addr.sin_addr.s_addr);
 
-        return utils::format("%d.%d.%d.%d", 
+        return Utils::format("%d.%d.%d.%d", 
                 (ipHost >> 24) & 0xff,
                 (ipHost >> 16) & 0xff,
                 (ipHost >> 8) & 0xff,

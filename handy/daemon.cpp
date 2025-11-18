@@ -435,7 +435,7 @@ namespace handy
                 {
                     break;
                 }
-                const char* msg = utils::format("Wait parent process(pid=%d) exit failed: errno=%d, msg=%s\n", parentPid, errno, strerror(errno)).c_str();
+                const char* msg = Utils::format("Wait parent process(pid=%d) exit failed: errno=%d, msg=%s\n", parentPid, errno, strerror(errno)).c_str();
                 write(STDERR_FILENO, msg, strlen(msg));
                 _exit(1);
             }
@@ -454,7 +454,7 @@ namespace handy
     {
         // 存储信号处理函数的映射表
         std::map<int, std::function<void()>> signalHandlers;
-        // 保护型号处理函数映射表的互斥锁
+        // 保护信号处理函数映射表的互斥锁
         std::mutex signalHandlersMutex;
     } // namespace
 

@@ -79,7 +79,7 @@ namespace handy
 
         m_destHost = peerHost;
         m_destPort = peerPort;
-        m_connectedTime_ms = utils::timeMilli();
+        m_connectedTime_ms = Utils::timeMilli();
         m_connectTimeout_ms = timeout_ms;
         m_localIp = localIp;
 
@@ -88,7 +88,7 @@ namespace handy
         FATAL_IF(fd < 0, "socket creation failed: errno=%d, msg=%s", errno, strerror(errno));
 
         Net::setNonBlock(fd);
-        int t = utils::addFdFlag(fd, FD_CLOEXEC);
+        int t = Utils::addFdFlag(fd, FD_CLOEXEC);
         FATAL_IF(t < 0, "addFdFlag FD_CLOEXEC failed: errno=%d, msg=%s", errno, strerror(errno));
 
         int r = 0;
@@ -333,7 +333,7 @@ namespace handy
             if(m_stateCB)
                 m_stateCB(conn);
 
-            m_connectedTime_ms = utils::timeMilli();
+            m_connectedTime_ms = Utils::timeMilli();
             TRACE("TcpConn connected: %s -> %s, fd: %d",
                     m_local.toString().c_str(), m_peer.toString().c_str(), fd);
         }
@@ -624,7 +624,7 @@ namespace handy
         }
 
         // 设置FD_CLOEXEC标识
-        r = utils::addFdFlag(fd, FD_CLOEXEC);
+        r = Utils::addFdFlag(fd, FD_CLOEXEC);
         FATAL_IF(r, "Failed to set FD_CLOEXEC: errno=%d, msg=%s", errno, strerror(errno));
 
         // 绑定地址
@@ -704,7 +704,7 @@ namespace handy
             }
 
             // 设置FD_CLOEXEC标志
-            r = utils::addFdFlag(curFd, FD_CLOEXEC);
+            r = Utils::addFdFlag(curFd, FD_CLOEXEC);
             if(r != 0)
             {
                 close(curFd);

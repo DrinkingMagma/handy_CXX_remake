@@ -8,7 +8,7 @@
 namespace handy
 {
     /**
-     * @brief 非持有型字符序列试图（类似std::string_view，但兼容C++11）
+     * @brief 非持有型字符序列视图（类似std::string_view，但兼容C++11）
      * @note 1. 不管理内存，仅持有外部字符序列的指针，需确保外部数据生命周期有效
      * @note 2. 线程安全：成员函数均为const/无状态操作，多线程只读访问安全
      * @note 3. 若需多线程修改（如eat/trimSpace），需外部加锁
@@ -166,7 +166,7 @@ namespace handy
             }
 
             /**
-             * @brief 清空试图（重置为空视图）
+             * @brief 清空视图（重置为空视图）
             */
             void clear() noexcept
             {
@@ -253,7 +253,7 @@ namespace handy
             }
 
             /**
-             * @brief 吞噬一行（直到\n或\r，兼容 Windows/Linux 换行）
+             * @brief 吞噬一行（直到\n或\r\n，兼容 Windows/Linux 换行）
              * @return 行内容的子视图（不含换行符）
             */
             Slice eatLine() noexcept {
@@ -286,7 +286,7 @@ namespace handy
              * @param ch 目标终止符号
              * @return 吞噬内容的子视图（含终止符号）
             */
-            Slice eatUntil(char ch)
+            Slice eatUntil(char ch) noexcept
             {
                 const char* start = m_pb;
                 while(m_pb < m_pe && *m_pb != ch)
@@ -299,7 +299,7 @@ namespace handy
             }
             
             /**
-             * @brief 截取子视图（支持负偏移）
+             * @brief 获取子视图（支持负偏移）
              * @param bOff 起始偏移（正数：从开头；负数：从结尾）
              * @param eOff 结束偏移（正数：从开头；负数：从结尾，默认 0 表示原结束）
              * @return 子视图
@@ -495,7 +495,7 @@ namespace handy
 
     // -------------------------- 辅助函数（增强易用性） --------------------------
     /**
-     * @brief 从文件读取内容到Slice（需确保buffer的生命周期）
+     * @brief 从文件描述符读取内容到Slice（需确保buffer的生命周期）
      * @param fd 文件描述符（已打开）
      * @param buffer 外部缓冲区（需足够大）
      * @param bufLen 缓冲区大小

@@ -1,0 +1,64 @@
+[2025-11-12 14:38:55.225] [INFO] [conn_test.cpp:24 initConnTestLogger] === conn_test 测试开始 ===
+[2025-11-12 14:38:55.225] [DEBUG] [conn_test.cpp:31 test_TcpConn_basic] === 开始TcpConn基本功能测试 ===
+[2025-11-12 14:38:55.226] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2025-11-12 14:38:55.226] [INFO] [../handy/conn.cpp:643 bind] Listening on fd 7 at 127.0.0.1:8888
+[2025-11-12 14:38:55.226] [DEBUG] [conn_test.cpp:65 operator()] 客户端：连接建立，发送数据
+[2025-11-12 14:38:55.226] [DEBUG] [conn_test.cpp:42 operator()] 服务器端：连接建立
+[2025-11-12 14:38:55.226] [DEBUG] [conn_test.cpp:52 operator()] 服务器端：收到数据: hello server
+[2025-11-12 14:38:55.226] [DEBUG] [conn_test.cpp:74 operator()] 客户端：收到数据: hello client
+[2025-11-12 14:38:58.226] [DEBUG] [conn_test.cpp:88 test_TcpConn_basic] TcpConn连接测试: 服务器连接建立=成功，客户端连接建立=成功
+[2025-11-12 14:38:58.226] [DEBUG] [conn_test.cpp:90 test_TcpConn_basic] TcpConn数据传输测试: 服务器接收=成功，客户端接收=成功
+[2025-11-12 14:38:58.226] [DEBUG] [conn_test.cpp:91 test_TcpConn_basic] === TcpConn基本功能测试结束 ===
+
+[2025-11-12 14:38:58.226] [INFO] [../handy/poller.cpp:97 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[0] destroying, epoll_fd=4
+[2025-11-12 14:38:58.226] [DEBUG] [conn_test.cpp:74 operator()] 客户端：收到数据: hello client
+[2025-11-12 14:38:58.226] [ERROR] [../handy/event_base.cpp:435 wakeup] write wakeup pipe error: r=-1, errno=32, msg=Broken pipe
+[2025-11-12 14:38:58.226] [DEBUG] [conn_test.cpp:52 operator()] 服务器端：收到数据: hello server
+[2025-11-12 14:38:58.226] [INFO] [../handy/poller.cpp:114 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[0] destroyed
+[2025-11-12 14:38:58.226] [DEBUG] [conn_test.cpp:98 test_TcpConn_codec] === 开始TcpConn编解码功能测试 ===
+[2025-11-12 14:38:58.226] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[1] created, epoll_fd=4
+[2025-11-12 14:38:58.226] [INFO] [../handy/conn.cpp:643 bind] Listening on fd 7 at 127.0.0.1:8889
+[2025-11-12 14:38:58.227] [DEBUG] [conn_test.cpp:126 operator()] 客户端：发送编码消息
+[2025-11-12 14:38:58.227] [DEBUG] [conn_test.cpp:106 operator()] 服务器端：解码收到消息: codec test
+[2025-11-12 14:38:58.227] [DEBUG] [conn_test.cpp:121 operator()] 客户端：解码收到消息: codec response
+[2025-11-12 14:39:01.227] [DEBUG] [conn_test.cpp:136 test_TcpConn_codec] TcpConn编解码测试: 成功
+[2025-11-12 14:39:01.227] [DEBUG] [conn_test.cpp:137 test_TcpConn_codec] === TcpConn编解码功能测试结束 ===
+
+[2025-11-12 14:39:01.227] [INFO] [../handy/poller.cpp:97 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[1] destroying, epoll_fd=4
+[2025-11-12 14:39:01.227] [INFO] [../handy/poller.cpp:114 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[1] destroyed
+[2025-11-12 14:39:01.227] [DEBUG] [conn_test.cpp:144 test_TcpConn_reconnect] === 开始TcpConn重连功能测试 ===
+[2025-11-12 14:39:01.227] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[2] created, epoll_fd=4
+[2025-11-12 14:39:01.228] [INFO] [../handy/event_base.cpp:712 _reconnect] TcpConn reconnect scheduled: interval=99 ms
+[2025-11-12 14:39:01.327] [INFO] [../handy/event_base.cpp:712 _reconnect] TcpConn reconnect scheduled: interval=100 ms
+[2025-11-12 14:39:01.428] [INFO] [../handy/event_base.cpp:712 _reconnect] TcpConn reconnect scheduled: interval=100 ms
+[2025-11-12 14:39:01.528] [INFO] [../handy/event_base.cpp:712 _reconnect] TcpConn reconnect scheduled: interval=100 ms
+[2025-11-12 14:39:01.629] [INFO] [../handy/event_base.cpp:712 _reconnect] TcpConn reconnect scheduled: interval=100 ms
+[2025-11-12 14:39:01.729] [INFO] [../handy/event_base.cpp:712 _reconnect] TcpConn reconnect scheduled: interval=100 ms
+[2025-11-12 14:39:01.830] [INFO] [../handy/event_base.cpp:712 _reconnect] TcpConn reconnect scheduled: interval=99 ms
+[2025-11-12 14:39:01.929] [INFO] [../handy/event_base.cpp:712 _reconnect] TcpConn reconnect scheduled: interval=100 ms
+[2025-11-12 14:39:02.029] [INFO] [../handy/event_base.cpp:712 _reconnect] TcpConn reconnect scheduled: interval=100 ms
+[2025-11-12 14:39:02.130] [INFO] [../handy/event_base.cpp:712 _reconnect] TcpConn reconnect scheduled: interval=100 ms
+[2025-11-12 14:39:02.228] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[3] created, epoll_fd=7
+[2025-11-12 14:39:02.228] [INFO] [../handy/conn.cpp:643 bind] Listening on fd 10 at 127.0.0.1:8890
+[2025-11-12 14:39:02.230] [DEBUG] [conn_test.cpp:159 operator()] 客户端：第1次连接成功
+[2025-11-12 14:39:02.231] [DEBUG] [conn_test.cpp:175 operator()] 服务器端：客户端连接成功
+[2025-11-12 14:39:04.228] [INFO] [../handy/poller.cpp:97 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[3] destroying, epoll_fd=7
+[2025-11-12 14:39:04.228] [INFO] [../handy/poller.cpp:114 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[3] destroyed
+[2025-11-12 14:39:04.228] [DEBUG] [conn_test.cpp:192 test_TcpConn_reconnect] TcpConn重连测试: 连接成功次数=1（预期>=2），失败
+[2025-11-12 14:39:04.228] [DEBUG] [conn_test.cpp:193 test_TcpConn_reconnect] === TcpConn重连功能测试结束 ===
+
+[2025-11-12 14:39:04.228] [INFO] [../handy/poller.cpp:97 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[2] destroying, epoll_fd=4
+[2025-11-12 14:39:04.229] [INFO] [../handy/poller.cpp:114 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[2] destroyed
+[2025-11-12 14:39:04.229] [DEBUG] [conn_test.cpp:200 test_TcpConn_threadSafe] === 开始TcpConn线程安全测试 ===
+[2025-11-12 14:39:04.229] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[4] created, epoll_fd=4
+[2025-11-12 14:39:04.229] [INFO] [../handy/conn.cpp:643 bind] Listening on fd 7 at 127.0.0.1:8891
+[2025-11-12 14:39:04.229] [DEBUG] [conn_test.cpp:224 operator()] 客户端：连接建立，开始多线程测试
+[2025-11-12 14:39:04.257] [DEBUG] [conn_test.cpp:266 test_TcpConn_threadSafe] TcpConn线程安全测试: 发送次数=500，服务器接收字节数=880，客户端接收字节数=10994
+[2025-11-12 14:39:04.257] [DEBUG] [conn_test.cpp:267 test_TcpConn_threadSafe] === TcpConn线程安全测试结束 ===
+
+[2025-11-12 14:39:04.257] [INFO] [../handy/poller.cpp:97 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[4] destroying, epoll_fd=4
+[2025-11-12 14:39:04.257] [INFO] [../handy/poller.cpp:114 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[4] destroyed
+[2025-11-12 14:39:04.257] [DEBUG] [conn_test.cpp:274 test_TcpConn_close] === 开始TcpConn关闭清理测试 ===
+[2025-11-12 14:39:04.257] [INFO] [../handy/poller.cpp:91 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[5] created, epoll_fd=4
+[2025-11-12 14:39:04.257] [INFO] [../handy/conn.cpp:643 bind] Listening on fd 7 at 127.0.0.1:8892
+[2025-11-12 14:39:04.258] [DEBUG] [conn_test.cpp:292 operator()] 客户端：连接建立，准备关闭

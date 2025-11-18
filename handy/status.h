@@ -63,7 +63,7 @@ namespace handy
             Status(int code, const std::string& msg) : Status(code, msg.c_str()) {}
 
             /**
-             * @brief 拷贝构造寒素
+             * @brief 拷贝构造函数
              * @param other 要拷贝的Status对象
             */
             Status(const Status& other)
@@ -198,7 +198,7 @@ namespace handy
             */
             std::string toString() const
             {
-                return utils::format("error code: %d, error msg: %s", code(), msg());
+                return Utils::format("error code: %d, error msg: %s", code(), msg());
             }
 
         private:

@@ -174,7 +174,7 @@ namespace handy
         uint64_t getCurrentThreadId();
 
         /**
-         * @brief 将Ipv4地址转换为字符串显示
+         * @brief 将Ipv4地址转换为字符串
          * @param addr 指向IPv4地址结构的指针
          * @return IPV4地址对应的字符串表示（如：192.168.1.1）
         */
