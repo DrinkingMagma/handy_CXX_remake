@@ -1,7 +1,27 @@
 /**
  * @file conn.h
- * @brief TCP连接库的主要头文件，包含TcpConn，TcpServer和HSHA类的声明
-*/
+ * @brief TCP连接管理核心头文件，包含TcpConn（连接对象）、TcpServer（TCP服务器）、HSHA（半同步半异步服务器）类声明
+ * @details 
+ *  该文件提供了TCP网络编程的核心组件定义，实现了连接的创建、读写、状态管理、服务器监听及高并发处理等功能，核心特性如下：
+ *  1. TcpConn类：封装单个TCP连接，支持非阻塞I/O、连接状态管理（INVALID/HAND_SHAKING/CONNECTED/CLOSED/FAILED）、
+ *     数据发送/接收、编解码集成、超时处理、自动重连、上下文存储等功能，继承自std::enable_shared_from_this确保智能指针安全管理；
+ *  2. TcpServer类：实现TCP服务器功能，支持绑定地址、监听端口、接受客户端连接、多事件循环（EventBases）负载均衡，
+ *     可配置连接创建回调、状态回调、数据读写回调，支持端口复用；
+ *  3. HSHA类：基于TcpServer实现半同步半异步服务器模型，通过线程池（ThreadPool）处理业务逻辑，
+ *     实现I/O线程与业务线程分离，提升高并发场景下的性能，支持优雅退出；
+ *  4. 类型定义：提供TcpConnPtr（连接智能指针）、TcpCallBack（连接回调）、RetMsgCallBack（带返回值的消息回调）等常用类型别名，简化开发；
+ *  5. 线程安全：关键操作（如状态修改、回调注册、通道访问）通过互斥锁保护，支持多线程环境下的安全调用。
+ * @note 
+ *  1. 依赖组件：需配合event_base.h（事件循环）、codec.h（编解码）、non_copy_able.h（禁止拷贝）、net.h（网络工具）、
+ *     thread_pool.h（线程池）等头文件使用，编译时需链接pthread库；
+ *  2. 智能指针管理：TcpConn对象必须通过createConnection静态方法创建，确保使用std::shared_ptr管理生命周期，避免内存泄露；
+ *  3. 事件驱动：基于EventBase和Channel实现I/O事件的检测与分发，所有socket均设置为非阻塞模式，提升系统吞吐量；
+ *  4. 编解码集成：TcpConn和TcpServer支持通过onMsg方法绑定编解码器，自动处理数据的打包与解包，支持自定义编解码逻辑；
+ *  5. 上下文存储：TcpConn提供getContext方法，支持存储任意类型的上下文数据，方便业务逻辑共享状态；
+ *  6. 重连机制：TcpConn支持通过setReconnectInterval设置重连间隔，连接断开时会自动尝试重连（需开启重连功能）；
+ *  7. 空闲回调：支持添加空闲回调函数，当连接在指定时间内无数据读写时触发，适用于心跳检测等场景。
+ */
+
 #pragma once
 #include "event_base.h"
 #include "codec.h"
@@ -12,11 +32,11 @@
 
 namespace handy
 {
-    // TCP连接的智能指针类型
+    /// TCP连接的智能指针类型
     using TcpConnPtr = std::shared_ptr<TcpConn>;
-    // TCP回调函数类型定义
+    /// TCP回调函数类型定义
     using TcpCallBack = std::function<void(const TcpConnPtr&)>;
-    // 带返回值的消息回调函数类型定义
+    /// 带返回值的消息回调函数类型定义
     using RetMsgCallBack = std::function<std::string(const TcpConnPtr&, const std::string&)>;
 
     /**
@@ -28,14 +48,17 @@ namespace handy
     class TcpConn : public std::enable_shared_from_this<TcpConn>, private NonCopyAble
     {
         public:
-            // TCP连接状态枚举
+            /**
+             * @enum TcpConn::State
+             * @brief TCP 连接状态枚举，描述连接生命周期中的不同状态。
+             */
             enum class State
             {
-                INVALID = 1, // 无效状态
-                HAND_SHAKING, // 正在握手
-                CONNECTED,   // 已连接
-                CLOSED,      // 已关闭
-                FAILED,      // 连接失败
+                INVALID = 1, /// 无效状态
+                HAND_SHAKING, /// 正在握手
+                CONNECTED,   /// 已连接
+                CLOSED,      /// 已关闭
+                FAILED,      /// 连接失败
             };
 
             /**
@@ -289,32 +312,32 @@ namespace handy
             void attach(EventBase* base, int fd, const Ipv4Addr& localIp, const Ipv4Addr& peerIp);
 
         private:
-            EventBase* m_base;                      // 所属的事件循环
-            Channel* m_channel;                     // 关联的事件通道
-            mutable std::mutex m_ChannelMutex;      // 保护m_channel的互斥锁
-            Buffer m_inputBuffer;                   // 输入缓冲区
-            Buffer m_outputBuffer;                  // 输出缓冲区
-            Ipv4Addr m_local = Ipv4Addr(0);                       // 本地地址
-            Ipv4Addr m_peer = Ipv4Addr(0);                        // 对端地址
-            State m_state;                          // 连接状态
-            mutable std::mutex m_stateMutex;        // 保护m_state的互斥锁
-            TcpCallBack m_readCB;                   // 读回调函数
-            TcpCallBack m_writeCB;                  // 写回调函数
-            TcpCallBack m_stateCB;                  // 状态变更回调函数
-            mutable std::mutex m_callBacksMutex;    // 保护回调函数的互斥锁
-            std::list<IdleId> m_idleIds;            // 空闲回调ID列表
-            TimerId m_timeoutId;                    // 超时ID
-            AutoContext m_ctx;                      // 上下文对象
-            AutoContext m_internalCtx;              // 内部上下文对象
-            mutable std::mutex m_ctxMutex;          // 保护上下文对象的互斥锁
-            std::string m_destHost;                 // 目标主机地址
-            std::string m_localIp;                  // 本地IP地址
-            int m_destPort;                         // 目标端口
-            int m_connectTimeout_ms;                   // 连接超时时间
-            int m_reconnectInterval_ms;                // 重连间隔时间
-            mutable std::mutex m_intervalMutex;     // 重连间隔的互斥锁
-            int64_t m_connectedTime_ms;                // 连接建立时间
-            std::unique_ptr<CodecBase> m_codec;     // 编解码器
+            EventBase* m_base;                      /// 所属的事件循环
+            Channel* m_channel;                     /// 关联的事件通道
+            mutable std::mutex m_ChannelMutex;      /// 保护m_channel的互斥锁
+            Buffer m_inputBuffer;                   /// 输入缓冲区
+            Buffer m_outputBuffer;                  /// 输出缓冲区
+            Ipv4Addr m_local = Ipv4Addr(0);                       /// 本地地址
+            Ipv4Addr m_peer = Ipv4Addr(0);                        /// 对端地址
+            State m_state;                          /// 连接状态
+            mutable std::mutex m_stateMutex;        /// 保护m_state的互斥锁
+            TcpCallBack m_readCB;                   /// 读回调函数
+            TcpCallBack m_writeCB;                  /// 写回调函数
+            TcpCallBack m_stateCB;                  /// 状态变更回调函数
+            mutable std::mutex m_callBacksMutex;    /// 保护回调函数的互斥锁
+            std::list<IdleId> m_idleIds;            /// 空闲回调ID列表
+            TimerId m_timeoutId;                    /// 超时ID
+            AutoContext m_ctx;                      /// 上下文对象
+            AutoContext m_internalCtx;              /// 内部上下文对象
+            mutable std::mutex m_ctxMutex;          /// 保护上下文对象的互斥锁
+            std::string m_destHost;                 /// 目标主机地址
+            std::string m_localIp;                  /// 本地IP地址
+            int m_destPort;                         /// 目标端口
+            int m_connectTimeout_ms;                   /// 连接超时时间
+            int m_reconnectInterval_ms;                /// 重连间隔时间
+            mutable std::mutex m_intervalMutex;     /// 重连间隔的互斥锁
+            int64_t m_connectedTime_ms;                /// 连接建立时间
+            std::unique_ptr<CodecBase> m_codec;     /// 编解码器
 
             /**
              * @brief 处理读事件
@@ -385,7 +408,7 @@ namespace handy
     class TcpServer : private NonCopyAble
     {
         public:
-            using Ptr = std::shared_ptr<TcpServer>; // TcpServer智能指针类型定义
+            using Ptr = std::shared_ptr<TcpServer>; /// TcpServer智能指针类型定义
 
             /**
              * @brief 构造函数
@@ -475,17 +498,17 @@ namespace handy
                 assert(!m_readCB);
             }
         private:
-            EventBase* m_base;                      // 事件循环对象
-            EventBases* m_bases;                    // 事件循环对象组
-            Ipv4Addr m_addr = Ipv4Addr(0);                        // 绑定的服务器地址
-            Channel* m_listenChannel;               // 监听通道
-            mutable std::mutex m_ChannelMutex;      // 监听通道的互斥锁
-            TcpCallBack m_stateCB;                  // 连接状态回调函数
-            TcpCallBack m_readCB;                   // 读事件回调函数
-            MsgCallBack m_msgCB;                    // 消息回调函数
-            std::function<TcpConnPtr()> m_createCB; // 连接创建回调函数
-            std::unique_ptr<CodecBase> m_codec;     // 编解码器
-            mutable std::mutex m_callBacksMutex;    // 回调函数的互斥锁
+            EventBase* m_base;                      /// 事件循环对象
+            EventBases* m_bases;                    /// 事件循环对象组
+            Ipv4Addr m_addr = Ipv4Addr(0);                        /// 绑定的服务器地址
+            Channel* m_listenChannel;               /// 监听通道
+            mutable std::mutex m_ChannelMutex;      /// 监听通道的互斥锁
+            TcpCallBack m_stateCB;                  /// 连接状态回调函数
+            TcpCallBack m_readCB;                   /// 读事件回调函数
+            MsgCallBack m_msgCB;                    /// 消息回调函数
+            std::function<TcpConnPtr()> m_createCB; /// 连接创建回调函数
+            std::unique_ptr<CodecBase> m_codec;     /// 编解码器
+            mutable std::mutex m_callBacksMutex;    /// 回调函数的互斥锁
 
             /**
              * @brief 处理接受连接事件
@@ -500,7 +523,7 @@ namespace handy
     class HSHA : private NonCopyAble
     {
         public:
-            using Ptr = std::shared_ptr<HSHA>; // HSHA智能指针类型定义
+            using Ptr = std::shared_ptr<HSHA>; /// HSHA智能指针类型定义
             /**
              * @brief 启动一个HSHA服务器
              * @param base 事件循环
@@ -541,7 +564,7 @@ namespace handy
 
         private:
         
-            TcpServer::Ptr m_server;          // TCP服务器对象
-            ThreadPool m_threadPool;          // 线程池对象
+            TcpServer::Ptr m_server;          /// TCP服务器对象
+            ThreadPool m_threadPool;          /// 线程池对象
     };
 }   // namespace handy

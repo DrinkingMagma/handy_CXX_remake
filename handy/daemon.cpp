@@ -1,8 +1,28 @@
 /**
  * @file daemon.cpp
- * @brief 守护进程管理和信号处理类的实现
-*/
-
+ * @brief 守护进程管理和信号处理类的实现文件
+ * @details 
+ *  该文件实现了Daemon类和Signal类，提供守护进程的启动、停止、重启、状态管理，以及信号注册和处理功能。
+ *  核心特性包括：
+ *  1. Daemon类：
+ *     - 支持守护进程的创建（通过两次fork+setsid脱离终端和会话）；
+ *     - 自动管理PID文件（创建、写入PID、读取PID、进程退出时自动删除）；
+ *     - 提供start（启动）、stop（停止）、restart（重启）、process（命令处理）等接口；
+ *     - 支持进程切换（changeTo方法，在父进程退出后执行新程序）；
+ *     - 启动时检查是否已运行，避免重复启动；停止时先尝试优雅终止（SIGTERM），失败则强制终止（SIGKILL）。
+ *  2. Signal类：
+ *     - 提供信号注册接口（signal方法），支持自定义信号处理函数；
+ *     - 线程安全的信号处理机制（通过互斥锁保护信号处理函数映射表）；
+ *     - 捕获信号处理函数中的异常，防止程序崩溃；
+ *     - 不使用SA_RESTART标志，避免中断的系统调用自动重启，确保程序行为可控。
+ * @note 
+ *  1. 依赖utils.h（提供ExitCaller类、字符串格式化等工具）；
+ *  2. 守护进程启动后会将工作目录切换到根目录（/），并将标准输入/输出/错误重定向到/dev/null；
+ *  3. PID文件权限为0600，仅允许所有者读写，确保安全性；
+ *  4. 信号处理函数中应避免使用非线程安全的函数，且执行时间不宜过长；
+ *  5. changeTo方法用于在父进程退出后切换到新程序，适用于守护进程的升级或切换场景；
+ *  6. 编译时需链接pthread库（信号处理中的互斥锁依赖）。
+ */
 #include "daemon.h"
 #include "utils.h"
 #include <cstring>
@@ -452,9 +472,9 @@ namespace handy
 
     namespace
     {
-        // 存储信号处理函数的映射表
+        /// 存储信号处理函数的映射表
         std::map<int, std::function<void()>> signalHandlers;
-        // 保护信号处理函数映射表的互斥锁
+        /// 保护信号处理函数映射表的互斥锁
         std::mutex signalHandlersMutex;
     } // namespace
 

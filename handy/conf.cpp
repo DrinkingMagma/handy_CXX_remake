@@ -1,3 +1,20 @@
+/**
+ * @file conf.cpp
+ * @brief 配置文件解析实现，提供INI格式配置的读取与查询功能
+ * @details 
+ *  1. 支持标准INI文件格式，包括节定义（[section]）、键值对（key=value 或 key:value）、注释行（; 或 # 开头）
+ *  2. 实现大小写不敏感的键查询，自动将section和name转换为小写后匹配
+ *  3. 支持多行值（续行以空格开头），get()方法返回最后一行值，getStrings()返回所有行值列表
+ *  4. 提供多种数据类型的查询接口：字符串（get/getStrings）、整数（getInteger）、浮点数（getReal）、布尔值（getBoolean）
+ *  5. 内置错误处理机制，解析过程中记录错误行号，异常情况下返回具体错误位置
+ * @note 
+ *  - 依赖 conf.h、slice.h 头文件，以及 C++11 标准库（智能指针、lambda 等）
+ *  - 整数解析支持十进制（默认）和十六进制（0x开头），浮点数支持科学计数法
+ *  - 布尔值支持多种常见表示：true/yes/on/1（真），false/no/off/0（假），不区分大小写
+ *  - 配置文件最大行长度限制为 16KB，超出部分会被截断，建议单行配置不超过此长度
+ *  - 解析时会自动去除键和值前后的空格，值内部的空格会保留（如 "app name = My App" 解析后值为 "My App"）
+ */
+
 #include "conf.h"
 #include <algorithm>
 #include <cstdio>
@@ -83,9 +100,9 @@ namespace handy
     {
         struct LineScanner
         { 
-            // 当前扫描位置指针
+            /// 当前扫描位置指针
             char *p;
-            // 错误标志（0：无错误，1：解析错误）
+            /// 错误标志（0：无错误，1：解析错误）
             int err;
 
             /**

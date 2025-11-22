@@ -1,3 +1,17 @@
+/**
+ * @file codec.h
+ * @brief 编解码器基类及具体实现（换行分隔符编解码器、长度前缀编解码器）
+ * @details
+ * 1. 提供统一的消息编解码接口（CodecBase），定义编解码核心行为规范
+ * 2. 实现两种常用编解码器：支持 \r\n/\n 分隔的 LineCodec、基于 8 字节头的 LengthCodec
+ * 3. 所有编解码器均保证线程安全，支持多态克隆，适用于网络通信等多线程场景
+ * 4. 包含完善的错误处理、安全限制（如消息长度上限），确保编解码过程可靠
+ * @note
+ * 1. 依赖 net.h、slice.h 头文件
+ * 2. 基于 C++11 及以上标准实现，使用互斥锁保证线程安全
+ * 3. 编解码器采用多态设计，支持用户扩展自定义编解码逻辑
+*/
+
 #pragma once
 #include "net.h"
 #include "slice.h"
@@ -11,11 +25,11 @@ namespace handy
     class CodecBase
     {
         public: 
-            // 禁止拷贝构造和赋值（避免多线程下的浅拷贝风险）
+            /// 禁止拷贝构造和赋值（避免多线程下的浅拷贝风险）
             CodecBase(const CodecBase&) = delete;
             CodecBase& operator=(const CodecBase&) = delete;
 
-            // 允许移动构造和赋值（资源高效转移）
+            /// 允许移动构造和赋值（资源高效转移）
             CodecBase(CodecBase&&) noexcept = default;
             CodecBase& operator=(CodecBase&&) noexcept = default;
 
@@ -42,21 +56,21 @@ namespace handy
             */
             virtual CodecBase* clone() const = 0;
         protected:
-            // 基类构造函数（仅允许子类调用）
+            /// 基类构造函数（仅允许子类调用）
             CodecBase() = default;
 
-            // 线程安全锁（保护编解码器内部状态，子类可直接使用）
+            /// 线程安全锁（保护编解码器内部状态，子类可直接使用）
             mutable std::mutex m_mutex;
     };
 
     /**
      * @brief 换行分隔符编解码器(\r\n或\n)
-     * @note 支持两种换行格式：标准HTTP风格式(\r\n)和Unix格式(\n)，自动兼容
+     * @note 支持两种换行格式：标准HTTP风格式(\\r\\n)和Unix格式(\\n)，自动兼容
     */
     class LineCodec : public CodecBase
     { 
         public: 
-            // 解码错误码（负数表示）
+            /// 解码错误码（负数表示）
             enum class DecodeErr
             {
                 kInvalidEot = -1, // 无效的EOT结束符(仅允许单独0x04)
@@ -66,7 +80,7 @@ namespace handy
             void encode(Slice msg, Buffer& buf) override;
             CodecBase* clone() const override { return new LineCodec(); }
         private:
-            // 检查EOT结束符的合法性（防止0x04混入普通数据）
+            /// 检查EOT结束符的合法性（防止0x04混入普通数据）
             bool isLegalEot(Slice data) const;
     };
 
@@ -78,16 +92,16 @@ namespace handy
     class LengthCodec : public CodecBase
     {
         public:
-            // 解码错误码（负数表示）
+            /// 解码错误码（负数表示）
             enum class DecodeErr {
                 kInvalidMagic = -1,  // 无效的魔法字（仅允许"mBdT"）
                 kInvalidLength, // 无效的消息长度
             };
-            // 魔法字（用于校验消息合法性）
+            /// 魔法字（用于校验消息合法性）
             static constexpr const char* kMagic = "mBdT";
-            // 固定头部长度(4字节魔法字+ 4字节长度)
+            /// 固定头部长度(4字节魔法字+ 4字节长度)
             static constexpr size_t kHeaderLen = 8;
-            // 单条消息最大长度限制(1MB, 可通过setter调整)
+            /// 单条消息最大长度限制(1MB, 可通过setter调整)
             static constexpr size_t kDefaultMaxMsgLen = 1024 * 1024;
 
             LengthCodec() : m_maxMsgLen(kDefaultMaxMsgLen) {}
@@ -131,9 +145,9 @@ namespace handy
                 return new LengthCodec(m_maxMsgLen);
             }
         private:
-            // 检查魔法字的合法性
+            /// 检查魔法字的合法性
             bool checkMagic(const char* header) const;
-            // 单条消息最大长度（线程安全访问）
+            ///单条消息最大长度（线程安全访问）
             size_t m_maxMsgLen;
 
             /**

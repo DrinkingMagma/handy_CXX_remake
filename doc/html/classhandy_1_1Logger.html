@@ -1,0 +1,862 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy::Logger类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehandy.html">handy</a></li><li class="navelem"><a class="el" href="classhandy_1_1Logger.html">Logger</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classhandy_1_1Logger-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">handy::Logger类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="logger_8h_source.html">logger.h</a>&gt;</code></p>
+<div class="dynheader">
+类 handy::Logger 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classhandy_1_1Logger.png" usemap="#handy::Logger_map" alt=""/>
+  <map id="handy::Logger_map" name="handy::Logger_map">
+<area href="classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="handy::NonCopyAble" shape="rect" coords="0,0,132,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a3a39bad8a841801bbeb753a438ed28fe"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a> { <br/>
+&#160;&#160;<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">LFATAL</a> = 0, 
+<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9">LERROR</a>, 
+<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feafb04814efeb951b90eedacbcd07cf380">LWARN</a>, 
+<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea4f00f764b4a17f851be1f0cb27095785">LINFO</a>, 
+<br/>
+&#160;&#160;<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea74b1654c774e5d2f163a062015ca946b">LDEBUG</a>, 
+<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea7a1f0ddc23197504d1a80423b27440bf">LTRACE</a>, 
+<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feaa75393110bebc5ac3fc0ff540f446352">LALL</a>
+<br/>
+ }</td></tr>
+<tr class="separator:a3a39bad8a841801bbeb753a438ed28fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aca4c23699a7637f71f3634e70be6d2b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#aca4c23699a7637f71f3634e70be6d2b7">~Logger</a> () noexcept</td></tr>
+<tr class="separator:aca4c23699a7637f71f3634e70be6d2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d61757bf1d37101021e3bdc63e78c6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a6d61757bf1d37101021e3bdc63e78c6d">logv</a> (int level, const char *file, int line, const char *func, const char *fmt,...)</td></tr>
+<tr class="memdesc:a6d61757bf1d37101021e3bdc63e78c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志记录函数  <a href="#a6d61757bf1d37101021e3bdc63e78c6d">更多...</a><br/></td></tr>
+<tr class="separator:a6d61757bf1d37101021e3bdc63e78c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad096978e08b310f1456742540e746893"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893">setLogFileName</a> (const std::string &amp;logFileName)</td></tr>
+<tr class="separator:ad096978e08b310f1456742540e746893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a166a12af568a87281a0f5953c3b7dc36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36">setLogLevel</a> (const std::string &amp;logLevel)</td></tr>
+<tr class="separator:a166a12af568a87281a0f5953c3b7dc36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc02c4c84b4b6d03f8c6f7ac8e59de3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#acc02c4c84b4b6d03f8c6f7ac8e59de3b">setLogLevel</a> (<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a> logLevel)</td></tr>
+<tr class="separator:acc02c4c84b4b6d03f8c6f7ac8e59de3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f4e1e61393d825d7168dffad85aa48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#ab1f4e1e61393d825d7168dffad85aa48">getLogLevel</a> () const </td></tr>
+<tr class="separator:ab1f4e1e61393d825d7168dffad85aa48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53cc55dadce00c792481c454764e0ccf"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a53cc55dadce00c792481c454764e0ccf">getLogLevelString</a> (<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a> logLevel) const </td></tr>
+<tr class="separator:a53cc55dadce00c792481c454764e0ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bef2bb7d52686e606c2a23508dba57d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a2bef2bb7d52686e606c2a23508dba57d">adjustLogLevel</a> (int adjust)</td></tr>
+<tr class="separator:a2bef2bb7d52686e606c2a23508dba57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94fde02defaba254926968d6348aa019"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a94fde02defaba254926968d6348aa019">setLogRotateInterval</a> (long rotateInterval_s)</td></tr>
+<tr class="separator:a94fde02defaba254926968d6348aa019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a54d9a8c6c8cc4bb72c10958956b75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a19a54d9a8c6c8cc4bb72c10958956b75">setMaxLogFileSize</a> (size_t maxLogFileSize_MB)</td></tr>
+<tr class="separator:a19a54d9a8c6c8cc4bb72c10958956b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:aa28b152799dd56d5fea997e699996725"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classhandy_1_1Logger.html">Logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">getInstance</a> ()</td></tr>
+<tr class="separator:aa28b152799dd56d5fea997e699996725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ac4560f0b630dc778c846681e01290f9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#ac4560f0b630dc778c846681e01290f9f">Logger</a> ()</td></tr>
+<tr class="separator:ac4560f0b630dc778c846681e01290f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1869d64a7b809063a5c777b2eddeb70e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a1869d64a7b809063a5c777b2eddeb70e">closeLogFile</a> ()</td></tr>
+<tr class="separator:a1869d64a7b809063a5c777b2eddeb70e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a434ac0f25b7add4d9276da50167e2117"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a434ac0f25b7add4d9276da50167e2117">checkAndRotateLogFile</a> ()</td></tr>
+<tr class="separator:a434ac0f25b7add4d9276da50167e2117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6148b17e2785e4335d9f92790bbce71d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a6148b17e2785e4335d9f92790bbce71d">rotateLogFile</a> ()</td></tr>
+<tr class="separator:a6148b17e2785e4335d9f92790bbce71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f5d1fab0756d1df799e204499faa012"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a1f5d1fab0756d1df799e204499faa012">getCurrentTimeStamp</a> () const </td></tr>
+<tr class="separator:a1f5d1fab0756d1df799e204499faa012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classhandy_1_1NonCopyAble"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classhandy_1_1NonCopyAble')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classhandy_1_1NonCopyAble.html">handy::NonCopyAble</a></td></tr>
+<tr class="memitem:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#af559df4e2ebd8b9e54566633b7bf9855">NonCopyAble</a> ()=default</td></tr>
+<tr class="separator:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#acd1d67f20f33c3f91b64262eed41ef69">~NonCopyAble</a> () noexcept=default</td></tr>
+<tr class="separator:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a281e6b5825279cf9c60cf3bda6d5d23a">NonCopyAble</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a0a3dfd5848777f831e337b3a67b749c8">operator=</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a59f29256ac90ab3415d6fd2028bfd03f">NonCopyAble</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#afb79661bb6df7f5381340e4d3337eaf6">operator=</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ab50185c5a1386db51caf7c2a06069c5c"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#ab50185c5a1386db51caf7c2a06069c5c">m_fd</a></td></tr>
+<tr class="separator:ab50185c5a1386db51caf7c2a06069c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd48171908551371f299e063ca6ba683"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#acd48171908551371f299e063ca6ba683">m_level</a></td></tr>
+<tr class="separator:acd48171908551371f299e063ca6ba683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ac5aca5c44756130291fa6aea3a269d"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a3ac5aca5c44756130291fa6aea3a269d">m_lastRotateTime</a></td></tr>
+<tr class="separator:a3ac5aca5c44756130291fa6aea3a269d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35aa468b7dd613de6bb9e3b5dfebb2e4"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a35aa468b7dd613de6bb9e3b5dfebb2e4">m_realRotateTime</a></td></tr>
+<tr class="separator:a35aa468b7dd613de6bb9e3b5dfebb2e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac09a0ea26562cc4b464078801b31e6a7"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#ac09a0ea26562cc4b464078801b31e6a7">m_rotateInterval</a></td></tr>
+<tr class="separator:ac09a0ea26562cc4b464078801b31e6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac42cd9ea8b7c2565e16b541a33a33519"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#ac42cd9ea8b7c2565e16b541a33a33519">m_maxLogFileSize</a></td></tr>
+<tr class="separator:ac42cd9ea8b7c2565e16b541a33a33519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aaf476fc62153a8341866b5fd866c7f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a8aaf476fc62153a8341866b5fd866c7f">m_currentFileSize</a></td></tr>
+<tr class="separator:a8aaf476fc62153a8341866b5fd866c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab52e54f701f163be1606cd6c94c5dc8a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#ab52e54f701f163be1606cd6c94c5dc8a">m_logFileName</a></td></tr>
+<tr class="separator:ab52e54f701f163be1606cd6c94c5dc8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb63c17a7b985300d4f2d28ff6b67b99"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#afb63c17a7b985300d4f2d28ff6b67b99">m_mutex</a></td></tr>
+<tr class="separator:afb63c17a7b985300d4f2d28ff6b67b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a1f768923e0442e410191ba9c980096a2"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html#a1f768923e0442e410191ba9c980096a2">m_levelStrings</a> []</td></tr>
+<tr class="separator:a1f768923e0442e410191ba9c980096a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员枚举类型说明</h2>
+<a class="anchor" id="a3a39bad8a841801bbeb753a438ed28fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">handy::Logger::LogLevel</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501"></a>LFATAL</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9"></a>LERROR</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a3a39bad8a841801bbeb753a438ed28feafb04814efeb951b90eedacbcd07cf380"></a>LWARN</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a3a39bad8a841801bbeb753a438ed28fea4f00f764b4a17f851be1f0cb27095785"></a>LINFO</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a3a39bad8a841801bbeb753a438ed28fea74b1654c774e5d2f163a062015ca946b"></a>LDEBUG</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a3a39bad8a841801bbeb753a438ed28fea7a1f0ddc23197504d1a80423b27440bf"></a>LTRACE</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a3a39bad8a841801bbeb753a438ed28feaa75393110bebc5ac3fc0ff540f446352"></a>LALL</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="aca4c23699a7637f71f3634e70be6d2b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::Logger::~Logger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac4560f0b630dc778c846681e01290f9f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::Logger::Logger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a2bef2bb7d52686e606c2a23508dba57d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Logger::adjustLogLevel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>adjust</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a434ac0f25b7add4d9276da50167e2117"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Logger::checkAndRotateLogFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1869d64a7b809063a5c777b2eddeb70e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Logger::closeLogFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1f5d1fab0756d1df799e204499faa012"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t handy::Logger::getCurrentTimeStamp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa28b152799dd56d5fea997e699996725"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classhandy_1_1Logger.html">Logger</a>&amp; handy::Logger::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab1f4e1e61393d825d7168dffad85aa48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a> handy::Logger::getLogLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a53cc55dadce00c792481c454764e0ccf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* handy::Logger::getLogLevelString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a>&#160;</td>
+          <td class="paramname"><em>logLevel</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6d61757bf1d37101021e3bdc63e78c6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Logger::logv </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>日志记录函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>日志级别 </td></tr>
+    <tr><td class="paramname">file</td><td>日志文件名 </td></tr>
+    <tr><td class="paramname">line</td><td>日志行号 </td></tr>
+    <tr><td class="paramname">func</td><td>日志函数名 </td></tr>
+    <tr><td class="paramname">fmt</td><td>日志格式化字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>仅当日志级别小于等于当前日志系统级别时，记录日志 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6148b17e2785e4335d9f92790bbce71d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool handy::Logger::rotateLogFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad096978e08b310f1456742540e746893"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Logger::setLogFileName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>logFileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a166a12af568a87281a0f5953c3b7dc36"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Logger::setLogLevel </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>logLevel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acc02c4c84b4b6d03f8c6f7ac8e59de3b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Logger::setLogLevel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a>&#160;</td>
+          <td class="paramname"><em>logLevel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a94fde02defaba254926968d6348aa019"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Logger::setLogRotateInterval </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>rotateInterval_s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a19a54d9a8c6c8cc4bb72c10958956b75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Logger::setMaxLogFileSize </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>maxLogFileSize_MB</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a8aaf476fc62153a8341866b5fd866c7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t handy::Logger::m_currentFileSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab50185c5a1386db51caf7c2a06069c5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* handy::Logger::m_fd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3ac5aca5c44756130291fa6aea3a269d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t handy::Logger::m_lastRotateTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acd48171908551371f299e063ca6ba683"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a>&gt; handy::Logger::m_level</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1f768923e0442e410191ba9c980096a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * handy::Logger::m_levelStrings</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= </div>
+<div class="line">    {</div>
+<div class="line">        <span class="stringliteral">&quot;FATAL&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;ERROR&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;WARN&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;INFO&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;DEBUG&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;TRACE&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;ALL&quot;</span></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab52e54f701f163be1606cd6c94c5dc8a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string handy::Logger::m_logFileName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac42cd9ea8b7c2565e16b541a33a33519"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t handy::Logger::m_maxLogFileSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afb63c17a7b985300d4f2d28ff6b67b99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex handy::Logger::m_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a35aa468b7dd613de6bb9e3b5dfebb2e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;int64_t&gt; handy::Logger::m_realRotateTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac09a0ea26562cc4b464078801b31e6a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long handy::Logger::m_rotateInterval</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>handy/<a class="el" href="logger_8h_source.html">logger.h</a></li>
+<li>handy/<a class="el" href="logger_8cpp.html">logger.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

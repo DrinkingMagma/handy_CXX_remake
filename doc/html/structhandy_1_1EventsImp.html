@@ -1,0 +1,848 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy::EventsImp结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehandy.html">handy</a></li><li class="navelem"><a class="el" href="structhandy_1_1EventsImp.html">EventsImp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structhandy_1_1EventsImp-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">handy::EventsImp结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>事件派发器内部实现结构体（Pimpl模式，隐藏EventBase的具体逻辑）  
+ <a href="structhandy_1_1EventsImp.html#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a09de5abce0a3e1bb6a33b817b4d0d6ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a09de5abce0a3e1bb6a33b817b4d0d6ea">EventsImp</a> (<a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *base, int taskCap)</td></tr>
+<tr class="memdesc:a09de5abce0a3e1bb6a33b817b4d0d6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数：初始化时间派发器内部实现  <a href="#a09de5abce0a3e1bb6a33b817b4d0d6ea">更多...</a><br/></td></tr>
+<tr class="separator:a09de5abce0a3e1bb6a33b817b4d0d6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad70dbc2f490812a4e2b11daf6b82c63f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#ad70dbc2f490812a4e2b11daf6b82c63f">~EventsImp</a> ()</td></tr>
+<tr class="memdesc:ad70dbc2f490812a4e2b11daf6b82c63f"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数：释放资源  <a href="#ad70dbc2f490812a4e2b11daf6b82c63f">更多...</a><br/></td></tr>
+<tr class="separator:ad70dbc2f490812a4e2b11daf6b82c63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af27daa347a10699df33e7173f2c36e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a8af27daa347a10699df33e7173f2c36e">init</a> ()</td></tr>
+<tr class="memdesc:a8af27daa347a10699df33e7173f2c36e"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化：注册唤醒管道的读事件  <a href="#a8af27daa347a10699df33e7173f2c36e">更多...</a><br/></td></tr>
+<tr class="separator:a8af27daa347a10699df33e7173f2c36e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a91826e5900bd17f506842c32b1a43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a41a91826e5900bd17f506842c32b1a43">callIdles</a> ()</td></tr>
+<tr class="memdesc:a41a91826e5900bd17f506842c32b1a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">定期见检查所有注册的空闲连接，处理空闲连接超时（遍历所有空闲连接，触发超时回调）  <a href="#a41a91826e5900bd17f506842c32b1a43">更多...</a><br/></td></tr>
+<tr class="separator:a41a91826e5900bd17f506842c32b1a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34ec69a53f5a40365df7c686c28334e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#af0934ac351162af463dce604c988ba31">IdleId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a34ec69a53f5a40365df7c686c28334e8">registerIdle</a> (int idle_s, const <a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a> &amp;conn, const <a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">TcpCallBack</a> &amp;cb)</td></tr>
+<tr class="memdesc:a34ec69a53f5a40365df7c686c28334e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册空闲连接（加入空闲连接管理）  <a href="#a34ec69a53f5a40365df7c686c28334e8">更多...</a><br/></td></tr>
+<tr class="separator:a34ec69a53f5a40365df7c686c28334e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03cc7fc06a2e93ce1a4f7f4ac25e8efd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a03cc7fc06a2e93ce1a4f7f4ac25e8efd">unregisterIdle</a> (const <a class="el" href="namespacehandy.html#af0934ac351162af463dce604c988ba31">IdleId</a> &amp;idleIdPtr)</td></tr>
+<tr class="memdesc:a03cc7fc06a2e93ce1a4f7f4ac25e8efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">注销空闲连接（从空闲管理中移除）  <a href="#a03cc7fc06a2e93ce1a4f7f4ac25e8efd">更多...</a><br/></td></tr>
+<tr class="separator:a03cc7fc06a2e93ce1a4f7f4ac25e8efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab12568ed9e6c3fb1a4a10037297a6ff2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#ab12568ed9e6c3fb1a4a10037297a6ff2">updateIdle</a> (const <a class="el" href="namespacehandy.html#af0934ac351162af463dce604c988ba31">IdleId</a> &amp;idleIdPtr)</td></tr>
+<tr class="memdesc:ab12568ed9e6c3fb1a4a10037297a6ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新空闲连接状态（重置最后活跃时间）  <a href="#ab12568ed9e6c3fb1a4a10037297a6ff2">更多...</a><br/></td></tr>
+<tr class="separator:ab12568ed9e6c3fb1a4a10037297a6ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc6fdbcb276b06c4e9517bb1b649a127"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#afc6fdbcb276b06c4e9517bb1b649a127">handleTimeoutTimers</a> ()</td></tr>
+<tr class="memdesc:afc6fdbcb276b06c4e9517bb1b649a127"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理定时器超时（执行所有已超时的定时器任务）  <a href="#afc6fdbcb276b06c4e9517bb1b649a127">更多...</a><br/></td></tr>
+<tr class="separator:afc6fdbcb276b06c4e9517bb1b649a127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c79736764ed378b600e1c099d8cd92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a84c79736764ed378b600e1c099d8cd92">refreshNearestTimer</a> (const <a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a> *tip=nullptr)</td></tr>
+<tr class="memdesc:a84c79736764ed378b600e1c099d8cd92"><td class="mdescLeft">&#160;</td><td class="mdescRight">刷新下一个定时器的超时时间  <a href="#a84c79736764ed378b600e1c099d8cd92">更多...</a><br/></td></tr>
+<tr class="separator:a84c79736764ed378b600e1c099d8cd92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37e12b4f4832da6ef4f72b77297cfdce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a37e12b4f4832da6ef4f72b77297cfdce">repeatableTimeout</a> (<a class="el" href="structhandy_1_1TimerRepeatable.html">TimerRepeatable</a> *tr)</td></tr>
+<tr class="memdesc:a37e12b4f4832da6ef4f72b77297cfdce"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理可重复定时器超时（更新时间并重新注册）  <a href="#a37e12b4f4832da6ef4f72b77297cfdce">更多...</a><br/></td></tr>
+<tr class="separator:a37e12b4f4832da6ef4f72b77297cfdce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae92807ce64f0672176a81a1124e5f7f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#ae92807ce64f0672176a81a1124e5f7f7">cancel</a> (<a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a> timerIdPair)</td></tr>
+<tr class="memdesc:ae92807ce64f0672176a81a1124e5f7f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">取消定时器（支持一次性/周期性定时器）  <a href="#ae92807ce64f0672176a81a1124e5f7f7">更多...</a><br/></td></tr>
+<tr class="separator:ae92807ce64f0672176a81a1124e5f7f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0617b5f315fbbc2cd5cfccebc3068fde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a0617b5f315fbbc2cd5cfccebc3068fde">runAt</a> (int64_t timestamp_ms, <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &amp;&amp;task, int64_t interval_ms)</td></tr>
+<tr class="memdesc:a0617b5f315fbbc2cd5cfccebc3068fde"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册定时器（支持一次性/周期性定时器）  <a href="#a0617b5f315fbbc2cd5cfccebc3068fde">更多...</a><br/></td></tr>
+<tr class="separator:a0617b5f315fbbc2cd5cfccebc3068fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b35d8b596052b4487fd5e47e1c66409"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a0b35d8b596052b4487fd5e47e1c66409">loop</a> ()</td></tr>
+<tr class="memdesc:a0b35d8b596052b4487fd5e47e1c66409"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动事件循环（阻塞，直到next()被调用）  <a href="#a0b35d8b596052b4487fd5e47e1c66409">更多...</a><br/></td></tr>
+<tr class="separator:a0b35d8b596052b4487fd5e47e1c66409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba2c9913e545d04933cc85974d4219b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#abba2c9913e545d04933cc85974d4219b">loopOnce</a> (int waitTime_ms)</td></tr>
+<tr class="memdesc:abba2c9913e545d04933cc85974d4219b"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行一次事件循环  <a href="#abba2c9913e545d04933cc85974d4219b">更多...</a><br/></td></tr>
+<tr class="separator:abba2c9913e545d04933cc85974d4219b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92a7beecb8df9295cf2a0a0fd90d39dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a92a7beecb8df9295cf2a0a0fd90d39dd">wakeup</a> ()</td></tr>
+<tr class="memdesc:a92a7beecb8df9295cf2a0a0fd90d39dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">唤醒事件循环（向唤醒管道中写入数据）  <a href="#a92a7beecb8df9295cf2a0a0fd90d39dd">更多...</a><br/></td></tr>
+<tr class="separator:a92a7beecb8df9295cf2a0a0fd90d39dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a83b705842cd70060c4d9a3a00eb664ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1PollerBase.html">PollerBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a83b705842cd70060c4d9a3a00eb664ff">m_poller</a></td></tr>
+<tr class="separator:a83b705842cd70060c4d9a3a00eb664ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acabc8339f085499357f2e88ef27fdf6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#acabc8339f085499357f2e88ef27fdf6d">m_base</a></td></tr>
+<tr class="separator:acabc8339f085499357f2e88ef27fdf6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc84095c0704aeccab4f3b584ec3b06"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a4cc84095c0704aeccab4f3b584ec3b06">m_exit</a></td></tr>
+<tr class="separator:a4cc84095c0704aeccab4f3b584ec3b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f6b9920726c68be935880211ec4f1db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a7f6b9920726c68be935880211ec4f1db">m_wakeupFds</a> [2]</td></tr>
+<tr class="separator:a7f6b9920726c68be935880211ec4f1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e0acc756aa32becc7a1b647fb92c5a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a8e0acc756aa32becc7a1b647fb92c5a1">m_nextTimeout_ms</a></td></tr>
+<tr class="separator:a8e0acc756aa32becc7a1b647fb92c5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab06b7e3ab442dba24ba5497ccf4f2b95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a>&lt; <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#ab06b7e3ab442dba24ba5497ccf4f2b95">m_tasks</a></td></tr>
+<tr class="separator:ab06b7e3ab442dba24ba5497ccf4f2b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af815c2be8223301c898e503346691f82"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a>, <br class="typebreak"/>
+<a class="el" href="structhandy_1_1TimerRepeatable.html">TimerRepeatable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#af815c2be8223301c898e503346691f82">m_timerReps</a></td></tr>
+<tr class="separator:af815c2be8223301c898e503346691f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b26fc9d80a1b36f9fa0a29867a9ae3a"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a>, <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a3b26fc9d80a1b36f9fa0a29867a9ae3a">m_timers</a></td></tr>
+<tr class="separator:a3b26fc9d80a1b36f9fa0a29867a9ae3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00fe1dbf2eb4944c73871eb7fa886609"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a00fe1dbf2eb4944c73871eb7fa886609">m_timerSeq</a></td></tr>
+<tr class="separator:a00fe1dbf2eb4944c73871eb7fa886609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18ac9c804376f2893751965034e8a18f"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, std::list<br class="typebreak"/>
+&lt; <a class="el" href="structhandy_1_1IdleNode.html">IdleNode</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a18ac9c804376f2893751965034e8a18f">m_idleConns</a></td></tr>
+<tr class="separator:a18ac9c804376f2893751965034e8a18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb658e4f7f94f08844bd93d8ffa986d6"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#abb658e4f7f94f08844bd93d8ffa986d6">m_reconnectConns</a></td></tr>
+<tr class="separator:abb658e4f7f94f08844bd93d8ffa986d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b5fd6534643450c2fa2811ae758a623"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a8b5fd6534643450c2fa2811ae758a623">m_idleEnabled</a></td></tr>
+<tr class="separator:a8b5fd6534643450c2fa2811ae758a623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a766df532a17561580c05fa57382c9500"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a766df532a17561580c05fa57382c9500">m_reconnectMutex</a></td></tr>
+<tr class="separator:a766df532a17561580c05fa57382c9500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>事件派发器内部实现结构体（Pimpl模式，隐藏EventBase的具体逻辑） </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a09de5abce0a3e1bb6a33b817b4d0d6ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::EventsImp::EventsImp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>taskCap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数：初始化时间派发器内部实现 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">base</td><td>关联的EventBase对象（非空） </td></tr>
+    <tr><td class="paramname">taskCap</td><td>异步任务队列容量（0： 无容量限制） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>唤醒管道创建失败 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad70dbc2f490812a4e2b11daf6b82c63f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::EventsImp::~EventsImp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构函数：释放资源 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a41a91826e5900bd17f506842c32b1a43"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::EventsImp::callIdles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>定期见检查所有注册的空闲连接，处理空闲连接超时（遍历所有空闲连接，触发超时回调） </p>
+
+</div>
+</div>
+<a class="anchor" id="ae92807ce64f0672176a81a1124e5f7f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool handy::EventsImp::cancel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a>&#160;</td>
+          <td class="paramname"><em>timerIdPair</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>取消定时器（支持一次性/周期性定时器） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timerIdPair</td><td>要取消的定时器ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>bool true: 成功取消定时器，false: 定时器不存在 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afc6fdbcb276b06c4e9517bb1b649a127"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::EventsImp::handleTimeoutTimers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理定时器超时（执行所有已超时的定时器任务） </p>
+
+</div>
+</div>
+<a class="anchor" id="a8af27daa347a10699df33e7173f2c36e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::EventsImp::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化：注册唤醒管道的读事件 </p>
+<p>创建唤醒管道的Channel，处理异步任务投递 </p>
+
+</div>
+</div>
+<a class="anchor" id="a0b35d8b596052b4487fd5e47e1c66409"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::EventsImp::loop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动事件循环（阻塞，直到next()被调用） </p>
+
+</div>
+</div>
+<a class="anchor" id="abba2c9913e545d04933cc85974d4219b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::EventsImp::loopOnce </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>waitTime_ms</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>执行一次事件循环 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">waitTime_ms</td><td>最大等待时间（毫秒） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a84c79736764ed378b600e1c099d8cd92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::EventsImp::refreshNearestTimer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a> *&#160;</td>
+          <td class="paramname"><em>tip</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>刷新下一个定时器的超时时间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tip</td><td>可选参数：新添加的定时器ID，优化刷新逻辑 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a34ec69a53f5a40365df7c686c28334e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacehandy.html#af0934ac351162af463dce604c988ba31">IdleId</a> handy::EventsImp::registerIdle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idle_s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>conn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">TcpCallBack</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册空闲连接（加入空闲连接管理） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idle_s</td><td>空闲超时时间（单位：秒） </td></tr>
+    <tr><td class="paramname">conn</td><td>要管理的TCP连接（非空） </td></tr>
+    <tr><td class="paramname">cb</td><td>空闲超时回调（非空） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>IdleId 空闲连接ID的智能指针（用于后续更新/注销） </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a37e12b4f4832da6ef4f72b77297cfdce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::EventsImp::repeatableTimeout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhandy_1_1TimerRepeatable.html">TimerRepeatable</a> *&#160;</td>
+          <td class="paramname"><em>tr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理可重复定时器超时（更新时间并重新注册） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tr</td><td>可重复器定时器ID指针（非空，需确保在m_timerReps中存在） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0617b5f315fbbc2cd5cfccebc3068fde"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a> handy::EventsImp::runAt </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>timestamp_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>task</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>interval_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册定时器（支持一次性/周期性定时器） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timestamp_ms</td><td>定时器超时时间戳（毫秒） </td></tr>
+    <tr><td class="paramname">task</td><td>定时器回调函数（非空） </td></tr>
+    <tr><td class="paramname">interval_ms</td><td>定时器间隔时间戳（毫秒；0：一次性定时器，&gt;0：周期性定时器） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>TimerId 定时器ID（事件循环已退出时返回无效的定时器ID） </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a03cc7fc06a2e93ce1a4f7f4ac25e8efd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::EventsImp::unregisterIdle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacehandy.html#af0934ac351162af463dce604c988ba31">IdleId</a> &amp;&#160;</td>
+          <td class="paramname"><em>idleIdPtr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注销空闲连接（从空闲管理中移除） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idleIdPtr</td><td>要注销的空闲连接ID指针（非空） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab12568ed9e6c3fb1a4a10037297a6ff2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::EventsImp::updateIdle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacehandy.html#af0934ac351162af463dce604c988ba31">IdleId</a> &amp;&#160;</td>
+          <td class="paramname"><em>idleIdPtr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新空闲连接状态（重置最后活跃时间） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idleIdPtr</td><td>要更新的空闲连接ID指针（非空） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>更新后会将连接放入空闲连接列表的末尾 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a92a7beecb8df9295cf2a0a0fd90d39dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::EventsImp::wakeup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>唤醒事件循环（向唤醒管道中写入数据） </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="acabc8339f085499357f2e88ef27fdf6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a>* handy::EventsImp::m_base</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4cc84095c0704aeccab4f3b584ec3b06"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; handy::EventsImp::m_exit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a18ac9c804376f2893751965034e8a18f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;int, std::list&lt;<a class="el" href="structhandy_1_1IdleNode.html">IdleNode</a>&gt; &gt; handy::EventsImp::m_idleConns</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8b5fd6534643450c2fa2811ae758a623"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool handy::EventsImp::m_idleEnabled</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8e0acc756aa32becc7a1b647fb92c5a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int handy::EventsImp::m_nextTimeout_ms</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a83b705842cd70060c4d9a3a00eb664ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1PollerBase.html">PollerBase</a>* handy::EventsImp::m_poller</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abb658e4f7f94f08844bd93d8ffa986d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;<a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a>&gt; handy::EventsImp::m_reconnectConns</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a766df532a17561580c05fa57382c9500"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex handy::EventsImp::m_reconnectMutex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab06b7e3ab442dba24ba5497ccf4f2b95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a>&lt;<a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a>&gt; handy::EventsImp::m_tasks</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af815c2be8223301c898e503346691f82"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a>, <a class="el" href="structhandy_1_1TimerRepeatable.html">TimerRepeatable</a>&gt; handy::EventsImp::m_timerReps</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3b26fc9d80a1b36f9fa0a29867a9ae3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a>, <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a>&gt; handy::EventsImp::m_timers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a00fe1dbf2eb4944c73871eb7fa886609"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;int64_t&gt; handy::EventsImp::m_timerSeq</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7f6b9920726c68be935880211ec4f1db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int handy::EventsImp::m_wakeupFds[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>handy/<a class="el" href="event__base_8cpp.html">event_base.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

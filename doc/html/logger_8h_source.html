@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy/logger.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_32ffdd1374fa2f424904bdef8ac66f3e.html">handy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">logger.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="logger_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="non__copy__able_8h.html">non_copy_able.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// 日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifdef NDEBUG</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="comment">// 若当前为发布模式（Release）</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// 只有当当前日志级别小于等于日志系统设置的级别时，才进行日志记录 </span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define HLOG(level, fmt, ...)                                                               \</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">    do {                                                                                    \</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">        if(level &lt;= handy::Logger::getInstance().getLogLevel())                             \</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">        {                                                                                   \</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">            handy::Logger::getInstance().logv(level, __FILE__, __LINE__, __func__, fmt, ##__VA_ARGS__);      \</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">        }                                                                                   \</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">    } while (0)</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"></span><span class="comment">// 若当前为调试模式（Debug）</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// 用日志格式字符串初始化一个静态常量，让编译器在编译器检查日志格式字符串的语法有效性</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// static const char* checkFmt = fmt: 仅用格式字符串初始化，不含变量</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// 避免编译器警告&quot;未使用的变量checkFmt&quot;，将其强制转换为void，表示已使用</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">   24</a></span>&#160;<span class="preprocessor">#define HLOG(level, fmt, ...)                                                                    \</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">    do {                                                                                    \</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">        if(level &lt;= handy::Logger::getInstance().getLogLevel())                             \</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">        {                                                                                   \</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">            static const char* checkFmt = fmt;                                              \</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">            (void)checkFmt;                                                                 \</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">            handy::Logger::getInstance().logv(level, __FILE__, __LINE__, __func__, fmt, ##__VA_ARGS__);      \</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">        }                                                                                   \</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">    } while (0)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// 简化日志宏：直接传递 level + fmt + 可变参数（与 HLOG 格式匹配）</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">   36</a></span>&#160;<span class="preprocessor">#define TRACE(fmt, ...) HLOG(handy::Logger::LTRACE, fmt, ##__VA_ARGS__)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">   37</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DEBUG(fmt, ...) HLOG(handy::Logger::LDEBUG, fmt, ##__VA_ARGS__)</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">   38</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define INFO(fmt, ...) HLOG(handy::Logger::LINFO, fmt, ##__VA_ARGS__)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="logger_8h.html#ac4cebd204831cf85d2c6e9d03b8d5bbb">   39</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define WARN(fmt, ...) HLOG(handy::Logger::LWARN, fmt, ##__VA_ARGS__)</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">   40</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ERROR(fmt, ...) HLOG(handy::Logger::LERROR, fmt, ##__VA_ARGS__)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor"></span><span class="comment">// std::abort()：终止程序运行</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="logger_8h.html#a053d6037d543b84ce59308ce71d15cd1">   42</a></span>&#160;<span class="preprocessor">#define FATAL(fmt, ...) do { HLOG(handy::Logger::LFATAL, fmt, ##__VA_ARGS__); std::abort(); } while (0)</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// 条件日志宏：在特定条件满足时自动记录并执行相应的操作</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="logger_8h.html#aaad6a85aecfc4d2bc60259e986af4581">   45</a></span>&#160;<span class="preprocessor">#define  FATAL_IF(b, ...)                                   \</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">    do {                                                    \</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">        if((b)) {                                           \</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">            HLOG(handy::Logger::LFATAL, __VA_ARGS__);       \</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">            std::abort();                                   \</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">        }                                                   \</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">    } while(0)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor"></span>    </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="logger_8h.html#a78559860b0d897def272733a90440e52">   53</a></span>&#160;<span class="preprocessor">#define  CHECK(b, ...)                                      \</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">    do {                                                    \</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">        if(!(b)) {                                          \</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">            HLOG(handy::Logger::LFATAL, &quot;Check failed: &quot; __VA_ARGS__);       \</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">            std::abort();                                   \</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">        }                                                   \</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">    } while(0)</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="logger_8h.html#affeaaefc2a9407dc7577f6cf3f8e0d15">   61</a></span>&#160;<span class="preprocessor">#define  EXIT_IF(b, ...)                                    \</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">    do {                                                    \</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">        if((b)) {                                           \</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">            HLOG(handy::Logger::LERROR, __VA_ARGS__);       \</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">            std::exit(1);                                   \</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">        }                                                   \</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">    } while(0)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">// 日志级别和文件设置宏</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="logger_8h.html#a3b2f5c234822e4ed18847adc529a6853">   70</a></span>&#160;<span class="preprocessor">#define SET_LOG_LEVEL(l) handy::Logger::getInstance().setLogLevel(l)</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="logger_8h.html#ae920f7f94cd053df1aadfc2bcb40b0a2">   71</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SET_LOG_FILE(f) handy::Logger::getInstance().setLogFileName(f)</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">namespace </span>handy</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html">   75</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classhandy_1_1Logger.html">Logger</a> : <span class="keyword">private</span> <a class="code" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="comment">// 日志级别枚举</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">   79</a></span>&#160;            <span class="keyword">enum</span> <a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            {</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">   81</a></span>&#160;                <a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">LFATAL</a> = 0,</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9">   82</a></span>&#160;                <a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9">LERROR</a>,</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feafb04814efeb951b90eedacbcd07cf380">   83</a></span>&#160;                <a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feafb04814efeb951b90eedacbcd07cf380">LWARN</a>,</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea4f00f764b4a17f851be1f0cb27095785">   84</a></span>&#160;                <a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea4f00f764b4a17f851be1f0cb27095785">LINFO</a>,</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea74b1654c774e5d2f163a062015ca946b">   85</a></span>&#160;                <a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea74b1654c774e5d2f163a062015ca946b">LDEBUG</a>,</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea7a1f0ddc23197504d1a80423b27440bf">   86</a></span>&#160;                <a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea7a1f0ddc23197504d1a80423b27440bf">LTRACE</a>,</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feaa75393110bebc5ac3fc0ff540f446352">   87</a></span>&#160;                <a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feaa75393110bebc5ac3fc0ff540f446352">LALL</a></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            };</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="comment">// 获取日志类的单例实例</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">   91</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="classhandy_1_1Logger.html">Logger</a>&amp; <a class="code" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">getInstance</a>()</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keyword">static</span> <a class="code" href="classhandy_1_1Logger.html">Logger</a> instance;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">// 析构函数</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#aca4c23699a7637f71f3634e70be6d2b7">   98</a></span>&#160;            <a class="code" href="classhandy_1_1Logger.html#aca4c23699a7637f71f3634e70be6d2b7">~Logger</a> () noexcept</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <a class="code" href="classhandy_1_1Logger.html#a1869d64a7b809063a5c777b2eddeb70e">closeLogFile</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;           <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1Logger.html#a6d61757bf1d37101021e3bdc63e78c6d">logv</a>(<span class="keywordtype">int</span> level, <span class="keyword">const</span> <span class="keywordtype">char</span>* file, <span class="keywordtype">int</span> line, <span class="keyword">const</span> <span class="keywordtype">char</span>* func, <span class="keyword">const</span> <span class="keywordtype">char</span>* fmt, ...);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="comment">// 设置日志文件名称</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893">setLogFileName</a>(<span class="keyword">const</span> std::string&amp; logFileName);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="comment">// 通过字符串形式（全小写）设置日志级别</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36">setLogLevel</a>(<span class="keyword">const</span> std::string&amp; logLevel);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="comment">// 通过LogLevel枚举形式设置日志级别</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#acc02c4c84b4b6d03f8c6f7ac8e59de3b">  121</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1Logger.html#acc02c4c84b4b6d03f8c6f7ac8e59de3b">setLogLevel</a>(<a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a> logLevel)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                std::lock_guard&lt;std::mutex&gt; lock(<a class="code" href="classhandy_1_1Logger.html#afb63c17a7b985300d4f2d28ff6b67b99">m_mutex</a>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                <a class="code" href="classhandy_1_1Logger.html#acd48171908551371f299e063ca6ba683">m_level</a> = std::min(<a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feaa75393110bebc5ac3fc0ff540f446352">LALL</a>, std::max(<a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">LFATAL</a>, logLevel));</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="comment">// 获取日志级别</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#ab1f4e1e61393d825d7168dffad85aa48">  128</a></span>&#160;            <a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a> <a class="code" href="classhandy_1_1Logger.html#ab1f4e1e61393d825d7168dffad85aa48">getLogLevel</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="classhandy_1_1Logger.html#acd48171908551371f299e063ca6ba683">m_level</a>.load(std::memory_order_relaxed);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="comment">// 获取日志级别对应的字符串表示</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a53cc55dadce00c792481c454764e0ccf">  134</a></span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classhandy_1_1Logger.html#a53cc55dadce00c792481c454764e0ccf">getLogLevelString</a>(<a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a> logLevel)<span class="keyword"> const </span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <span class="keywordflow">if</span>(logLevel &lt; LFATAL || logLevel &gt; <a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feaa75393110bebc5ac3fc0ff540f446352">LALL</a>)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;UNKNOWN LOG LEVEL&quot;</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="classhandy_1_1Logger.html#a1f768923e0442e410191ba9c980096a2">m_levelStrings</a>[logLevel];</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="comment">// 调整日志级别</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a2bef2bb7d52686e606c2a23508dba57d">  145</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1Logger.html#a2bef2bb7d52686e606c2a23508dba57d">adjustLogLevel</a>(<span class="keywordtype">int</span> adjust)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                std::lock_guard&lt;std::mutex&gt; lock(<a class="code" href="classhandy_1_1Logger.html#afb63c17a7b985300d4f2d28ff6b67b99">m_mutex</a>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a> newLogLevel = <span class="keyword">static_cast&lt;</span><a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">LogLevel</a><span class="keyword">&gt;</span>(<a class="code" href="classhandy_1_1Logger.html#acd48171908551371f299e063ca6ba683">m_level</a> + adjust);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                <a class="code" href="classhandy_1_1Logger.html#acd48171908551371f299e063ca6ba683">m_level</a> = std::min(<a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feaa75393110bebc5ac3fc0ff540f446352">LALL</a>, std::max(<a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">LFATAL</a>, newLogLevel));</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="comment">// 设置日志文件的轮转间隔（秒）</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="comment">// @note 轮转间隔至少1小时</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a94fde02defaba254926968d6348aa019">  154</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1Logger.html#a94fde02defaba254926968d6348aa019">setLogRotateInterval</a>(<span class="keywordtype">long</span> rotateInterval_s)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                std::lock_guard&lt;std::mutex&gt; lock(<a class="code" href="classhandy_1_1Logger.html#afb63c17a7b985300d4f2d28ff6b67b99">m_mutex</a>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                <span class="comment">// 轮转间隔至少1小时</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <a class="code" href="classhandy_1_1Logger.html#ac09a0ea26562cc4b464078801b31e6a7">m_rotateInterval</a> = std::max(3600L, rotateInterval_s);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="comment">// 设置日志文件大小限制（MB）</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a19a54d9a8c6c8cc4bb72c10958956b75">  162</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1Logger.html#a19a54d9a8c6c8cc4bb72c10958956b75">setMaxLogFileSize</a>(<span class="keywordtype">size_t</span> maxLogFileSize_MB)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                std::lock_guard&lt;std::mutex&gt; lock(<a class="code" href="classhandy_1_1Logger.html#afb63c17a7b985300d4f2d28ff6b67b99">m_mutex</a>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                <a class="code" href="classhandy_1_1Logger.html#ac42cd9ea8b7c2565e16b541a33a33519">m_maxLogFileSize</a> = maxLogFileSize_MB * 1024 * 1024;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="comment">// 构造函数</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#ac4560f0b630dc778c846681e01290f9f">  169</a></span>&#160;            <a class="code" href="classhandy_1_1Logger.html#ac4560f0b630dc778c846681e01290f9f">Logger</a>() : </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <a class="code" href="classhandy_1_1Logger.html#ab50185c5a1386db51caf7c2a06069c5c">m_fd</a>(stdout),</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                <a class="code" href="classhandy_1_1Logger.html#acd48171908551371f299e063ca6ba683">m_level</a>(<a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea4f00f764b4a17f851be1f0cb27095785">LINFO</a>),</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                <a class="code" href="classhandy_1_1Logger.html#a3ac5aca5c44756130291fa6aea3a269d">m_lastRotateTime</a>(0),</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <a class="code" href="classhandy_1_1Logger.html#a35aa468b7dd613de6bb9e3b5dfebb2e4">m_realRotateTime</a>(0),</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <a class="code" href="classhandy_1_1Logger.html#ac09a0ea26562cc4b464078801b31e6a7">m_rotateInterval</a>(86400L),   <span class="comment">// 默认轮转时间为一天</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                <a class="code" href="classhandy_1_1Logger.html#ac42cd9ea8b7c2565e16b541a33a33519">m_maxLogFileSize</a>(10 * 1024 * 1024), <span class="comment">// 默认日志文件大小限制为10MB</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <a class="code" href="classhandy_1_1Logger.html#a8aaf476fc62153a8341866b5fd866c7f">m_currentFileSize</a>(0)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                {}</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="comment">// 关闭日志文件</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a1869d64a7b809063a5c777b2eddeb70e">  180</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1Logger.html#a1869d64a7b809063a5c777b2eddeb70e">closeLogFile</a>()</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                std::lock_guard&lt;std::mutex&gt; lock(<a class="code" href="classhandy_1_1Logger.html#afb63c17a7b985300d4f2d28ff6b67b99">m_mutex</a>);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <span class="keywordflow">if</span>(<a class="code" href="classhandy_1_1Logger.html#ab50185c5a1386db51caf7c2a06069c5c">m_fd</a> != stdout &amp;&amp; <a class="code" href="classhandy_1_1Logger.html#ab50185c5a1386db51caf7c2a06069c5c">m_fd</a> != stderr)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    fclose(<a class="code" href="classhandy_1_1Logger.html#ab50185c5a1386db51caf7c2a06069c5c">m_fd</a>);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                    <a class="code" href="classhandy_1_1Logger.html#ab50185c5a1386db51caf7c2a06069c5c">m_fd</a> = stdout;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="comment">// 检查并进行日志轮转</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1Logger.html#a434ac0f25b7add4d9276da50167e2117">checkAndRotateLogFile</a>();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="comment">// 执行日志轮转</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classhandy_1_1Logger.html#a6148b17e2785e4335d9f92790bbce71d">rotateLogFile</a>();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="comment">// 获取当前时间戳（秒）</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a1f5d1fab0756d1df799e204499faa012">  197</a></span>&#160;            int64_t <a class="code" href="classhandy_1_1Logger.html#a1f5d1fab0756d1df799e204499faa012">getCurrentTimeStamp</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                <span class="keyword">auto</span> now = std::chrono::system_clock::now();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                <span class="keywordflow">return</span> std::chrono::duration_cast&lt;std::chrono::seconds&gt;(now.time_since_epoch()).count();</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="comment">// 日志级别对应字符串</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a1f768923e0442e410191ba9c980096a2">  204</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classhandy_1_1Logger.html#a1f768923e0442e410191ba9c980096a2">m_levelStrings</a>[];</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="comment">// 日志文件描述符</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#ab50185c5a1386db51caf7c2a06069c5c">  207</a></span>&#160;            FILE* <a class="code" href="classhandy_1_1Logger.html#ab50185c5a1386db51caf7c2a06069c5c">m_fd</a>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="comment">// 当前日志级别（原子类型确保线程安全）</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#acd48171908551371f299e063ca6ba683">  209</a></span>&#160;            std::atomic&lt;LogLevel&gt; <a class="code" href="classhandy_1_1Logger.html#acd48171908551371f299e063ca6ba683">m_level</a>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="comment">// 最后一次轮转时间（秒）</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a3ac5aca5c44756130291fa6aea3a269d">  211</a></span>&#160;            int64_t <a class="code" href="classhandy_1_1Logger.html#a3ac5aca5c44756130291fa6aea3a269d">m_lastRotateTime</a>;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="comment">// 当前轮转时间（秒）（原子类型确保线程安全）</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a35aa468b7dd613de6bb9e3b5dfebb2e4">  213</a></span>&#160;            std::atomic&lt;int64_t&gt; <a class="code" href="classhandy_1_1Logger.html#a35aa468b7dd613de6bb9e3b5dfebb2e4">m_realRotateTime</a>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="comment">// 轮转间隔（秒）</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#ac09a0ea26562cc4b464078801b31e6a7">  215</a></span>&#160;            <span class="keywordtype">long</span> <a class="code" href="classhandy_1_1Logger.html#ac09a0ea26562cc4b464078801b31e6a7">m_rotateInterval</a>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="comment">// 日志文件大小限制（字节）</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#ac42cd9ea8b7c2565e16b541a33a33519">  217</a></span>&#160;            <span class="keywordtype">size_t</span> <a class="code" href="classhandy_1_1Logger.html#ac42cd9ea8b7c2565e16b541a33a33519">m_maxLogFileSize</a>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="comment">// 当前日志文件大小（字节）</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#a8aaf476fc62153a8341866b5fd866c7f">  219</a></span>&#160;            <span class="keywordtype">size_t</span> <a class="code" href="classhandy_1_1Logger.html#a8aaf476fc62153a8341866b5fd866c7f">m_currentFileSize</a>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="comment">// 日志文件名</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#ab52e54f701f163be1606cd6c94c5dc8a">  221</a></span>&#160;            std::string <a class="code" href="classhandy_1_1Logger.html#ab52e54f701f163be1606cd6c94c5dc8a">m_logFileName</a>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="comment">// 互斥锁，确保线程安全</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="classhandy_1_1Logger.html#afb63c17a7b985300d4f2d28ff6b67b99">  223</a></span>&#160;            <span class="keyword">mutable</span> std::mutex <a class="code" href="classhandy_1_1Logger.html#afb63c17a7b985300d4f2d28ff6b67b99">m_mutex</a>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    };</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea74b1654c774e5d2f163a062015ca946b"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea74b1654c774e5d2f163a062015ca946b">handy::Logger::LDEBUG</a></div><div class="ttdef"><b>Definition:</b> logger.h:85</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fe"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe">handy::Logger::LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdef"><b>Definition:</b> logger.h:79</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_aca4c23699a7637f71f3634e70be6d2b7"><div class="ttname"><a href="classhandy_1_1Logger.html#aca4c23699a7637f71f3634e70be6d2b7">handy::Logger::~Logger</a></div><div class="ttdeci">~Logger() noexcept</div><div class="ttdef"><b>Definition:</b> logger.h:98</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a434ac0f25b7add4d9276da50167e2117"><div class="ttname"><a href="classhandy_1_1Logger.html#a434ac0f25b7add4d9276da50167e2117">handy::Logger::checkAndRotateLogFile</a></div><div class="ttdeci">void checkAndRotateLogFile()</div><div class="ttdef"><b>Definition:</b> logger.cpp:180</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_ab50185c5a1386db51caf7c2a06069c5c"><div class="ttname"><a href="classhandy_1_1Logger.html#ab50185c5a1386db51caf7c2a06069c5c">handy::Logger::m_fd</a></div><div class="ttdeci">FILE * m_fd</div><div class="ttdef"><b>Definition:</b> logger.h:207</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9">handy::Logger::LERROR</a></div><div class="ttdef"><b>Definition:</b> logger.h:82</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_ac4560f0b630dc778c846681e01290f9f"><div class="ttname"><a href="classhandy_1_1Logger.html#ac4560f0b630dc778c846681e01290f9f">handy::Logger::Logger</a></div><div class="ttdeci">Logger()</div><div class="ttdef"><b>Definition:</b> logger.h:169</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea4f00f764b4a17f851be1f0cb27095785"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea4f00f764b4a17f851be1f0cb27095785">handy::Logger::LINFO</a></div><div class="ttdef"><b>Definition:</b> logger.h:84</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_ab1f4e1e61393d825d7168dffad85aa48"><div class="ttname"><a href="classhandy_1_1Logger.html#ab1f4e1e61393d825d7168dffad85aa48">handy::Logger::getLogLevel</a></div><div class="ttdeci">LogLevel getLogLevel() const </div><div class="ttdef"><b>Definition:</b> logger.h:128</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a8aaf476fc62153a8341866b5fd866c7f"><div class="ttname"><a href="classhandy_1_1Logger.html#a8aaf476fc62153a8341866b5fd866c7f">handy::Logger::m_currentFileSize</a></div><div class="ttdeci">size_t m_currentFileSize</div><div class="ttdef"><b>Definition:</b> logger.h:219</div></div>
+<div class="ttc" id="classhandy_1_1NonCopyAble_html"><div class="ttname"><a href="classhandy_1_1NonCopyAble.html">handy::NonCopyAble</a></div><div class="ttdoc">禁止派生类对象的拷贝构造和拷贝赋值操作 </div><div class="ttdef"><b>Definition:</b> non_copy_able.h:9</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_aa28b152799dd56d5fea997e699996725"><div class="ttname"><a href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a></div><div class="ttdeci">static Logger &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> logger.h:91</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_ac42cd9ea8b7c2565e16b541a33a33519"><div class="ttname"><a href="classhandy_1_1Logger.html#ac42cd9ea8b7c2565e16b541a33a33519">handy::Logger::m_maxLogFileSize</a></div><div class="ttdeci">size_t m_maxLogFileSize</div><div class="ttdef"><b>Definition:</b> logger.h:217</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a53cc55dadce00c792481c454764e0ccf"><div class="ttname"><a href="classhandy_1_1Logger.html#a53cc55dadce00c792481c454764e0ccf">handy::Logger::getLogLevelString</a></div><div class="ttdeci">const char * getLogLevelString(LogLevel logLevel) const </div><div class="ttdef"><b>Definition:</b> logger.h:134</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28feafb04814efeb951b90eedacbcd07cf380"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feafb04814efeb951b90eedacbcd07cf380">handy::Logger::LWARN</a></div><div class="ttdef"><b>Definition:</b> logger.h:83</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a166a12af568a87281a0f5953c3b7dc36"><div class="ttname"><a href="classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36">handy::Logger::setLogLevel</a></div><div class="ttdeci">void setLogLevel(const std::string &amp;logLevel)</div><div class="ttdef"><b>Definition:</b> logger.cpp:154</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a6d61757bf1d37101021e3bdc63e78c6d"><div class="ttname"><a href="classhandy_1_1Logger.html#a6d61757bf1d37101021e3bdc63e78c6d">handy::Logger::logv</a></div><div class="ttdeci">void logv(int level, const char *file, int line, const char *func, const char *fmt,...)</div><div class="ttdoc">日志记录函数 </div><div class="ttdef"><b>Definition:</b> logger.cpp:22</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28feaa75393110bebc5ac3fc0ff540f446352"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feaa75393110bebc5ac3fc0ff540f446352">handy::Logger::LALL</a></div><div class="ttdef"><b>Definition:</b> logger.h:87</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html"><div class="ttname"><a href="classhandy_1_1Logger.html">handy::Logger</a></div><div class="ttdef"><b>Definition:</b> logger.h:75</div></div>
+<div class="ttc" id="non__copy__able_8h_html"><div class="ttname"><a href="non__copy__able_8h.html">non_copy_able.h</a></div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3ac5aca5c44756130291fa6aea3a269d"><div class="ttname"><a href="classhandy_1_1Logger.html#a3ac5aca5c44756130291fa6aea3a269d">handy::Logger::m_lastRotateTime</a></div><div class="ttdeci">int64_t m_lastRotateTime</div><div class="ttdef"><b>Definition:</b> logger.h:211</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a19a54d9a8c6c8cc4bb72c10958956b75"><div class="ttname"><a href="classhandy_1_1Logger.html#a19a54d9a8c6c8cc4bb72c10958956b75">handy::Logger::setMaxLogFileSize</a></div><div class="ttdeci">void setMaxLogFileSize(size_t maxLogFileSize_MB)</div><div class="ttdef"><b>Definition:</b> logger.h:162</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a94fde02defaba254926968d6348aa019"><div class="ttname"><a href="classhandy_1_1Logger.html#a94fde02defaba254926968d6348aa019">handy::Logger::setLogRotateInterval</a></div><div class="ttdeci">void setLogRotateInterval(long rotateInterval_s)</div><div class="ttdef"><b>Definition:</b> logger.h:154</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a></div><div class="ttdef"><b>Definition:</b> logger.h:81</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_ac09a0ea26562cc4b464078801b31e6a7"><div class="ttname"><a href="classhandy_1_1Logger.html#ac09a0ea26562cc4b464078801b31e6a7">handy::Logger::m_rotateInterval</a></div><div class="ttdeci">long m_rotateInterval</div><div class="ttdef"><b>Definition:</b> logger.h:215</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_ad096978e08b310f1456742540e746893"><div class="ttname"><a href="classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893">handy::Logger::setLogFileName</a></div><div class="ttdeci">void setLogFileName(const std::string &amp;logFileName)</div><div class="ttdef"><b>Definition:</b> logger.cpp:109</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea7a1f0ddc23197504d1a80423b27440bf"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea7a1f0ddc23197504d1a80423b27440bf">handy::Logger::LTRACE</a></div><div class="ttdef"><b>Definition:</b> logger.h:86</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a6148b17e2785e4335d9f92790bbce71d"><div class="ttname"><a href="classhandy_1_1Logger.html#a6148b17e2785e4335d9f92790bbce71d">handy::Logger::rotateLogFile</a></div><div class="ttdeci">bool rotateLogFile()</div><div class="ttdef"><b>Definition:</b> logger.cpp:217</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_afb63c17a7b985300d4f2d28ff6b67b99"><div class="ttname"><a href="classhandy_1_1Logger.html#afb63c17a7b985300d4f2d28ff6b67b99">handy::Logger::m_mutex</a></div><div class="ttdeci">std::mutex m_mutex</div><div class="ttdef"><b>Definition:</b> logger.h:223</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a1869d64a7b809063a5c777b2eddeb70e"><div class="ttname"><a href="classhandy_1_1Logger.html#a1869d64a7b809063a5c777b2eddeb70e">handy::Logger::closeLogFile</a></div><div class="ttdeci">void closeLogFile()</div><div class="ttdef"><b>Definition:</b> logger.h:180</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a1f768923e0442e410191ba9c980096a2"><div class="ttname"><a href="classhandy_1_1Logger.html#a1f768923e0442e410191ba9c980096a2">handy::Logger::m_levelStrings</a></div><div class="ttdeci">static const char * m_levelStrings[]</div><div class="ttdef"><b>Definition:</b> logger.h:204</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_acd48171908551371f299e063ca6ba683"><div class="ttname"><a href="classhandy_1_1Logger.html#acd48171908551371f299e063ca6ba683">handy::Logger::m_level</a></div><div class="ttdeci">std::atomic&lt; LogLevel &gt; m_level</div><div class="ttdef"><b>Definition:</b> logger.h:209</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a1f5d1fab0756d1df799e204499faa012"><div class="ttname"><a href="classhandy_1_1Logger.html#a1f5d1fab0756d1df799e204499faa012">handy::Logger::getCurrentTimeStamp</a></div><div class="ttdeci">int64_t getCurrentTimeStamp() const </div><div class="ttdef"><b>Definition:</b> logger.h:197</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a2bef2bb7d52686e606c2a23508dba57d"><div class="ttname"><a href="classhandy_1_1Logger.html#a2bef2bb7d52686e606c2a23508dba57d">handy::Logger::adjustLogLevel</a></div><div class="ttdeci">void adjustLogLevel(int adjust)</div><div class="ttdef"><b>Definition:</b> logger.h:145</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_ab52e54f701f163be1606cd6c94c5dc8a"><div class="ttname"><a href="classhandy_1_1Logger.html#ab52e54f701f163be1606cd6c94c5dc8a">handy::Logger::m_logFileName</a></div><div class="ttdeci">std::string m_logFileName</div><div class="ttdef"><b>Definition:</b> logger.h:221</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_acc02c4c84b4b6d03f8c6f7ac8e59de3b"><div class="ttname"><a href="classhandy_1_1Logger.html#acc02c4c84b4b6d03f8c6f7ac8e59de3b">handy::Logger::setLogLevel</a></div><div class="ttdeci">void setLogLevel(LogLevel logLevel)</div><div class="ttdef"><b>Definition:</b> logger.h:121</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a35aa468b7dd613de6bb9e3b5dfebb2e4"><div class="ttname"><a href="classhandy_1_1Logger.html#a35aa468b7dd613de6bb9e3b5dfebb2e4">handy::Logger::m_realRotateTime</a></div><div class="ttdeci">std::atomic&lt; int64_t &gt; m_realRotateTime</div><div class="ttdef"><b>Definition:</b> logger.h:213</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

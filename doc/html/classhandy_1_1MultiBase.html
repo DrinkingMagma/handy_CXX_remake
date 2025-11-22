@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy::MultiBase类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehandy.html">handy</a></li><li class="navelem"><a class="el" href="classhandy_1_1MultiBase.html">MultiBase</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classhandy_1_1MultiBase-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">handy::MultiBase类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>多线程事件派发器（管理多个EventBase，实现负载均衡）  
+ <a href="classhandy_1_1MultiBase.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="event__base_8h_source.html">event_base.h</a>&gt;</code></p>
+<div class="dynheader">
+类 handy::MultiBase 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classhandy_1_1MultiBase.png" usemap="#handy::MultiBase_map" alt=""/>
+  <map id="handy::MultiBase_map" name="handy::MultiBase_map">
+<area href="classhandy_1_1EventBases.html" title="事件派发器抽象基类（定义多事件派发器的统一接口） " alt="handy::EventBases" shape="rect" coords="0,56,132,80"/>
+<area href="classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="handy::NonCopyAble" shape="rect" coords="0,0,132,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a13bf02960b16c7e6744085a1eff64461"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1MultiBase.html#a13bf02960b16c7e6744085a1eff64461">MultiBase</a> (int sz)</td></tr>
+<tr class="memdesc:a13bf02960b16c7e6744085a1eff64461"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化多线程事件派发器  <a href="#a13bf02960b16c7e6744085a1eff64461">更多...</a><br/></td></tr>
+<tr class="separator:a13bf02960b16c7e6744085a1eff64461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43c3468c69aa8b719b854c903736c1b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1MultiBase.html#a43c3468c69aa8b719b854c903736c1b5">~MultiBase</a> () override</td></tr>
+<tr class="separator:a43c3468c69aa8b719b854c903736c1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ea5c3b53090db6247464945202a851"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1MultiBase.html#a78ea5c3b53090db6247464945202a851">loop</a> ()</td></tr>
+<tr class="memdesc:a78ea5c3b53090db6247464945202a851"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动所有事件循环线程（阻塞，直到所有线程退出）  <a href="#a78ea5c3b53090db6247464945202a851">更多...</a><br/></td></tr>
+<tr class="separator:a78ea5c3b53090db6247464945202a851"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adecca6c1afb842b91f6e6569566c1774"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1MultiBase.html">MultiBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1MultiBase.html#adecca6c1afb842b91f6e6569566c1774">exit</a> ()</td></tr>
+<tr class="memdesc:adecca6c1afb842b91f6e6569566c1774"><td class="mdescLeft">&#160;</td><td class="mdescRight">退出所有事件循环线程（线程安全）  <a href="#adecca6c1afb842b91f6e6569566c1774">更多...</a><br/></td></tr>
+<tr class="separator:adecca6c1afb842b91f6e6569566c1774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d4bcffd4ac32e898e8926b8b4a5504"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1MultiBase.html#a98d4bcffd4ac32e898e8926b8b4a5504">allocBase</a> () override</td></tr>
+<tr class="memdesc:a98d4bcffd4ac32e898e8926b8b4a5504"><td class="mdescLeft">&#160;</td><td class="mdescRight">分配事件派发器（轮询方式，负载均衡）  <a href="#a98d4bcffd4ac32e898e8926b8b4a5504">更多...</a><br/></td></tr>
+<tr class="separator:a98d4bcffd4ac32e898e8926b8b4a5504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classhandy_1_1EventBases"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classhandy_1_1EventBases')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classhandy_1_1EventBases.html">handy::EventBases</a></td></tr>
+<tr class="memitem:a19582b629c5a68c68fed55a78bd380da inherit pub_methods_classhandy_1_1EventBases"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1EventBases.html#a19582b629c5a68c68fed55a78bd380da">~EventBases</a> ()=default</td></tr>
+<tr class="separator:a19582b629c5a68c68fed55a78bd380da inherit pub_methods_classhandy_1_1EventBases"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a1c77490848c3cc465ed1d186ae53d10f"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1MultiBase.html#a1c77490848c3cc465ed1d186ae53d10f">m_id</a></td></tr>
+<tr class="separator:a1c77490848c3cc465ed1d186ae53d10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b8ae31381239687bb1a67c556953be"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classhandy_1_1EventBase.html">EventBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1MultiBase.html#a52b8ae31381239687bb1a67c556953be">m_bases</a></td></tr>
+<tr class="separator:a52b8ae31381239687bb1a67c556953be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63322a52420647bbd2fe5c8baa8e2af8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::thread &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1MultiBase.html#a63322a52420647bbd2fe5c8baa8e2af8">m_threads</a></td></tr>
+<tr class="separator:a63322a52420647bbd2fe5c8baa8e2af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>多线程事件派发器（管理多个EventBase，实现负载均衡） </p>
+<ol type="1">
+<li>内部维护多个EventBase实例，每个对应一个事件循环线程<ol type="a">
+<li>通过轮询算法分配EventBase，实现任务的负载均衡</li>
+<li>支持批量控制所有事件循环（如批量退出） <dl class="section note"><dt>注解</dt><dd>线程安全：allocBase()、ecit()为线程安全接口，loop()须在主线程调用 </dd></dl>
+</li>
+</ol>
+</li>
+</ol>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a13bf02960b16c7e6744085a1eff64461"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::MultiBase::MultiBase </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化多线程事件派发器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sz</td><td>EventBase数量（即事件循环线程数，sz &lt;= 0时，sz = 1） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a43c3468c69aa8b719b854c903736c1b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::MultiBase::~MultiBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a98d4bcffd4ac32e898e8926b8b4a5504"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> * handy::MultiBase::allocBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>分配事件派发器（轮询方式，负载均衡） </p>
+<dl class="section return"><dt>返回</dt><dd>EventBase* 分配的EventBase指针（非空） </dd></dl>
+
+<p>实现了 <a class="el" href="classhandy_1_1EventBases.html#a9e80d26b5cb6091ab83d7c8a89420dae">handy::EventBases</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adecca6c1afb842b91f6e6569566c1774"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1MultiBase.html">MultiBase</a> &amp; handy::MultiBase::exit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>退出所有事件循环线程（线程安全） </p>
+<dl class="section return"><dt>返回</dt><dd>MutliBase&amp; 返回自身引用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a78ea5c3b53090db6247464945202a851"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::MultiBase::loop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>启动所有事件循环线程（阻塞，直到所有线程退出） </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a52b8ae31381239687bb1a67c556953be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classhandy_1_1EventBase.html">EventBase</a>&gt; handy::MultiBase::m_bases</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1c77490848c3cc465ed1d186ae53d10f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;int&gt; handy::MultiBase::m_id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a63322a52420647bbd2fe5c8baa8e2af8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::thread&gt; handy::MultiBase::m_threads</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>handy/<a class="el" href="event__base_8h_source.html">event_base.h</a></li>
+<li>handy/<a class="el" href="event__base_8cpp.html">event_base.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

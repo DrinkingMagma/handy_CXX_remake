@@ -1,0 +1,1223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy::Buffer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehandy.html">handy</a></li><li class="navelem"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classhandy_1_1Buffer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">handy::Buffer类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>线程安全的缓冲区类，用于数据的存储和操作  
+ <a href="classhandy_1_1Buffer.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="net_8h_source.html">net.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab8f6264923bd2e9235561b120d13a75b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#ab8f6264923bd2e9235561b120d13a75b">Buffer</a> ()</td></tr>
+<tr class="memdesc:ab8f6264923bd2e9235561b120d13a75b"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造函数，初始化一个空缓冲区，期望增长大小为512字节  <a href="#ab8f6264923bd2e9235561b120d13a75b">更多...</a><br/></td></tr>
+<tr class="separator:ab8f6264923bd2e9235561b120d13a75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd67266ea59614503a242ab7b4b03c7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#acd67266ea59614503a242ab7b4b03c7c">~Buffer</a> ()</td></tr>
+<tr class="memdesc:acd67266ea59614503a242ab7b4b03c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数，释放所有动态分配的内存  <a href="#acd67266ea59614503a242ab7b4b03c7c">更多...</a><br/></td></tr>
+<tr class="separator:acd67266ea59614503a242ab7b4b03c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b4003ed7f04aee3226314fa5e2703e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a3b4003ed7f04aee3226314fa5e2703e5">Buffer</a> (const <a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;other)</td></tr>
+<tr class="memdesc:a3b4003ed7f04aee3226314fa5e2703e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">拷贝构造函数，线程安全地深拷贝另一个缓冲区的内容  <a href="#a3b4003ed7f04aee3226314fa5e2703e5">更多...</a><br/></td></tr>
+<tr class="separator:a3b4003ed7f04aee3226314fa5e2703e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a82b232c0ecde46a2078da3a0bcd94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#aa7a82b232c0ecde46a2078da3a0bcd94">operator=</a> (const <a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;other)</td></tr>
+<tr class="memdesc:aa7a82b232c0ecde46a2078da3a0bcd94"><td class="mdescLeft">&#160;</td><td class="mdescRight">拷贝赋值运算符，线程安全地深拷贝另一个缓冲区的内容  <a href="#aa7a82b232c0ecde46a2078da3a0bcd94">更多...</a><br/></td></tr>
+<tr class="separator:aa7a82b232c0ecde46a2078da3a0bcd94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75525cef1872ffd63ead4c04b6d67f9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a75525cef1872ffd63ead4c04b6d67f9f">Buffer</a> (<a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a75525cef1872ffd63ead4c04b6d67f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">移动构造函数，线程安全地转移另一个缓冲区的资源所有权  <a href="#a75525cef1872ffd63ead4c04b6d67f9f">更多...</a><br/></td></tr>
+<tr class="separator:a75525cef1872ffd63ead4c04b6d67f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9849db92cf0ce89b2c069c22fec2831"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#ae9849db92cf0ce89b2c069c22fec2831">operator=</a> (<a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:ae9849db92cf0ce89b2c069c22fec2831"><td class="mdescLeft">&#160;</td><td class="mdescRight">移动赋值运算符，线程安全地转移另一个缓冲区的资源所有权  <a href="#ae9849db92cf0ce89b2c069c22fec2831">更多...</a><br/></td></tr>
+<tr class="separator:ae9849db92cf0ce89b2c069c22fec2831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804cb068a8f1b7b1d3c5f4aaa09d1b42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42">clear</a> ()</td></tr>
+<tr class="memdesc:a804cb068a8f1b7b1d3c5f4aaa09d1b42"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空缓冲区，释放多有动态内存，重置所有偏移量和容量  <a href="#a804cb068a8f1b7b1d3c5f4aaa09d1b42">更多...</a><br/></td></tr>
+<tr class="separator:a804cb068a8f1b7b1d3c5f4aaa09d1b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa759a33b7e3748d79cff07430f8a7b16"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a> () const </td></tr>
+<tr class="memdesc:aa759a33b7e3748d79cff07430f8a7b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前缓冲区中的数据长度  <a href="#aa759a33b7e3748d79cff07430f8a7b16">更多...</a><br/></td></tr>
+<tr class="separator:aa759a33b7e3748d79cff07430f8a7b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a268ad2c07c123cee2157f861424b2f08"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a268ad2c07c123cee2157f861424b2f08">empty</a> () const </td></tr>
+<tr class="memdesc:a268ad2c07c123cee2157f861424b2f08"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断缓冲区是否为空  <a href="#a268ad2c07c123cee2157f861424b2f08">更多...</a><br/></td></tr>
+<tr class="separator:a268ad2c07c123cee2157f861424b2f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a208a057b4f4b753d64d3ef06ba0af"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af">data</a> () const </td></tr>
+<tr class="memdesc:a44a208a057b4f4b753d64d3ef06ba0af"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取缓冲区中的数据副本  <a href="#a44a208a057b4f4b753d64d3ef06ba0af">更多...</a><br/></td></tr>
+<tr class="separator:a44a208a057b4f4b753d64d3ef06ba0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd79c05c0e2e82b6cdfd130af4739d0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a2bd79c05c0e2e82b6cdfd130af4739d0">begin</a> () const </td></tr>
+<tr class="memdesc:a2bd79c05c0e2e82b6cdfd130af4739d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取缓冲区中的数据开头指针  <a href="#a2bd79c05c0e2e82b6cdfd130af4739d0">更多...</a><br/></td></tr>
+<tr class="separator:a2bd79c05c0e2e82b6cdfd130af4739d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82f738013d27b2d2e94725b5b5765bca"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a82f738013d27b2d2e94725b5b5765bca">end</a> () const </td></tr>
+<tr class="memdesc:a82f738013d27b2d2e94725b5b5765bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取缓冲区中的数据末尾指针  <a href="#a82f738013d27b2d2e94725b5b5765bca">更多...</a><br/></td></tr>
+<tr class="separator:a82f738013d27b2d2e94725b5b5765bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a890cb0622de47912ae09c75bbfb5d4a1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a890cb0622de47912ae09c75bbfb5d4a1">space</a> () const </td></tr>
+<tr class="memdesc:a890cb0622de47912ae09c75bbfb5d4a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回缓冲区中当前剩余的可用空间（字节数）  <a href="#a890cb0622de47912ae09c75bbfb5d4a1">更多...</a><br/></td></tr>
+<tr class="separator:a890cb0622de47912ae09c75bbfb5d4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceb300c5e30fad7a6062b97f48a2c111"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#aceb300c5e30fad7a6062b97f48a2c111">peek</a> () const </td></tr>
+<tr class="memdesc:aceb300c5e30fad7a6062b97f48a2c111"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回内部缓冲区的只读指针  <a href="#aceb300c5e30fad7a6062b97f48a2c111">更多...</a><br/></td></tr>
+<tr class="separator:aceb300c5e30fad7a6062b97f48a2c111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7060b929fb9d5b805ae670c77b0f8cdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a7060b929fb9d5b805ae670c77b0f8cdf">makeRoom</a> ()</td></tr>
+<tr class="memdesc:a7060b929fb9d5b805ae670c77b0f8cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">当缓冲区剩余空间小于m_exp时，扩展缓冲区  <a href="#a7060b929fb9d5b805ae670c77b0f8cdf">更多...</a><br/></td></tr>
+<tr class="separator:a7060b929fb9d5b805ae670c77b0f8cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04a7b5fd98fe745c56b6a338b47bc532"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a04a7b5fd98fe745c56b6a338b47bc532">makeRoom</a> (size_t len)</td></tr>
+<tr class="memdesc:a04a7b5fd98fe745c56b6a338b47bc532"><td class="mdescLeft">&#160;</td><td class="mdescRight">确保缓冲区有足够空间来存储指定长度的数据  <a href="#a04a7b5fd98fe745c56b6a338b47bc532">更多...</a><br/></td></tr>
+<tr class="separator:a04a7b5fd98fe745c56b6a338b47bc532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0428fcbdbcf59a3382bb5a40a75d4b18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a0428fcbdbcf59a3382bb5a40a75d4b18">addSize</a> (size_t len)</td></tr>
+<tr class="memdesc:a0428fcbdbcf59a3382bb5a40a75d4b18"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新缓冲区的实际数据长度  <a href="#a0428fcbdbcf59a3382bb5a40a75d4b18">更多...</a><br/></td></tr>
+<tr class="separator:a0428fcbdbcf59a3382bb5a40a75d4b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fb7183f49ac1a86d1d35dd44943ef60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60">append</a> (const char *p, size_t len)</td></tr>
+<tr class="memdesc:a3fb7183f49ac1a86d1d35dd44943ef60"><td class="mdescLeft">&#160;</td><td class="mdescRight">将指定长度的数据追加到缓冲区  <a href="#a3fb7183f49ac1a86d1d35dd44943ef60">更多...</a><br/></td></tr>
+<tr class="separator:a3fb7183f49ac1a86d1d35dd44943ef60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9270651a5f88b399ec11f281ef86fdde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a9270651a5f88b399ec11f281ef86fdde">appendUnSafe</a> (const char *p, size_t len)</td></tr>
+<tr class="memdesc:a9270651a5f88b399ec11f281ef86fdde"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加字符串中的数据到缓冲区(未加锁版本，用于在内部函数中调用，防止重复加锁导致的死锁)  <a href="#a9270651a5f88b399ec11f281ef86fdde">更多...</a><br/></td></tr>
+<tr class="separator:a9270651a5f88b399ec11f281ef86fdde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e2bf103ceb23b8a4344d0bea0b018e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a26e2bf103ceb23b8a4344d0bea0b018e">append</a> (const char *p)</td></tr>
+<tr class="memdesc:a26e2bf103ceb23b8a4344d0bea0b018e"><td class="mdescLeft">&#160;</td><td class="mdescRight">将char*类型的数据追加到缓冲区中  <a href="#a26e2bf103ceb23b8a4344d0bea0b018e">更多...</a><br/></td></tr>
+<tr class="separator:a26e2bf103ceb23b8a4344d0bea0b018e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb56c7aeaa54f9ece9a2f80741e21bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#abbb56c7aeaa54f9ece9a2f80741e21bf">append</a> (<a class="el" href="classhandy_1_1Slice.html">Slice</a> slice)</td></tr>
+<tr class="memdesc:abbb56c7aeaa54f9ece9a2f80741e21bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加Slice中的数据到缓冲区  <a href="#abbb56c7aeaa54f9ece9a2f80741e21bf">更多...</a><br/></td></tr>
+<tr class="separator:abbb56c7aeaa54f9ece9a2f80741e21bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2ac7e17a9b68ccdb42fa687f6d56c45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#ad2ac7e17a9b68ccdb42fa687f6d56c45">append</a> (const std::string &amp;str)</td></tr>
+<tr class="memdesc:ad2ac7e17a9b68ccdb42fa687f6d56c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加字符串中的数据到缓冲区  <a href="#ad2ac7e17a9b68ccdb42fa687f6d56c45">更多...</a><br/></td></tr>
+<tr class="separator:ad2ac7e17a9b68ccdb42fa687f6d56c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1206aca6841c03ba32c83dce30f886cd"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a1206aca6841c03ba32c83dce30f886cd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a1206aca6841c03ba32c83dce30f886cd">appendValue</a> (const T &amp;v)</td></tr>
+<tr class="memdesc:a1206aca6841c03ba32c83dce30f886cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加POD类型的值到缓冲区  <a href="#a1206aca6841c03ba32c83dce30f886cd">更多...</a><br/></td></tr>
+<tr class="separator:a1206aca6841c03ba32c83dce30f886cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa08545c90241054e435ff328f087b0c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#aa08545c90241054e435ff328f087b0c1">consume</a> (size_t len)</td></tr>
+<tr class="memdesc:aa08545c90241054e435ff328f087b0c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">从头部消耗指定长度的数据  <a href="#aa08545c90241054e435ff328f087b0c1">更多...</a><br/></td></tr>
+<tr class="separator:aa08545c90241054e435ff328f087b0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b58522a99b408d8dca8c831d83650a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a48b58522a99b408d8dca8c831d83650a">absorb</a> (<a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;other)</td></tr>
+<tr class="memdesc:a48b58522a99b408d8dca8c831d83650a"><td class="mdescLeft">&#160;</td><td class="mdescRight">合并另一个缓冲区的内容（将另一个缓冲区的所有数据追加到当前缓冲区，并清空另一个缓冲区）  <a href="#a48b58522a99b408d8dca8c831d83650a">更多...</a><br/></td></tr>
+<tr class="separator:a48b58522a99b408d8dca8c831d83650a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bfa7ff879fbce307c502c668d378bb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a4bfa7ff879fbce307c502c668d378bb5">setExpectGrowSize</a> (size_t sz)</td></tr>
+<tr class="memdesc:a4bfa7ff879fbce307c502c668d378bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置缓冲区的期望增长大小  <a href="#a4bfa7ff879fbce307c502c668d378bb5">更多...</a><br/></td></tr>
+<tr class="separator:a4bfa7ff879fbce307c502c668d378bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad29f1abee536e0556ed38ff5562b090f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#ad29f1abee536e0556ed38ff5562b090f">operator Slice</a> () const </td></tr>
+<tr class="memdesc:ad29f1abee536e0556ed38ff5562b090f"><td class="mdescLeft">&#160;</td><td class="mdescRight">转换为Slice对象  <a href="#ad29f1abee536e0556ed38ff5562b090f">更多...</a><br/></td></tr>
+<tr class="separator:ad29f1abee536e0556ed38ff5562b090f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:afbd50b666a4e1576b2e19bdb047e7a53"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#afbd50b666a4e1576b2e19bdb047e7a53">_makeRoom</a> (size_t len)</td></tr>
+<tr class="memdesc:afbd50b666a4e1576b2e19bdb047e7a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">确保缓冲区有足够空间容纳指定长度的数据  <a href="#afbd50b666a4e1576b2e19bdb047e7a53">更多...</a><br/></td></tr>
+<tr class="separator:afbd50b666a4e1576b2e19bdb047e7a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ca99339d31c25d203875bf57f75fc67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a0ca99339d31c25d203875bf57f75fc67">_expand</a> (size_t len)</td></tr>
+<tr class="memdesc:a0ca99339d31c25d203875bf57f75fc67"><td class="mdescLeft">&#160;</td><td class="mdescRight">扩展缓冲区容量  <a href="#a0ca99339d31c25d203875bf57f75fc67">更多...</a><br/></td></tr>
+<tr class="separator:a0ca99339d31c25d203875bf57f75fc67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a152b8546af1c0bca407455a6b174e05b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a152b8546af1c0bca407455a6b174e05b">_moveHead</a> ()</td></tr>
+<tr class="memdesc:a152b8546af1c0bca407455a6b174e05b"><td class="mdescLeft">&#160;</td><td class="mdescRight">将数据移动到缓冲区头部，减少内存碎片  <a href="#a152b8546af1c0bca407455a6b174e05b">更多...</a><br/></td></tr>
+<tr class="separator:a152b8546af1c0bca407455a6b174e05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b4ecedfc55d6e4195bea86608f98db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#ab7b4ecedfc55d6e4195bea86608f98db">_copyFrom</a> (const <a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;other)</td></tr>
+<tr class="memdesc:ab7b4ecedfc55d6e4195bea86608f98db"><td class="mdescLeft">&#160;</td><td class="mdescRight">从另一个缓冲区深拷贝数据和状态  <a href="#ab7b4ecedfc55d6e4195bea86608f98db">更多...</a><br/></td></tr>
+<tr class="separator:ab7b4ecedfc55d6e4195bea86608f98db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84df3b1f96b52d68c97b2e6fc7a90264"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a84df3b1f96b52d68c97b2e6fc7a90264">_swap</a> (<a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a84df3b1f96b52d68c97b2e6fc7a90264"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换两个缓冲区的资源  <a href="#a84df3b1f96b52d68c97b2e6fc7a90264">更多...</a><br/></td></tr>
+<tr class="separator:a84df3b1f96b52d68c97b2e6fc7a90264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56a876c03842962a6d412c9842c3ff8a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a56a876c03842962a6d412c9842c3ff8a">_size</a> () const </td></tr>
+<tr class="memdesc:a56a876c03842962a6d412c9842c3ff8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前缓冲区中的数据长度（需外部加锁）  <a href="#a56a876c03842962a6d412c9842c3ff8a">更多...</a><br/></td></tr>
+<tr class="separator:a56a876c03842962a6d412c9842c3ff8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac048f158dc445a075cb5d5a1534ea544"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#ac048f158dc445a075cb5d5a1534ea544">_space</a> () const </td></tr>
+<tr class="memdesc:ac048f158dc445a075cb5d5a1534ea544"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回缓冲区中当前剩余的可用空间（字节数）（需外部加锁）  <a href="#ac048f158dc445a075cb5d5a1534ea544">更多...</a><br/></td></tr>
+<tr class="separator:ac048f158dc445a075cb5d5a1534ea544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a5895d67a50e408218d64c4e07c9f0e4a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a5895d67a50e408218d64c4e07c9f0e4a">m_buf</a></td></tr>
+<tr class="separator:a5895d67a50e408218d64c4e07c9f0e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac35d13a6e5a82f8209924eb9706807ca"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#ac35d13a6e5a82f8209924eb9706807ca">m_b</a></td></tr>
+<tr class="separator:ac35d13a6e5a82f8209924eb9706807ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae09cee613bb33a7b994dcc7a22c19738"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#ae09cee613bb33a7b994dcc7a22c19738">m_e</a></td></tr>
+<tr class="separator:ae09cee613bb33a7b994dcc7a22c19738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af673a3efbf0daf0675eca56d273043e9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#af673a3efbf0daf0675eca56d273043e9">m_cap</a></td></tr>
+<tr class="separator:af673a3efbf0daf0675eca56d273043e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f2da018a115402402c60cb199c7e4e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#aa5f2da018a115402402c60cb199c7e4e">m_exp</a></td></tr>
+<tr class="separator:aa5f2da018a115402402c60cb199c7e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bf9b29fc2265d0213673b2e14c100f7"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; std::mutex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a9bf9b29fc2265d0213673b2e14c100f7">m_mutex</a></td></tr>
+<tr class="separator:a9bf9b29fc2265d0213673b2e14c100f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>线程安全的缓冲区类，用于数据的存储和操作 </p>
+<dl class="section note"><dt>注解</dt><dd>提供安全的内存管理和数据操作接口，支持多线程并发访问 </dd>
+<dd>
+主要功能包括： </dd>
+<dd>
+1. 数据的追加、消耗、清空 </dd>
+<dd>
+2. 缓冲区的自动扩展和内存碎片整理 </dd>
+<dd>
+3. 线程安全的拷贝和移动操作 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ab8f6264923bd2e9235561b120d13a75b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::Buffer::Buffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>默认构造函数，初始化一个空缓冲区，期望增长大小为512字节 </p>
+
+</div>
+</div>
+<a class="anchor" id="acd67266ea59614503a242ab7b4b03c7c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::Buffer::~Buffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>析构函数，释放所有动态分配的内存 </p>
+
+</div>
+</div>
+<a class="anchor" id="a3b4003ed7f04aee3226314fa5e2703e5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::Buffer::Buffer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拷贝构造函数，线程安全地深拷贝另一个缓冲区的内容 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>被拷贝的缓冲区 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a75525cef1872ffd63ead4c04b6d67f9f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::Buffer::Buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移动构造函数，线程安全地转移另一个缓冲区的资源所有权 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>被转移的缓冲区 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ab7b4ecedfc55d6e4195bea86608f98db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Buffer::_copyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从另一个缓冲区深拷贝数据和状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>被拷贝的缓冲区 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>内部方法，调用前需确保已释放当前资源且加锁 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0ca99339d31c25d203875bf57f75fc67"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Buffer::_expand </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>扩展缓冲区容量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>至少需要新增的空间大小（字节数） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>内部方法，调用前需先加锁 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afbd50b666a4e1576b2e19bdb047e7a53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * handy::Buffer::_makeRoom </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>确保缓冲区有足够空间容纳指定长度的数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>需要添加的空间大小（字节数） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>char* 指向可写入数据位置的指针 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>内部方法，调用前需先加锁 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a152b8546af1c0bca407455a6b174e05b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Buffer::_moveHead </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将数据移动到缓冲区头部，减少内存碎片 </p>
+<dl class="section note"><dt>注解</dt><dd>内部方法，调用前需先加锁 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a56a876c03842962a6d412c9842c3ff8a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t handy::Buffer::_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前缓冲区中的数据长度（需外部加锁） </p>
+<dl class="section return"><dt>返回</dt><dd>size_t 数据长度（字节数） </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac048f158dc445a075cb5d5a1534ea544"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t handy::Buffer::_space </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回缓冲区中当前剩余的可用空间（字节数）（需外部加锁） </p>
+<dl class="section return"><dt>返回</dt><dd>size_t 缓冲区中当前剩余的可用空间（字节数） </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a84df3b1f96b52d68c97b2e6fc7a90264"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Buffer::_swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>交换两个缓冲区的资源 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>要交换的缓冲区 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>内部方法，调用前需加锁 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a48b58522a99b408d8dca8c831d83650a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp; handy::Buffer::absorb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>合并另一个缓冲区的内容（将另一个缓冲区的所有数据追加到当前缓冲区，并清空另一个缓冲区） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>要合并的缓冲区 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0428fcbdbcf59a3382bb5a40a75d4b18"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Buffer::addSize </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>更新缓冲区的实际数据长度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sz</td><td>新增的数据长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>用于向缓冲区添加数据后，未更新缓冲区的实际数据长度的场景 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3fb7183f49ac1a86d1d35dd44943ef60"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp; handy::Buffer::append </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将指定长度的数据追加到缓冲区 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>指向数据的指针 </td></tr>
+    <tr><td class="paramname">len</td><td>数据长度（字节数） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a26e2bf103ceb23b8a4344d0bea0b018e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp; handy::Buffer::append </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将char*类型的数据追加到缓冲区中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>待追加的char*数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abbb56c7aeaa54f9ece9a2f80741e21bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp; handy::Buffer::append </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1Slice.html">Slice</a>&#160;</td>
+          <td class="paramname"><em>slice</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>追加Slice中的数据到缓冲区 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">slice</td><td>包含数据的slice对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad2ac7e17a9b68ccdb42fa687f6d56c45"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp; handy::Buffer::append </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>追加字符串中的数据到缓冲区 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>包含数据的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9270651a5f88b399ec11f281ef86fdde"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp; handy::Buffer::appendUnSafe </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>追加字符串中的数据到缓冲区(未加锁版本，用于在内部函数中调用，防止重复加锁导致的死锁) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>包含数据的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1206aca6841c03ba32c83dce30f886cd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a>&amp; handy::Buffer::appendValue </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>追加POD类型的值到缓冲区 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>POD(Plain Old Data)类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>要追加的值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>仅支持POD类型的数据，非POD类型数据会触发编译错误 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2bd79c05c0e2e82b6cdfd130af4739d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * handy::Buffer::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取缓冲区中的数据开头指针 </p>
+<dl class="section return"><dt>返回</dt><dd>char* 指向缓冲区开头的指针 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a804cb068a8f1b7b1d3c5f4aaa09d1b42"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Buffer::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>清空缓冲区，释放多有动态内存，重置所有偏移量和容量 </p>
+
+</div>
+</div>
+<a class="anchor" id="aa08545c90241054e435ff328f087b0c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp; handy::Buffer::consume </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从头部消耗指定长度的数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>要消耗的数据长度（字节数） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>若len带当前数据长度，会消耗所有数据 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a44a208a057b4f4b753d64d3ef06ba0af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string handy::Buffer::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取缓冲区中的数据副本 </p>
+<dl class="section return"><dt>返回</dt><dd>std::string 包含缓冲区中所有数据的字符串 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>返回的是数据副本，避免外部直接操作内部数据 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a268ad2c07c123cee2157f861424b2f08"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool handy::Buffer::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>判断缓冲区是否为空 </p>
+<dl class="section return"><dt>返回</dt><dd>bool true: 空，false: 非空 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a82f738013d27b2d2e94725b5b5765bca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * handy::Buffer::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取缓冲区中的数据末尾指针 </p>
+<dl class="section return"><dt>返回</dt><dd>char* 指向缓冲区中的数据末尾的指针 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7060b929fb9d5b805ae670c77b0f8cdf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Buffer::makeRoom </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>当缓冲区剩余空间小于m_exp时，扩展缓冲区 </p>
+<dl class="section note"><dt>注解</dt><dd>用于按照m_exp扩展缓冲区 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a04a7b5fd98fe745c56b6a338b47bc532"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * handy::Buffer::makeRoom </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>确保缓冲区有足够空间来存储指定长度的数据 </p>
+<dl class="section return"><dt>返回</dt><dd>char* 当前最后有效数据的位置指针 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad29f1abee536e0556ed38ff5562b090f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::Buffer::operator <a class="el" href="classhandy_1_1Slice.html">Slice</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>转换为Slice对象 </p>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Slice.html" title="非持有型字符序列视图（类似std::string_view，但兼容C++11） ">Slice</a> 包含缓冲区数据的临时Slice对象 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>返回的Slice对象仅在当前语句有效，请勿保存引用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa7a82b232c0ecde46a2078da3a0bcd94"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp; handy::Buffer::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拷贝赋值运算符，线程安全地深拷贝另一个缓冲区的内容 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>被拷贝的缓冲区 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae9849db92cf0ce89b2c069c22fec2831"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp; handy::Buffer::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移动赋值运算符，线程安全地转移另一个缓冲区的资源所有权 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>被转移的缓冲区 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aceb300c5e30fad7a6062b97f48a2c111"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * handy::Buffer::peek </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回内部缓冲区的只读指针 </p>
+<dl class="section return"><dt>返回</dt><dd>const char* 内部缓冲区的只读指针 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>无法修改内部数据 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4bfa7ff879fbce307c502c668d378bb5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Buffer::setExpectGrowSize </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>sz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置缓冲区的期望增长大小 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sz</td><td>期望增长大小（字节数） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>当需要扩展缓冲区时，会按照此大小进行扩展，减少内存分配的次数 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa759a33b7e3748d79cff07430f8a7b16"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t handy::Buffer::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取当前缓冲区中的数据长度 </p>
+<dl class="section return"><dt>返回</dt><dd>size_t 数据长度（字节数） </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a890cb0622de47912ae09c75bbfb5d4a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t handy::Buffer::space </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回缓冲区中当前剩余的可用空间（字节数） </p>
+<dl class="section return"><dt>返回</dt><dd>size_t 缓冲区中当前剩余的可用空间（字节数） </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="ac35d13a6e5a82f8209924eb9706807ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t handy::Buffer::m_b</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5895d67a50e408218d64c4e07c9f0e4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* handy::Buffer::m_buf</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af673a3efbf0daf0675eca56d273043e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t handy::Buffer::m_cap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae09cee613bb33a7b994dcc7a22c19738"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t handy::Buffer::m_e</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa5f2da018a115402402c60cb199c7e4e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t handy::Buffer::m_exp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9bf9b29fc2265d0213673b2e14c100f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;std::mutex&gt; handy::Buffer::m_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>handy/<a class="el" href="net_8h_source.html">net.h</a></li>
+<li>handy/<a class="el" href="net_8cpp.html">net.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

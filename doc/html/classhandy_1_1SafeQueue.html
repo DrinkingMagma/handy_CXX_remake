@@ -1,0 +1,677 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy::SafeQueue&lt; T &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehandy.html">handy</a></li><li class="navelem"><a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classhandy_1_1SafeQueue-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">handy::SafeQueue&lt; T &gt; 模板类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>线程安全的队列容器（模版类）  
+ <a href="classhandy_1_1SafeQueue.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="thread__pool_8h_source.html">thread_pool.h</a>&gt;</code></p>
+<div class="dynheader">
+类 handy::SafeQueue&lt; T &gt; 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classhandy_1_1SafeQueue.png" usemap="#handy::SafeQueue&lt; T &gt;_map" alt=""/>
+  <map id="handy::SafeQueue&lt; T &gt;_map" name="handy::SafeQueue&lt; T &gt;_map">
+<area href="classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="handy::NonCopyAble" shape="rect" coords="0,0,148,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a44e31576bbfb8f15deab5296d22e6054"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#a44e31576bbfb8f15deab5296d22e6054">SafeQueue</a> (size_t capacity=0)</td></tr>
+<tr class="memdesc:a44e31576bbfb8f15deab5296d22e6054"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数(初始化队列容量)  <a href="#a44e31576bbfb8f15deab5296d22e6054">更多...</a><br/></td></tr>
+<tr class="separator:a44e31576bbfb8f15deab5296d22e6054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b20a9bfd4bf530d3c6531fb9dd1105"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#a43b20a9bfd4bf530d3c6531fb9dd1105">~SafeQueue</a> () noexcept</td></tr>
+<tr class="memdesc:a43b20a9bfd4bf530d3c6531fb9dd1105"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数(优雅释放资源)  <a href="#a43b20a9bfd4bf530d3c6531fb9dd1105">更多...</a><br/></td></tr>
+<tr class="separator:a43b20a9bfd4bf530d3c6531fb9dd1105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa21ac6f602368018f9a6ce1bf41b285"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#aaa21ac6f602368018f9a6ce1bf41b285">SafeQueue</a> (<a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:aaa21ac6f602368018f9a6ce1bf41b285"><td class="mdescLeft">&#160;</td><td class="mdescRight">禁止移动构造  <a href="#aaa21ac6f602368018f9a6ce1bf41b285">更多...</a><br/></td></tr>
+<tr class="separator:aaa21ac6f602368018f9a6ce1bf41b285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3345f958a0018289a633c3ed4d07ecfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#a3345f958a0018289a633c3ed4d07ecfc">operator=</a> (<a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:a3345f958a0018289a633c3ed4d07ecfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">禁止移动赋值  <a href="#a3345f958a0018289a633c3ed4d07ecfc">更多...</a><br/></td></tr>
+<tr class="separator:a3345f958a0018289a633c3ed4d07ecfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb896f0aca5b54570157b4a9528ec529"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#acb896f0aca5b54570157b4a9528ec529">push</a> (T &amp;&amp;value)</td></tr>
+<tr class="memdesc:acb896f0aca5b54570157b4a9528ec529"><td class="mdescLeft">&#160;</td><td class="mdescRight">向队列尾部添加元素(线程安全)  <a href="#acb896f0aca5b54570157b4a9528ec529">更多...</a><br/></td></tr>
+<tr class="separator:acb896f0aca5b54570157b4a9528ec529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef745af0cbdac7e9e8f2366a5db8f40d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#aef745af0cbdac7e9e8f2366a5db8f40d">popWait</a> (T *value, int waitTime_ms=<a class="el" href="classhandy_1_1SafeQueue.html#acb8f0f7682a22fed9cd3d9a3e5964dba">kWaitInfinite</a>)</td></tr>
+<tr class="memdesc:aef745af0cbdac7e9e8f2366a5db8f40d"><td class="mdescLeft">&#160;</td><td class="mdescRight">从队列头部取出元素(支持超时等待,线程安全)  <a href="#aef745af0cbdac7e9e8f2366a5db8f40d">更多...</a><br/></td></tr>
+<tr class="separator:aef745af0cbdac7e9e8f2366a5db8f40d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af07406186104294fc562099a1f323c71"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#af07406186104294fc562099a1f323c71">size</a> () const </td></tr>
+<tr class="memdesc:af07406186104294fc562099a1f323c71"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前队列中的元素数量(线程安全)  <a href="#af07406186104294fc562099a1f323c71">更多...</a><br/></td></tr>
+<tr class="separator:af07406186104294fc562099a1f323c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7602d1d067c8b146ba6b4e7cbad335a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#a7602d1d067c8b146ba6b4e7cbad335a0">exit</a> ()</td></tr>
+<tr class="memdesc:a7602d1d067c8b146ba6b4e7cbad335a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">通知队列优雅退出(线程安全)  <a href="#a7602d1d067c8b146ba6b4e7cbad335a0">更多...</a><br/></td></tr>
+<tr class="separator:a7602d1d067c8b146ba6b4e7cbad335a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3181499b61b4fdd19223c893c8c25e57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#a3181499b61b4fdd19223c893c8c25e57">isExited</a> () const noexcept</td></tr>
+<tr class="memdesc:a3181499b61b4fdd19223c893c8c25e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询队列是否已退出(线程安全)  <a href="#a3181499b61b4fdd19223c893c8c25e57">更多...</a><br/></td></tr>
+<tr class="separator:a3181499b61b4fdd19223c893c8c25e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:acb8f0f7682a22fed9cd3d9a3e5964dba"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#acb8f0f7682a22fed9cd3d9a3e5964dba">kWaitInfinite</a> = std::numeric_limits&lt;int&gt;::max()</td></tr>
+<tr class="separator:acb8f0f7682a22fed9cd3d9a3e5964dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ad88276e23e33bc1624ed6be68902b3dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#ad88276e23e33bc1624ed6be68902b3dd">waitReady</a> (std::unique_lock&lt; std::mutex &gt; &amp;lock, int waitTime_ms)</td></tr>
+<tr class="memdesc:ad88276e23e33bc1624ed6be68902b3dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">等待至队列就绪  <a href="#ad88276e23e33bc1624ed6be68902b3dd">更多...</a><br/></td></tr>
+<tr class="separator:ad88276e23e33bc1624ed6be68902b3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classhandy_1_1NonCopyAble"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classhandy_1_1NonCopyAble')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classhandy_1_1NonCopyAble.html">handy::NonCopyAble</a></td></tr>
+<tr class="memitem:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#af559df4e2ebd8b9e54566633b7bf9855">NonCopyAble</a> ()=default</td></tr>
+<tr class="separator:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#acd1d67f20f33c3f91b64262eed41ef69">~NonCopyAble</a> () noexcept=default</td></tr>
+<tr class="separator:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a281e6b5825279cf9c60cf3bda6d5d23a">NonCopyAble</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a0a3dfd5848777f831e337b3a67b749c8">operator=</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a59f29256ac90ab3415d6fd2028bfd03f">NonCopyAble</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#afb79661bb6df7f5381340e4d3337eaf6">operator=</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:afc366dea5cc102eff156f11c44551c02"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#afc366dea5cc102eff156f11c44551c02">m_mutex</a></td></tr>
+<tr class="separator:afc366dea5cc102eff156f11c44551c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a120ec80cee7b0bbdd60a50fc90051fb9"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#a120ec80cee7b0bbdd60a50fc90051fb9">m_condReady</a></td></tr>
+<tr class="memdesc:a120ec80cee7b0bbdd60a50fc90051fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">条件变量（用于线程间的同步通知）  <a href="#a120ec80cee7b0bbdd60a50fc90051fb9">更多...</a><br/></td></tr>
+<tr class="separator:a120ec80cee7b0bbdd60a50fc90051fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a75b22b3351f3d22452d6136ab5693"><td class="memItemLeft" align="right" valign="top">std::list&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#a26a75b22b3351f3d22452d6136ab5693">m_items</a></td></tr>
+<tr class="memdesc:a26a75b22b3351f3d22452d6136ab5693"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储元素的链表容器（适合频繁添加/取出元素）  <a href="#a26a75b22b3351f3d22452d6136ab5693">更多...</a><br/></td></tr>
+<tr class="separator:a26a75b22b3351f3d22452d6136ab5693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadbbe720d079b4c7824504780519e450"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#aadbbe720d079b4c7824504780519e450">m_capacity</a></td></tr>
+<tr class="memdesc:aadbbe720d079b4c7824504780519e450"><td class="mdescLeft">&#160;</td><td class="mdescRight">队列容量限制（0表示不限制）  <a href="#aadbbe720d079b4c7824504780519e450">更多...</a><br/></td></tr>
+<tr class="separator:aadbbe720d079b4c7824504780519e450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092daa6927e7a09bc7f352b31dc12356"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1SafeQueue.html#a092daa6927e7a09bc7f352b31dc12356">m_isExited</a></td></tr>
+<tr class="memdesc:a092daa6927e7a09bc7f352b31dc12356"><td class="mdescLeft">&#160;</td><td class="mdescRight">队列退出标志（原子变量）  <a href="#a092daa6927e7a09bc7f352b31dc12356">更多...</a><br/></td></tr>
+<tr class="separator:a092daa6927e7a09bc7f352b31dc12356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br/>
+class handy::SafeQueue&lt; T &gt;</h3>
+
+<p>线程安全的队列容器（模版类） </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>队列存储的元素类型（需支持移动语义以优化性能）</td></tr>
+  </table>
+  </dd>
+</dl>
+<ol type="1">
+<li>基于std::list实现，通过互斥锁与条件变量保证线程安全<ol type="a">
+<li>支持有限容量限制、超时等待取元素、优雅退出等功能</li>
+<li>禁止拷贝与移动以避免线程安全风险 <dl class="section note"><dt>注解</dt><dd>适用于多生产者多消费者模型，元素存储采用链表结构，频繁删除效率高 </dd></dl>
+</li>
+</ol>
+</li>
+</ol>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a44e31576bbfb8f15deab5296d22e6054"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1SafeQueue.html">handy::SafeQueue</a>&lt; T &gt;::<a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a> </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>capacity</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数(初始化队列容量) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">capacity</td><td>队列容量限制（0表示不限制,默认为0） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a43b20a9bfd4bf530d3c6531fb9dd1105"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1SafeQueue.html">handy::SafeQueue</a>&lt; T &gt;::~<a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构函数(优雅释放资源) </p>
+<ol type="1">
+<li>自动调用Exit()唤醒所有等待线程,避免线程泄露<ol type="a">
+<li>采用noexecpt修饰,确保析构过程不抛出异常 </li>
+</ol>
+</li>
+</ol>
+
+</div>
+</div>
+<a class="anchor" id="aaa21ac6f602368018f9a6ce1bf41b285"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1SafeQueue.html">handy::SafeQueue</a>&lt; T &gt;::<a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>禁止移动构造 </p>
+<p>队列涉及线程同步资源,移动操作可能导致锁状态异常 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a7602d1d067c8b146ba6b4e7cbad335a0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SafeQueue::exit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通知队列优雅退出(线程安全) </p>
+
+</div>
+</div>
+<a class="anchor" id="a3181499b61b4fdd19223c893c8c25e57"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SafeQueue::isExited </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>查询队列是否已退出(线程安全) </p>
+<dl class="section return"><dt>返回</dt><dd>bool 队列已退出返回true,否则返回false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3345f958a0018289a633c3ed4d07ecfc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a>&amp; <a class="el" href="classhandy_1_1SafeQueue.html">handy::SafeQueue</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>禁止移动赋值 </p>
+
+</div>
+</div>
+<a class="anchor" id="aef745af0cbdac7e9e8f2366a5db8f40d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SafeQueue::popWait </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>waitTime_ms</em> = <code><a class="el" href="classhandy_1_1SafeQueue.html#acb8f0f7682a22fed9cd3d9a3e5964dba">kWaitInfinite</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从队列头部取出元素(支持超时等待,线程安全) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">value</td><td>存储取出的元素的指针(必须非空,否则抛出异常) </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">waitTime_ms</td><td>等待时间（毫秒）,默认为kWaitInfinite(无限等待) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>bool 取出成功返回true,超时/队列空/队列已退出返回false </dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>当value为空指针时抛出 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acb896f0aca5b54570157b4a9528ec529"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SafeQueue::push </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>向队列尾部添加元素(线程安全) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>待添加的元素(右值引用,支持移动语义以减少拷贝开销) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>bool 添加成功返回true,队列已满/队列已退出返回false</dd></dl>
+<ol type="1">
+<li>加锁后检查队列状态,符合条件则移动元素到队列,并唤醒一个等待的消费者线程 </li>
+</ol>
+
+</div>
+</div>
+<a class="anchor" id="af07406186104294fc562099a1f323c71"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t SafeQueue::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取当前队列中的元素数量(线程安全) </p>
+<dl class="section return"><dt>返回</dt><dd>size_t 队列中的元素数量 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad88276e23e33bc1624ed6be68902b3dd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SafeQueue::waitReady </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_lock&lt; std::mutex &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>waitTime_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>等待至队列就绪 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">lock</td><td>已加锁的unique_lock对象（支持临时释放锁） </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">waitTime_ms</td><td>等待时间（毫秒）</td></tr>
+  </table>
+  </dd>
+</dl>
+<ol type="1">
+<li>循环检查队列状态（避免虚假唤醒），根据wati_ms选择无限等待或超时等待<ol type="a">
+<li>直到队列有元素、队列退出或超时等待 </li>
+</ol>
+</li>
+</ol>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="acb8f0f7682a22fed9cd3d9a3e5964dba"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int <a class="el" href="classhandy_1_1SafeQueue.html">handy::SafeQueue</a>&lt; T &gt;::kWaitInfinite = std::numeric_limits&lt;int&gt;::max()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>无限等待时间标识（编译器常量） 当popWait函数的waitTime_ms参数为此值时，表示无限等待直到队列就绪(有元素/退出) </p>
+
+</div>
+</div>
+<a class="anchor" id="aadbbe720d079b4c7824504780519e450"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t <a class="el" href="classhandy_1_1SafeQueue.html">handy::SafeQueue</a>&lt; T &gt;::m_capacity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>队列容量限制（0表示不限制） </p>
+
+</div>
+</div>
+<a class="anchor" id="a120ec80cee7b0bbdd60a50fc90051fb9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::condition_variable <a class="el" href="classhandy_1_1SafeQueue.html">handy::SafeQueue</a>&lt; T &gt;::m_condReady</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>条件变量（用于线程间的同步通知） </p>
+
+</div>
+</div>
+<a class="anchor" id="a092daa6927e7a09bc7f352b31dc12356"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; <a class="el" href="classhandy_1_1SafeQueue.html">handy::SafeQueue</a>&lt; T &gt;::m_isExited</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>队列退出标志（原子变量） </p>
+
+</div>
+</div>
+<a class="anchor" id="a26a75b22b3351f3d22452d6136ab5693"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt;T&gt; <a class="el" href="classhandy_1_1SafeQueue.html">handy::SafeQueue</a>&lt; T &gt;::m_items</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>存储元素的链表容器（适合频繁添加/取出元素） </p>
+
+</div>
+</div>
+<a class="anchor" id="afc366dea5cc102eff156f11c44551c02"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex <a class="el" href="classhandy_1_1SafeQueue.html">handy::SafeQueue</a>&lt; T &gt;::m_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>互斥锁（保护队列操作的线程安全） 采用mutable修饰，允许const成员函数加锁 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>handy/<a class="el" href="thread__pool_8h_source.html">thread_pool.h</a></li>
+<li>handy/<a class="el" href="thread__pool_8cpp.html">thread_pool.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

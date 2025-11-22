@@ -30,8 +30,10 @@ namespace handy
     class SafeQueue : private NonCopyAble
     {
         public:
-            // 无限等待时间标识（编译器常量）
-            // 当popWait函数的waitTime_ms参数为此值时，表示无限等待直到队列就绪(有元素/退出)
+            /** 
+             * 无限等待时间标识（编译器常量）
+             * 当popWait函数的waitTime_ms参数为此值时，表示无限等待直到队列就绪(有元素/退出)
+             */
             static constexpr int kWaitInfinite = std::numeric_limits<int>::max();
 
             /**
@@ -93,24 +95,26 @@ namespace handy
             bool isExited() const noexcept;
 
         private:
-            // 互斥锁（保护队列操作的线程安全）
-            // 采用mutable修饰，允许const成员函数加锁
+            /** 
+             * 互斥锁（保护队列操作的线程安全）
+             * 采用mutable修饰，允许const成员函数加锁
+            */
             mutable std::mutex m_mutex;
 
-            // 条件变量（用于线程间的同步通知）
+            /// 条件变量（用于线程间的同步通知）
             std::condition_variable m_condReady;
 
-            // 存储元素的链表容器（适合频繁添加/取出元素）
+            /// 存储元素的链表容器（适合频繁添加/取出元素）
             std::list<T> m_items;
 
-            // 队列容量限制（0表示不限制）
+            /// 队列容量限制（0表示不限制）
             const size_t m_capacity;
 
-            // 队列退出标志（原子变量）
+            /// 队列退出标志（原子变量）
             std::atomic<bool> m_isExited;
 
             /**
-             * @brief 等待队列就绪
+             * @brief 等待至队列就绪
              * @param[in, out] lock 已加锁的unique_lock对象（支持临时释放锁）
              * @param waitTime_ms 等待时间（毫秒）
              * @details 1. 循环检查队列状态（避免虚假唤醒），根据wati_ms选择无限等待或超时等待
@@ -119,12 +123,15 @@ namespace handy
             void waitReady(std::unique_lock<std::mutex>& lock, int waitTime_ms);
     };
 
-    // 任务类型定义(函数对象)
-    // 线程池执行的任务需符合此类型,可封装普通函数/lambda表达式/函数指针或具有operator()的类对象
+    /** 
+     * 任务类型定义(函数对象)
+     * 线程池执行的任务需符合此类型,可封装普通函数/lambda表达式/函数指针或具有operator()的类对象
+    */
     using Task = std::function<void()>;
 
-    // SafeQueue<Task>的显式实例化声明
-    // 避免模版在多个编译单元中重复实例化,减少编译时间与二进制体积
+    /** SafeQueue<Task>的显式实例化声明
+     * 避免模版在多个编译单元中重复实例化,减少编译时间与二进制体积
+    */
     extern template class SafeQueue<Task>;
 
     /**
@@ -229,18 +236,21 @@ namespace handy
             */
             bool isExited() const noexcept;
         private:
-            // 任务队列（存储待执行的任务）
-            // 复用SafeQueue<Task>实现线程安全的任务存储与分发
+            /** 任务队列（存储待执行的任务）
+             * 复用SafeQueue<Task>实现线程安全的任务存储与分发
+            */
             SafeQueue<Task> m_taskQueue;
 
-            // 存储线程对象的容器
-            // 构造上时预分配内存，避免后续扩容导致的线程对象拷贝
+            /**
+             * 存储线程对象的容器
+             * 构造上时预分配内存，避免后续扩容导致的线程对象拷贝
+            */
             std::vector<std::thread> m_threads;
 
-            // 线程池启动标志（原子变量）
+            /// 线程池启动标志（原子变量）
             std::atomic<bool> m_isStarted;
 
-            // 线程池退出标志（原子变量）
+            /// 线程池退出标志（原子变量）
             std::atomic<bool> m_isExited;
 
             /**
@@ -251,4 +261,4 @@ namespace handy
             */
             void workerLoop();
     };
-} // namespace handy
+} /// namespace handy

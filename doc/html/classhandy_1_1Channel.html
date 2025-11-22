@@ -1,0 +1,925 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy::Channel类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehandy.html">handy</a></li><li class="navelem"><a class="el" href="classhandy_1_1Channel.html">Channel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="classhandy_1_1Channel-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">handy::Channel类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>I/O事件通道类（封装文件描述符与事件处理逻辑）  
+ <a href="classhandy_1_1Channel.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="event__base_8h_source.html">event_base.h</a>&gt;</code></p>
+<div class="dynheader">
+类 handy::Channel 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classhandy_1_1Channel.png" usemap="#handy::Channel_map" alt=""/>
+  <map id="handy::Channel_map" name="handy::Channel_map">
+<area href="classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="handy::NonCopyAble" shape="rect" coords="0,0,132,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a6799f6e926dd77b91e5280f0128d01b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a6799f6e926dd77b91e5280f0128d01b1">Channel</a> (<a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *base, int fd, int events)</td></tr>
+<tr class="memdesc:a6799f6e926dd77b91e5280f0128d01b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化I/O事件通道  <a href="#a6799f6e926dd77b91e5280f0128d01b1">更多...</a><br/></td></tr>
+<tr class="separator:a6799f6e926dd77b91e5280f0128d01b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae682495abcff12eec2b8289e463460c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#ae682495abcff12eec2b8289e463460c7">~Channel</a> ()</td></tr>
+<tr class="memdesc:ae682495abcff12eec2b8289e463460c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭fd并清理事件  <a href="#ae682495abcff12eec2b8289e463460c7">更多...</a><br/></td></tr>
+<tr class="separator:ae682495abcff12eec2b8289e463460c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af57ef4d4c9cb3cf2bf1c9a4faa657bfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#af57ef4d4c9cb3cf2bf1c9a4faa657bfc">getBase</a> () const </td></tr>
+<tr class="memdesc:af57ef4d4c9cb3cf2bf1c9a4faa657bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取关联的事件派发器  <a href="#af57ef4d4c9cb3cf2bf1c9a4faa657bfc">更多...</a><br/></td></tr>
+<tr class="separator:af57ef4d4c9cb3cf2bf1c9a4faa657bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac24c361fc54c9779765afe0a70560d82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#ac24c361fc54c9779765afe0a70560d82">getFd</a> () const </td></tr>
+<tr class="memdesc:ac24c361fc54c9779765afe0a70560d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取关联的文件描述符  <a href="#ac24c361fc54c9779765afe0a70560d82">更多...</a><br/></td></tr>
+<tr class="separator:ac24c361fc54c9779765afe0a70560d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1a10b1a1ac5fd75f41c02ea809a7b4"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a3d1a10b1a1ac5fd75f41c02ea809a7b4">getId</a> () const </td></tr>
+<tr class="memdesc:a3d1a10b1a1ac5fd75f41c02ea809a7b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取通道的唯一ID  <a href="#a3d1a10b1a1ac5fd75f41c02ea809a7b4">更多...</a><br/></td></tr>
+<tr class="separator:a3d1a10b1a1ac5fd75f41c02ea809a7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9e5efe47c6c933b436142641dd2edc2"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#ae9e5efe47c6c933b436142641dd2edc2">getEvents</a> () const </td></tr>
+<tr class="memdesc:ae9e5efe47c6c933b436142641dd2edc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前关注的事件  <a href="#ae9e5efe47c6c933b436142641dd2edc2">更多...</a><br/></td></tr>
+<tr class="separator:ae9e5efe47c6c933b436142641dd2edc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16bfdb9fd8be1db78f17777fb59ebe85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a16bfdb9fd8be1db78f17777fb59ebe85">close</a> ()</td></tr>
+<tr class="memdesc:a16bfdb9fd8be1db78f17777fb59ebe85"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭通道（关闭fd并从poller中删除）  <a href="#a16bfdb9fd8be1db78f17777fb59ebe85">更多...</a><br/></td></tr>
+<tr class="separator:a16bfdb9fd8be1db78f17777fb59ebe85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae27d980514a06cc5e39051e4c57c78c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#ae27d980514a06cc5e39051e4c57c78c1">onRead</a> (<a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &amp;&amp;readcb)</td></tr>
+<tr class="memdesc:ae27d980514a06cc5e39051e4c57c78c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册读事件回调函数（右值引用）  <a href="#ae27d980514a06cc5e39051e4c57c78c1">更多...</a><br/></td></tr>
+<tr class="separator:ae27d980514a06cc5e39051e4c57c78c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9a30f55a447e9901576fe3de1236fcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#ad9a30f55a447e9901576fe3de1236fcb">onRead</a> (const <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &amp;readcb)</td></tr>
+<tr class="memdesc:ad9a30f55a447e9901576fe3de1236fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册读事件回调函数（左值引用）  <a href="#ad9a30f55a447e9901576fe3de1236fcb">更多...</a><br/></td></tr>
+<tr class="separator:ad9a30f55a447e9901576fe3de1236fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d80efc45ae10a60aa38adb7c397390b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a1d80efc45ae10a60aa38adb7c397390b">onWrite</a> (<a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &amp;&amp;writecb)</td></tr>
+<tr class="memdesc:a1d80efc45ae10a60aa38adb7c397390b"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册写事件回调函数（右值引用）  <a href="#a1d80efc45ae10a60aa38adb7c397390b">更多...</a><br/></td></tr>
+<tr class="separator:a1d80efc45ae10a60aa38adb7c397390b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac11e81a35ceed1273a7dfa5dfb9f1bd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#ac11e81a35ceed1273a7dfa5dfb9f1bd3">onWrite</a> (const <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &amp;writecb)</td></tr>
+<tr class="memdesc:ac11e81a35ceed1273a7dfa5dfb9f1bd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册写事件回调函数（左值引用）  <a href="#ac11e81a35ceed1273a7dfa5dfb9f1bd3">更多...</a><br/></td></tr>
+<tr class="separator:ac11e81a35ceed1273a7dfa5dfb9f1bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0499bc3a24e3c502270dae6794ac383d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a0499bc3a24e3c502270dae6794ac383d">enableRead</a> (bool enable)</td></tr>
+<tr class="memdesc:a0499bc3a24e3c502270dae6794ac383d"><td class="mdescLeft">&#160;</td><td class="mdescRight">启用/禁用读事件监听  <a href="#a0499bc3a24e3c502270dae6794ac383d">更多...</a><br/></td></tr>
+<tr class="separator:a0499bc3a24e3c502270dae6794ac383d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa44b6a847b01bfe540252d60a7475f18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#aa44b6a847b01bfe540252d60a7475f18">enableWrite</a> (bool enable)</td></tr>
+<tr class="memdesc:aa44b6a847b01bfe540252d60a7475f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">启用/禁用写事件监听  <a href="#aa44b6a847b01bfe540252d60a7475f18">更多...</a><br/></td></tr>
+<tr class="separator:aa44b6a847b01bfe540252d60a7475f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07dc59cf62631a5d3ce88f70120ac8c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a07dc59cf62631a5d3ce88f70120ac8c6">enableReadWrite</a> (bool readEnable, bool writeEnable)</td></tr>
+<tr class="memdesc:a07dc59cf62631a5d3ce88f70120ac8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">同时控制读/写事件监听  <a href="#a07dc59cf62631a5d3ce88f70120ac8c6">更多...</a><br/></td></tr>
+<tr class="separator:a07dc59cf62631a5d3ce88f70120ac8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027dc8d845e0733a80147caf97e00952"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a027dc8d845e0733a80147caf97e00952">isReadEnabled</a> () const </td></tr>
+<tr class="memdesc:a027dc8d845e0733a80147caf97e00952"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否启用读事件监听  <a href="#a027dc8d845e0733a80147caf97e00952">更多...</a><br/></td></tr>
+<tr class="separator:a027dc8d845e0733a80147caf97e00952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae333f5279801a559cc465d4cc88fcaf8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#ae333f5279801a559cc465d4cc88fcaf8">isWritable</a> () const </td></tr>
+<tr class="memdesc:ae333f5279801a559cc465d4cc88fcaf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否启用写事件监听  <a href="#ae333f5279801a559cc465d4cc88fcaf8">更多...</a><br/></td></tr>
+<tr class="separator:ae333f5279801a559cc465d4cc88fcaf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0037b2a0578f2445f08f9084ad5acfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#ac0037b2a0578f2445f08f9084ad5acfa">handleRead</a> ()</td></tr>
+<tr class="memdesc:ac0037b2a0578f2445f08f9084ad5acfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理读事件（调用注册的读事件回调函数）  <a href="#ac0037b2a0578f2445f08f9084ad5acfa">更多...</a><br/></td></tr>
+<tr class="separator:ac0037b2a0578f2445f08f9084ad5acfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30d1fe2e777cf5508a9de2348b06739"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#ad30d1fe2e777cf5508a9de2348b06739">handleWrite</a> ()</td></tr>
+<tr class="memdesc:ad30d1fe2e777cf5508a9de2348b06739"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理写事件（调用注册的写事件回调函数）  <a href="#ad30d1fe2e777cf5508a9de2348b06739">更多...</a><br/></td></tr>
+<tr class="separator:ad30d1fe2e777cf5508a9de2348b06739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:af253877d64f386d48600d5e57ae4497e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#af253877d64f386d48600d5e57ae4497e">m_base</a></td></tr>
+<tr class="separator:af253877d64f386d48600d5e57ae4497e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5699ca61f2fe5af1be3c5d9fd126df13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1PollerBase.html">PollerBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a5699ca61f2fe5af1be3c5d9fd126df13">m_poller</a></td></tr>
+<tr class="separator:a5699ca61f2fe5af1be3c5d9fd126df13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a254a60999a8fc81e346c46c77f927359"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a254a60999a8fc81e346c46c77f927359">m_fd</a></td></tr>
+<tr class="separator:a254a60999a8fc81e346c46c77f927359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a44ee19d92be6ebdc4f3a21ba860d2b"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a4a44ee19d92be6ebdc4f3a21ba860d2b">m_events</a></td></tr>
+<tr class="separator:a4a44ee19d92be6ebdc4f3a21ba860d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf696c38061cbcc58c3cc8c752863adb"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#abf696c38061cbcc58c3cc8c752863adb">m_id</a></td></tr>
+<tr class="separator:abf696c38061cbcc58c3cc8c752863adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96129da6426099aaa011aa4bb2e1d6f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a96129da6426099aaa011aa4bb2e1d6f1">m_readCB</a></td></tr>
+<tr class="separator:a96129da6426099aaa011aa4bb2e1d6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a477591d3c918fb3dfcf17892c5f0d039"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a477591d3c918fb3dfcf17892c5f0d039">m_writeCB</a></td></tr>
+<tr class="separator:a477591d3c918fb3dfcf17892c5f0d039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00f893a50038051c53adffd7933eeaf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a00f893a50038051c53adffd7933eeaf9">m_errorcb</a></td></tr>
+<tr class="separator:a00f893a50038051c53adffd7933eeaf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a6e3a3c3a69685f3f8a9a90818305f482"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a6e3a3c3a69685f3f8a9a90818305f482">PollerEpoll</a></td></tr>
+<tr class="separator:a6e3a3c3a69685f3f8a9a90818305f482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3756f283df2856ee813045d960b8f907"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a3756f283df2856ee813045d960b8f907">PollerKqueue</a></td></tr>
+<tr class="separator:a3756f283df2856ee813045d960b8f907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_methods_classhandy_1_1NonCopyAble"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classhandy_1_1NonCopyAble')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classhandy_1_1NonCopyAble.html">handy::NonCopyAble</a></td></tr>
+<tr class="memitem:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#af559df4e2ebd8b9e54566633b7bf9855">NonCopyAble</a> ()=default</td></tr>
+<tr class="separator:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#acd1d67f20f33c3f91b64262eed41ef69">~NonCopyAble</a> () noexcept=default</td></tr>
+<tr class="separator:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a281e6b5825279cf9c60cf3bda6d5d23a">NonCopyAble</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a0a3dfd5848777f831e337b3a67b749c8">operator=</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a59f29256ac90ab3415d6fd2028bfd03f">NonCopyAble</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#afb79661bb6df7f5381340e4d3337eaf6">operator=</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>I/O事件通道类（封装文件描述符与事件处理逻辑） </p>
+<ol type="1">
+<li>关联一个文件描述符fd和一个事件派发器EventBase<ol type="a">
+<li>支持注册读/写事件回调，启用/禁用事件监听</li>
+<li>自动管理fd的生命周期，析构时关闭fd并清理事件 <dl class="section note"><dt>注解</dt><dd>1. 不支持多Channel共享fd </dd>
+<dd>
+2. 所有接口需在EventBase对应的循环线程内调用（非线程安全） </dd></dl>
+</li>
+</ol>
+</li>
+</ol>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a6799f6e926dd77b91e5280f0128d01b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::Channel::Channel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>events</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化I/O事件通道 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">base</td><td>关联的事件派发器 </td></tr>
+    <tr><td class="paramname">fd</td><td>关联的文件描述符 </td></tr>
+    <tr><td class="paramname">events</td><td>初始监听的事件类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>设置为非阻塞模式失败 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae682495abcff12eec2b8289e463460c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::Channel::~Channel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭fd并清理事件 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a16bfdb9fd8be1db78f17777fb59ebe85"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Channel::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭通道（关闭fd并从poller中删除） </p>
+
+</div>
+</div>
+<a class="anchor" id="a0499bc3a24e3c502270dae6794ac383d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Channel::enableRead </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>启用/禁用读事件监听 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>true: 启用；false: 禁用 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a07dc59cf62631a5d3ce88f70120ac8c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Channel::enableReadWrite </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>readEnable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>writeEnable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>同时控制读/写事件监听 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">readEnable</td><td>true: 启用读事件监听；false: 禁用读事件监听 </td></tr>
+    <tr><td class="paramname">writeEnable</td><td>true: 启用写事件监听；false: 禁用写事件监听 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa44b6a847b01bfe540252d60a7475f18"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Channel::enableWrite </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>启用/禁用写事件监听 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>true: 启用；false: 禁用 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af57ef4d4c9cb3cf2bf1c9a4faa657bfc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a>* handy::Channel::getBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取关联的事件派发器 </p>
+<dl class="section return"><dt>返回</dt><dd>EventBase* 关联的EventBase指针（非空） </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae9e5efe47c6c933b436142641dd2edc2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short handy::Channel::getEvents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前关注的事件 </p>
+<dl class="section return"><dt>返回</dt><dd>short 事件掩码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac24c361fc54c9779765afe0a70560d82"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int handy::Channel::getFd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取关联的文件描述符 </p>
+<dl class="section return"><dt>返回</dt><dd>int 关联的文件描述符（非负，-1表示已关闭） </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3d1a10b1a1ac5fd75f41c02ea809a7b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t handy::Channel::getId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取通道的唯一ID </p>
+<dl class="section return"><dt>返回</dt><dd>int64_t 通道唯一ID（全局原子生成， 由静态原子变量生成） </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac0037b2a0578f2445f08f9084ad5acfa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Channel::handleRead </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理读事件（调用注册的读事件回调函数） </p>
+<dl class="section note"><dt>注解</dt><dd>仅在Poller检测到可读事件时调用，需确保m_readcb非空 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad30d1fe2e777cf5508a9de2348b06739"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Channel::handleWrite </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理写事件（调用注册的写事件回调函数） </p>
+<dl class="section note"><dt>注解</dt><dd>仅在Poller检测到可写事件时调用，需确保m_writecb非空 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a027dc8d845e0733a80147caf97e00952"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool handy::Channel::isReadEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查是否启用读事件监听 </p>
+<dl class="section return"><dt>返回</dt><dd>bool true: 已启用；false: 未启用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae333f5279801a559cc465d4cc88fcaf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool handy::Channel::isWritable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查是否启用写事件监听 </p>
+<dl class="section return"><dt>返回</dt><dd>bool true: 已启用；false: 未启用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae27d980514a06cc5e39051e4c57c78c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Channel::onRead </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>readcb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册读事件回调函数（右值引用） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">readcb</td><td>读事件触发时执行的回调（非空） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad9a30f55a447e9901576fe3de1236fcb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Channel::onRead </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &amp;&#160;</td>
+          <td class="paramname"><em>readcb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册读事件回调函数（左值引用） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">readcb</td><td>读事件触发时执行的回调（非空） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1d80efc45ae10a60aa38adb7c397390b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Channel::onWrite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>writecb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册写事件回调函数（右值引用） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">writecb</td><td>写事件触发时执行的回调（非空） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac11e81a35ceed1273a7dfa5dfb9f1bd3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Channel::onWrite </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &amp;&#160;</td>
+          <td class="paramname"><em>writecb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册写事件回调函数（左值引用） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">writecb</td><td>写事件触发时执行的回调（非空） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a class="anchor" id="a6e3a3c3a69685f3f8a9a90818305f482"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class PollerEpoll</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3756f283df2856ee813045d960b8f907"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class PollerKqueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="af253877d64f386d48600d5e57ae4497e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a>* handy::Channel::m_base</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a00f893a50038051c53adffd7933eeaf9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> handy::Channel::m_errorcb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4a44ee19d92be6ebdc4f3a21ba860d2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short handy::Channel::m_events</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a254a60999a8fc81e346c46c77f927359"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int handy::Channel::m_fd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abf696c38061cbcc58c3cc8c752863adb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t handy::Channel::m_id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5699ca61f2fe5af1be3c5d9fd126df13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1PollerBase.html">PollerBase</a>* handy::Channel::m_poller</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a96129da6426099aaa011aa4bb2e1d6f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> handy::Channel::m_readCB</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a477591d3c918fb3dfcf17892c5f0d039"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> handy::Channel::m_writeCB</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>handy/<a class="el" href="event__base_8h_source.html">event_base.h</a></li>
+<li>handy/<a class="el" href="event__base_8cpp.html">event_base.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

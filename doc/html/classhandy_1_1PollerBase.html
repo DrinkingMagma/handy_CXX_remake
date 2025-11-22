@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy::PollerBase类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehandy.html">handy</a></li><li class="navelem"><a class="el" href="classhandy_1_1PollerBase.html">PollerBase</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="#pro-static-attribs">静态 Protected 属性</a> &#124;
+<a href="classhandy_1_1PollerBase-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">handy::PollerBase类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>事件轮询器基类（抽象类）  
+ <a href="classhandy_1_1PollerBase.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="poller_8h_source.html">poller.h</a>&gt;</code></p>
+<div class="dynheader">
+类 handy::PollerBase 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classhandy_1_1PollerBase.png" usemap="#handy::PollerBase_map" alt=""/>
+  <map id="handy::PollerBase_map" name="handy::PollerBase_map">
+<area href="classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="handy::NonCopyAble" shape="rect" coords="0,0,132,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac62cf63430f68c9eb0fe32bf5f395f62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1PollerBase.html#ac62cf63430f68c9eb0fe32bf5f395f62">PollerBase</a> ()</td></tr>
+<tr class="memdesc:ac62cf63430f68c9eb0fe32bf5f395f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <a href="#ac62cf63430f68c9eb0fe32bf5f395f62">更多...</a><br/></td></tr>
+<tr class="separator:ac62cf63430f68c9eb0fe32bf5f395f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72e1bb8f74c4870d831d7846f6df3c1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1PollerBase.html#ad72e1bb8f74c4870d831d7846f6df3c1">~PollerBase</a> ()=default</td></tr>
+<tr class="memdesc:ad72e1bb8f74c4870d831d7846f6df3c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数（纯虚函数）  <a href="#ad72e1bb8f74c4870d831d7846f6df3c1">更多...</a><br/></td></tr>
+<tr class="separator:ad72e1bb8f74c4870d831d7846f6df3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bdd5c937d665e188bc16eaf147d8a03"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1PollerBase.html#a4bdd5c937d665e188bc16eaf147d8a03">addChannel</a> (<a class="el" href="classhandy_1_1Channel.html">Channel</a> *ch)=0</td></tr>
+<tr class="memdesc:a4bdd5c937d665e188bc16eaf147d8a03"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加事件通知到轮询器  <a href="#a4bdd5c937d665e188bc16eaf147d8a03">更多...</a><br/></td></tr>
+<tr class="separator:a4bdd5c937d665e188bc16eaf147d8a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a160f912c38d27a373c45e3c43cc56775"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1PollerBase.html#a160f912c38d27a373c45e3c43cc56775">removeChannel</a> (<a class="el" href="classhandy_1_1Channel.html">Channel</a> *ch)=0</td></tr>
+<tr class="memdesc:a160f912c38d27a373c45e3c43cc56775"><td class="mdescLeft">&#160;</td><td class="mdescRight">从轮询器中移除事件通道  <a href="#a160f912c38d27a373c45e3c43cc56775">更多...</a><br/></td></tr>
+<tr class="separator:a160f912c38d27a373c45e3c43cc56775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18dd0b82f39e3ef86f38ed8c2c78d173"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1PollerBase.html#a18dd0b82f39e3ef86f38ed8c2c78d173">updateChannel</a> (<a class="el" href="classhandy_1_1Channel.html">Channel</a> *ch)=0</td></tr>
+<tr class="memdesc:a18dd0b82f39e3ef86f38ed8c2c78d173"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新轮询器中的事件通道的监控事件  <a href="#a18dd0b82f39e3ef86f38ed8c2c78d173">更多...</a><br/></td></tr>
+<tr class="separator:a18dd0b82f39e3ef86f38ed8c2c78d173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cbbac312e1b99bdf53f532d49ac22fa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1PollerBase.html#a1cbbac312e1b99bdf53f532d49ac22fa">loopOnce</a> (int waitTime_ms)=0</td></tr>
+<tr class="memdesc:a1cbbac312e1b99bdf53f532d49ac22fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行一次事件轮询  <a href="#a1cbbac312e1b99bdf53f532d49ac22fa">更多...</a><br/></td></tr>
+<tr class="separator:a1cbbac312e1b99bdf53f532d49ac22fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1937333f52a325238fe2d3c5f4b7f689"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1PollerBase.html#a1937333f52a325238fe2d3c5f4b7f689">getId</a> () const noexcept</td></tr>
+<tr class="memdesc:a1937333f52a325238fe2d3c5f4b7f689"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取轮询器唯一ID  <a href="#a1937333f52a325238fe2d3c5f4b7f689">更多...</a><br/></td></tr>
+<tr class="separator:a1937333f52a325238fe2d3c5f4b7f689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:ab942dbf74c9e35ff1c29f796453e79b3"><td class="memItemLeft" align="right" valign="top">const int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1PollerBase.html#ab942dbf74c9e35ff1c29f796453e79b3">m_id</a></td></tr>
+<tr class="separator:ab942dbf74c9e35ff1c29f796453e79b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4891155fdee585587ac1278793a89a02"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1PollerBase.html#a4891155fdee585587ac1278793a89a02">m_lastActive</a></td></tr>
+<tr class="separator:a4891155fdee585587ac1278793a89a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+静态 Protected 属性</h2></td></tr>
+<tr class="memitem:a5e0851c1a0dc2256ee44a28104d0985e"><td class="memItemLeft" align="right" valign="top">static std::atomic&lt; int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1PollerBase.html#a5e0851c1a0dc2256ee44a28104d0985e">globalId</a></td></tr>
+<tr class="separator:a5e0851c1a0dc2256ee44a28104d0985e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_methods_classhandy_1_1NonCopyAble"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classhandy_1_1NonCopyAble')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classhandy_1_1NonCopyAble.html">handy::NonCopyAble</a></td></tr>
+<tr class="memitem:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#af559df4e2ebd8b9e54566633b7bf9855">NonCopyAble</a> ()=default</td></tr>
+<tr class="separator:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#acd1d67f20f33c3f91b64262eed41ef69">~NonCopyAble</a> () noexcept=default</td></tr>
+<tr class="separator:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a281e6b5825279cf9c60cf3bda6d5d23a">NonCopyAble</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a0a3dfd5848777f831e337b3a67b749c8">operator=</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a59f29256ac90ab3415d6fd2028bfd03f">NonCopyAble</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#afb79661bb6df7f5381340e4d3337eaf6">operator=</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>事件轮询器基类（抽象类） </p>
+<ol type="1">
+<li>定义I/O事件轮询的统一接口，屏蔽不同操作系统(Linux/macOS)的底层差异<ol type="a">
+<li>采用私有继承NonCopyAble，禁止拷贝与移动，确保对象唯一性</li>
+<li>提供纯虚函数接口，由派生类实现具体的轮询逻辑（如epoll/kqueue） <dl class="section note"><dt>注解</dt><dd>基类仅保证成员变量的原子性，派生类需自行保证事件操作的线程安全 </dd></dl>
+</li>
+</ol>
+</li>
+</ol>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ac62cf63430f68c9eb0fe32bf5f395f62"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::PollerBase::PollerBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+<p>初始化最后活跃事件索引，生成唯一的轮询器ID（线程安全） </p>
+
+</div>
+</div>
+<a class="anchor" id="ad72e1bb8f74c4870d831d7846f6df3c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual handy::PollerBase::~PollerBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构函数（纯虚函数） </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a4bdd5c937d665e188bc16eaf147d8a03"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void handy::PollerBase::addChannel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1Channel.html">Channel</a> *&#160;</td>
+          <td class="paramname"><em>ch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>添加事件通知到轮询器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ch</td><td>待添加的Channel对象指针（非空） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>ch为空指针 </td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>底层系统调用失败 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1937333f52a325238fe2d3c5f4b7f689"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t handy::PollerBase::getId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取轮询器唯一ID </p>
+<dl class="section return"><dt>返回</dt><dd>int64_t 轮询器唯一ID（非负整数） </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1cbbac312e1b99bdf53f532d49ac22fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int handy::PollerBase::loopOnce </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>waitTime_ms</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>执行一次事件轮询 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">waitTime_ms</td><td>等待事件的超时时间（毫秒），-1表示无限等待 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 本次轮询触发的活跃事件数量 </dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>底层系统调用失败（信号中断除外） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a160f912c38d27a373c45e3c43cc56775"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void handy::PollerBase::removeChannel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1Channel.html">Channel</a> *&#160;</td>
+          <td class="paramname"><em>ch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从轮询器中移除事件通道 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ch</td><td>待移除的Channel对象指针（非空） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>ch为空指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a18dd0b82f39e3ef86f38ed8c2c78d173"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void handy::PollerBase::updateChannel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1Channel.html">Channel</a> *&#160;</td>
+          <td class="paramname"><em>ch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新轮询器中的事件通道的监控事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ch</td><td>待更新的Channel对象指针（非空） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>ch为空指针 </td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>底层系统调用失败 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a5e0851c1a0dc2256ee44a28104d0985e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt; int64_t &gt; handy::PollerBase::globalId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab942dbf74c9e35ff1c29f796453e79b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int64_t handy::PollerBase::m_id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4891155fdee585587ac1278793a89a02"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int handy::PollerBase::m_lastActive</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>handy/<a class="el" href="poller_8h_source.html">poller.h</a></li>
+<li>handy/<a class="el" href="poller_8cpp.html">poller.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

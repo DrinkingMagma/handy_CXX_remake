@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy/port_posix.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_32ffdd1374fa2f424904bdef8ac66f3e.html">handy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">port_posix.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>跨平台端口工具函数，提供字节序转换、主机名解析和线程ID获取等功能  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;netinet/in.h&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;cstdint&gt;</code><br/>
+<code>#include &lt;endian.h&gt;</code><br/>
+</div>
+<p><a href="port__posix_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacehandy"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html">handy</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacehandy_1_1port"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html">handy::port</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ada33f950eea2ad0a8b424d009eaead30"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">handy::port::htobe</a> (uint16_t v)</td></tr>
+<tr class="memdesc:ada33f950eea2ad0a8b424d009eaead30"><td class="mdescLeft">&#160;</td><td class="mdescRight">将16位无符号整数从主机字节序转换为大端字节序（网络字节序）  <a href="#ada33f950eea2ad0a8b424d009eaead30">更多...</a><br/></td></tr>
+<tr class="separator:ada33f950eea2ad0a8b424d009eaead30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4917ce27a5c2a54e8f6a161d8ccc33a4"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#a4917ce27a5c2a54e8f6a161d8ccc33a4">handy::port::htobe</a> (uint32_t v)</td></tr>
+<tr class="memdesc:a4917ce27a5c2a54e8f6a161d8ccc33a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">将32位无符号整数从主机字节序转换为大端字节序（网络字节序）  <a href="#a4917ce27a5c2a54e8f6a161d8ccc33a4">更多...</a><br/></td></tr>
+<tr class="separator:a4917ce27a5c2a54e8f6a161d8ccc33a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71fe4bbacfc84ff3dcb32f2b1f7a01e4"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#a71fe4bbacfc84ff3dcb32f2b1f7a01e4">handy::port::htobe</a> (uint64_t v)</td></tr>
+<tr class="memdesc:a71fe4bbacfc84ff3dcb32f2b1f7a01e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">将64位无符号整数从主机字节序转换为大端字节序（网络字节序）  <a href="#a71fe4bbacfc84ff3dcb32f2b1f7a01e4">更多...</a><br/></td></tr>
+<tr class="separator:a71fe4bbacfc84ff3dcb32f2b1f7a01e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab31f1fda097c31daeee0487b75fd7940"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#ab31f1fda097c31daeee0487b75fd7940">handy::port::htobe</a> (int16_t v)</td></tr>
+<tr class="memdesc:ab31f1fda097c31daeee0487b75fd7940"><td class="mdescLeft">&#160;</td><td class="mdescRight">将16位有符号整数从主机字节序转换为大端字节序（网络字节序）  <a href="#ab31f1fda097c31daeee0487b75fd7940">更多...</a><br/></td></tr>
+<tr class="separator:ab31f1fda097c31daeee0487b75fd7940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41658d12263a30eb6b76121876e5ad4e"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#a41658d12263a30eb6b76121876e5ad4e">handy::port::htobe</a> (int32_t v)</td></tr>
+<tr class="memdesc:a41658d12263a30eb6b76121876e5ad4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">将32位有符号整数从主机字节序转换为大端字节序（网络字节序）  <a href="#a41658d12263a30eb6b76121876e5ad4e">更多...</a><br/></td></tr>
+<tr class="separator:a41658d12263a30eb6b76121876e5ad4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05bb8e47424f1c8e2ae2fed618737ec3"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#a05bb8e47424f1c8e2ae2fed618737ec3">handy::port::htobe</a> (int64_t v)</td></tr>
+<tr class="memdesc:a05bb8e47424f1c8e2ae2fed618737ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">将64位有符号整数从主机字节序转换为大端字节序（网络字节序）  <a href="#a05bb8e47424f1c8e2ae2fed618737ec3">更多...</a><br/></td></tr>
+<tr class="separator:a05bb8e47424f1c8e2ae2fed618737ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f1b74470622c97466be3c98a6e0929f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">handy::port::betoh</a> (uint16_t v)</td></tr>
+<tr class="memdesc:a5f1b74470622c97466be3c98a6e0929f"><td class="mdescLeft">&#160;</td><td class="mdescRight">将16位无符号整数从大端字节序（网络字节序）转换为主机字节序  <a href="#a5f1b74470622c97466be3c98a6e0929f">更多...</a><br/></td></tr>
+<tr class="separator:a5f1b74470622c97466be3c98a6e0929f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a756677f210cc9ea97e434431c7c0689b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#a756677f210cc9ea97e434431c7c0689b">handy::port::betoh</a> (uint32_t v)</td></tr>
+<tr class="memdesc:a756677f210cc9ea97e434431c7c0689b"><td class="mdescLeft">&#160;</td><td class="mdescRight">将32位无符号整数从大端字节序（网络字节序）转换为主机字节序  <a href="#a756677f210cc9ea97e434431c7c0689b">更多...</a><br/></td></tr>
+<tr class="separator:a756677f210cc9ea97e434431c7c0689b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea3a66394d7c96de8eb0c73ee1e80b49"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#aea3a66394d7c96de8eb0c73ee1e80b49">handy::port::betoh</a> (uint64_t v)</td></tr>
+<tr class="memdesc:aea3a66394d7c96de8eb0c73ee1e80b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">将64位无符号整数从大端字节序（网络字节序）转换为主机字节序  <a href="#aea3a66394d7c96de8eb0c73ee1e80b49">更多...</a><br/></td></tr>
+<tr class="separator:aea3a66394d7c96de8eb0c73ee1e80b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c5b71e9deffbe1f59af0a66ff8d8585"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#a3c5b71e9deffbe1f59af0a66ff8d8585">handy::port::betoh</a> (int16_t v)</td></tr>
+<tr class="memdesc:a3c5b71e9deffbe1f59af0a66ff8d8585"><td class="mdescLeft">&#160;</td><td class="mdescRight">将16位有符号整数从大端字节序（网络字节序）转换为主机字节序  <a href="#a3c5b71e9deffbe1f59af0a66ff8d8585">更多...</a><br/></td></tr>
+<tr class="separator:a3c5b71e9deffbe1f59af0a66ff8d8585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa1b47c7a46e055ab2b49e62e4d9e23"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#a1fa1b47c7a46e055ab2b49e62e4d9e23">handy::port::betoh</a> (int32_t v)</td></tr>
+<tr class="memdesc:a1fa1b47c7a46e055ab2b49e62e4d9e23"><td class="mdescLeft">&#160;</td><td class="mdescRight">将32位有符号整数从大端字节序（网络字节序）转换为主机字节序  <a href="#a1fa1b47c7a46e055ab2b49e62e4d9e23">更多...</a><br/></td></tr>
+<tr class="separator:a1fa1b47c7a46e055ab2b49e62e4d9e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9f3794631e3c79b6b621a3b0f4c0936"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#ae9f3794631e3c79b6b621a3b0f4c0936">handy::port::betoh</a> (int64_t v)</td></tr>
+<tr class="memdesc:ae9f3794631e3c79b6b621a3b0f4c0936"><td class="mdescLeft">&#160;</td><td class="mdescRight">将64位有符号整数从大端字节序（网络字节序）转换为主机字节序  <a href="#ae9f3794631e3c79b6b621a3b0f4c0936">更多...</a><br/></td></tr>
+<tr class="separator:ae9f3794631e3c79b6b621a3b0f4c0936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1587cf54ea7cefa3d01e75f3f1d797"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#a4f1587cf54ea7cefa3d01e75f3f1d797">handy::port::getHostByName</a> (const std::string &amp;host, struct in_addr &amp;result)</td></tr>
+<tr class="memdesc:a4f1587cf54ea7cefa3d01e75f3f1d797"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过主机名获取对应的IPv4地址  <a href="#a4f1587cf54ea7cefa3d01e75f3f1d797">更多...</a><br/></td></tr>
+<tr class="separator:a4f1587cf54ea7cefa3d01e75f3f1d797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a567b307772bdf552317eb5e48f70cf1e"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#a567b307772bdf552317eb5e48f70cf1e">handy::port::getCurrentThreadId</a> ()</td></tr>
+<tr class="memdesc:a567b307772bdf552317eb5e48f70cf1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前线程的唯一标识  <a href="#a567b307772bdf552317eb5e48f70cf1e">更多...</a><br/></td></tr>
+<tr class="separator:a567b307772bdf552317eb5e48f70cf1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a944d00efd76b149e785f1143daafaf77"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#a944d00efd76b149e785f1143daafaf77">handy::port::addrToString</a> (const struct in_addr *addr)</td></tr>
+<tr class="memdesc:a944d00efd76b149e785f1143daafaf77"><td class="mdescLeft">&#160;</td><td class="mdescRight">将IPv4地址结构转换为字符串表示  <a href="#a944d00efd76b149e785f1143daafaf77">更多...</a><br/></td></tr>
+<tr class="separator:a944d00efd76b149e785f1143daafaf77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d02bcb571e941fa210c21affef41aa2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#a6d02bcb571e941fa210c21affef41aa2">handy::port::stringToAddr</a> (const std::string &amp;ip, struct in_addr *addr)</td></tr>
+<tr class="memdesc:a6d02bcb571e941fa210c21affef41aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">将IPv4地址字符串转换为in_addr结构  <a href="#a6d02bcb571e941fa210c21affef41aa2">更多...</a><br/></td></tr>
+<tr class="separator:a6d02bcb571e941fa210c21affef41aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a29a807d5afbb98f852526afad4c3ccac"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1port.html#a29a807d5afbb98f852526afad4c3ccac">handy::port::kLittleEndian</a> = (__BYTE_ORDER == __LITTLE_ENDIAN)</td></tr>
+<tr class="memdesc:a29a807d5afbb98f852526afad4c3ccac"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示当前系统是否为小端字节序  <a href="#a29a807d5afbb98f852526afad4c3ccac">更多...</a><br/></td></tr>
+<tr class="separator:a29a807d5afbb98f852526afad4c3ccac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>跨平台端口工具函数，提供字节序转换、主机名解析和线程ID获取等功能 </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

@@ -1,7 +1,21 @@
 /**
  * @file event_base.h
- * @brief 事件驱动框架核心头文件，包含事件循环、定时器、通道管理等核心组件
-*/
+ * @brief 事件驱动框架核心头文件，定义事件循环、多线程事件管理、I/O通道等核心组件
+ * @details 
+ *  该文件是事件驱动框架的基础，提供了构建高性能网络应用的核心抽象，主要包含：
+ *  1. 核心类型定义：TCP连接指针、回调函数类型（TcpCallBack、MsgCallBack）、通用任务类型（Task）等；
+ *  2. 事件循环类（EventBase）：单线程事件派发器，管理I/O事件、定时器、异步任务，支持任务投递和事件唤醒；
+ *  3. 多线程事件管理类（MultiBase）：管理多个EventBase实例，通过轮询实现负载均衡，提升并发处理能力；
+ *  4. I/O通道类（Channel）：封装文件描述符（fd）和事件处理逻辑，支持注册读/写事件回调，自动管理fd生命周期；
+ *  5. 辅助结构体：定时器信息（TimerRepeatable）、空闲连接信息（IdleNode）等，支撑框架的定时器和连接管理功能。
+ * @note 
+ *  1. 线程安全：EventBase的非线程安全接口需在其对应的事件循环线程内调用，safeCall()是线程安全的任务投递接口；
+ *  2. 多线程模型：MultiBase通过多个EventBase实例实现多线程处理，每个实例对应一个事件循环线程；
+ *  3. I/O事件管理：Channel类是fd和事件处理的桥梁，不支持多Channel共享同一个fd；
+ *  4. 定时器支持：EventBase支持一次性和周期性定时器，通过TimerId进行管理和取消；
+ *  5. 依赖：需配合poller.h（I/O多路复用）、utils.h（工具函数）等头文件使用，编译时需启用C++11及以上标准。
+ */
+
 #pragma once
 #include "handy-imp.h"
 #include "poller.h"
@@ -9,27 +23,27 @@
 
 namespace handy
 {
-    typedef std::shared_ptr<TcpConn> TcpConnPtr;   // TCP连接指针
-    typedef std::shared_ptr<TCPServer> TcpServerPtr; // TCP服务器指针（管理服务器生命周期）
-    typedef std::function<void(const TcpConnPtr&)> TcpCallBack; // TCP连接相关回调（如连接建立/关闭）
-    typedef std::function<void(const TcpConnPtr&, const Slice&)> MsgCallBack;  // 消息处理回调（接受连接与消息切片）
-    typedef std::function<void()> Task; // 通用任务回调（无参数无返回值，用于异步任务/事件处理
+    typedef std::shared_ptr<TcpConn> TcpConnPtr;   /// TCP连接指针
+    typedef std::shared_ptr<TCPServer> TcpServerPtr; /// TCP服务器指针（管理服务器生命周期）
+    typedef std::function<void(const TcpConnPtr&)> TcpCallBack; /// TCP连接相关回调（如连接建立/关闭）
+    typedef std::function<void(const TcpConnPtr&, const Slice&)> MsgCallBack;  /// 消息处理回调（接受连接与消息切片）
+    typedef std::function<void()> Task; /// 通用任务回调（无参数无返回值，用于异步任务/事件处理
     
-    // 可重复定时器结构体（存储重读定时器的核心信息）
+    /// 可重复定时器结构体（存储重读定时器的核心信息）
     struct TimerRepeatable
     {
-        int64_t at;             // 下一次超时时间戳（毫秒）
-        int64_t interval_ms;    // 定时器重复间隔（毫秒）
-        TimerId timerIdPair;        // 当前周期的定时器ID（用于取消）
-        Task task;              // 定时器触发时执行的任务（回调函数）
+        int64_t at;             /// 下一次超时时间戳（毫秒）
+        int64_t interval_ms;    /// 定时器重复间隔（毫秒）
+        TimerId timerIdPair;        /// 当前周期的定时器ID（用于取消）
+        Task task;              /// 定时器触发时执行的任务（回调函数）
     };
 
-    // 空闲连接节点结构体（存储单个空闲连接的管理信息）
+    /// 空闲连接节点结构体（存储单个空闲连接的管理信息）
     struct IdleNode
     {
-        TcpConnPtr conn;        // 空闲连接的智能指针（需确保连接不被提前释放）
-        int64_t lastUpdatedTimestamp_s;  // 最后一次活跃时间戳（单位：秒）
-        TcpCallBack cb;         // 空闲超时触发的回调函数（如关闭连接/发送心跳）
+        TcpConnPtr conn;        /// 空闲连接的智能指针（需确保连接不被提前释放）
+        int64_t lastUpdatedTimestamp_s;  /// 最后一次活跃时间戳（单位：秒）
+        TcpCallBack cb;         /// 空闲超时触发的回调函数（如关闭连接/发送心跳）
     };
 
     /**
@@ -37,7 +51,7 @@ namespace handy
     */
     struct IdleIdImp
     {
-        // 空闲连接列表迭代器类型
+        /// 空闲连接列表迭代器类型
         using Iter = std::list<IdleNode>::iterator;
 
         /**
@@ -48,8 +62,8 @@ namespace handy
         IdleIdImp(std::list<IdleNode>* lst, Iter iter)
             : m_lst(lst), m_iter(iter) {}
 
-        std::list<IdleNode>* m_lst;     // 空闲连接列表指针
-        Iter m_iter;                    // 列表迭代器(指向当前空闲的连接节点)
+        std::list<IdleNode>* m_lst;     /// 空闲连接列表指针
+        Iter m_iter;                    /// 列表迭代器(指向当前空闲的连接节点)
     };
 
     /**
@@ -207,10 +221,10 @@ namespace handy
                 return m_imp.get();
             }
         private:
-            std::unique_ptr<EventsImp> m_imp; // 事件派发器内部实现对象
+            std::unique_ptr<EventsImp> m_imp; /// 事件派发器内部实现对象
 
-            friend struct EventsImp; // 允许Pimpl实现类访问主类私有成员，实现内部协作
-            friend class TcpConn;   // 允许TCP连接类直接操作事件派发器内部状态，避免暴露底层接口
+            friend struct EventsImp; /// 允许Pimpl实现类访问主类私有成员，实现内部协作
+            friend class TcpConn;   /// 允许TCP连接类直接操作事件派发器内部状态，避免暴露底层接口
     };
 
     /**
@@ -249,9 +263,9 @@ namespace handy
             */
             EventBase* allocBase() override;
         private:
-            std::atomic<int> m_id;  // 计数器，用于轮询分配EventBase
-            std::vector<EventBase> m_bases; // 存储所有EventBase对象
-            std::vector<std::thread> m_threads; // 存储所有事件循环线程(大小为m_bases.size() - 1，主线程运行最后一个EventBase)
+            std::atomic<int> m_id;  /// 计数器，用于轮询分配EventBase
+            std::vector<EventBase> m_bases; /// 存储所有EventBase对象
+            std::vector<std::thread> m_threads; /// 存储所有事件循环线程(大小为m_bases.size() - 1，主线程运行最后一个EventBase)
     };
 
     /**
@@ -417,16 +431,29 @@ namespace handy
             }
 
         private:
-            EventBase* m_base;      // 关联的事件派发器（非空）
-            PollerBase* m_poller;   // 关联的轮询器（从EventBase中获取）
-            int m_fd;               // 关联的文件描述符（非负，-1标识已关闭）
-            short m_events;         // 当前关注的事件掩码（EPOLLIN/EPOLLOUT等）
-            int64_t m_id;           // 通道唯一ID（全局原子生成）
-            Task m_readCB;          // 读事件回调
-            Task m_writeCB;         // 写事件回调
-            Task m_errorcb;         // 错误事件回调
+            EventBase* m_base;      /// 关联的事件派发器（非空）
+            PollerBase* m_poller;   /// 关联的轮询器（从EventBase中获取）
+            int m_fd;               /// 关联的文件描述符（非负，-1标识已关闭）
+            short m_events;         /// 当前关注的事件掩码（EPOLLIN/EPOLLOUT等）
+            int64_t m_id;           /// 通道唯一ID（全局原子生成）
+            Task m_readCB;          /// 读事件回调
+            Task m_writeCB;         /// 写事件回调
+            Task m_errorcb;         /// 错误事件回调
 
+            /**
+             * @brief 允许 PollerEpoll 访问 Channel 的私有成员
+             * 
+             * PollerEpoll 是基于 epoll 的 I/O 多路复用实现，需要直接操作 Channel 的文件描述符、事件类型等私有数据，
+             * 以完成事件的注册、修改和删除。
+             */
             friend class PollerEpoll;
+            
+            /**
+             * @brief 允许 PollerKqueue 访问 Channel 的私有成员
+             * 
+             * PollerKqueue 是基于 kqueue 的 I/O 多路复用实现，需要直接操作 Channel 的文件描述符、事件类型等私有数据，
+             * 以完成事件的注册、修改和删除。
+             */
             friend class PollerKqueue;
     };
 

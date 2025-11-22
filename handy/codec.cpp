@@ -1,3 +1,18 @@
+/**
+ * @file codec.cpp
+ * @brief 编解码器实现文件（LineCodec 与 LengthCodec）
+ * @details
+ * 1. 实现 CodecBase 基类定义的纯虚函数，提供具体的编解码逻辑
+ * 2. LineCodec支持\\r与\\r\\n两种换行分隔符，自动识别并处理
+ * 3. LengthCodec 采用 4 字节魔法字 + 4 字节长度前缀的协议格式，确保消息完整性与合法性
+ * 4. 所有编解码操作均通过互斥锁保证线程安全，支持多线程并发调用
+ * @note
+ * 依赖 codec.h、net.h、slice.h、buffer.h 等头文件
+ * 编译时需链接 pthread 库（支持互斥锁）
+ * 消息编码时会进行合法性校验，非法输入会抛出异常
+*/
+
+
 #include "codec.h"
 #include <iostream>
 

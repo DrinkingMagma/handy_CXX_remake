@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy/daemon.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_32ffdd1374fa2f424904bdef8ac66f3e.html">handy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">daemon.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="daemon_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;csignal&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>handy</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classhandy_1_1Daemon.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classhandy_1_1Daemon.html">Daemon</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classhandy_1_1Daemon.html#a3e86b062fd8967dd448455bdc73c53cd">start</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pidFilePath);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classhandy_1_1Daemon.html#aafa40b3e5938a3e9cbfeadabe1ee0fd8">restart</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pidFilePath);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classhandy_1_1Daemon.html#a542577d85c2cde3b563c3661ccda0e80">stop</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pidFilePath);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classhandy_1_1Daemon.html#a43b7d49312a5972bde56a14a95ebb815">getPidFromFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pidFilePath);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1Daemon.html#a301dc0a520e61a5f46ecd2ffb7d3d91f">process</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* cmd, <span class="keyword">const</span> <span class="keywordtype">char</span>* pidFilePath);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1Daemon.html#a4cb915cd68c0d78512ae5790160eb7d7">changeTo</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* argv[]);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classhandy_1_1Daemon.html#a1e9cab5021af8a73b485e80fd47f10a0">_writePidFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pidFilePath);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    };</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classhandy_1_1Signal.html">   82</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classhandy_1_1Signal.html">Signal</a></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1Signal.html#aee24b9f0b0cd79e6be63fc1fd0a8b149">signal</a>(<span class="keywordtype">int</span> sig, <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; handler);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1Signal.html#a6d993972ec93b71aade25986ec825635">_signalHandler</a>(<span class="keywordtype">int</span> sig);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    };</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}   <span class="comment">// namespace handy</span></div>
+<div class="ttc" id="classhandy_1_1Daemon_html_a4cb915cd68c0d78512ae5790160eb7d7"><div class="ttname"><a href="classhandy_1_1Daemon.html#a4cb915cd68c0d78512ae5790160eb7d7">handy::Daemon::changeTo</a></div><div class="ttdeci">static void changeTo(const char *argv[])</div><div class="ttdoc">创建子进程并在父进程退出后执行新程序 </div><div class="ttdef"><b>Definition:</b> daemon.cpp:408</div></div>
+<div class="ttc" id="classhandy_1_1Daemon_html_a542577d85c2cde3b563c3661ccda0e80"><div class="ttname"><a href="classhandy_1_1Daemon.html#a542577d85c2cde3b563c3661ccda0e80">handy::Daemon::stop</a></div><div class="ttdeci">static int stop(const char *pidFilePath)</div><div class="ttdoc">停止当前运行的守护进程 </div><div class="ttdef"><b>Definition:</b> daemon.cpp:272</div></div>
+<div class="ttc" id="classhandy_1_1Daemon_html_aafa40b3e5938a3e9cbfeadabe1ee0fd8"><div class="ttname"><a href="classhandy_1_1Daemon.html#aafa40b3e5938a3e9cbfeadabe1ee0fd8">handy::Daemon::restart</a></div><div class="ttdeci">static int restart(const char *pidFilePath)</div><div class="ttdoc">重启守护进程 </div><div class="ttdef"><b>Definition:</b> daemon.cpp:342</div></div>
+<div class="ttc" id="classhandy_1_1Signal_html_a6d993972ec93b71aade25986ec825635"><div class="ttname"><a href="classhandy_1_1Signal.html#a6d993972ec93b71aade25986ec825635">handy::Signal::_signalHandler</a></div><div class="ttdeci">static void _signalHandler(int sig)</div><div class="ttdoc">信号处理分发函数 </div><div class="ttdef"><b>Definition:</b> daemon.cpp:461</div></div>
+<div class="ttc" id="classhandy_1_1Daemon_html_a3e86b062fd8967dd448455bdc73c53cd"><div class="ttname"><a href="classhandy_1_1Daemon.html#a3e86b062fd8967dd448455bdc73c53cd">handy::Daemon::start</a></div><div class="ttdeci">static int start(const char *pidFilePath)</div><div class="ttdoc">启动一个新的守护进程 </div><div class="ttdef"><b>Definition:</b> daemon.cpp:157</div></div>
+<div class="ttc" id="classhandy_1_1Daemon_html_a1e9cab5021af8a73b485e80fd47f10a0"><div class="ttname"><a href="classhandy_1_1Daemon.html#a1e9cab5021af8a73b485e80fd47f10a0">handy::Daemon::_writePidFile</a></div><div class="ttdeci">static int _writePidFile(const char *pidFilePath)</div><div class="ttdoc">将当前进程的PID写入指定的PID文件 </div><div class="ttdef"><b>Definition:</b> daemon.cpp:50</div></div>
+<div class="ttc" id="classhandy_1_1Daemon_html"><div class="ttname"><a href="classhandy_1_1Daemon.html">handy::Daemon</a></div><div class="ttdoc">守护进程管理类，负责守护进程的启动、停止、重启等操作 </div><div class="ttdef"><b>Definition:</b> daemon.h:18</div></div>
+<div class="ttc" id="classhandy_1_1Daemon_html_a301dc0a520e61a5f46ecd2ffb7d3d91f"><div class="ttname"><a href="classhandy_1_1Daemon.html#a301dc0a520e61a5f46ecd2ffb7d3d91f">handy::Daemon::process</a></div><div class="ttdeci">static void process(const char *cmd, const char *pidFilePath)</div><div class="ttdoc">根据命令执行守护进程的对应操作 </div><div class="ttdef"><b>Definition:</b> daemon.cpp:372</div></div>
+<div class="ttc" id="classhandy_1_1Daemon_html_a43b7d49312a5972bde56a14a95ebb815"><div class="ttname"><a href="classhandy_1_1Daemon.html#a43b7d49312a5972bde56a14a95ebb815">handy::Daemon::getPidFromFile</a></div><div class="ttdeci">static int getPidFromFile(const char *pidFilePath)</div><div class="ttdoc">从指定的pid文件中读取守护进程的PID </div><div class="ttdef"><b>Definition:</b> daemon.cpp:106</div></div>
+<div class="ttc" id="classhandy_1_1Signal_html_aee24b9f0b0cd79e6be63fc1fd0a8b149"><div class="ttname"><a href="classhandy_1_1Signal.html#aee24b9f0b0cd79e6be63fc1fd0a8b149">handy::Signal::signal</a></div><div class="ttdeci">static void signal(int sig, const std::function&lt; void()&gt; &amp;handler)</div><div class="ttdoc">注册信号处理函数 </div><div class="ttdef"><b>Definition:</b> daemon.cpp:479</div></div>
+<div class="ttc" id="classhandy_1_1Signal_html"><div class="ttname"><a href="classhandy_1_1Signal.html">handy::Signal</a></div><div class="ttdoc">信号处理类，用于注册和处理系统信号 </div><div class="ttdef"><b>Definition:</b> daemon.h:82</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

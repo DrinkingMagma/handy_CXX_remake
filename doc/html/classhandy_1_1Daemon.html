@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy::Daemon类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehandy.html">handy</a></li><li class="navelem"><a class="el" href="classhandy_1_1Daemon.html">Daemon</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="classhandy_1_1Daemon-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">handy::Daemon类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>守护进程管理类，负责守护进程的启动、停止、重启等操作  
+ <a href="classhandy_1_1Daemon.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="daemon_8h_source.html">daemon.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a3e86b062fd8967dd448455bdc73c53cd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Daemon.html#a3e86b062fd8967dd448455bdc73c53cd">start</a> (const char *pidFilePath)</td></tr>
+<tr class="memdesc:a3e86b062fd8967dd448455bdc73c53cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动一个新的守护进程  <a href="#a3e86b062fd8967dd448455bdc73c53cd">更多...</a><br/></td></tr>
+<tr class="separator:a3e86b062fd8967dd448455bdc73c53cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa40b3e5938a3e9cbfeadabe1ee0fd8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Daemon.html#aafa40b3e5938a3e9cbfeadabe1ee0fd8">restart</a> (const char *pidFilePath)</td></tr>
+<tr class="memdesc:aafa40b3e5938a3e9cbfeadabe1ee0fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">重启守护进程  <a href="#aafa40b3e5938a3e9cbfeadabe1ee0fd8">更多...</a><br/></td></tr>
+<tr class="separator:aafa40b3e5938a3e9cbfeadabe1ee0fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542577d85c2cde3b563c3661ccda0e80"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Daemon.html#a542577d85c2cde3b563c3661ccda0e80">stop</a> (const char *pidFilePath)</td></tr>
+<tr class="memdesc:a542577d85c2cde3b563c3661ccda0e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止当前运行的守护进程  <a href="#a542577d85c2cde3b563c3661ccda0e80">更多...</a><br/></td></tr>
+<tr class="separator:a542577d85c2cde3b563c3661ccda0e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b7d49312a5972bde56a14a95ebb815"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Daemon.html#a43b7d49312a5972bde56a14a95ebb815">getPidFromFile</a> (const char *pidFilePath)</td></tr>
+<tr class="memdesc:a43b7d49312a5972bde56a14a95ebb815"><td class="mdescLeft">&#160;</td><td class="mdescRight">从指定的pid文件中读取守护进程的PID  <a href="#a43b7d49312a5972bde56a14a95ebb815">更多...</a><br/></td></tr>
+<tr class="separator:a43b7d49312a5972bde56a14a95ebb815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a301dc0a520e61a5f46ecd2ffb7d3d91f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Daemon.html#a301dc0a520e61a5f46ecd2ffb7d3d91f">process</a> (const char *cmd, const char *pidFilePath)</td></tr>
+<tr class="memdesc:a301dc0a520e61a5f46ecd2ffb7d3d91f"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据命令执行守护进程的对应操作  <a href="#a301dc0a520e61a5f46ecd2ffb7d3d91f">更多...</a><br/></td></tr>
+<tr class="separator:a301dc0a520e61a5f46ecd2ffb7d3d91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cb915cd68c0d78512ae5790160eb7d7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Daemon.html#a4cb915cd68c0d78512ae5790160eb7d7">changeTo</a> (const char *argv[])</td></tr>
+<tr class="memdesc:a4cb915cd68c0d78512ae5790160eb7d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建子进程并在父进程退出后执行新程序  <a href="#a4cb915cd68c0d78512ae5790160eb7d7">更多...</a><br/></td></tr>
+<tr class="separator:a4cb915cd68c0d78512ae5790160eb7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a1e9cab5021af8a73b485e80fd47f10a0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Daemon.html#a1e9cab5021af8a73b485e80fd47f10a0">_writePidFile</a> (const char *pidFilePath)</td></tr>
+<tr class="memdesc:a1e9cab5021af8a73b485e80fd47f10a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">将当前进程的PID写入指定的PID文件  <a href="#a1e9cab5021af8a73b485e80fd47f10a0">更多...</a><br/></td></tr>
+<tr class="separator:a1e9cab5021af8a73b485e80fd47f10a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>守护进程管理类，负责守护进程的启动、停止、重启等操作 </p>
+<dl class="section note"><dt>注解</dt><dd>提供了一套完整的守护进程管理接口，包括创建、停止、重启守护进程以及从PID文件中读取进程ID等功能 </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a1e9cab5021af8a73b485e80fd47f10a0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int handy::Daemon::_writePidFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pidFilePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将当前进程的PID写入指定的PID文件 </p>
+<p>作用域结束时自动执行清理操作的辅助类</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pidFilePath</td><td>PID文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 0: 成功，-1: 失败 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>内部辅助函数，会对PID文件加锁以防止多个进程同时写入</dd></dl>
+<p>构造函数，存储要执行的清理函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">functor</td><td>清理函数对象 析构函数，执行清理操作 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4cb915cd68c0d78512ae5790160eb7d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Daemon::changeTo </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建子进程并在父进程退出后执行新程序 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argv</td><td>要执行的程序路径和参数列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>可用于在程序内部实现重启功能 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a43b7d49312a5972bde56a14a95ebb815"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int handy::Daemon::getPidFromFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pidFilePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从指定的pid文件中读取守护进程的PID </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pidFilePath</td><td>PID文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 守护进程的PID，-1: 读取失败 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a301dc0a520e61a5f46ecd2ffb7d3d91f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::Daemon::process </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pidFilePath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据命令执行守护进程的对应操作 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>要执行的操作命令（"start"、"restart"、"stop"） </td></tr>
+    <tr><td class="paramname">pidFilePath</td><td>PID文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>1. 若出错，则调用exit(1)退出 </dd>
+<dd>
+2. 启动或重启成功时父进程会调用exit(0)退出 </dd>
+<dd>
+3. 子进程在启动或重启成功后会返回 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aafa40b3e5938a3e9cbfeadabe1ee0fd8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int handy::Daemon::restart </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pidFilePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重启守护进程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pidFilePath</td><td>PID文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 0: 重启成功，-1: 重启失败 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>会先停止当前运行的守护进程（若存在），再启动新的守护进程 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3e86b062fd8967dd448455bdc73c53cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int handy::Daemon::start </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pidFilePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动一个新的守护进程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pidFilePath</td><td>PID文件路径，用于存储守护进程的进程ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 0: 启动成功，-1: 启动失败 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>父进程在成功创建子进程后会退出 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a542577d85c2cde3b563c3661ccda0e80"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int handy::Daemon::stop </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pidFilePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止当前运行的守护进程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pidFilePath</td><td>PID文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 0: 停止成功，-1: 停止失败 </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>handy/<a class="el" href="daemon_8h_source.html">daemon.h</a></li>
+<li>handy/<a class="el" href="daemon_8cpp.html">daemon.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

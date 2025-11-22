@@ -1,3 +1,27 @@
+/**
+ * @file conn.h
+ * @brief TCP连接管理核心类定义，包括TcpConn（连接对象）、TcpServer（TCP服务器）、HSHA（半同步半异步服务器）
+ * @details 
+ *  该文件提供了TCP网络编程的核心组件，实现了连接的建立、数据读写、事件处理、服务器监听等功能，核心特性如下：
+ *  1. TcpConn类：封装单个TCP连接，支持非阻塞I/O、连接状态管理（INVALID/HAND_SHAKING/CONNECTED/CLOSED/FAILED）、
+ *     数据发送/接收、编解码集成（通过CodecBase）、超时处理、自动重连等功能；
+ *  2. TcpServer类：实现TCP服务器功能，支持绑定地址、监听端口、接受客户端连接、多事件循环（EventBases）负载均衡，
+ *     可配置连接创建回调、状态回调、数据读写回调；
+ *  3. HSHA类：基于TcpServer实现半同步半异步服务器模型，通过线程池（ThreadPool）处理业务逻辑，
+ *     实现I/O线程与业务线程分离，提升高并发场景下的性能；
+ *  4. 事件驱动：依赖EventBase和Channel实现I/O事件的检测与分发，支持读写事件的注册、注销，确保高效的事件处理；
+ *  5. 线程安全：关键操作（如状态修改、Channel访问）通过互斥锁保护，支持多线程环境下的安全调用。
+ * @note 
+ *  1. 依赖组件：需配合logger.h（日志）、utils.h（工具函数）、thread_pool.h（线程池）、poller.h（I/O多路复用）、
+ *     codec.h（编解码）等头文件使用；
+ *  2. 非阻塞I/O：所有socket均设置为非阻塞模式，避免I/O操作阻塞线程，提升系统吞吐量；
+ *  3. 连接状态管理：TcpConn通过State枚举严格管理连接生命周期，状态变化会触发stateCB回调，便于上层处理；
+ *  4. 编解码集成：通过onMsg()方法绑定编解码器，自动处理数据的打包与解包，支持自定义编解码逻辑；
+ *  5. 资源管理：连接关闭时自动清理资源（如Channel、定时器、缓冲区），避免资源泄露；
+ *  6. 重连机制：TcpConn支持配置重连间隔（m_reconnectInterval_ms），连接断开时会自动尝试重连（需开启重连功能）；
+ *  7. 多事件循环：TcpServer可关联多个EventBase（事件循环），新连接会分配到负载较低的事件循环，提升并发处理能力。
+ */
+
 #include "conn.h"
 #include "logger.h"
 #include "utils.h"
@@ -5,7 +29,7 @@
 #include "poller.h"
 #include <fcntl.h>
 
-// TCP连接请求的最大等待队列长度
+/// TCP连接请求的最大等待队列长度
 #define MAX_WAIT_QUEUE_LENGTH 20
 
 namespace handy

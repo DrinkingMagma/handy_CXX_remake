@@ -1,0 +1,481 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy/logger.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_32ffdd1374fa2f424904bdef8ac66f3e.html">handy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a>  </div>
+  <div class="headertitle">
+<div class="title">logger.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="non__copy__able_8h_source.html">non_copy_able.h</a>&quot;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;mutex&gt;</code><br/>
+<code>#include &lt;cstdio&gt;</code><br/>
+<code>#include &lt;atomic&gt;</code><br/>
+</div>
+<p><a href="logger_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Logger.html">handy::Logger</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacehandy"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html">handy</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:aade7269bb68eed682e7094993c435d4b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(level, fmt,...)</td></tr>
+<tr class="separator:aade7269bb68eed682e7094993c435d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21cc0459b78d5f2d7bd737e5aae1278a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(fmt,...)&#160;&#160;&#160;<a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea7a1f0ddc23197504d1a80423b27440bf">handy::Logger::LTRACE</a>, fmt, ##__VA_ARGS__)</td></tr>
+<tr class="separator:a21cc0459b78d5f2d7bd737e5aae1278a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad96d3a6cf3e98ce15febe3d27bda47bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(fmt,...)&#160;&#160;&#160;<a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea74b1654c774e5d2f163a062015ca946b">handy::Logger::LDEBUG</a>, fmt, ##__VA_ARGS__)</td></tr>
+<tr class="separator:ad96d3a6cf3e98ce15febe3d27bda47bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab56f6599fb46785e4265a3033ba91aa6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(fmt,...)&#160;&#160;&#160;<a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea4f00f764b4a17f851be1f0cb27095785">handy::Logger::LINFO</a>, fmt, ##__VA_ARGS__)</td></tr>
+<tr class="separator:ab56f6599fb46785e4265a3033ba91aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4cebd204831cf85d2c6e9d03b8d5bbb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ac4cebd204831cf85d2c6e9d03b8d5bbb">WARN</a>(fmt,...)&#160;&#160;&#160;<a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feafb04814efeb951b90eedacbcd07cf380">handy::Logger::LWARN</a>, fmt, ##__VA_ARGS__)</td></tr>
+<tr class="separator:ac4cebd204831cf85d2c6e9d03b8d5bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15378cd15bafb3a79061424b452497aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(fmt,...)&#160;&#160;&#160;<a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9">handy::Logger::LERROR</a>, fmt, ##__VA_ARGS__)</td></tr>
+<tr class="separator:a15378cd15bafb3a79061424b452497aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053d6037d543b84ce59308ce71d15cd1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a053d6037d543b84ce59308ce71d15cd1">FATAL</a>(fmt,...)&#160;&#160;&#160;do { <a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a>, fmt, ##__VA_ARGS__); std::abort(); } while (0)</td></tr>
+<tr class="separator:a053d6037d543b84ce59308ce71d15cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad6a85aecfc4d2bc60259e986af4581"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#aaad6a85aecfc4d2bc60259e986af4581">FATAL_IF</a>(b,...)</td></tr>
+<tr class="separator:aaad6a85aecfc4d2bc60259e986af4581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78559860b0d897def272733a90440e52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a78559860b0d897def272733a90440e52">CHECK</a>(b,...)</td></tr>
+<tr class="separator:a78559860b0d897def272733a90440e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affeaaefc2a9407dc7577f6cf3f8e0d15"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#affeaaefc2a9407dc7577f6cf3f8e0d15">EXIT_IF</a>(b,...)</td></tr>
+<tr class="separator:affeaaefc2a9407dc7577f6cf3f8e0d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b2f5c234822e4ed18847adc529a6853"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a3b2f5c234822e4ed18847adc529a6853">SET_LOG_LEVEL</a>(l)&#160;&#160;&#160;<a class="el" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a>().setLogLevel(l)</td></tr>
+<tr class="separator:a3b2f5c234822e4ed18847adc529a6853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae920f7f94cd053df1aadfc2bcb40b0a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ae920f7f94cd053df1aadfc2bcb40b0a2">SET_LOG_FILE</a>(f)&#160;&#160;&#160;<a class="el" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a>().setLogFileName(f)</td></tr>
+<tr class="separator:ae920f7f94cd053df1aadfc2bcb40b0a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a class="anchor" id="a78559860b0d897def272733a90440e52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                    \</div>
+<div class="line">        if(!(b)) {                                          <a class="code" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">\</a></div>
+<div class="line"><a class="code" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">            HLOG</a>(<a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a>, <span class="stringliteral">&quot;Check failed: &quot;</span> __VA_ARGS__);       \</div>
+<div class="line">            std::abort();                                   \</div>
+<div class="line">        }                                                   \</div>
+<div class="line">    } <span class="keywordflow">while</span>(0)</div>
+<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdef"><b>Definition:</b> logger.h:24</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a></div><div class="ttdef"><b>Definition:</b> logger.h:81</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ad96d3a6cf3e98ce15febe3d27bda47bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBUG</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea74b1654c774e5d2f163a062015ca946b">handy::Logger::LDEBUG</a>, fmt, ##__VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a15378cd15bafb3a79061424b452497aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9">handy::Logger::LERROR</a>, fmt, ##__VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="affeaaefc2a9407dc7577f6cf3f8e0d15"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXIT_IF</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                    \</div>
+<div class="line">        if((b)) {                                           <a class="code" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">\</a></div>
+<div class="line"><a class="code" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">            HLOG</a>(<a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9">handy::Logger::LERROR</a>, __VA_ARGS__);       \</div>
+<div class="line">            std::exit(1);                                   \</div>
+<div class="line">        }                                                   \</div>
+<div class="line">    } <span class="keywordflow">while</span>(0)</div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9">handy::Logger::LERROR</a></div><div class="ttdef"><b>Definition:</b> logger.h:82</div></div>
+<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdef"><b>Definition:</b> logger.h:24</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a053d6037d543b84ce59308ce71d15cd1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FATAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;do { <a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a>, fmt, ##__VA_ARGS__); std::abort(); } while (0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaad6a85aecfc4d2bc60259e986af4581"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FATAL_IF</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                    \</div>
+<div class="line">        if((b)) {                                           <a class="code" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">\</a></div>
+<div class="line"><a class="code" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">            HLOG</a>(<a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a>, __VA_ARGS__);       \</div>
+<div class="line">            std::abort();                                   \</div>
+<div class="line">        }                                                   \</div>
+<div class="line">    } <span class="keywordflow">while</span>(0)</div>
+<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdef"><b>Definition:</b> logger.h:24</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a></div><div class="ttdef"><b>Definition:</b> logger.h:81</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aade7269bb68eed682e7094993c435d4b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HLOG</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">level, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                                    \</div>
+<div class="line">        if(level &lt;= <a class="code" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a>().getLogLevel())                             \</div>
+<div class="line">        {                                                                                   \</div>
+<div class="line">            static <span class="keyword">const</span> <span class="keywordtype">char</span>* checkFmt = fmt;                                              \</div>
+<div class="line">            (void)checkFmt;                                                                 <a class="code" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">\</a></div>
+<div class="line"><a class="code" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">            handy::Logger::getInstance</a>().<a class="code" href="classhandy_1_1Logger.html#a6d61757bf1d37101021e3bdc63e78c6d">logv</a>(level, __FILE__, __LINE__, __func__, fmt, ##__VA_ARGS__);      \</div>
+<div class="line">        }                                                                                   \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+<div class="ttc" id="classhandy_1_1Logger_html_aa28b152799dd56d5fea997e699996725"><div class="ttname"><a href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a></div><div class="ttdeci">static Logger &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> logger.h:91</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a6d61757bf1d37101021e3bdc63e78c6d"><div class="ttname"><a href="classhandy_1_1Logger.html#a6d61757bf1d37101021e3bdc63e78c6d">handy::Logger::logv</a></div><div class="ttdeci">void logv(int level, const char *file, int line, const char *func, const char *fmt,...)</div><div class="ttdoc">日志记录函数 </div><div class="ttdef"><b>Definition:</b> logger.cpp:22</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab56f6599fb46785e4265a3033ba91aa6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INFO</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea4f00f764b4a17f851be1f0cb27095785">handy::Logger::LINFO</a>, fmt, ##__VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae920f7f94cd053df1aadfc2bcb40b0a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_LOG_FILE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">f</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a>().setLogFileName(f)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3b2f5c234822e4ed18847adc529a6853"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_LOG_LEVEL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">l</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a>().setLogLevel(l)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a21cc0459b78d5f2d7bd737e5aae1278a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRACE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea7a1f0ddc23197504d1a80423b27440bf">handy::Logger::LTRACE</a>, fmt, ##__VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac4cebd204831cf85d2c6e9d03b8d5bbb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WARN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feafb04814efeb951b90eedacbcd07cf380">handy::Logger::LWARN</a>, fmt, ##__VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

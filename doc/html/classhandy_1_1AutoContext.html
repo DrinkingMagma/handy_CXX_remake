@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy::AutoContext类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehandy.html">handy</a></li><li class="navelem"><a class="el" href="classhandy_1_1AutoContext.html">AutoContext</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classhandy_1_1AutoContext-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">handy::AutoContext类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>自动上下文管理器（线程安全）  
+ <a href="classhandy_1_1AutoContext.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="handy-imp_8h_source.html">handy-imp.h</a>&gt;</code></p>
+<div class="dynheader">
+类 handy::AutoContext 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classhandy_1_1AutoContext.png" usemap="#handy::AutoContext_map" alt=""/>
+  <map id="handy::AutoContext_map" name="handy::AutoContext_map">
+<area href="classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="handy::NonCopyAble" shape="rect" coords="0,0,132,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae1907e8c4cd06ef829a7cc3dbfcb39a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1AutoContext.html#ae1907e8c4cd06ef829a7cc3dbfcb39a8">AutoContext</a> ()=default</td></tr>
+<tr class="memdesc:ae1907e8c4cd06ef829a7cc3dbfcb39a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造函数  <a href="#ae1907e8c4cd06ef829a7cc3dbfcb39a8">更多...</a><br/></td></tr>
+<tr class="separator:ae1907e8c4cd06ef829a7cc3dbfcb39a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ec5f39af7e6dcef8407f573f2a3734"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a31ec5f39af7e6dcef8407f573f2a3734"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classhandy_1_1AutoContext.html#a31ec5f39af7e6dcef8407f573f2a3734">context</a> ()</td></tr>
+<tr class="memdesc:a31ec5f39af7e6dcef8407f573f2a3734"><td class="mdescLeft">&#160;</td><td class="mdescRight">模板方法：获取或创建指定类型的上下文  <a href="#a31ec5f39af7e6dcef8407f573f2a3734">更多...</a><br/></td></tr>
+<tr class="separator:a31ec5f39af7e6dcef8407f573f2a3734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5add2c81ef03e428ecc7f13f2e9b6151"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1AutoContext.html#a5add2c81ef03e428ecc7f13f2e9b6151">reset</a> ()</td></tr>
+<tr class="memdesc:a5add2c81ef03e428ecc7f13f2e9b6151"><td class="mdescLeft">&#160;</td><td class="mdescRight">显式重置上下文：释放资源并置空指针  <a href="#a5add2c81ef03e428ecc7f13f2e9b6151">更多...</a><br/></td></tr>
+<tr class="separator:a5add2c81ef03e428ecc7f13f2e9b6151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e39c89b8343bfbe5da0cca1b84c644"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1AutoContext.html#a52e39c89b8343bfbe5da0cca1b84c644">hasContext</a> () const </td></tr>
+<tr class="memdesc:a52e39c89b8343bfbe5da0cca1b84c644"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否已创建上下文  <a href="#a52e39c89b8343bfbe5da0cca1b84c644">更多...</a><br/></td></tr>
+<tr class="separator:a52e39c89b8343bfbe5da0cca1b84c644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95dfd440997fea28095d56aa5835b30b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1AutoContext.html#a95dfd440997fea28095d56aa5835b30b">~AutoContext</a> ()</td></tr>
+<tr class="memdesc:a95dfd440997fea28095d56aa5835b30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数：自动清理上下文资源  <a href="#a95dfd440997fea28095d56aa5835b30b">更多...</a><br/></td></tr>
+<tr class="separator:a95dfd440997fea28095d56aa5835b30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a1803f08fa56cd65918e0632e6c80b716"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; void * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1AutoContext.html#a1803f08fa56cd65918e0632e6c80b716">m_ctx</a> {nullptr}</td></tr>
+<tr class="separator:a1803f08fa56cd65918e0632e6c80b716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a221bb26e8cb877acd6fce9448363c610"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1AutoContext.html#a221bb26e8cb877acd6fce9448363c610">m_ctxMutex</a></td></tr>
+<tr class="separator:a221bb26e8cb877acd6fce9448363c610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6a733050e7e4245117218730d869d26"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1AutoContext.html#ab6a733050e7e4245117218730d869d26">m_ctxDel</a> {nullptr}</td></tr>
+<tr class="separator:ab6a733050e7e4245117218730d869d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_methods_classhandy_1_1NonCopyAble"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classhandy_1_1NonCopyAble')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classhandy_1_1NonCopyAble.html">handy::NonCopyAble</a></td></tr>
+<tr class="memitem:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#af559df4e2ebd8b9e54566633b7bf9855">NonCopyAble</a> ()=default</td></tr>
+<tr class="separator:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#acd1d67f20f33c3f91b64262eed41ef69">~NonCopyAble</a> () noexcept=default</td></tr>
+<tr class="separator:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a281e6b5825279cf9c60cf3bda6d5d23a">NonCopyAble</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a0a3dfd5848777f831e337b3a67b749c8">operator=</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a59f29256ac90ab3415d6fd2028bfd03f">NonCopyAble</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#afb79661bb6df7f5381340e4d3337eaf6">operator=</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>自动上下文管理器（线程安全） </p>
+<ol type="1">
+<li>提供模板化的上下文创建、获取、与自动清理能力，支持任意类型的上下文存储<ol type="a">
+<li>基于原子操作与互斥锁保证线程安全，避免数据竞争与内存泄漏</li>
+<li>析构时自动清理上下文资源，也支持显式调用reset()主动释放</li>
+<li>采用“双重检查锁定”模式优化性能，减少锁的竞争开销 <dl class="section note"><dt>注解</dt><dd>1. 上下文类型需支持默认构造（无参构造函数） </dd>
+<dd>
+2. 禁止拷贝与移动，确保上下文资源唯一管理 </dd>
+<dd>
+3. 清理函数在持有互斥锁的情况下执行，避免并发销毁导致的野指针 </dd></dl>
+</li>
+</ol>
+</li>
+</ol>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ae1907e8c4cd06ef829a7cc3dbfcb39a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::AutoContext::AutoContext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认构造函数 </p>
+
+</div>
+</div>
+<a class="anchor" id="a95dfd440997fea28095d56aa5835b30b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::AutoContext::~AutoContext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构函数：自动清理上下文资源 </p>
+<dl class="section note"><dt>注解</dt><dd>1. 符合RAII原则：资源获取即初始化，销毁即释放<ol type="1">
+<li>安全：即使未显式调用reset()，析构时也会自动清理 </li>
+</ol>
+</dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a31ec5f39af7e6dcef8407f573f2a3734"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; handy::AutoContext::context </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>模板方法：获取或创建指定类型的上下文 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>上下文类型（需满足：有默认构造函数、非抽象类） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>T&amp; 上下文对象的引用（确保返回有效对象，不会放回空引用） </dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::bad_alloc</td><td>当内存分配失败时抛出此异常（new操作失败触发） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>1. 线程安全：支持多线程并发调用，不会导致重复创建或数据竞争 </dd>
+<dd>
+2. 类型安全：通过static_cast强制转换，确保返回正确类型的引用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a52e39c89b8343bfbe5da0cca1b84c644"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool handy::AutoContext::hasContext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查是否已创建上下文 </p>
+<dl class="section return"><dt>返回</dt><dd>bool true: 已创建上下文，false: 未创建</dd></dl>
+<p>无锁读取m_ctx指针，线程安全（内存序：acquire，确保读取到最新值） </p>
+<dl class="section note"><dt>注解</dt><dd>线程安全：支持多线程并发调用，无锁开销，性能高效 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5add2c81ef03e428ecc7f13f2e9b6151"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::AutoContext::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>显式重置上下文：释放资源并置空指针 </p>
+<ol type="1">
+<li>加锁：确保清理操作的线程安全，避免并发重置导致的双重释放<ol type="a">
+<li>原子交换：将m_ctx与m_ctxDel置空，同时获取旧值（内存序：acq_rel，确保同步）</li>
+<li>清理逻辑：先执行清理函数销毁上下文对象，再释放清理函数自身的内存 <dl class="section note"><dt>注解</dt><dd>1. 幂等性：支持多次调用，第二次及以后调用无操作（因指针已置空）</dd></dl>
+</li>
+</ol>
+</li>
+</ol>
+<p>线程安全：多线程并发调用时，仅第一个调用会执行清理逻辑，其他调用无操作 </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a1803f08fa56cd65918e0632e6c80b716"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;void*&gt; handy::AutoContext::m_ctx {nullptr}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab6a733050e7e4245117218730d869d26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;<a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a>*&gt; handy::AutoContext::m_ctxDel {nullptr}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a221bb26e8cb877acd6fce9448363c610"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex handy::AutoContext::m_ctxMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>handy/<a class="el" href="handy-imp_8h_source.html">handy-imp.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

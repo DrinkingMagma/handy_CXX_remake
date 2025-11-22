@@ -1,3 +1,19 @@
+/**
+ * @file handy-imp.h
+ * @brief 核心工具类与基础类型定义头文件
+ * @details 
+ *  该文件包含了框架内部使用的核心工具类和基础类型定义，是框架其他组件的依赖基础。
+ *  主要内容包括：
+ *  1. 基础类型定义：如IdleId（空闲资源ID）、TimerId（定时任务ID）等，用于统一标识和管理相关资源；
+ *  2. 前向声明：对Channel、TcpConn、TCPServer等核心类进行前向声明，避免循环依赖；
+ *  3. AutoContext类：一个线程安全的自动上下文管理器，支持模板化的上下文创建、获取和自动清理，
+ *     采用双重检查锁定模式优化性能，确保多线程环境下的资源安全管理。
+ * @note 
+ *  1. 该文件主要供框架内部使用，不建议外部直接包含；
+ *  2. AutoContext类要求上下文类型支持默认构造函数且非抽象类，使用时需注意类型约束；
+ *  3. 所有基础类型和工具类的设计均考虑了线程安全性和性能，确保框架的稳定高效运行。
+ */
+
 #pragma once
 #include "logger.h"
 #include "net.h"
@@ -9,15 +25,15 @@
 
 namespace handy
 {
-    class Channel;          // 事件通道抽象类
-    class TcpConn;    // TCP连接抽象类
-    class TCPServer;        // TCP服务器抽象类
-    class PollerBase;       // 事件轮询抽象类
-    struct IdleIdImp;        // 空闲资源ID实现结构体
-    struct EventsImp;        // 事件实现结构体
-    class EventBase;        // 事件循环基类结构体
-    typedef std::unique_ptr<IdleIdImp> IdleId;      // 空闲资源ID的智能指针类型
-    typedef std::pair<int64_t, int64_t> TimerId;    // 定时任务ID类型<超时时间戳，序列号（自增整数）>
+    class Channel;          /// 事件通道抽象类
+    class TcpConn;    /// TCP连接抽象类
+    class TCPServer;        /// TCP服务器抽象类
+    class PollerBase;       /// 事件轮询抽象类
+    struct IdleIdImp;        /// 空闲资源ID实现结构体
+    struct EventsImp;        /// 事件实现结构体
+    class EventBase;        /// 事件循环基类结构体
+    typedef std::unique_ptr<IdleIdImp> IdleId;      /// 空闲资源ID的智能指针类型
+    typedef std::pair<int64_t, int64_t> TimerId;    /// 定时任务ID类型<超时时间戳，序列号（自增整数）>
 
     /**
      * @class AutoContext
@@ -143,14 +159,16 @@ namespace handy
                 reset();
             }
         private:
-            // 上下文对象指针（原子操作确保多线程可见性）
+            /// 上下文对象指针（原子操作确保多线程可见性）
             std::atomic<void*> m_ctx{nullptr};
 
-            // 互斥锁
+            /// 互斥锁
             mutable std::mutex m_ctxMutex;
 
-            // 上下文清理函数指针
-            // 存储销毁上下文对象的任务，避免析构时类型信息丢失
+            /**
+             * 上下文清理函数指针
+             * 存储销毁上下文对象的任务，避免析构时类型信息丢失
+            */
             std::atomic<Task*> m_ctxDel{nullptr};
     };
 }   // namespace handy

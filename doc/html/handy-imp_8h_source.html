@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy/handy-imp.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_32ffdd1374fa2f424904bdef8ac66f3e.html">handy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">handy-imp.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="handy-imp_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="logger_8h.html">logger.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="net_8h.html">net.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html">utils.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="codec_8h.html">codec.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="thread__pool_8h.html">thread_pool.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="non__copy__able_8h.html">non_copy_able.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span>  <span class="comment">// 提供 std::is_default_constructible、std::is_abstract 等</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>handy</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">class </span>Channel;          <span class="comment">// 事件通道抽象类</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">class </span>TcpConn;    <span class="comment">// TCP连接抽象类</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">class </span>TCPServer;        <span class="comment">// TCP服务器抽象类</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">class </span>PollerBase;       <span class="comment">// 事件轮询抽象类</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">struct </span>IdleIdImp;        <span class="comment">// 空闲资源ID实现结构体</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">struct </span>EventsImp;        <span class="comment">// 事件实现结构体</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespacehandy.html#af0934ac351162af463dce604c988ba31">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classhandy_1_1EventBase.html">EventBase</a>;        <span class="comment">// 事件循环基类结构体</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">typedef</span> std::unique_ptr&lt;IdleIdImp&gt; <a class="code" href="namespacehandy.html#af0934ac351162af463dce604c988ba31">IdleId</a>;      <span class="comment">// 空闲资源ID的智能指针类型</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">   20</a></span>&#160;    <span class="keyword">typedef</span> std::pair&lt;int64_t, int64_t&gt; <a class="code" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a>;    <span class="comment">// 定时任务ID类型&lt;超时时间戳，序列号（自增整数）&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classhandy_1_1AutoContext.html">   33</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classhandy_1_1AutoContext.html">AutoContext</a> : <span class="keyword">private</span> <a class="code" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <a class="code" href="classhandy_1_1AutoContext.html#ae1907e8c4cd06ef829a7cc3dbfcb39a8">AutoContext</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classhandy_1_1AutoContext.html#a31ec5f39af7e6dcef8407f573f2a3734">   50</a></span>&#160;            T&amp; <a class="code" href="classhandy_1_1AutoContext.html#a31ec5f39af7e6dcef8407f573f2a3734">context</a>()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="comment">// 编译器检查：确保T有默认构造函数（C++及以上支持）</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                static_assert(std::is_default_constructible&lt;T&gt;::value, </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                <span class="stringliteral">&quot;Context type T must have a default constructor&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="comment">// 获取或创建指定类型的上下文(避免创建抽象类实例)</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                static_assert(!std::is_abstract&lt;T&gt;::value, </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                <span class="stringliteral">&quot;Context type T must not be an abstract class&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="comment">// 第一重检查：无锁读取当前上下文指针（内存序：acquire，确保读取到最新值）</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordtype">void</span>* currentCtx = <a class="code" href="classhandy_1_1AutoContext.html#a1803f08fa56cd65918e0632e6c80b716">m_ctx</a>.load(std::memory_order_acquire);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">if</span>(currentCtx == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    std::lock_guard&lt;std::mutex&gt; lock(<a class="code" href="classhandy_1_1AutoContext.html#a221bb26e8cb877acd6fce9448363c610">m_ctxMutex</a>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    <span class="comment">// 第二重检查：避免锁竞争期间其他线程已经初始化（内存序：relaxed，无需同步，仅本地检查）</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    currentCtx = <a class="code" href="classhandy_1_1AutoContext.html#a1803f08fa56cd65918e0632e6c80b716">m_ctx</a>.load(std::memory_order_relaxed);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <span class="keywordflow">if</span>(currentCtx == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                        <span class="comment">// 1. 分配上下文对象（若内存不足，new会爆出std::bad_alloc异常）</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                        T* newCtx = <span class="keyword">new</span> T();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                        <span class="comment">// 2. 分配清理函数：捕获上下文指针，确保销毁时类型正确</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        <a class="code" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a>* newDel = <span class="keyword">new</span> <a class="code" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a>([newCtx](){</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                            <span class="comment">// 销毁上下文对象（类型安全，因为捕获的是T*）</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                            <span class="keyword">delete</span> newCtx;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                        });</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                        <span class="comment">// 3. 原子存储：先存储清理函数，再存储上下文指针（内存序：release，确保写操作可见）</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        <a class="code" href="classhandy_1_1AutoContext.html#ab6a733050e7e4245117218730d869d26">m_ctxDel</a>.store(newDel, std::memory_order_release);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                        <a class="code" href="classhandy_1_1AutoContext.html#a1803f08fa56cd65918e0632e6c80b716">m_ctx</a>.store(newCtx, std::memory_order_release);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                        <span class="comment">// 更新当前上下文指针</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                        currentCtx = newCtx;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                        <span class="comment">// 日志：记录上下文初始化</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;AutoContext::context(): Created context of type %s (address %p)&quot;</span>,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                <span class="keyword">typeid</span>(T).name(), static_cast&lt;void*&gt;(newCtx));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="comment">// 类型强制转换：确保返回正确类型的引用（因m_ctx存储的是T*，强制转换安全）</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">return</span> *<span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(currentCtx);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classhandy_1_1AutoContext.html#a5add2c81ef03e428ecc7f13f2e9b6151">  104</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1AutoContext.html#a5add2c81ef03e428ecc7f13f2e9b6151">reset</a>()</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                std::lock_guard&lt;std::mutex&gt; lock(<a class="code" href="classhandy_1_1AutoContext.html#a221bb26e8cb877acd6fce9448363c610">m_ctxMutex</a>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="comment">// 原子交换：获取旧的清理函数指针，并将m_ctxDel置空（内存序：acq_rel）</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <a class="code" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a>* currentDel = <a class="code" href="classhandy_1_1AutoContext.html#ab6a733050e7e4245117218730d869d26">m_ctxDel</a>.exchange(<span class="keyword">nullptr</span>, std::memory_order_acq_rel);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="comment">// 原子交换：获取旧的上下文指针，并将m_ctx置空（内存序：acq_rel）</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordtype">void</span>* currentCtx = <a class="code" href="classhandy_1_1AutoContext.html#a1803f08fa56cd65918e0632e6c80b716">m_ctx</a>.exchange(<span class="keyword">nullptr</span>, std::memory_order_acq_rel);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">if</span>(currentDel != <span class="keyword">nullptr</span> &amp;&amp; currentCtx != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    <span class="comment">// 执行清理函数，销毁上下文对象</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    (*currentDel)();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    <span class="comment">// 释放清理函数自身的内存</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    <span class="keyword">delete</span> currentDel;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    <span class="comment">// 日志：记录上下文重置</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;AutoContext::reset(): Reset context (address %p)&quot;</span>, currentCtx);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classhandy_1_1AutoContext.html#a52e39c89b8343bfbe5da0cca1b84c644">  131</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classhandy_1_1AutoContext.html#a52e39c89b8343bfbe5da0cca1b84c644">hasContext</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="classhandy_1_1AutoContext.html#a1803f08fa56cd65918e0632e6c80b716">m_ctx</a>.load(std::memory_order_acquire) != <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classhandy_1_1AutoContext.html#a95dfd440997fea28095d56aa5835b30b">  141</a></span>&#160;            <a class="code" href="classhandy_1_1AutoContext.html#a95dfd440997fea28095d56aa5835b30b">~AutoContext</a>()</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                <a class="code" href="classhandy_1_1AutoContext.html#a5add2c81ef03e428ecc7f13f2e9b6151">reset</a>();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="comment">// 上下文对象指针（原子操作确保多线程可见性）</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classhandy_1_1AutoContext.html#a1803f08fa56cd65918e0632e6c80b716">  147</a></span>&#160;            std::atomic&lt;void*&gt; <a class="code" href="classhandy_1_1AutoContext.html#a1803f08fa56cd65918e0632e6c80b716">m_ctx</a>{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="comment">// 互斥锁</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="classhandy_1_1AutoContext.html#a221bb26e8cb877acd6fce9448363c610">  150</a></span>&#160;            <span class="keyword">mutable</span> std::mutex <a class="code" href="classhandy_1_1AutoContext.html#a221bb26e8cb877acd6fce9448363c610">m_ctxMutex</a>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="comment">// 上下文清理函数指针</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="comment">// 存储销毁上下文对象的任务，避免析构时类型信息丢失</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="classhandy_1_1AutoContext.html#ab6a733050e7e4245117218730d869d26">  154</a></span>&#160;            std::atomic&lt;Task*&gt; <a class="code" href="classhandy_1_1AutoContext.html#ab6a733050e7e4245117218730d869d26">m_ctxDel</a>{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    };</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}   <span class="comment">// namespace handy</span></div>
+<div class="ttc" id="classhandy_1_1AutoContext_html_a5add2c81ef03e428ecc7f13f2e9b6151"><div class="ttname"><a href="classhandy_1_1AutoContext.html#a5add2c81ef03e428ecc7f13f2e9b6151">handy::AutoContext::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">显式重置上下文：释放资源并置空指针 </div><div class="ttdef"><b>Definition:</b> handy-imp.h:104</div></div>
+<div class="ttc" id="classhandy_1_1AutoContext_html_a221bb26e8cb877acd6fce9448363c610"><div class="ttname"><a href="classhandy_1_1AutoContext.html#a221bb26e8cb877acd6fce9448363c610">handy::AutoContext::m_ctxMutex</a></div><div class="ttdeci">std::mutex m_ctxMutex</div><div class="ttdef"><b>Definition:</b> handy-imp.h:150</div></div>
+<div class="ttc" id="net_8h_html"><div class="ttname"><a href="net_8h.html">net.h</a></div></div>
+<div class="ttc" id="classhandy_1_1AutoContext_html_a95dfd440997fea28095d56aa5835b30b"><div class="ttname"><a href="classhandy_1_1AutoContext.html#a95dfd440997fea28095d56aa5835b30b">handy::AutoContext::~AutoContext</a></div><div class="ttdeci">~AutoContext()</div><div class="ttdoc">析构函数：自动清理上下文资源 </div><div class="ttdef"><b>Definition:</b> handy-imp.h:141</div></div>
+<div class="ttc" id="classhandy_1_1EventBase_html"><div class="ttname"><a href="classhandy_1_1EventBase.html">handy::EventBase</a></div><div class="ttdoc">单线程事件派发器，管理定时器、I/O事件、异步任务 </div><div class="ttdef"><b>Definition:</b> event_base.h:76</div></div>
+<div class="ttc" id="classhandy_1_1AutoContext_html_ae1907e8c4cd06ef829a7cc3dbfcb39a8"><div class="ttname"><a href="classhandy_1_1AutoContext.html#ae1907e8c4cd06ef829a7cc3dbfcb39a8">handy::AutoContext::AutoContext</a></div><div class="ttdeci">AutoContext()=default</div><div class="ttdoc">默认构造函数 </div></div>
+<div class="ttc" id="codec_8h_html"><div class="ttname"><a href="codec_8h.html">codec.h</a></div><div class="ttdoc">编解码器基类及具体实现（换行分隔符编解码器、长度前缀编解码器） </div></div>
+<div class="ttc" id="classhandy_1_1NonCopyAble_html"><div class="ttname"><a href="classhandy_1_1NonCopyAble.html">handy::NonCopyAble</a></div><div class="ttdoc">禁止派生类对象的拷贝构造和拷贝赋值操作 </div><div class="ttdef"><b>Definition:</b> non_copy_able.h:9</div></div>
+<div class="ttc" id="classhandy_1_1AutoContext_html_a31ec5f39af7e6dcef8407f573f2a3734"><div class="ttname"><a href="classhandy_1_1AutoContext.html#a31ec5f39af7e6dcef8407f573f2a3734">handy::AutoContext::context</a></div><div class="ttdeci">T &amp; context()</div><div class="ttdoc">模板方法：获取或创建指定类型的上下文 </div><div class="ttdef"><b>Definition:</b> handy-imp.h:50</div></div>
+<div class="ttc" id="classhandy_1_1AutoContext_html_ab6a733050e7e4245117218730d869d26"><div class="ttname"><a href="classhandy_1_1AutoContext.html#ab6a733050e7e4245117218730d869d26">handy::AutoContext::m_ctxDel</a></div><div class="ttdeci">std::atomic&lt; Task * &gt; m_ctxDel</div><div class="ttdef"><b>Definition:</b> handy-imp.h:154</div></div>
+<div class="ttc" id="namespacehandy_html_a37e7f77e1c4abd461c35064060c05669"><div class="ttname"><a href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">handy::Task</a></div><div class="ttdeci">std::function&lt; void()&gt; Task</div><div class="ttdef"><b>Definition:</b> event_base.h:16</div></div>
+<div class="ttc" id="classhandy_1_1AutoContext_html_a52e39c89b8343bfbe5da0cca1b84c644"><div class="ttname"><a href="classhandy_1_1AutoContext.html#a52e39c89b8343bfbe5da0cca1b84c644">handy::AutoContext::hasContext</a></div><div class="ttdeci">bool hasContext() const </div><div class="ttdoc">检查是否已创建上下文 </div><div class="ttdef"><b>Definition:</b> handy-imp.h:131</div></div>
+<div class="ttc" id="utils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div></div>
+<div class="ttc" id="non__copy__able_8h_html"><div class="ttname"><a href="non__copy__able_8h.html">non_copy_able.h</a></div></div>
+<div class="ttc" id="namespacehandy_html_ab64dd4e4ad3aae1d30264406886bbc84"><div class="ttname"><a href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">handy::TimerId</a></div><div class="ttdeci">std::pair&lt; int64_t, int64_t &gt; TimerId</div><div class="ttdef"><b>Definition:</b> handy-imp.h:20</div></div>
+<div class="ttc" id="classhandy_1_1AutoContext_html_a1803f08fa56cd65918e0632e6c80b716"><div class="ttname"><a href="classhandy_1_1AutoContext.html#a1803f08fa56cd65918e0632e6c80b716">handy::AutoContext::m_ctx</a></div><div class="ttdeci">std::atomic&lt; void * &gt; m_ctx</div><div class="ttdef"><b>Definition:</b> handy-imp.h:147</div></div>
+<div class="ttc" id="logger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div></div>
+<div class="ttc" id="thread__pool_8h_html"><div class="ttname"><a href="thread__pool_8h.html">thread_pool.h</a></div><div class="ttdoc">线程安全队列（SafeQueue）与线程池（ThreadPool）的实现 </div></div>
+<div class="ttc" id="logger_8h_html_ad96d3a6cf3e98ce15febe3d27bda47bc"><div class="ttname"><a href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a></div><div class="ttdeci">#define DEBUG(fmt,...)</div><div class="ttdef"><b>Definition:</b> logger.h:37</div></div>
+<div class="ttc" id="namespacehandy_html_af0934ac351162af463dce604c988ba31"><div class="ttname"><a href="namespacehandy.html#af0934ac351162af463dce604c988ba31">handy::IdleId</a></div><div class="ttdeci">std::unique_ptr&lt; IdleIdImp &gt; IdleId</div><div class="ttdef"><b>Definition:</b> handy-imp.h:18</div></div>
+<div class="ttc" id="classhandy_1_1AutoContext_html"><div class="ttname"><a href="classhandy_1_1AutoContext.html">handy::AutoContext</a></div><div class="ttdoc">自动上下文管理器（线程安全） </div><div class="ttdef"><b>Definition:</b> handy-imp.h:33</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

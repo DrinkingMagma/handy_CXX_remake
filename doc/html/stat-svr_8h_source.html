@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy/stat-svr.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_32ffdd1374fa2f424904bdef8ac66f3e.html">handy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">stat-svr.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stat-svr_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="non__copy__able_8h.html">non_copy_able.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="event__base_8h.html">event_base.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="http_8h.html">http.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="slice_8h.html">slice.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>handy</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespacehandy.html#a5eaa6d869a276fe1b96586303526c272">   18</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespacehandy.html#a5eaa6d869a276fe1b96586303526c272">StatCallBack</a> = std::function&lt;void(const HttpRequest&amp;, HttpResponse&amp;)&gt;;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">   24</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">InfoCallBack</a> = std::function&lt;std::string()&gt;;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="namespacehandy.html#a87edf225a982aa1ba79cc14ad55e34b8">   30</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespacehandy.html#a87edf225a982aa1ba79cc14ad55e34b8">IntCallBack</a> = std::function&lt;int64_t()&gt;;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classhandy_1_1StatServer.html">   37</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classhandy_1_1StatServer.html">StatServer</a> : <span class="keyword">private</span> <a class="code" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="comment">// 请求类型枚举，区分不同的处理逻辑</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050">   41</a></span>&#160;            <span class="keyword">enum class</span> <a class="code" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050">StatType</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <a class="code" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050a2b848a8cc886d253d21a77c43cd50aae">STATE</a>,      <span class="comment">// 状态信息（如计数器、状态值）</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <a class="code" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050a22311203d44b308bd2d607cdc2dcb72c">PAGE</a>,       <span class="comment">// 页面信息（如HTML、JSON）</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <a class="code" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050aa28966bac17b8eef99c5afa5eb594130">CMD</a>         <span class="comment">// 命令信息（如设置参数、执行命令）</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            };</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8">StatServer</a>(<a class="code" href="classhandy_1_1EventBase.html">EventBase</a>* base);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classhandy_1_1StatServer.html#a85d041b9ba9b52ff1ec223777d84c744">   60</a></span>&#160;           <span class="keywordtype">int</span> <a class="code" href="classhandy_1_1StatServer.html#a85d041b9ba9b52ff1ec223777d84c744">bind</a>(<span class="keyword">const</span> std::string&amp; host, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;           {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="classhandy_1_1StatServer.html#a6775109afb8b3eb3e62dd65e23d3d4bf">m_server</a>.<a class="code" href="classhandy_1_1TcpServer.html#a373e76987f525973c65e2cab025522cc">bind</a>(host, port);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;           }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;           <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1StatServer.html#af8136e30e403fed96155e2e5acb8a07f">onRequest</a>(<a class="code" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050">StatType</a> type, <span class="keyword">const</span> std::string&amp; key, <span class="keyword">const</span> std::string&amp; desc, <span class="keyword">const</span> <a class="code" href="namespacehandy.html#a5eaa6d869a276fe1b96586303526c272">StatCallBack</a>&amp; cb);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;           <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1StatServer.html#af8136e30e403fed96155e2e5acb8a07f">onRequest</a>(<a class="code" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050">StatType</a> type, <span class="keyword">const</span> std::string&amp; key, <span class="keyword">const</span> std::string&amp; desc, <span class="keyword">const</span> <a class="code" href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">InfoCallBack</a>&amp; cb);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classhandy_1_1StatServer.html#a3712ba3e95a812d5fc7aa8a4453bd1a6">   89</a></span>&#160;           <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1StatServer.html#a3712ba3e95a812d5fc7aa8a4453bd1a6">onState</a>(<span class="keyword">const</span> std::string&amp; state, <span class="keyword">const</span> std::string&amp; desc, <span class="keyword">const</span> <a class="code" href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">InfoCallBack</a>&amp; cb)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;           {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <a class="code" href="classhandy_1_1StatServer.html#af8136e30e403fed96155e2e5acb8a07f">onRequest</a>(<a class="code" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050a2b848a8cc886d253d21a77c43cd50aae">StatType::STATE</a>, state, desc, cb);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;           }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classhandy_1_1StatServer.html#a81048af2167c93720345b4a287a7074f">  100</a></span>&#160;           <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1StatServer.html#a81048af2167c93720345b4a287a7074f">onState</a>(<span class="keyword">const</span> std::string&amp; state, <span class="keyword">const</span> std::string&amp; desc, <span class="keyword">const</span> <a class="code" href="namespacehandy.html#a87edf225a982aa1ba79cc14ad55e34b8">IntCallBack</a>&amp; cb)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;           {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <a class="code" href="classhandy_1_1StatServer.html#af8136e30e403fed96155e2e5acb8a07f">onRequest</a>(<a class="code" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050a2b848a8cc886d253d21a77c43cd50aae">StatType::STATE</a>, state, desc, [cb] {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="structhandy_1_1Utils.html#ad70f51fc39095ca32dce7f045adc026b">Utils::format</a>(<span class="stringliteral">&quot;%ld&quot;</span>, cb());</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                });</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;           }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classhandy_1_1StatServer.html#a0623e3e3979c864209d4758249930c6f">  113</a></span>&#160;           <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1StatServer.html#a0623e3e3979c864209d4758249930c6f">onPage</a>(<span class="keyword">const</span> std::string&amp; page, <span class="keyword">const</span> std::string&amp; desc, <span class="keyword">const</span> <a class="code" href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">InfoCallBack</a>&amp; cb)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;           {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <a class="code" href="classhandy_1_1StatServer.html#af8136e30e403fed96155e2e5acb8a07f">onRequest</a>(<a class="code" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050a22311203d44b308bd2d607cdc2dcb72c">StatType::PAGE</a>, page, desc, cb);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;           }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;           <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99">onPageFile</a>(<span class="keyword">const</span> std::string&amp; page, <span class="keyword">const</span> std::string&amp; desc, <span class="keyword">const</span> std::string&amp; file);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classhandy_1_1StatServer.html#a2ee5b97acb5ba6006590bfc9ffa70794">  132</a></span>&#160;           <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1StatServer.html#a2ee5b97acb5ba6006590bfc9ffa70794">onCmd</a>(<span class="keyword">const</span> std::string&amp; cmd, <span class="keyword">const</span> std::string&amp; desc, <span class="keyword">const</span> <a class="code" href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">InfoCallBack</a>&amp; cb)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;           {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <a class="code" href="classhandy_1_1StatServer.html#af8136e30e403fed96155e2e5acb8a07f">onRequest</a>(<a class="code" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050aa28966bac17b8eef99c5afa5eb594130">StatType::CMD</a>, cmd, desc, cb);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;           }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classhandy_1_1StatServer.html#a920c22305a387baac14a596497be76b8">  143</a></span>&#160;           <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1StatServer.html#a920c22305a387baac14a596497be76b8">onCmd</a>(<span class="keyword">const</span> std::string&amp; cmd, <span class="keyword">const</span> std::string&amp; desc, <span class="keyword">const</span> <a class="code" href="namespacehandy.html#a87edf225a982aa1ba79cc14ad55e34b8">IntCallBack</a>&amp; cb)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;           {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <a class="code" href="classhandy_1_1StatServer.html#af8136e30e403fed96155e2e5acb8a07f">onRequest</a>(<a class="code" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050aa28966bac17b8eef99c5afa5eb594130">StatType::CMD</a>, cmd, desc, [cb] </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="structhandy_1_1Utils.html#ad70f51fc39095ca32dce7f045adc026b">Utils::format</a>(<span class="stringliteral">&quot;%lld&quot;</span>, cb());</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                });</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;           }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classhandy_1_1StatServer.html#a6775109afb8b3eb3e62dd65e23d3d4bf">  151</a></span>&#160;            <a class="code" href="classhandy_1_1HttpServer.html">HttpServer</a> <a class="code" href="classhandy_1_1StatServer.html#a6775109afb8b3eb3e62dd65e23d3d4bf">m_server</a>;        <span class="comment">// 内部HTTP服务器实例</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="comment">// 存储回调函数及描述的结构体</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="structhandy_1_1StatServer_1_1CallBackInfo.html">  153</a></span>&#160;            <span class="keyword">struct </span><a class="code" href="structhandy_1_1StatServer_1_1CallBackInfo.html">CallBackInfo</a></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            {</div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="structhandy_1_1StatServer_1_1CallBackInfo.html#a1e57b91f1164fa2c22d8205bb6303380">  155</a></span>&#160;                std::string <a class="code" href="structhandy_1_1StatServer_1_1CallBackInfo.html#a1e57b91f1164fa2c22d8205bb6303380">description</a>;    <span class="comment">// 回调函数对应的描述信息</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="structhandy_1_1StatServer_1_1CallBackInfo.html#a426e9953f14db76bddfd64186c1afa79">  156</a></span>&#160;                <a class="code" href="namespacehandy.html#a5eaa6d869a276fe1b96586303526c272">StatCallBack</a> <a class="code" href="structhandy_1_1StatServer_1_1CallBackInfo.html#a426e9953f14db76bddfd64186c1afa79">callback</a>;      <span class="comment">// 实际处理回调函数</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            };</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classhandy_1_1StatServer.html#ab0877c0d5ac3af751726b86e1ad36916">  159</a></span>&#160;            std::map&lt;std::string, CallBackInfo&gt; <a class="code" href="classhandy_1_1StatServer.html#ab0877c0d5ac3af751726b86e1ad36916">m_statCallBacks</a>;    <span class="comment">// 状态回调函数映射表</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classhandy_1_1StatServer.html#a58d75bdcbffe13a56ed9fa81dda026ca">  160</a></span>&#160;            std::map&lt;std::string, CallBackInfo&gt; <a class="code" href="classhandy_1_1StatServer.html#a58d75bdcbffe13a56ed9fa81dda026ca">m_pageCallBacks</a>;    <span class="comment">// 页面回调函数映射表</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="classhandy_1_1StatServer.html#a47f55b0fb90edb385628529b04925b8f">  161</a></span>&#160;            std::map&lt;std::string, CallBackInfo&gt; <a class="code" href="classhandy_1_1StatServer.html#a47f55b0fb90edb385628529b04925b8f">m_cmdCallBacks</a>;     <span class="comment">// 命令回调函数映射表</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classhandy_1_1StatServer.html#ad4df7a5face15f478ecece107ff9cab9">  162</a></span>&#160;            std::map&lt;std::string, StatCallBack&gt; <a class="code" href="classhandy_1_1StatServer.html#ad4df7a5face15f478ecece107ff9cab9">m_allCallBacks</a>;     <span class="comment">// 所有回调函数的统一映射表，用于快速查找</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    };</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;} <span class="comment">// namespace handy</span></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a7dbc507d0f4a9543038d3c0515135050a22311203d44b308bd2d607cdc2dcb72c"><div class="ttname"><a href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050a22311203d44b308bd2d607cdc2dcb72c">handy::StatServer::StatType::PAGE</a></div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a0623e3e3979c864209d4758249930c6f"><div class="ttname"><a href="classhandy_1_1StatServer.html#a0623e3e3979c864209d4758249930c6f">handy::StatServer::onPage</a></div><div class="ttdeci">void onPage(const std::string &amp;page, const std::string &amp;desc, const InfoCallBack &amp;cb)</div><div class="ttdoc">注册页面信息回调（快捷接口） </div><div class="ttdef"><b>Definition:</b> stat-svr.h:113</div></div>
+<div class="ttc" id="namespacehandy_html_a87edf225a982aa1ba79cc14ad55e34b8"><div class="ttname"><a href="namespacehandy.html#a87edf225a982aa1ba79cc14ad55e34b8">handy::IntCallBack</a></div><div class="ttdeci">std::function&lt; int64_t()&gt; IntCallBack</div><div class="ttdoc">数值获取回调函数，返回int64_t类型的状态值 </div><div class="ttdef"><b>Definition:</b> stat-svr.h:30</div></div>
+<div class="ttc" id="structhandy_1_1StatServer_1_1CallBackInfo_html_a426e9953f14db76bddfd64186c1afa79"><div class="ttname"><a href="structhandy_1_1StatServer_1_1CallBackInfo.html#a426e9953f14db76bddfd64186c1afa79">handy::StatServer::CallBackInfo::callback</a></div><div class="ttdeci">StatCallBack callback</div><div class="ttdef"><b>Definition:</b> stat-svr.h:156</div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a7dbc507d0f4a9543038d3c0515135050a2b848a8cc886d253d21a77c43cd50aae"><div class="ttname"><a href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050a2b848a8cc886d253d21a77c43cd50aae">handy::StatServer::StatType::STATE</a></div></div>
+<div class="ttc" id="namespacehandy_html_a5eaa6d869a276fe1b96586303526c272"><div class="ttname"><a href="namespacehandy.html#a5eaa6d869a276fe1b96586303526c272">handy::StatCallBack</a></div><div class="ttdeci">std::function&lt; void(const HttpRequest &amp;, HttpResponse &amp;)&gt; StatCallBack</div><div class="ttdoc">HTTP请求处理回调函数 </div><div class="ttdef"><b>Definition:</b> stat-svr.h:18</div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a81048af2167c93720345b4a287a7074f"><div class="ttname"><a href="classhandy_1_1StatServer.html#a81048af2167c93720345b4a287a7074f">handy::StatServer::onState</a></div><div class="ttdeci">void onState(const std::string &amp;state, const std::string &amp;desc, const IntCallBack &amp;cb)</div><div class="ttdoc">注册数值型状态信息回调（快捷接口） </div><div class="ttdef"><b>Definition:</b> stat-svr.h:100</div></div>
+<div class="ttc" id="classhandy_1_1EventBase_html"><div class="ttname"><a href="classhandy_1_1EventBase.html">handy::EventBase</a></div><div class="ttdoc">单线程事件派发器，管理定时器、I/O事件、异步任务 </div><div class="ttdef"><b>Definition:</b> event_base.h:76</div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a6775109afb8b3eb3e62dd65e23d3d4bf"><div class="ttname"><a href="classhandy_1_1StatServer.html#a6775109afb8b3eb3e62dd65e23d3d4bf">handy::StatServer::m_server</a></div><div class="ttdeci">HttpServer m_server</div><div class="ttdef"><b>Definition:</b> stat-svr.h:151</div></div>
+<div class="ttc" id="classhandy_1_1NonCopyAble_html"><div class="ttname"><a href="classhandy_1_1NonCopyAble.html">handy::NonCopyAble</a></div><div class="ttdoc">禁止派生类对象的拷贝构造和拷贝赋值操作 </div><div class="ttdef"><b>Definition:</b> non_copy_able.h:9</div></div>
+<div class="ttc" id="structhandy_1_1Utils_html_ad70f51fc39095ca32dce7f045adc026b"><div class="ttname"><a href="structhandy_1_1Utils.html#ad70f51fc39095ca32dce7f045adc026b">handy::Utils::format</a></div><div class="ttdeci">static std::string format(const char *fmt,...) noexcept</div><div class="ttdoc">格式化字符串 </div><div class="ttdef"><b>Definition:</b> utils.cpp:61</div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a85d041b9ba9b52ff1ec223777d84c744"><div class="ttname"><a href="classhandy_1_1StatServer.html#a85d041b9ba9b52ff1ec223777d84c744">handy::StatServer::bind</a></div><div class="ttdeci">int bind(const std::string &amp;host, unsigned short port)</div><div class="ttdoc">将服务器绑定到指定的主机和端口 </div><div class="ttdef"><b>Definition:</b> stat-svr.h:60</div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html"><div class="ttname"><a href="classhandy_1_1StatServer.html">handy::StatServer</a></div><div class="ttdoc">状态监控服务器，提供HTTP接口用于查询状态、展示页面和执行命令 </div><div class="ttdef"><b>Definition:</b> stat-svr.h:37</div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a753158eb7a85145c1b5c73c1e33e8fd8"><div class="ttname"><a href="classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8">handy::StatServer::StatServer</a></div><div class="ttdeci">StatServer(EventBase *base)</div><div class="ttdoc">构造函数 </div><div class="ttdef"><b>Definition:</b> stat-svr.cpp:30</div></div>
+<div class="ttc" id="http_8h_html"><div class="ttname"><a href="http_8h.html">http.h</a></div></div>
+<div class="ttc" id="structhandy_1_1StatServer_1_1CallBackInfo_html_a1e57b91f1164fa2c22d8205bb6303380"><div class="ttname"><a href="structhandy_1_1StatServer_1_1CallBackInfo.html#a1e57b91f1164fa2c22d8205bb6303380">handy::StatServer::CallBackInfo::description</a></div><div class="ttdeci">std::string description</div><div class="ttdef"><b>Definition:</b> stat-svr.h:155</div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a920c22305a387baac14a596497be76b8"><div class="ttname"><a href="classhandy_1_1StatServer.html#a920c22305a387baac14a596497be76b8">handy::StatServer::onCmd</a></div><div class="ttdeci">void onCmd(const std::string &amp;cmd, const std::string &amp;desc, const IntCallBack &amp;cb)</div><div class="ttdoc">注册数值型命令处理回调（快捷接口） </div><div class="ttdef"><b>Definition:</b> stat-svr.h:143</div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a7dbc507d0f4a9543038d3c0515135050"><div class="ttname"><a href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050">handy::StatServer::StatType</a></div><div class="ttdeci">StatType</div><div class="ttdef"><b>Definition:</b> stat-svr.h:41</div></div>
+<div class="ttc" id="non__copy__able_8h_html"><div class="ttname"><a href="non__copy__able_8h.html">non_copy_able.h</a></div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_af8136e30e403fed96155e2e5acb8a07f"><div class="ttname"><a href="classhandy_1_1StatServer.html#af8136e30e403fed96155e2e5acb8a07f">handy::StatServer::onRequest</a></div><div class="ttdeci">void onRequest(StatType type, const std::string &amp;key, const std::string &amp;desc, const StatCallBack &amp;cb)</div><div class="ttdoc">注册请求处理回调函数 </div><div class="ttdef"><b>Definition:</b> stat-svr.cpp:129</div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_ab0877c0d5ac3af751726b86e1ad36916"><div class="ttname"><a href="classhandy_1_1StatServer.html#ab0877c0d5ac3af751726b86e1ad36916">handy::StatServer::m_statCallBacks</a></div><div class="ttdeci">std::map&lt; std::string, CallBackInfo &gt; m_statCallBacks</div><div class="ttdef"><b>Definition:</b> stat-svr.h:159</div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a2ee5b97acb5ba6006590bfc9ffa70794"><div class="ttname"><a href="classhandy_1_1StatServer.html#a2ee5b97acb5ba6006590bfc9ffa70794">handy::StatServer::onCmd</a></div><div class="ttdeci">void onCmd(const std::string &amp;cmd, const std::string &amp;desc, const InfoCallBack &amp;cb)</div><div class="ttdoc">注册命令处理回调（快捷接口） </div><div class="ttdef"><b>Definition:</b> stat-svr.h:132</div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a3712ba3e95a812d5fc7aa8a4453bd1a6"><div class="ttname"><a href="classhandy_1_1StatServer.html#a3712ba3e95a812d5fc7aa8a4453bd1a6">handy::StatServer::onState</a></div><div class="ttdeci">void onState(const std::string &amp;state, const std::string &amp;desc, const InfoCallBack &amp;cb)</div><div class="ttdoc">注册状态信息回调（快捷接口） </div><div class="ttdef"><b>Definition:</b> stat-svr.h:89</div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a0abb3f277002ee8dbb00bbc78e2abb99"><div class="ttname"><a href="classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99">handy::StatServer::onPageFile</a></div><div class="ttdeci">void onPageFile(const std::string &amp;page, const std::string &amp;desc, const std::string &amp;file)</div><div class="ttdoc">注册页面文件（将文件内容作为页面响应） </div><div class="ttdef"><b>Definition:</b> stat-svr.cpp:168</div></div>
+<div class="ttc" id="namespacehandy_html_a45c4cb6d78283efef295c467b226e657"><div class="ttname"><a href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">handy::InfoCallBack</a></div><div class="ttdeci">std::function&lt; std::string()&gt; InfoCallBack</div><div class="ttdoc">信息获取回调函数，返回字符串类型的状态信息 </div><div class="ttdef"><b>Definition:</b> stat-svr.h:24</div></div>
+<div class="ttc" id="slice_8h_html"><div class="ttname"><a href="slice_8h.html">slice.h</a></div></div>
+<div class="ttc" id="event__base_8h_html"><div class="ttname"><a href="event__base_8h.html">event_base.h</a></div><div class="ttdoc">事件驱动框架核心头文件，包含事件循环、定时器、通道管理等核心组件 </div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a7dbc507d0f4a9543038d3c0515135050aa28966bac17b8eef99c5afa5eb594130"><div class="ttname"><a href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050aa28966bac17b8eef99c5afa5eb594130">handy::StatServer::StatType::CMD</a></div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a58d75bdcbffe13a56ed9fa81dda026ca"><div class="ttname"><a href="classhandy_1_1StatServer.html#a58d75bdcbffe13a56ed9fa81dda026ca">handy::StatServer::m_pageCallBacks</a></div><div class="ttdeci">std::map&lt; std::string, CallBackInfo &gt; m_pageCallBacks</div><div class="ttdef"><b>Definition:</b> stat-svr.h:160</div></div>
+<div class="ttc" id="classhandy_1_1TcpServer_html_a373e76987f525973c65e2cab025522cc"><div class="ttname"><a href="classhandy_1_1TcpServer.html#a373e76987f525973c65e2cab025522cc">handy::TcpServer::bind</a></div><div class="ttdeci">int bind(const std::string &amp;host, unsigned short port, bool isReusePort=false)</div><div class="ttdoc">绑定到指定的主机和端口 </div><div class="ttdef"><b>Definition:</b> conn.cpp:608</div></div>
+<div class="ttc" id="structhandy_1_1StatServer_1_1CallBackInfo_html"><div class="ttname"><a href="structhandy_1_1StatServer_1_1CallBackInfo.html">handy::StatServer::CallBackInfo</a></div><div class="ttdef"><b>Definition:</b> stat-svr.h:153</div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_a47f55b0fb90edb385628529b04925b8f"><div class="ttname"><a href="classhandy_1_1StatServer.html#a47f55b0fb90edb385628529b04925b8f">handy::StatServer::m_cmdCallBacks</a></div><div class="ttdeci">std::map&lt; std::string, CallBackInfo &gt; m_cmdCallBacks</div><div class="ttdef"><b>Definition:</b> stat-svr.h:161</div></div>
+<div class="ttc" id="classhandy_1_1HttpServer_html"><div class="ttname"><a href="classhandy_1_1HttpServer.html">handy::HttpServer</a></div><div class="ttdoc">HTTP服务器类，继承自Tcpserver. </div><div class="ttdef"><b>Definition:</b> http.h:378</div></div>
+<div class="ttc" id="classhandy_1_1StatServer_html_ad4df7a5face15f478ecece107ff9cab9"><div class="ttname"><a href="classhandy_1_1StatServer.html#ad4df7a5face15f478ecece107ff9cab9">handy::StatServer::m_allCallBacks</a></div><div class="ttdeci">std::map&lt; std::string, StatCallBack &gt; m_allCallBacks</div><div class="ttdef"><b>Definition:</b> stat-svr.h:162</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

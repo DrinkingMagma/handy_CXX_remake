@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy::StatServer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehandy.html">handy</a></li><li class="navelem"><a class="el" href="classhandy_1_1StatServer.html">StatServer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classhandy_1_1StatServer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">handy::StatServer类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>状态监控服务器，提供HTTP接口用于查询状态、展示页面和执行命令  
+ <a href="classhandy_1_1StatServer.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="stat-svr_8h_source.html">stat-svr.h</a>&gt;</code></p>
+<div class="dynheader">
+类 handy::StatServer 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classhandy_1_1StatServer.png" usemap="#handy::StatServer_map" alt=""/>
+  <map id="handy::StatServer_map" name="handy::StatServer_map">
+<area href="classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="handy::NonCopyAble" shape="rect" coords="0,0,132,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1StatServer_1_1CallBackInfo.html">CallBackInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a7dbc507d0f4a9543038d3c0515135050"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050">StatType</a> { <a class="el" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050a2b848a8cc886d253d21a77c43cd50aae">StatType::STATE</a>, 
+<a class="el" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050a22311203d44b308bd2d607cdc2dcb72c">StatType::PAGE</a>, 
+<a class="el" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050aa28966bac17b8eef99c5afa5eb594130">StatType::CMD</a>
+ }</td></tr>
+<tr class="separator:a7dbc507d0f4a9543038d3c0515135050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a753158eb7a85145c1b5c73c1e33e8fd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8">StatServer</a> (<a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *base)</td></tr>
+<tr class="memdesc:a753158eb7a85145c1b5c73c1e33e8fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <a href="#a753158eb7a85145c1b5c73c1e33e8fd8">更多...</a><br/></td></tr>
+<tr class="separator:a753158eb7a85145c1b5c73c1e33e8fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d041b9ba9b52ff1ec223777d84c744"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a85d041b9ba9b52ff1ec223777d84c744">bind</a> (const std::string &amp;host, unsigned short port)</td></tr>
+<tr class="memdesc:a85d041b9ba9b52ff1ec223777d84c744"><td class="mdescLeft">&#160;</td><td class="mdescRight">将服务器绑定到指定的主机和端口  <a href="#a85d041b9ba9b52ff1ec223777d84c744">更多...</a><br/></td></tr>
+<tr class="separator:a85d041b9ba9b52ff1ec223777d84c744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8136e30e403fed96155e2e5acb8a07f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#af8136e30e403fed96155e2e5acb8a07f">onRequest</a> (<a class="el" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050">StatType</a> type, const std::string &amp;key, const std::string &amp;desc, const <a class="el" href="namespacehandy.html#a5eaa6d869a276fe1b96586303526c272">StatCallBack</a> &amp;cb)</td></tr>
+<tr class="memdesc:af8136e30e403fed96155e2e5acb8a07f"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册请求处理回调函数  <a href="#af8136e30e403fed96155e2e5acb8a07f">更多...</a><br/></td></tr>
+<tr class="separator:af8136e30e403fed96155e2e5acb8a07f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e1f434273b23bff5b3bb00fa2ffab4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a5e1f434273b23bff5b3bb00fa2ffab4a">onRequest</a> (<a class="el" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050">StatType</a> type, const std::string &amp;key, const std::string &amp;desc, const <a class="el" href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">InfoCallBack</a> &amp;cb)</td></tr>
+<tr class="memdesc:a5e1f434273b23bff5b3bb00fa2ffab4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册信息类型的请求处理回调函数（适配InfoCallBack）  <a href="#a5e1f434273b23bff5b3bb00fa2ffab4a">更多...</a><br/></td></tr>
+<tr class="separator:a5e1f434273b23bff5b3bb00fa2ffab4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3712ba3e95a812d5fc7aa8a4453bd1a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a3712ba3e95a812d5fc7aa8a4453bd1a6">onState</a> (const std::string &amp;state, const std::string &amp;desc, const <a class="el" href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">InfoCallBack</a> &amp;cb)</td></tr>
+<tr class="memdesc:a3712ba3e95a812d5fc7aa8a4453bd1a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册状态信息回调（快捷接口）  <a href="#a3712ba3e95a812d5fc7aa8a4453bd1a6">更多...</a><br/></td></tr>
+<tr class="separator:a3712ba3e95a812d5fc7aa8a4453bd1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81048af2167c93720345b4a287a7074f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a81048af2167c93720345b4a287a7074f">onState</a> (const std::string &amp;state, const std::string &amp;desc, const <a class="el" href="namespacehandy.html#a87edf225a982aa1ba79cc14ad55e34b8">IntCallBack</a> &amp;cb)</td></tr>
+<tr class="memdesc:a81048af2167c93720345b4a287a7074f"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册数值型状态信息回调（快捷接口）  <a href="#a81048af2167c93720345b4a287a7074f">更多...</a><br/></td></tr>
+<tr class="separator:a81048af2167c93720345b4a287a7074f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0623e3e3979c864209d4758249930c6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a0623e3e3979c864209d4758249930c6f">onPage</a> (const std::string &amp;page, const std::string &amp;desc, const <a class="el" href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">InfoCallBack</a> &amp;cb)</td></tr>
+<tr class="memdesc:a0623e3e3979c864209d4758249930c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册页面信息回调（快捷接口）  <a href="#a0623e3e3979c864209d4758249930c6f">更多...</a><br/></td></tr>
+<tr class="separator:a0623e3e3979c864209d4758249930c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0abb3f277002ee8dbb00bbc78e2abb99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99">onPageFile</a> (const std::string &amp;page, const std::string &amp;desc, const std::string &amp;file)</td></tr>
+<tr class="memdesc:a0abb3f277002ee8dbb00bbc78e2abb99"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册页面文件（将文件内容作为页面响应）  <a href="#a0abb3f277002ee8dbb00bbc78e2abb99">更多...</a><br/></td></tr>
+<tr class="separator:a0abb3f277002ee8dbb00bbc78e2abb99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee5b97acb5ba6006590bfc9ffa70794"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a2ee5b97acb5ba6006590bfc9ffa70794">onCmd</a> (const std::string &amp;cmd, const std::string &amp;desc, const <a class="el" href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">InfoCallBack</a> &amp;cb)</td></tr>
+<tr class="memdesc:a2ee5b97acb5ba6006590bfc9ffa70794"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册命令处理回调（快捷接口）  <a href="#a2ee5b97acb5ba6006590bfc9ffa70794">更多...</a><br/></td></tr>
+<tr class="separator:a2ee5b97acb5ba6006590bfc9ffa70794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920c22305a387baac14a596497be76b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a920c22305a387baac14a596497be76b8">onCmd</a> (const std::string &amp;cmd, const std::string &amp;desc, const <a class="el" href="namespacehandy.html#a87edf225a982aa1ba79cc14ad55e34b8">IntCallBack</a> &amp;cb)</td></tr>
+<tr class="memdesc:a920c22305a387baac14a596497be76b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册数值型命令处理回调（快捷接口）  <a href="#a920c22305a387baac14a596497be76b8">更多...</a><br/></td></tr>
+<tr class="separator:a920c22305a387baac14a596497be76b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a6775109afb8b3eb3e62dd65e23d3d4bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1HttpServer.html">HttpServer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a6775109afb8b3eb3e62dd65e23d3d4bf">m_server</a></td></tr>
+<tr class="separator:a6775109afb8b3eb3e62dd65e23d3d4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0877c0d5ac3af751726b86e1ad36916"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <br class="typebreak"/>
+<a class="el" href="structhandy_1_1StatServer_1_1CallBackInfo.html">CallBackInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#ab0877c0d5ac3af751726b86e1ad36916">m_statCallBacks</a></td></tr>
+<tr class="separator:ab0877c0d5ac3af751726b86e1ad36916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d75bdcbffe13a56ed9fa81dda026ca"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <br class="typebreak"/>
+<a class="el" href="structhandy_1_1StatServer_1_1CallBackInfo.html">CallBackInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a58d75bdcbffe13a56ed9fa81dda026ca">m_pageCallBacks</a></td></tr>
+<tr class="separator:a58d75bdcbffe13a56ed9fa81dda026ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f55b0fb90edb385628529b04925b8f"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <br class="typebreak"/>
+<a class="el" href="structhandy_1_1StatServer_1_1CallBackInfo.html">CallBackInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a47f55b0fb90edb385628529b04925b8f">m_cmdCallBacks</a></td></tr>
+<tr class="separator:a47f55b0fb90edb385628529b04925b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4df7a5face15f478ecece107ff9cab9"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <br class="typebreak"/>
+<a class="el" href="namespacehandy.html#a5eaa6d869a276fe1b96586303526c272">StatCallBack</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#ad4df7a5face15f478ecece107ff9cab9">m_allCallBacks</a></td></tr>
+<tr class="separator:ad4df7a5face15f478ecece107ff9cab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_methods_classhandy_1_1NonCopyAble"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classhandy_1_1NonCopyAble')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classhandy_1_1NonCopyAble.html">handy::NonCopyAble</a></td></tr>
+<tr class="memitem:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#af559df4e2ebd8b9e54566633b7bf9855">NonCopyAble</a> ()=default</td></tr>
+<tr class="separator:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#acd1d67f20f33c3f91b64262eed41ef69">~NonCopyAble</a> () noexcept=default</td></tr>
+<tr class="separator:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a281e6b5825279cf9c60cf3bda6d5d23a">NonCopyAble</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a0a3dfd5848777f831e337b3a67b749c8">operator=</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a59f29256ac90ab3415d6fd2028bfd03f">NonCopyAble</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#afb79661bb6df7f5381340e4d3337eaf6">operator=</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>状态监控服务器，提供HTTP接口用于查询状态、展示页面和执行命令 </p>
+<dl class="section note"><dt>注解</dt><dd>线程安全：所有注册的回调函数需保证线程安全，内部数据访问在事件循环线程中进行 </dd></dl>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a class="anchor" id="a7dbc507d0f4a9543038d3c0515135050"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050">handy::StatServer::StatType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a7dbc507d0f4a9543038d3c0515135050a2b848a8cc886d253d21a77c43cd50aae"></a>STATE</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a7dbc507d0f4a9543038d3c0515135050a22311203d44b308bd2d607cdc2dcb72c"></a>PAGE</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a7dbc507d0f4a9543038d3c0515135050aa28966bac17b8eef99c5afa5eb594130"></a>CMD</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a753158eb7a85145c1b5c73c1e33e8fd8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::StatServer::StatServer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td>
+          <td class="paramname"><em>base</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">base</td><td>事件循环对象，服务器运行依赖的事件驱动基础 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a85d041b9ba9b52ff1ec223777d84c744"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int handy::StatServer::bind </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>host</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将服务器绑定到指定的主机和端口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">host</td><td>绑定的主机地址（如0.0.0.0） </td></tr>
+    <tr><td class="paramname">port</td><td>绑定的端口号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 0: 绑定成功, 非0: 绑定失败（错误码未errno） </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2ee5b97acb5ba6006590bfc9ffa70794"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::StatServer::onCmd </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">InfoCallBack</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册命令处理回调（快捷接口） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>命令标识 </td></tr>
+    <tr><td class="paramname">desc</td><td>命令描述 </td></tr>
+    <tr><td class="paramname">cb</td><td>命令处理回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a920c22305a387baac14a596497be76b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::StatServer::onCmd </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacehandy.html#a87edf225a982aa1ba79cc14ad55e34b8">IntCallBack</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册数值型命令处理回调（快捷接口） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>命令标识 </td></tr>
+    <tr><td class="paramname">desc</td><td>命令描述 </td></tr>
+    <tr><td class="paramname">cb</td><td>命令结果数值获取回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0623e3e3979c864209d4758249930c6f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::StatServer::onPage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>page</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">InfoCallBack</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册页面信息回调（快捷接口） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">page</td><td>页面标识（对应HTTP路径） </td></tr>
+    <tr><td class="paramname">desc</td><td>页面描述 </td></tr>
+    <tr><td class="paramname">cb</td><td>页面内容获取回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0abb3f277002ee8dbb00bbc78e2abb99"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::StatServer::onPageFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>page</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>注册页面文件（将文件内容作为页面响应） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">page</td><td>页面标识（对应HTTP路径） </td></tr>
+    <tr><td class="paramname">desc</td><td>页面描述 </td></tr>
+    <tr><td class="paramname">file</td><td>本地文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af8136e30e403fed96155e2e5acb8a07f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::StatServer::onRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050">StatType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacehandy.html#a5eaa6d869a276fe1b96586303526c272">StatCallBack</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>注册请求处理回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>请求类型（STATE/PAGE/CMD） </td></tr>
+    <tr><td class="paramname">key</td><td>唯一标识（用于HTTP路径匹配） </td></tr>
+    <tr><td class="paramname">desc</td><td>描述信息（用于生成首页帮助） </td></tr>
+    <tr><td class="paramname">cb</td><td>处理回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5e1f434273b23bff5b3bb00fa2ffab4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::StatServer::onRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050">StatType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">InfoCallBack</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>注册信息类型的请求处理回调函数（适配InfoCallBack） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>请求类型（STATE/PAGE/CMD） </td></tr>
+    <tr><td class="paramname">key</td><td>唯一标识（用于HTTP路径匹配） </td></tr>
+    <tr><td class="paramname">desc</td><td>描述信息（用于生成首页帮助） </td></tr>
+    <tr><td class="paramname">cb</td><td>信息获取回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3712ba3e95a812d5fc7aa8a4453bd1a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::StatServer::onState </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacehandy.html#a45c4cb6d78283efef295c467b226e657">InfoCallBack</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册状态信息回调（快捷接口） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>状态标识 </td></tr>
+    <tr><td class="paramname">desc</td><td>状态描述 </td></tr>
+    <tr><td class="paramname">cb</td><td>信息获取回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a81048af2167c93720345b4a287a7074f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::StatServer::onState </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacehandy.html#a87edf225a982aa1ba79cc14ad55e34b8">IntCallBack</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册数值型状态信息回调（快捷接口） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>状态标识 </td></tr>
+    <tr><td class="paramname">desc</td><td>状态描述 </td></tr>
+    <tr><td class="paramname">cb</td><td>信息获取回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="ad4df7a5face15f478ecece107ff9cab9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, <a class="el" href="namespacehandy.html#a5eaa6d869a276fe1b96586303526c272">StatCallBack</a>&gt; handy::StatServer::m_allCallBacks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a47f55b0fb90edb385628529b04925b8f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, <a class="el" href="structhandy_1_1StatServer_1_1CallBackInfo.html">CallBackInfo</a>&gt; handy::StatServer::m_cmdCallBacks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a58d75bdcbffe13a56ed9fa81dda026ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, <a class="el" href="structhandy_1_1StatServer_1_1CallBackInfo.html">CallBackInfo</a>&gt; handy::StatServer::m_pageCallBacks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6775109afb8b3eb3e62dd65e23d3d4bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1HttpServer.html">HttpServer</a> handy::StatServer::m_server</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab0877c0d5ac3af751726b86e1ad36916"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, <a class="el" href="structhandy_1_1StatServer_1_1CallBackInfo.html">CallBackInfo</a>&gt; handy::StatServer::m_statCallBacks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>handy/<a class="el" href="stat-svr_8h_source.html">stat-svr.h</a></li>
+<li>handy/<a class="el" href="stat-svr_8cpp.html">stat-svr.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

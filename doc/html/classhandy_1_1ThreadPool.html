@@ -1,0 +1,675 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy::ThreadPool类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehandy.html">handy</a></li><li class="navelem"><a class="el" href="classhandy_1_1ThreadPool.html">ThreadPool</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classhandy_1_1ThreadPool-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">handy::ThreadPool类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>线程池类(管理一组线程执行任务)  
+ <a href="classhandy_1_1ThreadPool.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="thread__pool_8h_source.html">thread_pool.h</a>&gt;</code></p>
+<div class="dynheader">
+类 handy::ThreadPool 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classhandy_1_1ThreadPool.png" usemap="#handy::ThreadPool_map" alt=""/>
+  <map id="handy::ThreadPool_map" name="handy::ThreadPool_map">
+<area href="classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="handy::NonCopyAble" shape="rect" coords="0,0,132,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a60492a85af81120d1d8d03e3a41d2ffe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#a60492a85af81120d1d8d03e3a41d2ffe">ThreadPool</a> (int threadNum, int taskQueueCapacity=0, bool isStartImmediately=true)</td></tr>
+<tr class="memdesc:a60492a85af81120d1d8d03e3a41d2ffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数(初始化线程池参数)  <a href="#a60492a85af81120d1d8d03e3a41d2ffe">更多...</a><br/></td></tr>
+<tr class="separator:a60492a85af81120d1d8d03e3a41d2ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6679e58f1edc7df60289577b0475100"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#ac6679e58f1edc7df60289577b0475100">~ThreadPool</a> () noexcept</td></tr>
+<tr class="memdesc:ac6679e58f1edc7df60289577b0475100"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数(优雅释放资源)  <a href="#ac6679e58f1edc7df60289577b0475100">更多...</a><br/></td></tr>
+<tr class="separator:ac6679e58f1edc7df60289577b0475100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf51af0903a31cc86c87424b87b48336"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#acf51af0903a31cc86c87424b87b48336">ThreadPool</a> (<a class="el" href="classhandy_1_1ThreadPool.html">ThreadPool</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:acf51af0903a31cc86c87424b87b48336"><td class="mdescLeft">&#160;</td><td class="mdescRight">禁止移动构造  <a href="#acf51af0903a31cc86c87424b87b48336">更多...</a><br/></td></tr>
+<tr class="separator:acf51af0903a31cc86c87424b87b48336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bc88916dfb685cc3413faafe081ec3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1ThreadPool.html">ThreadPool</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#a5bc88916dfb685cc3413faafe081ec3c">operator=</a> (<a class="el" href="classhandy_1_1ThreadPool.html">ThreadPool</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:a5bc88916dfb685cc3413faafe081ec3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">禁止移动赋值  <a href="#a5bc88916dfb685cc3413faafe081ec3c">更多...</a><br/></td></tr>
+<tr class="separator:a5bc88916dfb685cc3413faafe081ec3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e85ff1e6605531acdd8e0e3cf903df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#a74e85ff1e6605531acdd8e0e3cf903df">start</a> ()</td></tr>
+<tr class="memdesc:a74e85ff1e6605531acdd8e0e3cf903df"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动线程池（线程安全）  <a href="#a74e85ff1e6605531acdd8e0e3cf903df">更多...</a><br/></td></tr>
+<tr class="separator:a74e85ff1e6605531acdd8e0e3cf903df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a645707a5d4a6d126b5c3427b1ec39124"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#a645707a5d4a6d126b5c3427b1ec39124">exit</a> ()</td></tr>
+<tr class="memdesc:a645707a5d4a6d126b5c3427b1ec39124"><td class="mdescLeft">&#160;</td><td class="mdescRight">通知线程池优雅退出（线程安全）  <a href="#a645707a5d4a6d126b5c3427b1ec39124">更多...</a><br/></td></tr>
+<tr class="separator:a645707a5d4a6d126b5c3427b1ec39124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa12157caf7e934a8f56c6f9ce79af4b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#aa12157caf7e934a8f56c6f9ce79af4b1">join</a> ()</td></tr>
+<tr class="memdesc:aa12157caf7e934a8f56c6f9ce79af4b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">等待所有线程退出（阻塞当前线程）  <a href="#aa12157caf7e934a8f56c6f9ce79af4b1">更多...</a><br/></td></tr>
+<tr class="separator:aa12157caf7e934a8f56c6f9ce79af4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa539ee3210ff0346b8f88d705bf56f32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#aa539ee3210ff0346b8f88d705bf56f32">addTask</a> (<a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &amp;&amp;task)</td></tr>
+<tr class="memdesc:aa539ee3210ff0346b8f88d705bf56f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">向线程池添加任务（右值引用，线程安全）  <a href="#aa539ee3210ff0346b8f88d705bf56f32">更多...</a><br/></td></tr>
+<tr class="separator:aa539ee3210ff0346b8f88d705bf56f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc125c1df1bdcd8ffcc4162551a49be2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#adc125c1df1bdcd8ffcc4162551a49be2">addTask</a> (<a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &amp;task)</td></tr>
+<tr class="memdesc:adc125c1df1bdcd8ffcc4162551a49be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">向线程池添加任务（左值引用，线程安全）  <a href="#adc125c1df1bdcd8ffcc4162551a49be2">更多...</a><br/></td></tr>
+<tr class="separator:adc125c1df1bdcd8ffcc4162551a49be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9184b6409d22e2d2110d9666a4506526"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#a9184b6409d22e2d2110d9666a4506526">getWaitingTaskCount</a> () const </td></tr>
+<tr class="memdesc:a9184b6409d22e2d2110d9666a4506526"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前等待执行的任务数量（线程安全）  <a href="#a9184b6409d22e2d2110d9666a4506526">更多...</a><br/></td></tr>
+<tr class="separator:a9184b6409d22e2d2110d9666a4506526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3d53b0362ab14ebd76e4b220fa2cfb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#aaa3d53b0362ab14ebd76e4b220fa2cfb">isStarted</a> () const noexcept</td></tr>
+<tr class="memdesc:aaa3d53b0362ab14ebd76e4b220fa2cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询线程池是否已启动（线程安全）  <a href="#aaa3d53b0362ab14ebd76e4b220fa2cfb">更多...</a><br/></td></tr>
+<tr class="separator:aaa3d53b0362ab14ebd76e4b220fa2cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa85eb43f1e6d4972f4fa55fe6fc8067"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#afa85eb43f1e6d4972f4fa55fe6fc8067">isExited</a> () const noexcept</td></tr>
+<tr class="memdesc:afa85eb43f1e6d4972f4fa55fe6fc8067"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询线程池是否已退出（线程安全）  <a href="#afa85eb43f1e6d4972f4fa55fe6fc8067">更多...</a><br/></td></tr>
+<tr class="separator:afa85eb43f1e6d4972f4fa55fe6fc8067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:af16863e56e3df5e49bc00cebb08ae5a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#af16863e56e3df5e49bc00cebb08ae5a4">workerLoop</a> ()</td></tr>
+<tr class="memdesc:af16863e56e3df5e49bc00cebb08ae5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程工作循环（每个线程的入口函数，仅内部调用）  <a href="#af16863e56e3df5e49bc00cebb08ae5a4">更多...</a><br/></td></tr>
+<tr class="separator:af16863e56e3df5e49bc00cebb08ae5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classhandy_1_1NonCopyAble"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classhandy_1_1NonCopyAble')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classhandy_1_1NonCopyAble.html">handy::NonCopyAble</a></td></tr>
+<tr class="memitem:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#af559df4e2ebd8b9e54566633b7bf9855">NonCopyAble</a> ()=default</td></tr>
+<tr class="separator:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#acd1d67f20f33c3f91b64262eed41ef69">~NonCopyAble</a> () noexcept=default</td></tr>
+<tr class="separator:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a281e6b5825279cf9c60cf3bda6d5d23a">NonCopyAble</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a0a3dfd5848777f831e337b3a67b749c8">operator=</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a59f29256ac90ab3415d6fd2028bfd03f">NonCopyAble</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#afb79661bb6df7f5381340e4d3337eaf6">operator=</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a2cebf7ae68c57ace2b7cf18ad88a7ebc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a>&lt; <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#a2cebf7ae68c57ace2b7cf18ad88a7ebc">m_taskQueue</a></td></tr>
+<tr class="separator:a2cebf7ae68c57ace2b7cf18ad88a7ebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa53692abde379e564be849077a1a358"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::thread &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#afa53692abde379e564be849077a1a358">m_threads</a></td></tr>
+<tr class="separator:afa53692abde379e564be849077a1a358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0be37b138ce3f9948195f3e92d5b7b63"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#a0be37b138ce3f9948195f3e92d5b7b63">m_isStarted</a></td></tr>
+<tr class="memdesc:a0be37b138ce3f9948195f3e92d5b7b63"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程池启动标志（原子变量）  <a href="#a0be37b138ce3f9948195f3e92d5b7b63">更多...</a><br/></td></tr>
+<tr class="separator:a0be37b138ce3f9948195f3e92d5b7b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd3e3e885edc2f871b56077e8f18332b"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1ThreadPool.html#acd3e3e885edc2f871b56077e8f18332b">m_isExited</a></td></tr>
+<tr class="memdesc:acd3e3e885edc2f871b56077e8f18332b"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程池退出标志（原子变量）  <a href="#acd3e3e885edc2f871b56077e8f18332b">更多...</a><br/></td></tr>
+<tr class="separator:acd3e3e885edc2f871b56077e8f18332b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>线程池类(管理一组线程执行任务) </p>
+<ol type="1">
+<li>基于SafeQueue实现任务队列,支持线程的启动/退出/等待以及任务的安全添加,包含完善的状态检查与错误处理<ol type="a">
+<li>适用于高并发任务调度场景(如网络服务/批量计算) <dl class="section note"><dt>注解</dt><dd>1. 禁止拷贝与移动,确保线程资源的唯一管理</dd></dl>
+</li>
+</ol>
+</li>
+</ol>
+<p>任务执行异常不会导致线程退出 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a60492a85af81120d1d8d03e3a41d2ffe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ThreadPool::ThreadPool </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>threadNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>taskQueueCapacity</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isStartImmediately</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数(初始化线程池参数) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">threadNum</td><td>线程数量(必须大于0,否则抛出异常) </td></tr>
+    <tr><td class="paramname">taskQueueCapacity</td><td>任务队列容量限制（0表示不限制,默认为0） </td></tr>
+    <tr><td class="paramname">isStartImmediately</td><td>是否立即启动线程池（默认为true） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>当threadNum小于1时抛出</td></tr>
+  </table>
+  </dd>
+</dl>
+<ol type="1">
+<li>初始化任务队列与线程容器，预分配线程容器内存<ol type="a">
+<li>若isStartImmediately为true,则调用start()启动线程池 </li>
+</ol>
+</li>
+</ol>
+
+</div>
+</div>
+<a class="anchor" id="ac6679e58f1edc7df60289577b0475100"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ThreadPool::~ThreadPool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构函数(优雅释放资源) </p>
+<ol type="1">
+<li>析构时自动调用Exit()与Join()，确保所有线程正常退出，并输出未处理任务的警告信息（非致命错误）<ol type="a">
+<li>采用noexecpt修饰,确保析构过程不抛出异常 </li>
+</ol>
+</li>
+</ol>
+
+</div>
+</div>
+<a class="anchor" id="acf51af0903a31cc86c87424b87b48336"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::ThreadPool::ThreadPool </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1ThreadPool.html">ThreadPool</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>禁止移动构造 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="aa539ee3210ff0346b8f88d705bf56f32"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ThreadPool::addTask </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>向线程池添加任务（右值引用，线程安全） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>待添加的任务（右值引用，支持移动语义以减少拷贝开销） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>bool 添加成功返回true,队列满/线程池已退出返回false </dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::logic_error</td><td>当线程池未启动时抛出 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>检查线程池状态，符合条件则将任务添加到任务队列 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adc125c1df1bdcd8ffcc4162551a49be2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ThreadPool::addTask </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &amp;&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>向线程池添加任务（左值引用，线程安全） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>待添加的任务（左值引用，内部会转换为右值） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>bool 添加成功返回true,队列满/线程池已退出返回false </dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::logic_error</td><td>当线程池未启动时抛出 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>1. 适配左值类型的任务，通过移动构造将左值转换未右值 </dd>
+<dd>
+2. 间接调用addTask(task&amp;&amp;)完成添加 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a645707a5d4a6d126b5c3427b1ec39124"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThreadPool::exit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通知线程池优雅退出（线程安全） </p>
+<p>设置线程池退出标志，通知任务队列退出（不再接受新任务） </p>
+<dl class="section note"><dt>注解</dt><dd>已添加的任务会继续执行直到完成 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9184b6409d22e2d2110d9666a4506526"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ThreadPool::getWaitingTaskCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取当前等待执行的任务数量（线程安全） </p>
+<dl class="section return"><dt>返回</dt><dd>size_t 当前等待执行的任务的数量 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>委托给任务队列的size()方法，确保计数的线程安全性 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afa85eb43f1e6d4972f4fa55fe6fc8067"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ThreadPool::isExited </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>查询线程池是否已退出（线程安全） </p>
+<dl class="section return"><dt>返回</dt><dd>bool 线程池已退出返回true,否则返回false </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>直接读取原子变量，无锁开销，效率高 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaa3d53b0362ab14ebd76e4b220fa2cfb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ThreadPool::isStarted </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>查询线程池是否已启动（线程安全） </p>
+<dl class="section return"><dt>返回</dt><dd>bool 线程池已启动返回true,否则返回false </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>直接读取原子变量，无锁开销，效率高 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa12157caf7e934a8f56c6f9ce79af4b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThreadPool::join </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>等待所有线程退出（阻塞当前线程） </p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::logic_error</td><td>当线程池未启动时或未退出时抛出 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>1. 遍历线程容器，等待每个线程执行完毕（调用join()) </dd>
+<dd>
+2. 等待完成后清空线程容器以释放资源 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5bc88916dfb685cc3413faafe081ec3c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1ThreadPool.html">ThreadPool</a>&amp; handy::ThreadPool::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1ThreadPool.html">ThreadPool</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>禁止移动赋值 </p>
+
+</div>
+</div>
+<a class="anchor" id="a74e85ff1e6605531acdd8e0e3cf903df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThreadPool::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>启动线程池（线程安全） </p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::logic_error</td><td>当线程池已退出时抛出</td></tr>
+  </table>
+  </dd>
+</dl>
+<ol type="1">
+<li>原子操作检查启动状态，避免重复启动<ol type="a">
+<li>创建threadNum个线程，每个线程执行workerLoop()函数 </li>
+</ol>
+</li>
+</ol>
+
+</div>
+</div>
+<a class="anchor" id="af16863e56e3df5e49bc00cebb08ae5a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThreadPool::workerLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>线程工作循环（每个线程的入口函数，仅内部调用） </p>
+<dl class="section note"><dt>注解</dt><dd>1. 线程启动后持续循环：从任务队列取任务 </dd>
+<dd>
+2. 取到任务则执行（捕获所有异常，避免线程崩溃） </dd>
+<dd>
+3. 直到线程池退出（m_isExited为true） </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="acd3e3e885edc2f871b56077e8f18332b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; handy::ThreadPool::m_isExited</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>线程池退出标志（原子变量） </p>
+
+</div>
+</div>
+<a class="anchor" id="a0be37b138ce3f9948195f3e92d5b7b63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; handy::ThreadPool::m_isStarted</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>线程池启动标志（原子变量） </p>
+
+</div>
+</div>
+<a class="anchor" id="a2cebf7ae68c57ace2b7cf18ad88a7ebc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a>&lt;<a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a>&gt; handy::ThreadPool::m_taskQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>任务队列（存储待执行的任务） 复用SafeQueue&lt;Task&gt;实现线程安全的任务存储与分发 </p>
+
+</div>
+</div>
+<a class="anchor" id="afa53692abde379e564be849077a1a358"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::thread&gt; handy::ThreadPool::m_threads</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>存储线程对象的容器 构造上时预分配内存，避免后续扩容导致的线程对象拷贝 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>handy/<a class="el" href="thread__pool_8h_source.html">thread_pool.h</a></li>
+<li>handy/<a class="el" href="thread__pool_8cpp.html">thread_pool.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

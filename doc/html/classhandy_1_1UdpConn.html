@@ -1,0 +1,819 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy::UdpConn类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehandy.html">handy</a></li><li class="navelem"><a class="el" href="classhandy_1_1UdpConn.html">UdpConn</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classhandy_1_1UdpConn-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">handy::UdpConn类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>UDP连接类，封装UDP连接的创建、数据发送和接收  
+ <a href="classhandy_1_1UdpConn.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="udp_8h_source.html">udp.h</a>&gt;</code></p>
+<div class="dynheader">
+类 handy::UdpConn 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classhandy_1_1UdpConn.png" usemap="#handy::UdpConn_map" alt=""/>
+  <map id="handy::UdpConn_map" name="handy::UdpConn_map">
+<area href="classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="handy::NonCopyAble" shape="rect" coords="262,0,514,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a56c9450a096d3d9a564da71c9f7d0308"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">Ptr</a> = std::shared_ptr&lt; <a class="el" href="classhandy_1_1UdpConn.html">UdpConn</a> &gt;</td></tr>
+<tr class="separator:a56c9450a096d3d9a564da71c9f7d0308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73df8e77b9774954f9c92016344c2044"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a73df8e77b9774954f9c92016344c2044">UdpMsgCallBack</a> = std::function&lt; void(const <a class="el" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">UdpConn::Ptr</a> &amp;, <a class="el" href="classhandy_1_1Buffer.html">Buffer</a>)&gt;</td></tr>
+<tr class="memdesc:a73df8e77b9774954f9c92016344c2044"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息处理回调函数类型  <a href="#a73df8e77b9774954f9c92016344c2044">更多...</a><br/></td></tr>
+<tr class="separator:a73df8e77b9774954f9c92016344c2044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae0b19a95f626ed8f50698f7a1d202262"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#ae0b19a95f626ed8f50698f7a1d202262">~UdpConn</a> ()</td></tr>
+<tr class="memdesc:ae0b19a95f626ed8f50698f7a1d202262"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数，关闭连接并释放资源  <a href="#ae0b19a95f626ed8f50698f7a1d202262">更多...</a><br/></td></tr>
+<tr class="separator:ae0b19a95f626ed8f50698f7a1d202262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2e5da71ab98afd2ff1b804af6708d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a6d2e5da71ab98afd2ff1b804af6708d1">getBase</a> () const </td></tr>
+<tr class="memdesc:a6d2e5da71ab98afd2ff1b804af6708d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取关联的事件循环对象  <a href="#a6d2e5da71ab98afd2ff1b804af6708d1">更多...</a><br/></td></tr>
+<tr class="separator:a6d2e5da71ab98afd2ff1b804af6708d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bc5c0be9bcb1093baf25b55f62ddaec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Channel.html">Channel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a9bc5c0be9bcb1093baf25b55f62ddaec">getChannel</a> () const </td></tr>
+<tr class="memdesc:a9bc5c0be9bcb1093baf25b55f62ddaec"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取通道对象  <a href="#a9bc5c0be9bcb1093baf25b55f62ddaec">更多...</a><br/></td></tr>
+<tr class="separator:a9bc5c0be9bcb1093baf25b55f62ddaec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ec5518264f7c2a3de123560e4998c59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a1ec5518264f7c2a3de123560e4998c59">send</a> (<a class="el" href="classhandy_1_1Buffer.html">Buffer</a> msg)</td></tr>
+<tr class="memdesc:a1ec5518264f7c2a3de123560e4998c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送数据缓冲区中的数据  <a href="#a1ec5518264f7c2a3de123560e4998c59">更多...</a><br/></td></tr>
+<tr class="separator:a1ec5518264f7c2a3de123560e4998c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a029c43ca7cd568b9fea2e336970ebf42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a029c43ca7cd568b9fea2e336970ebf42">send</a> (const char *buf, size_t len)</td></tr>
+<tr class="memdesc:a029c43ca7cd568b9fea2e336970ebf42"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送指定长度的字节数据  <a href="#a029c43ca7cd568b9fea2e336970ebf42">更多...</a><br/></td></tr>
+<tr class="separator:a029c43ca7cd568b9fea2e336970ebf42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d7c13df818c8f65e97770eb8fe5edea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a6d7c13df818c8f65e97770eb8fe5edea">send</a> (const std::string &amp;s)</td></tr>
+<tr class="memdesc:a6d7c13df818c8f65e97770eb8fe5edea"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送字符串数据  <a href="#a6d7c13df818c8f65e97770eb8fe5edea">更多...</a><br/></td></tr>
+<tr class="separator:a6d7c13df818c8f65e97770eb8fe5edea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc3f1490c0a4d66adc8288b760e650fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#acc3f1490c0a4d66adc8288b760e650fa">send</a> (const char *s)</td></tr>
+<tr class="memdesc:acc3f1490c0a4d66adc8288b760e650fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送以null结尾的字符串  <a href="#acc3f1490c0a4d66adc8288b760e650fa">更多...</a><br/></td></tr>
+<tr class="separator:acc3f1490c0a4d66adc8288b760e650fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29a7dc006afcfc6a2a9ad33cbd71d5d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a29a7dc006afcfc6a2a9ad33cbd71d5d3">onMsg</a> (const <a class="el" href="classhandy_1_1UdpConn.html#a73df8e77b9774954f9c92016344c2044">UdpMsgCallBack</a> &amp;cb)</td></tr>
+<tr class="memdesc:a29a7dc006afcfc6a2a9ad33cbd71d5d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置消息处理回调函数  <a href="#a29a7dc006afcfc6a2a9ad33cbd71d5d3">更多...</a><br/></td></tr>
+<tr class="separator:a29a7dc006afcfc6a2a9ad33cbd71d5d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60a08b5941d9cf5ecf786d514b69915"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#ad60a08b5941d9cf5ecf786d514b69915">close</a> ()</td></tr>
+<tr class="memdesc:ad60a08b5941d9cf5ecf786d514b69915"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭当前UDP连接  <a href="#ad60a08b5941d9cf5ecf786d514b69915">更多...</a><br/></td></tr>
+<tr class="separator:ad60a08b5941d9cf5ecf786d514b69915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b1bc2b4e41a0321dc4312f2a9e6f6e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#ad2b1bc2b4e41a0321dc4312f2a9e6f6e">getPeerStr</a> () const </td></tr>
+<tr class="memdesc:ad2b1bc2b4e41a0321dc4312f2a9e6f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取远程地址的字符串表示  <a href="#ad2b1bc2b4e41a0321dc4312f2a9e6f6e">更多...</a><br/></td></tr>
+<tr class="separator:ad2b1bc2b4e41a0321dc4312f2a9e6f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6fd286dc950e7f156131e6cefaa9a40"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ab6fd286dc950e7f156131e6cefaa9a40"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#ab6fd286dc950e7f156131e6cefaa9a40">getContext</a> ()</td></tr>
+<tr class="memdesc:ab6fd286dc950e7f156131e6cefaa9a40"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取自动管理的上下文对象  <a href="#ab6fd286dc950e7f156131e6cefaa9a40">更多...</a><br/></td></tr>
+<tr class="separator:ab6fd286dc950e7f156131e6cefaa9a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ad42f2c83b20c11a3468a8ac42b2b9fbd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">Ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd">createConnection</a> (<a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *base, const std::string &amp;destHost, unsigned short destPort)</td></tr>
+<tr class="memdesc:ad42f2c83b20c11a3468a8ac42b2b9fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建新的UDP连接  <a href="#ad42f2c83b20c11a3468a8ac42b2b9fbd">更多...</a><br/></td></tr>
+<tr class="separator:ad42f2c83b20c11a3468a8ac42b2b9fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a4cf954d2d362cbcfbeba5a9f9556d74c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a4cf954d2d362cbcfbeba5a9f9556d74c">UdpConn</a> ()=default</td></tr>
+<tr class="memdesc:a4cf954d2d362cbcfbeba5a9f9556d74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数，私有以确保只能通过createConnection方法创建  <a href="#a4cf954d2d362cbcfbeba5a9f9556d74c">更多...</a><br/></td></tr>
+<tr class="separator:a4cf954d2d362cbcfbeba5a9f9556d74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c401be75182dfb842ff3d02c6c224cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a6c401be75182dfb842ff3d02c6c224cf">_handleRead</a> (const <a class="el" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">UdpConn::Ptr</a> &amp;conn)</td></tr>
+<tr class="memdesc:a6c401be75182dfb842ff3d02c6c224cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理读事件的回调函数  <a href="#a6c401be75182dfb842ff3d02c6c224cf">更多...</a><br/></td></tr>
+<tr class="separator:a6c401be75182dfb842ff3d02c6c224cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classhandy_1_1NonCopyAble"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classhandy_1_1NonCopyAble')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classhandy_1_1NonCopyAble.html">handy::NonCopyAble</a></td></tr>
+<tr class="memitem:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#af559df4e2ebd8b9e54566633b7bf9855">NonCopyAble</a> ()=default</td></tr>
+<tr class="separator:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#acd1d67f20f33c3f91b64262eed41ef69">~NonCopyAble</a> () noexcept=default</td></tr>
+<tr class="separator:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a281e6b5825279cf9c60cf3bda6d5d23a">NonCopyAble</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a0a3dfd5848777f831e337b3a67b749c8">operator=</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a59f29256ac90ab3415d6fd2028bfd03f">NonCopyAble</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#afb79661bb6df7f5381340e4d3337eaf6">operator=</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a27f862cfd5d126ecf6c1a0f242e9777b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a27f862cfd5d126ecf6c1a0f242e9777b">m_base</a> = nullptr</td></tr>
+<tr class="separator:a27f862cfd5d126ecf6c1a0f242e9777b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533af80bc031d93794dba64721ae123e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Channel.html">Channel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a533af80bc031d93794dba64721ae123e">m_channel</a> = nullptr</td></tr>
+<tr class="separator:a533af80bc031d93794dba64721ae123e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3666ce79b9843b374a194563aafb92f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#ac3666ce79b9843b374a194563aafb92f">m_local</a> = <a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>(0)</td></tr>
+<tr class="separator:ac3666ce79b9843b374a194563aafb92f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb59dcbfba79879ed38aa9c0fc470ad9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#afb59dcbfba79879ed38aa9c0fc470ad9">m_peer</a> = <a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>(0)</td></tr>
+<tr class="separator:afb59dcbfba79879ed38aa9c0fc470ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9275878aefddfb3bdf3dfb604c9ef955"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1AutoContext.html">AutoContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a9275878aefddfb3bdf3dfb604c9ef955">m_ctx</a></td></tr>
+<tr class="separator:a9275878aefddfb3bdf3dfb604c9ef955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a7fb36e788adb55d329f648a70a5c73"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a9a7fb36e788adb55d329f648a70a5c73">m_destHost</a></td></tr>
+<tr class="separator:a9a7fb36e788adb55d329f648a70a5c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad316e9352e9224fc91826d28667a0670"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#ad316e9352e9224fc91826d28667a0670">m_destPort</a> = 0</td></tr>
+<tr class="separator:ad316e9352e9224fc91826d28667a0670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63791e25bafb1297cf26f22f7f42e8fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1UdpConn.html#a73df8e77b9774954f9c92016344c2044">UdpMsgCallBack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a63791e25bafb1297cf26f22f7f42e8fd">m_udpMsgCallback</a></td></tr>
+<tr class="separator:a63791e25bafb1297cf26f22f7f42e8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>UDP连接类，封装UDP连接的创建、数据发送和接收 </p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a class="anchor" id="a56c9450a096d3d9a564da71c9f7d0308"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">handy::UdpConn::Ptr</a> =  std::shared_ptr&lt;<a class="el" href="classhandy_1_1UdpConn.html">UdpConn</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a73df8e77b9774954f9c92016344c2044"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classhandy_1_1UdpConn.html#a73df8e77b9774954f9c92016344c2044">handy::UdpConn::UdpMsgCallBack</a> =  std::function&lt;void(const <a class="el" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">UdpConn::Ptr</a>&amp;, <a class="el" href="classhandy_1_1Buffer.html">Buffer</a>)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>消息处理回调函数类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>当前UdpConn的智能指针 </td></tr>
+    <tr><td class="paramname">buf</td><td>接收到的数据缓冲区 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ae0b19a95f626ed8f50698f7a1d202262"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::UdpConn::~UdpConn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构函数，关闭连接并释放资源 </p>
+
+</div>
+</div>
+<a class="anchor" id="a4cf954d2d362cbcfbeba5a9f9556d74c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::UdpConn::UdpConn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数，私有以确保只能通过createConnection方法创建 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a6c401be75182dfb842ff3d02c6c224cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::UdpConn::_handleRead </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">UdpConn::Ptr</a> &amp;&#160;</td>
+          <td class="paramname"><em>conn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理读事件的回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>当前UdpConn的智能指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad60a08b5941d9cf5ecf786d514b69915"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::UdpConn::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭当前UDP连接 </p>
+
+</div>
+</div>
+<a class="anchor" id="ad42f2c83b20c11a3468a8ac42b2b9fbd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">UdpConn::Ptr</a> handy::UdpConn::createConnection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>destHost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>destPort</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建新的UDP连接 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">base</td><td>事件循环对象 </td></tr>
+    <tr><td class="paramname">destHost</td><td>目标主机地址 </td></tr>
+    <tr><td class="paramname">destPort</td><td>目标主机端口 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Ptr 新创建的UdpConn智能指针，失败返回nullptr </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6d2e5da71ab98afd2ff1b804af6708d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a>* handy::UdpConn::getBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取关联的事件循环对象 </p>
+<dl class="section return"><dt>返回</dt><dd>EventBase* 事件循环对象指针 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9bc5c0be9bcb1093baf25b55f62ddaec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Channel.html">Channel</a>* handy::UdpConn::getChannel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取通道对象 </p>
+<dl class="section return"><dt>返回</dt><dd>Channel* 通道对象指针 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab6fd286dc950e7f156131e6cefaa9a40"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; handy::UdpConn::getContext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取自动管理的上下文对象 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>上下文数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>T&amp; 上下文数据对象引用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad2b1bc2b4e41a0321dc4312f2a9e6f6e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string handy::UdpConn::getPeerStr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取远程地址的字符串表示 </p>
+<dl class="section return"><dt>返回</dt><dd>std::string 远程地址字符串 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a29a7dc006afcfc6a2a9ad33cbd71d5d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::UdpConn::onMsg </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classhandy_1_1UdpConn.html#a73df8e77b9774954f9c92016344c2044">UdpMsgCallBack</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置消息处理回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1ec5518264f7c2a3de123560e4998c59"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::UdpConn::send </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a>&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送数据缓冲区中的数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>待发送的数据缓冲区 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a029c43ca7cd568b9fea2e336970ebf42"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::UdpConn::send </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送指定长度的字节数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>数据缓冲区指针 </td></tr>
+    <tr><td class="paramname">len</td><td>数据长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6d7c13df818c8f65e97770eb8fe5edea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::UdpConn::send </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送字符串数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>待发送的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acc3f1490c0a4d66adc8288b760e650fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::UdpConn::send </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送以null结尾的字符串 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>待发送的字符串指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a27f862cfd5d126ecf6c1a0f242e9777b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a>* handy::UdpConn::m_base = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a533af80bc031d93794dba64721ae123e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Channel.html">Channel</a>* handy::UdpConn::m_channel = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9275878aefddfb3bdf3dfb604c9ef955"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1AutoContext.html">AutoContext</a> handy::UdpConn::m_ctx</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9a7fb36e788adb55d329f648a70a5c73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string handy::UdpConn::m_destHost</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad316e9352e9224fc91826d28667a0670"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int handy::UdpConn::m_destPort = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac3666ce79b9843b374a194563aafb92f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> handy::UdpConn::m_local = <a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>(0)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afb59dcbfba79879ed38aa9c0fc470ad9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> handy::UdpConn::m_peer = <a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>(0)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a63791e25bafb1297cf26f22f7f42e8fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1UdpConn.html#a73df8e77b9774954f9c92016344c2044">UdpMsgCallBack</a> handy::UdpConn::m_udpMsgCallback</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>handy/<a class="el" href="udp_8h_source.html">udp.h</a></li>
+<li>handy/<a class="el" href="udp_8cpp.html">udp.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

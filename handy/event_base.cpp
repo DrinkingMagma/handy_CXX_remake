@@ -1,3 +1,22 @@
+/**
+ * @file event_base.cpp
+ * @brief 事件驱动核心模块实现，包含EventBase、MultiBase、Channel等类的实现
+ * @details 
+ *  该文件实现了事件驱动架构的核心组件，提供事件循环、I/O多路复用、定时器、任务调度等功能，核心特性如下：
+ *  1. EventsImp结构体：事件派发器内部实现（Pimpl模式），封装I/O多路复用器（epoll/kqueue）、定时器管理、任务队列、空闲连接管理等核心逻辑；
+ *  2. EventBase类：事件循环核心类，提供事件循环启动/退出、定时器注册/取消、异步任务投递、空闲连接管理等接口，基于EventsImp实现具体功能；
+ *  3. MultiBase类：多事件循环管理器，支持创建多个EventBase实例，通过轮询方式分配事件循环，提升并发处理能力；
+ *  4. Channel类：I/O事件通道类，封装文件描述符（fd）和事件（读/写），负责注册事件到Poller、触发事件回调等；
+ *  5. 辅助功能：实现空闲连接超时检测、TCP连接重连逻辑、事件唤醒机制（通过管道实现跨线程唤醒）等。
+ * @note 
+ *  1. 依赖组件：需配合conn.h（TCP连接）、logger.h（日志）、poller.h（I/O多路复用）、thread_pool.h（线程池）等头文件使用；
+ *  2. 线程安全：EventBase的接口支持跨线程调用（如safeCall投递任务），通过互斥锁和原子操作保证线程安全；
+ *  3. I/O多路复用：自动选择epoll（Linux）或kqueue（macOS/FreeBSD）作为底层I/O多路复用器，提升跨平台兼容性；
+ *  4. 定时器管理：支持一次性定时器和周期性定时器，通过时间戳排序确保定时器精确触发；
+ *  5. 空闲连接管理：通过注册空闲连接和超时回调，定期检查连接活跃度，适用于心跳检测等场景；
+ *  6. 事件唤醒：通过管道实现跨线程事件唤醒，确保异步任务能及时被事件循环处理。
+ */
+
 #include "event_base.h"
 #include "conn.h"
 #include "logger.h"
@@ -16,21 +35,21 @@ namespace handy
     */
     struct EventsImp
     {
-        PollerBase* m_poller;       // I/O多路复用器（epoll/kqueue）
-        EventBase* m_base;          // 关联的EventBase对象（非空）
-        std::atomic<bool> m_exit; // 事件循环退出标志（原子操作，线程安全）
-        int m_wakeupFds[2];          // 唤醒事件循环的管道（0：读端，1：写端）
-        int m_nextTimeout_ms;          // 下一个定时器的超时时间（毫秒，用于Poller等待）
-        SafeQueue<Task> m_tasks;    // 异步任务队列（线程安全，支持跨线程投递）
+        PollerBase* m_poller;       /// I/O多路复用器（epoll/kqueue）
+        EventBase* m_base;          /// 关联的EventBase对象（非空）
+        std::atomic<bool> m_exit; /// 事件循环退出标志（原子操作，线程安全）
+        int m_wakeupFds[2];          /// 唤醒事件循环的管道（0：读端，1：写端）
+        int m_nextTimeout_ms;          /// 下一个定时器的超时时间（毫秒，用于Poller等待）
+        SafeQueue<Task> m_tasks;    /// 异步任务队列（线程安全，支持跨线程投递）
 
-        std::map<TimerId, TimerRepeatable> m_timerReps;     // 可重复定时器映射
-        std::map<TimerId, Task> m_timers;                   // 一次性任务定时器映射
-        std::atomic<int64_t> m_timerSeq;                    // 定时器序列号（用于生成定时器ID）
+        std::map<TimerId, TimerRepeatable> m_timerReps;     /// 可重复定时器映射
+        std::map<TimerId, Task> m_timers;                   /// 一次性任务定时器映射
+        std::atomic<int64_t> m_timerSeq;                    /// 定时器序列号（用于生成定时器ID）
 
-        std::map<int, std::list<IdleNode>> m_idleConns;     // 空闲连接映射（key：空闲超时时间，单位:s；list按照最后活跃时间排序，最早超时的连接在前面）
-        std::set<TcpConnPtr> m_reconnectConns;              // 重连连接集合（需要互斥锁保护）
-        bool m_idleEnabled;                                 // 空闲连接管理的启用标志
-        std::mutex m_reconnectMutex;                        // 重连连接集合的互斥锁
+        std::map<int, std::list<IdleNode>> m_idleConns;     /// 空闲连接映射（key：空闲超时时间，单位:s；list按照最后活跃时间排序，最早超时的连接在前面）
+        std::set<TcpConnPtr> m_reconnectConns;              /// 重连连接集合（需要互斥锁保护）
+        bool m_idleEnabled;                                 /// 空闲连接管理的启用标志
+        std::mutex m_reconnectMutex;                        /// 重连连接集合的互斥锁
 
         /**
          * @brief 构造函数：初始化时间派发器内部实现

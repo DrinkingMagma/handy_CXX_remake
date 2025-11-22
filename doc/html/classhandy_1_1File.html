@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy::File类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehandy.html">handy</a></li><li class="navelem"><a class="el" href="classhandy_1_1File.html">File</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="classhandy_1_1File-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">handy::File类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>文件和目录操作的工具类，提供静态方法封装常用文件操作  
+ <a href="classhandy_1_1File.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="file_8h_source.html">file.h</a>&gt;</code></p>
+<div class="dynheader">
+类 handy::File 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classhandy_1_1File.png" usemap="#handy::File_map" alt=""/>
+  <map id="handy::File_map" name="handy::File_map">
+<area href="classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="handy::NonCopyAble" shape="rect" coords="0,0,132,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a5b778189e38180b3a7888d01d85292ac"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classhandy_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1File.html#a5b778189e38180b3a7888d01d85292ac">getContent</a> (const std::string &amp;filename, std::string &amp;content)</td></tr>
+<tr class="memdesc:a5b778189e38180b3a7888d01d85292ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取文件内容到字符串  <a href="#a5b778189e38180b3a7888d01d85292ac">更多...</a><br/></td></tr>
+<tr class="separator:a5b778189e38180b3a7888d01d85292ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a301c1e79828ed43e2dab0a749ce3f09b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classhandy_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1File.html#a301c1e79828ed43e2dab0a749ce3f09b">writeContent</a> (const std::string &amp;filename, const std::string &amp;content)</td></tr>
+<tr class="memdesc:a301c1e79828ed43e2dab0a749ce3f09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串内容写入文件（覆盖模式）  <a href="#a301c1e79828ed43e2dab0a749ce3f09b">更多...</a><br/></td></tr>
+<tr class="separator:a301c1e79828ed43e2dab0a749ce3f09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c291a825fafe32feeeea8e1322a804"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classhandy_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1File.html#a25c291a825fafe32feeeea8e1322a804">renameSave</a> (const std::string &amp;targetFilename, const std::string &amp;tmpFilename, const std::string &amp;content)</td></tr>
+<tr class="memdesc:a25c291a825fafe32feeeea8e1322a804"><td class="mdescLeft">&#160;</td><td class="mdescRight">安全写入文件（先写临时文件，再原子重命名）  <a href="#a25c291a825fafe32feeeea8e1322a804">更多...</a><br/></td></tr>
+<tr class="separator:a25c291a825fafe32feeeea8e1322a804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e8a00e0036f9550d4a7c63637088d6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classhandy_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1File.html#a67e8a00e0036f9550d4a7c63637088d6">getChildren</a> (const std::string &amp;dir, std::vector&lt; std::string &gt; *result)</td></tr>
+<tr class="memdesc:a67e8a00e0036f9550d4a7c63637088d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取目录下的所有子文件/子目录名  <a href="#a67e8a00e0036f9550d4a7c63637088d6">更多...</a><br/></td></tr>
+<tr class="separator:a67e8a00e0036f9550d4a7c63637088d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc3347222815f1358f7b376e3e7bd8f8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classhandy_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1File.html#acc3347222815f1358f7b376e3e7bd8f8">deleteFile</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:acc3347222815f1358f7b376e3e7bd8f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除指定文件  <a href="#acc3347222815f1358f7b376e3e7bd8f8">更多...</a><br/></td></tr>
+<tr class="separator:acc3347222815f1358f7b376e3e7bd8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5d82396291c98069b2a4a0ac13ae87"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classhandy_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1File.html#a4d5d82396291c98069b2a4a0ac13ae87">createDir</a> (const std::string &amp;dirname)</td></tr>
+<tr class="memdesc:a4d5d82396291c98069b2a4a0ac13ae87"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建目录（仅创建一级目录）  <a href="#a4d5d82396291c98069b2a4a0ac13ae87">更多...</a><br/></td></tr>
+<tr class="separator:a4d5d82396291c98069b2a4a0ac13ae87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8acfc71d9fcedd4a029cbfae45dc2d0a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classhandy_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1File.html#a8acfc71d9fcedd4a029cbfae45dc2d0a">deleteDir</a> (const std::string &amp;dirname)</td></tr>
+<tr class="memdesc:a8acfc71d9fcedd4a029cbfae45dc2d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除空目录  <a href="#a8acfc71d9fcedd4a029cbfae45dc2d0a">更多...</a><br/></td></tr>
+<tr class="separator:a8acfc71d9fcedd4a029cbfae45dc2d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f264ae5ec8ba8bbf3cd7d96e6fc4356"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classhandy_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1File.html#a6f264ae5ec8ba8bbf3cd7d96e6fc4356">getFileSize</a> (const std::string &amp;filename, uint64_t *size)</td></tr>
+<tr class="memdesc:a6f264ae5ec8ba8bbf3cd7d96e6fc4356"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取文件大小  <a href="#a6f264ae5ec8ba8bbf3cd7d96e6fc4356">更多...</a><br/></td></tr>
+<tr class="separator:a6f264ae5ec8ba8bbf3cd7d96e6fc4356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af37989e9dc29d191f3eb8a832052bb98"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classhandy_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1File.html#af37989e9dc29d191f3eb8a832052bb98">rename</a> (const std::string &amp;src, const std::string &amp;dst)</td></tr>
+<tr class="memdesc:af37989e9dc29d191f3eb8a832052bb98"><td class="mdescLeft">&#160;</td><td class="mdescRight">重名名文件或目录  <a href="#af37989e9dc29d191f3eb8a832052bb98">更多...</a><br/></td></tr>
+<tr class="separator:af37989e9dc29d191f3eb8a832052bb98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3820962babcc80c043def1e3c515fc2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1File.html#ad3820962babcc80c043def1e3c515fc2">exists</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:ad3820962babcc80c043def1e3c515fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查文件或目录是否存在  <a href="#ad3820962babcc80c043def1e3c515fc2">更多...</a><br/></td></tr>
+<tr class="separator:ad3820962babcc80c043def1e3c515fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a87f482d95739fba0ce3d8f432b0b4196"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1File.html#a87f482d95739fba0ce3d8f432b0b4196">File</a> ()=delete</td></tr>
+<tr class="memdesc:a87f482d95739fba0ce3d8f432b0b4196"><td class="mdescLeft">&#160;</td><td class="mdescRight">私有构造函数，禁止实例化（工具类仅提供静态方法）  <a href="#a87f482d95739fba0ce3d8f432b0b4196">更多...</a><br/></td></tr>
+<tr class="separator:a87f482d95739fba0ce3d8f432b0b4196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classhandy_1_1NonCopyAble"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classhandy_1_1NonCopyAble')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classhandy_1_1NonCopyAble.html">handy::NonCopyAble</a></td></tr>
+<tr class="memitem:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#af559df4e2ebd8b9e54566633b7bf9855">NonCopyAble</a> ()=default</td></tr>
+<tr class="separator:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#acd1d67f20f33c3f91b64262eed41ef69">~NonCopyAble</a> () noexcept=default</td></tr>
+<tr class="separator:acd1d67f20f33c3f91b64262eed41ef69 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a281e6b5825279cf9c60cf3bda6d5d23a">NonCopyAble</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a281e6b5825279cf9c60cf3bda6d5d23a inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a0a3dfd5848777f831e337b3a67b749c8">operator=</a> (const <a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;)=delete</td></tr>
+<tr class="separator:a0a3dfd5848777f831e337b3a67b749c8 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#a59f29256ac90ab3415d6fd2028bfd03f">NonCopyAble</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a59f29256ac90ab3415d6fd2028bfd03f inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#afb79661bb6df7f5381340e4d3337eaf6">operator=</a> (<a class="el" href="classhandy_1_1NonCopyAble.html">NonCopyAble</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>文件和目录操作的工具类，提供静态方法封装常用文件操作 </p>
+<dl class="section note"><dt>注解</dt><dd>所有方法均为线程安全（依赖底层系统调用的线程安全性） </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a87f482d95739fba0ce3d8f432b0b4196"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">handy::File::File </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>私有构造函数，禁止实例化（工具类仅提供静态方法） </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a4d5d82396291c98069b2a4a0ac13ae87"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Status.html">Status</a> handy::File::createDir </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dirname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建目录（仅创建一级目录） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dirname</td><td>目录名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Status.html" title="表示操作的状态信息，包含错误码和描述信息 ">Status</a> 操作结果状态 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>创建的目录权限为0755(rwxr-xr-x) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8acfc71d9fcedd4a029cbfae45dc2d0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Status.html">Status</a> handy::File::deleteDir </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dirname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>删除空目录 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dirname</td><td>目录名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Status.html" title="表示操作的状态信息，包含错误码和描述信息 ">Status</a> 操作结果状态 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>目录必须为空才能删除成功 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acc3347222815f1358f7b376e3e7bd8f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Status.html">Status</a> handy::File::deleteFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>删除指定文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>文件名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Status.html" title="表示操作的状态信息，包含错误码和描述信息 ">Status</a> 操作结果状态 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad3820962babcc80c043def1e3c515fc2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool handy::File::exists </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查文件或目录是否存在 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>文件或目录路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>bool true:存在; false:不存在 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a67e8a00e0036f9550d4a7c63637088d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Status.html">Status</a> handy::File::getChildren </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取目录下的所有子文件/子目录名 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">dir</td><td>目录名 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>目录项名称列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Status.html" title="表示操作的状态信息，包含错误码和描述信息 ">Status</a> 操作结果状态 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5b778189e38180b3a7888d01d85292ac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Status.html">Status</a> handy::File::getContent </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>content</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>读取文件内容到字符串 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">filename</td><td>文件名 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">content</td><td>文件内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Status.html" title="表示操作的状态信息，包含错误码和描述信息 ">Status</a> 操作结果状态 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6f264ae5ec8ba8bbf3cd7d96e6fc4356"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Status.html">Status</a> handy::File::getFileSize </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t *&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取文件大小 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">filename</td><td>文件名 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>文件大小（字节） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Status.html" title="表示操作的状态信息，包含错误码和描述信息 ">Status</a> 操作结果状态 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af37989e9dc29d191f3eb8a832052bb98"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Status.html">Status</a> handy::File::rename </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重名名文件或目录 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>源文件或目录路径 </td></tr>
+    <tr><td class="paramname">dst</td><td>目标文件或目录路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Status.html" title="表示操作的状态信息，包含错误码和描述信息 ">Status</a> 操作结果状态 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a25c291a825fafe32feeeea8e1322a804"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Status.html">Status</a> handy::File::renameSave </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>targetFilename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tmpFilename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>content</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>安全写入文件（先写临时文件，再原子重命名） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">targetFilename</td><td>目标文件名 </td></tr>
+    <tr><td class="paramname">tmpFilename</td><td>临时文件名（用于原子操作） </td></tr>
+    <tr><td class="paramname">content</td><td>要写入的内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Status.html" title="表示操作的状态信息，包含错误码和描述信息 ">Status</a> 操作结果状态 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>保证写入操作的原子性，避免文件损坏 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a301c1e79828ed43e2dab0a749ce3f09b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandy_1_1Status.html">Status</a> handy::File::writeContent </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>content</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将字符串内容写入文件（覆盖模式） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>文件名 </td></tr>
+    <tr><td class="paramname">content</td><td>要写入的内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Status.html" title="表示操作的状态信息，包含错误码和描述信息 ">Status</a> 操作结果状态 </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>handy/<a class="el" href="file_8h_source.html">file.h</a></li>
+<li>handy/<a class="el" href="file_8cpp.html">file.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>
