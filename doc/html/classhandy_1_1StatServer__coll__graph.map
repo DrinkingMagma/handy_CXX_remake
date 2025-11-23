@@ -1,0 +1,10 @@
+<map id="handy::StatServer" name="handy::StatServer">
+<area shape="rect" id="node2" href="$classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="" coords="153,5,299,32"/>
+<area shape="rect" id="node4" href="$classhandy_1_1TcpServer.html" title="TCP服务器类，用于创建和管理TCP服务器 " alt="" coords="152,361,276,388"/>
+<area shape="rect" id="node7" href="$classhandy_1_1EventBases.html" title="事件派发器抽象基类（定义多事件派发器的统一接口） " alt="" coords="158,81,294,108"/>
+<area shape="rect" id="node8" href="$classhandy_1_1Channel.html" title="I/O事件通道类（封装文件描述符与事件处理逻辑） " alt="" coords="299,272,412,299"/>
+<area shape="rect" id="node9" href="$classhandy_1_1PollerBase.html" title="写事件标识（映射POLLOUT） " alt="" coords="374,132,502,159"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpServer.html" title="HTTP服务器类，继承自Tcpserver. " alt="" coords="103,437,231,464"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Ipv4Addr.html" title="IPv4地址封装类，提供IP地址解析、格式化和合法性校验功能 " alt="" coords="437,272,554,299"/>
+<area shape="rect" id="node6" href="$classhandy_1_1EventBase.html" title="单线程事件派发器，管理定时器、I/O事件、异步任务 " alt="" coords="187,183,316,209"/>
+</map>

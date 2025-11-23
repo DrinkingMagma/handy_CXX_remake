@@ -1,0 +1,4 @@
+<map id="handy::HttpServer" name="handy::HttpServer">
+<area shape="rect" id="node2" href="$classhandy_1_1TcpServer.html" title="TCP服务器类，用于创建和管理TCP服务器 " alt="" coords="17,80,141,107"/>
+<area shape="rect" id="node3" href="$classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="" coords="5,5,152,32"/>
+</map>

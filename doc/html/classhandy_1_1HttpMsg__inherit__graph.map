@@ -1,0 +1,5 @@
+<map id="handy::HttpMsg" name="handy::HttpMsg">
+<area shape="rect" id="node3" href="$classhandy_1_1HttpRequest.html" title="HTTP请求类，继承自HttpMsg. " alt="" coords="5,155,144,181"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpResponse.html" title="HTTP响应类，继承自HttpMsg. " alt="" coords="168,155,317,181"/>
+<area shape="rect" id="node2" href="$classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="" coords="85,5,232,32"/>
+</map>

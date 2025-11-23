@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="title">conn.cpp 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>TCP连接（TcpConn）、TCP服务器（TcpServer）及半同步半异步服务器（HSHA）的实现  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="conn_8h_source.html">conn.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br/>
@@ -115,7 +118,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memitem:aeb22e917b1ad4ff09d0f01cacd79a86b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#aeb22e917b1ad4ff09d0f01cacd79a86b">handy::FATAL_IF</a> (!m_base,&quot;Failed to allocate event base&quot;)</td></tr>
 <tr class="separator:aeb22e917b1ad4ff09d0f01cacd79a86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">宏定义说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>TCP连接（TcpConn）、TCP服务器（TcpServer）及半同步半异步服务器（HSHA）的实现 </p>
+<p>该文件包含三个核心组件的实现：</p>
+<ol type="1">
+<li>TcpConn：TCP连接类，封装了TCP连接的建立、数据读写、状态管理、重连等功能；<ul>
+<li>支持非阻塞IO操作，基于Channel监听读写事件；</li>
+<li>内置输入/输出缓冲区，处理粘包/拆包问题；</li>
+<li>支持连接状态回调、数据读写回调，以及基于Codec的消息解码；</li>
+<li>提供重连机制和连接超时控制。</li>
+</ul>
+</li>
+<li>TcpServer：TCP服务器类，负责监听端口、接受客户端连接并管理连接生命周期；<ul>
+<li>支持地址复用和端口复用；</li>
+<li>采用事件驱动模型，通过EventBase处理IO事件；</li>
+<li>可配置连接创建回调、状态回调、数据回调，支持自定义连接类型。</li>
+</ul>
+</li>
+<li>HSHA：半同步半异步TCP服务器，结合线程池处理耗时业务逻辑；<ul>
+<li>同步层：EventBase线程负责IO事件监听和数据读写；</li>
+<li>异步层：线程池处理耗时的业务逻辑，避免阻塞IO线程；</li>
+<li>通过回调函数将业务处理结果返回给IO线程，确保线程安全。 <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ul>
+</li>
+</ol>
+<ol type="1">
+<li>事件驱动：依赖EventBase和Channel实现IO事件的异步处理；</li>
+<li>线程安全：关键数据结构（如Channel、缓冲区、状态变量）通过互斥锁保护；</li>
+<li>错误处理：完善的错误日志记录，包括连接失败、读写错误、超时等场景；</li>
+<li>性能优化：使用非阻塞IO、缓冲区管理、事件触发机制，提升高并发场景下的性能；</li>
+<li>扩展性：支持自定义Codec进行消息编码/解码，支持自定义连接创建逻辑。 </li>
+</ol>
+</div><h2 class="groupheader">宏定义说明</h2>
 <a class="anchor" id="a890ffb8634f729933aab5791449247a0"></a>
 <div class="memitem">
 <div class="memproto">

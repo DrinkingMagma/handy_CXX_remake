@@ -1,0 +1,4 @@
+<map id="handy::CodecBase" name="handy::CodecBase">
+<area shape="rect" id="node2" href="$classhandy_1_1LengthCodec.html" title="长度前缀编解码器（固定8字节头：4字节魔法字+ 4字节长度） " alt="" coords="5,80,148,107"/>
+<area shape="rect" id="node3" href="$classhandy_1_1LineCodec.html" title="换行分隔符编解码器( 或 ) " alt="" coords="172,80,299,107"/>
+</map>

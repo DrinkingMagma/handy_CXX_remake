@@ -1,0 +1,8 @@
+<map id="handy::TcpServer" name="handy::TcpServer">
+<area shape="rect" id="node2" href="$classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="" coords="161,5,308,32"/>
+<area shape="rect" id="node5" href="$classhandy_1_1EventBases.html" title="事件派发器抽象基类（定义多事件派发器的统一接口） " alt="" coords="88,81,224,108"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Channel.html" title="I/O事件通道类（封装文件描述符与事件处理逻辑） " alt="" coords="209,272,322,299"/>
+<area shape="rect" id="node7" href="$classhandy_1_1PollerBase.html" title="写事件标识（映射POLLOUT） " alt="" coords="281,132,409,159"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Ipv4Addr.html" title="IPv4地址封装类，提供IP地址解析、格式化和合法性校验功能 " alt="" coords="347,272,464,299"/>
+<area shape="rect" id="node4" href="$classhandy_1_1EventBase.html" title="单线程事件派发器，管理定时器、I/O事件、异步任务 " alt="" coords="94,183,223,209"/>
+</map>

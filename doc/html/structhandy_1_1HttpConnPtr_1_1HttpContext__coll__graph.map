@@ -1,0 +1,7 @@
+<map id="handy::HttpConnPtr::HttpContext" name="handy::HttpConnPtr::HttpContext">
+<area shape="rect" id="node2" href="$classhandy_1_1HttpResponse.html" title="HTTP响应类，继承自HttpMsg. " alt="" coords="420,203,569,229"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpMsg.html" title="HTTP消息基类，封装HTTP请求和响应的通用功能 " alt="" coords="235,118,349,145"/>
+<area shape="rect" id="node7" href="$classhandy_1_1HttpRequest.html" title="HTTP请求类，继承自HttpMsg. " alt="" coords="257,203,396,229"/>
+<area shape="rect" id="node4" href="$classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="" coords="5,5,152,32"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Slice.html" title="非持有型字符序列视图（类似std::string_view，但兼容C++11） " alt="" coords="177,5,271,32"/>
+</map>

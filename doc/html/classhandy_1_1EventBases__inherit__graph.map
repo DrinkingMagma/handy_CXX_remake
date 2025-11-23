@@ -1,0 +1,5 @@
+<map id="handy::EventBases" name="handy::EventBases">
+<area shape="rect" id="node3" href="$classhandy_1_1EventBase.html" title="单线程事件派发器，管理定时器、I/O事件、异步任务 " alt="" coords="5,155,135,181"/>
+<area shape="rect" id="node4" href="$classhandy_1_1MultiBase.html" title="多线程事件派发器（管理多个EventBase，实现负载均衡） " alt="" coords="159,155,282,181"/>
+<area shape="rect" id="node2" href="$classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="" coords="71,5,218,32"/>
+</map>

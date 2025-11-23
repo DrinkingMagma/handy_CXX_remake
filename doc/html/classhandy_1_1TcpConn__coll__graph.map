@@ -1,0 +1,10 @@
+<map id="handy::TcpConn" name="handy::TcpConn">
+<area shape="rect" id="node3" href="$classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="" coords="5,189,152,215"/>
+<area shape="rect" id="node4" href="$classhandy_1_1AutoContext.html" title="定时任务ID类型&lt; 超时时间戳，序列号（自增整数）&gt;=&quot;&quot;&gt; " alt="" coords="361,122,500,149"/>
+<area shape="rect" id="node8" href="$classhandy_1_1EventBases.html" title="事件派发器抽象基类（定义多事件派发器的统一接口） " alt="" coords="201,189,337,215"/>
+<area shape="rect" id="node10" href="$classhandy_1_1Channel.html" title="I/O事件通道类（封装文件描述符与事件处理逻辑） " alt="" coords="809,235,923,262"/>
+<area shape="rect" id="node11" href="$classhandy_1_1PollerBase.html" title="写事件标识（映射POLLOUT） " alt="" coords="367,305,495,331"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 " alt="" coords="817,286,915,313"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Ipv4Addr.html" title="IPv4地址封装类，提供IP地址解析、格式化和合法性校验功能 " alt="" coords="807,337,925,363"/>
+<area shape="rect" id="node7" href="$classhandy_1_1EventBase.html" title="单线程事件派发器，管理定时器、I/O事件、异步任务 " alt="" coords="524,189,653,215"/>
+</map>

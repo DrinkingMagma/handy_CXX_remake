@@ -1,0 +1,6 @@
+<map id="handy::Channel" name="handy::Channel">
+<area shape="rect" id="node2" href="$classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="" coords="11,5,158,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1PollerBase.html" title="写事件标识（映射POLLOUT） " alt="" coords="21,132,149,159"/>
+<area shape="rect" id="node5" href="$classhandy_1_1EventBases.html" title="事件派发器抽象基类（定义多事件派发器的统一接口） " alt="" coords="126,81,262,108"/>
+<area shape="rect" id="node4" href="$classhandy_1_1EventBase.html" title="单线程事件派发器，管理定时器、I/O事件、异步任务 " alt="" coords="140,183,269,209"/>
+</map>

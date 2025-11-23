@@ -1,0 +1,7 @@
+<map id="handy::EventsImp" name="handy::EventsImp">
+<area shape="rect" id="node2" href="$classhandy_1_1PollerBase.html" title="写事件标识（映射POLLOUT） " alt="" coords="5,132,133,159"/>
+<area shape="rect" id="node3" href="$classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="" coords="129,5,276,32"/>
+<area shape="rect" id="node5" href="$classhandy_1_1EventBases.html" title="事件派发器抽象基类（定义多事件派发器的统一接口） " alt="" coords="135,81,271,108"/>
+<area shape="rect" id="node6" href="$classhandy_1_1SafeQueue.html" title="handy::SafeQueue\&lt; Task \&gt;" alt="" coords="223,132,406,159"/>
+<area shape="rect" id="node4" href="$classhandy_1_1EventBase.html" title="单线程事件派发器，管理定时器、I/O事件、异步任务 " alt="" coords="138,183,267,209"/>
+</map>

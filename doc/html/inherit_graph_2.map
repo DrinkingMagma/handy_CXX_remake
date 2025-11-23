@@ -1,0 +1,5 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="node1" href="$classhandy_1_1CodecBase.html" title="编解码器基类（线程安全） " alt="" coords="5,31,139,57"/>
+<area shape="rect" id="node2" href="$classhandy_1_1LengthCodec.html" title="长度前缀编解码器（固定8字节头：4字节魔法字+ 4字节长度） " alt="" coords="187,5,329,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1LineCodec.html" title="换行分隔符编解码器( 或 ) " alt="" coords="195,56,321,83"/>
+</map>

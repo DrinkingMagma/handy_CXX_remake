@@ -1,0 +1,4 @@
+<map id="handy::EventBase" name="handy::EventBase">
+<area shape="rect" id="node2" href="$classhandy_1_1EventBases.html" title="事件派发器抽象基类（定义多事件派发器的统一接口） " alt="" coords="11,80,147,107"/>
+<area shape="rect" id="node3" href="$classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="" coords="5,5,152,32"/>
+</map>

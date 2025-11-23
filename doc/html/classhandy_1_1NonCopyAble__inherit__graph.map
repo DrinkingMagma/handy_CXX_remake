@@ -1,0 +1,26 @@
+<map id="handy::NonCopyAble" name="handy::NonCopyAble">
+<area shape="rect" id="node2" href="$classhandy_1_1AutoContext.html" title="定时任务ID类型&lt; 超时时间戳，序列号（自增整数）&gt;=&quot;&quot;&gt; " alt="" coords="222,5,361,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Channel.html" title="I/O事件通道类（封装文件描述符与事件处理逻辑） " alt="" coords="235,56,348,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Conf.html" title="INI配置文件解析器，支持读取字符串、整数、浮点数、布尔值等类型配置 " alt="" coords="245,107,338,133"/>
+<area shape="rect" id="node5" href="$classhandy_1_1EventBases.html" title="事件派发器抽象基类（定义多事件派发器的统一接口） " alt="" coords="223,157,359,184"/>
+<area shape="rect" id="node8" href="$classhandy_1_1ExitCaller.html" title="程序退出时执行指定函数 " alt="" coords="230,208,353,235"/>
+<area shape="rect" id="node9" href="$classhandy_1_1File.html" title="文件和目录操作的工具类，提供静态方法封装常用文件操作 " alt="" coords="248,259,335,285"/>
+<area shape="rect" id="node10" href="$classhandy_1_1HSHA.html" title="半同步半异步(HSHA)服务器类 " alt="" coords="240,309,343,336"/>
+<area shape="rect" id="node11" href="$classhandy_1_1HSHAU.html" title="半同步半异步UDP服务器，使用线程池处理消息 " alt="" coords="235,360,348,387"/>
+<area shape="rect" id="node12" href="$classhandy_1_1HttpMsg.html" title="HTTP消息基类，封装HTTP请求和响应的通用功能 " alt="" coords="234,411,349,437"/>
+<area shape="rect" id="node15" href="$classhandy_1_1Logger.html" title="handy::Logger" alt="" coords="239,461,343,488"/>
+<area shape="rect" id="node16" href="$classhandy_1_1PollerBase.html" title="写事件标识（映射POLLOUT） " alt="" coords="227,512,355,539"/>
+<area shape="rect" id="node17" href="$classhandy_1_1SafeQueue.html" title="线程安全的队列容器（模版类） " alt="" coords="210,563,373,589"/>
+<area shape="rect" id="node18" href="$classhandy_1_1StatServer.html" title="状态监控服务器，提供HTTP接口用于查询状态、展示页面和执行命令 " alt="" coords="228,613,355,640"/>
+<area shape="rect" id="node19" href="$classhandy_1_1TcpConn.html" title="TCP连接类，封装TCP连接的创建、读写、状态管理等功能 " alt="" coords="233,664,350,691"/>
+<area shape="rect" id="node20" href="$classhandy_1_1TcpServer.html" title="TCP服务器类，用于创建和管理TCP服务器 " alt="" coords="229,715,353,741"/>
+<area shape="rect" id="node22" href="$classhandy_1_1ThreadPool.html" title="线程池类(管理一组线程执行任务) " alt="" coords="226,765,357,792"/>
+<area shape="rect" id="node23" href="$classhandy_1_1UdpConn.html" title="UDP连接类，封装UDP连接的创建、数据发送和接收 " alt="" coords="231,816,351,843"/>
+<area shape="rect" id="node24" href="$classhandy_1_1UdpServer.html" title="UDP服务器类，封装UDP服务器的创建、绑定和消息处理 " alt="" coords="228,867,355,893"/>
+<area shape="rect" id="node25" href="$classhandy_1_1SafeQueue.html" title="handy::SafeQueue\&lt; Task \&gt;" alt="" coords="200,917,383,944"/>
+<area shape="rect" id="node6" href="$classhandy_1_1EventBase.html" title="单线程事件派发器，管理定时器、I/O事件、异步任务 " alt="" coords="441,132,570,159"/>
+<area shape="rect" id="node7" href="$classhandy_1_1MultiBase.html" title="多线程事件派发器（管理多个EventBase，实现负载均衡） " alt="" coords="444,183,567,209"/>
+<area shape="rect" id="node13" href="$classhandy_1_1HttpRequest.html" title="HTTP请求类，继承自HttpMsg. " alt="" coords="436,385,575,412"/>
+<area shape="rect" id="node14" href="$classhandy_1_1HttpResponse.html" title="HTTP响应类，继承自HttpMsg. " alt="" coords="431,436,580,463"/>
+<area shape="rect" id="node21" href="$classhandy_1_1HttpServer.html" title="HTTP服务器类，继承自Tcpserver. " alt="" coords="441,715,569,741"/>
+</map>

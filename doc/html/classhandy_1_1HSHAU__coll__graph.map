@@ -1,0 +1,5 @@
+<map id="handy::HSHAU" name="handy::HSHAU">
+<area shape="rect" id="node2" href="$classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="" coords="18,5,165,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1ThreadPool.html" title="线程池类(管理一组线程执行任务) " alt="" coords="78,171,209,197"/>
+<area shape="rect" id="node4" href="$classhandy_1_1SafeQueue.html" title="handy::SafeQueue\&lt; Task \&gt;" alt="" coords="129,81,312,108"/>
+</map>
