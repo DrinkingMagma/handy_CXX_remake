@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>Handy_CXX_REMAKE: 文件成员</title>
+<title>Handy_CXX_REMAKE: handy/platform.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,17 +61,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>文件列表</span></a></li>
-      <li class="current"><a href="globals.html"><span>文件成员</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
     </ul>
   </div>
-  <div id="navrow3" class="tabs2">
-    <ul class="tablist">
-      <li><a href="globals.html"><span>全部</span></a></li>
-      <li class="current"><a href="globals_vars.html"><span>变量</span></a></li>
-      <li><a href="globals_defs.html"><span>宏定义</span></a></li>
-    </ul>
-  </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -86,16 +78,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_32ffdd1374fa2f424904bdef8ac66f3e.html">handy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">platform.h 文件参考</div>  </div>
+</div><!--header-->
 <div class="contents">
-&#160;<ul>
-<li>err
-: <a class="el" href="conf_8cpp.html#a6ce68847c12434f60d1b2654a3dc3409">conf.cpp</a>
+
+<p>跨平台编译配置头文件，自动识别操作系统并定义平台宏  
+<a href="#details">更多...</a></p>
+
+<p><a href="platform_8h_source.html">浏览源代码.</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>跨平台编译配置头文件，自动识别操作系统并定义平台宏 </p>
+<p>该文件通过预编译指令检测当前编译环境的操作系统，自动定义对应的平台宏， 便于后续代码中使用条件编译实现跨平台兼容逻辑。 支持的平台包括：Linux、macOS、FreeBSD（可扩展添加其他平台）。 </p>
+<dl class="section note"><dt>注解</dt><dd><ol type="1">
+<li>平台检测优先级：先检测Linux，再检测macOS，最后检测FreeBSD；<br/>
 </li>
-<li>p
-: <a class="el" href="conf_8cpp.html#aaa1ebe818ec1c763a776cc580551f3e6">conf.cpp</a>
+<li>每个平台宏定义为1，未匹配到任何平台时不定义任何宏；<br/>
 </li>
-</ul>
-</div><!-- contents -->
+<li>可通过添加新的预编译分支扩展支持其他操作系统（如Windows、Android等）；<br/>
+</li>
+<li>使用示例：<div class="fragment"><div class="line"><span class="preprocessor">#if defined(OS_LINUX)</span></div>
+<div class="line"><span class="preprocessor"></span>    <span class="comment">// Linux-specific code</span></div>
+<div class="line"><span class="preprocessor">#elif defined(OS_MACOSX)</span></div>
+<div class="line"><span class="preprocessor"></span>    <span class="comment">// macOS-specific code</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment --> </li>
+</ol>
+</dd></dl>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

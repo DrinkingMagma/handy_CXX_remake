@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="title">utils.cpp 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>通用工具函数实现，提供字符串格式化、时间处理、类型转换、文件描述符操作及MIME类型映射等基础功能  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br/>
 <code>#include &quot;pthread.h&quot;</code><br/>
 <code>#include &lt;memory&gt;</code><br/>
@@ -121,7 +124,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memitem:a9319165141c8b789eb6279cafda9d9cd"><td class="memItemLeft" align="right" valign="top">static pthread_once_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a9319165141c8b789eb6279cafda9d9cd">handy::g_tmKeyOnce</a> = PTHREAD_ONCE_INIT</td></tr>
 <tr class="separator:a9319165141c8b789eb6279cafda9d9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>通用工具函数实现，提供字符串格式化、时间处理、类型转换、文件描述符操作及MIME类型映射等基础功能 </p>
+<p>该文件实现了Utils类的核心静态方法，涵盖多个常用工具函数：</p>
+<ol type="1">
+<li>字符串格式化：format函数支持可变参数，自动扩容缓冲区，确保线程安全和内存安全；</li>
+<li>时间处理：<ul>
+<li>timeMicro：获取系统时间戳（微秒级），基于system_clock；</li>
+<li>steadyMicro：获取稳定时间戳（微秒级），基于steady_clock，适合计时；</li>
+<li>readableTime：将time_t转换为人类可读的时间字符串，使用线程局部存储（TLS）避免多线程竞争；</li>
+</ul>
+</li>
+<li>类型转换：atoi和atoi2函数实现字符串到int64_t的转换，后者严格校验输入完整性；</li>
+<li>文件描述符操作：addFdFlag函数安全添加文件描述符标志（如FD_CLOEXEC），避免重复设置；</li>
+<li>MIME类型映射：getMimeMap提供预定义的文件扩展名到MIME类型的映射，getMimeType根据文件名获取对应MIME类型。 <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ol>
+<ol type="1">
+<li>线程安全：所有函数均设计为线程安全，时间处理使用TLS存储tm结构，避免全局变量竞争；</li>
+<li>异常处理：关键函数（如时间转换、格式化）包含异常捕获，确保程序稳定性；</li>
+<li>内存管理：使用智能指针（unique_ptr）管理动态缓冲区，避免内存泄漏；</li>
+<li>参数校验：严格校验输入参数合法性（如文件描述符、字符串指针），增强函数鲁棒性；</li>
+<li>跨平台兼容：依赖C++11及以上标准，使用标准库函数确保跨平台可用性。 </li>
+</ol>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

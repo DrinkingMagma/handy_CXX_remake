@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="title">handy-imp.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>核心工具类与基础类型定义头文件  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="net_8h_source.html">net.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br/>
@@ -105,7 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 类</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1AutoContext.html">handy::AutoContext</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">自动上下文管理器（线程安全）  <a href="classhandy_1_1AutoContext.html#details">更多...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时任务ID类型&lt; 超时时间戳，序列号（自增整数）&gt;=""&gt;  <a href="classhandy_1_1AutoContext.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -117,12 +120,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 类型定义</h2></td></tr>
 <tr class="memitem:af0934ac351162af463dce604c988ba31"><td class="memItemLeft" align="right" valign="top">typedef std::unique_ptr<br class="typebreak"/>
 &lt; IdleIdImp &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#af0934ac351162af463dce604c988ba31">handy::IdleId</a></td></tr>
+<tr class="memdesc:af0934ac351162af463dce604c988ba31"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件循环基类结构体  <a href="#af0934ac351162af463dce604c988ba31">更多...</a><br/></td></tr>
 <tr class="separator:af0934ac351162af463dce604c988ba31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab64dd4e4ad3aae1d30264406886bbc84"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; int64_t, <br class="typebreak"/>
 int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">handy::TimerId</a></td></tr>
+<tr class="memdesc:ab64dd4e4ad3aae1d30264406886bbc84"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲资源ID的智能指针类型  <a href="#ab64dd4e4ad3aae1d30264406886bbc84">更多...</a><br/></td></tr>
 <tr class="separator:ab64dd4e4ad3aae1d30264406886bbc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>核心工具类与基础类型定义头文件 </p>
+<p>该文件包含了框架内部使用的核心工具类和基础类型定义，是框架其他组件的依赖基础。 主要内容包括：</p>
+<ol type="1">
+<li>基础类型定义：如IdleId（空闲资源ID）、TimerId（定时任务ID）等，用于统一标识和管理相关资源；</li>
+<li>前向声明：对Channel、TcpConn、TCPServer等核心类进行前向声明，避免循环依赖；</li>
+<li>AutoContext类：一个线程安全的自动上下文管理器，支持模板化的上下文创建、获取和自动清理， 采用双重检查锁定模式优化性能，确保多线程环境下的资源安全管理。 <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ol>
+<ol type="1">
+<li>该文件主要供框架内部使用，不建议外部直接包含；</li>
+<li>AutoContext类要求上下文类型支持默认构造函数且非抽象类，使用时需注意类型约束；</li>
+<li>所有基础类型和工具类的设计均考虑了线程安全性和性能，确保框架的稳定高效运行。 </li>
+</ol>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

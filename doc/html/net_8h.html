@@ -91,6 +91,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="title">net.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>网络编程核心工具类定义头文件，包含套接字操作、IPv4地址处理和线程安全缓冲区  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="port__posix_8h_source.html">port_posix.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="slice_8h_source.html">slice.h</a>&quot;</code><br/>
 <code>#include &quot;netinet/in.h&quot;</code><br/>
@@ -116,7 +119,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memitem:namespacehandy"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html">handy</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>网络编程核心工具类定义头文件，包含套接字操作、IPv4地址处理和线程安全缓冲区 </p>
+<p>该文件定义了网络编程中常用的核心工具类，为网络应用开发提供基础支持，主要包括三大模块：</p>
+<ol type="1">
+<li>Net类：网络工具类，提供静态方法封装网络字节序转换和套接字选项设置，支持：<ul>
+<li>主机字节序与网络字节序的安全转换（支持16/32/64位整数，编译时检查类型合法性）；</li>
+<li>套接字非阻塞模式设置（setNonBlock）；</li>
+<li>地址重用（SO_REUSEADDR）和端口重用（SO_REUSEPORT）选项设置；</li>
+<li>TCP无延迟（TCP_NODELAY）选项设置（禁用Nagle算法）；</li>
+</ul>
+</li>
+<li>Ipv4Addr类：IPv4地址封装类，提供IP地址的解析、格式化和合法性校验，支持：<ul>
+<li>通过主机名（域名或IP字符串）+端口、仅端口（默认监听所有接口）、sockaddr_in结构体初始化；</li>
+<li>获取IP地址字符串、端口号、主机字节序IP整数表示；</li>
+<li>IP地址有效性检查（isIpValid）；</li>
+<li>主机名到IP地址的解析（hostToIp静态方法）；</li>
+</ul>
+</li>
+<li>Buffer类：线程安全的动态缓冲区，支持高效的数据存储和操作，核心特性：<ul>
+<li>动态扩容：根据数据量自动调整缓冲区大小，支持指定期望增长步长（减少内存分配次数）；</li>
+<li>丰富的操作接口：append（追加数据）、consume（消费数据）、absorb（合并其他缓冲区）、clear（清空）等；</li>
+<li>线程安全：所有公共接口通过互斥锁保护，支持多线程并发读写；</li>
+<li>支持移动语义：通过移动构造和移动赋值，避免不必要的内存拷贝，提升性能；</li>
+<li>兼容Slice：可隐式转换为Slice对象，便于高效数据传递； <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ul>
+</li>
+</ol>
+<ol type="1">
+<li>Net类为纯工具类，禁止实例化，所有方法均为静态；</li>
+<li>Ipv4Addr类禁止默认构造，确保地址初始化的有效性；拷贝和移动操作默认支持，保证值语义；</li>
+<li>Buffer类的移动操作会转移资源所有权，调用方需确保移动后的对象不再被其他线程访问；</li>
+<li>套接字选项设置方法（如setReusePort）可能因平台差异存在兼容性问题，不支持的平台会返回错误码；</li>
+<li>所有类的接口设计均考虑了安全性和易用性，避免直接暴露底层实现细节，降低网络编程复杂度。 </li>
+</ol>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

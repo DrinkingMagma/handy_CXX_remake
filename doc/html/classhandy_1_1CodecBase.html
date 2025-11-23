@@ -114,10 +114,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a40f25f67aa1d067b84aaa5ab0f7785b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1CodecBase.html#a40f25f67aa1d067b84aaa5ab0f7785b2">CodecBase</a> (const <a class="el" href="classhandy_1_1CodecBase.html">CodecBase</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a40f25f67aa1d067b84aaa5ab0f7785b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">禁止拷贝构造和赋值（避免多线程下的浅拷贝风险）  <a href="#a40f25f67aa1d067b84aaa5ab0f7785b2">更多...</a><br/></td></tr>
 <tr class="separator:a40f25f67aa1d067b84aaa5ab0f7785b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a385b22ebbbb1a0721628f53756d0cb8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1CodecBase.html">CodecBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1CodecBase.html#a385b22ebbbb1a0721628f53756d0cb8b">operator=</a> (const <a class="el" href="classhandy_1_1CodecBase.html">CodecBase</a> &amp;)=delete</td></tr>
 <tr class="separator:a385b22ebbbb1a0721628f53756d0cb8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf2d72021a06485436fd17af6bb7ed8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1CodecBase.html#abf2d72021a06485436fd17af6bb7ed8e">CodecBase</a> (<a class="el" href="classhandy_1_1CodecBase.html">CodecBase</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="memdesc:abf2d72021a06485436fd17af6bb7ed8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">允许移动构造和赋值（资源高效转移）  <a href="#abf2d72021a06485436fd17af6bb7ed8e">更多...</a><br/></td></tr>
 <tr class="separator:abf2d72021a06485436fd17af6bb7ed8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accca11587bed95e26a6d128d2a350e83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1CodecBase.html">CodecBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1CodecBase.html#accca11587bed95e26a6d128d2a350e83">operator=</a> (<a class="el" href="classhandy_1_1CodecBase.html">CodecBase</a> &amp;&amp;) noexcept=default</td></tr>
 <tr class="separator:accca11587bed95e26a6d128d2a350e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,6 +173,8 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>禁止拷贝构造和赋值（避免多线程下的浅拷贝风险） </p>
+
 </div>
 </div>
 <a class="anchor" id="abf2d72021a06485436fd17af6bb7ed8e"></a>
@@ -194,6 +198,8 @@ Protected 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>允许移动构造和赋值（资源高效转移） </p>
 
 </div>
 </div>

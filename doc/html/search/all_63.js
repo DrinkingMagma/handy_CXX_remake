@@ -6,8 +6,8 @@ var searchData=
   ['cancel',['cancel',['../structhandy_1_1EventsImp.html#ae92807ce64f0672176a81a1124e5f7f7',1,'handy::EventsImp::cancel()'],['../classhandy_1_1EventBase.html#a9a9d1b7712601398261784e045f0a6fa',1,'handy::EventBase::cancel()']]],
   ['cb',['cb',['../structhandy_1_1IdleNode.html#a82137e6f527a0e44887aaf5ab088d238',1,'handy::IdleNode']]],
   ['changeto',['changeTo',['../classhandy_1_1Daemon.html#a4cb915cd68c0d78512ae5790160eb7d7',1,'handy::Daemon']]],
-  ['channel',['Channel',['../classhandy_1_1Channel.html',1,'handy']]],
   ['channel',['Channel',['../classhandy_1_1Channel.html#a6799f6e926dd77b91e5280f0128d01b1',1,'handy::Channel']]],
+  ['channel',['Channel',['../classhandy_1_1Channel.html',1,'handy']]],
   ['check',['CHECK',['../logger_8h.html#a78559860b0d897def272733a90440e52',1,'logger.h']]],
   ['checkandrotatelogfile',['checkAndRotateLogFile',['../classhandy_1_1Logger.html#a434ac0f25b7add4d9276da50167e2117',1,'handy::Logger']]],
   ['checkmagic',['checkMagic',['../classhandy_1_1LengthCodec.html#a29011b90ccc681ae4aae490269043cc0',1,'handy::LengthCodec']]],
@@ -44,6 +44,5 @@ var searchData=
   ['createconnection',['createConnection',['../classhandy_1_1TcpConn.html#a9ef6387e0679449e2b1d0f9b550e18b5',1,'handy::TcpConn::createConnection(EventBase *base, const std::string &amp;destHost, unsigned short destPort, int timeout_ms=0, const std::string &amp;localIp=&quot;&quot;)'],['../classhandy_1_1TcpConn.html#ad83bd7d75bb9ecb1a1f1cb87c777173e',1,'handy::TcpConn::createConnection(EventBase *base, int fd, const Ipv4Addr &amp;local, const Ipv4Addr &amp;peer)'],['../classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd',1,'handy::UdpConn::createConnection()']]],
   ['createdir',['createDir',['../classhandy_1_1File.html#a4d5d82396291c98069b2a4a0ac13ae87',1,'handy::File']]],
   ['createpoller',['createPoller',['../namespacehandy.html#a69606e6700aa1efe845830b858c8c578',1,'handy']]],
-  ['createsafe',['createSafe',['../classhandy_1_1Slice.html#af45f20d3303966c98501cbbc7f17eeef',1,'handy::Slice']]],
-  ['current_5fos_2eh',['current_os.h',['../current__os_8h.html',1,'']]]
+  ['createsafe',['createSafe',['../classhandy_1_1Slice.html#af45f20d3303966c98501cbbc7f17eeef',1,'handy::Slice']]]
 ];

@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div><!--header-->
 <div class="contents">
 
-<p>事件轮询器基类（抽象类）  
+<p>写事件标识（映射POLLOUT）  
  <a href="classhandy_1_1PollerBase.html#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="poller_8h_source.html">poller.h</a>&gt;</code></p>
@@ -137,8 +137,10 @@ Public 成员函数</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
 <tr class="memitem:ab942dbf74c9e35ff1c29f796453e79b3"><td class="memItemLeft" align="right" valign="top">const int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1PollerBase.html#ab942dbf74c9e35ff1c29f796453e79b3">m_id</a></td></tr>
+<tr class="memdesc:ab942dbf74c9e35ff1c29f796453e79b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">静态原子变量，确保多线程环境下ID唯一递增  <a href="#ab942dbf74c9e35ff1c29f796453e79b3">更多...</a><br/></td></tr>
 <tr class="separator:ab942dbf74c9e35ff1c29f796453e79b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4891155fdee585587ac1278793a89a02"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1PollerBase.html#a4891155fdee585587ac1278793a89a02">m_lastActive</a></td></tr>
+<tr class="memdesc:a4891155fdee585587ac1278793a89a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">轮询器唯一标识符（构造时生成）  <a href="#a4891155fdee585587ac1278793a89a02">更多...</a><br/></td></tr>
 <tr class="separator:a4891155fdee585587ac1278793a89a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
@@ -163,7 +165,8 @@ Protected 属性</h2></td></tr>
 <tr class="separator:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>事件轮询器基类（抽象类） </p>
+<div class="textblock"><p>写事件标识（映射POLLOUT） </p>
+<p>事件轮询器基类（抽象类）</p>
 <ol type="1">
 <li>定义I/O事件轮询的统一接口，屏蔽不同操作系统(Linux/macOS)的底层差异<ol type="a">
 <li>采用私有继承NonCopyAble，禁止拷贝与移动，确保对象唯一性</li>
@@ -445,6 +448,8 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>静态原子变量，确保多线程环境下ID唯一递增 </p>
+
 </div>
 </div>
 <a class="anchor" id="a4891155fdee585587ac1278793a89a02"></a>
@@ -464,6 +469,8 @@ Protected 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>轮询器唯一标识符（构造时生成） </p>
 
 </div>
 </div>

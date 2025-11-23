@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div><!--header-->
 <div class="contents">
 
-<p>线程安全队列（SafeQueue）与线程池（ThreadPool）的实现  
+<p>线程安全队列（SafeQueue）与线程池（ThreadPool）的接口定义  
 <a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br/>
@@ -120,12 +120,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>线程安全队列（SafeQueue）与线程池（ThreadPool）的实现 </p>
+<div class="textblock"><p>线程安全队列（SafeQueue）与线程池（ThreadPool）的接口定义 </p>
+<p>该文件提供了两个核心组件的接口：</p>
 <ol type="1">
-<li>提供高并发场景下的任务管理能力，支持线程安全的任务存储、分发与执行<ol type="a">
-<li>包含完善的错误处理、资源管理与状态控制机制，适用于多线程环境下的任务调度 </li>
-</ol>
+<li>线程安全队列（SafeQueue）：<ul>
+<li>模板类，支持泛型元素存储，基于std::list实现；</li>
+<li>提供线程安全的入队（push）、出队等待（popWait）操作；</li>
+<li>支持容量限制、超时等待、优雅退出等功能；</li>
+<li>通过互斥锁（std::mutex）和条件变量（std::condition_variable）保证线程同步。</li>
+</ul>
 </li>
+<li>线程池（ThreadPool）：<ul>
+<li>管理一组工作线程，基于SafeQueue实现任务队列；</li>
+<li>支持线程池启动（start）、退出（exit）、等待（join）等生命周期管理；</li>
+<li>提供任务添加接口（addTask），支持右值引用和左值引用传递任务；</li>
+<li>工作线程循环从任务队列获取任务并执行，捕获任务异常避免线程崩溃。 <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ul>
+</li>
+</ol>
+<ol type="1">
+<li>线程安全：所有公共接口均保证线程安全，可在多线程环境中并发调用；</li>
+<li>任务类型：任务需是可调用对象（符合std::function&lt;void()&gt;签名），无返回值；</li>
+<li>生命周期管理：线程池需先启动（start）后才能添加任务，退出（exit）后不再接受新任务，已入队任务会继续执行；</li>
+<li>异常处理：工作线程会捕获任务执行过程中的所有异常，并记录错误日志，确保线程池稳定运行；</li>
+<li>禁止拷贝：SafeQueue和ThreadPool均继承自NonCopyAble，禁止拷贝和移动操作，避免线程安全风险。 </li>
 </ol>
 </div></div><!-- contents -->
 <!-- start footer part -->

@@ -115,6 +115,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 类型</h2></td></tr>
 <tr class="memitem:a56c9450a096d3d9a564da71c9f7d0308"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">Ptr</a> = std::shared_ptr&lt; <a class="el" href="classhandy_1_1UdpConn.html">UdpConn</a> &gt;</td></tr>
+<tr class="memdesc:a56c9450a096d3d9a564da71c9f7d0308"><td class="mdescLeft">&#160;</td><td class="mdescRight">UdpConn的智能指针类型定义  <a href="#a56c9450a096d3d9a564da71c9f7d0308">更多...</a><br/></td></tr>
 <tr class="separator:a56c9450a096d3d9a564da71c9f7d0308"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73df8e77b9774954f9c92016344c2044"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a73df8e77b9774954f9c92016344c2044">UdpMsgCallBack</a> = std::function&lt; void(const <a class="el" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">UdpConn::Ptr</a> &amp;, <a class="el" href="classhandy_1_1Buffer.html">Buffer</a>)&gt;</td></tr>
 <tr class="memdesc:a73df8e77b9774954f9c92016344c2044"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息处理回调函数类型  <a href="#a73df8e77b9774954f9c92016344c2044">更多...</a><br/></td></tr>
@@ -166,7 +167,7 @@ Public 成员函数</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private 成员函数</h2></td></tr>
 <tr class="memitem:a4cf954d2d362cbcfbeba5a9f9556d74c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a4cf954d2d362cbcfbeba5a9f9556d74c">UdpConn</a> ()=default</td></tr>
-<tr class="memdesc:a4cf954d2d362cbcfbeba5a9f9556d74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数，私有以确保只能通过createConnection方法创建  <a href="#a4cf954d2d362cbcfbeba5a9f9556d74c">更多...</a><br/></td></tr>
+<tr class="memdesc:a4cf954d2d362cbcfbeba5a9f9556d74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息处理回调函数  <a href="#a4cf954d2d362cbcfbeba5a9f9556d74c">更多...</a><br/></td></tr>
 <tr class="separator:a4cf954d2d362cbcfbeba5a9f9556d74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c401be75182dfb842ff3d02c6c224cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a6c401be75182dfb842ff3d02c6c224cf">_handleRead</a> (const <a class="el" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">UdpConn::Ptr</a> &amp;conn)</td></tr>
 <tr class="memdesc:a6c401be75182dfb842ff3d02c6c224cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理读事件的回调函数  <a href="#a6c401be75182dfb842ff3d02c6c224cf">更多...</a><br/></td></tr>
@@ -190,18 +191,25 @@ Private 属性</h2></td></tr>
 <tr class="memitem:a27f862cfd5d126ecf6c1a0f242e9777b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a27f862cfd5d126ecf6c1a0f242e9777b">m_base</a> = nullptr</td></tr>
 <tr class="separator:a27f862cfd5d126ecf6c1a0f242e9777b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a533af80bc031d93794dba64721ae123e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Channel.html">Channel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a533af80bc031d93794dba64721ae123e">m_channel</a> = nullptr</td></tr>
+<tr class="memdesc:a533af80bc031d93794dba64721ae123e"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联的事件循环对象  <a href="#a533af80bc031d93794dba64721ae123e">更多...</a><br/></td></tr>
 <tr class="separator:a533af80bc031d93794dba64721ae123e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3666ce79b9843b374a194563aafb92f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#ac3666ce79b9843b374a194563aafb92f">m_local</a> = <a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>(0)</td></tr>
+<tr class="memdesc:ac3666ce79b9843b374a194563aafb92f"><td class="mdescLeft">&#160;</td><td class="mdescRight">通道对象  <a href="#ac3666ce79b9843b374a194563aafb92f">更多...</a><br/></td></tr>
 <tr class="separator:ac3666ce79b9843b374a194563aafb92f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb59dcbfba79879ed38aa9c0fc470ad9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#afb59dcbfba79879ed38aa9c0fc470ad9">m_peer</a> = <a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>(0)</td></tr>
+<tr class="memdesc:afb59dcbfba79879ed38aa9c0fc470ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地地址  <a href="#afb59dcbfba79879ed38aa9c0fc470ad9">更多...</a><br/></td></tr>
 <tr class="separator:afb59dcbfba79879ed38aa9c0fc470ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9275878aefddfb3bdf3dfb604c9ef955"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1AutoContext.html">AutoContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a9275878aefddfb3bdf3dfb604c9ef955">m_ctx</a></td></tr>
+<tr class="memdesc:a9275878aefddfb3bdf3dfb604c9ef955"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标地址  <a href="#a9275878aefddfb3bdf3dfb604c9ef955">更多...</a><br/></td></tr>
 <tr class="separator:a9275878aefddfb3bdf3dfb604c9ef955"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a7fb36e788adb55d329f648a70a5c73"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a9a7fb36e788adb55d329f648a70a5c73">m_destHost</a></td></tr>
+<tr class="memdesc:a9a7fb36e788adb55d329f648a70a5c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">自动上下文对象  <a href="#a9a7fb36e788adb55d329f648a70a5c73">更多...</a><br/></td></tr>
 <tr class="separator:a9a7fb36e788adb55d329f648a70a5c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad316e9352e9224fc91826d28667a0670"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#ad316e9352e9224fc91826d28667a0670">m_destPort</a> = 0</td></tr>
+<tr class="memdesc:ad316e9352e9224fc91826d28667a0670"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标主机地址  <a href="#ad316e9352e9224fc91826d28667a0670">更多...</a><br/></td></tr>
 <tr class="separator:ad316e9352e9224fc91826d28667a0670"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63791e25bafb1297cf26f22f7f42e8fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1UdpConn.html#a73df8e77b9774954f9c92016344c2044">UdpMsgCallBack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpConn.html#a63791e25bafb1297cf26f22f7f42e8fd">m_udpMsgCallback</a></td></tr>
+<tr class="memdesc:a63791e25bafb1297cf26f22f7f42e8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标主机端口  <a href="#a63791e25bafb1297cf26f22f7f42e8fd">更多...</a><br/></td></tr>
 <tr class="separator:a63791e25bafb1297cf26f22f7f42e8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -216,6 +224,8 @@ Private 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>UdpConn的智能指针类型定义 </p>
 
 </div>
 </div>
@@ -287,6 +297,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>消息处理回调函数 </p>
 <p>构造函数，私有以确保只能通过createConnection方法创建 </p>
 
 </div>
@@ -682,6 +693,8 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>关联的事件循环对象 </p>
+
 </div>
 </div>
 <a class="anchor" id="a9275878aefddfb3bdf3dfb604c9ef955"></a>
@@ -701,6 +714,8 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>目标地址 </p>
 
 </div>
 </div>
@@ -722,6 +737,8 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>自动上下文对象 </p>
+
 </div>
 </div>
 <a class="anchor" id="ad316e9352e9224fc91826d28667a0670"></a>
@@ -741,6 +758,8 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>目标主机地址 </p>
 
 </div>
 </div>
@@ -762,6 +781,8 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>通道对象 </p>
+
 </div>
 </div>
 <a class="anchor" id="afb59dcbfba79879ed38aa9c0fc470ad9"></a>
@@ -782,6 +803,8 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>本地地址 </p>
+
 </div>
 </div>
 <a class="anchor" id="a63791e25bafb1297cf26f22f7f42e8fd"></a>
@@ -801,6 +824,8 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>目标主机端口 </p>
 
 </div>
 </div>

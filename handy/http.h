@@ -1,3 +1,30 @@
+/**
+ * @file http.h
+ * @brief HTTP协议核心类定义头文件，包含HTTP消息封装、连接管理和服务器框架
+ * @details 
+ *  该文件是HTTP协议功能的核心定义，提供了从消息解析到服务器路由的完整解决方案，主要包含：
+ *  1. HTTP消息模型：
+ *     - HttpMsg类：HTTP消息基类，封装请求和响应的通用特性（头部处理、编码解码接口）；
+ *     - HttpRequest类：HTTP请求具体实现，支持请求行解析、URI解析、查询参数提取；
+ *     - HttpResponse类：HTTP响应具体实现，支持状态码管理、默认状态描述映射；
+ *  2. HTTP连接管理：
+ *     - HttpConnPtr类：封装TCP连接，提供HTTP请求/响应的发送、文件传输、数据清理等便捷接口；
+ *     - 内置HTTP上下文管理，自动关联请求和响应对象，支持Keep-Alive连接；
+ *  3. HTTP服务器框架：
+ *     - HttpServer类：继承自TcpServer，提供路由注册机制（支持GET、POST等任意方法）；
+ *     - 支持自定义连接类型、默认请求处理器，适配不同业务场景；
+ *  4. 核心特性：
+ *     - 头部字段大小写不敏感处理，自动转换为小写存储；
+ *     - 支持消息体的复制和引用两种模式，优化内存使用；
+ *     - 内置100 Continue状态码处理，支持大请求体场景；
+ * @note 
+ *  1. 依赖组件：需配合conn.h（TCP连接）、slice.h（缓冲区处理）、non_copy_able.h（不可拷贝基类）使用；
+ *  2. 线程安全：HttpServer的路由注册需在服务器启动前完成，连接处理逻辑由事件循环线程执行；
+ *  3. 协议支持：目前仅支持HTTP/1.1，默认启用Keep-Alive，需手动处理连接关闭；
+ *  4. 消息解析：采用流式解析方式，支持分块接收数据，适合处理大文件传输；
+ *  5. 扩展建议：如需支持HTTPS，可在TcpConn层面添加SSL/TLS加密层，HttpServer无需修改。
+ */
+
 #pragma once
 #include "non_copy_able.h"
 #include "conn.h"
@@ -14,13 +41,13 @@ namespace handy
     class HttpMsg : private NonCopyAble
     { 
         public:
-            // 消息解析结果状态
+            /// 消息解析结果状态
             enum class Result
             {
-                Error,          // 解析错误
-                Complete,       // 解析完成
-                NotComplete,    // 解析未完成（需要更多数据）
-                Continue100     // 需要发送100Continue响应
+                Error,          /// 解析错误
+                Complete,       /// 解析完成
+                NotComplete,    /// 解析未完成（需要更多数据）
+                Continue100     /// 需要发送100Continue响应
             };
 
             /**
@@ -121,13 +148,13 @@ namespace handy
             */
             std::string getVersion() const { return m_version; }
         protected:
-            std::map<std::string, std::string> m_headers;   // 头部字段（键为小写）
-            std::string m_version;                          // HTTP版本（如"HTTP/1.1"）
-            std::string m_body;                               // 消息体(复制模式)
-            Slice m_body2;                                  // 消息体（引用模式）
-            bool m_completed;                               // 消息解析完成标志
-            size_t m_contentLen;                            // 消息体长度（从Content-Length中获取）
-            size_t m_scannedLen;                            // 已解析的字节数
+            std::map<std::string, std::string> m_headers;   /// 头部字段（键为小写）
+            std::string m_version;                          /// HTTP版本（如"HTTP/1.1"）
+            std::string m_body;                             /// 消息体(复制模式)
+            Slice m_body2;                                  /// 消息体（引用模式）
+            bool m_completed;                               /// 消息解析完成标志
+            size_t m_contentLen;                            /// 消息体长度（从Content-Length中获取）
+            size_t m_scannedLen;                            /// 已解析的字节数
 
             /**
              * @brief 内部解析辅助函数，处理通用HTTP消息结构
@@ -191,10 +218,10 @@ namespace handy
                 return _getValueFromMap(m_args, name);
             }
 
-            std::map<std::string, std::string> m_args;  // 查询参数
-            std::string m_method;                       // 请求方法（如“GET”、“POST”等）
-            std::string m_uri;                          // 路径部分（不含查询字符串）
-            std::string m_queryUri;                     // 完整URI（含查询字符串）
+            std::map<std::string, std::string> m_args;  /// 查询参数
+            std::string m_method;                       /// 请求方法（如“GET”、“POST”等）
+            std::string m_uri;                          /// 路径部分（不含查询字符串）
+            std::string m_queryUri;                     /// 完整URI（含查询字符串）
     };
 
     /**
@@ -247,8 +274,8 @@ namespace handy
                 m_body = m_statusMsg;
             }
 
-            int m_status;               // 状态码
-            std::string m_statusMsg;   // 状态描述
+            int m_status;               /// 状态码
+            std::string m_statusMsg;   /// 状态描述
 
         private:
             /**
@@ -267,7 +294,7 @@ namespace handy
     class HttpConnPtr
     {
         public:
-            // HTTP消息处理回调函数类型
+            /// HTTP消息处理回调函数类型
             using HttpCallBack = std::function<void(const HttpConnPtr&)>;
 
             /**
@@ -347,14 +374,14 @@ namespace handy
            void onHttpMsg(const HttpCallBack& cb) const;
 
         private:
-            // HTTP上下文，存储请求和响应对象
+            /// HTTP上下文，存储请求和响应对象
             struct HttpContext
             {
-                HttpRequest req;    // 请求对象
-                HttpResponse resp;   // 响应对象
+                HttpRequest req;    /// 请求对象
+                HttpResponse resp;   /// 响应对象
             };
 
-            TcpConnPtr m_tcp;   // 底层TCP连接
+            TcpConnPtr m_tcp;   /// 底层TCP连接
 
             /**
              * @brief 处理读事件，解析HTTP消息
@@ -453,9 +480,8 @@ namespace handy
                 return m_defaultHandler;
             }
         private:
-            HttpConnPtr::HttpCallBack m_defaultHandler; // 默认处理器
-            std::function<TcpConnPtr()> m_connCreator;   // 连接创建器
-            // 路由表
-            std::map<std::string, std::map<std::string, HttpConnPtr::HttpCallBack>> m_routeTable;
+            HttpConnPtr::HttpCallBack m_defaultHandler; /// 默认处理器
+            std::function<TcpConnPtr()> m_connCreator;   /// 连接创建器
+            std::map<std::string, std::map<std::string, HttpConnPtr::HttpCallBack>> m_routeTable;   /// 路由表
     };
 } // namespace handy

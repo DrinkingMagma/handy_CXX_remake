@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="title">status.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>系统错误处理与状态封装工具类，提供线程安全的错误信息管理和统一的状态表示  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &lt;string.h&gt;</code><br/>
 <code>#include &lt;cerrno&gt;</code><br/>
 <code>#include &lt;cstdint&gt;</code><br/>
@@ -121,7 +124,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memdesc:a957dcc461a7df87ab6338b1da38e4fba"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前线程的系统错误信息字符串  <a href="#a957dcc461a7df87ab6338b1da38e4fba">更多...</a><br/></td></tr>
 <tr class="separator:a957dcc461a7df87ab6338b1da38e4fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>系统错误处理与状态封装工具类，提供线程安全的错误信息管理和统一的状态表示 </p>
+<p>该文件包含两个核心功能模块：</p>
+<ol type="1">
+<li>线程安全的错误信息获取（errstr函数）：<ul>
+<li>封装strerror_r，使用线程局部存储（thread_local）避免多线程竞争；</li>
+<li>自动适配POSIX和XSI标准的strerror_r返回值差异，确保跨平台兼容性；</li>
+</ul>
+</li>
+<li>通用状态封装类（Status）：<ul>
+<li>统一表示操作结果，包含状态码（0表示成功）和错误描述信息；</li>
+<li>支持拷贝/移动语义，通过深拷贝确保状态信息的独立性；</li>
+<li>提供丰富的静态工厂方法，如从系统错误（errno）创建、格式化错误信息创建、I/O错误专用创建等；</li>
+<li>提供简洁的接口获取状态码（code()）和错误信息（msg()），以及判断操作是否成功（ok()）。 <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ul>
+</li>
+</ol>
+<ol type="1">
+<li>线程安全：errstr函数和Status类的所有方法均为线程安全设计，可在多线程环境中放心使用；</li>
+<li>内存管理：Status类通过动态分配内存存储状态信息，自动在析构函数中释放，避免内存泄漏；</li>
+<li>跨平台兼容：针对strerror_r的不同标准实现进行适配，支持Linux、macOS等主流POSIX系统；</li>
+<li>使用建议：推荐在所有需要返回操作结果的场景中使用Status类，替代直接返回错误码或抛出异常，使错误处理更统一、清晰。 </li>
+</ol>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

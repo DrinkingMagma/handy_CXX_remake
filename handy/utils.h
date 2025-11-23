@@ -1,3 +1,24 @@
+/**
+ * @file utils.h
+ * @brief 通用工具函数和辅助类的接口定义
+ * @details 
+ *  该文件提供了两组核心功能：
+ *  1. 通用工具函数集合（Utils结构体）：
+ *     - 字符串处理：格式化（format）、字符串转整数（atoi/atoi2）；
+ *     - 时间处理：获取系统时间戳（timeMicro/timeMilli）、稳定时钟计时（steadyMicro/steadyMilli）、时间戳转可读字符串（readableTime）；
+ *     - 文件描述符操作：添加文件描述符标志（addFdFlag）；
+ *     - MIME类型处理：获取预定义MIME类型映射（getMimeMap）、根据文件名获取MIME类型（getMimeType）。
+ *  2. 退出时自动执行函数的辅助类（ExitCaller）：
+ *     - 基于RAII机制，在对象析构时自动执行注册的函数；
+ *     - 适用于程序退出时的资源释放、日志关闭等清理操作。
+ * @note 
+ *  1. 线程安全：所有工具函数均设计为线程安全，时间处理使用线程局部存储（TLS）避免竞争；
+ *  2. 异常处理：关键函数包含异常捕获，确保程序稳定性；
+ *  3. 跨平台兼容：依赖C++11及以上标准，使用标准库函数确保跨平台可用性；
+ *  4. 内存安全：字符串格式化使用智能指针管理缓冲区，避免内存泄漏；
+ *  5. 易用性：接口设计简洁，参数校验严格，错误处理明确。
+ */
+
 #pragma once
 #include "non_copy_able.h"
 #include <string>
@@ -145,6 +166,7 @@ namespace handy
                 }
             }
         private:
+            /// 所需执行的函数对象
             std::function<void()> m_functor;
     };
 } // namespace handy

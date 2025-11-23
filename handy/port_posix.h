@@ -1,7 +1,19 @@
 /**
  * @file port_posix.h
- * @brief 跨平台端口工具函数，提供字节序转换、主机名解析和线程ID获取等功能
-*/
+ * @brief 跨平台端口工具函数头文件，提供字节序转换、主机名解析和线程ID获取等功能
+ * @details 
+ *  该文件定义了一组跨平台的工具函数，主要包含以下核心功能：
+ *  1. 字节序转换：提供主机字节序与大端字节序（网络字节序）之间的转换，支持16/32/64位有符号和无符号整数；
+ *  2. 主机名解析：通过getHostByName函数将主机名（域名或IP字符串）解析为IPv4地址结构（in_addr），线程安全；
+ *  3. 线程ID获取：getCurrentThreadId函数返回当前线程的64位唯一标识，适配不同操作系统；
+ *  4. IPv4地址与字符串转换：addrToString将in_addr结构转换为点分十进制字符串，stringToAddr则反之。
+ * @note 
+ *  1. 字节序转换依赖系统宏__BYTE_ORDER判断是否为小端字节序，仅在小端系统上执行字节交换；
+ *  2. 主机名解析和线程ID获取的具体实现依赖平台，需配合对应的.cpp文件（如port_posix.cpp）使用；
+ *  3. 所有函数均针对POSIX兼容系统设计，非POSIX系统可能需要额外适配；
+ *  4. 线程安全说明：getHostByName通过互斥锁保证线程安全，其他函数为无状态设计，可并发调用。
+ */
+
 #pragma once
 #include <netinet/in.h>
 #include <string>

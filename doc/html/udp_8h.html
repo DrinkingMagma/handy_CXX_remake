@@ -93,7 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div><!--header-->
 <div class="contents">
 
-<p>UDP服务器和客户端连接的实现  
+<p>UDP客户端和服务端连接的封装接口定义  
 <a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="event__base_8h_source.html">event_base.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="non__copy__able_8h_source.html">non_copy_able.h</a>&quot;</code><br/>
@@ -120,11 +120,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 变量</h2></td></tr>
 <tr class="memitem:ad3d2de94c1471194c3d744c87a5b0f54"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#ad3d2de94c1471194c3d744c87a5b0f54">handy::kUdpPacketSize</a> = 4096</td></tr>
+<tr class="memdesc:ad3d2de94c1471194c3d744c87a5b0f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP数据包的最大大小为4096字节（4KB）  <a href="#ad3d2de94c1471194c3d744c87a5b0f54">更多...</a><br/></td></tr>
 <tr class="separator:ad3d2de94c1471194c3d744c87a5b0f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>UDP服务器和客户端连接的实现 </p>
-<p>UDP客户端和服务端连接的封装实现</p>
+<div class="textblock"><p>UDP客户端和服务端连接的封装接口定义 </p>
+<p>该文件定义了三个核心组件的接口：</p>
+<ol type="1">
+<li>UdpConn：UDP客户端连接类，封装了UDP连接的创建、数据发送和接收；<ul>
+<li>支持非阻塞连接和事件驱动的读事件处理；</li>
+<li>提供多种数据类型的发送接口（Buffer、std::string、char*）；</li>
+<li>通过回调函数通知上层处理接收到的数据。</li>
+</ul>
+</li>
+<li>UdpServer：UDP服务端类，负责绑定地址、监听端口和处理客户端消息；<ul>
+<li>支持地址复用和端口复用；</li>
+<li>基于事件驱动模型，通过Channel监听读事件；</li>
+<li>接收到数据后通过回调函数传递给上层处理。</li>
+</ul>
+</li>
+<li>HSHAU：半同步半异步UDP服务器，结合线程池处理耗时任务；<ul>
+<li>事件循环线程（同步层）负责接收和发送数据；</li>
+<li>线程池（异步层）处理耗时的业务逻辑，避免阻塞事件循环；</li>
+<li>简化了高并发场景下的UDP服务端开发。 <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ul>
+</li>
+</ol>
+<ol type="1">
+<li>依赖组件：依赖EventBase、Channel、Ipv4Addr等事件驱动和网络工具类；</li>
+<li>线程安全：UdpConn和UdpServer的回调函数在事件循环线程中执行，HSHAU的业务逻辑在线程池执行，需确保回调函数线程安全；</li>
+<li>资源管理：所有组件均通过智能指针管理生命周期，避免内存泄漏；</li>
+<li>非阻塞IO：所有套接字均设置为非阻塞模式，确保事件循环的高效运行。 </li>
+</ol>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

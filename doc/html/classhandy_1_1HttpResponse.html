@@ -166,12 +166,13 @@ Public 属性</h2></td></tr>
 <tr class="memitem:acb9f2e04de43581be58c451bb34ea381"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpResponse.html#acb9f2e04de43581be58c451bb34ea381">m_status</a></td></tr>
 <tr class="separator:acb9f2e04de43581be58c451bb34ea381"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecec0628b9172c3747d01f2b1716d796"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpResponse.html#aecec0628b9172c3747d01f2b1716d796">m_statusMsg</a></td></tr>
+<tr class="memdesc:aecec0628b9172c3747d01f2b1716d796"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态码  <a href="#aecec0628b9172c3747d01f2b1716d796">更多...</a><br/></td></tr>
 <tr class="separator:aecec0628b9172c3747d01f2b1716d796"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private 成员函数</h2></td></tr>
 <tr class="memitem:aa0f5da9cddecdb321286d69f5a84ea96"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpResponse.html#aa0f5da9cddecdb321286d69f5a84ea96">_getDefaultStatusMsg</a> (int status) const </td></tr>
-<tr class="memdesc:aa0f5da9cddecdb321286d69f5a84ea96"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取状态码对应的默认描述  <a href="#aa0f5da9cddecdb321286d69f5a84ea96">更多...</a><br/></td></tr>
+<tr class="memdesc:aa0f5da9cddecdb321286d69f5a84ea96"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态描述  <a href="#aa0f5da9cddecdb321286d69f5a84ea96">更多...</a><br/></td></tr>
 <tr class="separator:aa0f5da9cddecdb321286d69f5a84ea96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -182,10 +183,11 @@ Private 成员函数</h2></td></tr>
 <a class="el" href="classhandy_1_1HttpMsg.html#a17159bc7c0a6540b99b78fc34298ee77a344c482c314718eb7dc7b1746435d492">Result::NotComplete</a>, 
 <a class="el" href="classhandy_1_1HttpMsg.html#a17159bc7c0a6540b99b78fc34298ee77a53e856ab6ce62122170aab147580fe9c">Result::Continue100</a>
  }</td></tr>
+<tr class="memdesc:a17159bc7c0a6540b99b78fc34298ee77"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息解析结果状态  <a href="classhandy_1_1HttpMsg.html#a17159bc7c0a6540b99b78fc34298ee77">更多...</a><br/></td></tr>
 <tr class="separator:a17159bc7c0a6540b99b78fc34298ee77 inherit pub_types_classhandy_1_1HttpMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classhandy_1_1HttpMsg"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classhandy_1_1HttpMsg')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classhandy_1_1HttpMsg.html">handy::HttpMsg</a></td></tr>
 <tr class="memitem:a035dca54b0b58b34ba00876b3db36f59 inherit pro_methods_classhandy_1_1HttpMsg"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1HttpMsg.html#a17159bc7c0a6540b99b78fc34298ee77">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpMsg.html#a035dca54b0b58b34ba00876b3db36f59">_tryDecode</a> (<a class="el" href="classhandy_1_1Slice.html">Slice</a> buf, bool isCopyBody, <a class="el" href="classhandy_1_1Slice.html">Slice</a> *firstLine)</td></tr>
-<tr class="memdesc:a035dca54b0b58b34ba00876b3db36f59 inherit pro_methods_classhandy_1_1HttpMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部解析辅助函数，处理通用HTTP消息结构  <a href="#a035dca54b0b58b34ba00876b3db36f59">更多...</a><br/></td></tr>
+<tr class="memdesc:a035dca54b0b58b34ba00876b3db36f59 inherit pro_methods_classhandy_1_1HttpMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">已解析的字节数  <a href="#a035dca54b0b58b34ba00876b3db36f59">更多...</a><br/></td></tr>
 <tr class="separator:a035dca54b0b58b34ba00876b3db36f59 inherit pro_methods_classhandy_1_1HttpMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f16575d0b9bf5afc37c1c60483ae1a9 inherit pro_methods_classhandy_1_1HttpMsg"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpMsg.html#a0f16575d0b9bf5afc37c1c60483ae1a9">_getValueFromMap</a> (const std::map&lt; std::string, std::string &gt; &amp;mapTable, const std::string &amp;key) const </td></tr>
 <tr class="memdesc:a0f16575d0b9bf5afc37c1c60483ae1a9 inherit pro_methods_classhandy_1_1HttpMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部函数，从映射表中获取指定键的值（不区分大小写）  <a href="#a0f16575d0b9bf5afc37c1c60483ae1a9">更多...</a><br/></td></tr>
@@ -195,16 +197,22 @@ Private 成员函数</h2></td></tr>
 std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpMsg.html#a5ead58dabad228055c25d585575c8625">m_headers</a></td></tr>
 <tr class="separator:a5ead58dabad228055c25d585575c8625 inherit pro_attribs_classhandy_1_1HttpMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3248b9b941187d5a5f83091b4949191c inherit pro_attribs_classhandy_1_1HttpMsg"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpMsg.html#a3248b9b941187d5a5f83091b4949191c">m_version</a></td></tr>
+<tr class="memdesc:a3248b9b941187d5a5f83091b4949191c inherit pro_attribs_classhandy_1_1HttpMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">头部字段（键为小写）  <a href="#a3248b9b941187d5a5f83091b4949191c">更多...</a><br/></td></tr>
 <tr class="separator:a3248b9b941187d5a5f83091b4949191c inherit pro_attribs_classhandy_1_1HttpMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3305d670800d5d4b7b330382fc6f345e inherit pro_attribs_classhandy_1_1HttpMsg"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpMsg.html#a3305d670800d5d4b7b330382fc6f345e">m_body</a></td></tr>
+<tr class="memdesc:a3305d670800d5d4b7b330382fc6f345e inherit pro_attribs_classhandy_1_1HttpMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP版本（如"HTTP/1.1"）  <a href="#a3305d670800d5d4b7b330382fc6f345e">更多...</a><br/></td></tr>
 <tr class="separator:a3305d670800d5d4b7b330382fc6f345e inherit pro_attribs_classhandy_1_1HttpMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40f286aac6c073a7b8aae99a997732be inherit pro_attribs_classhandy_1_1HttpMsg"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Slice.html">Slice</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpMsg.html#a40f286aac6c073a7b8aae99a997732be">m_body2</a></td></tr>
+<tr class="memdesc:a40f286aac6c073a7b8aae99a997732be inherit pro_attribs_classhandy_1_1HttpMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息体(复制模式)  <a href="#a40f286aac6c073a7b8aae99a997732be">更多...</a><br/></td></tr>
 <tr class="separator:a40f286aac6c073a7b8aae99a997732be inherit pro_attribs_classhandy_1_1HttpMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa695dd81cedd377994dd56521ae039d1 inherit pro_attribs_classhandy_1_1HttpMsg"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpMsg.html#aa695dd81cedd377994dd56521ae039d1">m_completed</a></td></tr>
+<tr class="memdesc:aa695dd81cedd377994dd56521ae039d1 inherit pro_attribs_classhandy_1_1HttpMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息体（引用模式）  <a href="#aa695dd81cedd377994dd56521ae039d1">更多...</a><br/></td></tr>
 <tr class="separator:aa695dd81cedd377994dd56521ae039d1 inherit pro_attribs_classhandy_1_1HttpMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1c3cbd6d74d454d6e484737589a22ba inherit pro_attribs_classhandy_1_1HttpMsg"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpMsg.html#ad1c3cbd6d74d454d6e484737589a22ba">m_contentLen</a></td></tr>
+<tr class="memdesc:ad1c3cbd6d74d454d6e484737589a22ba inherit pro_attribs_classhandy_1_1HttpMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息解析完成标志  <a href="#ad1c3cbd6d74d454d6e484737589a22ba">更多...</a><br/></td></tr>
 <tr class="separator:ad1c3cbd6d74d454d6e484737589a22ba inherit pro_attribs_classhandy_1_1HttpMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad05e688fbc1cb05007f1bcafcb72c4f6 inherit pro_attribs_classhandy_1_1HttpMsg"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpMsg.html#ad05e688fbc1cb05007f1bcafcb72c4f6">m_scannedLen</a></td></tr>
+<tr class="memdesc:ad05e688fbc1cb05007f1bcafcb72c4f6 inherit pro_attribs_classhandy_1_1HttpMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息体长度（从Content-Length中获取）  <a href="#ad05e688fbc1cb05007f1bcafcb72c4f6">更多...</a><br/></td></tr>
 <tr class="separator:ad05e688fbc1cb05007f1bcafcb72c4f6 inherit pro_attribs_classhandy_1_1HttpMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -259,6 +267,7 @@ std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 </table>
 </div><div class="memdoc">
 
+<p>状态描述 </p>
 <p>获取状态码对应的默认描述 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -468,6 +477,8 @@ std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>状态码 </p>
 
 </div>
 </div>

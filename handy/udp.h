@@ -1,7 +1,26 @@
 /**
  * @file udp.h
- * @brief UDP客户端和服务端连接的封装实现
-*/
+ * @brief UDP客户端和服务端连接的封装接口定义
+ * @details 
+ *  该文件定义了三个核心组件的接口：
+ *  1. UdpConn：UDP客户端连接类，封装了UDP连接的创建、数据发送和接收；
+ *     - 支持非阻塞连接和事件驱动的读事件处理；
+ *     - 提供多种数据类型的发送接口（Buffer、std::string、char*）；
+ *     - 通过回调函数通知上层处理接收到的数据。
+ *  2. UdpServer：UDP服务端类，负责绑定地址、监听端口和处理客户端消息；
+ *     - 支持地址复用和端口复用；
+ *     - 基于事件驱动模型，通过Channel监听读事件；
+ *     - 接收到数据后通过回调函数传递给上层处理。
+ *  3. HSHAU：半同步半异步UDP服务器，结合线程池处理耗时任务；
+ *     - 事件循环线程（同步层）负责接收和发送数据；
+ *     - 线程池（异步层）处理耗时的业务逻辑，避免阻塞事件循环；
+ *     - 简化了高并发场景下的UDP服务端开发。
+ * @note 
+ *  1. 依赖组件：依赖EventBase、Channel、Ipv4Addr等事件驱动和网络工具类；
+ *  2. 线程安全：UdpConn和UdpServer的回调函数在事件循环线程中执行，HSHAU的业务逻辑在线程池执行，需确保回调函数线程安全；
+ *  3. 资源管理：所有组件均通过智能指针管理生命周期，避免内存泄漏；
+ *  4. 非阻塞IO：所有套接字均设置为非阻塞模式，确保事件循环的高效运行。
+ */
 
 #ifndef __HANDY_UDP_H__
 #define __HANDY_UDP_H__ 
@@ -12,7 +31,7 @@
 namespace handy
 {
 
-    // UDP数据包的最大大小为4096字节（4KB）
+    /// UDP数据包的最大大小为4096字节（4KB）
     const int kUdpPacketSize = 4096;
     /**
      * @class UdpConn
@@ -21,7 +40,7 @@ namespace handy
     class UdpConn : public std::enable_shared_from_this<UdpConn>, private NonCopyAble
     { 
         public:
-            // UdpConn的智能指针类型定义
+            /// UdpConn的智能指针类型定义
             using Ptr = std::shared_ptr<UdpConn>;
             /**
              * @brief 消息处理回调函数类型
@@ -106,14 +125,14 @@ namespace handy
             template <class T>
             T& getContext() { return m_ctx.context<T>(); }
         private:
-            EventBase* m_base = nullptr;        // 关联的事件循环对象
-            Channel* m_channel = nullptr;       // 通道对象
-            Ipv4Addr m_local = Ipv4Addr(0);     // 本地地址
-            Ipv4Addr m_peer = Ipv4Addr(0);      // 目标地址
-            AutoContext m_ctx;                  // 自动上下文对象
-            std::string m_destHost;             // 目标主机地址
-            int m_destPort = 0;                 // 目标主机端口
-            UdpMsgCallBack m_udpMsgCallback;          // 消息处理回调函数
+            EventBase* m_base = nullptr;        /// 关联的事件循环对象
+            Channel* m_channel = nullptr;       /// 通道对象
+            Ipv4Addr m_local = Ipv4Addr(0);     /// 本地地址
+            Ipv4Addr m_peer = Ipv4Addr(0);      /// 目标地址
+            AutoContext m_ctx;                  /// 自动上下文对象
+            std::string m_destHost;             /// 目标主机地址
+            int m_destPort = 0;                 /// 目标主机端口
+            UdpMsgCallBack m_udpMsgCallback;          /// 消息处理回调函数
 
             /**
              * @brief 构造函数，私有以确保只能通过createConnection方法创建
@@ -134,7 +153,7 @@ namespace handy
     class UdpServer : public std::enable_shared_from_this<UdpServer>, private NonCopyAble
     {
         public:
-            // UdpServer的智能指针类型定义
+            /// UdpServer的智能指针类型定义
             using Ptr = std::shared_ptr<UdpServer>;
 
             /**
@@ -223,11 +242,11 @@ namespace handy
             void onMsg(const ServerMsgCallBack& cb) { m_serverMsgCallback = cb; }
         
         private:
-            EventBase* m_base = nullptr;        // 关联的事件循环对象
-            EventBases* m_bases = nullptr;      // 事件循环对象基类
-            Ipv4Addr m_addr = Ipv4Addr(0);                    // 服务器绑定的地址
-            Channel* m_channel = nullptr;       // 通道对象
-            ServerMsgCallBack m_serverMsgCallback;          // 消息处理回调函数
+            EventBase* m_base = nullptr;        /// 关联的事件循环对象
+            EventBases* m_bases = nullptr;      /// 事件循环对象基类
+            Ipv4Addr m_addr = Ipv4Addr(0);                    /// 服务器绑定的地址
+            Channel* m_channel = nullptr;       /// 通道对象
+            ServerMsgCallBack m_serverMsgCallback;          /// 消息处理回调函数
     };
 
     /**
@@ -237,7 +256,7 @@ namespace handy
     class HSHAU : private NonCopyAble
     {
         public:
-            // HSHAU的智能指针类型定义
+            /// HSHAU的智能指针类型定义
             using Ptr = std::shared_ptr<HSHAU>;
 
             /**
@@ -283,8 +302,8 @@ namespace handy
             void onMsg(const RetMsgCallback& cb);
 
         private:
-            UdpServer::Ptr m_server;    // UDP服务器对象
-            ThreadPool m_threadPool;    // 线程池对象
+            UdpServer::Ptr m_server;    /// UDP服务器对象
+            ThreadPool m_threadPool;    /// 线程池对象
     };
 } // namespace handy
 

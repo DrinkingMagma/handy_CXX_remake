@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="title">slice.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>非持有型字符序列视图类定义，提供安全、高效的字符串操作接口（兼容C++11）  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &lt;stdexcept&gt;</code><br/>
 <code>#include &lt;cstring&gt;</code><br/>
 <code>#include &lt;vector&gt;</code><br/>
@@ -129,7 +132,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memdesc:ac13e945d1450818377a4674740c2c9e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件描述符读取内容到Slice（需确保buffer的生命周期）  <a href="#ac13e945d1450818377a4674740c2c9e2">更多...</a><br/></td></tr>
 <tr class="separator:ac13e945d1450818377a4674740c2c9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>非持有型字符序列视图类定义，提供安全、高效的字符串操作接口（兼容C++11） </p>
+<p>该类是一个非持有型的字符序列视图，类似C++17的std::string_view，但兼容C++11标准。核心特性包括：</p>
+<ol type="1">
+<li>内存安全：严格的空指针校验，所有构造和操作均避免空指针访问，抛出明确的异常；</li>
+<li>高效操作：不管理内存，仅持有外部字符序列的指针，所有操作均为O(1)或O(n)时间复杂度，无额外内存分配；</li>
+<li>丰富接口：提供字符串常见操作，如查找（find）、截取（sub）、吞噬（eat）、分割（split）、前后空白修剪（trimSpace）等；</li>
+<li>兼容性强：支持从std::string、C风格字符串、指针+长度等多种方式构造，可隐式转换为std::string；</li>
+<li>线程安全说明：成员函数均为const/无状态操作，多线程只读访问安全；若需多线程修改（如eat/trimSpace），需外部加锁。 <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ol>
+<ol type="1">
+<li>生命周期管理：由于不持有内存，需确保外部字符序列的生命周期长于Slice对象，避免悬垂指针；</li>
+<li>异常处理：非法操作（如越界访问、空指针构造）会抛出std::invalid_argument或std::out_of_range异常，需上层捕获处理；</li>
+<li>字符编码：默认处理ASCII字符，若需支持多字节编码（如UTF-8），需自行确保操作的正确性（如trimSpace仅处理空格、制表符等ASCII空白字符）；</li>
+<li>性能优化：所有接口均经过优化，避免不必要的计算和内存拷贝，适合高并发、高性能场景。 </li>
+</ol>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

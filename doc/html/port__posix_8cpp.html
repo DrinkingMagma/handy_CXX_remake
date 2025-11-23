@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <code>#include &lt;mutex&gt;</code><br/>
 <code>#include &quot;<a class="el" href="port__posix_8h_source.html">port_posix.h</a>&quot;</code><br/>
 <code>#include &lt;pthread.h&gt;</code><br/>
-<code>#include &lt;<a class="el" href="current__os_8h_source.html">current_os.h</a>&gt;</code><br/>
+<code>#include &quot;<a class="el" href="platform_8h_source.html">platform.h</a>&quot;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 命名空间</h2></td></tr>
@@ -123,6 +123,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>跨平台端口工具函数的POSIX实现(Linux/macOS) </p>
+<p>该文件实现了POSIX兼容系统（Linux和macOS）下的核心工具函数，主要包括：</p>
+<ol type="1">
+<li>线程安全的主机名解析（getHostByName）：<ul>
+<li>优先尝试将输入直接解析为IPv4地址（inet_pton）；</li>
+<li>若解析失败，使用线程安全的主机名解析函数（Linux下gethostbyname_r，macOS下gethostbyname加锁）；</li>
+<li>成功返回true并填充in_addr结构，失败返回false且将in_addr.s_addr设为INADDR_NONE。</li>
+</ul>
+</li>
+<li>当前线程ID获取（getCurrentThreadId）：<ul>
+<li>Linux下通过syscall(SYS_gettid)获取线程ID；</li>
+<li>macOS下通过pthread_threadid_np获取线程ID；</li>
+<li>返回64位无符号整数表示的线程ID。</li>
+</ul>
+</li>
+<li>IPv4地址与字符串转换：<ul>
+<li>addrToString：将in_addr结构转换为点分十进制IPv4字符串（inet_ntop）；</li>
+<li>stringToAddr：将点分十进制IPv4字符串转换为in_addr结构（inet_pton）。 <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ul>
+</li>
+</ol>
+<ol type="1">
+<li>线程安全：主机名解析函数通过静态互斥锁保证多线程环境下的安全性；</li>
+<li>平台差异：针对Linux和macOS的底层接口差异进行适配，提供统一的上层接口；</li>
+<li>错误处理：解析失败时返回明确的布尔值，便于上层判断和处理；</li>
+<li>依赖：依赖POSIX标准库（netdb.h、arpa/inet.h等），非POSIX系统不支持。 </li>
+</ol>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

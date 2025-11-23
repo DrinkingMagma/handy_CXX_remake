@@ -136,8 +136,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件派发器内部实现结构体（Pimpl模式，隐藏EventBase的具体逻辑）  <a href="structhandy_1_1EventsImp.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1TimerRepeatable.html">TimerRepeatable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">通用任务回调（无参数无返回值，用于异步任务/事件处理  <a href="structhandy_1_1TimerRepeatable.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1IdleNode.html">IdleNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲连接节点结构体（存储单个空闲连接的管理信息）  <a href="structhandy_1_1IdleNode.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1IdleIdImp.html">IdleIdImp</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲连接ID实现结构体（封装空闲连接的列表迭代器）  <a href="structhandy_1_1IdleIdImp.html#details">更多...</a><br/></td></tr>
@@ -158,7 +160,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件和目录操作的工具类，提供静态方法封装常用文件操作  <a href="classhandy_1_1File.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1AutoContext.html">AutoContext</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">自动上下文管理器（线程安全）  <a href="classhandy_1_1AutoContext.html#details">更多...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时任务ID类型&lt; 超时时间戳，序列号（自增整数）&gt;=""&gt;  <a href="classhandy_1_1AutoContext.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpMsg.html">HttpMsg</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP消息基类，封装HTTP请求和响应的通用功能  <a href="classhandy_1_1HttpMsg.html#details">更多...</a><br/></td></tr>
@@ -190,7 +192,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">禁止派生类对象的拷贝构造和拷贝赋值操作  <a href="classhandy_1_1NonCopyAble.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1PollerBase.html">PollerBase</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件轮询器基类（抽象类）  <a href="classhandy_1_1PollerBase.html#details">更多...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">写事件标识（映射POLLOUT）  <a href="classhandy_1_1PollerBase.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Slice.html">Slice</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">非持有型字符序列视图（类似std::string_view，但兼容C++11）  <a href="classhandy_1_1Slice.html#details">更多...</a><br/></td></tr>
@@ -226,24 +228,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 类型定义</h2></td></tr>
 <tr class="memitem:aff2a897d26359dc727a452653efc3ae7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a> = std::shared_ptr&lt; <a class="el" href="classhandy_1_1TcpConn.html">TcpConn</a> &gt;</td></tr>
+<tr class="memdesc:aff2a897d26359dc727a452653efc3ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP连接的智能指针类型  <a href="#aff2a897d26359dc727a452653efc3ae7">更多...</a><br/></td></tr>
 <tr class="separator:aff2a897d26359dc727a452653efc3ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9925b50afcb817e770eef0b0ee15e5eb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">TcpCallBack</a> = std::function&lt; void(const <a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a> &amp;)&gt;</td></tr>
+<tr class="memdesc:a9925b50afcb817e770eef0b0ee15e5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP回调函数类型定义  <a href="#a9925b50afcb817e770eef0b0ee15e5eb">更多...</a><br/></td></tr>
 <tr class="separator:a9925b50afcb817e770eef0b0ee15e5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aa343478bfd199cef425bbb1321237e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a7aa343478bfd199cef425bbb1321237e">RetMsgCallBack</a> = std::function&lt; std::string(const <a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a> &amp;, const std::string &amp;)&gt;</td></tr>
+<tr class="memdesc:a7aa343478bfd199cef425bbb1321237e"><td class="mdescLeft">&#160;</td><td class="mdescRight">带返回值的消息回调函数类型定义  <a href="#a7aa343478bfd199cef425bbb1321237e">更多...</a><br/></td></tr>
 <tr class="separator:a7aa343478bfd199cef425bbb1321237e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc7c19669ce2cf96502ca389d4d9c00a"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr<br class="typebreak"/>
 &lt; TCPServer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#afc7c19669ce2cf96502ca389d4d9c00a">TcpServerPtr</a></td></tr>
+<tr class="memdesc:afc7c19669ce2cf96502ca389d4d9c00a"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP连接指针  <a href="#afc7c19669ce2cf96502ca389d4d9c00a">更多...</a><br/></td></tr>
 <tr class="separator:afc7c19669ce2cf96502ca389d4d9c00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ea5af3f590ac7621cb8ec61e2bfed56"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const <br class="typebreak"/>
 <a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a> &amp;, const <a class="el" href="classhandy_1_1Slice.html">Slice</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a3ea5af3f590ac7621cb8ec61e2bfed56">MsgCallBack</a></td></tr>
+<tr class="memdesc:a3ea5af3f590ac7621cb8ec61e2bfed56"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP连接相关回调（如连接建立/关闭）  <a href="#a3ea5af3f590ac7621cb8ec61e2bfed56">更多...</a><br/></td></tr>
 <tr class="separator:a3ea5af3f590ac7621cb8ec61e2bfed56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37e7f77e1c4abd461c35064060c05669"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> = std::function&lt; void()&gt;</td></tr>
+<tr class="memdesc:a37e7f77e1c4abd461c35064060c05669"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息处理回调（接受连接与消息切片）  <a href="#a37e7f77e1c4abd461c35064060c05669">更多...</a><br/></td></tr>
 <tr class="separator:a37e7f77e1c4abd461c35064060c05669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0934ac351162af463dce604c988ba31"><td class="memItemLeft" align="right" valign="top">typedef std::unique_ptr<br class="typebreak"/>
 &lt; <a class="el" href="structhandy_1_1IdleIdImp.html">IdleIdImp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#af0934ac351162af463dce604c988ba31">IdleId</a></td></tr>
+<tr class="memdesc:af0934ac351162af463dce604c988ba31"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件循环基类结构体  <a href="#af0934ac351162af463dce604c988ba31">更多...</a><br/></td></tr>
 <tr class="separator:af0934ac351162af463dce604c988ba31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab64dd4e4ad3aae1d30264406886bbc84"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; int64_t, <br class="typebreak"/>
 int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a></td></tr>
+<tr class="memdesc:ab64dd4e4ad3aae1d30264406886bbc84"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲资源ID的智能指针类型  <a href="#ab64dd4e4ad3aae1d30264406886bbc84">更多...</a><br/></td></tr>
 <tr class="separator:ab64dd4e4ad3aae1d30264406886bbc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eaa6d869a276fe1b96586303526c272"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a5eaa6d869a276fe1b96586303526c272">StatCallBack</a> = std::function&lt; void(const <a class="el" href="classhandy_1_1HttpRequest.html">HttpRequest</a> &amp;, <a class="el" href="classhandy_1_1HttpResponse.html">HttpResponse</a> &amp;)&gt;</td></tr>
 <tr class="memdesc:a5eaa6d869a276fe1b96586303526c272"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP请求处理回调函数  <a href="#a5eaa6d869a276fe1b96586303526c272">更多...</a><br/></td></tr>
@@ -304,10 +314,13 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:ae667e0f22334bb46bce43e64c2983ed4"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#ae667e0f22334bb46bce43e64c2983ed4">kMaxEvents</a> = 2048</td></tr>
 <tr class="separator:ae667e0f22334bb46bce43e64c2983ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d928bf129769dcad1668174c6ff7555"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a1d928bf129769dcad1668174c6ff7555">kReadEvent</a> = POLLIN</td></tr>
+<tr class="memdesc:a1d928bf129769dcad1668174c6ff7555"><td class="mdescLeft">&#160;</td><td class="mdescRight">单次轮询最大处理事件数（限制单次处理的事件数）(静态常量，避免宏定义）)  <a href="#a1d928bf129769dcad1668174c6ff7555">更多...</a><br/></td></tr>
 <tr class="separator:a1d928bf129769dcad1668174c6ff7555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc6aab135e078dd870e5d953f13c5506"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#acc6aab135e078dd870e5d953f13c5506">kWriteEvent</a> = POLLOUT</td></tr>
+<tr class="memdesc:acc6aab135e078dd870e5d953f13c5506"><td class="mdescLeft">&#160;</td><td class="mdescRight">读事件标识（映射POLLIN）  <a href="#acc6aab135e078dd870e5d953f13c5506">更多...</a><br/></td></tr>
 <tr class="separator:acc6aab135e078dd870e5d953f13c5506"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3d2de94c1471194c3d744c87a5b0f54"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#ad3d2de94c1471194c3d744c87a5b0f54">kUdpPacketSize</a> = 4096</td></tr>
+<tr class="memdesc:ad3d2de94c1471194c3d744c87a5b0f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP数据包的最大大小为4096字节（4KB）  <a href="#ad3d2de94c1471194c3d744c87a5b0f54">更多...</a><br/></td></tr>
 <tr class="separator:ad3d2de94c1471194c3d744c87a5b0f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e1a7b3bd1c48ec484cdb1821b851412"><td class="memItemLeft" align="right" valign="top">static pthread_key_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a5e1a7b3bd1c48ec484cdb1821b851412">g_tmKey</a></td></tr>
 <tr class="separator:a5e1a7b3bd1c48ec484cdb1821b851412"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -324,6 +337,8 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>事件循环基类结构体 </p>
 
 </div>
 </div>
@@ -367,6 +382,8 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
       </table>
 </div><div class="memdoc">
 
+<p>TCP连接相关回调（如连接建立/关闭） </p>
+
 </div>
 </div>
 <a class="anchor" id="a7aa343478bfd199cef425bbb1321237e"></a>
@@ -378,6 +395,8 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>带返回值的消息回调函数类型定义 </p>
 
 </div>
 </div>
@@ -411,6 +430,8 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>消息处理回调（接受连接与消息切片） </p>
 <p>任务类型定义(函数对象) 线程池执行的任务需符合此类型,可封装普通函数/lambda表达式/函数指针或具有operator()的类对象 </p>
 
 </div>
@@ -425,6 +446,9 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
       </table>
 </div><div class="memdoc">
 
+<p>TCP回调函数类型定义 </p>
+<p>TCP服务器指针（管理服务器生命周期） </p>
+
 </div>
 </div>
 <a class="anchor" id="aff2a897d26359dc727a452653efc3ae7"></a>
@@ -436,6 +460,8 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>TCP连接的智能指针类型 </p>
 
 </div>
 </div>
@@ -449,6 +475,8 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
       </table>
 </div><div class="memdoc">
 
+<p>TCP连接指针 </p>
+
 </div>
 </div>
 <a class="anchor" id="ab64dd4e4ad3aae1d30264406886bbc84"></a>
@@ -460,6 +488,8 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>空闲资源ID的智能指针类型 </p>
 
 </div>
 </div>
@@ -478,9 +508,10 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 
 <p>轮询器工厂函数 </p>
+<p>轮询器工厂函数</p>
 <dl class="section return"><dt>返回</dt><dd>根据操作系统类型创建对应的Poller实例（Linux-&gt;epoll, macOS-&gt;kqueue） </dd>
 <dd>
-<a class="el" href="classhandy_1_1PollerBase.html" title="事件轮询器基类（抽象类） ">PollerBase</a> 派生类对象指针（需调用者手动释放，建议使用智能指针） </dd></dl>
+<a class="el" href="classhandy_1_1PollerBase.html" title="写事件标识（映射POLLOUT） ">PollerBase</a> 派生类对象指针（需调用者手动释放，建议使用智能指针） </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::runtime_error</td><td>若当前操作系统不支持（非Linux/macOS）则抛出异常 </td></tr>
@@ -1075,6 +1106,8 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
+<p>单次轮询最大处理事件数（限制单次处理的事件数）(静态常量，避免宏定义）) </p>
+
 </div>
 </div>
 <a class="anchor" id="ad3d2de94c1471194c3d744c87a5b0f54"></a>
@@ -1086,6 +1119,8 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>UDP数据包的最大大小为4096字节（4KB） </p>
 
 </div>
 </div>
@@ -1106,6 +1141,8 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>读事件标识（映射POLLIN） </p>
 
 </div>
 </div>

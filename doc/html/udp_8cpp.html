@@ -90,6 +90,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="title">udp.cpp 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>UDP服务器、客户端连接及HSHAU（Half-Sync/Half-Async UDP）模式的实现  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="udp_8h_source.html">udp.h</a>&quot;</code><br/>
 <code>#include &quot;fcntl.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br/>
@@ -99,7 +102,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memitem:namespacehandy"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html">handy</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>UDP服务器、客户端连接及HSHAU（Half-Sync/Half-Async UDP）模式的实现 </p>
+<p>该文件包含三个核心组件的实现：</p>
+<ol type="1">
+<li>UdpServer：UDP服务器类，支持绑定地址、接收数据和发送数据；<ul>
+<li>基于事件驱动模型，通过Channel监听读事件；</li>
+<li>支持地址复用和端口复用，非阻塞模式运行；</li>
+<li>接收数据时通过回调函数通知上层处理。</li>
+</ul>
+</li>
+<li>UdpConn：UDP客户端连接类，支持与目标服务器建立连接、发送和接收数据；<ul>
+<li>自动处理非阻塞连接逻辑，通过Channel监听读事件；</li>
+<li>提供简洁的发送接口，支持多种数据类型（char*、Buffer、std::string）。</li>
+</ul>
+</li>
+<li>HSHAU：Half-Sync/Half-Async UDP模式实现，结合线程池处理耗时任务；<ul>
+<li>同步层：事件循环线程负责接收和发送数据；</li>
+<li>异步层：线程池处理耗时的业务逻辑，避免阻塞事件循环；</li>
+<li>通过回调函数将业务处理结果返回给事件循环线程发送。 <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ul>
+</li>
+</ol>
+<ol type="1">
+<li>事件驱动：依赖EventBase和Channel实现事件监听和分发；</li>
+<li>非阻塞IO：所有套接字均设置为非阻塞模式，避免IO操作阻塞线程；</li>
+<li>线程安全：HSHAU模式下，业务逻辑在线程池执行，需确保回调函数线程安全；</li>
+<li>错误处理：完善的错误日志记录，包括套接字创建、绑定、发送、接收等失败场景；</li>
+<li>资源管理：自动管理套接字和Channel资源，避免内存泄漏。 </li>
+</ol>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div><!--header-->
 <div class="contents">
 
+<p>不可拷贝基类定义头文件  
+<a href="#details">更多...</a></p>
+
 <p><a href="non__copy__able_8h_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -105,7 +108,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memitem:namespacehandy"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html">handy</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>不可拷贝基类定义头文件 </p>
+<p>该文件定义了NonCopyAble类，作为其他类的基类，用于禁止派生类对象的拷贝构造和拷贝赋值操作。 核心实现逻辑：</p>
+<ol type="1">
+<li>将拷贝构造函数和拷贝赋值运算符声明为delete，编译时直接禁止调用；</li>
+<li>构造函数和析构函数声明为protected，确保该类只能被继承，不能直接实例化；</li>
+<li>允许移动构造和移动赋值操作（默认实现），支持资源的高效转移，适用于需要所有权传递的场景； <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ol>
+<ol type="1">
+<li>适用场景：单例模式、文件句柄管理、网络连接等需要确保资源独占性的场景，避免因拷贝导致的资源泄漏或逻辑错误；</li>
+<li>使用方式：派生类只需继承NonCopyAble即可，无需额外代码，自动获得不可拷贝的特性；</li>
+<li>移动操作支持：若派生类需要自定义移动行为，可重写移动构造函数和移动赋值运算符，覆盖默认实现；</li>
+<li>兼容性：该类的设计兼容C++11及以上标准，依赖于delete关键字和默认函数特性。 </li>
+</ol>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

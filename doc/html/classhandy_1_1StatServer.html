@@ -114,6 +114,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 类</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1StatServer_1_1CallBackInfo.html">CallBackInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储回调函数及描述的结构体  <a href="structhandy_1_1StatServer_1_1CallBackInfo.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -122,6 +123,7 @@ Public 类型</h2></td></tr>
 <a class="el" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050a22311203d44b308bd2d607cdc2dcb72c">StatType::PAGE</a>, 
 <a class="el" href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050aa28966bac17b8eef99c5afa5eb594130">StatType::CMD</a>
  }</td></tr>
+<tr class="memdesc:a7dbc507d0f4a9543038d3c0515135050"><td class="mdescLeft">&#160;</td><td class="mdescRight">请求类型枚举，区分不同的处理逻辑  <a href="classhandy_1_1StatServer.html#a7dbc507d0f4a9543038d3c0515135050">更多...</a><br/></td></tr>
 <tr class="separator:a7dbc507d0f4a9543038d3c0515135050"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -166,12 +168,15 @@ Private 属性</h2></td></tr>
 <tr class="separator:ab0877c0d5ac3af751726b86e1ad36916"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58d75bdcbffe13a56ed9fa81dda026ca"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <br class="typebreak"/>
 <a class="el" href="structhandy_1_1StatServer_1_1CallBackInfo.html">CallBackInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a58d75bdcbffe13a56ed9fa81dda026ca">m_pageCallBacks</a></td></tr>
+<tr class="memdesc:a58d75bdcbffe13a56ed9fa81dda026ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态回调函数映射表  <a href="#a58d75bdcbffe13a56ed9fa81dda026ca">更多...</a><br/></td></tr>
 <tr class="separator:a58d75bdcbffe13a56ed9fa81dda026ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47f55b0fb90edb385628529b04925b8f"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <br class="typebreak"/>
 <a class="el" href="structhandy_1_1StatServer_1_1CallBackInfo.html">CallBackInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#a47f55b0fb90edb385628529b04925b8f">m_cmdCallBacks</a></td></tr>
+<tr class="memdesc:a47f55b0fb90edb385628529b04925b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">页面回调函数映射表  <a href="#a47f55b0fb90edb385628529b04925b8f">更多...</a><br/></td></tr>
 <tr class="separator:a47f55b0fb90edb385628529b04925b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4df7a5face15f478ecece107ff9cab9"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <br class="typebreak"/>
 <a class="el" href="namespacehandy.html#a5eaa6d869a276fe1b96586303526c272">StatCallBack</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1StatServer.html#ad4df7a5face15f478ecece107ff9cab9">m_allCallBacks</a></td></tr>
+<tr class="memdesc:ad4df7a5face15f478ecece107ff9cab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">命令回调函数映射表  <a href="#ad4df7a5face15f478ecece107ff9cab9">更多...</a><br/></td></tr>
 <tr class="separator:ad4df7a5face15f478ecece107ff9cab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -211,12 +216,17 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>请求类型枚举，区分不同的处理逻辑 </p>
 <table class="fieldtable">
 <tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a7dbc507d0f4a9543038d3c0515135050a2b848a8cc886d253d21a77c43cd50aae"></a>STATE</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a7dbc507d0f4a9543038d3c0515135050a22311203d44b308bd2d607cdc2dcb72c"></a>PAGE</em>&nbsp;</td><td class="fielddoc">
+<p>状态信息（如计数器、状态值） </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a7dbc507d0f4a9543038d3c0515135050aa28966bac17b8eef99c5afa5eb594130"></a>CMD</em>&nbsp;</td><td class="fielddoc">
+<p>页面信息（如HTML、JSON） </p>
+<p>命令信息（如设置参数、执行命令） </p>
 </td></tr>
 </table>
 
@@ -709,6 +719,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>命令回调函数映射表 </p>
+
 </div>
 </div>
 <a class="anchor" id="a47f55b0fb90edb385628529b04925b8f"></a>
@@ -729,6 +741,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>页面回调函数映射表 </p>
+
 </div>
 </div>
 <a class="anchor" id="a58d75bdcbffe13a56ed9fa81dda026ca"></a>
@@ -748,6 +762,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>状态回调函数映射表 </p>
 
 </div>
 </div>

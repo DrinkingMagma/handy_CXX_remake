@@ -172,25 +172,34 @@ Private 属性</h2></td></tr>
 <tr class="memitem:af253877d64f386d48600d5e57ae4497e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#af253877d64f386d48600d5e57ae4497e">m_base</a></td></tr>
 <tr class="separator:af253877d64f386d48600d5e57ae4497e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5699ca61f2fe5af1be3c5d9fd126df13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1PollerBase.html">PollerBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a5699ca61f2fe5af1be3c5d9fd126df13">m_poller</a></td></tr>
+<tr class="memdesc:a5699ca61f2fe5af1be3c5d9fd126df13"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联的事件派发器（非空）  <a href="#a5699ca61f2fe5af1be3c5d9fd126df13">更多...</a><br/></td></tr>
 <tr class="separator:a5699ca61f2fe5af1be3c5d9fd126df13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a254a60999a8fc81e346c46c77f927359"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a254a60999a8fc81e346c46c77f927359">m_fd</a></td></tr>
+<tr class="memdesc:a254a60999a8fc81e346c46c77f927359"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联的轮询器（从EventBase中获取）  <a href="#a254a60999a8fc81e346c46c77f927359">更多...</a><br/></td></tr>
 <tr class="separator:a254a60999a8fc81e346c46c77f927359"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a44ee19d92be6ebdc4f3a21ba860d2b"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a4a44ee19d92be6ebdc4f3a21ba860d2b">m_events</a></td></tr>
+<tr class="memdesc:a4a44ee19d92be6ebdc4f3a21ba860d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联的文件描述符（非负，-1标识已关闭）  <a href="#a4a44ee19d92be6ebdc4f3a21ba860d2b">更多...</a><br/></td></tr>
 <tr class="separator:a4a44ee19d92be6ebdc4f3a21ba860d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf696c38061cbcc58c3cc8c752863adb"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#abf696c38061cbcc58c3cc8c752863adb">m_id</a></td></tr>
+<tr class="memdesc:abf696c38061cbcc58c3cc8c752863adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前关注的事件掩码（EPOLLIN/EPOLLOUT等）  <a href="#abf696c38061cbcc58c3cc8c752863adb">更多...</a><br/></td></tr>
 <tr class="separator:abf696c38061cbcc58c3cc8c752863adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96129da6426099aaa011aa4bb2e1d6f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a96129da6426099aaa011aa4bb2e1d6f1">m_readCB</a></td></tr>
+<tr class="memdesc:a96129da6426099aaa011aa4bb2e1d6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">通道唯一ID（全局原子生成）  <a href="#a96129da6426099aaa011aa4bb2e1d6f1">更多...</a><br/></td></tr>
 <tr class="separator:a96129da6426099aaa011aa4bb2e1d6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a477591d3c918fb3dfcf17892c5f0d039"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a477591d3c918fb3dfcf17892c5f0d039">m_writeCB</a></td></tr>
+<tr class="memdesc:a477591d3c918fb3dfcf17892c5f0d039"><td class="mdescLeft">&#160;</td><td class="mdescRight">读事件回调  <a href="#a477591d3c918fb3dfcf17892c5f0d039">更多...</a><br/></td></tr>
 <tr class="separator:a477591d3c918fb3dfcf17892c5f0d039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00f893a50038051c53adffd7933eeaf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a00f893a50038051c53adffd7933eeaf9">m_errorcb</a></td></tr>
+<tr class="memdesc:a00f893a50038051c53adffd7933eeaf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">写事件回调  <a href="#a00f893a50038051c53adffd7933eeaf9">更多...</a><br/></td></tr>
 <tr class="separator:a00f893a50038051c53adffd7933eeaf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 友元</h2></td></tr>
 <tr class="memitem:a6e3a3c3a69685f3f8a9a90818305f482"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a6e3a3c3a69685f3f8a9a90818305f482">PollerEpoll</a></td></tr>
+<tr class="memdesc:a6e3a3c3a69685f3f8a9a90818305f482"><td class="mdescLeft">&#160;</td><td class="mdescRight">错误事件回调  <a href="#a6e3a3c3a69685f3f8a9a90818305f482">更多...</a><br/></td></tr>
 <tr class="separator:a6e3a3c3a69685f3f8a9a90818305f482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3756f283df2856ee813045d960b8f907"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Channel.html#a3756f283df2856ee813045d960b8f907">PollerKqueue</a></td></tr>
+<tr class="memdesc:a3756f283df2856ee813045d960b8f907"><td class="mdescLeft">&#160;</td><td class="mdescRight">允许 PollerKqueue 访问 <a class="el" href="classhandy_1_1Channel.html" title="I/O事件通道类（封装文件描述符与事件处理逻辑） ">Channel</a> 的私有成员  <a href="#a3756f283df2856ee813045d960b8f907">更多...</a><br/></td></tr>
 <tr class="separator:a3756f283df2856ee813045d960b8f907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -727,6 +736,10 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>错误事件回调 </p>
+<p>允许 PollerEpoll 访问 <a class="el" href="classhandy_1_1Channel.html" title="I/O事件通道类（封装文件描述符与事件处理逻辑） ">Channel</a> 的私有成员</p>
+<p>PollerEpoll 是基于 epoll 的 I/O 多路复用实现，需要直接操作 <a class="el" href="classhandy_1_1Channel.html" title="I/O事件通道类（封装文件描述符与事件处理逻辑） ">Channel</a> 的文件描述符、事件类型等私有数据， 以完成事件的注册、修改和删除。 </p>
+
 </div>
 </div>
 <a class="anchor" id="a3756f283df2856ee813045d960b8f907"></a>
@@ -746,6 +759,9 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>允许 PollerKqueue 访问 <a class="el" href="classhandy_1_1Channel.html" title="I/O事件通道类（封装文件描述符与事件处理逻辑） ">Channel</a> 的私有成员 </p>
+<p>PollerKqueue 是基于 kqueue 的 I/O 多路复用实现，需要直接操作 <a class="el" href="classhandy_1_1Channel.html" title="I/O事件通道类（封装文件描述符与事件处理逻辑） ">Channel</a> 的文件描述符、事件类型等私有数据， 以完成事件的注册、修改和删除。 </p>
 
 </div>
 </div>
@@ -788,6 +804,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>写事件回调 </p>
+
 </div>
 </div>
 <a class="anchor" id="a4a44ee19d92be6ebdc4f3a21ba860d2b"></a>
@@ -807,6 +825,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>关联的文件描述符（非负，-1标识已关闭） </p>
 
 </div>
 </div>
@@ -828,6 +848,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>关联的轮询器（从EventBase中获取） </p>
+
 </div>
 </div>
 <a class="anchor" id="abf696c38061cbcc58c3cc8c752863adb"></a>
@@ -847,6 +869,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>当前关注的事件掩码（EPOLLIN/EPOLLOUT等） </p>
 
 </div>
 </div>
@@ -868,6 +892,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>关联的事件派发器（非空） </p>
+
 </div>
 </div>
 <a class="anchor" id="a96129da6426099aaa011aa4bb2e1d6f1"></a>
@@ -888,6 +914,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>通道唯一ID（全局原子生成） </p>
+
 </div>
 </div>
 <a class="anchor" id="a477591d3c918fb3dfcf17892c5f0d039"></a>
@@ -907,6 +935,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>读事件回调 </p>
 
 </div>
 </div>

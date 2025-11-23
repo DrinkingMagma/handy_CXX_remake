@@ -1,7 +1,26 @@
+/**
+ * @file poller.cpp
+ * @brief 跨平台I/O事件轮询器实现文件，封装epoll(kqueue)系统调用，为事件驱动框架提供核心事件管理能力
+ * @details 
+ *  该文件实现了基于epoll(Linux)和kqueue(macOS)的事件轮询器，核心功能包括：
+ *  1. 事件注册与管理：支持Channel的添加(addChannel)、移除(removeChannel)和事件更新(updateChannel)，维护活跃Channel集合；
+ *  2. 事件轮询：通过loopOnce方法执行一次事件等待，返回触发的活跃事件数量，支持超时配置（-1表示无限等待）；
+ *  3. 事件分发：将轮询到的I/O事件（读/写）分发给对应的Channel，调用其handleRead/handleWrite方法处理；
+ *  4. 线程安全：通过互斥锁保护活跃Channel集合的访问，确保多线程环境下事件操作的安全性；
+ *  5. 跨平台兼容：通过条件编译适配Linux(epoll)和macOS(kqueue)，提供统一的PollerBase接口；
+ * @note 
+ *  1. 资源管理：析构函数会自动关闭epoll/kqueue实例，并遍历关闭所有活跃Channel，避免资源泄漏；
+ *  2. 错误处理：事件操作（如epoll_ctl、kevent）失败时会抛出std::runtime_error异常，包含详细错误信息（errno和错误描述）；
+ *  3. 事件类型：支持读事件（包含POLLERR错误事件）和写事件，未预期的事件类型会触发FATAL日志并抛出异常；
+ *  4. 性能优化：epoll使用EPOLL_CLOEXEC标志确保exec后自动关闭实例，kqueue通过timespec设置精确超时；
+ *  5. 工厂函数：createPoller()根据当前操作系统自动创建对应的Poller实例，简化上层使用；
+ *  6. 平台限制：目前仅支持Linux和macOS，其他平台会触发编译错误。
+ */
+
 #include "poller.h"
 #include "event_base.h"
 #include "logger.h"
-#include "current_os.h"
+#include "platform.h"
 #include <set>
 
 #ifdef OS_LINUX
@@ -537,7 +556,9 @@ namespace handy
 
     #endif
 
-    // 轮询器工厂函数
+    /**
+     * 轮询器工厂函数
+    */
     PollerBase* createPoller()
     {
         #ifdef OS_LINUX

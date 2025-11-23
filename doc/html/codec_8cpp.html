@@ -90,6 +90,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="title">codec.cpp 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>编解码器实现文件（LineCodec 与 LengthCodec）  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="codec_8h_source.html">codec.h</a>&quot;</code><br/>
 <code>#include &lt;iostream&gt;</code><br/>
 </div><table class="memberdecls">
@@ -98,7 +101,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memitem:namespacehandy"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html">handy</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>编解码器实现文件（LineCodec 与 LengthCodec） </p>
+<ol type="1">
+<li>实现 CodecBase 基类定义的纯虚函数，提供具体的编解码逻辑</li>
+<li>LineCodec支持\r与\r\n两种换行分隔符，自动识别并处理</li>
+<li>LengthCodec 采用 4 字节魔法字 + 4 字节长度前缀的协议格式，确保消息完整性与合法性</li>
+<li>所有编解码操作均通过互斥锁保证线程安全，支持多线程并发调用 <dl class="section note"><dt>注解</dt><dd>依赖 codec.h、net.h、slice.h、buffer.h 等头文件 编译时需链接 pthread 库（支持互斥锁） 消息编码时会进行合法性校验，非法输入会抛出异常 </dd></dl>
+</li>
+</ol>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

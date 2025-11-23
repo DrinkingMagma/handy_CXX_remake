@@ -213,16 +213,22 @@ Private 成员函数</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private 属性</h2></td></tr>
 <tr class="memitem:a5895d67a50e408218d64c4e07c9f0e4a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a5895d67a50e408218d64c4e07c9f0e4a">m_buf</a></td></tr>
+<tr class="memdesc:a5895d67a50e408218d64c4e07c9f0e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">动态分配的内存缓冲区  <a href="#a5895d67a50e408218d64c4e07c9f0e4a">更多...</a><br/></td></tr>
 <tr class="separator:a5895d67a50e408218d64c4e07c9f0e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac35d13a6e5a82f8209924eb9706807ca"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#ac35d13a6e5a82f8209924eb9706807ca">m_b</a></td></tr>
+<tr class="memdesc:ac35d13a6e5a82f8209924eb9706807ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据起始偏移量（头部已消耗的部分）  <a href="#ac35d13a6e5a82f8209924eb9706807ca">更多...</a><br/></td></tr>
 <tr class="separator:ac35d13a6e5a82f8209924eb9706807ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae09cee613bb33a7b994dcc7a22c19738"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#ae09cee613bb33a7b994dcc7a22c19738">m_e</a></td></tr>
+<tr class="memdesc:ae09cee613bb33a7b994dcc7a22c19738"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据结束偏移量（尾部未使用的部分）  <a href="#ae09cee613bb33a7b994dcc7a22c19738">更多...</a><br/></td></tr>
 <tr class="separator:ae09cee613bb33a7b994dcc7a22c19738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af673a3efbf0daf0675eca56d273043e9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#af673a3efbf0daf0675eca56d273043e9">m_cap</a></td></tr>
+<tr class="memdesc:af673a3efbf0daf0675eca56d273043e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">缓冲区总容量（字节数）  <a href="#af673a3efbf0daf0675eca56d273043e9">更多...</a><br/></td></tr>
 <tr class="separator:af673a3efbf0daf0675eca56d273043e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5f2da018a115402402c60cb199c7e4e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#aa5f2da018a115402402c60cb199c7e4e">m_exp</a></td></tr>
+<tr class="memdesc:aa5f2da018a115402402c60cb199c7e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">期望增长大小（字节数），用于减少内存分配次数  <a href="#aa5f2da018a115402402c60cb199c7e4e">更多...</a><br/></td></tr>
 <tr class="separator:aa5f2da018a115402402c60cb199c7e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bf9b29fc2265d0213673b2e14c100f7"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; std::mutex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a9bf9b29fc2265d0213673b2e14c100f7">m_mutex</a></td></tr>
+<tr class="memdesc:a9bf9b29fc2265d0213673b2e14c100f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">互斥锁，保证多线程访问的线程安全  <a href="#a9bf9b29fc2265d0213673b2e14c100f7">更多...</a><br/></td></tr>
 <tr class="separator:a9bf9b29fc2265d0213673b2e14c100f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -1106,6 +1112,8 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>数据起始偏移量（头部已消耗的部分） </p>
+
 </div>
 </div>
 <a class="anchor" id="a5895d67a50e408218d64c4e07c9f0e4a"></a>
@@ -1125,6 +1133,8 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>动态分配的内存缓冲区 </p>
 
 </div>
 </div>
@@ -1146,6 +1156,8 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>缓冲区总容量（字节数） </p>
+
 </div>
 </div>
 <a class="anchor" id="ae09cee613bb33a7b994dcc7a22c19738"></a>
@@ -1165,6 +1177,8 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>数据结束偏移量（尾部未使用的部分） </p>
 
 </div>
 </div>
@@ -1186,6 +1200,8 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>期望增长大小（字节数），用于减少内存分配次数 </p>
+
 </div>
 </div>
 <a class="anchor" id="a9bf9b29fc2265d0213673b2e14c100f7"></a>
@@ -1205,6 +1221,8 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>互斥锁，保证多线程访问的线程安全 </p>
 
 </div>
 </div>

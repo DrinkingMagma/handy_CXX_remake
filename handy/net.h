@@ -1,3 +1,32 @@
+/**
+ * @file net.h
+ * @brief 网络编程核心工具类定义头文件，包含套接字操作、IPv4地址处理和线程安全缓冲区
+ * @details 
+ *  该文件定义了网络编程中常用的核心工具类，为网络应用开发提供基础支持，主要包括三大模块：
+ *  1. Net类：网络工具类，提供静态方法封装网络字节序转换和套接字选项设置，支持：
+ *     - 主机字节序与网络字节序的安全转换（支持16/32/64位整数，编译时检查类型合法性）；
+ *     - 套接字非阻塞模式设置（setNonBlock）；
+ *     - 地址重用（SO_REUSEADDR）和端口重用（SO_REUSEPORT）选项设置；
+ *     - TCP无延迟（TCP_NODELAY）选项设置（禁用Nagle算法）；
+ *  2. Ipv4Addr类：IPv4地址封装类，提供IP地址的解析、格式化和合法性校验，支持：
+ *     - 通过主机名（域名或IP字符串）+端口、仅端口（默认监听所有接口）、sockaddr_in结构体初始化；
+ *     - 获取IP地址字符串、端口号、主机字节序IP整数表示；
+ *     - IP地址有效性检查（isIpValid）；
+ *     - 主机名到IP地址的解析（hostToIp静态方法）；
+ *  3. Buffer类：线程安全的动态缓冲区，支持高效的数据存储和操作，核心特性：
+ *     - 动态扩容：根据数据量自动调整缓冲区大小，支持指定期望增长步长（减少内存分配次数）；
+ *     - 丰富的操作接口：append（追加数据）、consume（消费数据）、absorb（合并其他缓冲区）、clear（清空）等；
+ *     - 线程安全：所有公共接口通过互斥锁保护，支持多线程并发读写；
+ *     - 支持移动语义：通过移动构造和移动赋值，避免不必要的内存拷贝，提升性能；
+ *     - 兼容Slice：可隐式转换为Slice对象，便于高效数据传递；
+ * @note 
+ *  1. Net类为纯工具类，禁止实例化，所有方法均为静态；
+ *  2. Ipv4Addr类禁止默认构造，确保地址初始化的有效性；拷贝和移动操作默认支持，保证值语义；
+ *  3. Buffer类的移动操作会转移资源所有权，调用方需确保移动后的对象不再被其他线程访问；
+ *  4. 套接字选项设置方法（如setReusePort）可能因平台差异存在兼容性问题，不支持的平台会返回错误码；
+ *  5. 所有类的接口设计均考虑了安全性和易用性，避免直接暴露底层实现细节，降低网络编程复杂度。
+ */
+
 #pragma once
 #include "port_posix.h"
 #include "slice.h"
@@ -112,7 +141,7 @@ namespace handy
     class Ipv4Addr
     {
         private:
-            // 内部存储的socketaddr_in结构体(网络字节序)
+            /// 内部存储的socketaddr_in结构体(网络字节序)
             struct sockaddr_in m_addr;
 
             /**
@@ -154,13 +183,13 @@ namespace handy
             */
             Ipv4Addr() = delete;
 
-            // 拷贝构造函数
+            /// 拷贝构造函数
             Ipv4Addr(const Ipv4Addr&) = default;
-            // 拷贝赋值运算符
+            /// 拷贝赋值运算符
             Ipv4Addr& operator=(const Ipv4Addr&) = default;
-            // 移动构造函数
+            /// 移动构造函数
             Ipv4Addr(Ipv4Addr&&) noexcept = default;
-            // 移动赋值运算符
+            /// 移动赋值运算符
             Ipv4Addr& operator=(Ipv4Addr&&) noexcept = default;
 
             /**
@@ -219,17 +248,17 @@ namespace handy
     class Buffer
     {
         private:
-            // 动态分配的内存缓冲区
+            /// 动态分配的内存缓冲区
             char* m_buf;
-            // 数据起始偏移量（头部已消耗的部分）
+            /// 数据起始偏移量（头部已消耗的部分）
             size_t m_b;
-            // 数据结束偏移量（尾部未使用的部分）
+            /// 数据结束偏移量（尾部未使用的部分）
             size_t m_e;
-            // 缓冲区总容量（字节数）
+            /// 缓冲区总容量（字节数）
             size_t m_cap;
-            // 期望增长大小（字节数），用于减少内存分配次数
+            /// 期望增长大小（字节数），用于减少内存分配次数
             size_t m_exp;
-            // 互斥锁，保证多线程访问的线程安全
+            /// 互斥锁，保证多线程访问的线程安全
             std::unique_ptr<std::mutex> m_mutex;
 
             /**

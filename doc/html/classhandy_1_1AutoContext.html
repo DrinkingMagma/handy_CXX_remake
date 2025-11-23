@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div><!--header-->
 <div class="contents">
 
-<p>自动上下文管理器（线程安全）  
+<p>定时任务ID类型&lt; 超时时间戳，序列号（自增整数）&gt;=""&gt;  
  <a href="classhandy_1_1AutoContext.html#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="handy-imp_8h_source.html">handy-imp.h</a>&gt;</code></p>
@@ -131,8 +131,10 @@ Public 成员函数</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private 属性</h2></td></tr>
 <tr class="memitem:a1803f08fa56cd65918e0632e6c80b716"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; void * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1AutoContext.html#a1803f08fa56cd65918e0632e6c80b716">m_ctx</a> {nullptr}</td></tr>
+<tr class="memdesc:a1803f08fa56cd65918e0632e6c80b716"><td class="mdescLeft">&#160;</td><td class="mdescRight">上下文对象指针（原子操作确保多线程可见性）  <a href="#a1803f08fa56cd65918e0632e6c80b716">更多...</a><br/></td></tr>
 <tr class="separator:a1803f08fa56cd65918e0632e6c80b716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a221bb26e8cb877acd6fce9448363c610"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1AutoContext.html#a221bb26e8cb877acd6fce9448363c610">m_ctxMutex</a></td></tr>
+<tr class="memdesc:a221bb26e8cb877acd6fce9448363c610"><td class="mdescLeft">&#160;</td><td class="mdescRight">互斥锁  <a href="#a221bb26e8cb877acd6fce9448363c610">更多...</a><br/></td></tr>
 <tr class="separator:a221bb26e8cb877acd6fce9448363c610"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6a733050e7e4245117218730d869d26"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1AutoContext.html#ab6a733050e7e4245117218730d869d26">m_ctxDel</a> {nullptr}</td></tr>
 <tr class="separator:ab6a733050e7e4245117218730d869d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,7 +156,8 @@ Private 属性</h2></td></tr>
 <tr class="separator:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>自动上下文管理器（线程安全） </p>
+<div class="textblock"><p>定时任务ID类型&lt; 超时时间戳，序列号（自增整数）&gt;=""&gt; </p>
+<p>自动上下文管理器（线程安全）</p>
 <ol type="1">
 <li>提供模板化的上下文创建、获取、与自动清理能力，支持任意类型的上下文存储<ol type="a">
 <li>基于原子操作与互斥锁保证线程安全，避免数据竞争与内存泄漏</li>
@@ -348,6 +351,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>上下文对象指针（原子操作确保多线程可见性） </p>
+
 </div>
 </div>
 <a class="anchor" id="ab6a733050e7e4245117218730d869d26"></a>
@@ -367,6 +372,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>上下文清理函数指针 存储销毁上下文对象的任务，避免析构时类型信息丢失 </p>
 
 </div>
 </div>
@@ -387,6 +393,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>互斥锁 </p>
 
 </div>
 </div>

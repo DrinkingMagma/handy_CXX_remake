@@ -93,7 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div><!--header-->
 <div class="contents">
 
-<p>TCP连接库的主要头文件，包含TcpConn，TcpServer和HSHA类的声明  
+<p>TCP连接管理核心类定义，包括TcpConn（连接对象）、TcpServer（TCP服务器）、HSHA（半同步半异步服务器）  
 <a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="event__base_8h_source.html">event_base.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="codec_8h_source.html">codec.h</a>&quot;</code><br/>
@@ -124,14 +124,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 类型定义</h2></td></tr>
 <tr class="memitem:aff2a897d26359dc727a452653efc3ae7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">handy::TcpConnPtr</a> = std::shared_ptr&lt; TcpConn &gt;</td></tr>
+<tr class="memdesc:aff2a897d26359dc727a452653efc3ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP连接的智能指针类型  <a href="#aff2a897d26359dc727a452653efc3ae7">更多...</a><br/></td></tr>
 <tr class="separator:aff2a897d26359dc727a452653efc3ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9925b50afcb817e770eef0b0ee15e5eb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">handy::TcpCallBack</a> = std::function&lt; void(const TcpConnPtr &amp;)&gt;</td></tr>
+<tr class="memdesc:a9925b50afcb817e770eef0b0ee15e5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP回调函数类型定义  <a href="#a9925b50afcb817e770eef0b0ee15e5eb">更多...</a><br/></td></tr>
 <tr class="separator:a9925b50afcb817e770eef0b0ee15e5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aa343478bfd199cef425bbb1321237e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a7aa343478bfd199cef425bbb1321237e">handy::RetMsgCallBack</a> = std::function&lt; std::string(const TcpConnPtr &amp;, const std::string &amp;)&gt;</td></tr>
+<tr class="memdesc:a7aa343478bfd199cef425bbb1321237e"><td class="mdescLeft">&#160;</td><td class="mdescRight">带返回值的消息回调函数类型定义  <a href="#a7aa343478bfd199cef425bbb1321237e">更多...</a><br/></td></tr>
 <tr class="separator:a7aa343478bfd199cef425bbb1321237e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>TCP连接库的主要头文件，包含TcpConn，TcpServer和HSHA类的声明 </p>
+<div class="textblock"><p>TCP连接管理核心类定义，包括TcpConn（连接对象）、TcpServer（TCP服务器）、HSHA（半同步半异步服务器） </p>
+<p>TCP连接管理核心头文件，包含TcpConn（连接对象）、TcpServer（TCP服务器）、HSHA（半同步半异步服务器）类声明</p>
+<p>该文件提供了TCP网络编程的核心组件，实现了连接的建立、数据读写、事件处理、服务器监听等功能，核心特性如下：</p>
+<ol type="1">
+<li>TcpConn类：封装单个TCP连接，支持非阻塞I/O、连接状态管理（INVALID/HAND_SHAKING/CONNECTED/CLOSED/FAILED）、 数据发送/接收、编解码集成（通过CodecBase）、超时处理、自动重连等功能；</li>
+<li>TcpServer类：实现TCP服务器功能，支持绑定地址、监听端口、接受客户端连接、多事件循环（EventBases）负载均衡， 可配置连接创建回调、状态回调、数据读写回调；</li>
+<li>HSHA类：基于TcpServer实现半同步半异步服务器模型，通过线程池（ThreadPool）处理业务逻辑， 实现I/O线程与业务线程分离，提升高并发场景下的性能；</li>
+<li>事件驱动：依赖EventBase和Channel实现I/O事件的检测与分发，支持读写事件的注册、注销，确保高效的事件处理；</li>
+<li>线程安全：关键操作（如状态修改、Channel访问）通过互斥锁保护，支持多线程环境下的安全调用。 <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ol>
+<ol type="1">
+<li>依赖组件：需配合logger.h（日志）、utils.h（工具函数）、thread_pool.h（线程池）、poller.h（I/O多路复用）、 codec.h（编解码）等头文件使用；</li>
+<li>非阻塞I/O：所有socket均设置为非阻塞模式，避免I/O操作阻塞线程，提升系统吞吐量；</li>
+<li>连接状态管理：TcpConn通过State枚举严格管理连接生命周期，状态变化会触发stateCB回调，便于上层处理；</li>
+<li>编解码集成：通过onMsg()方法绑定编解码器，自动处理数据的打包与解包，支持自定义编解码逻辑；</li>
+<li>资源管理：连接关闭时自动清理资源（如Channel、定时器、缓冲区），避免资源泄露；</li>
+<li>重连机制：TcpConn支持配置重连间隔（m_reconnectInterval_ms），连接断开时会自动尝试重连（需开启重连功能）；</li>
+<li>多事件循环：TcpServer可关联多个EventBase（事件循环），新连接会分配到负载较低的事件循环，提升并发处理能力。</li>
+</ol>
+<p>该文件提供了TCP网络编程的核心组件定义，实现了连接的创建、读写、状态管理、服务器监听及高并发处理等功能，核心特性如下：</p>
+<ol type="1">
+<li>TcpConn类：封装单个TCP连接，支持非阻塞I/O、连接状态管理（INVALID/HAND_SHAKING/CONNECTED/CLOSED/FAILED）、 数据发送/接收、编解码集成、超时处理、自动重连、上下文存储等功能，继承自std::enable_shared_from_this确保智能指针安全管理；</li>
+<li>TcpServer类：实现TCP服务器功能，支持绑定地址、监听端口、接受客户端连接、多事件循环（EventBases）负载均衡， 可配置连接创建回调、状态回调、数据读写回调，支持端口复用；</li>
+<li>HSHA类：基于TcpServer实现半同步半异步服务器模型，通过线程池（ThreadPool）处理业务逻辑， 实现I/O线程与业务线程分离，提升高并发场景下的性能，支持优雅退出；</li>
+<li>类型定义：提供TcpConnPtr（连接智能指针）、TcpCallBack（连接回调）、RetMsgCallBack（带返回值的消息回调）等常用类型别名，简化开发；</li>
+<li>线程安全：关键操作（如状态修改、回调注册、通道访问）通过互斥锁保护，支持多线程环境下的安全调用。 <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ol>
+<ol type="1">
+<li>依赖组件：需配合event_base.h（事件循环）、codec.h（编解码）、non_copy_able.h（禁止拷贝）、net.h（网络工具）、 thread_pool.h（线程池）等头文件使用，编译时需链接pthread库；</li>
+<li>智能指针管理：TcpConn对象必须通过createConnection静态方法创建，确保使用std::shared_ptr管理生命周期，避免内存泄露；</li>
+<li>事件驱动：基于EventBase和Channel实现I/O事件的检测与分发，所有socket均设置为非阻塞模式，提升系统吞吐量；</li>
+<li>编解码集成：TcpConn和TcpServer支持通过onMsg方法绑定编解码器，自动处理数据的打包与解包，支持自定义编解码逻辑；</li>
+<li>上下文存储：TcpConn提供getContext方法，支持存储任意类型的上下文数据，方便业务逻辑共享状态；</li>
+<li>重连机制：TcpConn支持通过setReconnectInterval设置重连间隔，连接断开时会自动尝试重连（需开启重连功能）；</li>
+<li>空闲回调：支持添加空闲回调函数，当连接在指定时间内无数据读写时触发，适用于心跳检测等场景。 </li>
+</ol>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

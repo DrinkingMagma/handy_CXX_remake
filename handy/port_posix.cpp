@@ -1,7 +1,26 @@
 /**
  * @file port_posix.cpp
  * @brief 跨平台端口工具函数的POSIX实现(Linux/macOS)
-*/
+ * @details 
+ *  该文件实现了POSIX兼容系统（Linux和macOS）下的核心工具函数，主要包括：
+ *  1. 线程安全的主机名解析（getHostByName）：
+ *     - 优先尝试将输入直接解析为IPv4地址（inet_pton）；
+ *     - 若解析失败，使用线程安全的主机名解析函数（Linux下gethostbyname_r，macOS下gethostbyname加锁）；
+ *     - 成功返回true并填充in_addr结构，失败返回false且将in_addr.s_addr设为INADDR_NONE。
+ *  2. 当前线程ID获取（getCurrentThreadId）：
+ *     - Linux下通过syscall(SYS_gettid)获取线程ID；
+ *     - macOS下通过pthread_threadid_np获取线程ID；
+ *     - 返回64位无符号整数表示的线程ID。
+ *  3. IPv4地址与字符串转换：
+ *     - addrToString：将in_addr结构转换为点分十进制IPv4字符串（inet_ntop）；
+ *     - stringToAddr：将点分十进制IPv4字符串转换为in_addr结构（inet_pton）。
+ * @note 
+ *  1. 线程安全：主机名解析函数通过静态互斥锁保证多线程环境下的安全性；
+ *  2. 平台差异：针对Linux和macOS的底层接口差异进行适配，提供统一的上层接口；
+ *  3. 错误处理：解析失败时返回明确的布尔值，便于上层判断和处理；
+ *  4. 依赖：依赖POSIX标准库（netdb.h、arpa/inet.h等），非POSIX系统不支持。
+ */
+
 #include <stdexcept>
 #include <netdb.h>
 #include <cstring>
@@ -11,7 +30,7 @@
 #include <mutex>
 #include "port_posix.h"
 #include <pthread.h>
-#include <current_os.h>
+#include "platform.h"
 
 namespace handy
 {

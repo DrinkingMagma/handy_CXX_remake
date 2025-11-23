@@ -94,6 +94,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div><!--header-->
 <div class="contents">
 
+<p>通用任务回调（无参数无返回值，用于异步任务/事件处理  
+ <a href="structhandy_1_1TimerRepeatable.html#details">更多...</a></p>
+
 <p><code>#include &lt;<a class="el" href="event__base_8h_source.html">event_base.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -101,13 +104,19 @@ Public 属性</h2></td></tr>
 <tr class="memitem:a2c0051ef21dfdf8df2d4272c5c3cff91"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1TimerRepeatable.html#a2c0051ef21dfdf8df2d4272c5c3cff91">at</a></td></tr>
 <tr class="separator:a2c0051ef21dfdf8df2d4272c5c3cff91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ba6ff36298209aa8aff04b860d9e3d1"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1TimerRepeatable.html#a1ba6ff36298209aa8aff04b860d9e3d1">interval_ms</a></td></tr>
+<tr class="memdesc:a1ba6ff36298209aa8aff04b860d9e3d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">下一次超时时间戳（毫秒）  <a href="#a1ba6ff36298209aa8aff04b860d9e3d1">更多...</a><br/></td></tr>
 <tr class="separator:a1ba6ff36298209aa8aff04b860d9e3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2f9167cfb95ab8afb022b9002d8aede"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1TimerRepeatable.html#aa2f9167cfb95ab8afb022b9002d8aede">timerIdPair</a></td></tr>
+<tr class="memdesc:aa2f9167cfb95ab8afb022b9002d8aede"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器重复间隔（毫秒）  <a href="#aa2f9167cfb95ab8afb022b9002d8aede">更多...</a><br/></td></tr>
 <tr class="separator:aa2f9167cfb95ab8afb022b9002d8aede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad709131110a37af96a5e42892c84f931"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1TimerRepeatable.html#ad709131110a37af96a5e42892c84f931">task</a></td></tr>
+<tr class="memdesc:ad709131110a37af96a5e42892c84f931"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前周期的定时器ID（用于取消）  <a href="#ad709131110a37af96a5e42892c84f931">更多...</a><br/></td></tr>
 <tr class="separator:ad709131110a37af96a5e42892c84f931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">类成员变量说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>通用任务回调（无参数无返回值，用于异步任务/事件处理 </p>
+<p>可重复定时器结构体（存储重读定时器的核心信息） </p>
+</div><h2 class="groupheader">类成员变量说明</h2>
 <a class="anchor" id="a2c0051ef21dfdf8df2d4272c5c3cff91"></a>
 <div class="memitem">
 <div class="memproto">
@@ -130,6 +139,8 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>下一次超时时间戳（毫秒） </p>
+
 </div>
 </div>
 <a class="anchor" id="ad709131110a37af96a5e42892c84f931"></a>
@@ -142,6 +153,8 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>当前周期的定时器ID（用于取消） </p>
+
 </div>
 </div>
 <a class="anchor" id="aa2f9167cfb95ab8afb022b9002d8aede"></a>
@@ -153,6 +166,8 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>定时器重复间隔（毫秒） </p>
 
 </div>
 </div>

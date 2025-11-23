@@ -89,111 +89,111 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div><!--header-->
 <div class="contents">
 <a href="port__posix_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;netinet/in.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;endian.h&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>handy</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">namespace </span>port</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a29a807d5afbb98f852526afad4c3ccac">   19</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="namespacehandy_1_1port.html#a29a807d5afbb98f852526afad4c3ccac">kLittleEndian</a> = (__BYTE_ORDER == __LITTLE_ENDIAN);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">   26</a></span>&#160;        <span class="keyword">inline</span> uint16_t <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(uint16_t v)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span>(!<a class="code" href="namespacehandy_1_1port.html#a29a807d5afbb98f852526afad4c3ccac">kLittleEndian</a>)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordflow">return</span> v;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="comment">// 交换高低字节</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> (uint16_t)((v &lt;&lt; 8) | (v &gt;&gt; 8));</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a4917ce27a5c2a54e8f6a161d8ccc33a4">   39</a></span>&#160;        <span class="keyword">inline</span> uint32_t <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(uint32_t v)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">if</span>(!<a class="code" href="namespacehandy_1_1port.html#a29a807d5afbb98f852526afad4c3ccac">kLittleEndian</a>)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">return</span> v;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="comment">// 交换字节顺序</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span> ((v &lt;&lt; 24) &amp; 0xff000000) | ((v &lt;&lt; 8) &amp; 0x00ff0000) |</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                   ((v &gt;&gt; 8) &amp; 0x0000ff00) | ((v &gt;&gt; 24) &amp; 0x000000ff);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a71fe4bbacfc84ff3dcb32f2b1f7a01e4">   53</a></span>&#160;        <span class="keyword">inline</span> uint64_t <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(uint64_t v)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">if</span>(!<a class="code" href="namespacehandy_1_1port.html#a29a807d5afbb98f852526afad4c3ccac">kLittleEndian</a>)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">return</span> v;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="comment">// 交换字节顺序</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> ((v &lt;&lt; 56) &amp; 0xff00000000000000ULL) | ((v &lt;&lt; 40) &amp; 0x00ff000000000000ULL) |</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                   ((v &lt;&lt; 24) &amp; 0x0000ff0000000000ULL) | ((v &lt;&lt; 8) &amp; 0x000000ff00000000ULL) |</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                   ((v &gt;&gt; 8) &amp; 0x00000000ff000000ULL) | ((v &gt;&gt; 24) &amp; 0x0000000000ff0000ULL) |</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                   ((v &gt;&gt; 40) &amp; 0x000000000000ff00ULL) | ((v &gt;&gt; 56) &amp; 0x00000000000000ffULL);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#ab31f1fda097c31daeee0487b75fd7940">   69</a></span>&#160;        <span class="keyword">inline</span> int16_t <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(int16_t v)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int16_t<span class="keyword">&gt;</span>(<a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(static_cast&lt;uint16_t&gt;(v)));</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a41658d12263a30eb6b76121876e5ad4e">   79</a></span>&#160;        <span class="keyword">inline</span> int32_t <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(int32_t v)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(<a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(static_cast&lt;uint32_t&gt;(v)));</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a05bb8e47424f1c8e2ae2fed618737ec3">   89</a></span>&#160;        <span class="keyword">inline</span> int64_t <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(int64_t v)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(<a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(static_cast&lt;uint64_t&gt;(v)));</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">   99</a></span>&#160;        <span class="keyword">inline</span> uint16_t <a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(uint16_t v)</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        { </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">// 字节序的转换是双向操作</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(v);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a756677f210cc9ea97e434431c7c0689b">  110</a></span>&#160;        <span class="keyword">inline</span> uint32_t <a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(uint32_t v)</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        { </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="comment">// 字节序的转换是双向操作</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(v);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#aea3a66394d7c96de8eb0c73ee1e80b49">  121</a></span>&#160;        <span class="keyword">inline</span> uint64_t <a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(uint64_t v)</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        { </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="comment">// 字节序的转换是双向操作</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(v);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a3c5b71e9deffbe1f59af0a66ff8d8585">  132</a></span>&#160;        <span class="keyword">inline</span> int16_t <a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(int16_t v)</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        { </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="comment">// 字节序的转换是双向操作</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int16_t<span class="keyword">&gt;</span>(<a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(static_cast&lt;uint16_t&gt;(v)));</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        }</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a1fa1b47c7a46e055ab2b49e62e4d9e23">  143</a></span>&#160;        <span class="keyword">inline</span> int32_t <a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(int32_t v)</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        { </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="comment">// 字节序的转换是双向操作</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(<a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(static_cast&lt;uint32_t&gt;(v)));</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#ae9f3794631e3c79b6b621a3b0f4c0936">  154</a></span>&#160;        <span class="keyword">inline</span> int64_t <a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(int64_t v)</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        { </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="comment">// 字节序的转换是双向操作</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(<a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(static_cast&lt;uint64_t&gt;(v)));</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="namespacehandy_1_1port.html#a4f1587cf54ea7cefa3d01e75f3f1d797">getHostByName</a>(<span class="keyword">const</span> std::string&amp; host, <span class="keyword">struct</span> in_addr&amp; result);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        uint64_t <a class="code" href="namespacehandy_1_1port.html#a567b307772bdf552317eb5e48f70cf1e">getCurrentThreadId</a>();</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        std::string <a class="code" href="namespacehandy_1_1port.html#a944d00efd76b149e785f1143daafaf77">addrToString</a>(<span class="keyword">const</span> <span class="keyword">struct</span> in_addr* addr);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="namespacehandy_1_1port.html#a6d02bcb571e941fa210c21affef41aa2">stringToAddr</a>(<span class="keyword">const</span> std::string&amp; ip, <span class="keyword">struct</span> in_addr* addr);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    } <span class="comment">// namespace port</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;} <span class="comment">// namespace handy</span></div>
-<div class="ttc" id="namespacehandy_1_1port_html_a29a807d5afbb98f852526afad4c3ccac"><div class="ttname"><a href="namespacehandy_1_1port.html#a29a807d5afbb98f852526afad4c3ccac">handy::port::kLittleEndian</a></div><div class="ttdeci">static const int kLittleEndian</div><div class="ttdoc">表示当前系统是否为小端字节序 </div><div class="ttdef"><b>Definition:</b> port_posix.h:19</div></div>
-<div class="ttc" id="namespacehandy_1_1port_html_a5f1b74470622c97466be3c98a6e0929f"><div class="ttname"><a href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">handy::port::betoh</a></div><div class="ttdeci">uint16_t betoh(uint16_t v)</div><div class="ttdoc">将16位无符号整数从大端字节序（网络字节序）转换为主机字节序 </div><div class="ttdef"><b>Definition:</b> port_posix.h:99</div></div>
-<div class="ttc" id="namespacehandy_1_1port_html_a6d02bcb571e941fa210c21affef41aa2"><div class="ttname"><a href="namespacehandy_1_1port.html#a6d02bcb571e941fa210c21affef41aa2">handy::port::stringToAddr</a></div><div class="ttdeci">bool stringToAddr(const std::string &amp;ip, struct in_addr *addr)</div><div class="ttdoc">将IPv4地址字符串转换为in_addr结构 </div><div class="ttdef"><b>Definition:</b> port_posix.cpp:124</div></div>
-<div class="ttc" id="namespacehandy_1_1port_html_ada33f950eea2ad0a8b424d009eaead30"><div class="ttname"><a href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">handy::port::htobe</a></div><div class="ttdeci">uint16_t htobe(uint16_t v)</div><div class="ttdoc">将16位无符号整数从主机字节序转换为大端字节序（网络字节序） </div><div class="ttdef"><b>Definition:</b> port_posix.h:26</div></div>
-<div class="ttc" id="namespacehandy_1_1port_html_a944d00efd76b149e785f1143daafaf77"><div class="ttname"><a href="namespacehandy_1_1port.html#a944d00efd76b149e785f1143daafaf77">handy::port::addrToString</a></div><div class="ttdeci">std::string addrToString(const struct in_addr *addr)</div><div class="ttdoc">将IPv4地址结构转换为字符串表示 </div><div class="ttdef"><b>Definition:</b> port_posix.cpp:108</div></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;netinet/in.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;endian.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span>handy</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">namespace </span>port</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a29a807d5afbb98f852526afad4c3ccac">   31</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="namespacehandy_1_1port.html#a29a807d5afbb98f852526afad4c3ccac">kLittleEndian</a> = (__BYTE_ORDER == __LITTLE_ENDIAN);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">   38</a></span>&#160;        <span class="keyword">inline</span> uint16_t <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(uint16_t v)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">if</span>(!<a class="code" href="namespacehandy_1_1port.html#a29a807d5afbb98f852526afad4c3ccac">kLittleEndian</a>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keywordflow">return</span> v;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="comment">// 交换高低字节</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">return</span> (uint16_t)((v &lt;&lt; 8) | (v &gt;&gt; 8));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a4917ce27a5c2a54e8f6a161d8ccc33a4">   51</a></span>&#160;        <span class="keyword">inline</span> uint32_t <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(uint32_t v)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span>(!<a class="code" href="namespacehandy_1_1port.html#a29a807d5afbb98f852526afad4c3ccac">kLittleEndian</a>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">return</span> v;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="comment">// 交换字节顺序</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span> ((v &lt;&lt; 24) &amp; 0xff000000) | ((v &lt;&lt; 8) &amp; 0x00ff0000) |</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                   ((v &gt;&gt; 8) &amp; 0x0000ff00) | ((v &gt;&gt; 24) &amp; 0x000000ff);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a71fe4bbacfc84ff3dcb32f2b1f7a01e4">   65</a></span>&#160;        <span class="keyword">inline</span> uint64_t <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(uint64_t v)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">if</span>(!<a class="code" href="namespacehandy_1_1port.html#a29a807d5afbb98f852526afad4c3ccac">kLittleEndian</a>)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">return</span> v;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="comment">// 交换字节顺序</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">return</span> ((v &lt;&lt; 56) &amp; 0xff00000000000000ULL) | ((v &lt;&lt; 40) &amp; 0x00ff000000000000ULL) |</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                   ((v &lt;&lt; 24) &amp; 0x0000ff0000000000ULL) | ((v &lt;&lt; 8) &amp; 0x000000ff00000000ULL) |</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                   ((v &gt;&gt; 8) &amp; 0x00000000ff000000ULL) | ((v &gt;&gt; 24) &amp; 0x0000000000ff0000ULL) |</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                   ((v &gt;&gt; 40) &amp; 0x000000000000ff00ULL) | ((v &gt;&gt; 56) &amp; 0x00000000000000ffULL);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#ab31f1fda097c31daeee0487b75fd7940">   81</a></span>&#160;        <span class="keyword">inline</span> int16_t <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(int16_t v)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int16_t<span class="keyword">&gt;</span>(<a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(static_cast&lt;uint16_t&gt;(v)));</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a41658d12263a30eb6b76121876e5ad4e">   91</a></span>&#160;        <span class="keyword">inline</span> int32_t <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(int32_t v)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(<a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(static_cast&lt;uint32_t&gt;(v)));</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a05bb8e47424f1c8e2ae2fed618737ec3">  101</a></span>&#160;        <span class="keyword">inline</span> int64_t <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(int64_t v)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(<a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(static_cast&lt;uint64_t&gt;(v)));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">  111</a></span>&#160;        <span class="keyword">inline</span> uint16_t <a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(uint16_t v)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        { </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="comment">// 字节序的转换是双向操作</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(v);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a756677f210cc9ea97e434431c7c0689b">  122</a></span>&#160;        <span class="keyword">inline</span> uint32_t <a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(uint32_t v)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        { </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="comment">// 字节序的转换是双向操作</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(v);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#aea3a66394d7c96de8eb0c73ee1e80b49">  133</a></span>&#160;        <span class="keyword">inline</span> uint64_t <a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(uint64_t v)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        { </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="comment">// 字节序的转换是双向操作</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">htobe</a>(v);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a3c5b71e9deffbe1f59af0a66ff8d8585">  144</a></span>&#160;        <span class="keyword">inline</span> int16_t <a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(int16_t v)</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        { </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="comment">// 字节序的转换是双向操作</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int16_t<span class="keyword">&gt;</span>(<a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(static_cast&lt;uint16_t&gt;(v)));</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#a1fa1b47c7a46e055ab2b49e62e4d9e23">  155</a></span>&#160;        <span class="keyword">inline</span> int32_t <a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(int32_t v)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        { </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="comment">// 字节序的转换是双向操作</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(<a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(static_cast&lt;uint32_t&gt;(v)));</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="namespacehandy_1_1port.html#ae9f3794631e3c79b6b621a3b0f4c0936">  166</a></span>&#160;        <span class="keyword">inline</span> int64_t <a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(int64_t v)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        { </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="comment">// 字节序的转换是双向操作</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(<a class="code" href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">betoh</a>(static_cast&lt;uint64_t&gt;(v)));</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="namespacehandy_1_1port.html#a4f1587cf54ea7cefa3d01e75f3f1d797">getHostByName</a>(<span class="keyword">const</span> std::string&amp; host, <span class="keyword">struct</span> in_addr&amp; result);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        uint64_t <a class="code" href="namespacehandy_1_1port.html#a567b307772bdf552317eb5e48f70cf1e">getCurrentThreadId</a>();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        std::string <a class="code" href="namespacehandy_1_1port.html#a944d00efd76b149e785f1143daafaf77">addrToString</a>(<span class="keyword">const</span> <span class="keyword">struct</span> in_addr* addr);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="namespacehandy_1_1port.html#a6d02bcb571e941fa210c21affef41aa2">stringToAddr</a>(<span class="keyword">const</span> std::string&amp; ip, <span class="keyword">struct</span> in_addr* addr);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    } <span class="comment">// namespace port</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;} <span class="comment">// namespace handy</span></div>
+<div class="ttc" id="namespacehandy_1_1port_html_a29a807d5afbb98f852526afad4c3ccac"><div class="ttname"><a href="namespacehandy_1_1port.html#a29a807d5afbb98f852526afad4c3ccac">handy::port::kLittleEndian</a></div><div class="ttdeci">static const int kLittleEndian</div><div class="ttdoc">表示当前系统是否为小端字节序 </div><div class="ttdef"><b>Definition:</b> port_posix.h:31</div></div>
+<div class="ttc" id="namespacehandy_1_1port_html_a5f1b74470622c97466be3c98a6e0929f"><div class="ttname"><a href="namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f">handy::port::betoh</a></div><div class="ttdeci">uint16_t betoh(uint16_t v)</div><div class="ttdoc">将16位无符号整数从大端字节序（网络字节序）转换为主机字节序 </div><div class="ttdef"><b>Definition:</b> port_posix.h:111</div></div>
+<div class="ttc" id="namespacehandy_1_1port_html_a6d02bcb571e941fa210c21affef41aa2"><div class="ttname"><a href="namespacehandy_1_1port.html#a6d02bcb571e941fa210c21affef41aa2">handy::port::stringToAddr</a></div><div class="ttdeci">bool stringToAddr(const std::string &amp;ip, struct in_addr *addr)</div><div class="ttdoc">将IPv4地址字符串转换为in_addr结构 </div><div class="ttdef"><b>Definition:</b> port_posix.cpp:143</div></div>
+<div class="ttc" id="namespacehandy_1_1port_html_ada33f950eea2ad0a8b424d009eaead30"><div class="ttname"><a href="namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30">handy::port::htobe</a></div><div class="ttdeci">uint16_t htobe(uint16_t v)</div><div class="ttdoc">将16位无符号整数从主机字节序转换为大端字节序（网络字节序） </div><div class="ttdef"><b>Definition:</b> port_posix.h:38</div></div>
+<div class="ttc" id="namespacehandy_1_1port_html_a944d00efd76b149e785f1143daafaf77"><div class="ttname"><a href="namespacehandy_1_1port.html#a944d00efd76b149e785f1143daafaf77">handy::port::addrToString</a></div><div class="ttdeci">std::string addrToString(const struct in_addr *addr)</div><div class="ttdoc">将IPv4地址结构转换为字符串表示 </div><div class="ttdef"><b>Definition:</b> port_posix.cpp:127</div></div>
 <div class="ttc" id="namespacehandy_1_1port_html_a567b307772bdf552317eb5e48f70cf1e"><div class="ttname"><a href="namespacehandy_1_1port.html#a567b307772bdf552317eb5e48f70cf1e">handy::port::getCurrentThreadId</a></div><div class="ttdeci">uint64_t getCurrentThreadId()</div><div class="ttdoc">获取当前线程的唯一标识 </div></div>
 <div class="ttc" id="namespacehandy_1_1port_html_a4f1587cf54ea7cefa3d01e75f3f1d797"><div class="ttname"><a href="namespacehandy_1_1port.html#a4f1587cf54ea7cefa3d01e75f3f1d797">handy::port::getHostByName</a></div><div class="ttdeci">bool getHostByName(const std::string &amp;host, struct in_addr &amp;result)</div><div class="ttdoc">通过主机名获取对应的IPv4地址 </div></div>
 </div><!-- fragment --></div><!-- contents -->

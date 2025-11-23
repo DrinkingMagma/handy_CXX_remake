@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div><!--header-->
 <div class="contents">
 
-<p>事件驱动框架核心头文件，包含事件循环、定时器、通道管理等核心组件  
+<p>事件驱动框架核心头文件，定义事件循环、多线程事件管理、I/O通道等核心组件  
 <a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="handy-imp_8h_source.html">handy-imp.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="poller_8h_source.html">poller.h</a>&quot;</code><br/>
@@ -105,8 +105,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 类</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1TimerRepeatable.html">handy::TimerRepeatable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">通用任务回调（无参数无返回值，用于异步任务/事件处理  <a href="structhandy_1_1TimerRepeatable.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1IdleNode.html">handy::IdleNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲连接节点结构体（存储单个空闲连接的管理信息）  <a href="structhandy_1_1IdleNode.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1IdleIdImp.html">handy::IdleIdImp</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲连接ID实现结构体（封装空闲连接的列表迭代器）  <a href="structhandy_1_1IdleIdImp.html#details">更多...</a><br/></td></tr>
@@ -133,11 +135,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 类型定义</h2></td></tr>
 <tr class="memitem:afc7c19669ce2cf96502ca389d4d9c00a"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr<br class="typebreak"/>
 &lt; TCPServer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#afc7c19669ce2cf96502ca389d4d9c00a">handy::TcpServerPtr</a></td></tr>
+<tr class="memdesc:afc7c19669ce2cf96502ca389d4d9c00a"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP连接指针  <a href="#afc7c19669ce2cf96502ca389d4d9c00a">更多...</a><br/></td></tr>
 <tr class="separator:afc7c19669ce2cf96502ca389d4d9c00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ea5af3f590ac7621cb8ec61e2bfed56"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const <br class="typebreak"/>
 TcpConnPtr &amp;, const Slice &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a3ea5af3f590ac7621cb8ec61e2bfed56">handy::MsgCallBack</a></td></tr>
+<tr class="memdesc:a3ea5af3f590ac7621cb8ec61e2bfed56"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP连接相关回调（如连接建立/关闭）  <a href="#a3ea5af3f590ac7621cb8ec61e2bfed56">更多...</a><br/></td></tr>
 <tr class="separator:a3ea5af3f590ac7621cb8ec61e2bfed56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37e7f77e1c4abd461c35064060c05669"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">handy::Task</a> = std::function&lt; void()&gt;</td></tr>
+<tr class="memdesc:a37e7f77e1c4abd461c35064060c05669"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息处理回调（接受连接与消息切片）  <a href="#a37e7f77e1c4abd461c35064060c05669">更多...</a><br/></td></tr>
 <tr class="separator:a37e7f77e1c4abd461c35064060c05669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -150,7 +155,23 @@ TcpConnPtr &amp;, const Slice &amp;)&gt;&#160;</td><td class="memItemRight" vali
 <tr class="separator:a20123b690d2753b31d89587a802cc44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>事件驱动框架核心头文件，包含事件循环、定时器、通道管理等核心组件 </p>
+<div class="textblock"><p>事件驱动框架核心头文件，定义事件循环、多线程事件管理、I/O通道等核心组件 </p>
+<p>该文件是事件驱动框架的基础，提供了构建高性能网络应用的核心抽象，主要包含：</p>
+<ol type="1">
+<li>核心类型定义：TCP连接指针、回调函数类型（TcpCallBack、MsgCallBack）、通用任务类型（Task）等；</li>
+<li>事件循环类（EventBase）：单线程事件派发器，管理I/O事件、定时器、异步任务，支持任务投递和事件唤醒；</li>
+<li>多线程事件管理类（MultiBase）：管理多个EventBase实例，通过轮询实现负载均衡，提升并发处理能力；</li>
+<li>I/O通道类（Channel）：封装文件描述符（fd）和事件处理逻辑，支持注册读/写事件回调，自动管理fd生命周期；</li>
+<li>辅助结构体：定时器信息（TimerRepeatable）、空闲连接信息（IdleNode）等，支撑框架的定时器和连接管理功能。 <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ol>
+<ol type="1">
+<li>线程安全：EventBase的非线程安全接口需在其对应的事件循环线程内调用，safeCall()是线程安全的任务投递接口；</li>
+<li>多线程模型：MultiBase通过多个EventBase实例实现多线程处理，每个实例对应一个事件循环线程；</li>
+<li>I/O事件管理：Channel类是fd和事件处理的桥梁，不支持多Channel共享同一个fd；</li>
+<li>定时器支持：EventBase支持一次性和周期性定时器，通过TimerId进行管理和取消；</li>
+<li>依赖：需配合poller.h（I/O多路复用）、utils.h（工具函数）等头文件使用，编译时需启用C++11及以上标准。 </li>
+</ol>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

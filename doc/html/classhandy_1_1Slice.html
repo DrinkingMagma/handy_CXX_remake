@@ -215,18 +215,22 @@ Public 成员函数</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 静态 Public 属性</h2></td></tr>
 <tr class="memitem:af751a49e925a070d4d7b83aaa6341f0e"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Slice.html#af751a49e925a070d4d7b83aaa6341f0e">npos</a> = static_cast&lt;size_t&gt;(-1)</td></tr>
+<tr class="memdesc:af751a49e925a070d4d7b83aaa6341f0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">静态常量：表示“未找到”的位置  <a href="#af751a49e925a070d4d7b83aaa6341f0e">更多...</a><br/></td></tr>
 <tr class="separator:af751a49e925a070d4d7b83aaa6341f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private 属性</h2></td></tr>
 <tr class="memitem:ad8ef813ac8af5c9e8dee4d01486c5e1b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Slice.html#ad8ef813ac8af5c9e8dee4d01486c5e1b">m_pb</a></td></tr>
+<tr class="memdesc:ad8ef813ac8af5c9e8dee4d01486c5e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">起始指针（非空）  <a href="#ad8ef813ac8af5c9e8dee4d01486c5e1b">更多...</a><br/></td></tr>
 <tr class="separator:ad8ef813ac8af5c9e8dee4d01486c5e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4a11083f0e1c4a0d49b4ce02095a66d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Slice.html#af4a11083f0e1c4a0d49b4ce02095a66d">m_pe</a></td></tr>
+<tr class="memdesc:af4a11083f0e1c4a0d49b4ce02095a66d"><td class="mdescLeft">&#160;</td><td class="mdescRight">结束指针(m_pe &gt;= m_pb)  <a href="#af4a11083f0e1c4a0d49b4ce02095a66d">更多...</a><br/></td></tr>
 <tr class="separator:af4a11083f0e1c4a0d49b4ce02095a66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 静态 Private 属性</h2></td></tr>
 <tr class="memitem:ac39c64cd7348a77cc9ab0cf2b2858f04"><td class="memItemLeft" align="right" valign="top">static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Slice.html#ac39c64cd7348a77cc9ab0cf2b2858f04">kEmptyData</a> = &quot;&quot;</td></tr>
+<tr class="memdesc:ac39c64cd7348a77cc9ab0cf2b2858f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局空数据（避免空指针，所有空视图指向此处）  <a href="#ac39c64cd7348a77cc9ab0cf2b2858f04">更多...</a><br/></td></tr>
 <tr class="separator:ac39c64cd7348a77cc9ab0cf2b2858f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -1353,6 +1357,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>全局空数据（避免空指针，所有空视图指向此处） </p>
+
 </div>
 </div>
 <a class="anchor" id="ad8ef813ac8af5c9e8dee4d01486c5e1b"></a>
@@ -1372,6 +1378,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>起始指针（非空） </p>
 
 </div>
 </div>
@@ -1393,6 +1401,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>结束指针(m_pe &gt;= m_pb) </p>
+
 </div>
 </div>
 <a class="anchor" id="af751a49e925a070d4d7b83aaa6341f0e"></a>
@@ -1412,6 +1422,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>静态常量：表示“未找到”的位置 </p>
 
 </div>
 </div>

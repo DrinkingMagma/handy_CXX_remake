@@ -114,6 +114,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 类型</h2></td></tr>
 <tr class="memitem:a55016d1b3d3342f98bcb4239549687b7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpServer.html#a55016d1b3d3342f98bcb4239549687b7">Ptr</a> = std::shared_ptr&lt; <a class="el" href="classhandy_1_1UdpServer.html">UdpServer</a> &gt;</td></tr>
+<tr class="memdesc:a55016d1b3d3342f98bcb4239549687b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">UdpServer的智能指针类型定义  <a href="#a55016d1b3d3342f98bcb4239549687b7">更多...</a><br/></td></tr>
 <tr class="separator:a55016d1b3d3342f98bcb4239549687b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a641de9e54afef0afb6d7522e8ab6a067"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpServer.html#a641de9e54afef0afb6d7522e8ab6a067">ServerMsgCallBack</a> = std::function&lt; void(const <a class="el" href="classhandy_1_1UdpServer.html#a55016d1b3d3342f98bcb4239549687b7">UdpServer::Ptr</a> &amp;, <a class="el" href="classhandy_1_1Buffer.html">Buffer</a>, <a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>)&gt;</td></tr>
 <tr class="memdesc:a641de9e54afef0afb6d7522e8ab6a067"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息处理回调函数类型  <a href="#a641de9e54afef0afb6d7522e8ab6a067">更多...</a><br/></td></tr>
@@ -163,12 +164,16 @@ Private 属性</h2></td></tr>
 <tr class="memitem:aff9aa7ad7f8cb300e058c25717884a93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpServer.html#aff9aa7ad7f8cb300e058c25717884a93">m_base</a> = nullptr</td></tr>
 <tr class="separator:aff9aa7ad7f8cb300e058c25717884a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11655d3cacee7bc3a9ec5e08f520b6b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBases.html">EventBases</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpServer.html#a11655d3cacee7bc3a9ec5e08f520b6b6">m_bases</a> = nullptr</td></tr>
+<tr class="memdesc:a11655d3cacee7bc3a9ec5e08f520b6b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联的事件循环对象  <a href="#a11655d3cacee7bc3a9ec5e08f520b6b6">更多...</a><br/></td></tr>
 <tr class="separator:a11655d3cacee7bc3a9ec5e08f520b6b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9af89a4446ba59fd2ad9792d951c670e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpServer.html#a9af89a4446ba59fd2ad9792d951c670e">m_addr</a> = <a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>(0)</td></tr>
+<tr class="memdesc:a9af89a4446ba59fd2ad9792d951c670e"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件循环对象基类  <a href="#a9af89a4446ba59fd2ad9792d951c670e">更多...</a><br/></td></tr>
 <tr class="separator:a9af89a4446ba59fd2ad9792d951c670e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5a6f3bd4d85800f13f44e01e834e7b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Channel.html">Channel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpServer.html#ad5a6f3bd4d85800f13f44e01e834e7b7">m_channel</a> = nullptr</td></tr>
+<tr class="memdesc:ad5a6f3bd4d85800f13f44e01e834e7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器绑定的地址  <a href="#ad5a6f3bd4d85800f13f44e01e834e7b7">更多...</a><br/></td></tr>
 <tr class="separator:ad5a6f3bd4d85800f13f44e01e834e7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a216794a28d8e4df8ee2159c163621228"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1UdpServer.html#a641de9e54afef0afb6d7522e8ab6a067">ServerMsgCallBack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1UdpServer.html#a216794a28d8e4df8ee2159c163621228">m_serverMsgCallback</a></td></tr>
+<tr class="memdesc:a216794a28d8e4df8ee2159c163621228"><td class="mdescLeft">&#160;</td><td class="mdescRight">通道对象  <a href="#a216794a28d8e4df8ee2159c163621228">更多...</a><br/></td></tr>
 <tr class="separator:a216794a28d8e4df8ee2159c163621228"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -199,6 +204,8 @@ Private 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>UdpServer的智能指针类型定义 </p>
 
 </div>
 </div>
@@ -626,6 +633,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>事件循环对象基类 </p>
+
 </div>
 </div>
 <a class="anchor" id="aff9aa7ad7f8cb300e058c25717884a93"></a>
@@ -666,6 +675,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>关联的事件循环对象 </p>
+
 </div>
 </div>
 <a class="anchor" id="ad5a6f3bd4d85800f13f44e01e834e7b7"></a>
@@ -686,6 +697,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>服务器绑定的地址 </p>
+
 </div>
 </div>
 <a class="anchor" id="a216794a28d8e4df8ee2159c163621228"></a>
@@ -705,6 +718,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>通道对象 </p>
 
 </div>
 </div>

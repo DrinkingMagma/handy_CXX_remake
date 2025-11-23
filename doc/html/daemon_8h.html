@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div><!--header-->
 <div class="contents">
 
-<p>守护进程管理和信号处理的封装类  
+<p>守护进程管理和信号处理封装类的头文件  
 <a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &lt;csignal&gt;</code><br/>
 <code>#include &lt;functional&gt;</code><br/>
@@ -115,7 +115,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>守护进程管理和信号处理的封装类 </p>
+<div class="textblock"><p>守护进程管理和信号处理封装类的头文件 </p>
+<p>该文件声明了Daemon类和Signal类，提供守护进程的创建、停止、重启等管理功能，以及系统信号的注册和处理接口。 核心特性如下：</p>
+<ol type="1">
+<li>Daemon类：<ul>
+<li>提供静态方法实现守护进程的启动（start）、停止（stop）、重启（restart）；</li>
+<li>支持PID文件管理，通过PID文件实现进程唯一性检查和状态查询；</li>
+<li>提供process方法，支持通过命令行参数（"start"、"stop"、"restart"）管理守护进程；</li>
+<li>支持进程切换（changeTo方法），在父进程退出后执行新程序；</li>
+<li>内部通过两次fork+setsid实现守护进程脱离终端和会话，重定向标准输入/输出/错误到/dev/null。</li>
+</ul>
+</li>
+<li>Signal类：<ul>
+<li>提供信号注册接口（signal方法），支持使用C++函数对象（std::function）作为信号处理函数；</li>
+<li>线程安全的信号处理机制，通过互斥锁保护信号处理函数的注册和调用；</li>
+<li>内部封装系统信号处理逻辑，自动处理信号分发和异常捕获。 <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ul>
+</li>
+</ol>
+<ol type="1">
+<li>Daemon类的方法均为静态方法，无需实例化即可使用；</li>
+<li>启动守护进程时需指定PID文件路径，用于存储进程ID，确保进程唯一性；</li>
+<li>Signal类支持注册任意系统信号（如SIGINT、SIGTERM、SIGHUP等），但需注意部分信号（如SIGKILL、SIGSTOP）无法被捕获或忽略；</li>
+<li>信号处理函数中应避免使用非线程安全的操作，且执行时间不宜过长，以免影响程序稳定性；</li>
+<li>依赖C++11及以上标准，编译时需启用C++11特性。 </li>
+</ol>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

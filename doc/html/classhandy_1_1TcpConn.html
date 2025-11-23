@@ -227,7 +227,7 @@ Public 成员函数</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private 成员函数</h2></td></tr>
 <tr class="memitem:abf60924c0a811cec7b75835cf8d3b7c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5">_handleRead</a> (const <a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a> &amp;conn)</td></tr>
-<tr class="memdesc:abf60924c0a811cec7b75835cf8d3b7c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理读事件  <a href="#abf60924c0a811cec7b75835cf8d3b7c5">更多...</a><br/></td></tr>
+<tr class="memdesc:abf60924c0a811cec7b75835cf8d3b7c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">编解码器  <a href="#abf60924c0a811cec7b75835cf8d3b7c5">更多...</a><br/></td></tr>
 <tr class="separator:abf60924c0a811cec7b75835cf8d3b7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63457506a3210662f34050088e0a08e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3">_handleWrite</a> (const <a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a> &amp;conn)</td></tr>
 <tr class="memdesc:a63457506a3210662f34050088e0a08e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理写事件  <a href="#a63457506a3210662f34050088e0a08e3">更多...</a><br/></td></tr>
@@ -269,54 +269,79 @@ Private 属性</h2></td></tr>
 <tr class="memitem:a99b7510fa37e517bede74a112947f9e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a99b7510fa37e517bede74a112947f9e1">m_base</a></td></tr>
 <tr class="separator:a99b7510fa37e517bede74a112947f9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cd6fe876b1a5c77b3a16a0ee528a4de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Channel.html">Channel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a2cd6fe876b1a5c77b3a16a0ee528a4de">m_channel</a></td></tr>
+<tr class="memdesc:a2cd6fe876b1a5c77b3a16a0ee528a4de"><td class="mdescLeft">&#160;</td><td class="mdescRight">所属的事件循环  <a href="#a2cd6fe876b1a5c77b3a16a0ee528a4de">更多...</a><br/></td></tr>
 <tr class="separator:a2cd6fe876b1a5c77b3a16a0ee528a4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fe2e6b92065f8f13dcb0fa6e240fd2a"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a0fe2e6b92065f8f13dcb0fa6e240fd2a">m_ChannelMutex</a></td></tr>
+<tr class="memdesc:a0fe2e6b92065f8f13dcb0fa6e240fd2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联的事件通道  <a href="#a0fe2e6b92065f8f13dcb0fa6e240fd2a">更多...</a><br/></td></tr>
 <tr class="separator:a0fe2e6b92065f8f13dcb0fa6e240fd2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ac3be768de7bab61fde080bed353e9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a7ac3be768de7bab61fde080bed353e9f">m_inputBuffer</a></td></tr>
+<tr class="memdesc:a7ac3be768de7bab61fde080bed353e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">保护m_channel的互斥锁  <a href="#a7ac3be768de7bab61fde080bed353e9f">更多...</a><br/></td></tr>
 <tr class="separator:a7ac3be768de7bab61fde080bed353e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c7aad8b44b0d54a2bcf611ae80b6a6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Buffer.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a0c7aad8b44b0d54a2bcf611ae80b6a6b">m_outputBuffer</a></td></tr>
+<tr class="memdesc:a0c7aad8b44b0d54a2bcf611ae80b6a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">输入缓冲区  <a href="#a0c7aad8b44b0d54a2bcf611ae80b6a6b">更多...</a><br/></td></tr>
 <tr class="separator:a0c7aad8b44b0d54a2bcf611ae80b6a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c516454a7558e9f5f8fcf7f30dc12f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a7c516454a7558e9f5f8fcf7f30dc12f6">m_local</a> = <a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>(0)</td></tr>
+<tr class="memdesc:a7c516454a7558e9f5f8fcf7f30dc12f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出缓冲区  <a href="#a7c516454a7558e9f5f8fcf7f30dc12f6">更多...</a><br/></td></tr>
 <tr class="separator:a7c516454a7558e9f5f8fcf7f30dc12f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3ed99edbeeb22ba99834afcb1739eed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#aa3ed99edbeeb22ba99834afcb1739eed">m_peer</a> = <a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>(0)</td></tr>
+<tr class="memdesc:aa3ed99edbeeb22ba99834afcb1739eed"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地地址  <a href="#aa3ed99edbeeb22ba99834afcb1739eed">更多...</a><br/></td></tr>
 <tr class="separator:aa3ed99edbeeb22ba99834afcb1739eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38de21fb2cd6a1ae55435a4429b7eb72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1TcpConn.html#ae3b68d2c0a60e9b035eb1855f8148b0a">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a38de21fb2cd6a1ae55435a4429b7eb72">m_state</a></td></tr>
+<tr class="memdesc:a38de21fb2cd6a1ae55435a4429b7eb72"><td class="mdescLeft">&#160;</td><td class="mdescRight">对端地址  <a href="#a38de21fb2cd6a1ae55435a4429b7eb72">更多...</a><br/></td></tr>
 <tr class="separator:a38de21fb2cd6a1ae55435a4429b7eb72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a627f8a634c31a815a51762aeb07eb0d9"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a627f8a634c31a815a51762aeb07eb0d9">m_stateMutex</a></td></tr>
+<tr class="memdesc:a627f8a634c31a815a51762aeb07eb0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接状态  <a href="#a627f8a634c31a815a51762aeb07eb0d9">更多...</a><br/></td></tr>
 <tr class="separator:a627f8a634c31a815a51762aeb07eb0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ed87c9344baf760f1f048efd5691501"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">TcpCallBack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a3ed87c9344baf760f1f048efd5691501">m_readCB</a></td></tr>
+<tr class="memdesc:a3ed87c9344baf760f1f048efd5691501"><td class="mdescLeft">&#160;</td><td class="mdescRight">保护m_state的互斥锁  <a href="#a3ed87c9344baf760f1f048efd5691501">更多...</a><br/></td></tr>
 <tr class="separator:a3ed87c9344baf760f1f048efd5691501"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a062c1906284e4b2d2181036995b0723c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">TcpCallBack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a062c1906284e4b2d2181036995b0723c">m_writeCB</a></td></tr>
+<tr class="memdesc:a062c1906284e4b2d2181036995b0723c"><td class="mdescLeft">&#160;</td><td class="mdescRight">读回调函数  <a href="#a062c1906284e4b2d2181036995b0723c">更多...</a><br/></td></tr>
 <tr class="separator:a062c1906284e4b2d2181036995b0723c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bc8a0cef1a1cd16394084fb0d558680"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">TcpCallBack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a1bc8a0cef1a1cd16394084fb0d558680">m_stateCB</a></td></tr>
+<tr class="memdesc:a1bc8a0cef1a1cd16394084fb0d558680"><td class="mdescLeft">&#160;</td><td class="mdescRight">写回调函数  <a href="#a1bc8a0cef1a1cd16394084fb0d558680">更多...</a><br/></td></tr>
 <tr class="separator:a1bc8a0cef1a1cd16394084fb0d558680"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a330be36460623734b51530157725d25e"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a330be36460623734b51530157725d25e">m_callBacksMutex</a></td></tr>
+<tr class="memdesc:a330be36460623734b51530157725d25e"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态变更回调函数  <a href="#a330be36460623734b51530157725d25e">更多...</a><br/></td></tr>
 <tr class="separator:a330be36460623734b51530157725d25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d61296998b2f4b8d12959e67aacf2e0"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="namespacehandy.html#af0934ac351162af463dce604c988ba31">IdleId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a6d61296998b2f4b8d12959e67aacf2e0">m_idleIds</a></td></tr>
+<tr class="memdesc:a6d61296998b2f4b8d12959e67aacf2e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">保护回调函数的互斥锁  <a href="#a6d61296998b2f4b8d12959e67aacf2e0">更多...</a><br/></td></tr>
 <tr class="separator:a6d61296998b2f4b8d12959e67aacf2e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affe2e36985f12b23adf01dc7e1abf0a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#affe2e36985f12b23adf01dc7e1abf0a5">m_timeoutId</a></td></tr>
+<tr class="memdesc:affe2e36985f12b23adf01dc7e1abf0a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲回调ID列表  <a href="#affe2e36985f12b23adf01dc7e1abf0a5">更多...</a><br/></td></tr>
 <tr class="separator:affe2e36985f12b23adf01dc7e1abf0a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab149aed0b79a27ee5c70e15536f6fb70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1AutoContext.html">AutoContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#ab149aed0b79a27ee5c70e15536f6fb70">m_ctx</a></td></tr>
+<tr class="memdesc:ab149aed0b79a27ee5c70e15536f6fb70"><td class="mdescLeft">&#160;</td><td class="mdescRight">超时ID  <a href="#ab149aed0b79a27ee5c70e15536f6fb70">更多...</a><br/></td></tr>
 <tr class="separator:ab149aed0b79a27ee5c70e15536f6fb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56e0cc2d68428768b8c179217ee64b46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1AutoContext.html">AutoContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a56e0cc2d68428768b8c179217ee64b46">m_internalCtx</a></td></tr>
+<tr class="memdesc:a56e0cc2d68428768b8c179217ee64b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">上下文对象  <a href="#a56e0cc2d68428768b8c179217ee64b46">更多...</a><br/></td></tr>
 <tr class="separator:a56e0cc2d68428768b8c179217ee64b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac57cbda534c37cba1052189752d6af92"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#ac57cbda534c37cba1052189752d6af92">m_ctxMutex</a></td></tr>
+<tr class="memdesc:ac57cbda534c37cba1052189752d6af92"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部上下文对象  <a href="#ac57cbda534c37cba1052189752d6af92">更多...</a><br/></td></tr>
 <tr class="separator:ac57cbda534c37cba1052189752d6af92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14aab2c33e2885f06685ec13ff6c8b99"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a14aab2c33e2885f06685ec13ff6c8b99">m_destHost</a></td></tr>
+<tr class="memdesc:a14aab2c33e2885f06685ec13ff6c8b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">保护上下文对象的互斥锁  <a href="#a14aab2c33e2885f06685ec13ff6c8b99">更多...</a><br/></td></tr>
 <tr class="separator:a14aab2c33e2885f06685ec13ff6c8b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f331924153b37ae62b8064bbac5eb77"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a6f331924153b37ae62b8064bbac5eb77">m_localIp</a></td></tr>
+<tr class="memdesc:a6f331924153b37ae62b8064bbac5eb77"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标主机地址  <a href="#a6f331924153b37ae62b8064bbac5eb77">更多...</a><br/></td></tr>
 <tr class="separator:a6f331924153b37ae62b8064bbac5eb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a395e908197e44c44353d247b972ee2b6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a395e908197e44c44353d247b972ee2b6">m_destPort</a></td></tr>
+<tr class="memdesc:a395e908197e44c44353d247b972ee2b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地IP地址  <a href="#a395e908197e44c44353d247b972ee2b6">更多...</a><br/></td></tr>
 <tr class="separator:a395e908197e44c44353d247b972ee2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f3ffecc6b09dfacf55c31bdf47b23af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a4f3ffecc6b09dfacf55c31bdf47b23af">m_connectTimeout_ms</a></td></tr>
+<tr class="memdesc:a4f3ffecc6b09dfacf55c31bdf47b23af"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标端口  <a href="#a4f3ffecc6b09dfacf55c31bdf47b23af">更多...</a><br/></td></tr>
 <tr class="separator:a4f3ffecc6b09dfacf55c31bdf47b23af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa587fd559a9aa65d432c1ec172c30d58"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#aa587fd559a9aa65d432c1ec172c30d58">m_reconnectInterval_ms</a></td></tr>
+<tr class="memdesc:aa587fd559a9aa65d432c1ec172c30d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接超时时间  <a href="#aa587fd559a9aa65d432c1ec172c30d58">更多...</a><br/></td></tr>
 <tr class="separator:aa587fd559a9aa65d432c1ec172c30d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad47d1bae416e0942e7006b08ea70318"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#aad47d1bae416e0942e7006b08ea70318">m_intervalMutex</a></td></tr>
+<tr class="memdesc:aad47d1bae416e0942e7006b08ea70318"><td class="mdescLeft">&#160;</td><td class="mdescRight">重连间隔时间  <a href="#aad47d1bae416e0942e7006b08ea70318">更多...</a><br/></td></tr>
 <tr class="separator:aad47d1bae416e0942e7006b08ea70318"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c4184b561eab95dd4208682d11aac65"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a4c4184b561eab95dd4208682d11aac65">m_connectedTime_ms</a></td></tr>
+<tr class="memdesc:a4c4184b561eab95dd4208682d11aac65"><td class="mdescLeft">&#160;</td><td class="mdescRight">重连间隔的互斥锁  <a href="#a4c4184b561eab95dd4208682d11aac65">更多...</a><br/></td></tr>
 <tr class="separator:a4c4184b561eab95dd4208682d11aac65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a247c7c3fb578da91908caabf4c80f1c9"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classhandy_1_1CodecBase.html">CodecBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a247c7c3fb578da91908caabf4c80f1c9">m_codec</a></td></tr>
+<tr class="memdesc:a247c7c3fb578da91908caabf4c80f1c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接建立时间  <a href="#a247c7c3fb578da91908caabf4c80f1c9">更多...</a><br/></td></tr>
 <tr class="separator:a247c7c3fb578da91908caabf4c80f1c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -346,12 +371,16 @@ Private 属性</h2></td></tr>
 <tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ae3b68d2c0a60e9b035eb1855f8148b0aaccc0377a8afbf50e7094f5c23a8af223"></a>INVALID</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="ae3b68d2c0a60e9b035eb1855f8148b0aa8c9e5040ff5f5c6700f35ce1f5e627ff"></a>HAND_SHAKING</em>&nbsp;</td><td class="fielddoc">
+<p>无效状态 </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="ae3b68d2c0a60e9b035eb1855f8148b0aaa5afd6edd5336d91316964e493936858"></a>CONNECTED</em>&nbsp;</td><td class="fielddoc">
+<p>正在握手 </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="ae3b68d2c0a60e9b035eb1855f8148b0aa110ccf2f5d2ff4eda1fd1a494293467d"></a>CLOSED</em>&nbsp;</td><td class="fielddoc">
+<p>已连接 </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="ae3b68d2c0a60e9b035eb1855f8148b0aab9e14d9b2886bcff408b85aefa780419"></a>FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>已关闭 </p>
 </td></tr>
 </table>
 
@@ -520,6 +549,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>编解码器 </p>
 <p>处理读事件 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -1149,7 +1179,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>获取内部上下文 </p>
-<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1AutoContext.html" title="自动上下文管理器（线程安全） ">AutoContext</a>&amp; 内部上下文 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1AutoContext.html" title="定时任务ID类型&lt; 超时时间戳，序列号（自增整数）&gt;=&quot;&quot;&gt; ">AutoContext</a>&amp; 内部上下文 </dd></dl>
 
 </div>
 </div>
@@ -1657,6 +1687,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>状态变更回调函数 </p>
+
 </div>
 </div>
 <a class="anchor" id="a2cd6fe876b1a5c77b3a16a0ee528a4de"></a>
@@ -1676,6 +1708,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>所属的事件循环 </p>
 
 </div>
 </div>
@@ -1697,6 +1731,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>关联的事件通道 </p>
+
 </div>
 </div>
 <a class="anchor" id="a247c7c3fb578da91908caabf4c80f1c9"></a>
@@ -1716,6 +1752,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>连接建立时间 </p>
 
 </div>
 </div>
@@ -1737,6 +1775,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>重连间隔的互斥锁 </p>
+
 </div>
 </div>
 <a class="anchor" id="a4f3ffecc6b09dfacf55c31bdf47b23af"></a>
@@ -1756,6 +1796,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>目标端口 </p>
 
 </div>
 </div>
@@ -1777,6 +1819,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>超时ID </p>
+
 </div>
 </div>
 <a class="anchor" id="ac57cbda534c37cba1052189752d6af92"></a>
@@ -1796,6 +1840,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>内部上下文对象 </p>
 
 </div>
 </div>
@@ -1817,6 +1863,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>保护上下文对象的互斥锁 </p>
+
 </div>
 </div>
 <a class="anchor" id="a395e908197e44c44353d247b972ee2b6"></a>
@@ -1836,6 +1884,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>本地IP地址 </p>
 
 </div>
 </div>
@@ -1857,6 +1907,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>保护回调函数的互斥锁 </p>
+
 </div>
 </div>
 <a class="anchor" id="a7ac3be768de7bab61fde080bed353e9f"></a>
@@ -1876,6 +1928,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>保护m_channel的互斥锁 </p>
 
 </div>
 </div>
@@ -1897,6 +1951,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>上下文对象 </p>
+
 </div>
 </div>
 <a class="anchor" id="aad47d1bae416e0942e7006b08ea70318"></a>
@@ -1916,6 +1972,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>重连间隔时间 </p>
 
 </div>
 </div>
@@ -1937,6 +1995,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>输出缓冲区 </p>
+
 </div>
 </div>
 <a class="anchor" id="a6f331924153b37ae62b8064bbac5eb77"></a>
@@ -1956,6 +2016,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>目标主机地址 </p>
 
 </div>
 </div>
@@ -1977,6 +2039,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>输入缓冲区 </p>
+
 </div>
 </div>
 <a class="anchor" id="aa3ed99edbeeb22ba99834afcb1739eed"></a>
@@ -1996,6 +2060,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>本地地址 </p>
 
 </div>
 </div>
@@ -2017,6 +2083,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>保护m_state的互斥锁 </p>
+
 </div>
 </div>
 <a class="anchor" id="aa587fd559a9aa65d432c1ec172c30d58"></a>
@@ -2036,6 +2104,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>连接超时时间 </p>
 
 </div>
 </div>
@@ -2057,6 +2127,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>对端地址 </p>
+
 </div>
 </div>
 <a class="anchor" id="a1bc8a0cef1a1cd16394084fb0d558680"></a>
@@ -2076,6 +2148,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>写回调函数 </p>
 
 </div>
 </div>
@@ -2097,6 +2171,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>连接状态 </p>
+
 </div>
 </div>
 <a class="anchor" id="affe2e36985f12b23adf01dc7e1abf0a5"></a>
@@ -2117,6 +2193,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>空闲回调ID列表 </p>
+
 </div>
 </div>
 <a class="anchor" id="a062c1906284e4b2d2181036995b0723c"></a>
@@ -2136,6 +2214,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>读回调函数 </p>
 
 </div>
 </div>

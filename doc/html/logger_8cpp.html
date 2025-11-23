@@ -90,6 +90,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="title">logger.cpp 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>日志系统核心实现文件，提供多级别、线程安全的日志记录功能  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br/>
 <code>#include &lt;cstdarg&gt;</code><br/>
 <code>#include &lt;memory&gt;</code><br/>
@@ -102,7 +105,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memitem:namespacehandy"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html">handy</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>日志系统核心实现文件，提供多级别、线程安全的日志记录功能 </p>
+<p>该文件实现了Logger类的核心逻辑，支持日志级别控制、日志轮转、线程安全写入等功能，核心特性如下：</p>
+<ol type="1">
+<li>日志级别管理：支持FATAL、ERROR、WARN、INFO、DEBUG、TRACE、ALL七个级别，可动态设置日志级别，过滤低级别日志；</li>
+<li>日志内容格式化：每条日志包含时间戳（精确到毫秒）、日志级别、文件路径、行号、函数名、日志内容等信息，便于问题定位；</li>
+<li>线程安全设计：使用std::mutex保证多线程环境下日志写入的原子性，避免日志错乱；</li>
+<li>日志输出控制：支持输出到标准输出（stdout）或文件，可通过setLogFileName()切换输出目标；</li>
+<li>日志轮转机制：支持按文件大小和时间间隔触发轮转，自动备份旧日志文件（命名格式：原文件名.时间戳），避免日志文件过大；</li>
+<li>可变参数处理：基于va_list实现可变参数日志格式化，支持printf风格的格式化字符串； <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ol>
+<ol type="1">
+<li>日志轮转配置：默认通过m_maxLogFileSize（最大文件大小）和m_rotateInterval（时间间隔）控制轮转触发条件，需提前配置；</li>
+<li>性能考虑：日志写入使用fwrite+fflush确保数据及时落盘，但fflush会影响性能，高并发场景下可考虑异步日志方案；</li>
+<li>错误处理：日志文件打开失败时会自动回退到标准输出，确保程序正常运行；</li>
+<li>线程安全：所有日志写入和配置修改操作均通过互斥锁保护，支持多线程并发调用；</li>
+<li>时间戳格式：日志中的时间戳使用本地时间，格式为"YYYY-MM-DD HH:MM:SS.xxx"（xxx为毫秒）。 </li>
+</ol>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

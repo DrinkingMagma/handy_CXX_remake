@@ -121,7 +121,7 @@ Public 类型</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a28b2e607dd22ae09a66da113805c9d87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpServer.html#a28b2e607dd22ae09a66da113805c9d87">TcpServer</a> (<a class="el" href="classhandy_1_1EventBases.html">EventBases</a> *bases)</td></tr>
-<tr class="memdesc:a28b2e607dd22ae09a66da113805c9d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <a href="#a28b2e607dd22ae09a66da113805c9d87">更多...</a><br/></td></tr>
+<tr class="memdesc:a28b2e607dd22ae09a66da113805c9d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">TcpServer智能指针类型定义  <a href="#a28b2e607dd22ae09a66da113805c9d87">更多...</a><br/></td></tr>
 <tr class="separator:a28b2e607dd22ae09a66da113805c9d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0824280b6b26b1d1908c28f28c95db49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpServer.html#a0824280b6b26b1d1908c28f28c95db49">~TcpServer</a> ()</td></tr>
 <tr class="memdesc:a0824280b6b26b1d1908c28f28c95db49"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <a href="#a0824280b6b26b1d1908c28f28c95db49">更多...</a><br/></td></tr>
@@ -157,7 +157,7 @@ Public 成员函数</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private 成员函数</h2></td></tr>
 <tr class="memitem:accbcb053cf5ecc7e7c21b6274cb2439e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpServer.html#accbcb053cf5ecc7e7c21b6274cb2439e">_handleAccept</a> ()</td></tr>
-<tr class="memdesc:accbcb053cf5ecc7e7c21b6274cb2439e"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理接受连接事件  <a href="#accbcb053cf5ecc7e7c21b6274cb2439e">更多...</a><br/></td></tr>
+<tr class="memdesc:accbcb053cf5ecc7e7c21b6274cb2439e"><td class="mdescLeft">&#160;</td><td class="mdescRight">回调函数的互斥锁  <a href="#accbcb053cf5ecc7e7c21b6274cb2439e">更多...</a><br/></td></tr>
 <tr class="separator:accbcb053cf5ecc7e7c21b6274cb2439e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classhandy_1_1NonCopyAble"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classhandy_1_1NonCopyAble')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classhandy_1_1NonCopyAble.html">handy::NonCopyAble</a></td></tr>
 <tr class="memitem:af559df4e2ebd8b9e54566633b7bf9855 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1NonCopyAble.html#af559df4e2ebd8b9e54566633b7bf9855">NonCopyAble</a> ()=default</td></tr>
@@ -178,24 +178,34 @@ Private 属性</h2></td></tr>
 <tr class="memitem:a56b73076aebf0ed4217a39fbcbd8f9a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpServer.html#a56b73076aebf0ed4217a39fbcbd8f9a3">m_base</a></td></tr>
 <tr class="separator:a56b73076aebf0ed4217a39fbcbd8f9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a545efedbb0fdbd4c2cccc9aa58931ee1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBases.html">EventBases</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpServer.html#a545efedbb0fdbd4c2cccc9aa58931ee1">m_bases</a></td></tr>
+<tr class="memdesc:a545efedbb0fdbd4c2cccc9aa58931ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件循环对象  <a href="#a545efedbb0fdbd4c2cccc9aa58931ee1">更多...</a><br/></td></tr>
 <tr class="separator:a545efedbb0fdbd4c2cccc9aa58931ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95441dbec87c26813299aa128fe71669"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpServer.html#a95441dbec87c26813299aa128fe71669">m_addr</a> = <a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>(0)</td></tr>
+<tr class="memdesc:a95441dbec87c26813299aa128fe71669"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件循环对象组  <a href="#a95441dbec87c26813299aa128fe71669">更多...</a><br/></td></tr>
 <tr class="separator:a95441dbec87c26813299aa128fe71669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a957d00442e57bba705544c32e3dd56de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1Channel.html">Channel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpServer.html#a957d00442e57bba705544c32e3dd56de">m_listenChannel</a></td></tr>
+<tr class="memdesc:a957d00442e57bba705544c32e3dd56de"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定的服务器地址  <a href="#a957d00442e57bba705544c32e3dd56de">更多...</a><br/></td></tr>
 <tr class="separator:a957d00442e57bba705544c32e3dd56de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74b4f2d45235627f97183d811e44f3e4"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpServer.html#a74b4f2d45235627f97183d811e44f3e4">m_ChannelMutex</a></td></tr>
+<tr class="memdesc:a74b4f2d45235627f97183d811e44f3e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">监听通道  <a href="#a74b4f2d45235627f97183d811e44f3e4">更多...</a><br/></td></tr>
 <tr class="separator:a74b4f2d45235627f97183d811e44f3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7279ff8cb8f842c6532cfd099e13acfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">TcpCallBack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpServer.html#a7279ff8cb8f842c6532cfd099e13acfe">m_stateCB</a></td></tr>
+<tr class="memdesc:a7279ff8cb8f842c6532cfd099e13acfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">监听通道的互斥锁  <a href="#a7279ff8cb8f842c6532cfd099e13acfe">更多...</a><br/></td></tr>
 <tr class="separator:a7279ff8cb8f842c6532cfd099e13acfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab40133c6f12dcb2b963ebffabdeb6440"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">TcpCallBack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpServer.html#ab40133c6f12dcb2b963ebffabdeb6440">m_readCB</a></td></tr>
+<tr class="memdesc:ab40133c6f12dcb2b963ebffabdeb6440"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接状态回调函数  <a href="#ab40133c6f12dcb2b963ebffabdeb6440">更多...</a><br/></td></tr>
 <tr class="separator:ab40133c6f12dcb2b963ebffabdeb6440"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4038ad9d0b536dece634d493efac60d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#a3ea5af3f590ac7621cb8ec61e2bfed56">MsgCallBack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpServer.html#a4038ad9d0b536dece634d493efac60d8">m_msgCB</a></td></tr>
+<tr class="memdesc:a4038ad9d0b536dece634d493efac60d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">读事件回调函数  <a href="#a4038ad9d0b536dece634d493efac60d8">更多...</a><br/></td></tr>
 <tr class="separator:a4038ad9d0b536dece634d493efac60d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6146f35d49cf9f93016e18548771c09"><td class="memItemLeft" align="right" valign="top">std::function&lt; <a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a>()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpServer.html#af6146f35d49cf9f93016e18548771c09">m_createCB</a></td></tr>
+<tr class="memdesc:af6146f35d49cf9f93016e18548771c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息回调函数  <a href="#af6146f35d49cf9f93016e18548771c09">更多...</a><br/></td></tr>
 <tr class="separator:af6146f35d49cf9f93016e18548771c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dd625abc3718d3a9f80962e1874c16c"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classhandy_1_1CodecBase.html">CodecBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpServer.html#a7dd625abc3718d3a9f80962e1874c16c">m_codec</a></td></tr>
+<tr class="memdesc:a7dd625abc3718d3a9f80962e1874c16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接创建回调函数  <a href="#a7dd625abc3718d3a9f80962e1874c16c">更多...</a><br/></td></tr>
 <tr class="separator:a7dd625abc3718d3a9f80962e1874c16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06392b0d5018834bd5f3bea671d611b4"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpServer.html#a06392b0d5018834bd5f3bea671d611b4">m_callBacksMutex</a></td></tr>
+<tr class="memdesc:a06392b0d5018834bd5f3bea671d611b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">编解码器  <a href="#a06392b0d5018834bd5f3bea671d611b4">更多...</a><br/></td></tr>
 <tr class="separator:a06392b0d5018834bd5f3bea671d611b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -236,6 +246,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>TcpServer智能指针类型定义 </p>
 <p>构造函数 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -285,6 +296,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>回调函数的互斥锁 </p>
 <p>处理接受连接事件 </p>
 
 </div>
@@ -602,6 +614,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>事件循环对象组 </p>
+
 </div>
 </div>
 <a class="anchor" id="a56b73076aebf0ed4217a39fbcbd8f9a3"></a>
@@ -642,6 +656,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>事件循环对象 </p>
+
 </div>
 </div>
 <a class="anchor" id="a06392b0d5018834bd5f3bea671d611b4"></a>
@@ -661,6 +677,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>编解码器 </p>
 
 </div>
 </div>
@@ -682,6 +700,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>监听通道 </p>
+
 </div>
 </div>
 <a class="anchor" id="a7dd625abc3718d3a9f80962e1874c16c"></a>
@@ -701,6 +721,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>连接创建回调函数 </p>
 
 </div>
 </div>
@@ -722,6 +744,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>消息回调函数 </p>
+
 </div>
 </div>
 <a class="anchor" id="a957d00442e57bba705544c32e3dd56de"></a>
@@ -741,6 +765,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>绑定的服务器地址 </p>
 
 </div>
 </div>
@@ -762,6 +788,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>读事件回调函数 </p>
+
 </div>
 </div>
 <a class="anchor" id="ab40133c6f12dcb2b963ebffabdeb6440"></a>
@@ -782,6 +810,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>连接状态回调函数 </p>
+
 </div>
 </div>
 <a class="anchor" id="a7279ff8cb8f842c6532cfd099e13acfe"></a>
@@ -801,6 +831,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>监听通道的互斥锁 </p>
 
 </div>
 </div>

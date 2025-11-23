@@ -91,10 +91,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="title">poller.cpp 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>跨平台I/O事件轮询器实现文件，封装epoll(kqueue)系统调用，为事件驱动框架提供核心事件管理能力  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="poller_8h_source.html">poller.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="event__base_8h_source.html">event_base.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="current__os_8h_source.html">current_os.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="platform_8h_source.html">platform.h</a>&quot;</code><br/>
 <code>#include &lt;set&gt;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -108,7 +111,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memdesc:a69606e6700aa1efe845830b858c8c578"><td class="mdescLeft">&#160;</td><td class="mdescRight">轮询器工厂函数  <a href="#a69606e6700aa1efe845830b858c8c578">更多...</a><br/></td></tr>
 <tr class="separator:a69606e6700aa1efe845830b858c8c578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>跨平台I/O事件轮询器实现文件，封装epoll(kqueue)系统调用，为事件驱动框架提供核心事件管理能力 </p>
+<p>该文件实现了基于epoll(Linux)和kqueue(macOS)的事件轮询器，核心功能包括：</p>
+<ol type="1">
+<li>事件注册与管理：支持Channel的添加(addChannel)、移除(removeChannel)和事件更新(updateChannel)，维护活跃Channel集合；</li>
+<li>事件轮询：通过loopOnce方法执行一次事件等待，返回触发的活跃事件数量，支持超时配置（-1表示无限等待）；</li>
+<li>事件分发：将轮询到的I/O事件（读/写）分发给对应的Channel，调用其handleRead/handleWrite方法处理；</li>
+<li>线程安全：通过互斥锁保护活跃Channel集合的访问，确保多线程环境下事件操作的安全性；</li>
+<li>跨平台兼容：通过条件编译适配Linux(epoll)和macOS(kqueue)，提供统一的PollerBase接口； <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ol>
+<ol type="1">
+<li>资源管理：析构函数会自动关闭epoll/kqueue实例，并遍历关闭所有活跃Channel，避免资源泄漏；</li>
+<li>错误处理：事件操作（如epoll_ctl、kevent）失败时会抛出std::runtime_error异常，包含详细错误信息（errno和错误描述）；</li>
+<li>事件类型：支持读事件（包含POLLERR错误事件）和写事件，未预期的事件类型会触发FATAL日志并抛出异常；</li>
+<li>性能优化：epoll使用EPOLL_CLOEXEC标志确保exec后自动关闭实例，kqueue通过timespec设置精确超时；</li>
+<li>工厂函数：createPoller()根据当前操作系统自动创建对应的Poller实例，简化上层使用；</li>
+<li>平台限制：目前仅支持Linux和macOS，其他平台会触发编译错误。 </li>
+</ol>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

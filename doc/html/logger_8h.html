@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="title">logger.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>日志系统核心头文件，提供线程安全的日志记录功能和便捷的日志宏定义  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="non__copy__able_8h_source.html">non_copy_able.h</a>&quot;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
 <code>#include &lt;mutex&gt;</code><br/>
@@ -113,8 +116,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 宏定义</h2></td></tr>
 <tr class="memitem:aade7269bb68eed682e7094993c435d4b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(level, fmt,...)</td></tr>
+<tr class="memdesc:aade7269bb68eed682e7094993c435d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑  <a href="#aade7269bb68eed682e7094993c435d4b">更多...</a><br/></td></tr>
 <tr class="separator:aade7269bb68eed682e7094993c435d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21cc0459b78d5f2d7bd737e5aae1278a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(fmt,...)&#160;&#160;&#160;<a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea7a1f0ddc23197504d1a80423b27440bf">handy::Logger::LTRACE</a>, fmt, ##__VA_ARGS__)</td></tr>
+<tr class="memdesc:a21cc0459b78d5f2d7bd737e5aae1278a"><td class="mdescLeft">&#160;</td><td class="mdescRight">简化日志宏：直接传递 level + fmt + 可变参数（与 HLOG 格式匹配）  <a href="#a21cc0459b78d5f2d7bd737e5aae1278a">更多...</a><br/></td></tr>
 <tr class="separator:a21cc0459b78d5f2d7bd737e5aae1278a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad96d3a6cf3e98ce15febe3d27bda47bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(fmt,...)&#160;&#160;&#160;<a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea74b1654c774e5d2f163a062015ca946b">handy::Logger::LDEBUG</a>, fmt, ##__VA_ARGS__)</td></tr>
 <tr class="separator:ad96d3a6cf3e98ce15febe3d27bda47bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,19 +130,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memitem:a15378cd15bafb3a79061424b452497aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(fmt,...)&#160;&#160;&#160;<a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9">handy::Logger::LERROR</a>, fmt, ##__VA_ARGS__)</td></tr>
 <tr class="separator:a15378cd15bafb3a79061424b452497aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a053d6037d543b84ce59308ce71d15cd1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a053d6037d543b84ce59308ce71d15cd1">FATAL</a>(fmt,...)&#160;&#160;&#160;do { <a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(<a class="el" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a>, fmt, ##__VA_ARGS__); std::abort(); } while (0)</td></tr>
+<tr class="memdesc:a053d6037d543b84ce59308ce71d15cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">std::abort()：终止程序运行  <a href="#a053d6037d543b84ce59308ce71d15cd1">更多...</a><br/></td></tr>
 <tr class="separator:a053d6037d543b84ce59308ce71d15cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaad6a85aecfc4d2bc60259e986af4581"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#aaad6a85aecfc4d2bc60259e986af4581">FATAL_IF</a>(b,...)</td></tr>
+<tr class="memdesc:aaad6a85aecfc4d2bc60259e986af4581"><td class="mdescLeft">&#160;</td><td class="mdescRight">条件日志宏：在特定条件满足时自动记录并执行相应的操作  <a href="#aaad6a85aecfc4d2bc60259e986af4581">更多...</a><br/></td></tr>
 <tr class="separator:aaad6a85aecfc4d2bc60259e986af4581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78559860b0d897def272733a90440e52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a78559860b0d897def272733a90440e52">CHECK</a>(b,...)</td></tr>
 <tr class="separator:a78559860b0d897def272733a90440e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affeaaefc2a9407dc7577f6cf3f8e0d15"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#affeaaefc2a9407dc7577f6cf3f8e0d15">EXIT_IF</a>(b,...)</td></tr>
 <tr class="separator:affeaaefc2a9407dc7577f6cf3f8e0d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b2f5c234822e4ed18847adc529a6853"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a3b2f5c234822e4ed18847adc529a6853">SET_LOG_LEVEL</a>(l)&#160;&#160;&#160;<a class="el" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a>().setLogLevel(l)</td></tr>
+<tr class="memdesc:a3b2f5c234822e4ed18847adc529a6853"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志级别宏  <a href="#a3b2f5c234822e4ed18847adc529a6853">更多...</a><br/></td></tr>
 <tr class="separator:a3b2f5c234822e4ed18847adc529a6853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae920f7f94cd053df1aadfc2bcb40b0a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ae920f7f94cd053df1aadfc2bcb40b0a2">SET_LOG_FILE</a>(f)&#160;&#160;&#160;<a class="el" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a>().setLogFileName(f)</td></tr>
+<tr class="memdesc:ae920f7f94cd053df1aadfc2bcb40b0a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件设置宏  <a href="#ae920f7f94cd053df1aadfc2bcb40b0a2">更多...</a><br/></td></tr>
 <tr class="separator:ae920f7f94cd053df1aadfc2bcb40b0a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">宏定义说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>日志系统核心头文件，提供线程安全的日志记录功能和便捷的日志宏定义 </p>
+<p>该文件定义了Logger类和一系列日志宏，支持多级别日志记录、日志轮转、线程安全写入等功能，核心特性如下：</p>
+<ol type="1">
+<li>日志级别管理：定义了LFATAL、LERROR、LWARN、LINFO、LDEBUG、LTRACE、LALL七个级别，可动态调整日志级别，过滤低级别日志；</li>
+<li>便捷日志宏：提供HLOG基础宏和TRACE、DEBUG、INFO、WARN、ERROR、FATAL等简化宏，支持文件、行号、函数名自动记录，调试模式下还会进行日志格式字符串语法检查；</li>
+<li>条件日志宏：提供FATAL_IF、CHECK、EXIT_IF等条件宏，满足特定条件时自动记录日志并执行终止程序或退出操作；</li>
+<li>日志配置接口：支持设置日志输出文件（setLogFileName）、日志级别（setLogLevel）、日志轮转间隔（setLogRotateInterval）、日志文件大小限制（setMaxLogFileSize）等；</li>
+<li>线程安全设计：使用std::mutex保护日志写入和配置修改操作，std::atomic确保日志级别读取的原子性，支持多线程并发调用；</li>
+<li>日志轮转机制：支持按时间间隔（默认1天）和文件大小（默认10MB）触发日志轮转，自动备份旧日志文件（命名格式：原文件名.时间戳）； <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+</ol>
+<ol type="1">
+<li>单例模式：Logger类采用单例模式设计，通过getInstance()获取唯一实例，禁止拷贝和实例化；</li>
+<li>编译模式差异：调试模式（未定义NDEBUG）下，日志宏会进行格式字符串语法检查，发布模式下则关闭该检查以提升性能；</li>
+<li>日志输出默认：默认输出到标准输出（stdout），若设置日志文件失败，会自动回退到标准输出；</li>
+<li>轮转配置限制：日志轮转间隔最小为1小时，避免过于频繁的轮转；</li>
+<li>线程安全范围：所有日志记录和配置修改操作均为线程安全，但日志宏中的条件判断（如level &lt;= getLogLevel()）是非原子的，若在多线程环境下同时修改日志级别和记录日志，可能会出现少量低级别日志漏记或误记，不影响程序正确性。 </li>
+</ol>
+</div><h2 class="groupheader">宏定义说明</h2>
 <a class="anchor" id="a78559860b0d897def272733a90440e52"></a>
 <div class="memitem">
 <div class="memproto">
@@ -167,8 +195,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="line">            std::abort();                                   \</div>
 <div class="line">        }                                                   \</div>
 <div class="line">    } <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdef"><b>Definition:</b> logger.h:24</div></div>
-<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a></div><div class="ttdef"><b>Definition:</b> logger.h:81</div></div>
+<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdoc">日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑 </div><div class="ttdef"><b>Definition:</b> logger.h:45</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a></div><div class="ttdef"><b>Definition:</b> logger.h:103</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -253,8 +281,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="line">            std::exit(1);                                   \</div>
 <div class="line">        }                                                   \</div>
 <div class="line">    } <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9">handy::Logger::LERROR</a></div><div class="ttdef"><b>Definition:</b> logger.h:82</div></div>
-<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdef"><b>Definition:</b> logger.h:24</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9">handy::Logger::LERROR</a></div><div class="ttdef"><b>Definition:</b> logger.h:104</div></div>
+<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdoc">日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑 </div><div class="ttdef"><b>Definition:</b> logger.h:45</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -281,6 +309,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>std::abort()：终止程序运行 </p>
 
 </div>
 </div>
@@ -313,9 +343,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="line">            std::abort();                                   \</div>
 <div class="line">        }                                                   \</div>
 <div class="line">    } <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdef"><b>Definition:</b> logger.h:24</div></div>
-<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a></div><div class="ttdef"><b>Definition:</b> logger.h:81</div></div>
+<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdoc">日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑 </div><div class="ttdef"><b>Definition:</b> logger.h:45</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a></div><div class="ttdef"><b>Definition:</b> logger.h:103</div></div>
 </div><!-- fragment -->
+<p>条件日志宏：在特定条件满足时自动记录并执行相应的操作 </p>
+
 </div>
 </div>
 <a class="anchor" id="aade7269bb68eed682e7094993c435d4b"></a>
@@ -355,9 +387,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="line"><a class="code" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">            handy::Logger::getInstance</a>().<a class="code" href="classhandy_1_1Logger.html#a6d61757bf1d37101021e3bdc63e78c6d">logv</a>(level, __FILE__, __LINE__, __func__, fmt, ##__VA_ARGS__);      \</div>
 <div class="line">        }                                                                                   \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
-<div class="ttc" id="classhandy_1_1Logger_html_aa28b152799dd56d5fea997e699996725"><div class="ttname"><a href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a></div><div class="ttdeci">static Logger &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> logger.h:91</div></div>
-<div class="ttc" id="classhandy_1_1Logger_html_a6d61757bf1d37101021e3bdc63e78c6d"><div class="ttname"><a href="classhandy_1_1Logger.html#a6d61757bf1d37101021e3bdc63e78c6d">handy::Logger::logv</a></div><div class="ttdeci">void logv(int level, const char *file, int line, const char *func, const char *fmt,...)</div><div class="ttdoc">日志记录函数 </div><div class="ttdef"><b>Definition:</b> logger.cpp:22</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_aa28b152799dd56d5fea997e699996725"><div class="ttname"><a href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a></div><div class="ttdeci">static Logger &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> logger.h:113</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a6d61757bf1d37101021e3bdc63e78c6d"><div class="ttname"><a href="classhandy_1_1Logger.html#a6d61757bf1d37101021e3bdc63e78c6d">handy::Logger::logv</a></div><div class="ttdeci">void logv(int level, const char *file, int line, const char *func, const char *fmt,...)</div><div class="ttdoc">日志记录函数 </div><div class="ttdef"><b>Definition:</b> logger.cpp:41</div></div>
 </div><!-- fragment -->
+<p>日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑 </p>
+<p>若当前为调试模式（Debug） 用日志格式字符串初始化一个静态常量，让编译器在编译器检查日志格式字符串的语法有效性 static const char* checkFmt = fmt: 仅用格式字符串初始化，不含变量 避免编译器警告"未使用的变量checkFmt"，将其强制转换为void，表示已使用 </p>
+
 </div>
 </div>
 <a class="anchor" id="ab56f6599fb46785e4265a3033ba91aa6"></a>
@@ -400,6 +435,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
       </table>
 </div><div class="memdoc">
 
+<p>文件设置宏 </p>
+
 </div>
 </div>
 <a class="anchor" id="a3b2f5c234822e4ed18847adc529a6853"></a>
@@ -415,6 +452,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>日志级别宏 </p>
 
 </div>
 </div>
@@ -441,6 +480,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>简化日志宏：直接传递 level + fmt + 可变参数（与 HLOG 格式匹配） </p>
 
 </div>
 </div>

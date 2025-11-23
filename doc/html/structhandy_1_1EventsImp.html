@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a09de5abce0a3e1bb6a33b817b4d0d6ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a09de5abce0a3e1bb6a33b817b4d0d6ea">EventsImp</a> (<a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *base, int taskCap)</td></tr>
-<tr class="memdesc:a09de5abce0a3e1bb6a33b817b4d0d6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数：初始化时间派发器内部实现  <a href="#a09de5abce0a3e1bb6a33b817b4d0d6ea">更多...</a><br/></td></tr>
+<tr class="memdesc:a09de5abce0a3e1bb6a33b817b4d0d6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">重连连接集合的互斥锁  <a href="#a09de5abce0a3e1bb6a33b817b4d0d6ea">更多...</a><br/></td></tr>
 <tr class="separator:a09de5abce0a3e1bb6a33b817b4d0d6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad70dbc2f490812a4e2b11daf6b82c63f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#ad70dbc2f490812a4e2b11daf6b82c63f">~EventsImp</a> ()</td></tr>
 <tr class="memdesc:ad70dbc2f490812a4e2b11daf6b82c63f"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数：释放资源  <a href="#ad70dbc2f490812a4e2b11daf6b82c63f">更多...</a><br/></td></tr>
@@ -151,30 +151,42 @@ Public 属性</h2></td></tr>
 <tr class="memitem:a83b705842cd70060c4d9a3a00eb664ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1PollerBase.html">PollerBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a83b705842cd70060c4d9a3a00eb664ff">m_poller</a></td></tr>
 <tr class="separator:a83b705842cd70060c4d9a3a00eb664ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acabc8339f085499357f2e88ef27fdf6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#acabc8339f085499357f2e88ef27fdf6d">m_base</a></td></tr>
+<tr class="memdesc:acabc8339f085499357f2e88ef27fdf6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">I/O多路复用器（epoll/kqueue）  <a href="#acabc8339f085499357f2e88ef27fdf6d">更多...</a><br/></td></tr>
 <tr class="separator:acabc8339f085499357f2e88ef27fdf6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cc84095c0704aeccab4f3b584ec3b06"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a4cc84095c0704aeccab4f3b584ec3b06">m_exit</a></td></tr>
+<tr class="memdesc:a4cc84095c0704aeccab4f3b584ec3b06"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联的EventBase对象（非空）  <a href="#a4cc84095c0704aeccab4f3b584ec3b06">更多...</a><br/></td></tr>
 <tr class="separator:a4cc84095c0704aeccab4f3b584ec3b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f6b9920726c68be935880211ec4f1db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a7f6b9920726c68be935880211ec4f1db">m_wakeupFds</a> [2]</td></tr>
+<tr class="memdesc:a7f6b9920726c68be935880211ec4f1db"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件循环退出标志（原子操作，线程安全）  <a href="#a7f6b9920726c68be935880211ec4f1db">更多...</a><br/></td></tr>
 <tr class="separator:a7f6b9920726c68be935880211ec4f1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e0acc756aa32becc7a1b647fb92c5a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a8e0acc756aa32becc7a1b647fb92c5a1">m_nextTimeout_ms</a></td></tr>
+<tr class="memdesc:a8e0acc756aa32becc7a1b647fb92c5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">唤醒事件循环的管道（0：读端，1：写端）  <a href="#a8e0acc756aa32becc7a1b647fb92c5a1">更多...</a><br/></td></tr>
 <tr class="separator:a8e0acc756aa32becc7a1b647fb92c5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab06b7e3ab442dba24ba5497ccf4f2b95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a>&lt; <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#ab06b7e3ab442dba24ba5497ccf4f2b95">m_tasks</a></td></tr>
+<tr class="memdesc:ab06b7e3ab442dba24ba5497ccf4f2b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">下一个定时器的超时时间（毫秒，用于Poller等待）  <a href="#ab06b7e3ab442dba24ba5497ccf4f2b95">更多...</a><br/></td></tr>
 <tr class="separator:ab06b7e3ab442dba24ba5497ccf4f2b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af815c2be8223301c898e503346691f82"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a>, <br class="typebreak"/>
 <a class="el" href="structhandy_1_1TimerRepeatable.html">TimerRepeatable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#af815c2be8223301c898e503346691f82">m_timerReps</a></td></tr>
+<tr class="memdesc:af815c2be8223301c898e503346691f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步任务队列（线程安全，支持跨线程投递）  <a href="#af815c2be8223301c898e503346691f82">更多...</a><br/></td></tr>
 <tr class="separator:af815c2be8223301c898e503346691f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b26fc9d80a1b36f9fa0a29867a9ae3a"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a>, <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a3b26fc9d80a1b36f9fa0a29867a9ae3a">m_timers</a></td></tr>
+<tr class="memdesc:a3b26fc9d80a1b36f9fa0a29867a9ae3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">可重复定时器映射  <a href="#a3b26fc9d80a1b36f9fa0a29867a9ae3a">更多...</a><br/></td></tr>
 <tr class="separator:a3b26fc9d80a1b36f9fa0a29867a9ae3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00fe1dbf2eb4944c73871eb7fa886609"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a00fe1dbf2eb4944c73871eb7fa886609">m_timerSeq</a></td></tr>
+<tr class="memdesc:a00fe1dbf2eb4944c73871eb7fa886609"><td class="mdescLeft">&#160;</td><td class="mdescRight">一次性任务定时器映射  <a href="#a00fe1dbf2eb4944c73871eb7fa886609">更多...</a><br/></td></tr>
 <tr class="separator:a00fe1dbf2eb4944c73871eb7fa886609"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18ac9c804376f2893751965034e8a18f"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, std::list<br class="typebreak"/>
 &lt; <a class="el" href="structhandy_1_1IdleNode.html">IdleNode</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a18ac9c804376f2893751965034e8a18f">m_idleConns</a></td></tr>
+<tr class="memdesc:a18ac9c804376f2893751965034e8a18f"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器序列号（用于生成定时器ID）  <a href="#a18ac9c804376f2893751965034e8a18f">更多...</a><br/></td></tr>
 <tr class="separator:a18ac9c804376f2893751965034e8a18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb658e4f7f94f08844bd93d8ffa986d6"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#abb658e4f7f94f08844bd93d8ffa986d6">m_reconnectConns</a></td></tr>
+<tr class="memdesc:abb658e4f7f94f08844bd93d8ffa986d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲连接映射（key：空闲超时时间，单位:s；list按照最后活跃时间排序，最早超时的连接在前面）  <a href="#abb658e4f7f94f08844bd93d8ffa986d6">更多...</a><br/></td></tr>
 <tr class="separator:abb658e4f7f94f08844bd93d8ffa986d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b5fd6534643450c2fa2811ae758a623"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a8b5fd6534643450c2fa2811ae758a623">m_idleEnabled</a></td></tr>
+<tr class="memdesc:a8b5fd6534643450c2fa2811ae758a623"><td class="mdescLeft">&#160;</td><td class="mdescRight">重连连接集合（需要互斥锁保护）  <a href="#a8b5fd6534643450c2fa2811ae758a623">更多...</a><br/></td></tr>
 <tr class="separator:a8b5fd6534643450c2fa2811ae758a623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a766df532a17561580c05fa57382c9500"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a766df532a17561580c05fa57382c9500">m_reconnectMutex</a></td></tr>
+<tr class="memdesc:a766df532a17561580c05fa57382c9500"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲连接管理的启用标志  <a href="#a766df532a17561580c05fa57382c9500">更多...</a><br/></td></tr>
 <tr class="separator:a766df532a17561580c05fa57382c9500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -212,6 +224,7 @@ Public 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>重连连接集合的互斥锁 </p>
 <p>构造函数：初始化时间派发器内部实现 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -688,6 +701,8 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>I/O多路复用器（epoll/kqueue） </p>
+
 </div>
 </div>
 <a class="anchor" id="a4cc84095c0704aeccab4f3b584ec3b06"></a>
@@ -699,6 +714,8 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>关联的EventBase对象（非空） </p>
 
 </div>
 </div>
@@ -712,6 +729,8 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>定时器序列号（用于生成定时器ID） </p>
+
 </div>
 </div>
 <a class="anchor" id="a8b5fd6534643450c2fa2811ae758a623"></a>
@@ -724,6 +743,8 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>重连连接集合（需要互斥锁保护） </p>
+
 </div>
 </div>
 <a class="anchor" id="a8e0acc756aa32becc7a1b647fb92c5a1"></a>
@@ -735,6 +756,8 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>唤醒事件循环的管道（0：读端，1：写端） </p>
 
 </div>
 </div>
@@ -760,6 +783,8 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>空闲连接映射（key：空闲超时时间，单位:s；list按照最后活跃时间排序，最早超时的连接在前面） </p>
+
 </div>
 </div>
 <a class="anchor" id="a766df532a17561580c05fa57382c9500"></a>
@@ -771,6 +796,8 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>空闲连接管理的启用标志 </p>
 
 </div>
 </div>
@@ -784,6 +811,8 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>下一个定时器的超时时间（毫秒，用于Poller等待） </p>
+
 </div>
 </div>
 <a class="anchor" id="af815c2be8223301c898e503346691f82"></a>
@@ -795,6 +824,8 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>异步任务队列（线程安全，支持跨线程投递） </p>
 
 </div>
 </div>
@@ -808,6 +839,8 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>可重复定时器映射 </p>
+
 </div>
 </div>
 <a class="anchor" id="a00fe1dbf2eb4944c73871eb7fa886609"></a>
@@ -820,6 +853,8 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>一次性任务定时器映射 </p>
+
 </div>
 </div>
 <a class="anchor" id="a7f6b9920726c68be935880211ec4f1db"></a>
@@ -831,6 +866,8 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>事件循环退出标志（原子操作，线程安全） </p>
 
 </div>
 </div>

@@ -94,6 +94,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div><!--header-->
 <div class="contents">
 
+<p>空闲连接节点结构体（存储单个空闲连接的管理信息）  
+ <a href="structhandy_1_1IdleNode.html#details">更多...</a></p>
+
 <p><code>#include &lt;<a class="el" href="event__base_8h_source.html">event_base.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -101,11 +104,15 @@ Public 属性</h2></td></tr>
 <tr class="memitem:aba5374bbdaea24b01c5cafca8c25c25d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1IdleNode.html#aba5374bbdaea24b01c5cafca8c25c25d">conn</a></td></tr>
 <tr class="separator:aba5374bbdaea24b01c5cafca8c25c25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74f329bf565b487c81f86c7fed384076"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1IdleNode.html#a74f329bf565b487c81f86c7fed384076">lastUpdatedTimestamp_s</a></td></tr>
+<tr class="memdesc:a74f329bf565b487c81f86c7fed384076"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲连接的智能指针（需确保连接不被提前释放）  <a href="#a74f329bf565b487c81f86c7fed384076">更多...</a><br/></td></tr>
 <tr class="separator:a74f329bf565b487c81f86c7fed384076"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82137e6f527a0e44887aaf5ab088d238"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">TcpCallBack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1IdleNode.html#a82137e6f527a0e44887aaf5ab088d238">cb</a></td></tr>
+<tr class="memdesc:a82137e6f527a0e44887aaf5ab088d238"><td class="mdescLeft">&#160;</td><td class="mdescRight">最后一次活跃时间戳（单位：秒）  <a href="#a82137e6f527a0e44887aaf5ab088d238">更多...</a><br/></td></tr>
 <tr class="separator:a82137e6f527a0e44887aaf5ab088d238"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">类成员变量说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>空闲连接节点结构体（存储单个空闲连接的管理信息） </p>
+</div><h2 class="groupheader">类成员变量说明</h2>
 <a class="anchor" id="a82137e6f527a0e44887aaf5ab088d238"></a>
 <div class="memitem">
 <div class="memproto">
@@ -115,6 +122,8 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>最后一次活跃时间戳（单位：秒） </p>
 
 </div>
 </div>
@@ -139,6 +148,8 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>空闲连接的智能指针（需确保连接不被提前释放） </p>
 
 </div>
 </div>

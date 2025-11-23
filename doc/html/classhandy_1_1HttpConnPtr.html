@@ -106,11 +106,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 类</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1HttpConnPtr_1_1HttpContext.html">HttpContext</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP上下文，存储请求和响应对象  <a href="structhandy_1_1HttpConnPtr_1_1HttpContext.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 类型</h2></td></tr>
 <tr class="memitem:a445872de72d2239fc4f5c3479c1c33f8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpConnPtr.html#a445872de72d2239fc4f5c3479c1c33f8">HttpCallBack</a> = std::function&lt; void(const <a class="el" href="classhandy_1_1HttpConnPtr.html">HttpConnPtr</a> &amp;)&gt;</td></tr>
+<tr class="memdesc:a445872de72d2239fc4f5c3479c1c33f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP消息处理回调函数类型  <a href="#a445872de72d2239fc4f5c3479c1c33f8">更多...</a><br/></td></tr>
 <tr class="separator:a445872de72d2239fc4f5c3479c1c33f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -158,7 +160,7 @@ Public 成员函数</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private 成员函数</h2></td></tr>
 <tr class="memitem:a1c2c0b1fbe5a35f94ae9d898ac57551b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpConnPtr.html#a1c2c0b1fbe5a35f94ae9d898ac57551b">handleRead</a> (const <a class="el" href="classhandy_1_1HttpConnPtr.html#a445872de72d2239fc4f5c3479c1c33f8">HttpCallBack</a> &amp;cb) const </td></tr>
-<tr class="memdesc:a1c2c0b1fbe5a35f94ae9d898ac57551b"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理读事件，解析HTTP消息  <a href="#a1c2c0b1fbe5a35f94ae9d898ac57551b">更多...</a><br/></td></tr>
+<tr class="memdesc:a1c2c0b1fbe5a35f94ae9d898ac57551b"><td class="mdescLeft">&#160;</td><td class="mdescRight">底层TCP连接  <a href="#a1c2c0b1fbe5a35f94ae9d898ac57551b">更多...</a><br/></td></tr>
 <tr class="separator:a1c2c0b1fbe5a35f94ae9d898ac57551b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa27725703eccbd49f3763e295113887d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpConnPtr.html#aa27725703eccbd49f3763e295113887d">logOutput</a> (const char *title) const </td></tr>
 <tr class="memdesc:aa27725703eccbd49f3763e295113887d"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录输出日志  <a href="#aa27725703eccbd49f3763e295113887d">更多...</a><br/></td></tr>
@@ -182,6 +184,8 @@ Private 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>HTTP消息处理回调函数类型 </p>
 
 </div>
 </div>
@@ -294,6 +298,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>底层TCP连接 </p>
 <p>处理读事件，解析HTTP消息 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
