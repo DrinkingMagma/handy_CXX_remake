@@ -1,0 +1,38 @@
+var classhandy_1_1Logger =
+[
+    [ "LogLevel", "classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fe", [
+      [ "LFATAL", "classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501", null ],
+      [ "LERROR", "classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9", null ],
+      [ "LWARN", "classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feafb04814efeb951b90eedacbcd07cf380", null ],
+      [ "LINFO", "classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea4f00f764b4a17f851be1f0cb27095785", null ],
+      [ "LDEBUG", "classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea74b1654c774e5d2f163a062015ca946b", null ],
+      [ "LTRACE", "classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea7a1f0ddc23197504d1a80423b27440bf", null ],
+      [ "LALL", "classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feaa75393110bebc5ac3fc0ff540f446352", null ]
+    ] ],
+    [ "~Logger", "classhandy_1_1Logger.html#aca4c23699a7637f71f3634e70be6d2b7", null ],
+    [ "Logger", "classhandy_1_1Logger.html#ac4560f0b630dc778c846681e01290f9f", null ],
+    [ "adjustLogLevel", "classhandy_1_1Logger.html#a2bef2bb7d52686e606c2a23508dba57d", null ],
+    [ "checkAndRotateLogFile", "classhandy_1_1Logger.html#a434ac0f25b7add4d9276da50167e2117", null ],
+    [ "closeLogFile", "classhandy_1_1Logger.html#a1869d64a7b809063a5c777b2eddeb70e", null ],
+    [ "getCurrentTimeStamp", "classhandy_1_1Logger.html#a1f5d1fab0756d1df799e204499faa012", null ],
+    [ "getInstance", "classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725", null ],
+    [ "getLogLevel", "classhandy_1_1Logger.html#ab1f4e1e61393d825d7168dffad85aa48", null ],
+    [ "getLogLevelString", "classhandy_1_1Logger.html#a53cc55dadce00c792481c454764e0ccf", null ],
+    [ "logv", "classhandy_1_1Logger.html#a6d61757bf1d37101021e3bdc63e78c6d", null ],
+    [ "rotateLogFile", "classhandy_1_1Logger.html#a6148b17e2785e4335d9f92790bbce71d", null ],
+    [ "setLogFileName", "classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893", null ],
+    [ "setLogLevel", "classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36", null ],
+    [ "setLogLevel", "classhandy_1_1Logger.html#acc02c4c84b4b6d03f8c6f7ac8e59de3b", null ],
+    [ "setLogRotateInterval", "classhandy_1_1Logger.html#a94fde02defaba254926968d6348aa019", null ],
+    [ "setMaxLogFileSize", "classhandy_1_1Logger.html#a19a54d9a8c6c8cc4bb72c10958956b75", null ],
+    [ "m_currentFileSize", "classhandy_1_1Logger.html#a8aaf476fc62153a8341866b5fd866c7f", null ],
+    [ "m_fd", "classhandy_1_1Logger.html#ab50185c5a1386db51caf7c2a06069c5c", null ],
+    [ "m_lastRotateTime", "classhandy_1_1Logger.html#a3ac5aca5c44756130291fa6aea3a269d", null ],
+    [ "m_level", "classhandy_1_1Logger.html#acd48171908551371f299e063ca6ba683", null ],
+    [ "m_levelStrings", "classhandy_1_1Logger.html#a1f768923e0442e410191ba9c980096a2", null ],
+    [ "m_logFileName", "classhandy_1_1Logger.html#ab52e54f701f163be1606cd6c94c5dc8a", null ],
+    [ "m_maxLogFileSize", "classhandy_1_1Logger.html#ac42cd9ea8b7c2565e16b541a33a33519", null ],
+    [ "m_mutex", "classhandy_1_1Logger.html#afb63c17a7b985300d4f2d28ff6b67b99", null ],
+    [ "m_realRotateTime", "classhandy_1_1Logger.html#a35aa468b7dd613de6bb9e3b5dfebb2e4", null ],
+    [ "m_rotateInterval", "classhandy_1_1Logger.html#ac09a0ea26562cc4b464078801b31e6a7", null ]
+];
