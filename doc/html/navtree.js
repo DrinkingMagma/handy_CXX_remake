@@ -39,7 +39,7 @@ var NAVTREEINDEX =
 "annotated.html",
 "classhandy_1_1Ipv4Addr.html#a3184b372d413e0bc28353ab9322edc7c",
 "classhandy_1_1TcpConn.html#a9ff910e1037b29a941c66f3b8eefacc4",
-"platform_8h_source.html"
+"pages.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

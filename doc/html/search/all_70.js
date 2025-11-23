@@ -14,7 +14,7 @@ var searchData=
   ['pollerepoll',['PollerEpoll',['../classhandy_1_1Channel.html#a6e3a3c3a69685f3f8a9a90818305f482',1,'handy::Channel']]],
   ['pollerkqueue',['PollerKqueue',['../classhandy_1_1Channel.html#a3756f283df2856ee813045d960b8f907',1,'handy::Channel']]],
   ['popwait',['popWait',['../classhandy_1_1SafeQueue.html#aef745af0cbdac7e9e8f2366a5db8f40d',1,'handy::SafeQueue']]],
-  ['port',['port',['../classhandy_1_1Ipv4Addr.html#a143d7ca4af554ed22e334bfb80d5ad02',1,'handy::Ipv4Addr']]],
+  ['port',['port',['../namespaceport.html',1,'port'],['../classhandy_1_1Ipv4Addr.html#a143d7ca4af554ed22e334bfb80d5ad02',1,'handy::Ipv4Addr::port()']]],
   ['port_5fposix_2ecpp',['port_posix.cpp',['../port__posix_8cpp.html',1,'']]],
   ['port_5fposix_2eh',['port_posix.h',['../port__posix_8h.html',1,'']]],
   ['process',['process',['../classhandy_1_1Daemon.html#a301dc0a520e61a5f46ecd2ffb7d3d91f',1,'handy::Daemon']]],
