@@ -1,0 +1,4 @@
+<map id="handy::initTmKey" name="handy::initTmKey">
+<area shape="rect" id="node2" href="$namespacehandy.html#a36322f9f76f61ed5b1176a76377394b3" title="获取当前线程专属的tm结构 " alt="" coords="177,5,351,32"/>
+<area shape="rect" id="node3" href="$structhandy_1_1Utils.html#a7ed7ac3252777aed93d77b55eeaaac45" title="将time_t时间戳转换为可读字符串（线程安全） " alt="" coords="399,5,577,32"/>
+</map>

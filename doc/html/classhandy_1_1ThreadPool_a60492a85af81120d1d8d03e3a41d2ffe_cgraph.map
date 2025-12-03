@@ -1,0 +1,5 @@
+<map id="handy::ThreadPool::ThreadPool" name="handy::ThreadPool::ThreadPool">
+<area shape="rect" id="node2" href="$classhandy_1_1ThreadPool.html#a74e85ff1e6605531acdd8e0e3cf903df" title="启动线程池（线程安全） " alt="" coords="192,5,331,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1ThreadPool.html#af16863e56e3df5e49bc00cebb08ae5a4" title="线程工作循环（每个线程的入口函数，仅内部调用） " alt="" coords="379,5,517,47"/>
+<area shape="rect" id="node4" href="$classhandy_1_1SafeQueue.html#aef745af0cbdac7e9e8f2366a5db8f40d" title="从队列头部取出元素(支持超时等待,线程安全) " alt="" coords="565,13,752,39"/>
+</map>

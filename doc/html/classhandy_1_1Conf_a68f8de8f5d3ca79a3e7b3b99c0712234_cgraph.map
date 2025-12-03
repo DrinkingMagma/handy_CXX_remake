@@ -1,0 +1,6 @@
+<map id="handy::Conf::parse" name="handy::Conf::parse">
+<area shape="rect" id="node2" href="$classhandy_1_1Slice.html#a7f14d97101d460d6cd92b35c24c466c0" title="清空视图（重置为空视图） " alt="" coords="202,5,333,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe" title="判断视图是否为空 " alt="" coords="198,56,337,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Slice.html#a9942173fc598137ca9d959ed8cb39fe7" title="移除前后空白字符（修改当前视图） " alt="" coords="187,107,348,133"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Conf.html#a6fd50de0f9f04dbf88f65b6d32f4c844" title="生成内部存储的键名（节名.键名，转为小写） " alt="" coords="189,157,345,184"/>
+</map>

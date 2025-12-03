@@ -1,0 +1,4 @@
+<map id="handy::handleUnregisterIdle" name="handy::handleUnregisterIdle">
+<area shape="rect" id="node2" href="$classhandy_1_1EventBase.html#a61cd5890929ce9a263f23c0ae1456b72" title="获取EventsImp对象指针 " alt="" coords="256,5,433,32"/>
+<area shape="rect" id="node3" href="$structhandy_1_1EventsImp.html#a03cc7fc06a2e93ce1a4f7f4ac25e8efd" title="注销空闲连接（从空闲管理中移除） " alt="" coords="237,56,452,83"/>
+</map>

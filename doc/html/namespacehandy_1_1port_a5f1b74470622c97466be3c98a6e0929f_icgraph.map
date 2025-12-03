@@ -1,0 +1,29 @@
+<map id="handy::port::betoh" name="handy::port::betoh">
+<area shape="rect" id="node2" href="$classhandy_1_1Net.html#ab2529e9ccaf7c82c477ba0cbc2fa6f6c" title="将网络字节序转换为主机字节序 " alt="" coords="184,385,303,412"/>
+<area shape="rect" id="node28" href="$namespacehandy_1_1port.html#a3c5b71e9deffbe1f59af0a66ff8d8585" title="将16位有符号整数从大端字节序（网络字节序）转换为主机字节序 " alt="" coords="180,436,307,463"/>
+<area shape="rect" id="node3" href="$classhandy_1_1LengthCodec.html#a1198a51cc6f48544dbae4e34cca38b70" title="尝试对消息进行解码 " alt="" coords="369,269,511,310"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86" title="获取IP地址和端口的字符串表示 " alt="" coords="355,335,525,361"/>
+<area shape="rect" id="node24" href="$classhandy_1_1Ipv4Addr.html#aa1e3e274ffd85680959b12a1ce1fdd50" title="获取纯IP地址的字符串表示 " alt="" coords="373,385,507,412"/>
+<area shape="rect" id="node26" href="$classhandy_1_1Ipv4Addr.html#a143d7ca4af554ed22e334bfb80d5ad02" title="获取主机字节序的端口号 " alt="" coords="367,436,513,463"/>
+<area shape="rect" id="node27" href="$classhandy_1_1Ipv4Addr.html#a59e4db2e65a09db95cbe295fcd956a39" title="获取主机字节序的IP地址整数表示 " alt="" coords="365,487,515,513"/>
+<area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#aafaaa41f36db3d6aa30c4a6f3a3d93d6" title="析构函数，关闭连接并释放资源 " alt="" coords="596,5,781,32"/>
+<area shape="rect" id="node6" href="$classhandy_1_1TcpConn.html#aeeb062fe73e0e1655c1e744376c8ba07" title="将连接与已有的文件描述符进行关联 " alt="" coords="608,56,769,83"/>
+<area shape="rect" id="node7" href="$classhandy_1_1TcpConn.html#a1227846cc9258601c72a354f71dd080f" title="主动连接到指定的主机和端口 " alt="" coords="859,107,1037,133"/>
+<area shape="rect" id="node9" href="$classhandy_1_1TcpConn.html#a9ac6fe9839fbf06e2246f52b45668d01" title="清理连接资源 " alt="" coords="1329,157,1500,184"/>
+<area shape="rect" id="node11" href="$classhandy_1_1TcpConn.html#aede1ec049cda3fffd74acf9f116b16aa" title="处理握手过程 " alt="" coords="1548,208,1784,235"/>
+<area shape="rect" id="node13" href="$classhandy_1_1TcpConn.html#aa6686d5e5c585b9e566763552c07ee35" title="发送缓冲区中的数据 " alt="" coords="612,259,765,285"/>
+<area shape="rect" id="node16" href="$classhandy_1_1TcpServer.html#a373e76987f525973c65e2cab025522cc" title="绑定到指定的主机和端口 " alt="" coords="611,309,767,336"/>
+<area shape="rect" id="node18" href="$classhandy_1_1TcpConn.html#aae9ce06d8e921cae92a09686caad970b" title="获取远程地址的字符串表示 " alt="" coords="595,360,782,387"/>
+<area shape="rect" id="node19" href="$classhandy_1_1UdpServer.html#a49e1cf8559b57b910172e38e59199b67" title="将服务器绑定到指定地址和端口 " alt="" coords="609,411,768,437"/>
+<area shape="rect" id="node20" href="$classhandy_1_1UdpServer.html#a411549e29cb1c4c0a5310834e7ce99bb" title="发送指定长度的字节数据到指定地址 " alt="" coords="600,461,777,488"/>
+<area shape="rect" id="node21" href="$classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd" title="创建新的UDP连接 " alt="" coords="573,512,804,539"/>
+<area shape="rect" id="node22" href="$classhandy_1_1UdpConn.html#a029c43ca7cd568b9fea2e336970ebf42" title="发送指定长度的字节数据 " alt="" coords="611,563,767,589"/>
+<area shape="rect" id="node23" href="$classhandy_1_1UdpConn.html#ad2b1bc2b4e41a0321dc4312f2a9e6f6e" title="获取远程地址的字符串表示 " alt="" coords="593,613,784,640"/>
+<area shape="rect" id="node8" href="$classhandy_1_1TcpConn.html#a14338af0c8635457894f33585bdd0878" title="重连 " alt="" coords="1092,107,1281,133"/>
+<area shape="rect" id="node10" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="1832,157,2033,184"/>
+<area shape="rect" id="node12" href="$classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3" title="处理写事件 " alt="" coords="1832,208,2033,235"/>
+<area shape="rect" id="node14" href="$classhandy_1_1TcpConn.html#a876eeca51918ea71097edc1c2aab3fea" title="发送输出缓冲区中的数据 " alt="" coords="852,259,1044,301"/>
+<area shape="rect" id="node15" href="$classhandy_1_1TcpConn.html#a9ff910e1037b29a941c66f3b8eefacc4" title="发送消息（通过编解码器编码后发送） " alt="" coords="1097,267,1276,293"/>
+<area shape="rect" id="node17" href="$classhandy_1_1StatServer.html#a85d041b9ba9b52ff1ec223777d84c744" title="将服务器绑定到指定的主机和端口 " alt="" coords="869,325,1027,352"/>
+<area shape="rect" id="node25" href="$classhandy_1_1Ipv4Addr.html#a15f73de1453340b7a7855250f08b10c6" title="将主机名解析为IP地址字符串 " alt="" coords="601,664,776,691"/>
+</map>

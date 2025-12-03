@@ -1,0 +1,7 @@
+<map id="handy::Buffer::peek" name="handy::Buffer::peek">
+<area shape="rect" id="node2" href="$classhandy_1_1UdpServer.html#ae56468dcf409ffde65f6c1b783b273cd" title="发送数据缓冲区到指定地址 " alt="" coords="188,5,365,32"/>
+<area shape="rect" id="node4" href="$classhandy_1_1UdpConn.html#a1ec5518264f7c2a3de123560e4998c59" title="发送数据缓冲区中的数据 " alt="" coords="199,56,355,83"/>
+<area shape="rect" id="node6" href="$classhandy_1_1HSHAU.html#a7a46b7958480b944f8ed95fbcf2df57d" title="设置消息处理回调函数 " alt="" coords="197,107,357,133"/>
+<area shape="rect" id="node3" href="$classhandy_1_1UdpServer.html#aa6bf655c4c5e53333ced52b5f49c743e" title="发送字符串到指定地址 " alt="" coords="413,5,591,32"/>
+<area shape="rect" id="node5" href="$classhandy_1_1UdpConn.html#a6d7c13df818c8f65e97770eb8fe5edea" title="发送字符串数据 " alt="" coords="424,56,580,83"/>
+</map>

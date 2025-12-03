@@ -1,0 +1,6 @@
+<map id="handy::File::rename" name="handy::File::rename">
+<area shape="rect" id="node2" href="$classhandy_1_1Status.html#a4f98c279b3cd768dcad0e83e38f37616" title="创建I/O操作错误的Status对象 " alt="" coords="191,31,340,57"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Status.html#a20ee42a38aebe4d18b36d5bc2ef1bf6b" title="根据格式化字符串创建Status对象 " alt="" coords="388,5,567,32"/>
+<area shape="rect" id="node5" href="$namespacehandy.html#a957dcc461a7df87ab6338b1da38e4fba" title="获取当前线程的系统错误信息字符串 " alt="" coords="430,56,525,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Status.html#a928f8d212a443ec48bf09b53d58eed93" title="构造函数，创建一个表示“成功”的Status对象 " alt="" coords="615,5,764,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="handy::Conf::makeKey" name="handy::Conf::makeKey">
+<area shape="rect" id="node2" href="$classhandy_1_1Conf.html#a856496911ede1e6e1e1dd691a1df96ca" title="获取字符串类型配置值 " alt="" coords="230,5,349,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Conf.html#ae78f51c6b0e42e8bd5c7e36ae0ea6690" title="获取多值配置（多行值） " alt="" coords="209,56,369,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Conf.html#a68f8de8f5d3ca79a3e7b3b99c0712234" title="解析指定的INI配置文件 " alt="" coords="223,107,356,133"/>
+</map>

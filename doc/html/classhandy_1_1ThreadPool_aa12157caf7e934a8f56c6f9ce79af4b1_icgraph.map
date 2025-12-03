@@ -1,0 +1,6 @@
+<map id="handy::ThreadPool::join" name="handy::ThreadPool::join">
+<area shape="rect" id="node2" href="$classhandy_1_1HSHA.html#aad61ed7ed000d983922ce2b2f3de045a" title="退出服务器 " alt="" coords="217,5,349,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1ThreadPool.html#ac6679e58f1edc7df60289577b0475100" title="析构函数(优雅释放资源) " alt="" coords="214,57,353,98"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HSHAU.html#a9611a03558463948b5e6b3ee3b497111" title="停止服务器并释放资源 " alt="" coords="212,123,355,149"/>
+<area shape="rect" id="node5" href="$classhandy_1_1HSHAU.html#add75bf71d827efb6fcb02ced26d44a07" title="析构函数，停止线程池 " alt="" coords="403,123,580,149"/>
+</map>

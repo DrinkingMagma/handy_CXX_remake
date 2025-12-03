@@ -1,0 +1,5 @@
+<map id="handy::Status::ok" name="handy::Status::ok">
+<area shape="rect" id="node2" href="$classhandy_1_1File.html#a25c291a825fafe32feeeea8e1322a804" title="安全写入文件（先写临时文件，再原子重命名） " alt="" coords="179,5,345,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpConnPtr.html#a5baa91c7b32051095038b4c9d4e9f30f" title="发送文件作为响应 " alt="" coords="193,57,331,98"/>
+<area shape="rect" id="node4" href="$classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99" title="注册页面文件（将文件内容作为页面响应） " alt="" coords="195,122,329,163"/>
+</map>

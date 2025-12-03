@@ -1,0 +1,6 @@
+<map id="handy::Channel::handleRead" name="handy::Channel::handleRead">
+<area shape="rect" id="node2" href="$classhandy_1_1Channel.html#a16bfdb9fd8be1db78f17777fb59ebe85" title="关闭通道（关闭fd并从poller中删除） " alt="" coords="244,31,396,57"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#aed1048ae4c4766e402371acbc9afd6a5" title="立即关闭连接，清理相关资源 " alt="" coords="444,5,627,32"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Channel.html#ae682495abcff12eec2b8289e463460c7" title="关闭fd并清理事件 " alt="" coords="447,56,624,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#aafaaa41f36db3d6aa30c4a6f3a3d93d6" title="析构函数，关闭连接并释放资源 " alt="" coords="675,5,860,32"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="handy::EventsImp::registerIdle" name="handy::EventsImp::registerIdle">
+<area shape="rect" id="node2" href="$classhandy_1_1EventBase.html#a46364e14e3307741148d587791971d7e" title="在指定延迟后执行任务（支持周期性） " alt="" coords="485,5,668,32"/>
+<area shape="rect" id="node4" href="$structhandy_1_1Utils.html#a6769faed062da90b4411a3dc189727bf" title="获取当前系统时间(毫秒级) " alt="" coords="726,56,874,83"/>
+<area shape="rect" id="node6" href="$structhandy_1_1EventsImp.html#a41a91826e5900bd17f506842c32b1a43" title="定期见检查所有注册的空闲连接，处理空闲连接超时（遍历所有空闲连接，触发超时回调） " alt="" coords="253,56,437,83"/>
+<area shape="rect" id="node3" href="$classhandy_1_1EventBase.html#ade4a9837ba0ad90032f217a4c04a674c" title="在执行时间戳执行任务（支持周期性） " alt="" coords="716,5,884,32"/>
+<area shape="rect" id="node5" href="$structhandy_1_1Utils.html#a504697916771757a1fb83eb4cdb994b5" title="获取当前系统时间(微秒级，线程安全) " alt="" coords="932,56,1089,83"/>
+</map>

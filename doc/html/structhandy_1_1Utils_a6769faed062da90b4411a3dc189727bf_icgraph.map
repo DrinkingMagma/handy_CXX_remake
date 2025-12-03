@@ -1,0 +1,15 @@
+<map id="handy::Utils::timeMilli" name="handy::Utils::timeMilli">
+<area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#a1227846cc9258601c72a354f71dd080f" title="主动连接到指定的主机和端口 " alt="" coords="435,157,613,184"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#a14338af0c8635457894f33585bdd0878" title="重连 " alt="" coords="669,132,859,159"/>
+<area shape="rect" id="node6" href="$classhandy_1_1TcpConn.html#aede1ec049cda3fffd74acf9f116b16aa" title="处理握手过程 " alt="" coords="1131,5,1367,32"/>
+<area shape="rect" id="node8" href="$structhandy_1_1EventsImp.html#a41a91826e5900bd17f506842c32b1a43" title="定期见检查所有注册的空闲连接，处理空闲连接超时（遍历所有空闲连接，触发超时回调） " alt="" coords="432,309,616,336"/>
+<area shape="rect" id="node9" href="$structhandy_1_1EventsImp.html#a34ec69a53f5a40365df7c686c28334e8" title="注册空闲连接（加入空闲连接管理） " alt="" coords="664,309,864,336"/>
+<area shape="rect" id="node10" href="$structhandy_1_1EventsImp.html#ab12568ed9e6c3fb1a4a10037297a6ff2" title="更新空闲连接状态（重置最后活跃时间） " alt="" coords="666,56,862,83"/>
+<area shape="rect" id="node12" href="$structhandy_1_1EventsImp.html#afc6fdbcb276b06c4e9517bb1b649a127" title="处理定时器超时（执行所有已超时的定时器任务） " alt="" coords="437,361,611,402"/>
+<area shape="rect" id="node13" href="$structhandy_1_1EventsImp.html#a84c79736764ed378b600e1c099d8cd92" title="刷新下一个定时器的超时时间 " alt="" coords="205,361,381,402"/>
+<area shape="rect" id="node14" href="$classhandy_1_1EventBase.html#a46364e14e3307741148d587791971d7e" title="在指定延迟后执行任务（支持周期性） " alt="" coords="201,208,384,235"/>
+<area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#a9ac6fe9839fbf06e2246f52b45668d01" title="清理连接资源 " alt="" coords="912,107,1083,133"/>
+<area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="1415,56,1616,83"/>
+<area shape="rect" id="node7" href="$classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3" title="处理写事件 " alt="" coords="1415,5,1616,32"/>
+<area shape="rect" id="node11" href="$namespacehandy.html#a20123b690d2753b31d89587a802cc44b" title="更新空闲连接状态（委托给EventBase实现） " alt="" coords="914,56,1081,83"/>
+</map>

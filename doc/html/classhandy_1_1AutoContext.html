@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('classhandy_1_1AutoContext.html','');})
 </div><!--header-->
 <div class="contents">
 
-<p>定时任务ID类型&lt; 超时时间戳，序列号（自增整数）&gt;=""&gt;  
+<p>自动上下文管理器（线程安全）  
  <a href="classhandy_1_1AutoContext.html#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="handy-imp_8h_source.html">handy-imp.h</a>&gt;</code></p>
@@ -174,8 +174,7 @@ Private 属性</h2></td></tr>
 <tr class="separator:afb79661bb6df7f5381340e4d3337eaf6 inherit pub_methods_classhandy_1_1NonCopyAble"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>定时任务ID类型&lt; 超时时间戳，序列号（自增整数）&gt;=""&gt; </p>
-<p>自动上下文管理器（线程安全）</p>
+<div class="textblock"><p>自动上下文管理器（线程安全） </p>
 <ol type="1">
 <li>提供模板化的上下文创建、获取、与自动清理能力，支持任意类型的上下文存储<ol type="a">
 <li>基于原子操作与互斥锁保证线程安全，避免数据竞争与内存泄漏</li>
@@ -242,6 +241,14 @@ Private 属性</h2></td></tr>
 </ol>
 </dd></dl>
 
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1AutoContext_a95dfd440997fea28095d56aa5835b30b_cgraph.svg" width="336" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
@@ -285,6 +292,14 @@ template&lt;typename T &gt; </div>
 <dl class="section note"><dt>注解</dt><dd>1. 线程安全：支持多线程并发调用，不会导致重复创建或数据竞争 </dd>
 <dd>
 2. 类型安全：通过static_cast强制转换，确保返回正确类型的引用 </dd></dl>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1AutoContext_a31ec5f39af7e6dcef8407f573f2a3734_icgraph.svg" width="390" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
 
 </div>
 </div>
@@ -347,6 +362,14 @@ template&lt;typename T &gt; </div>
 </li>
 </ol>
 <p>线程安全：多线程并发调用时，仅第一个调用会执行清理逻辑，其他调用无操作 </p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1AutoContext_a5add2c81ef03e428ecc7f13f2e9b6151_icgraph.svg" width="336" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
 
 </div>
 </div>

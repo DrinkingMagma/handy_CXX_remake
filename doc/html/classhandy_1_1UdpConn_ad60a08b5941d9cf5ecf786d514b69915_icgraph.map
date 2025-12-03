@@ -1,0 +1,4 @@
+<map id="handy::UdpConn::close" name="handy::UdpConn::close">
+<area shape="rect" id="node2" href="$classhandy_1_1UdpConn.html#ae0b19a95f626ed8f50698f7a1d202262" title="析构函数，关闭连接并释放资源 " alt="" coords="232,5,423,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd" title="创建新的UDP连接 " alt="" coords="212,56,443,83"/>
+</map>

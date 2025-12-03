@@ -35,21 +35,34 @@ namespace handy
     */
     struct EventsImp
     {
-        PollerBase* m_poller;       /// I/O多路复用器（epoll/kqueue）
-        EventBase* m_base;          /// 关联的EventBase对象（非空）
-        std::atomic<bool> m_exit; /// 事件循环退出标志（原子操作，线程安全）
-        int m_wakeupFds[2];          /// 唤醒事件循环的管道（0：读端，1：写端）
-        int m_nextTimeout_ms;          /// 下一个定时器的超时时间（毫秒，用于Poller等待）
-        SafeQueue<Task> m_tasks;    /// 异步任务队列（线程安全，支持跨线程投递）
+        /// I/O多路复用器（epoll/kqueue）
+        PollerBase* m_poller;       
+        /// 关联的EventBase对象（非空）
+        EventBase* m_base;        
+        /// 事件循环退出标志（原子操作，线程安全）  
+        std::atomic<bool> m_exit; 
+        /// 唤醒事件循环的管道（0：读端，1：写端）
+        int m_wakeupFds[2];       
+        /// 下一个定时器的超时时间（毫秒，用于Poller等待）   
+        int m_nextTimeout_ms;          
+        /// 异步任务队列（线程安全，支持跨线程投递）
+        SafeQueue<Task> m_tasks;    
 
-        std::map<TimerId, TimerRepeatable> m_timerReps;     /// 可重复定时器映射
-        std::map<TimerId, Task> m_timers;                   /// 一次性任务定时器映射
-        std::atomic<int64_t> m_timerSeq;                    /// 定时器序列号（用于生成定时器ID）
+        /// 可重复定时器映射
+        std::map<TimerId, TimerRepeatable> m_timerReps;     
+        /// 一次性任务定时器映射
+        std::map<TimerId, Task> m_timers;                   
+        /// 定时器序列号（用于生成定时器ID） 
+        std::atomic<int64_t> m_timerSeq;                    
 
-        std::map<int, std::list<IdleNode>> m_idleConns;     /// 空闲连接映射（key：空闲超时时间，单位:s；list按照最后活跃时间排序，最早超时的连接在前面）
-        std::set<TcpConnPtr> m_reconnectConns;              /// 重连连接集合（需要互斥锁保护）
-        bool m_idleEnabled;                                 /// 空闲连接管理的启用标志
-        std::mutex m_reconnectMutex;                        /// 重连连接集合的互斥锁
+        /// 空闲连接映射（key：空闲超时时间，单位:s；list按照最后活跃时间排序，最早超时的连接在前面）
+        std::map<int, std::list<IdleNode>> m_idleConns;     
+        /// 重连连接集合（需要互斥锁保护）
+        std::set<TcpConnPtr> m_reconnectConns;           
+        /// 空闲连接管理的启用标志   
+        bool m_idleEnabled;                            
+        /// 重连连接集合的互斥锁     
+        std::mutex m_reconnectMutex;                        
 
         /**
          * @brief 构造函数：初始化时间派发器内部实现

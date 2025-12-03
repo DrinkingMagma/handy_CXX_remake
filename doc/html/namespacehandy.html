@@ -182,7 +182,7 @@ $(document).ready(function(){initNavTree('namespacehandy.html','');});
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件和目录操作的工具类，提供静态方法封装常用文件操作  <a href="classhandy_1_1File.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1AutoContext.html">AutoContext</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时任务ID类型&lt; 超时时间戳，序列号（自增整数）&gt;=""&gt;  <a href="classhandy_1_1AutoContext.html#details">更多...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">自动上下文管理器（线程安全）  <a href="classhandy_1_1AutoContext.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1HttpMsg.html">HttpMsg</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP消息基类，封装HTTP请求和响应的通用功能  <a href="classhandy_1_1HttpMsg.html#details">更多...</a><br/></td></tr>
@@ -271,11 +271,11 @@ $(document).ready(function(){initNavTree('namespacehandy.html','');});
 <tr class="separator:a37e7f77e1c4abd461c35064060c05669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0934ac351162af463dce604c988ba31"><td class="memItemLeft" align="right" valign="top">typedef std::unique_ptr<br class="typebreak"/>
 &lt; <a class="el" href="structhandy_1_1IdleIdImp.html">IdleIdImp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#af0934ac351162af463dce604c988ba31">IdleId</a></td></tr>
-<tr class="memdesc:af0934ac351162af463dce604c988ba31"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件循环基类结构体  <a href="#af0934ac351162af463dce604c988ba31">更多...</a><br/></td></tr>
+<tr class="memdesc:af0934ac351162af463dce604c988ba31"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲资源ID的智能指针类型  <a href="#af0934ac351162af463dce604c988ba31">更多...</a><br/></td></tr>
 <tr class="separator:af0934ac351162af463dce604c988ba31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab64dd4e4ad3aae1d30264406886bbc84"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; int64_t, <br class="typebreak"/>
 int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a></td></tr>
-<tr class="memdesc:ab64dd4e4ad3aae1d30264406886bbc84"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲资源ID的智能指针类型  <a href="#ab64dd4e4ad3aae1d30264406886bbc84">更多...</a><br/></td></tr>
+<tr class="memdesc:ab64dd4e4ad3aae1d30264406886bbc84"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时任务ID类型&lt; 超时时间戳，序列号（自增整数）&gt;=""&gt;  <a href="#ab64dd4e4ad3aae1d30264406886bbc84">更多...</a><br/></td></tr>
 <tr class="separator:ab64dd4e4ad3aae1d30264406886bbc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eaa6d869a276fe1b96586303526c272"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a5eaa6d869a276fe1b96586303526c272">StatCallBack</a> = std::function&lt; void(const <a class="el" href="classhandy_1_1HttpRequest.html">HttpRequest</a> &amp;, <a class="el" href="classhandy_1_1HttpResponse.html">HttpResponse</a> &amp;)&gt;</td></tr>
 <tr class="memdesc:a5eaa6d869a276fe1b96586303526c272"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP请求处理回调函数  <a href="#a5eaa6d869a276fe1b96586303526c272">更多...</a><br/></td></tr>
@@ -360,7 +360,7 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
       </table>
 </div><div class="memdoc">
 
-<p>事件循环基类结构体 </p>
+<p>空闲资源ID的智能指针类型 </p>
 
 </div>
 </div>
@@ -511,7 +511,7 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
       </table>
 </div><div class="memdoc">
 
-<p>空闲资源ID的智能指针类型 </p>
+<p>定时任务ID类型&lt; 超时时间戳，序列号（自增整数）&gt;=""&gt; </p>
 
 </div>
 </div>
@@ -570,6 +570,14 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dd>
 2. 避免了标准strerror的线程安全问题 </dd></dl>
 
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_a957dcc461a7df87ab6338b1da38e4fba_icgraph.svg" width="767" height="495"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="aeb22e917b1ad4ff09d0f01cacd79a86b"></a>
@@ -596,6 +604,14 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
       </table>
 </div><div class="memdoc">
 
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_aeb22e917b1ad4ff09d0f01cacd79a86b_icgraph.svg" width="1615" height="358"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a36322f9f76f61ed5b1176a76377394b3"></a>
@@ -621,6 +637,22 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>获取当前线程专属的tm结构 </p>
 <dl class="section return"><dt>返回</dt><dd>指向当前线程tm结构的指针（自动出初始化，线程安全） </dd></dl>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_a36322f9f76f61ed5b1176a76377394b3_cgraph.svg" width="356" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_a36322f9f76f61ed5b1176a76377394b3_icgraph.svg" width="411" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
 
 </div>
 </div>
@@ -656,6 +688,22 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </table>
   </dd>
 </dl>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_a58b23304f713754a36741cbadd749238_cgraph.svg" width="458" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_a58b23304f713754a36741cbadd749238_icgraph.svg" width="947" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
 
 </div>
 </div>
@@ -693,6 +741,22 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </dl>
 <p>重置空闲连接的最后活跃事件，避免被判定为超时 </p>
 
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_a20123b690d2753b31d89587a802cc44b_cgraph.svg" width="823" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_a20123b690d2753b31d89587a802cc44b_icgraph.svg" width="427" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a1f8c371625e50dfd46ff338d22eecc04"></a>
@@ -718,6 +782,14 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>初始化线程局部存储键（仅执行一次） </p>
 <dl class="section note"><dt>注解</dt><dd>用于管理tm结构的内存释放，避免内存泄露 </dd></dl>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_a1f8c371625e50dfd46ff338d22eecc04_icgraph.svg" width="583" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
 
 </div>
 </div>
@@ -956,6 +1028,22 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </dl>
 <dl class="section return"><dt>返回</dt><dd>std::string 格式化的HTML链接字符串 </dd></dl>
 
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_a335e63f22985ad6959ec101b6c569eb1_cgraph.svg" width="314" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_a335e63f22985ad6959ec101b6c569eb1_icgraph.svg" width="311" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="aad1947bd6f535959d21c2082e540c5a4"></a>
@@ -988,6 +1076,22 @@ int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>std::string 格式化的HTML链接字符串 </dd></dl>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_aad1947bd6f535959d21c2082e540c5a4_cgraph.svg" width="318" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_aad1947bd6f535959d21c2082e540c5a4_icgraph.svg" width="315" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
 
 </div>
 </div>

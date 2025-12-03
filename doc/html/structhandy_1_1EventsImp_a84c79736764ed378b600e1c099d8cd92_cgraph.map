@@ -1,0 +1,4 @@
+<map id="handy::EventsImp::refreshNearestTimer" name="handy::EventsImp::refreshNearestTimer">
+<area shape="rect" id="node2" href="$structhandy_1_1Utils.html#a6769faed062da90b4411a3dc189727bf" title="获取当前系统时间(毫秒级) " alt="" coords="229,13,377,39"/>
+<area shape="rect" id="node3" href="$structhandy_1_1Utils.html#a504697916771757a1fb83eb4cdb994b5" title="获取当前系统时间(微秒级，线程安全) " alt="" coords="425,13,583,39"/>
+</map>

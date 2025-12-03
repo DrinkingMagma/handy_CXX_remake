@@ -1,0 +1,8 @@
+<map id="handy::SafeQueue::exit" name="handy::SafeQueue::exit">
+<area shape="rect" id="node2" href="$classhandy_1_1ThreadPool.html#a645707a5d4a6d126b5c3427b1ec39124" title="通知线程池优雅退出（线程安全） " alt="" coords="217,64,377,91"/>
+<area shape="rect" id="node7" href="$classhandy_1_1SafeQueue.html#a43b20a9bfd4bf530d3c6531fb9dd1105" title="析构函数(优雅释放资源) " alt="" coords="212,115,383,157"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HSHA.html#aad61ed7ed000d983922ce2b2f3de045a" title="退出服务器 " alt="" coords="436,5,568,32"/>
+<area shape="rect" id="node4" href="$classhandy_1_1ThreadPool.html#ac6679e58f1edc7df60289577b0475100" title="析构函数(优雅释放资源) " alt="" coords="433,57,571,98"/>
+<area shape="rect" id="node5" href="$classhandy_1_1HSHAU.html#a9611a03558463948b5e6b3ee3b497111" title="停止服务器并释放资源 " alt="" coords="431,123,573,149"/>
+<area shape="rect" id="node6" href="$classhandy_1_1HSHAU.html#add75bf71d827efb6fcb02ced26d44a07" title="析构函数，停止线程池 " alt="" coords="621,123,799,149"/>
+</map>

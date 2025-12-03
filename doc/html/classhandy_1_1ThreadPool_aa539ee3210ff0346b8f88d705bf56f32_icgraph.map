@@ -1,0 +1,5 @@
+<map id="handy::ThreadPool::addTask" name="handy::ThreadPool::addTask">
+<area shape="rect" id="node2" href="$classhandy_1_1HSHA.html#a45b5d0f4e3a7eac206d6a7336eef5111" title="设置消息处理的回调函数 " alt="" coords="197,5,347,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1ThreadPool.html#adc125c1df1bdcd8ffcc4162551a49be2" title="向线程池添加任务（左值引用，线程安全） " alt="" coords="203,57,341,98"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HSHAU.html#a7a46b7958480b944f8ed95fbcf2df57d" title="设置消息处理回调函数 " alt="" coords="192,123,352,149"/>
+</map>

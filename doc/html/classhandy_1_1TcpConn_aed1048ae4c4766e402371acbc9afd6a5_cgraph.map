@@ -1,0 +1,5 @@
+<map id="handy::TcpConn::closeNow" name="handy::TcpConn::closeNow">
+<area shape="rect" id="node2" href="$classhandy_1_1Channel.html#a16bfdb9fd8be1db78f17777fb59ebe85" title="关闭通道（关闭fd并从poller中删除） " alt="" coords="236,42,388,69"/>
+<area shape="rect" id="node3" href="$classhandy_1_1PollerBase.html#a160f912c38d27a373c45e3c43cc56775" title="从轮询器中移除事件通道 " alt="" coords="463,5,599,47"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Channel.html#ac0037b2a0578f2445f08f9084ad5acfa" title="处理读事件（调用注册的读事件回调函数） " alt="" coords="436,71,627,98"/>
+</map>

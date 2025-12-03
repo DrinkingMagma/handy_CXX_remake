@@ -1,0 +1,6 @@
+<map id="handy::Channel::Channel" name="handy::Channel::Channel">
+<area shape="rect" id="node2" href="$classhandy_1_1Net.html#a6453e1072f6fdc96c1ca5df55f8124b3" title="设置文件描述符的非阻塞模式 " alt="" coords="232,5,401,32"/>
+<area shape="rect" id="node3" href="$structhandy_1_1Utils.html#ad70f51fc39095ca32dce7f045adc026b" title="格式化字符串 " alt="" coords="248,56,385,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1EventBase.html#a0f56681482a7f05fc5d2315ce599427d" title="获取poller " alt="" coords="223,107,411,133"/>
+<area shape="rect" id="node5" href="$classhandy_1_1PollerBase.html#a4bdd5c937d665e188bc16eaf147d8a03" title="添加事件通知到轮询器 " alt="" coords="249,158,385,199"/>
+</map>

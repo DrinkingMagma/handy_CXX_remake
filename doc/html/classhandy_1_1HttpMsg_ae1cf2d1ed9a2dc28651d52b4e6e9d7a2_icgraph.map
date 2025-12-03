@@ -1,0 +1,5 @@
+<map id="handy::HttpMsg::getVersion" name="handy::HttpMsg::getVersion">
+<area shape="rect" id="node2" href="$classhandy_1_1HttpConnPtr.html#a1c2c0b1fbe5a35f94ae9d898ac57551b" title="底层TCP连接 " alt="" coords="237,5,376,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpConnPtr.html#a0b2ff11dafbd36c86ce8e6a035a95d4b" title="注册HTTP消息处理回调 " alt="" coords="424,5,563,47"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpServer.html#af36412871ad23228ad2ba124b4526690" title="构造函数 " alt="" coords="611,5,747,47"/>
+</map>

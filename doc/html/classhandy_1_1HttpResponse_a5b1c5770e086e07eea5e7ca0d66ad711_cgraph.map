@@ -1,0 +1,10 @@
+<map id="handy::HttpResponse::encode" name="handy::HttpResponse::encode">
+<area shape="rect" id="node2" href="$classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16" title="获取当前缓冲区中的数据长度 " alt="" coords="223,5,353,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60" title="将指定长度的数据追加到缓冲区 " alt="" coords="213,56,363,83"/>
+<area shape="rect" id="node7" href="$structhandy_1_1Utils.html#ad70f51fc39095ca32dce7f045adc026b" title="格式化字符串 " alt="" coords="219,107,357,133"/>
+<area shape="rect" id="node8" href="$classhandy_1_1HttpMsg.html#a4b4df56bce592a87f451101af3a3b46f" title="获取消息体内容 " alt="" coords="203,157,373,184"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Buffer.html#afbd50b666a4e1576b2e19bdb047e7a53" title="确保缓冲区有足够空间容纳指定长度的数据 " alt="" coords="421,56,603,83"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Buffer.html#a152b8546af1c0bca407455a6b174e05b" title="将数据移动到缓冲区头部，减少内存碎片 " alt="" coords="651,31,828,57"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Buffer.html#a0ca99339d31c25d203875bf57f75fc67" title="扩展缓冲区容量 " alt="" coords="661,81,817,108"/>
+<area shape="rect" id="node9" href="$classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe" title="判断视图是否为空 " alt="" coords="443,157,581,184"/>
+</map>

@@ -431,14 +431,22 @@ namespace handy
             }
 
         private:
-            EventBase* m_base;      /// 关联的事件派发器（非空）
-            PollerBase* m_poller;   /// 关联的轮询器（从EventBase中获取）
-            int m_fd;               /// 关联的文件描述符（非负，-1标识已关闭）
-            short m_events;         /// 当前关注的事件掩码（EPOLLIN/EPOLLOUT等）
-            int64_t m_id;           /// 通道唯一ID（全局原子生成）
-            Task m_readCB;          /// 读事件回调
-            Task m_writeCB;         /// 写事件回调
-            Task m_errorcb;         /// 错误事件回调
+            /// 关联的事件派发器（非空）
+            EventBase* m_base;      
+            /// 关联的轮询器（从EventBase中获取）
+            PollerBase* m_poller;  
+            /// 关联的文件描述符（非负，-1标识已关闭）
+            int m_fd;              
+            /// 当前关注的事件掩码（EPOLLIN/EPOLLOUT等） 
+            short m_events;        
+            /// 通道唯一ID（全局原子生成） 
+            int64_t m_id;           
+            /// 读事件回调
+            Task m_readCB;     
+            /// 写事件回调     
+            Task m_writeCB;    
+            /// 错误事件回调
+            Task m_errorCB;         
 
             /**
              * @brief 允许 PollerEpoll 访问 Channel 的私有成员

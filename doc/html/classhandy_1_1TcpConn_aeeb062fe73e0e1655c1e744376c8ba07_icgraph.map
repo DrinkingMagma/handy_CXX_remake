@@ -1,0 +1,8 @@
+<map id="handy::TcpConn::attach" name="handy::TcpConn::attach">
+<area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#a1227846cc9258601c72a354f71dd080f" title="主动连接到指定的主机和端口 " alt="" coords="215,31,393,57"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#a14338af0c8635457894f33585bdd0878" title="重连 " alt="" coords="441,31,631,57"/>
+<area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#a9ac6fe9839fbf06e2246f52b45668d01" title="清理连接资源 " alt="" coords="679,31,849,57"/>
+<area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="1181,5,1383,32"/>
+<area shape="rect" id="node6" href="$classhandy_1_1TcpConn.html#aede1ec049cda3fffd74acf9f116b16aa" title="处理握手过程 " alt="" coords="897,56,1133,83"/>
+<area shape="rect" id="node7" href="$classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3" title="处理写事件 " alt="" coords="1181,56,1383,83"/>
+</map>

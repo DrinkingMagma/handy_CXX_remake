@@ -1,0 +1,5 @@
+<map id="handy::UdpServer::startServer" name="handy::UdpServer::startServer">
+<area shape="rect" id="node2" href="$classhandy_1_1UdpServer.html#a4f9f59c1eefd51cf69bf80180fcf32bc" title="构造函数，通过m_bases&#45;&gt;allocBase()获取具体的事件循环对象 " alt="" coords="252,35,449,61"/>
+<area shape="rect" id="node3" href="$namespacehandy.html#aeb22e917b1ad4ff09d0f01cacd79a86b" title="handy::FATAL_IF" alt="" coords="508,5,631,32"/>
+<area shape="rect" id="node4" href="$classhandy_1_1EventBases.html#a9e80d26b5cb6091ab83d7c8a89420dae" title="分配事件派发器 " alt="" coords="497,57,641,98"/>
+</map>

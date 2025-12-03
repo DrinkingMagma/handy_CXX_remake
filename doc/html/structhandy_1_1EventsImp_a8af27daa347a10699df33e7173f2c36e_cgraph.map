@@ -1,0 +1,5 @@
+<map id="handy::EventsImp::init" name="handy::EventsImp::init">
+<area shape="rect" id="node2" href="$classhandy_1_1Channel.html#ae27d980514a06cc5e39051e4c57c78c1" title="注册读事件回调函数（右值引用） " alt="" coords="217,5,383,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Channel.html#ac24c361fc54c9779765afe0a70560d82" title="获取关联的文件描述符 " alt="" coords="223,56,377,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1SafeQueue.html#aef745af0cbdac7e9e8f2366a5db8f40d" title="从队列头部取出元素(支持超时等待,线程安全) " alt="" coords="207,107,393,133"/>
+</map>

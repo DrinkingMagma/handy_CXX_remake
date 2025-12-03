@@ -1,0 +1,19 @@
+<map id="handy::Buffer::size" name="handy::Buffer::size">
+<area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#a9ac6fe9839fbf06e2246f52b45668d01" title="清理连接资源 " alt="" coords="187,94,358,121"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="693,43,895,70"/>
+<area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3" title="处理写事件 " alt="" coords="693,119,895,146"/>
+<area shape="rect" id="node6" href="$classhandy_1_1TcpConn.html#aa6686d5e5c585b9e566763552c07ee35" title="发送缓冲区中的数据 " alt="" coords="196,195,349,222"/>
+<area shape="rect" id="node9" href="$classhandy_1_1HttpRequest.html#a31ffcd924278389dbebef51a0a7ba3d7" title="编码请求到缓冲区 " alt="" coords="203,247,342,288"/>
+<area shape="rect" id="node11" href="$classhandy_1_1HttpResponse.html#a5b1c5770e086e07eea5e7ca0d66ad711" title="编码响应到缓冲区 " alt="" coords="198,377,347,419"/>
+<area shape="rect" id="node13" href="$classhandy_1_1HttpConnPtr.html#aa27725703eccbd49f3763e295113887d" title="记录输出日志 " alt="" coords="203,312,342,353"/>
+<area shape="rect" id="node14" href="$classhandy_1_1UdpServer.html#ae56468dcf409ffde65f6c1b783b273cd" title="发送数据缓冲区到指定地址 " alt="" coords="184,443,361,470"/>
+<area shape="rect" id="node16" href="$classhandy_1_1UdpConn.html#a1ec5518264f7c2a3de123560e4998c59" title="发送数据缓冲区中的数据 " alt="" coords="195,494,351,521"/>
+<area shape="rect" id="node18" href="$classhandy_1_1HSHAU.html#a7a46b7958480b944f8ed95fbcf2df57d" title="设置消息处理回调函数 " alt="" coords="193,545,353,571"/>
+<area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#aede1ec049cda3fffd74acf9f116b16aa" title="处理握手过程 " alt="" coords="409,94,645,121"/>
+<area shape="rect" id="node7" href="$classhandy_1_1TcpConn.html#a876eeca51918ea71097edc1c2aab3fea" title="发送输出缓冲区中的数据 " alt="" coords="431,196,623,237"/>
+<area shape="rect" id="node8" href="$classhandy_1_1TcpConn.html#a9ff910e1037b29a941c66f3b8eefacc4" title="发送消息（通过编解码器编码后发送） " alt="" coords="705,203,883,230"/>
+<area shape="rect" id="node10" href="$classhandy_1_1HttpConnPtr.html#a918459361f721be5a159092c23d3503e" title="发送指定的请求对象 " alt="" coords="458,273,597,315"/>
+<area shape="rect" id="node12" href="$classhandy_1_1HttpConnPtr.html#ab6e45a0b670d2bd094c00d320a374ebf" title="发送指定响应的对象 " alt="" coords="458,364,597,405"/>
+<area shape="rect" id="node15" href="$classhandy_1_1UdpServer.html#aa6bf655c4c5e53333ced52b5f49c743e" title="发送字符串到指定地址 " alt="" coords="439,443,616,470"/>
+<area shape="rect" id="node17" href="$classhandy_1_1UdpConn.html#a6d7c13df818c8f65e97770eb8fe5edea" title="发送字符串数据 " alt="" coords="449,494,605,521"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="handy::UdpConn::~UdpConn" name="handy::UdpConn::~UdpConn">
+<area shape="rect" id="node2" href="$classhandy_1_1UdpConn.html#ad60a08b5941d9cf5ecf786d514b69915" title="关闭当前UDP连接 " alt="" coords="244,5,403,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1EventBase.html#a3ac6300bb4a65a089a08b8010c4ee0bb" title="投递异步任务（线程安全，右值引用） " alt="" coords="451,5,636,32"/>
+</map>

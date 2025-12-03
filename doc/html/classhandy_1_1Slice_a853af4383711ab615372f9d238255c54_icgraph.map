@@ -1,0 +1,9 @@
+<map id="handy::Slice::toString" name="handy::Slice::toString">
+<area shape="rect" id="node2" href="$classhandy_1_1HSHA.html#a45b5d0f4e3a7eac206d6a7336eef5111" title="设置消息处理的回调函数 " alt="" coords="200,5,351,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpResponse.html#aff04a28503872c7f918d17fcc36835fe" title="从缓冲区解码响应 " alt="" coords="201,57,350,98"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Slice.html#a94fbcf5f40fdadf2f4f9a5665bac2ff5" title="隐式转换为std::string（兼容字符串场景） " alt="" coords="208,123,343,149"/>
+<area shape="rect" id="node8" href="$classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8" title="构造函数 " alt="" coords="208,174,343,215"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpConnPtr.html#a1c2c0b1fbe5a35f94ae9d898ac57551b" title="底层TCP连接 " alt="" coords="399,57,537,98"/>
+<area shape="rect" id="node5" href="$classhandy_1_1HttpConnPtr.html#a0b2ff11dafbd36c86ce8e6a035a95d4b" title="注册HTTP消息处理回调 " alt="" coords="585,57,724,98"/>
+<area shape="rect" id="node6" href="$classhandy_1_1HttpServer.html#af36412871ad23228ad2ba124b4526690" title="构造函数 " alt="" coords="772,57,908,98"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="handy::Logger::getCurrentTimeStamp" name="handy::Logger::getCurrentTimeStamp">
+<area shape="rect" id="node2" href="$classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893" title="设置日志文件名称 " alt="" coords="228,5,435,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Logger.html#a434ac0f25b7add4d9276da50167e2117" title="检查并进行日志轮转 " alt="" coords="227,57,436,98"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Logger.html#a6d61757bf1d37101021e3bdc63e78c6d" title="日志记录函数 " alt="" coords="484,64,620,91"/>
+</map>

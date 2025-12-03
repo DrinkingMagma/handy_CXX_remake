@@ -1,0 +1,4 @@
+<map id="handy::Buffer::makeRoom" name="handy::Buffer::makeRoom">
+<area shape="rect" id="node2" href="$classhandy_1_1Buffer.html#ac048f158dc445a075cb5d5a1534ea544" title="返回缓冲区中当前剩余的可用空间（字节数）（需外部加锁） " alt="" coords="231,5,381,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Buffer.html#a0ca99339d31c25d203875bf57f75fc67" title="扩展缓冲区容量 " alt="" coords="228,56,384,83"/>
+</map>

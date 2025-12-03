@@ -1,0 +1,9 @@
+<map id="handy::LengthCodec::tryDecode" name="handy::LengthCodec::tryDecode">
+<area shape="rect" id="node2" href="$classhandy_1_1Slice.html#aa9c41a7c077cb18809a408d429587b3c" title="获取视图长度 " alt="" coords="214,5,341,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1LengthCodec.html#a29011b90ccc681ae4aae490269043cc0" title="检查魔法字的合法性 " alt="" coords="206,57,349,98"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Slice.html#a229c81ddfceb6b035b4e0325d8f5fac6" title="获取数据起始指针（非空） " alt="" coords="214,123,341,149"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Net.html#ab2529e9ccaf7c82c477ba0cbc2fa6f6c" title="将网络字节序转换为主机字节序 " alt="" coords="218,173,337,200"/>
+<area shape="rect" id="node8" href="$classhandy_1_1LengthCodec.html#a68a27d0e203433b704a1167072d9a9e9" title="获取当前最大消息长度（非线程安全） " alt="" coords="196,225,359,266"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f" title="将16位无符号整数从大端字节序（网络字节序）转换为主机字节序 " alt="" coords="407,173,533,200"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30" title="将16位无符号整数从主机字节序转换为大端字节序（网络字节序） " alt="" coords="581,173,708,200"/>
+</map>

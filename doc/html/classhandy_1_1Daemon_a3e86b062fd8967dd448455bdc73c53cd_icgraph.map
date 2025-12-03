@@ -1,0 +1,4 @@
+<map id="handy::Daemon::start" name="handy::Daemon::start">
+<area shape="rect" id="node2" href="$classhandy_1_1Daemon.html#aafa40b3e5938a3e9cbfeadabe1ee0fd8" title="重启守护进程 " alt="" coords="201,5,360,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Daemon.html#a301dc0a520e61a5f46ecd2ffb7d3d91f" title="根据命令执行守护进程的对应操作 " alt="" coords="408,31,576,57"/>
+</map>

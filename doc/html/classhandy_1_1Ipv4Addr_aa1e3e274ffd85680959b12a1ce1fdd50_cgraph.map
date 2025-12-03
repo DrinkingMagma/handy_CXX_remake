@@ -1,0 +1,7 @@
+<map id="handy::Ipv4Addr::ip" name="handy::Ipv4Addr::ip">
+<area shape="rect" id="node2" href="$classhandy_1_1Ipv4Addr.html#aeedd479d879facc608008878faa48a8b" title="检查IP地址是否有效 " alt="" coords="188,5,363,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Net.html#ab2529e9ccaf7c82c477ba0cbc2fa6f6c" title="将网络字节序转换为主机字节序 " alt="" coords="216,56,335,83"/>
+<area shape="rect" id="node6" href="$structhandy_1_1Utils.html#ad70f51fc39095ca32dce7f045adc026b" title="格式化字符串 " alt="" coords="207,107,344,133"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f" title="将16位无符号整数从大端字节序（网络字节序）转换为主机字节序 " alt="" coords="411,56,537,83"/>
+<area shape="rect" id="node5" href="$namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30" title="将16位无符号整数从主机字节序转换为大端字节序（网络字节序） " alt="" coords="585,56,712,83"/>
+</map>

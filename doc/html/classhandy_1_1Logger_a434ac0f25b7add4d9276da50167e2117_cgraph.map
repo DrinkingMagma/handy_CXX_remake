@@ -1,0 +1,4 @@
+<map id="handy::Logger::checkAndRotateLogFile" name="handy::Logger::checkAndRotateLogFile">
+<area shape="rect" id="node2" href="$classhandy_1_1Logger.html#a1f5d1fab0756d1df799e204499faa012" title="获取当前时间戳（秒） " alt="" coords="269,5,443,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Logger.html#a6148b17e2785e4335d9f92790bbce71d" title="执行日志轮转 " alt="" coords="263,71,449,98"/>
+</map>

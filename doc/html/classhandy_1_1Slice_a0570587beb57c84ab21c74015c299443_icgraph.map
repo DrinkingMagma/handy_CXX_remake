@@ -1,0 +1,7 @@
+<map id="handy::Slice::eatWord" name="handy::Slice::eatWord">
+<area shape="rect" id="node2" href="$classhandy_1_1HttpRequest.html#a8c651a6b85e5bb2846a241a451f76add" title="从缓冲区解码请求 " alt="" coords="209,5,348,47"/>
+<area shape="rect" id="node6" href="$classhandy_1_1HttpResponse.html#aff04a28503872c7f918d17fcc36835fe" title="从缓冲区解码响应 " alt="" coords="204,71,353,112"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpConnPtr.html#a1c2c0b1fbe5a35f94ae9d898ac57551b" title="底层TCP连接 " alt="" coords="401,39,540,80"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpConnPtr.html#a0b2ff11dafbd36c86ce8e6a035a95d4b" title="注册HTTP消息处理回调 " alt="" coords="588,39,727,80"/>
+<area shape="rect" id="node5" href="$classhandy_1_1HttpServer.html#af36412871ad23228ad2ba124b4526690" title="构造函数 " alt="" coords="775,39,911,80"/>
+</map>

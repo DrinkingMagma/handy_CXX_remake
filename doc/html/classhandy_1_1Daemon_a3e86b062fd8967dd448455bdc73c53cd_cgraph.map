@@ -1,0 +1,4 @@
+<map id="handy::Daemon::start" name="handy::Daemon::start">
+<area shape="rect" id="node2" href="$classhandy_1_1Daemon.html#a43b7d49312a5972bde56a14a95ebb815" title="从指定的pid文件中读取守护进程的PID " alt="" coords="201,5,412,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Daemon.html#a1e9cab5021af8a73b485e80fd47f10a0" title="将当前进程的PID写入指定的PID文件 " alt="" coords="208,56,405,83"/>
+</map>

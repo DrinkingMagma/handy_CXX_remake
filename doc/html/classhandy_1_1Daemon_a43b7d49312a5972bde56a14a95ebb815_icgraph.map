@@ -1,0 +1,6 @@
+<map id="handy::Daemon::getPidFromFile" name="handy::Daemon::getPidFromFile">
+<area shape="rect" id="node2" href="$classhandy_1_1Daemon.html#a3e86b062fd8967dd448455bdc73c53cd" title="启动一个新的守护进程 " alt="" coords="264,5,412,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Daemon.html#aafa40b3e5938a3e9cbfeadabe1ee0fd8" title="重启守护进程 " alt="" coords="460,56,619,83"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Daemon.html#a542577d85c2cde3b563c3661ccda0e80" title="停止当前运行的守护进程 " alt="" coords="265,107,411,133"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Daemon.html#a301dc0a520e61a5f46ecd2ffb7d3d91f" title="根据命令执行守护进程的对应操作 " alt="" coords="667,56,835,83"/>
+</map>

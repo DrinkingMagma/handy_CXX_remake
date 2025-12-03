@@ -1,0 +1,5 @@
+<map id="handy::StatServer::onRequest" name="handy::StatServer::onRequest">
+<area shape="rect" id="node2" href="$classhandy_1_1StatServer.html#af8136e30e403fed96155e2e5acb8a07f" title="注册请求处理回调函数 " alt="" coords="212,5,347,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpMsg.html#af73142db7e94bf0a75dd82a03930fc2f" title="设置m_body消息体内容 " alt="" coords="194,71,365,98"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpMsg.html#a5f5db18769afc9c4aab2c250f4f13343" title="设置单个头部字段（添加/覆盖单个键值对） " alt="" coords="188,122,371,149"/>
+</map>

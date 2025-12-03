@@ -1,0 +1,6 @@
+<map id="handy::HSHAU::onMsg" name="handy::HSHAU::onMsg">
+<area shape="rect" id="node2" href="$classhandy_1_1Buffer.html#aceb300c5e30fad7a6062b97f48a2c111" title="返回内部缓冲区的只读指针 " alt="" coords="215,5,350,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16" title="获取当前缓冲区中的数据长度 " alt="" coords="217,56,348,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1ThreadPool.html#aa539ee3210ff0346b8f88d705bf56f32" title="向线程池添加任务（右值引用，线程安全） " alt="" coords="213,107,352,149"/>
+<area shape="rect" id="node5" href="$classhandy_1_1SafeQueue.html#acb896f0aca5b54570157b4a9528ec529" title="向队列尾部添加元素(线程安全) " alt="" coords="400,115,567,141"/>
+</map>

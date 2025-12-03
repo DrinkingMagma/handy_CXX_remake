@@ -1,0 +1,5 @@
+<map id="handy::Buffer::makeRoom" name="handy::Buffer::makeRoom">
+<area shape="rect" id="node2" href="$classhandy_1_1Buffer.html#a56a876c03842962a6d412c9842c3ff8a" title="获取当前缓冲区中的数据长度（需外部加锁） " alt="" coords="247,5,386,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Buffer.html#a152b8546af1c0bca407455a6b174e05b" title="将数据移动到缓冲区头部，减少内存碎片 " alt="" coords="228,56,405,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Buffer.html#a0ca99339d31c25d203875bf57f75fc67" title="扩展缓冲区容量 " alt="" coords="239,107,395,133"/>
+</map>

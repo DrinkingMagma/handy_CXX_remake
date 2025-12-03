@@ -1,0 +1,6 @@
+<map id="handy::Buffer::appendUnSafe" name="handy::Buffer::appendUnSafe">
+<area shape="rect" id="node2" href="$classhandy_1_1Buffer.html#a48b58522a99b408d8dca8c831d83650a" title="合并另一个缓冲区的内容（将另一个缓冲区的所有数据追加到当前缓冲区，并清空另一个缓冲区） " alt="" coords="247,13,393,39"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#aa6686d5e5c585b9e566763552c07ee35" title="发送缓冲区中的数据 " alt="" coords="441,13,595,39"/>
+<area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#a876eeca51918ea71097edc1c2aab3fea" title="发送输出缓冲区中的数据 " alt="" coords="643,5,835,47"/>
+<area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#a9ff910e1037b29a941c66f3b8eefacc4" title="发送消息（通过编解码器编码后发送） " alt="" coords="883,13,1061,39"/>
+</map>

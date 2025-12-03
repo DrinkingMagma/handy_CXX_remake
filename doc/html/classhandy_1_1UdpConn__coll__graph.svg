@@ -46,7 +46,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="classhandy_1_1AutoContext.html" target="_top" xlink:title="定时任务ID类型&lt; 超时时间戳，序列号（自增整数）&gt;=&quot;&quot;&gt; ">
+<g id="a_node4"><a xlink:href="classhandy_1_1AutoContext.html" target="_top" xlink:title="自动上下文管理器（线程安全） ">
 <polygon fill="#ffffff" stroke="#000000" points="267,-161.5 267,-180.5 371,-180.5 371,-161.5 267,-161.5"/>
 <text text-anchor="middle" x="319" y="-168.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">handy::AutoContext</text>
 </a>

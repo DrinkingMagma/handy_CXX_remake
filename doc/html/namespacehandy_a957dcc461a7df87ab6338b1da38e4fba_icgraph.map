@@ -1,0 +1,15 @@
+<map id="handy::errstr" name="handy::errstr">
+<area shape="rect" id="node2" href="$classhandy_1_1Status.html#a07bbe0f37479f5765a7b3ba442d70957" title="根据当前线程的系统错误(errno)创建Status对象 " alt="" coords="148,209,331,235"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Status.html#a4f98c279b3cd768dcad0e83e38f37616" title="创建I/O操作错误的Status对象 " alt="" coords="165,259,314,286"/>
+<area shape="rect" id="node4" href="$classhandy_1_1File.html#a5b778189e38180b3a7888d01d85292ac" title="读取文件内容到字符串 " alt="" coords="383,57,542,83"/>
+<area shape="rect" id="node7" href="$classhandy_1_1File.html#a301c1e79828ed43e2dab0a749ce3f09b" title="将字符串内容写入文件（覆盖模式） " alt="" coords="379,107,547,134"/>
+<area shape="rect" id="node8" href="$classhandy_1_1File.html#a25c291a825fafe32feeeea8e1322a804" title="安全写入文件（先写临时文件，再原子重命名） " alt="" coords="595,158,761,185"/>
+<area shape="rect" id="node9" href="$classhandy_1_1File.html#a67e8a00e0036f9550d4a7c63637088d6" title="获取目录下的所有子文件/子目录名 " alt="" coords="383,209,543,235"/>
+<area shape="rect" id="node10" href="$classhandy_1_1File.html#acc3347222815f1358f7b376e3e7bd8f8" title="删除指定文件 " alt="" coords="387,259,538,286"/>
+<area shape="rect" id="node11" href="$classhandy_1_1File.html#a4d5d82396291c98069b2a4a0ac13ae87" title="创建目录（仅创建一级目录） " alt="" coords="389,310,536,337"/>
+<area shape="rect" id="node12" href="$classhandy_1_1File.html#a8acfc71d9fcedd4a029cbfae45dc2d0a" title="删除空目录 " alt="" coords="389,361,536,387"/>
+<area shape="rect" id="node13" href="$classhandy_1_1File.html#a6f264ae5ec8ba8bbf3cd7d96e6fc4356" title="获取文件大小 " alt="" coords="383,411,542,438"/>
+<area shape="rect" id="node14" href="$classhandy_1_1File.html#af37989e9dc29d191f3eb8a832052bb98" title="重名名文件或目录 " alt="" coords="394,462,531,489"/>
+<area shape="rect" id="node5" href="$classhandy_1_1HttpConnPtr.html#a5baa91c7b32051095038b4c9d4e9f30f" title="发送文件作为响应 " alt="" coords="609,5,747,47"/>
+<area shape="rect" id="node6" href="$classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99" title="注册页面文件（将文件内容作为页面响应） " alt="" coords="611,71,745,112"/>
+</map>

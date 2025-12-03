@@ -1,0 +1,5 @@
+<map id="handy::Channel::enableReadWrite" name="handy::Channel::enableReadWrite">
+<area shape="rect" id="node2" href="$classhandy_1_1Channel.html#a0499bc3a24e3c502270dae6794ac383d" title="启用/禁用读事件监听 " alt="" coords="244,5,435,32"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Channel.html#aa44b6a847b01bfe540252d60a7475f18" title="启用/禁用写事件监听 " alt="" coords="244,56,435,83"/>
+<area shape="rect" id="node3" href="$classhandy_1_1PollerBase.html#a18dd0b82f39e3ef86f38ed8c2c78d173" title="更新轮询器中的事件通道的监控事件 " alt="" coords="483,23,619,65"/>
+</map>

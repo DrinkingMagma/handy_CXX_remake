@@ -25,15 +25,24 @@
 
 namespace handy
 {
-    class Channel;          /// 事件通道抽象类
-    class TcpConn;    /// TCP连接抽象类
-    class TCPServer;        /// TCP服务器抽象类
-    class PollerBase;       /// 事件轮询抽象类
-    struct IdleIdImp;        /// 空闲资源ID实现结构体
-    struct EventsImp;        /// 事件实现结构体
-    class EventBase;        /// 事件循环基类结构体
-    typedef std::unique_ptr<IdleIdImp> IdleId;      /// 空闲资源ID的智能指针类型
-    typedef std::pair<int64_t, int64_t> TimerId;    /// 定时任务ID类型<超时时间戳，序列号（自增整数）>
+    /// 事件通道抽象类
+    class Channel;          
+    /// TCP连接抽象类
+    class TcpConn;    
+    /// TCP服务器抽象类
+    class TCPServer;        
+    /// 事件轮询抽象类
+    class PollerBase;       
+    /// 空闲资源ID实现结构体
+    struct IdleIdImp;        
+    /// 事件实现结构体
+    struct EventsImp;        
+    /// 事件循环基类结构体
+    class EventBase;        
+    /// 空闲资源ID的智能指针类型
+    typedef std::unique_ptr<IdleIdImp> IdleId;      
+    /// 定时任务ID类型<超时时间戳，序列号（自增整数）>
+    typedef std::pair<int64_t, int64_t> TimerId;    
 
     /**
      * @class AutoContext

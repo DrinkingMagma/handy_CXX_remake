@@ -1,0 +1,12 @@
+<map id="handy::TcpConn::~TcpConn" name="handy::TcpConn::~TcpConn">
+<area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#aed1048ae4c4766e402371acbc9afd6a5" title="立即关闭连接，清理相关资源 " alt="" coords="239,59,421,86"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86" title="获取IP地址和端口的字符串表示 " alt="" coords="245,122,415,149"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Channel.html#a16bfdb9fd8be1db78f17777fb59ebe85" title="关闭通道（关闭fd并从poller中删除） " alt="" coords="481,46,633,73"/>
+<area shape="rect" id="node4" href="$classhandy_1_1PollerBase.html#a160f912c38d27a373c45e3c43cc56775" title="从轮询器中移除事件通道 " alt="" coords="719,5,855,47"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Channel.html#ac0037b2a0578f2445f08f9084ad5acfa" title="处理读事件（调用注册的读事件回调函数） " alt="" coords="692,71,883,98"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Ipv4Addr.html#aeedd479d879facc608008878faa48a8b" title="检查IP地址是否有效 " alt="" coords="469,97,644,123"/>
+<area shape="rect" id="node8" href="$classhandy_1_1Net.html#ab2529e9ccaf7c82c477ba0cbc2fa6f6c" title="将网络字节序转换为主机字节序 " alt="" coords="497,147,616,174"/>
+<area shape="rect" id="node11" href="$structhandy_1_1Utils.html#ad70f51fc39095ca32dce7f045adc026b" title="格式化字符串 " alt="" coords="488,198,625,225"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f" title="将16位无符号整数从大端字节序（网络字节序）转换为主机字节序 " alt="" coords="724,147,851,174"/>
+<area shape="rect" id="node10" href="$namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30" title="将16位无符号整数从主机字节序转换为大端字节序（网络字节序） " alt="" coords="931,147,1057,174"/>
+</map>

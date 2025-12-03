@@ -1,0 +1,4 @@
+<map id="handy::HttpResponse::setNotFound" name="handy::HttpResponse::setNotFound">
+<area shape="rect" id="node2" href="$classhandy_1_1HttpResponse.html#a8e64d809b653c3af1045eff6969bacbf" title="设置响应码和状态 " alt="" coords="203,5,352,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpResponse.html#aa0f5da9cddecdb321286d69f5a84ea96" title="状态描述 " alt="" coords="400,5,560,47"/>
+</map>

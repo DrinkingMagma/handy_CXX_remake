@@ -1,0 +1,4 @@
+<map id="handy::AutoContext::context" name="handy::AutoContext::context">
+<area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#a737c420f6eff603fbcf9346e69092437" title="获取与当前连接关联的上下文 " alt="" coords="193,5,383,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1UdpConn.html#ab6fd286dc950e7f156131e6cefaa9a40" title="获取自动管理的上下文对象 " alt="" coords="192,56,384,83"/>
+</map>

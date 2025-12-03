@@ -1,0 +1,4 @@
+<map id="handy::TcpConn::send" name="handy::TcpConn::send">
+<area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#a876eeca51918ea71097edc1c2aab3fea" title="发送输出缓冲区中的数据 " alt="" coords="207,5,399,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#a9ff910e1037b29a941c66f3b8eefacc4" title="发送消息（通过编解码器编码后发送） " alt="" coords="447,13,625,39"/>
+</map>

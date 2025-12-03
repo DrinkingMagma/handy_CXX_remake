@@ -1,0 +1,7 @@
+<map id="handy::HttpResponse::setStatus" name="handy::HttpResponse::setStatus">
+<area shape="rect" id="node2" href="$classhandy_1_1HttpConnPtr.html#a5baa91c7b32051095038b4c9d4e9f30f" title="发送文件作为响应 " alt="" coords="400,5,539,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpResponse.html#a9910f0c1d366043c3bd7cff5901121ac" title="设置404 Not Found状态 " alt="" coords="203,71,352,112"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpServer.html#af36412871ad23228ad2ba124b4526690" title="构造函数 " alt="" coords="401,71,537,112"/>
+<area shape="rect" id="node5" href="$classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8" title="构造函数 " alt="" coords="402,136,537,177"/>
+<area shape="rect" id="node6" href="$classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99" title="注册页面文件（将文件内容作为页面响应） " alt="" coords="402,201,537,243"/>
+</map>

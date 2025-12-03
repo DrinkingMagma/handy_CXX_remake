@@ -1,0 +1,6 @@
+<map id="handy::Buffer::_space" name="handy::Buffer::_space">
+<area shape="rect" id="node2" href="$classhandy_1_1Buffer.html#a7060b929fb9d5b805ae670c77b0f8cdf" title="当缓冲区剩余空间小于m_exp时，扩展缓冲区 " alt="" coords="203,56,377,83"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="440,5,641,32"/>
+<area shape="rect" id="node4" href="$classhandy_1_1UdpServer.html#a49e1cf8559b57b910172e38e59199b67" title="将服务器绑定到指定地址和端口 " alt="" coords="461,56,620,83"/>
+<area shape="rect" id="node5" href="$classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd" title="创建新的UDP连接 " alt="" coords="425,107,656,133"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="handy::Channel::enableWrite" name="handy::Channel::enableWrite">
+<area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3" title="处理写事件 " alt="" coords="767,71,968,98"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#a6ab3b461a68113e6b043b0c4add063c4" title="发送数据的内部实现 " alt="" coords="259,122,419,149"/>
+<area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#aa6686d5e5c585b9e566763552c07ee35" title="发送缓冲区中的数据 " alt="" coords="524,173,677,199"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Channel.html#a07dc59cf62631a5d3ce88f70120ac8c6" title="同时控制读/写事件监听 " alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#a876eeca51918ea71097edc1c2aab3fea" title="发送输出缓冲区中的数据 " alt="" coords="771,165,963,207"/>
+<area shape="rect" id="node6" href="$classhandy_1_1TcpConn.html#a9ff910e1037b29a941c66f3b8eefacc4" title="发送消息（通过编解码器编码后发送） " alt="" coords="1016,173,1195,199"/>
+<area shape="rect" id="node8" href="$classhandy_1_1TcpConn.html#aede1ec049cda3fffd74acf9f116b16aa" title="处理握手过程 " alt="" coords="483,17,719,43"/>
+<area shape="rect" id="node9" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="767,17,968,43"/>
+</map>

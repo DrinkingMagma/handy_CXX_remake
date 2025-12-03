@@ -1,0 +1,7 @@
+<map id="handy::HSHAU::startServer" name="handy::HSHAU::startServer">
+<area shape="rect" id="node2" href="$classhandy_1_1HSHAU.html#ab748838aea29ec68eade37503a6dfb98" title="构造函数 " alt="" coords="253,5,423,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1UdpServer.html#a67fc24c72f8cec3c2a842e99f74c2e30" title="启动并创建一个新的UDP服务器 " alt="" coords="239,56,437,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1UdpServer.html#a4f9f59c1eefd51cf69bf80180fcf32bc" title="构造函数，通过m_bases&#45;&gt;allocBase()获取具体的事件循环对象 " alt="" coords="485,56,683,83"/>
+<area shape="rect" id="node5" href="$namespacehandy.html#aeb22e917b1ad4ff09d0f01cacd79a86b" title="handy::FATAL_IF" alt="" coords="741,27,864,53"/>
+<area shape="rect" id="node6" href="$classhandy_1_1EventBases.html#a9e80d26b5cb6091ab83d7c8a89420dae" title="分配事件派发器 " alt="" coords="731,78,875,119"/>
+</map>

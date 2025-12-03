@@ -1,0 +1,7 @@
+<map id="handy::Logger::logv" name="handy::Logger::logv">
+<area shape="rect" id="node2" href="$classhandy_1_1Logger.html#ab1f4e1e61393d825d7168dffad85aa48" title="获取日志级别 " alt="" coords="203,5,385,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Logger.html#a434ac0f25b7add4d9276da50167e2117" title="检查并进行日志轮转 " alt="" coords="189,57,399,98"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Logger.html#a53cc55dadce00c792481c454764e0ccf" title="获取日志级别对应的字符串表示 " alt="" coords="203,122,385,163"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Logger.html#a1f5d1fab0756d1df799e204499faa012" title="获取当前时间戳（秒） " alt="" coords="453,27,627,69"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Logger.html#a6148b17e2785e4335d9f92790bbce71d" title="执行日志轮转 " alt="" coords="447,93,633,120"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="handy::handleUpdateIdle" name="handy::handleUpdateIdle">
+<area shape="rect" id="node2" href="$classhandy_1_1EventBase.html#a61cd5890929ce9a263f23c0ae1456b72" title="获取EventsImp对象指针 " alt="" coords="229,5,407,32"/>
+<area shape="rect" id="node3" href="$structhandy_1_1EventsImp.html#ab12568ed9e6c3fb1a4a10037297a6ff2" title="更新空闲连接状态（重置最后活跃时间） " alt="" coords="220,56,416,83"/>
+<area shape="rect" id="node4" href="$structhandy_1_1Utils.html#a6769faed062da90b4411a3dc189727bf" title="获取当前系统时间(毫秒级) " alt="" coords="464,56,612,83"/>
+<area shape="rect" id="node5" href="$structhandy_1_1Utils.html#a504697916771757a1fb83eb4cdb994b5" title="获取当前系统时间(微秒级，线程安全) " alt="" coords="660,56,817,83"/>
+</map>

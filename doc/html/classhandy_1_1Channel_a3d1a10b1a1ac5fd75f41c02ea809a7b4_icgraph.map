@@ -1,0 +1,8 @@
+<map id="handy::Channel::getId" name="handy::Channel::getId">
+<area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="204,5,405,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#a6ab3b461a68113e6b043b0c4add063c4" title="发送数据的内部实现 " alt="" coords="225,56,385,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3" title="处理写事件 " alt="" coords="453,31,655,57"/>
+<area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#aa6686d5e5c585b9e566763552c07ee35" title="发送缓冲区中的数据 " alt="" coords="477,81,631,108"/>
+<area shape="rect" id="node6" href="$classhandy_1_1TcpConn.html#a876eeca51918ea71097edc1c2aab3fea" title="发送输出缓冲区中的数据 " alt="" coords="703,74,895,115"/>
+<area shape="rect" id="node7" href="$classhandy_1_1TcpConn.html#a9ff910e1037b29a941c66f3b8eefacc4" title="发送消息（通过编解码器编码后发送） " alt="" coords="943,81,1121,108"/>
+</map>

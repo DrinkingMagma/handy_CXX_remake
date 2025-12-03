@@ -1,0 +1,4 @@
+<map id="handy::ThreadPool::workerLoop" name="handy::ThreadPool::workerLoop">
+<area shape="rect" id="node2" href="$classhandy_1_1ThreadPool.html#a74e85ff1e6605531acdd8e0e3cf903df" title="启动线程池（线程安全） " alt="" coords="192,5,331,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1ThreadPool.html#a60492a85af81120d1d8d03e3a41d2ffe" title="构造函数(初始化线程池参数) " alt="" coords="379,5,517,47"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="handy::Status::fromSystem" name="handy::Status::fromSystem">
+<area shape="rect" id="node2" href="$classhandy_1_1Status.html#a928f8d212a443ec48bf09b53d58eed93" title="构造函数，创建一个表示“成功”的Status对象 " alt="" coords="236,5,385,32"/>
+<area shape="rect" id="node3" href="$namespacehandy.html#a957dcc461a7df87ab6338b1da38e4fba" title="获取当前线程的系统错误信息字符串 " alt="" coords="263,56,358,83"/>
+</map>

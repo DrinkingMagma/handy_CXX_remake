@@ -1,0 +1,5 @@
+<map id="handy::HSHA::startServer" name="handy::HSHA::startServer">
+<area shape="rect" id="node2" href="$classhandy_1_1HSHA.html#ad520594fb1667611f45c268b8b2054ae" title="构造函数 " alt="" coords="251,5,401,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpServer.html#a088308ea460256efa88abf76e1867dd3" title="启动一个TCP服务器 " alt="" coords="228,56,424,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1TcpServer.html#a28b2e607dd22ae09a66da113805c9d87" title="TcpServer智能指针类型定义 " alt="" coords="472,56,663,83"/>
+</map>

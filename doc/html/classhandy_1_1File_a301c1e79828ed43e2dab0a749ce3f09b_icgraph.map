@@ -1,0 +1,3 @@
+<map id="handy::File::writeContent" name="handy::File::writeContent">
+<area shape="rect" id="node2" href="$classhandy_1_1File.html#a25c291a825fafe32feeeea8e1322a804" title="安全写入文件（先写临时文件，再原子重命名） " alt="" coords="221,5,388,32"/>
+</map>

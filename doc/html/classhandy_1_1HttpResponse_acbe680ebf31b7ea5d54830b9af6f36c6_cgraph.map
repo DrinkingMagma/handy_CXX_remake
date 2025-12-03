@@ -1,0 +1,4 @@
+<map id="handy::HttpResponse::clear" name="handy::HttpResponse::clear">
+<area shape="rect" id="node2" href="$classhandy_1_1HttpMsg.html#a6af21518e70f11938fcdebfa3db1f5cb" title="清空消息所有字段，恢复初始状态 " alt="" coords="203,13,353,39"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Slice.html#a7f14d97101d460d6cd92b35c24c466c0" title="清空视图（重置为空视图） " alt="" coords="401,13,532,39"/>
+</map>

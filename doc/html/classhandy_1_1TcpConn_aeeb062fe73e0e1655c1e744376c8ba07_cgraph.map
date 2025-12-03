@@ -1,0 +1,11 @@
+<map id="handy::TcpConn::attach" name="handy::TcpConn::attach">
+<area shape="rect" id="node2" href="$namespacehandy.html#aeb22e917b1ad4ff09d0f01cacd79a86b" title="handy::FATAL_IF" alt="" coords="239,5,361,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86" title="获取IP地址和端口的字符串表示 " alt="" coords="215,56,385,83"/>
+<area shape="rect" id="node9" href="$classhandy_1_1Channel.html#ae27d980514a06cc5e39051e4c57c78c1" title="注册读事件回调函数（右值引用） " alt="" coords="217,107,383,133"/>
+<area shape="rect" id="node10" href="$classhandy_1_1Channel.html#a1d80efc45ae10a60aa38adb7c397390b" title="注册写事件回调函数（右值引用） " alt="" coords="217,157,383,184"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Ipv4Addr.html#aeedd479d879facc608008878faa48a8b" title="检查IP地址是否有效 " alt="" coords="433,5,608,32"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Net.html#ab2529e9ccaf7c82c477ba0cbc2fa6f6c" title="将网络字节序转换为主机字节序 " alt="" coords="461,56,580,83"/>
+<area shape="rect" id="node8" href="$structhandy_1_1Utils.html#ad70f51fc39095ca32dce7f045adc026b" title="格式化字符串 " alt="" coords="452,107,589,133"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f" title="将16位无符号整数从大端字节序（网络字节序）转换为主机字节序 " alt="" coords="656,56,783,83"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30" title="将16位无符号整数从主机字节序转换为大端字节序（网络字节序） " alt="" coords="831,56,957,83"/>
+</map>

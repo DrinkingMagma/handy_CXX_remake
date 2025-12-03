@@ -21,7 +21,7 @@ var classhandy_1_1Channel =
     [ "PollerEpoll", "classhandy_1_1Channel.html#a6e3a3c3a69685f3f8a9a90818305f482", null ],
     [ "PollerKqueue", "classhandy_1_1Channel.html#a3756f283df2856ee813045d960b8f907", null ],
     [ "m_base", "classhandy_1_1Channel.html#af253877d64f386d48600d5e57ae4497e", null ],
-    [ "m_errorcb", "classhandy_1_1Channel.html#a00f893a50038051c53adffd7933eeaf9", null ],
+    [ "m_errorCB", "classhandy_1_1Channel.html#adfbc8117c4f8dc4ea55f75d0fa71bd0b", null ],
     [ "m_events", "classhandy_1_1Channel.html#a4a44ee19d92be6ebdc4f3a21ba860d2b", null ],
     [ "m_fd", "classhandy_1_1Channel.html#a254a60999a8fc81e346c46c77f927359", null ],
     [ "m_id", "classhandy_1_1Channel.html#abf696c38061cbcc58c3cc8c752863adb", null ],

@@ -1,0 +1,8 @@
+<map id="handy::HttpConnPtr::clearData" name="handy::HttpConnPtr::clearData">
+<area shape="rect" id="node2" href="$classhandy_1_1HttpConnPtr.html#ab597d0d1b14f246d0f30dc6f0b411b44" title="获取当前响应对象 " alt="" coords="197,5,336,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpResponse.html#acbe680ebf31b7ea5d54830b9af6f36c6" title="清空响应所有字段 " alt="" coords="192,71,341,112"/>
+<area shape="rect" id="node6" href="$classhandy_1_1HttpConnPtr.html#aec7ea706712fdc26fd2d410ecd7e40d5" title="获取当前请求对象 " alt="" coords="197,136,336,177"/>
+<area shape="rect" id="node7" href="$classhandy_1_1HttpRequest.html#ae39f092276a181a44f1eb5b7f65766c7" title="清空请求所有字段 " alt="" coords="197,201,336,243"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpMsg.html#a6af21518e70f11938fcdebfa3db1f5cb" title="清空消息所有字段，恢复初始状态 " alt="" coords="389,143,540,170"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Slice.html#a7f14d97101d460d6cd92b35c24c466c0" title="清空视图（重置为空视图） " alt="" coords="588,143,719,170"/>
+</map>

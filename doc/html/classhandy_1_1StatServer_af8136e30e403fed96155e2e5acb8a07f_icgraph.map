@@ -1,0 +1,7 @@
+<map id="handy::StatServer::onRequest" name="handy::StatServer::onRequest">
+<area shape="rect" id="node2" href="$classhandy_1_1StatServer.html#a5e1f434273b23bff5b3bb00fa2ffab4a" title="注册信息类型的请求处理回调函数（适配InfoCallBack） " alt="" coords="188,5,323,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99" title="注册页面文件（将文件内容作为页面响应） " alt="" coords="188,71,323,112"/>
+<area shape="rect" id="node4" href="$classhandy_1_1StatServer.html#a3712ba3e95a812d5fc7aa8a4453bd1a6" title="注册状态信息回调（快捷接口） " alt="" coords="188,136,323,177"/>
+<area shape="rect" id="node5" href="$classhandy_1_1StatServer.html#a0623e3e3979c864209d4758249930c6f" title="注册页面信息回调（快捷接口） " alt="" coords="188,201,323,243"/>
+<area shape="rect" id="node6" href="$classhandy_1_1StatServer.html#a2ee5b97acb5ba6006590bfc9ffa70794" title="注册命令处理回调（快捷接口） " alt="" coords="188,267,323,308"/>
+</map>

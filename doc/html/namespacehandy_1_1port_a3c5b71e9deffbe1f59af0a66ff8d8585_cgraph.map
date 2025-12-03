@@ -1,0 +1,4 @@
+<map id="handy::port::betoh" name="handy::port::betoh">
+<area shape="rect" id="node2" href="$namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f" title="将16位无符号整数从大端字节序（网络字节序）转换为主机字节序 " alt="" coords="180,5,307,32"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30" title="将16位无符号整数从主机字节序转换为大端字节序（网络字节序） " alt="" coords="355,5,481,32"/>
+</map>

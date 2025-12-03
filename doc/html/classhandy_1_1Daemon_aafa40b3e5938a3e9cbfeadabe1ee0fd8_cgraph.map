@@ -1,0 +1,6 @@
+<map id="handy::Daemon::restart" name="handy::Daemon::restart">
+<area shape="rect" id="node2" href="$classhandy_1_1Daemon.html#a43b7d49312a5972bde56a14a95ebb815" title="从指定的pid文件中读取守护进程的PID " alt="" coords="408,22,619,49"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Daemon.html#a542577d85c2cde3b563c3661ccda0e80" title="停止当前运行的守护进程 " alt="" coords="213,22,359,49"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Daemon.html#a3e86b062fd8967dd448455bdc73c53cd" title="启动一个新的守护进程 " alt="" coords="212,73,360,99"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Daemon.html#a1e9cab5021af8a73b485e80fd47f10a0" title="将当前进程的PID写入指定的PID文件 " alt="" coords="415,73,612,99"/>
+</map>

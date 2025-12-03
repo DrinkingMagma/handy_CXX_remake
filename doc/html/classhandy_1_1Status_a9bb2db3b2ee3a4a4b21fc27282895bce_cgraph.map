@@ -1,0 +1,4 @@
+<map id="handy::Status::fromSystem" name="handy::Status::fromSystem">
+<area shape="rect" id="node2" href="$classhandy_1_1Status.html#a357d7e675bc0f19620f70a2e15b41e2a" title="获取错误信息字符串 " alt="" coords="243,5,379,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Status.html#a928f8d212a443ec48bf09b53d58eed93" title="构造函数，创建一个表示“成功”的Status对象 " alt="" coords="236,56,385,83"/>
+</map>

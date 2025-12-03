@@ -1,0 +1,5 @@
+<map id="handy::EventsImp::handleTimeoutTimers" name="handy::EventsImp::handleTimeoutTimers">
+<area shape="rect" id="node2" href="$structhandy_1_1Utils.html#a6769faed062da90b4411a3dc189727bf" title="获取当前系统时间(毫秒级) " alt="" coords="452,13,600,39"/>
+<area shape="rect" id="node4" href="$structhandy_1_1EventsImp.html#a84c79736764ed378b600e1c099d8cd92" title="刷新下一个定时器的超时时间 " alt="" coords="228,35,404,76"/>
+<area shape="rect" id="node3" href="$structhandy_1_1Utils.html#a504697916771757a1fb83eb4cdb994b5" title="获取当前系统时间(微秒级，线程安全) " alt="" coords="648,13,805,39"/>
+</map>

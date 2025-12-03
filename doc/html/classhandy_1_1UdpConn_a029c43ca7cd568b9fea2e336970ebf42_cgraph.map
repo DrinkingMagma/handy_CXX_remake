@@ -1,0 +1,9 @@
+<map id="handy::UdpConn::send" name="handy::UdpConn::send">
+<area shape="rect" id="node2" href="$classhandy_1_1Channel.html#ac24c361fc54c9779765afe0a70560d82" title="获取关联的文件描述符 " alt="" coords="217,5,372,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86" title="获取IP地址和端口的字符串表示 " alt="" coords="209,56,380,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Ipv4Addr.html#aeedd479d879facc608008878faa48a8b" title="检查IP地址是否有效 " alt="" coords="428,5,603,32"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Net.html#ab2529e9ccaf7c82c477ba0cbc2fa6f6c" title="将网络字节序转换为主机字节序 " alt="" coords="456,56,575,83"/>
+<area shape="rect" id="node8" href="$structhandy_1_1Utils.html#ad70f51fc39095ca32dce7f045adc026b" title="格式化字符串 " alt="" coords="447,107,584,133"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f" title="将16位无符号整数从大端字节序（网络字节序）转换为主机字节序 " alt="" coords="651,56,777,83"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30" title="将16位无符号整数从主机字节序转换为大端字节序（网络字节序） " alt="" coords="825,56,952,83"/>
+</map>

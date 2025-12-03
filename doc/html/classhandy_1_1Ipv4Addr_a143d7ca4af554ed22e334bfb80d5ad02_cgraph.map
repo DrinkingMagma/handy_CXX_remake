@@ -1,0 +1,5 @@
+<map id="handy::Ipv4Addr::port" name="handy::Ipv4Addr::port">
+<area shape="rect" id="node2" href="$classhandy_1_1Net.html#ab2529e9ccaf7c82c477ba0cbc2fa6f6c" title="将网络字节序转换为主机字节序 " alt="" coords="200,5,319,32"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f" title="将16位无符号整数从大端字节序（网络字节序）转换为主机字节序 " alt="" coords="367,5,493,32"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30" title="将16位无符号整数从主机字节序转换为大端字节序（网络字节序） " alt="" coords="541,5,668,32"/>
+</map>

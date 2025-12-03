@@ -1,0 +1,13 @@
+<map id="handy::Ipv4Addr::getAddr" name="handy::Ipv4Addr::getAddr">
+<area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#a1227846cc9258601c72a354f71dd080f" title="主动连接到指定的主机和端口 " alt="" coords="250,31,429,57"/>
+<area shape="rect" id="node8" href="$classhandy_1_1TcpServer.html#a373e76987f525973c65e2cab025522cc" title="绑定到指定的主机和端口 " alt="" coords="261,81,417,108"/>
+<area shape="rect" id="node10" href="$classhandy_1_1UdpServer.html#a49e1cf8559b57b910172e38e59199b67" title="将服务器绑定到指定地址和端口 " alt="" coords="260,132,419,159"/>
+<area shape="rect" id="node11" href="$classhandy_1_1UdpServer.html#a411549e29cb1c4c0a5310834e7ce99bb" title="发送指定长度的字节数据到指定地址 " alt="" coords="251,183,428,209"/>
+<area shape="rect" id="node12" href="$classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd" title="创建新的UDP连接 " alt="" coords="224,233,455,260"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#a14338af0c8635457894f33585bdd0878" title="重连 " alt="" coords="503,31,692,57"/>
+<area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#a9ac6fe9839fbf06e2246f52b45668d01" title="清理连接资源 " alt="" coords="740,31,911,57"/>
+<area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="1243,5,1444,32"/>
+<area shape="rect" id="node6" href="$classhandy_1_1TcpConn.html#aede1ec049cda3fffd74acf9f116b16aa" title="处理握手过程 " alt="" coords="959,56,1195,83"/>
+<area shape="rect" id="node7" href="$classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3" title="处理写事件 " alt="" coords="1243,56,1444,83"/>
+<area shape="rect" id="node9" href="$classhandy_1_1StatServer.html#a85d041b9ba9b52ff1ec223777d84c744" title="将服务器绑定到指定的主机和端口 " alt="" coords="518,81,677,108"/>
+</map>

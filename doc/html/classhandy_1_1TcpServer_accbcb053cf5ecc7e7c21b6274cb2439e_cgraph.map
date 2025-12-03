@@ -1,0 +1,7 @@
+<map id="handy::TcpServer::_handleAccept" name="handy::TcpServer::_handleAccept">
+<area shape="rect" id="node2" href="$classhandy_1_1Channel.html#ac24c361fc54c9779765afe0a70560d82" title="获取关联的文件描述符 " alt="" coords="201,5,355,32"/>
+<area shape="rect" id="node3" href="$structhandy_1_1Utils.html#aa5e8825a818f6d930e3ffae3414d29cb" title="为文件描述符添加标志（线程安全） " alt="" coords="197,56,359,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1EventBases.html#a9e80d26b5cb6091ab83d7c8a89420dae" title="分配事件派发器 " alt="" coords="206,107,350,149"/>
+<area shape="rect" id="node5" href="$namespacehandy.html#aeb22e917b1ad4ff09d0f01cacd79a86b" title="handy::FATAL_IF" alt="" coords="217,173,339,200"/>
+<area shape="rect" id="node6" href="$classhandy_1_1EventBase.html#a3ac6300bb4a65a089a08b8010c4ee0bb" title="投递异步任务（线程安全，右值引用） " alt="" coords="185,224,371,251"/>
+</map>

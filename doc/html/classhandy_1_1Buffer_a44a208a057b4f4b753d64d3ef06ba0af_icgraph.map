@@ -1,0 +1,7 @@
+<map id="handy::Buffer::data" name="handy::Buffer::data">
+<area shape="rect" id="node2" href="$classhandy_1_1HttpConnPtr.html#aa27725703eccbd49f3763e295113887d" title="记录输出日志 " alt="" coords="195,37,334,79"/>
+<area shape="rect" id="node5" href="$classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8" title="构造函数 " alt="" coords="197,103,332,144"/>
+<area shape="rect" id="node6" href="$classhandy_1_1UdpServer.html#a49e1cf8559b57b910172e38e59199b67" title="将服务器绑定到指定地址和端口 " alt="" coords="185,169,344,195"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpConnPtr.html#a918459361f721be5a159092c23d3503e" title="发送指定的请求对象 " alt="" coords="392,5,531,47"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpConnPtr.html#ab6e45a0b670d2bd094c00d320a374ebf" title="发送指定响应的对象 " alt="" coords="392,71,531,112"/>
+</map>

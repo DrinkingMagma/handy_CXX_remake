@@ -1,0 +1,9 @@
+<map id="handy::EventBase::getImp" name="handy::EventBase::getImp">
+<area shape="rect" id="node2" href="$namespacehandy.html#a58b23304f713754a36741cbadd749238" title="注销空闲连接（委托给EventBase实现） " alt="" coords="233,5,417,32"/>
+<area shape="rect" id="node7" href="$namespacehandy.html#a20123b690d2753b31d89587a802cc44b" title="更新空闲连接状态（委托给EventBase实现） " alt="" coords="470,107,637,133"/>
+<area shape="rect" id="node8" href="$classhandy_1_1TcpConn.html#a14338af0c8635457894f33585bdd0878" title="重连 " alt="" coords="231,56,420,83"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#a9ac6fe9839fbf06e2246f52b45668d01" title="清理连接资源 " alt="" coords="468,31,639,57"/>
+<area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="971,56,1172,83"/>
+<area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#aede1ec049cda3fffd74acf9f116b16aa" title="处理握手过程 " alt="" coords="687,5,923,32"/>
+<area shape="rect" id="node6" href="$classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3" title="处理写事件 " alt="" coords="971,5,1172,32"/>
+</map>

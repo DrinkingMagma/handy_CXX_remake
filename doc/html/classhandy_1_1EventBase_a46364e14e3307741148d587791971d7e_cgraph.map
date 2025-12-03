@@ -1,0 +1,5 @@
+<map id="handy::EventBase::runAfter" name="handy::EventBase::runAfter">
+<area shape="rect" id="node2" href="$classhandy_1_1EventBase.html#ade4a9837ba0ad90032f217a4c04a674c" title="在执行时间戳执行任务（支持周期性） " alt="" coords="236,5,404,32"/>
+<area shape="rect" id="node3" href="$structhandy_1_1Utils.html#a6769faed062da90b4411a3dc189727bf" title="获取当前系统时间(毫秒级) " alt="" coords="246,56,394,83"/>
+<area shape="rect" id="node4" href="$structhandy_1_1Utils.html#a504697916771757a1fb83eb4cdb994b5" title="获取当前系统时间(微秒级，线程安全) " alt="" coords="452,56,609,83"/>
+</map>

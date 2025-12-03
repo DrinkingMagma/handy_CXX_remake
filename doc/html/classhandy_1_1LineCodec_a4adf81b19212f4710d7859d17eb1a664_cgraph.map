@@ -1,0 +1,6 @@
+<map id="handy::LineCodec::tryDecode" name="handy::LineCodec::tryDecode">
+<area shape="rect" id="node2" href="$classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe" title="判断视图是否为空 " alt="" coords="277,5,415,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1LineCodec.html#ab1c8f9735412f7c041d3a22226d4681a" title="检查EOT结束符的合法性（防止0x04混入普通数据） " alt="" coords="248,56,444,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Slice.html#aa9c41a7c077cb18809a408d429587b3c" title="获取视图长度 " alt="" coords="492,81,619,108"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Slice.html#a229c81ddfceb6b035b4e0325d8f5fac6" title="获取数据起始指针（非空） " alt="" coords="283,157,409,184"/>
+</map>

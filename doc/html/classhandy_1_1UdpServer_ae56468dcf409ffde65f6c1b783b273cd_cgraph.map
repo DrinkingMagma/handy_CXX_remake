@@ -1,0 +1,5 @@
+<map id="handy::UdpServer::sendTo" name="handy::UdpServer::sendTo">
+<area shape="rect" id="node2" href="$classhandy_1_1Buffer.html#aceb300c5e30fad7a6062b97f48a2c111" title="返回内部缓冲区的只读指针 " alt="" coords="231,5,365,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16" title="获取当前缓冲区中的数据长度 " alt="" coords="233,56,363,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42" title="清空缓冲区，释放多有动态内存，重置所有偏移量和容量 " alt="" coords="231,107,365,133"/>
+</map>

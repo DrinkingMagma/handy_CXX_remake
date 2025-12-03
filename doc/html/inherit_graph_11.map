@@ -3,7 +3,7 @@
 <area shape="rect" id="node3" href="$classhandy_1_1UdpConn.html" title="UDP连接类，封装UDP连接的创建、数据发送和接收 " alt="" coords="251,56,371,83"/>
 <area shape="rect" id="node4" href="$classhandy_1_1UdpServer.html" title="UDP服务器类，封装UDP服务器的创建、绑定和消息处理 " alt="" coords="248,107,375,133"/>
 <area shape="rect" id="node5" href="$classhandy_1_1NonCopyAble.html" title="禁止派生类对象的拷贝构造和拷贝赋值操作 " alt="" coords="15,461,162,488"/>
-<area shape="rect" id="node6" href="$classhandy_1_1AutoContext.html" title="定时任务ID类型&lt; 超时时间戳，序列号（自增整数）&gt;=&quot;&quot;&gt; " alt="" coords="242,613,381,640"/>
+<area shape="rect" id="node6" href="$classhandy_1_1AutoContext.html" title="自动上下文管理器（线程安全） " alt="" coords="242,613,381,640"/>
 <area shape="rect" id="node7" href="$classhandy_1_1Channel.html" title="I/O事件通道类（封装文件描述符与事件处理逻辑） " alt="" coords="255,664,368,691"/>
 <area shape="rect" id="node8" href="$classhandy_1_1Conf.html" title="INI配置文件解析器，支持读取字符串、整数、浮点数、布尔值等类型配置 " alt="" coords="265,715,358,741"/>
 <area shape="rect" id="node9" href="$classhandy_1_1EventBases.html" title="事件派发器抽象基类（定义多事件派发器的统一接口） " alt="" coords="243,765,379,792"/>

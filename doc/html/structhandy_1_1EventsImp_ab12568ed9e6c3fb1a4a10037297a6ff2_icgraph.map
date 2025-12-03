@@ -1,0 +1,4 @@
+<map id="handy::EventsImp::updateIdle" name="handy::EventsImp::updateIdle">
+<area shape="rect" id="node2" href="$namespacehandy.html#a20123b690d2753b31d89587a802cc44b" title="更新空闲连接状态（委托给EventBase实现） " alt="" coords="249,5,416,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="464,5,665,32"/>
+</map>

@@ -123,7 +123,7 @@ handy::EventsImp 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a09de5abce0a3e1bb6a33b817b4d0d6ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a09de5abce0a3e1bb6a33b817b4d0d6ea">EventsImp</a> (<a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *base, int taskCap)</td></tr>
-<tr class="memdesc:a09de5abce0a3e1bb6a33b817b4d0d6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">重连连接集合的互斥锁  <a href="#a09de5abce0a3e1bb6a33b817b4d0d6ea">更多...</a><br/></td></tr>
+<tr class="memdesc:a09de5abce0a3e1bb6a33b817b4d0d6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数：初始化时间派发器内部实现  <a href="#a09de5abce0a3e1bb6a33b817b4d0d6ea">更多...</a><br/></td></tr>
 <tr class="separator:a09de5abce0a3e1bb6a33b817b4d0d6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad70dbc2f490812a4e2b11daf6b82c63f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#ad70dbc2f490812a4e2b11daf6b82c63f">~EventsImp</a> ()</td></tr>
 <tr class="memdesc:ad70dbc2f490812a4e2b11daf6b82c63f"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数：释放资源  <a href="#ad70dbc2f490812a4e2b11daf6b82c63f">更多...</a><br/></td></tr>
@@ -171,44 +171,45 @@ Public 成员函数</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 属性</h2></td></tr>
 <tr class="memitem:a83b705842cd70060c4d9a3a00eb664ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1PollerBase.html">PollerBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a83b705842cd70060c4d9a3a00eb664ff">m_poller</a></td></tr>
+<tr class="memdesc:a83b705842cd70060c4d9a3a00eb664ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">I/O多路复用器（epoll/kqueue）  <a href="#a83b705842cd70060c4d9a3a00eb664ff">更多...</a><br/></td></tr>
 <tr class="separator:a83b705842cd70060c4d9a3a00eb664ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acabc8339f085499357f2e88ef27fdf6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#acabc8339f085499357f2e88ef27fdf6d">m_base</a></td></tr>
-<tr class="memdesc:acabc8339f085499357f2e88ef27fdf6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">I/O多路复用器（epoll/kqueue）  <a href="#acabc8339f085499357f2e88ef27fdf6d">更多...</a><br/></td></tr>
+<tr class="memdesc:acabc8339f085499357f2e88ef27fdf6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联的EventBase对象（非空）  <a href="#acabc8339f085499357f2e88ef27fdf6d">更多...</a><br/></td></tr>
 <tr class="separator:acabc8339f085499357f2e88ef27fdf6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cc84095c0704aeccab4f3b584ec3b06"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a4cc84095c0704aeccab4f3b584ec3b06">m_exit</a></td></tr>
-<tr class="memdesc:a4cc84095c0704aeccab4f3b584ec3b06"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联的EventBase对象（非空）  <a href="#a4cc84095c0704aeccab4f3b584ec3b06">更多...</a><br/></td></tr>
+<tr class="memdesc:a4cc84095c0704aeccab4f3b584ec3b06"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件循环退出标志（原子操作，线程安全）  <a href="#a4cc84095c0704aeccab4f3b584ec3b06">更多...</a><br/></td></tr>
 <tr class="separator:a4cc84095c0704aeccab4f3b584ec3b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f6b9920726c68be935880211ec4f1db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a7f6b9920726c68be935880211ec4f1db">m_wakeupFds</a> [2]</td></tr>
-<tr class="memdesc:a7f6b9920726c68be935880211ec4f1db"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件循环退出标志（原子操作，线程安全）  <a href="#a7f6b9920726c68be935880211ec4f1db">更多...</a><br/></td></tr>
+<tr class="memdesc:a7f6b9920726c68be935880211ec4f1db"><td class="mdescLeft">&#160;</td><td class="mdescRight">唤醒事件循环的管道（0：读端，1：写端）  <a href="#a7f6b9920726c68be935880211ec4f1db">更多...</a><br/></td></tr>
 <tr class="separator:a7f6b9920726c68be935880211ec4f1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e0acc756aa32becc7a1b647fb92c5a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a8e0acc756aa32becc7a1b647fb92c5a1">m_nextTimeout_ms</a></td></tr>
-<tr class="memdesc:a8e0acc756aa32becc7a1b647fb92c5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">唤醒事件循环的管道（0：读端，1：写端）  <a href="#a8e0acc756aa32becc7a1b647fb92c5a1">更多...</a><br/></td></tr>
+<tr class="memdesc:a8e0acc756aa32becc7a1b647fb92c5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">下一个定时器的超时时间（毫秒，用于Poller等待）  <a href="#a8e0acc756aa32becc7a1b647fb92c5a1">更多...</a><br/></td></tr>
 <tr class="separator:a8e0acc756aa32becc7a1b647fb92c5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab06b7e3ab442dba24ba5497ccf4f2b95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandy_1_1SafeQueue.html">SafeQueue</a>&lt; <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#ab06b7e3ab442dba24ba5497ccf4f2b95">m_tasks</a></td></tr>
-<tr class="memdesc:ab06b7e3ab442dba24ba5497ccf4f2b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">下一个定时器的超时时间（毫秒，用于Poller等待）  <a href="#ab06b7e3ab442dba24ba5497ccf4f2b95">更多...</a><br/></td></tr>
+<tr class="memdesc:ab06b7e3ab442dba24ba5497ccf4f2b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步任务队列（线程安全，支持跨线程投递）  <a href="#ab06b7e3ab442dba24ba5497ccf4f2b95">更多...</a><br/></td></tr>
 <tr class="separator:ab06b7e3ab442dba24ba5497ccf4f2b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af815c2be8223301c898e503346691f82"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a>, <br class="typebreak"/>
 <a class="el" href="structhandy_1_1TimerRepeatable.html">TimerRepeatable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#af815c2be8223301c898e503346691f82">m_timerReps</a></td></tr>
-<tr class="memdesc:af815c2be8223301c898e503346691f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步任务队列（线程安全，支持跨线程投递）  <a href="#af815c2be8223301c898e503346691f82">更多...</a><br/></td></tr>
+<tr class="memdesc:af815c2be8223301c898e503346691f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">可重复定时器映射  <a href="#af815c2be8223301c898e503346691f82">更多...</a><br/></td></tr>
 <tr class="separator:af815c2be8223301c898e503346691f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b26fc9d80a1b36f9fa0a29867a9ae3a"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespacehandy.html#ab64dd4e4ad3aae1d30264406886bbc84">TimerId</a>, <a class="el" href="namespacehandy.html#a37e7f77e1c4abd461c35064060c05669">Task</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a3b26fc9d80a1b36f9fa0a29867a9ae3a">m_timers</a></td></tr>
-<tr class="memdesc:a3b26fc9d80a1b36f9fa0a29867a9ae3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">可重复定时器映射  <a href="#a3b26fc9d80a1b36f9fa0a29867a9ae3a">更多...</a><br/></td></tr>
+<tr class="memdesc:a3b26fc9d80a1b36f9fa0a29867a9ae3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">一次性任务定时器映射  <a href="#a3b26fc9d80a1b36f9fa0a29867a9ae3a">更多...</a><br/></td></tr>
 <tr class="separator:a3b26fc9d80a1b36f9fa0a29867a9ae3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00fe1dbf2eb4944c73871eb7fa886609"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a00fe1dbf2eb4944c73871eb7fa886609">m_timerSeq</a></td></tr>
-<tr class="memdesc:a00fe1dbf2eb4944c73871eb7fa886609"><td class="mdescLeft">&#160;</td><td class="mdescRight">一次性任务定时器映射  <a href="#a00fe1dbf2eb4944c73871eb7fa886609">更多...</a><br/></td></tr>
+<tr class="memdesc:a00fe1dbf2eb4944c73871eb7fa886609"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器序列号（用于生成定时器ID）  <a href="#a00fe1dbf2eb4944c73871eb7fa886609">更多...</a><br/></td></tr>
 <tr class="separator:a00fe1dbf2eb4944c73871eb7fa886609"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18ac9c804376f2893751965034e8a18f"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, std::list<br class="typebreak"/>
 &lt; <a class="el" href="structhandy_1_1IdleNode.html">IdleNode</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a18ac9c804376f2893751965034e8a18f">m_idleConns</a></td></tr>
-<tr class="memdesc:a18ac9c804376f2893751965034e8a18f"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器序列号（用于生成定时器ID）  <a href="#a18ac9c804376f2893751965034e8a18f">更多...</a><br/></td></tr>
+<tr class="memdesc:a18ac9c804376f2893751965034e8a18f"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲连接映射（key：空闲超时时间，单位:s；list按照最后活跃时间排序，最早超时的连接在前面）  <a href="#a18ac9c804376f2893751965034e8a18f">更多...</a><br/></td></tr>
 <tr class="separator:a18ac9c804376f2893751965034e8a18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb658e4f7f94f08844bd93d8ffa986d6"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#abb658e4f7f94f08844bd93d8ffa986d6">m_reconnectConns</a></td></tr>
-<tr class="memdesc:abb658e4f7f94f08844bd93d8ffa986d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲连接映射（key：空闲超时时间，单位:s；list按照最后活跃时间排序，最早超时的连接在前面）  <a href="#abb658e4f7f94f08844bd93d8ffa986d6">更多...</a><br/></td></tr>
+<tr class="memdesc:abb658e4f7f94f08844bd93d8ffa986d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">重连连接集合（需要互斥锁保护）  <a href="#abb658e4f7f94f08844bd93d8ffa986d6">更多...</a><br/></td></tr>
 <tr class="separator:abb658e4f7f94f08844bd93d8ffa986d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b5fd6534643450c2fa2811ae758a623"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a8b5fd6534643450c2fa2811ae758a623">m_idleEnabled</a></td></tr>
-<tr class="memdesc:a8b5fd6534643450c2fa2811ae758a623"><td class="mdescLeft">&#160;</td><td class="mdescRight">重连连接集合（需要互斥锁保护）  <a href="#a8b5fd6534643450c2fa2811ae758a623">更多...</a><br/></td></tr>
+<tr class="memdesc:a8b5fd6534643450c2fa2811ae758a623"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲连接管理的启用标志  <a href="#a8b5fd6534643450c2fa2811ae758a623">更多...</a><br/></td></tr>
 <tr class="separator:a8b5fd6534643450c2fa2811ae758a623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a766df532a17561580c05fa57382c9500"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandy_1_1EventsImp.html#a766df532a17561580c05fa57382c9500">m_reconnectMutex</a></td></tr>
-<tr class="memdesc:a766df532a17561580c05fa57382c9500"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲连接管理的启用标志  <a href="#a766df532a17561580c05fa57382c9500">更多...</a><br/></td></tr>
+<tr class="memdesc:a766df532a17561580c05fa57382c9500"><td class="mdescLeft">&#160;</td><td class="mdescRight">重连连接集合的互斥锁  <a href="#a766df532a17561580c05fa57382c9500">更多...</a><br/></td></tr>
 <tr class="separator:a766df532a17561580c05fa57382c9500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -246,7 +247,6 @@ Public 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>重连连接集合的互斥锁 </p>
 <p>构造函数：初始化时间派发器内部实现 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -261,6 +261,14 @@ Public 属性</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structhandy_1_1EventsImp_a09de5abce0a3e1bb6a33b817b4d0d6ea_cgraph.svg" width="427" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
 
 </div>
 </div>
@@ -312,6 +320,22 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p>定期见检查所有注册的空闲连接，处理空闲连接超时（遍历所有空闲连接，触发超时回调） </p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structhandy_1_1EventsImp_a41a91826e5900bd17f506842c32b1a43_cgraph.svg" width="847" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structhandy_1_1EventsImp_a41a91826e5900bd17f506842c32b1a43_icgraph.svg" width="443" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
 
 </div>
 </div>
@@ -371,6 +395,14 @@ Public 属性</h2></td></tr>
 
 <p>处理定时器超时（执行所有已超时的定时器任务） </p>
 
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structhandy_1_1EventsImp_afc6fdbcb276b06c4e9517bb1b649a127_cgraph.svg" width="811" height="82"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a8af27daa347a10699df33e7173f2c36e"></a>
@@ -396,6 +428,14 @@ Public 属性</h2></td></tr>
 
 <p>初始化：注册唤醒管道的读事件 </p>
 <p>创建唤醒管道的Channel，处理异步任务投递 </p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structhandy_1_1EventsImp_a8af27daa347a10699df33e7173f2c36e_cgraph.svg" width="399" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
 
 </div>
 </div>
@@ -486,6 +526,22 @@ Public 属性</h2></td></tr>
   </dd>
 </dl>
 
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structhandy_1_1EventsImp_a84c79736764ed378b600e1c099d8cd92_cgraph.svg" width="588" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structhandy_1_1EventsImp_a84c79736764ed378b600e1c099d8cd92_icgraph.svg" width="410" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a34ec69a53f5a40365df7c686c28334e8"></a>
@@ -536,6 +592,14 @@ Public 属性</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>IdleId 空闲连接ID的智能指针（用于后续更新/注销） </dd></dl>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structhandy_1_1EventsImp_a34ec69a53f5a40365df7c686c28334e8_cgraph.svg" width="1095" height="106"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
 
 </div>
 </div>
@@ -652,6 +716,14 @@ Public 属性</h2></td></tr>
   </dd>
 </dl>
 
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structhandy_1_1EventsImp_a03cc7fc06a2e93ce1a4f7f4ac25e8efd_icgraph.svg" width="1210" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="ab12568ed9e6c3fb1a4a10037297a6ff2"></a>
@@ -684,6 +756,22 @@ Public 属性</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>注解</dt><dd>更新后会将连接放入空闲连接列表的末尾 </dd></dl>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structhandy_1_1EventsImp_ab12568ed9e6c3fb1a4a10037297a6ff2_cgraph.svg" width="608" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structhandy_1_1EventsImp_ab12568ed9e6c3fb1a4a10037297a6ff2_icgraph.svg" width="671" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
 
 </div>
 </div>
@@ -723,7 +811,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>I/O多路复用器（epoll/kqueue） </p>
+<p>关联的EventBase对象（非空） </p>
 
 </div>
 </div>
@@ -737,7 +825,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>关联的EventBase对象（非空） </p>
+<p>事件循环退出标志（原子操作，线程安全） </p>
 
 </div>
 </div>
@@ -751,7 +839,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>定时器序列号（用于生成定时器ID） </p>
+<p>空闲连接映射（key：空闲超时时间，单位:s；list按照最后活跃时间排序，最早超时的连接在前面） </p>
 
 </div>
 </div>
@@ -765,7 +853,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>重连连接集合（需要互斥锁保护） </p>
+<p>空闲连接管理的启用标志 </p>
 
 </div>
 </div>
@@ -779,7 +867,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>唤醒事件循环的管道（0：读端，1：写端） </p>
+<p>下一个定时器的超时时间（毫秒，用于Poller等待） </p>
 
 </div>
 </div>
@@ -793,6 +881,8 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>I/O多路复用器（epoll/kqueue） </p>
+
 </div>
 </div>
 <a class="anchor" id="abb658e4f7f94f08844bd93d8ffa986d6"></a>
@@ -805,7 +895,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>空闲连接映射（key：空闲超时时间，单位:s；list按照最后活跃时间排序，最早超时的连接在前面） </p>
+<p>重连连接集合（需要互斥锁保护） </p>
 
 </div>
 </div>
@@ -819,7 +909,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>空闲连接管理的启用标志 </p>
+<p>重连连接集合的互斥锁 </p>
 
 </div>
 </div>
@@ -833,7 +923,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>下一个定时器的超时时间（毫秒，用于Poller等待） </p>
+<p>异步任务队列（线程安全，支持跨线程投递） </p>
 
 </div>
 </div>
@@ -847,7 +937,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>异步任务队列（线程安全，支持跨线程投递） </p>
+<p>可重复定时器映射 </p>
 
 </div>
 </div>
@@ -861,7 +951,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>可重复定时器映射 </p>
+<p>一次性任务定时器映射 </p>
 
 </div>
 </div>
@@ -875,7 +965,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>一次性任务定时器映射 </p>
+<p>定时器序列号（用于生成定时器ID） </p>
 
 </div>
 </div>
@@ -889,7 +979,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>事件循环退出标志（原子操作，线程安全） </p>
+<p>唤醒事件循环的管道（0：读端，1：写端） </p>
 
 </div>
 </div>

@@ -1,0 +1,5 @@
+<map id="handy::Channel::close" name="handy::Channel::close">
+<area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#aed1048ae4c4766e402371acbc9afd6a5" title="立即关闭连接，清理相关资源 " alt="" coords="205,5,388,32"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Channel.html#ae682495abcff12eec2b8289e463460c7" title="关闭fd并清理事件 " alt="" coords="208,56,385,83"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#aafaaa41f36db3d6aa30c4a6f3a3d93d6" title="析构函数，关闭连接并释放资源 " alt="" coords="436,5,621,32"/>
+</map>

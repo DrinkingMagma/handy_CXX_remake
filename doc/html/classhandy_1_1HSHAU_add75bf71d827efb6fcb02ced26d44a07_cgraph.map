@@ -1,0 +1,6 @@
+<map id="handy::HSHAU::~HSHAU" name="handy::HSHAU::~HSHAU">
+<area shape="rect" id="node2" href="$classhandy_1_1HSHAU.html#a9611a03558463948b5e6b3ee3b497111" title="停止服务器并释放资源 " alt="" coords="231,31,373,57"/>
+<area shape="rect" id="node3" href="$classhandy_1_1ThreadPool.html#a645707a5d4a6d126b5c3427b1ec39124" title="通知线程池优雅退出（线程安全） " alt="" coords="421,5,581,32"/>
+<area shape="rect" id="node5" href="$classhandy_1_1ThreadPool.html#aa12157caf7e934a8f56c6f9ce79af4b1" title="等待所有线程退出（阻塞当前线程） " alt="" coords="422,56,581,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1SafeQueue.html#a7602d1d067c8b146ba6b4e7cbad335a0" title="通知队列优雅退出(线程安全) " alt="" coords="629,5,788,32"/>
+</map>

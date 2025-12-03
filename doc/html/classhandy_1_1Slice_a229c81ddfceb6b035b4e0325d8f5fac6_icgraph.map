@@ -1,0 +1,11 @@
+<map id="handy::Slice::data" name="handy::Slice::data">
+<area shape="rect" id="node2" href="$classhandy_1_1LineCodec.html#a4adf81b19212f4710d7859d17eb1a664" title="尝试对消息进行解码 " alt="" coords="180,5,375,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1LengthCodec.html#a1198a51cc6f48544dbae4e34cca38b70" title="尝试对消息进行解码 " alt="" coords="206,57,349,98"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpMsg.html#a035dca54b0b58b34ba00876b3db36f59" title="已解析的字节数 " alt="" coords="182,173,373,200"/>
+<area shape="rect" id="node5" href="$classhandy_1_1HttpRequest.html#a8c651a6b85e5bb2846a241a451f76add" title="从缓冲区解码请求 " alt="" coords="428,134,567,175"/>
+<area shape="rect" id="node9" href="$classhandy_1_1HttpResponse.html#aff04a28503872c7f918d17fcc36835fe" title="从缓冲区解码响应 " alt="" coords="423,199,572,241"/>
+<area shape="rect" id="node10" href="$classhandy_1_1Buffer.html#abbb56c7aeaa54f9ece9a2f80741e21bf" title="追加Slice中的数据到缓冲区 " alt="" coords="203,275,352,301"/>
+<area shape="rect" id="node6" href="$classhandy_1_1HttpConnPtr.html#a1c2c0b1fbe5a35f94ae9d898ac57551b" title="底层TCP连接 " alt="" coords="620,167,759,209"/>
+<area shape="rect" id="node7" href="$classhandy_1_1HttpConnPtr.html#a0b2ff11dafbd36c86ce8e6a035a95d4b" title="注册HTTP消息处理回调 " alt="" coords="807,167,945,209"/>
+<area shape="rect" id="node8" href="$classhandy_1_1HttpServer.html#af36412871ad23228ad2ba124b4526690" title="构造函数 " alt="" coords="993,167,1129,209"/>
+</map>

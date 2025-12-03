@@ -1,0 +1,7 @@
+<map id="handy::Ipv4Addr::Ipv4Addr" name="handy::Ipv4Addr::Ipv4Addr">
+<area shape="rect" id="node2" href="$classhandy_1_1Ipv4Addr.html#adaafd6ca5fa5fd9c1a0a73f0d856faca" title="初始化sockaddr_in结构体的辅助函数 " alt="" coords="242,5,411,32"/>
+<area shape="rect" id="node5" href="$namespacehandy_1_1port.html#a6d02bcb571e941fa210c21affef41aa2" title="将IPv4地址字符串转换为in_addr结构 " alt="" coords="243,56,411,83"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1port.html#a4f1587cf54ea7cefa3d01e75f3f1d797" title="通过主机名获取对应的IPv4地址 " alt="" coords="231,107,423,133"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Net.html#a9512fbffc383897eaad1fd9dab0a7f01" title="将主机字节序转换为网络字节序 " alt="" coords="471,5,589,32"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30" title="将16位无符号整数从主机字节序转换为大端字节序（网络字节序） " alt="" coords="637,5,764,32"/>
+</map>

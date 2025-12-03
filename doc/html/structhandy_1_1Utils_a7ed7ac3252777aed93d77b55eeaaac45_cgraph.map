@@ -1,0 +1,4 @@
+<map id="handy::Utils::readableTime" name="handy::Utils::readableTime">
+<area shape="rect" id="node2" href="$namespacehandy.html#a36322f9f76f61ed5b1176a76377394b3" title="获取当前线程专属的tm结构 " alt="" coords="232,5,405,32"/>
+<area shape="rect" id="node3" href="$namespacehandy.html#a1f8c371625e50dfd46ff338d22eecc04" title="初始化线程局部存储键（仅执行一次） " alt="" coords="453,5,577,32"/>
+</map>

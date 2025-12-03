@@ -1,0 +1,6 @@
+<map id="handy::SafeQueue::popWait" name="handy::SafeQueue::popWait">
+<area shape="rect" id="node2" href="$structhandy_1_1EventsImp.html#a8af27daa347a10699df33e7173f2c36e" title="初始化：注册唤醒管道的读事件 " alt="" coords="240,5,393,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1ThreadPool.html#af16863e56e3df5e49bc00cebb08ae5a4" title="线程工作循环（每个线程的入口函数，仅内部调用） " alt="" coords="247,57,386,98"/>
+<area shape="rect" id="node4" href="$classhandy_1_1ThreadPool.html#a74e85ff1e6605531acdd8e0e3cf903df" title="启动线程池（线程安全） " alt="" coords="441,57,580,98"/>
+<area shape="rect" id="node5" href="$classhandy_1_1ThreadPool.html#a60492a85af81120d1d8d03e3a41d2ffe" title="构造函数(初始化线程池参数) " alt="" coords="628,57,767,98"/>
+</map>

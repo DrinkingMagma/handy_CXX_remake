@@ -1,0 +1,7 @@
+<map id="handy::Status::code" name="handy::Status::code">
+<area shape="rect" id="node2" href="$classhandy_1_1HttpConnPtr.html#a5baa91c7b32051095038b4c9d4e9f30f" title="发送文件作为响应 " alt="" coords="410,5,549,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Status.html#a2054a08a6b1608df26b630f6bc27f9b8" title="检查操作是否成功 " alt="" coords="207,71,333,98"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Status.html#a52189e0c8f37deb78789de48a4cf583a" title="将状态信息转换为字符串 " alt="" coords="192,126,348,153"/>
+<area shape="rect" id="node4" href="$classhandy_1_1File.html#a25c291a825fafe32feeeea8e1322a804" title="安全写入文件（先写临时文件，再原子重命名） " alt="" coords="396,71,563,98"/>
+<area shape="rect" id="node5" href="$classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99" title="注册页面文件（将文件内容作为页面响应） " alt="" coords="412,123,547,164"/>
+</map>

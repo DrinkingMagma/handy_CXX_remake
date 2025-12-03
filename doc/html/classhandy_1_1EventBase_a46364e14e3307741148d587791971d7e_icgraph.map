@@ -1,0 +1,10 @@
+<map id="handy::EventBase::runAfter" name="handy::EventBase::runAfter">
+<area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#a1227846cc9258601c72a354f71dd080f" title="主动连接到指定的主机和端口 " alt="" coords="239,5,417,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#a14338af0c8635457894f33585bdd0878" title="重连 " alt="" coords="473,44,663,71"/>
+<area shape="rect" id="node8" href="$structhandy_1_1EventsImp.html#a41a91826e5900bd17f506842c32b1a43" title="定期见检查所有注册的空闲连接，处理空闲连接超时（遍历所有空闲连接，触发超时回调） " alt="" coords="236,107,420,133"/>
+<area shape="rect" id="node9" href="$structhandy_1_1EventsImp.html#a34ec69a53f5a40365df7c686c28334e8" title="注册空闲连接（加入空闲连接管理） " alt="" coords="468,120,668,147"/>
+<area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#a9ac6fe9839fbf06e2246f52b45668d01" title="清理连接资源 " alt="" coords="716,44,887,71"/>
+<area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="1219,19,1420,45"/>
+<area shape="rect" id="node6" href="$classhandy_1_1TcpConn.html#aede1ec049cda3fffd74acf9f116b16aa" title="处理握手过程 " alt="" coords="935,69,1171,96"/>
+<area shape="rect" id="node7" href="$classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3" title="处理写事件 " alt="" coords="1219,69,1420,96"/>
+</map>

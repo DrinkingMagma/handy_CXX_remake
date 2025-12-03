@@ -1,0 +1,5 @@
+<map id="handy::HttpMsg::setHeader" name="handy::HttpMsg::setHeader">
+<area shape="rect" id="node2" href="$classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8" title="构造函数 " alt="" coords="236,5,371,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1StatServer.html#a5e1f434273b23bff5b3bb00fa2ffab4a" title="注册信息类型的请求处理回调函数（适配InfoCallBack） " alt="" coords="236,71,371,112"/>
+<area shape="rect" id="node4" href="$classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99" title="注册页面文件（将文件内容作为页面响应） " alt="" coords="236,136,371,177"/>
+</map>

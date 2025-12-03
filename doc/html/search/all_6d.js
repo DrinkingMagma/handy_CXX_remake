@@ -31,7 +31,7 @@ var searchData=
   ['m_5fdesthost',['m_destHost',['../classhandy_1_1TcpConn.html#a14aab2c33e2885f06685ec13ff6c8b99',1,'handy::TcpConn::m_destHost()'],['../classhandy_1_1UdpConn.html#a9a7fb36e788adb55d329f648a70a5c73',1,'handy::UdpConn::m_destHost()']]],
   ['m_5fdestport',['m_destPort',['../classhandy_1_1TcpConn.html#a395e908197e44c44353d247b972ee2b6',1,'handy::TcpConn::m_destPort()'],['../classhandy_1_1UdpConn.html#ad316e9352e9224fc91826d28667a0670',1,'handy::UdpConn::m_destPort()']]],
   ['m_5fe',['m_e',['../classhandy_1_1Buffer.html#ae09cee613bb33a7b994dcc7a22c19738',1,'handy::Buffer']]],
-  ['m_5ferrorcb',['m_errorcb',['../classhandy_1_1Channel.html#a00f893a50038051c53adffd7933eeaf9',1,'handy::Channel']]],
+  ['m_5ferrorcb',['m_errorCB',['../classhandy_1_1Channel.html#adfbc8117c4f8dc4ea55f75d0fa71bd0b',1,'handy::Channel']]],
   ['m_5fevents',['m_events',['../classhandy_1_1Channel.html#a4a44ee19d92be6ebdc4f3a21ba860d2b',1,'handy::Channel']]],
   ['m_5fexit',['m_exit',['../structhandy_1_1EventsImp.html#a4cc84095c0704aeccab4f3b584ec3b06',1,'handy::EventsImp']]],
   ['m_5fexp',['m_exp',['../classhandy_1_1Buffer.html#aa5f2da018a115402402c60cb199c7e4e',1,'handy::Buffer']]],

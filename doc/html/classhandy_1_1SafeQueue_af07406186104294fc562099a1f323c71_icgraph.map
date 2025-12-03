@@ -1,0 +1,4 @@
+<map id="handy::SafeQueue::size" name="handy::SafeQueue::size">
+<area shape="rect" id="node2" href="$classhandy_1_1ThreadPool.html#ac6679e58f1edc7df60289577b0475100" title="析构函数(优雅释放资源) " alt="" coords="220,5,359,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1ThreadPool.html#a9184b6409d22e2d2110d9666a4506526" title="获取当前等待执行的任务数量（线程安全） " alt="" coords="216,71,363,112"/>
+</map>
