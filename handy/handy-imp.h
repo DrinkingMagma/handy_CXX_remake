@@ -30,7 +30,7 @@ namespace handy
     /// TCP连接抽象类
     class TcpConn;    
     /// TCP服务器抽象类
-    class TCPServer;        
+    class TcpServer;        
     /// 事件轮询抽象类
     class PollerBase;       
     /// 空闲资源ID实现结构体

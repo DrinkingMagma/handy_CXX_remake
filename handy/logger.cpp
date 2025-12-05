@@ -23,6 +23,7 @@
 #include <sys/stat.h>
 #include <sstream>
 #include <algorithm>
+#include <cstring>
 
 namespace handy 
 { 
@@ -194,6 +195,36 @@ namespace handy
             newLevel = LogLevel::LALL;
         
         setLogLevel(newLevel);
+    }
+
+    bool Logger::clear()
+    {
+        std::lock_guard<std::mutex> lock(m_mutex);
+
+        // 若当前为标准输出或标准错误，则无法清空，返回false
+        if(m_fd == stdout || m_fd == stderr)
+            return false;
+
+        // 关闭当前文件
+        if(m_fd)
+        {
+            fclose(m_fd);
+            m_fd = nullptr;
+        }
+
+        // 以截断模式重新打开日志文件
+        m_fd = fopen(m_logFileName.c_str(), "w");
+        if(!m_fd)
+        {
+            m_fd = stdout;
+            fprintf(stderr, "Logger::clear(): fopen %s failed after clear context, %s\n", m_logFileName.c_str(), strerror(errno));
+            return false;
+        }
+
+        // 重置当前文件大小
+        m_currentFileSize = 0;
+
+        return true;
     }
 
     void Logger::checkAndRotateLogFile()

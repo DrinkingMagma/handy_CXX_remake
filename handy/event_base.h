@@ -24,7 +24,7 @@
 namespace handy
 {
     typedef std::shared_ptr<TcpConn> TcpConnPtr;   /// TCP连接指针
-    typedef std::shared_ptr<TCPServer> TcpServerPtr; /// TCP服务器指针（管理服务器生命周期）
+    typedef std::shared_ptr<TcpServer> TcpServerPtr; /// TCP服务器指针（管理服务器生命周期）
     typedef std::function<void(const TcpConnPtr&)> TcpCallBack; /// TCP连接相关回调（如连接建立/关闭）
     typedef std::function<void(const TcpConnPtr&, const Slice&)> MsgCallBack;  /// 消息处理回调（接受连接与消息切片）
     typedef std::function<void()> Task; /// 通用任务回调（无参数无返回值，用于异步任务/事件处理

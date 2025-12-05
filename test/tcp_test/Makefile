@@ -97,10 +97,10 @@ DEBUG = -g
 # C++17标准、开启所有警告、启用线程支持
 CXXFLAGS = -std=c++17 -Wall $(DEBUG) -pthread
 # 头文件路径
-INCLUDES = -I../handy
+INCLUDES = -I../../handy
 
 # 模块目录
-HANDY_DIR = ../handy
+HANDY_DIR = ../../handy
 
 # handy模块的源文件列表（只需要修改这个列表即可）
 HANDY_SRCS_BASENAME = logger utils conf port_posix net codec thread_pool daemon udp event_base poller conn file http stat-svr

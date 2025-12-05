@@ -1,0 +1,17 @@
+[2025-12-05 21:30:41.504] [INFO] [../handy/poller.cpp:110 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2025-12-05 21:30:41.504] [TRACE] [../handy/event_base.cpp:100 EventsImp] Wakeup pipe initialized: readFd=5, writeFd=6
+[2025-12-05 21:30:41.504] [TRACE] [../handy/event_base.cpp:622 Channel] Channel set non-block: fd=5 success
+[2025-12-05 21:30:41.504] [TRACE] [../handy/poller.cpp:148 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[1], fd=5, events=0x1
+[2025-12-05 21:30:41.504] [TRACE] [../handy/event_base.cpp:633 Channel] Channel created: id=1, fd=5, events=0x1
+[2025-12-05 21:30:41.504] [INFO] [../handy/conn.cpp:669 bind] Listening on fd 7 at 127.0.0.1:12345
+[2025-12-05 21:30:41.504] [TRACE] [../handy/event_base.cpp:622 Channel] Channel set non-block: fd=7 success
+[2025-12-05 21:30:41.504] [TRACE] [../handy/poller.cpp:148 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[2], fd=7, events=0x1
+[2025-12-05 21:30:41.504] [TRACE] [../handy/event_base.cpp:633 Channel] Channel created: id=2, fd=7, events=0x1
+[2025-12-05 21:30:41.504] [TRACE] [tcp_server_test.cpp:31 main] tcp_server start success
+[2025-12-05 21:35:52.069] [TRACE] [tcp_server_test.cpp:13 sigIntHandler] exit tcp_server_test.cpp
+[2025-12-05 21:35:52.069] [TRACE] [../handy/event_base.cpp:646 close] Channel closing: id=2, fd=7
+[2025-12-05 21:35:52.069] [TRACE] [../handy/poller.cpp:169 removeChannel] PollerEpoll::removeChannel(): PollerEpoll[0] remove Channel[2], fd=7
+[2025-12-05 21:35:52.069] [TRACE] [../handy/event_base.cpp:655 close] Channel closed: fd=7
+[2025-12-05 21:35:52.069] [TRACE] [../handy/event_base.h:411 handleRead] Channel::handleRead: will call m_readCB
+[2025-12-05 21:35:52.069] [TRACE] [../handy/event_base.h:416 handleRead] Channel::handleRead: done call m_readCB
+[2025-12-05 21:35:52.069] [TRACE] [../handy/event_base.cpp:639 ~Channel] Channel destroyed: id=2, fd=-1

@@ -188,6 +188,12 @@ namespace handy
                 std::lock_guard<std::mutex> lock(m_mutex);
                 m_maxLogFileSize = maxLogFileSize_MB * 1024 * 1024;
             }
+
+            /**
+             * @brief 将当前日志文件清空
+             * @return bool 是否成功清空
+            */
+            bool clear();
         private:
             // 构造函数
             Logger() : 

@@ -302,7 +302,7 @@ void test_start_protection() {
     if (daemonPid <= 0) {
         ERROR("第一次启动失败，无法测试重复启动防护");
         return;
-    }
+    } 
 
     // 尝试第二次启动
     pid_t pid2 = fork();
