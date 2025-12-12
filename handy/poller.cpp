@@ -89,10 +89,14 @@ namespace handy
 
 
             private:
-                int m_epollFd;                           // epoll实例文件描述符
-                std::set<Channel*> m_liveChannels;   // 当前活跃Channel集合（需线程安全保护）
-                std::recursive_mutex m_channelMutex;          // 线程安全保护
-                struct epoll_event m_activeEvs[kMaxEvents]; // 活跃事件数组
+                /// epoll实例文件描述符
+                int m_epollFd;                   
+                /// 当前活跃Channel集合（需线程安全保护）        
+                std::set<Channel*> m_liveChannels;   
+                /// 线程安全保护
+                std::recursive_mutex m_channelMutex;   
+                /// 活跃事件数组       
+                struct epoll_event m_activeEvs[kMaxEvents]; 
 
         };
 

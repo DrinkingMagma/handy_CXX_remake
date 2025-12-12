@@ -321,11 +321,6 @@ namespace handy
             if(!tr)
                 return;
 
-            // 通过自定义ID检查定时器是否已被取消
-            auto repIt = m_timerReps.find({-tr->at, tr->timerIdPair.second});
-            if(repIt == m_timerReps.end())
-                return;
-
             // 更新下一次超时时间并重新注册
             tr->at += tr->interval_ms;
             tr->timerIdPair = {tr->at, ++m_timerSeq};
@@ -480,7 +475,6 @@ namespace handy
         catch(const std::exception& e)
         {
             FATAL("EventBase create failed: %s", e.what());
-            // 重新抛出，让调用者感知错误
             throw;
         }
     }
