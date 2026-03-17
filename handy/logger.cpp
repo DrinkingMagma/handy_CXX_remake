@@ -87,6 +87,23 @@ namespace handy
         int contentLength = vsnprintf(nullptr, 0, fmt, argsCopy);
         va_end(argsCopy);
 
+        // 检查格式化字符串是否有效
+        if (contentLength < 0)
+        {
+            static const char* errorMsg = "Format string error: invalid format or parameter mismatch\n";
+            std::lock_guard<std::mutex> lock(m_mutex);
+
+            if(m_fd)
+            {
+                fwrite(logPrefix, 1, prefixLength, m_fd);
+                fwrite(errorMsg, 1, strlen(errorMsg), m_fd);
+                fflush(m_fd);
+            }
+            fprintf(stderr, "%s%s\n", logPrefix, errorMsg);
+            va_end(args);
+            return;
+        }
+
         // 分配缓冲区
         std::unique_ptr<char[]> contentBuffer(new char[contentLength + 1]);
         // 将可变参数按fmt格式写入缓冲区

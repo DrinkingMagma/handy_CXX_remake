@@ -24,6 +24,13 @@
 #include <cstdio>
 #include <atomic>
 
+
+#ifdef __GNUC__  // GCC/Clang编译器
+#define LOG_FORMAT_ATTR(fmt_pos, va_pos) __attribute__((format(printf, fmt_pos, va_pos)))
+#else
+#define LOG_FORMAT_ATTR(fmt_pos, va_pos)  // 空宏，兼容其他编译器
+#endif
+
 /// 日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑
 #ifdef NDEBUG
 // 若当前为发布模式（Release）
@@ -129,9 +136,12 @@ namespace handy
              * @param line 日志行号
              * @param func 日志函数名
              * @param fmt 日志格式化字符串
-             * @note 仅当日志级别小于等于当前日志系统级别时，记录日志
+             * @note 1. 仅当日志级别小于等于当前日志系统级别时，记录日志
+             *       2. __attribute__((format(printf, 6, 7)))： 让GCC/Clang编译器在编译时检查格式化字符串和参数是否匹配
             */
-           void logv(int level, const char* file, int line, const char* func, const char* fmt, ...);
+            ///使用宏定义，兼顾跨平台
+            LOG_FORMAT_ATTR(6, 7)
+            void logv(int level, const char* file, int line, const char* func, const char* fmt, ...);
 
             /// 设置日志文件名称
             void setLogFileName(const std::string& logFileName);
