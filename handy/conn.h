@@ -251,10 +251,10 @@ namespace handy
 
             /**
              * @brief 添加空闲回调函数
-             * @param idle_ms 空闲时间（毫秒）
+             * @param idle_s 空闲时间（秒）
              * @param cb 回调函数
-            */
-            void addIdleCB(int idle_ms, const TcpCallBack& cb);
+            */ 
+            void addIdleCB(int idle_s, const TcpCallBack& cb);
 
             /**
              * @brief 设置消息回调函数，与onReadable回调冲突，只能调用一个

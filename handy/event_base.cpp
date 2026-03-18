@@ -704,12 +704,12 @@ namespace handy
             base->getImp()->updateIdle(idleIdPtr);
     }
 
-    void TcpConn::addIdleCB(int idle_ms, const TcpCallBack& cb)
+    void TcpConn::addIdleCB(int idle_s, const TcpCallBack& cb)
     {
         if(m_channel && getBase())
         {
             m_idleIds.push_back(
-                getBase()->getImp()->registerIdle(idle_ms, shared_from_this(), cb)
+                getBase()->getImp()->registerIdle(idle_s, shared_from_this(), cb)
             );
         }   
     }

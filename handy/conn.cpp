@@ -239,9 +239,9 @@ namespace handy
         // 清理通道
         {
             std::lock_guard<std::mutex> lock(m_callBacksMutex);
-            m_readCB == nullptr;
-            m_writeCB == nullptr;
-            m_stateCB == nullptr;
+            m_readCB = nullptr;
+            m_writeCB = nullptr;
+            m_stateCB = nullptr;
         }
         Channel* ch = nullptr;
         {

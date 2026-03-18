@@ -58,8 +58,9 @@ int main(int argc, char *argv[])
     tcpServer->onConnMsg(std::make_unique<LineCodec>(), [](const TcpConnPtr& conn, const Slice& msg){
         INFO("Received message from %s: %.*s", conn->getPeerStr().c_str(), (int)msg.size(), msg.data());
 
-        conn->send(msg.toString());
+        conn->send(msg.toString() + "\n");
     });
+
 
     base->loop();
 

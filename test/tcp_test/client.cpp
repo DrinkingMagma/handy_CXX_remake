@@ -30,16 +30,21 @@ int main(int argc, char *argv[])
         return -1;
     }
     INFO("tcp_client start success");
-    // 处理可读事件：当服务器发送数据时触发
-    tcpClient->onReadable([](const TcpConnPtr& conn) {
-        Buffer& inputBuffer = conn->getInputBuffer();
-        if (inputBuffer.size() > 0) {
-            // 读取并打印接收到的数据
-            std::string data(inputBuffer.begin(), inputBuffer.end());
-            INFO("Received from server: %s", data.c_str());
-            // 清空输入缓冲区
-            inputBuffer.clear();
-        }
+    // // 处理可读事件：当服务器发送数据时触发
+    // tcpClient->onReadable([](const TcpConnPtr& conn) {
+    //     Buffer& inputBuffer = conn->getInputBuffer();
+    //     if (inputBuffer.size() > 0) {
+    //         // 读取并打印接收到的数据
+    //         std::string data(inputBuffer.begin(), inputBuffer.end());
+    //         INFO("Received from server: %s", data.c_str());
+    //         // 清空输入缓冲区
+    //         inputBuffer.clear();
+    //     }
+    // });
+    
+    // 添加消息处理回调函数
+    tcpClient->onMsg(std::make_unique<LineCodec>(), [](const TcpConnPtr& conn, const Slice& msg){
+        INFO("Received message from %s: %.*s", conn->getPeerStr().c_str(), (int)msg.size(), msg.data());
     });
 
     // 处理可写事件：当连接可以发送数据时触发
@@ -56,13 +61,14 @@ int main(int argc, char *argv[])
         }
     });
 
-    tcpClient->onState([](const TcpConnPtr& conn) {
+    tcpClient->onState([basePtr = base.get()](const TcpConnPtr& conn) {
         // 处理连接状态变化事件
         if (conn->getState() == TcpConn::State::CONNECTED) {
             INFO("Connected to server");
             conn->getChannel()->enableWrite(true);
         } else if (conn->getState() == TcpConn::State::CLOSED) {
             INFO("Disconnected from server");
+            basePtr->exit();
         }
     });
 
