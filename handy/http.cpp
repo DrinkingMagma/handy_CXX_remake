@@ -412,7 +412,7 @@ namespace handy
             {
                 INFO("Received HTTP request: %s %s %s",
                     req.m_method.c_str(), req.m_uri.c_str(), req.getVersion().c_str());
-                TRACE("Request data:\n%.*s", (int)m_tcp->getInputBuffer().size(), m_tcp->getInputBuffer().data());
+                TRACE("Request data:\n%.*s", (int)m_tcp->getInputBuffer().size(), m_tcp->getInputBuffer().begin());
                 // 调用请求处理回调函数
                 cb(*this);
             }
@@ -431,7 +431,7 @@ namespace handy
             else if(result == HttpMsg::Result::Complete)
             {
                 INFO("Received HTTP response: %d %s", resp.m_status, resp.m_statusMsg.c_str());
-                TRACE("Response data:\n%.*s", (int)m_tcp->getInputBuffer().size(), m_tcp->getInputBuffer().data());
+                TRACE("Response data:\n%.*s", (int)m_tcp->getInputBuffer().size(), m_tcp->getInputBuffer().begin());
                 cb(*this);
             }
         }
@@ -440,7 +440,7 @@ namespace handy
     void HttpConnPtr::logOutput(const char* title) const
     {
         Buffer& output = m_tcp->getOutputBuffer();
-        TRACE("%s:\n%.*s", title, (int)output.size(), output.data());
+        TRACE("%s:\n%.*s", title, (int)output.size(), output.begin());
     }
 
     HttpServer::HttpServer(EventBases* bases) : TcpServer(bases)

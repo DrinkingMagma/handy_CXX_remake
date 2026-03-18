@@ -35,11 +35,6 @@ int main(int argc, char *argv[])
 
     tcpServer->onConnCreate([]() {
         TcpConnPtr conn = std::make_shared<TcpConn>();
-
-        conn->addIdleCB(10 * 1000, [](const TcpConnPtr& conn){
-            INFO("Connection idle timeout, closing...");
-            conn->close();
-        });
         return conn;
     });
 
@@ -48,6 +43,11 @@ int main(int argc, char *argv[])
         if(conn->getState() == TcpConn::State::CONNECTED)
         {
             INFO("New connection from %s created", conn->getPeerStr().c_str());
+
+            conn->addIdleCB(25, [](const TcpConnPtr& conn){ 
+                INFO("Connection idle timeout, closing...");
+                conn->close();
+            });
         }
         else if(conn->getState() == TcpConn::State::CLOSED)
         {
