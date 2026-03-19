@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
     signal(SIGINT, sigIntHandler);
 
-    int connCount = 1;
+    int connCount = 2;
     int msgPerConn = 5;
     
     if (argc > 1) {
