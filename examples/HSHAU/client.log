@@ -1,0 +1,76 @@
+[2026-03-19 11:23:32.265] [INFO] [client.cpp:37 main] Starting 2 UDP clients, each sending 5 messages
+[2026-03-19 11:23:32.265] [INFO] [../../handy/poller.cpp:114 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2026-03-19 11:23:32.265] [INFO] [client.cpp:53 main] UDP client 0 created, connected to 127.0.0.1:12345
+[2026-03-19 11:23:32.265] [INFO] [client.cpp:53 main] UDP client 1 created, connected to 127.0.0.1:12345
+[2026-03-19 11:23:32.866] [INFO] [client.cpp:59 operator()] Received from 127.0.0.1:12345: HSHAU server processed: Hello from client 0
+
+[2026-03-19 11:23:32.867] [INFO] [client.cpp:59 operator()] Received from 127.0.0.1:12345: HSHAU server processed: Hello from client 0
+Hello from client 1
+
+[2026-03-19 11:23:32.867] [INFO] [client.cpp:59 operator()] Received from 127.0.0.1:12345: HSHAU server processed: Hello from client 0
+Hello from client 1
+Hello from client 2
+
+[2026-03-19 11:23:32.867] [INFO] [client.cpp:59 operator()] Received from 127.0.0.1:12345: HSHAU server processed: Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+
+[2026-03-19 11:23:32.967] [INFO] [client.cpp:59 operator()] Received from 127.0.0.1:12345: HSHAU server processed: Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+
+[2026-03-19 11:23:32.967] [INFO] [client.cpp:59 operator()] Received from 127.0.0.1:12345: HSHAU server processed: Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+
+[2026-03-19 11:23:32.967] [INFO] [client.cpp:59 operator()] Received from 127.0.0.1:12345: HSHAU server processed: Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+Hello from client 1
+
+[2026-03-19 11:23:32.967] [INFO] [client.cpp:59 operator()] Received from 127.0.0.1:12345: HSHAU server processed: Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+Hello from client 1
+Hello from client 2
+
+[2026-03-19 11:23:33.067] [INFO] [client.cpp:59 operator()] Received from 127.0.0.1:12345: HSHAU server processed: Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+
+[2026-03-19 11:23:33.067] [INFO] [client.cpp:59 operator()] Received from 127.0.0.1:12345: HSHAU server processed: Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+
+[2026-03-19 11:23:34.768] [INFO] [client.cpp:76 operator()] Summary: sent 10 messages, received 10 responses
+[2026-03-19 11:23:34.768] [INFO] [../../handy/poller.cpp:120 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[0] destroying, epoll_fd=4
+[2026-03-19 11:23:34.768] [WARN] [../../handy/udp.cpp:276 operator()] conn closing: conn->m_channel=0xa12820, conn->m_channel->getFd()=-1
+[2026-03-19 11:23:34.768] [ERROR] [../../handy/event_base.cpp:462 wakeup] write wakeup pipe error: r=-1, errno=32, msg=Broken pipe
+[2026-03-19 11:23:34.768] [WARN] [../../handy/udp.cpp:276 operator()] conn closing: conn->m_channel=0xa12ca0, conn->m_channel->getFd()=-1
+[2026-03-19 11:23:34.768] [ERROR] [../../handy/event_base.cpp:462 wakeup] write wakeup pipe error: r=-1, errno=32, msg=Broken pipe
+[2026-03-19 11:23:34.768] [INFO] [../../handy/poller.cpp:137 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[0] destroyed

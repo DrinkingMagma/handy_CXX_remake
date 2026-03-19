@@ -1,0 +1,36 @@
+[2026-03-19 11:12:30.709] [INFO] [../../handy/poller.cpp:114 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2026-03-19 11:12:30.709] [TRACE] [../../handy/event_base.cpp:100 EventsImp] Wakeup pipe initialized: readFd=5, writeFd=6
+[2026-03-19 11:12:30.709] [TRACE] [../../handy/event_base.cpp:616 Channel] Channel set non-block: fd=5 success
+[2026-03-19 11:12:30.709] [TRACE] [../../handy/poller.cpp:152 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[1], fd=5, events=0x1
+[2026-03-19 11:12:30.709] [TRACE] [../../handy/event_base.cpp:627 Channel] Channel created: id=1, fd=5, events=0x1
+[2026-03-19 11:12:30.709] [TRACE] [../../handy/udp.cpp:261 createConnection] UDP connection(fd=7) connect to 127.0.0.1:12345 success
+[2026-03-19 11:12:30.709] [TRACE] [../../handy/event_base.cpp:616 Channel] Channel set non-block: fd=7 success
+[2026-03-19 11:12:30.709] [TRACE] [../../handy/poller.cpp:152 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[2], fd=7, events=0x1
+[2026-03-19 11:12:30.709] [TRACE] [../../handy/event_base.cpp:627 Channel] Channel created: id=2, fd=7, events=0x1
+[2026-03-19 11:12:30.709] [INFO] [client.cpp:34 main] udp_client start success, connected to 127.0.0.1:12345
+[2026-03-19 11:12:30.709] [TRACE] [../../handy/udp.cpp:347 send] UDP connection(fd=7) send 12 bytes to 127.0.0.1:12345 success
+[2026-03-19 11:12:30.709] [TRACE] [../../handy/event_base.cpp:423 loop] EventBase loop started: base=0x9bf0a0
+[2026-03-19 11:12:30.709] [TRACE] [../../handy/poller.cpp:227 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=0, m_lastActive=0, usedTime_ms=0
+[2026-03-19 11:12:30.709] [TRACE] [../../handy/event_base.cpp:449 loopOnce] Ready to handle timeout timers
+[2026-03-19 11:12:30.709] [TRACE] [../../handy/event_base.cpp:451 loopOnce] Timeout timers handled
+[2026-03-19 11:12:30.711] [TRACE] [../../handy/poller.cpp:227 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=2
+[2026-03-19 11:12:30.711] [TRACE] [../../handy/poller.cpp:253 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[2], fd=7
+[2026-03-19 11:12:30.711] [TRACE] [../../handy/event_base.h:411 handleRead] Channel::handleRead: will call m_readCB
+[2026-03-19 11:12:30.711] [TRACE] [../../handy/udp.cpp:273 operator()] UDP connection(fd=7) recving...
+[2026-03-19 11:12:30.711] [TRACE] [../../handy/udp.cpp:282 operator()] UDP connection(fd=2) recving...
+[2026-03-19 11:12:30.711] [TRACE] [../../handy/udp.cpp:286 operator()] UDP connection(fd=7) recvfrom 127.0.0.1:12345
+[2026-03-19 11:12:30.711] [TRACE] [../../handy/udp.cpp:288 operator()] UDP connection(fd=7) recvfrom 13 bytes from 127.0.0.1:12345
+[2026-03-19 11:12:30.712] [TRACE] [../../handy/udp.cpp:296 operator()] UDP connection(fd=7) read 13 bytes from 127.0.0.1:12345
+[2026-03-19 11:12:30.712] [INFO] [client.cpp:40 operator()] Received from 127.0.0.1:12345: hello
+world
+
+
+[2026-03-19 11:12:30.712] [TRACE] [../../handy/event_base.h:416 handleRead] Channel::handleRead: done call m_readCB
+[2026-03-19 11:12:30.712] [TRACE] [../../handy/event_base.cpp:449 loopOnce] Ready to handle timeout timers
+[2026-03-19 11:12:30.712] [TRACE] [../../handy/event_base.cpp:451 loopOnce] Timeout timers handled
+[2026-03-19 11:12:40.722] [TRACE] [../../handy/poller.cpp:227 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10010
+[2026-03-19 11:12:40.722] [TRACE] [../../handy/event_base.cpp:449 loopOnce] Ready to handle timeout timers
+[2026-03-19 11:12:40.722] [TRACE] [../../handy/event_base.cpp:451 loopOnce] Timeout timers handled
+[2026-03-19 11:12:50.732] [TRACE] [../../handy/poller.cpp:227 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10010
+[2026-03-19 11:12:50.732] [TRACE] [../../handy/event_base.cpp:449 loopOnce] Ready to handle timeout timers
+[2026-03-19 11:12:50.732] [TRACE] [../../handy/event_base.cpp:451 loopOnce] Timeout timers handled

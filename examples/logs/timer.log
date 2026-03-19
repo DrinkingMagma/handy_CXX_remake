@@ -1,0 +1,28 @@
+[2026-03-19 10:50:37.193] [INFO] [../../handy/poller.cpp:114 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2026-03-19 10:50:37.193] [INFO] [timer.cpp:32 main] ========== Timer Examples Start ==========
+[2026-03-19 10:50:37.293] [INFO] [timer.cpp:37 operator()] 1. runAfter(100ms): Executed after 100ms delay (elapsed: 100ms)
+[2026-03-19 10:50:37.394] [INFO] [timer.cpp:42 operator()] 2. runAfter(200ms): Executed after 200ms delay (elapsed: 201ms)
+[2026-03-19 10:50:37.493] [INFO] [timer.cpp:47 operator()] 3. runAfter(300ms): Executed after 300ms delay (elapsed: 300ms)
+[2026-03-19 10:50:37.693] [INFO] [timer.cpp:55 operator()] 4. runAfter with interval(500ms): Executed 1 times (elapsed: 500ms)
+[2026-03-19 10:50:38.194] [INFO] [timer.cpp:55 operator()] 4. runAfter with interval(500ms): Executed 2 times (elapsed: 1001ms)
+[2026-03-19 10:50:38.693] [INFO] [timer.cpp:55 operator()] 4. runAfter with interval(500ms): Executed 3 times (elapsed: 1500ms)
+[2026-03-19 10:50:38.693] [INFO] [timer.cpp:58 operator()]    Cancelling periodic timer after 3 executions
+[2026-03-19 10:50:38.793] [INFO] [timer.cpp:63 operator()] 5. After cancel: This runs 100ms after cancellation (elapsed: 1600ms)
+[2026-03-19 10:50:38.793] [INFO] [timer.cpp:79 testAbsoluteTime] ========== Absolute Time Test Start ==========
+[2026-03-19 10:50:38.994] [INFO] [timer.cpp:97 testCancelTimer] ========== Cancel Timer Test ==========
+[2026-03-19 10:50:38.994] [INFO] [timer.cpp:104 testCancelTimer] Created timer to cancel, will cancel it in 50ms...
+[2026-03-19 10:50:39.044] [INFO] [timer.cpp:108 operator()] 7. Timer cancelled: success
+[2026-03-19 10:50:39.044] [INFO] [timer.cpp:111 operator()]    Cancelled timer will not execute
+[2026-03-19 10:50:39.044] [INFO] [timer.cpp:120 testMultipleTimers] ========== Multiple Timers Test ==========
+[2026-03-19 10:50:39.093] [INFO] [timer.cpp:87 operator()] 6. runAt(futureTime): Scheduled at 1773888639093, executed at 1773888639093 (elapsed: 1900ms)
+[2026-03-19 10:50:39.145] [INFO] [timer.cpp:130 operator()] 8.1 Multiple timer 0: Executed at delay 100ms (elapsed: 1952ms)
+[2026-03-19 10:50:39.194] [INFO] [timer.cpp:130 operator()] 8.2 Multiple timer 1: Executed at delay 150ms (elapsed: 2001ms)
+[2026-03-19 10:50:39.244] [INFO] [timer.cpp:130 operator()] 8.3 Multiple timer 2: Executed at delay 200ms (elapsed: 2051ms)
+[2026-03-19 10:50:39.294] [INFO] [timer.cpp:130 operator()] 8.4 Multiple timer 3: Executed at delay 250ms (elapsed: 2101ms)
+[2026-03-19 10:50:39.344] [INFO] [timer.cpp:130 operator()] 8.5 Multiple timer 4: Executed at delay 300ms (elapsed: 2151ms)
+[2026-03-19 10:50:39.444] [INFO] [timer.cpp:135 operator()] ========== Summary ==========
+[2026-03-19 10:50:39.444] [INFO] [timer.cpp:136 operator()] All timer examples completed!
+[2026-03-19 10:50:39.444] [INFO] [timer.cpp:137 operator()] Total elapsed time: 2251ms
+[2026-03-19 10:50:39.444] [INFO] [timer.cpp:73 main] ========== Timer Examples End ==========
+[2026-03-19 10:50:39.444] [INFO] [../../handy/poller.cpp:120 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[0] destroying, epoll_fd=4
+[2026-03-19 10:50:39.444] [INFO] [../../handy/poller.cpp:137 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[0] destroyed

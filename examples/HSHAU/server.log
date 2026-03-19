@@ -1,0 +1,215 @@
+[2026-03-19 11:23:31.267] [INFO] [../../handy/poller.cpp:114 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2026-03-19 11:23:31.267] [TRACE] [../../handy/event_base.cpp:100 EventsImp] Wakeup pipe initialized: readFd=5, writeFd=6
+[2026-03-19 11:23:31.267] [TRACE] [../../handy/event_base.cpp:616 Channel] Channel set non-block: fd=5 success
+[2026-03-19 11:23:31.267] [TRACE] [../../handy/poller.cpp:152 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[1], fd=5, events=0x1
+[2026-03-19 11:23:31.267] [TRACE] [../../handy/event_base.cpp:627 Channel] Channel created: id=1, fd=5, events=0x1
+[2026-03-19 11:23:31.267] [INFO] [server.cpp:34 main] Starting HSHAU server with 4 worker threads
+[2026-03-19 11:23:31.267] [INFO] [../../handy/udp.cpp:108 bind] UDP server(fd=7) bind to 127.0.0.1:12345 success
+[2026-03-19 11:23:31.267] [TRACE] [../../handy/event_base.cpp:616 Channel] Channel set non-block: fd=7 success
+[2026-03-19 11:23:31.267] [TRACE] [../../handy/poller.cpp:152 addChannel] PollerEpoll::addChannel(): PollerEpoll[0] add Channel[2], fd=7, events=0x1
+[2026-03-19 11:23:31.267] [TRACE] [../../handy/event_base.cpp:627 Channel] Channel created: id=2, fd=7, events=0x1
+[2026-03-19 11:23:31.267] [INFO] [server.cpp:42 main] HSHAU server start success, listening on 127.0.0.1:12345
+[2026-03-19 11:23:31.267] [TRACE] [../../handy/event_base.cpp:423 loop] EventBase loop started: base=0x1ff30a0
+[2026-03-19 11:23:31.267] [TRACE] [../../handy/poller.cpp:227 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=0, m_lastActive=0, usedTime_ms=0
+[2026-03-19 11:23:31.267] [TRACE] [../../handy/event_base.cpp:449 loopOnce] Ready to handle timeout timers
+[2026-03-19 11:23:31.267] [TRACE] [../../handy/event_base.cpp:451 loopOnce] Timeout timers handled
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/poller.cpp:227 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=1499
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/poller.cpp:253 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[2], fd=7
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/event_base.h:411 handleRead] Channel::handleRead: will call m_readCB
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:121 operator()] Udp server(fd=7) recving...
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:130 operator()] Udp server(fd=7) recvfrom 20 bytes from 127.0.0.1:22458
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:131 operator()] Udp server(fd=7) recvfrom Hello from client 0
+
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:130 operator()] Udp server(fd=7) recvfrom 20 bytes from 127.0.0.1:22458
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:131 operator()] Udp server(fd=7) recvfrom Hello from client 0
+Hello from client 1
+
+[2026-03-19 11:23:32.766] [INFO] [server.cpp:45 operator()] Received message from 127.0.0.1:22458: Hello from client 0
+
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:130 operator()] Udp server(fd=7) recvfrom 20 bytes from 127.0.0.1:22458
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:131 operator()] Udp server(fd=7) recvfrom Hello from client 0
+Hello from client 1
+Hello from client 2
+
+[2026-03-19 11:23:32.766] [INFO] [server.cpp:45 operator()] Received message from 127.0.0.1:22458: Hello from client 0
+Hello from client 1
+
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:130 operator()] Udp server(fd=7) recvfrom 20 bytes from 127.0.0.1:22458
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:131 operator()] Udp server(fd=7) recvfrom Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:130 operator()] Udp server(fd=7) recvfrom 20 bytes from 127.0.0.1:22458
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:131 operator()] Udp server(fd=7) recvfrom Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:130 operator()] Udp server(fd=7) recvfrom 20 bytes from 127.0.0.1:28654
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:131 operator()] Udp server(fd=7) recvfrom Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+
+[2026-03-19 11:23:32.766] [INFO] [server.cpp:45 operator()] Received message from 127.0.0.1:22458: Hello from client 0
+Hello from client 1
+Hello from client 2
+
+[2026-03-19 11:23:32.766] [INFO] [server.cpp:45 operator()] Received message from 127.0.0.1:22458: Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:130 operator()] Udp server(fd=7) recvfrom 20 bytes from 127.0.0.1:28654
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:131 operator()] Udp server(fd=7) recvfrom Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+Hello from client 1
+
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:130 operator()] Udp server(fd=7) recvfrom 20 bytes from 127.0.0.1:28654
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:131 operator()] Udp server(fd=7) recvfrom Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+Hello from client 1
+Hello from client 2
+
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:130 operator()] Udp server(fd=7) recvfrom 20 bytes from 127.0.0.1:28654
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:131 operator()] Udp server(fd=7) recvfrom Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:130 operator()] Udp server(fd=7) recvfrom 20 bytes from 127.0.0.1:28654
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/udp.cpp:131 operator()] Udp server(fd=7) recvfrom Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/event_base.h:416 handleRead] Channel::handleRead: done call m_readCB
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/event_base.cpp:449 loopOnce] Ready to handle timeout timers
+[2026-03-19 11:23:32.766] [TRACE] [../../handy/event_base.cpp:451 loopOnce] Timeout timers handled
+[2026-03-19 11:23:32.866] [TRACE] [../../handy/poller.cpp:227 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=100
+[2026-03-19 11:23:32.866] [TRACE] [../../handy/poller.cpp:253 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[1], fd=5
+[2026-03-19 11:23:32.866] [TRACE] [../../handy/event_base.h:411 handleRead] Channel::handleRead: will call m_readCB
+[2026-03-19 11:23:32.866] [TRACE] [../../handy/event_base.cpp:463 wakeup] write wakeup pipe(fd=6) success
+[2026-03-19 11:23:32.866] [INFO] [server.cpp:45 operator()] Received message from 127.0.0.1:22458: Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+
+[2026-03-19 11:23:32.866] [TRACE] [../../handy/event_base.cpp:463 wakeup] write wakeup pipe(fd=6) success
+[2026-03-19 11:23:32.866] [INFO] [server.cpp:45 operator()] Received message from 127.0.0.1:28654: Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+
+[2026-03-19 11:23:32.866] [TRACE] [../../handy/event_base.cpp:463 wakeup] write wakeup pipe(fd=6) success
+[2026-03-19 11:23:32.866] [INFO] [server.cpp:45 operator()] Received message from 127.0.0.1:28654: Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+Hello from client 1
+
+[2026-03-19 11:23:32.866] [TRACE] [../../handy/event_base.cpp:463 wakeup] write wakeup pipe(fd=6) success
+[2026-03-19 11:23:32.867] [INFO] [server.cpp:45 operator()] Received message from 127.0.0.1:28654: Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+Hello from client 1
+Hello from client 2
+
+[2026-03-19 11:23:32.867] [TRACE] [../../handy/udp.cpp:193 sendTo] UdpServer(fd=7) send 44 bytes to 127.0.0.1:22458 success
+[2026-03-19 11:23:32.867] [TRACE] [../../handy/udp.cpp:193 sendTo] UdpServer(fd=7) send 64 bytes to 127.0.0.1:22458 success
+[2026-03-19 11:23:32.867] [TRACE] [../../handy/udp.cpp:193 sendTo] UdpServer(fd=7) send 84 bytes to 127.0.0.1:22458 success
+[2026-03-19 11:23:32.867] [TRACE] [../../handy/udp.cpp:193 sendTo] UdpServer(fd=7) send 104 bytes to 127.0.0.1:22458 success
+[2026-03-19 11:23:32.867] [TRACE] [../../handy/event_base.h:416 handleRead] Channel::handleRead: done call m_readCB
+[2026-03-19 11:23:32.867] [TRACE] [../../handy/event_base.cpp:449 loopOnce] Ready to handle timeout timers
+[2026-03-19 11:23:32.867] [TRACE] [../../handy/event_base.cpp:451 loopOnce] Timeout timers handled
+[2026-03-19 11:23:32.867] [TRACE] [../../handy/poller.cpp:227 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=0
+[2026-03-19 11:23:32.867] [TRACE] [../../handy/poller.cpp:253 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[1], fd=5
+[2026-03-19 11:23:32.867] [TRACE] [../../handy/event_base.h:411 handleRead] Channel::handleRead: will call m_readCB
+[2026-03-19 11:23:32.867] [TRACE] [../../handy/event_base.h:416 handleRead] Channel::handleRead: done call m_readCB
+[2026-03-19 11:23:32.867] [TRACE] [../../handy/event_base.cpp:449 loopOnce] Ready to handle timeout timers
+[2026-03-19 11:23:32.867] [TRACE] [../../handy/event_base.cpp:451 loopOnce] Timeout timers handled
+[2026-03-19 11:23:32.967] [TRACE] [../../handy/event_base.cpp:463 wakeup] write wakeup pipe(fd=6) success
+[2026-03-19 11:23:32.967] [TRACE] [../../handy/event_base.cpp:463 wakeup] write wakeup pipe(fd=6) success
+[2026-03-19 11:23:32.967] [INFO] [server.cpp:45 operator()] Received message from 127.0.0.1:28654: Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+
+[2026-03-19 11:23:32.967] [INFO] [server.cpp:45 operator()] Received message from 127.0.0.1:28654: Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+Hello from client 0
+Hello from client 1
+Hello from client 2
+Hello from client 3
+Hello from client 4
+
+[2026-03-19 11:23:32.967] [TRACE] [../../handy/event_base.cpp:463 wakeup] write wakeup pipe(fd=6) success
+[2026-03-19 11:23:32.967] [TRACE] [../../handy/event_base.cpp:463 wakeup] write wakeup pipe(fd=6) success
+[2026-03-19 11:23:32.967] [TRACE] [../../handy/poller.cpp:227 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=100
+[2026-03-19 11:23:32.967] [TRACE] [../../handy/poller.cpp:253 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[1], fd=5
+[2026-03-19 11:23:32.967] [TRACE] [../../handy/event_base.h:411 handleRead] Channel::handleRead: will call m_readCB
+[2026-03-19 11:23:32.967] [TRACE] [../../handy/udp.cpp:193 sendTo] UdpServer(fd=7) send 124 bytes to 127.0.0.1:22458 success
+[2026-03-19 11:23:32.967] [TRACE] [../../handy/udp.cpp:193 sendTo] UdpServer(fd=7) send 144 bytes to 127.0.0.1:28654 success
+[2026-03-19 11:23:32.967] [TRACE] [../../handy/udp.cpp:193 sendTo] UdpServer(fd=7) send 164 bytes to 127.0.0.1:28654 success
+[2026-03-19 11:23:32.967] [TRACE] [../../handy/udp.cpp:193 sendTo] UdpServer(fd=7) send 184 bytes to 127.0.0.1:28654 success
+[2026-03-19 11:23:32.967] [TRACE] [../../handy/event_base.h:416 handleRead] Channel::handleRead: done call m_readCB
+[2026-03-19 11:23:32.967] [TRACE] [../../handy/event_base.cpp:449 loopOnce] Ready to handle timeout timers
+[2026-03-19 11:23:32.967] [TRACE] [../../handy/event_base.cpp:451 loopOnce] Timeout timers handled
+[2026-03-19 11:23:33.067] [TRACE] [../../handy/event_base.cpp:463 wakeup] write wakeup pipe(fd=6) success
+[2026-03-19 11:23:33.067] [TRACE] [../../handy/poller.cpp:227 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=1, usedTime_ms=100
+[2026-03-19 11:23:33.067] [TRACE] [../../handy/event_base.cpp:463 wakeup] write wakeup pipe(fd=6) success
+[2026-03-19 11:23:33.067] [TRACE] [../../handy/poller.cpp:253 loopOnce] PollerEpoll::loopOnce(): PollerEpoll[0] handle read: Channel[1], fd=5
+[2026-03-19 11:23:33.067] [TRACE] [../../handy/event_base.h:411 handleRead] Channel::handleRead: will call m_readCB
+[2026-03-19 11:23:33.067] [TRACE] [../../handy/udp.cpp:193 sendTo] UdpServer(fd=7) send 204 bytes to 127.0.0.1:28654 success
+[2026-03-19 11:23:33.067] [TRACE] [../../handy/udp.cpp:193 sendTo] UdpServer(fd=7) send 224 bytes to 127.0.0.1:28654 success
+[2026-03-19 11:23:33.067] [TRACE] [../../handy/event_base.h:416 handleRead] Channel::handleRead: done call m_readCB
+[2026-03-19 11:23:33.067] [TRACE] [../../handy/event_base.cpp:449 loopOnce] Ready to handle timeout timers
+[2026-03-19 11:23:33.067] [TRACE] [../../handy/event_base.cpp:451 loopOnce] Timeout timers handled
+[2026-03-19 11:23:43.077] [TRACE] [../../handy/poller.cpp:227 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10010
+[2026-03-19 11:23:43.077] [TRACE] [../../handy/event_base.cpp:449 loopOnce] Ready to handle timeout timers
+[2026-03-19 11:23:43.077] [TRACE] [../../handy/event_base.cpp:451 loopOnce] Timeout timers handled
+[2026-03-19 11:23:53.087] [TRACE] [../../handy/poller.cpp:227 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10010
+[2026-03-19 11:23:53.087] [TRACE] [../../handy/event_base.cpp:449 loopOnce] Ready to handle timeout timers
+[2026-03-19 11:23:53.087] [TRACE] [../../handy/event_base.cpp:451 loopOnce] Timeout timers handled
+[2026-03-19 11:24:03.097] [TRACE] [../../handy/poller.cpp:227 loopOnce] poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[0] epoll_wait, waitTime_ms=10000, m_lastActive=0, usedTime_ms=10010
+[2026-03-19 11:24:03.097] [TRACE] [../../handy/event_base.cpp:449 loopOnce] Ready to handle timeout timers
+[2026-03-19 11:24:03.097] [TRACE] [../../handy/event_base.cpp:451 loopOnce] Timeout timers handled
