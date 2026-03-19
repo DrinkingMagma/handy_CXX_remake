@@ -112,14 +112,17 @@ namespace handy
                     // 检查是否需要发送100 Continue
                     if(bufSize < m_scannedLen + m_contentLen && !getHeaderValue("expect").empty())
                         return Result::Continue100;
+                    
+                    // 如果没有消息体（GET请求），则解析完成
+                    if(m_contentLen == 0)
+                    {
+                        m_completed = true;
+                        return Result::Complete;
+                    }
                     break;
                 }
                 m_scannedLen++;
             }
-
-            // 头部未解析完成
-            if(m_contentLen == 0)
-                return Result::NotComplete;
         }
 
         // 解析消息体
@@ -463,7 +466,7 @@ namespace handy
             // 设置HTTP消息处理逻辑
             httpConn.onHttpMsg([this](const HttpConnPtr& conn) {
                 const HttpRequest& req = conn.getRequest();
-                auto methodIt = m_routeTable.find(req.m_uri);
+                auto methodIt = m_routeTable.find(req.m_method);
                 if(methodIt != m_routeTable.end())
                 {
                     auto uriIt = methodIt->second.find(req.m_uri);
