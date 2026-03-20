@@ -345,7 +345,7 @@ namespace handy
             Buffer& operator=(Buffer&& other) noexcept;
 
             /**
-             * @brief 清空缓冲区，释放多有动态内存，重置所有偏移量和容量
+             * @brief 清空缓冲区，释放所有动态内存，重置所有偏移量和容量
             */
             void clear();
 

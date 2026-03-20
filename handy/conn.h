@@ -210,7 +210,7 @@ namespace handy
             void send(const char* s) { send(s, strlen(s)); }
 
             /**
-             * @brief 设置数据到达(TCP缓冲区可写)时的回调函数
+             * @brief 设置数据到达(TCP缓冲区可读)时的回调函数
              * @param cb 回调函数
             */
             void onReadable(const TcpCallBack& cb)
@@ -301,6 +301,12 @@ namespace handy
              * @return std::string 远程地址字符串
             */
             std::string getPeerStr() const { return m_peer.toString(); }
+
+            /**
+             * @brief 获取本地地址的字符串表示
+             * @return std::string 本地地址字符串
+            */
+            std::string getLocalStr() const { return m_local.toString(); }
 
             /**
              * @brief 将连接与已有的文件描述符进行关联

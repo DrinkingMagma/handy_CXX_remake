@@ -1,0 +1,15 @@
+[2026-03-20 16:29:34.625] [INFO] [../../handy/poller.cpp:114 PollerEpoll] PollerEpoll::PollerEpoll(): PollerEpoll[0] created, epoll_fd=4
+[2026-03-20 16:29:34.625] [INFO] [reconnect.cpp:72 startClientWithReconnect] Client started, connecting to 127.0.0.1:12345 with reconnect interval 3000ms
+[2026-03-20 16:29:34.625] [INFO] [reconnect.cpp:38 onClientState] Client connected to server: 127.0.0.1:38484 -> 127.0.0.1:12345
+[2026-03-20 16:29:34.625] [INFO] [reconnect.cpp:65 operator()] Client received raw: Welcome! Server is ready.
+
+[2026-03-20 16:29:34.626] [INFO] [reconnect.cpp:65 operator()] Client received raw: Server echo: Hello from client!
+
+[2026-03-20 16:29:39.627] [INFO] [reconnect.cpp:160 operator()] Sending heartbeat...
+[2026-03-20 16:29:39.628] [INFO] [reconnect.cpp:65 operator()] Client received raw: Server echo: Heartbeat
+
+[2026-03-20 16:29:41.107] [INFO] [reconnect.cpp:27 sigIntHandler] exit reconnect test
+[2026-03-20 16:29:41.107] [INFO] [reconnect.cpp:170 main] Reconnect test exited
+[2026-03-20 16:29:41.107] [INFO] [../../handy/poller.cpp:120 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[0] destroying, epoll_fd=4
+[2026-03-20 16:29:41.107] [INFO] [reconnect.cpp:43 onClientState] Client connection closed: 127.0.0.1:12345
+[2026-03-20 16:29:41.107] [INFO] [../../handy/poller.cpp:137 ~PollerEpoll] PollerEpoll::~PollerEpoll(): PollerEpoll[0] destroyed
