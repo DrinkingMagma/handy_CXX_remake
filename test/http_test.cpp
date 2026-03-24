@@ -131,7 +131,7 @@ void testHttpRequestDecode() {
                  req1.getArg("user") == "test" &&
                  req1.getArg("page") == "1" &&
                  req1.getHeaderValue("host") == "example.com");
-    DEBUG("res1: %d", res1);
+    DEBUG("res1: %d", (int)res1);
     DEBUG("测试1（GET请求解码）：%s", test1 ? "通过" : "失败");
 
     // 测试2：完整的POST请求
@@ -151,7 +151,7 @@ void testHttpRequestDecode() {
     if(test2 == false)
     {
         DEBUG("res2: %d\nreq2.m_method: %s\nreq2.m_uri: %s\nreq2.getBody(): %s\n", 
-            res2, req2.m_method.c_str(), req2.m_uri.c_str(), req2.getBody().toString().c_str());
+            (int)res2, req2.m_method.c_str(), req2.m_uri.c_str(), req2.getBody().toString().c_str());
     }
     DEBUG("测试2（POST请求解码）：%s", test2 ? "通过" : "失败");
 
@@ -300,7 +300,7 @@ void testHttpResponseDecode() {
                  resp2.getBody().toString() == "Not Found");
 
     DEBUG("res2: %d\nresp2.m_status: %d\nresp2.m_statusMsg: %s\nresp2.getBody(): %s", 
-        res2, resp2.m_status, resp2.m_statusMsg.c_str(), resp2.getBody().toString().c_str());
+        (int)res2, resp2.m_status, resp2.m_statusMsg.c_str(), resp2.getBody().toString().c_str());
     DEBUG("测试2（404响应解码）：%s", test2 ? "通过" : "失败");
 
     // 测试3：不完整响应
@@ -432,7 +432,7 @@ void testHttpThreadSafe() {
     int64_t total = g_httpThreadTestCount.load();
     int64_t expected = THREAD_NUM * LOOP_NUM;
     bool thread_ok = (total == expected);
-    DEBUG("线程安全测试：总执行次数=%lld（预期：%lld，%s）", 
+    DEBUG("线程安全测试：总执行次数=%ld（预期：%ld，%s）", 
               total, expected, thread_ok ? "通过" : "失败");
     DEBUG("=== HTTP 线程安全 特性测试结束 ===\n");
 }

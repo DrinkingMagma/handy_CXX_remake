@@ -78,8 +78,8 @@ void test_time_system() {
     bool micro_valid = (micro_diff >= 90000 && micro_diff <= 110000);  // 90ms~110ms（微秒）
     bool milli_valid = (milli_diff >= 90 && milli_diff <= 110);        // 90ms~110ms（毫秒）
 
-    DEBUG("timeMicro 差值：%lldμs（%s）", micro_diff, micro_valid ? "有效" : "无效");
-    DEBUG("timeMilli 差值：%lldms（%s）", milli_diff, milli_valid ? "有效" : "无效");
+    DEBUG("timeMicro 差值：%ldμs（%s）", micro_diff, micro_valid ? "有效" : "无效");
+    DEBUG("timeMilli 差值：%ldms（%s）", milli_diff, milli_valid ? "有效" : "无效");
     DEBUG("=== timeMicro/timeMilli 函数测试结束 ===\n");
 }
 
@@ -101,8 +101,8 @@ void test_time_steady() {
     bool micro_valid = (micro_diff >= 140000 && micro_diff <= 160000);
     bool milli_valid = (milli_diff >= 140 && milli_diff <= 160);
 
-    DEBUG("steadyMicro 差值：%lldμs（%s）", micro_diff, micro_valid ? "有效" : "无效");
-    DEBUG("steadyMilli 差值：%lldms（%s）", milli_diff, milli_valid ? "有效" : "无效");
+    DEBUG("steadyMicro 差值：%ldμs（%s）", micro_diff, micro_valid ? "有效" : "无效");
+    DEBUG("steadyMilli 差值：%ldms（%s）", milli_diff, milli_valid ? "有效" : "无效");
     DEBUG("=== steadyMicro/steadyMilli 函数测试结束 ===\n");
 }
 
@@ -165,9 +165,9 @@ void test_atoi() {
         bool atoi_ok = (atoi_res == c.atoi_exp);
         bool atoi2_ok = (atoi2_res == c.atoi2_exp);
 
-        DEBUG("测试用例%d：输入=\"%.*s\"", i + 1, static_cast<int>(c.len), c.str);
-        DEBUG("  atoi结果：%lld（预期：%lld，%s）", atoi_res, c.atoi_exp, atoi_ok ? "通过" : "失败");
-        DEBUG("  atoi2结果：%lld（预期：%lld，%s）", atoi2_res, c.atoi2_exp, atoi2_ok ? "通过" : "失败");
+        DEBUG("测试用例%ld：输入=\"%.*s\"", i + 1, static_cast<int>(c.len), c.str);
+        DEBUG("  atoi结果：%ld（预期：%ld，%s）", atoi_res, c.atoi_exp, atoi_ok ? "通过" : "失败");
+        DEBUG("  atoi2结果：%ld（预期：%ld，%s）", atoi2_res, c.atoi2_exp, atoi2_ok ? "通过" : "失败");
     }
 
     DEBUG("=== atoi/atoi2 函数测试结束 ===\n");
@@ -252,7 +252,7 @@ void test_thread_safe() {
     int64_t total = g_threadTestCount.load();
     int64_t expected = THREAD_NUM * LOOP_NUM;
     bool thread_ok = (total == expected);
-    DEBUG("线程安全测试：总执行次数=%lld（预期：%lld，%s）", 
+    DEBUG("线程安全测试：总执行次数=%ld（预期：%ld，%s）", 
               total, expected, thread_ok ? "通过" : "失败");
     DEBUG("=== 线程安全 特性测试结束 ===\n");
 }

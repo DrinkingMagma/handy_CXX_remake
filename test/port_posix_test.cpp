@@ -99,7 +99,7 @@ void test_htobe_betoh_64bit() {
     int64_t restore_int64 = port::betoh(net_int64);
     
     bool int64_ok = (restore_int64 == host_int64);
-    DEBUG("有符号64位测试: 原始=%lld → 网络序=%lld → 恢复=%lld（%s）",
+    DEBUG("有符号64位测试: 原始=%ld → 网络序=%ld → 恢复=%ld（%s）",
           host_int64, net_int64, restore_int64, int64_ok ? "通过" : "失败");
 
     DEBUG("=== 64位整数字节序转换测试结束 ===\n");
@@ -172,7 +172,7 @@ void test_getHostByName_threadSafe() {
     int64_t total = g_threadSafeCount.load();
     int64_t expected = THREAD_NUM * LOOP_NUM;
     bool thread_ok = (total == expected);
-    DEBUG("线程安全测试: 总解析次数=%lld（预期: %lld），无崩溃即线程安全（%s）",
+    DEBUG("线程安全测试: 总解析次数=%ld（预期: %ld），无崩溃即线程安全（%s）",
           total, expected, thread_ok ? "计数一致" : "计数异常");
 
     DEBUG("=== 主机名解析线程安全测试结束 ===\n");

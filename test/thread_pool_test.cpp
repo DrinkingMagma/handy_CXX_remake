@@ -204,7 +204,7 @@ void testSafeQueueTimeout() {
     // 验证等待时间（应接近timeoutMs，误差允许±100ms）
     if (costMs < timeoutMs - 100 || costMs > timeoutMs + 100) {
         testOk = false;
-        DEBUG("超时等待时间异常：实际=%lldms，预期≈%dms", costMs, timeoutMs);
+        DEBUG("超时等待时间异常：实际=%ldms，预期≈%dms", costMs, timeoutMs);
     }
 
     // 测试有任务时超时（任务存在，应立即返回true）
@@ -225,7 +225,7 @@ void testSafeQueueTimeout() {
     // 验证等待时间（应<100ms，无明显延迟）
     if (costMs > 100) {
         testOk = false;
-        DEBUG("有任务时等待时间过长：实际=%lldms，预期<100ms", costMs);
+        DEBUG("有任务时等待时间过长：实际=%ldms，预期<100ms", costMs);
     }
 
     DEBUG("测试（超时等待功能）：%s", testOk ? "通过" : "失败");

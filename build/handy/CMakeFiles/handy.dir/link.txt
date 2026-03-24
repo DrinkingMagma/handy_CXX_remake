@@ -1,2 +1,2 @@
-/usr/bin/ar qc libhandy.a CMakeFiles/handy.dir/logger.cpp.o
+/usr/bin/ar qc libhandy.a CMakeFiles/handy.dir/logger.cpp.o CMakeFiles/handy.dir/codec.cpp.o CMakeFiles/handy.dir/conn.cpp.o CMakeFiles/handy.dir/daemon.cpp.o CMakeFiles/handy.dir/event_base.cpp.o CMakeFiles/handy.dir/file.cpp.o CMakeFiles/handy.dir/http.cpp.o CMakeFiles/handy.dir/net.cpp.o CMakeFiles/handy.dir/poller.cpp.o CMakeFiles/handy.dir/port_posix.cpp.o CMakeFiles/handy.dir/stat-svr.cpp.o CMakeFiles/handy.dir/thread_pool.cpp.o CMakeFiles/handy.dir/udp.cpp.o CMakeFiles/handy.dir/utils.cpp.o CMakeFiles/handy.dir/conf.cpp.o
 /usr/bin/ranlib libhandy.a

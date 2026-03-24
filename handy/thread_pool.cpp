@@ -108,7 +108,7 @@ bool SafeQueue<T>::isExited() const noexcept
 }
 
 // 显示实例化任务类型的安全队列
-template class SafeQueue<Task>;
+template class handy::SafeQueue<Task>;
 
 ThreadPool::ThreadPool(int threadNum, int taskQueueCapacity, bool isStartImmediately)
     : m_taskQueue(static_cast<size_t>(taskQueueCapacity))

@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/tcp_server.dir/server.cpp.o -o tcp_server  ../../handy/libhandy.a -lpthread 

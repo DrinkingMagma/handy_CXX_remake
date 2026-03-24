@@ -223,7 +223,7 @@ namespace handy
             m_lastActive = epoll_wait(m_epollFd, m_activeEvs, kMaxEvents, waitTime_ms);
             const int64_t usedTime_ms = Utils::timeMilli() - startTime_ms;
 
-            TRACE("poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[%lld] epoll_wait, waitTime_ms=%d, m_lastActive=%d, usedTime_ms=%lld",
+            TRACE("poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[%lld] epoll_wait, waitTime_ms=%d, m_lastActive=%d, usedTime_ms=%ld",
                     static_cast<long long>(getId()), waitTime_ms, m_lastActive, usedTime_ms);
 
             // 错误处理：排除信号中断（EINTR是正常情况）

@@ -239,7 +239,11 @@ void test_thread_safe() {
         for (int i = 0; i < LOOP_NUM; ++i) {
             Slice s("hello world");
             std::string str = s.toString();
-            DEBUG("线程%d-%d：slice=%s", std::this_thread::get_id(), i, str.c_str());
+
+            auto tid = std::this_thread::get_id();
+            std::stringstream ss;
+            ss << tid;
+            DEBUG("线程%s-%d：slice=%s", ss.str().c_str(), i, str.c_str());
             g_sliceThreadTestCount.fetch_add(1, std::memory_order_relaxed);
         }
     };
@@ -258,7 +262,7 @@ void test_thread_safe() {
     int64_t total = g_sliceThreadTestCount.load();
     int64_t expected = THREAD_NUM * LOOP_NUM;
     bool thread_ok = (total == expected);
-    DEBUG("线程安全测试：总执行次数=%lld（预期：%lld，%s）", 
+    DEBUG("线程安全测试：总执行次数=%ld（预期：%ld，%s）", 
               total, expected, thread_ok ? "通过" : "失败");
     DEBUG("=== Slice 线程安全 特性测试结束 ===\n");
 }

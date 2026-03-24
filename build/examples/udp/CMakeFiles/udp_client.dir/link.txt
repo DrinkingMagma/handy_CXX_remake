@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/udp_client.dir/client.cpp.o -o udp_client  ../../handy/libhandy.a -lpthread 

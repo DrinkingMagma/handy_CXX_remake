@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/timer_example.dir/timer.cpp.o -o timer_example  ../handy/libhandy.a -lpthread 

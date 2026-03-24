@@ -183,7 +183,7 @@ void test_net_thread_safety() {
     // 验证执行次数
     int64_t total = g_netThreadCount.load();
     int64_t expected = THREAD_NUM * LOOP_NUM;
-    DEBUG("Net多线程测试: 总执行次数=%lld（预期%lld，%s）",
+    DEBUG("Net多线程测试: 总执行次数=%ld（预期%ld，%s）",
           total, expected, (total == expected) ? "通过" : "失败");
 
     DEBUG("=== Net多线程安全测试结束 ===\n");
@@ -429,7 +429,7 @@ void test_buffer_thread_safety() {
     int64_t total = g_bufferThreadCount.load();
     int64_t expected = THREAD_NUM * LOOP_NUM;
     bool threadSafe = (total == expected);
-    DEBUG("多线程执行次数测试: 实际=%lld，预期=%lld（%s）",
+    DEBUG("多线程执行次数测试: 实际=%ld，预期=%ld（%s）",
           total, expected, threadSafe ? "通过" : "失败");
     DEBUG("多线程后缓冲区状态: 非空=%s，长度=%zu（无崩溃即符合安全要求）",
           buf.empty() ? "否" : "是", buf.size());

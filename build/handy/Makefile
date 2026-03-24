@@ -130,6 +130,174 @@ handy/fast:
 	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/build
 .PHONY : handy/fast
 
+codec.o: codec.cpp.o
+.PHONY : codec.o
+
+# target to build an object file
+codec.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/codec.cpp.o
+.PHONY : codec.cpp.o
+
+codec.i: codec.cpp.i
+.PHONY : codec.i
+
+# target to preprocess a source file
+codec.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/codec.cpp.i
+.PHONY : codec.cpp.i
+
+codec.s: codec.cpp.s
+.PHONY : codec.s
+
+# target to generate assembly for a file
+codec.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/codec.cpp.s
+.PHONY : codec.cpp.s
+
+conf.o: conf.cpp.o
+.PHONY : conf.o
+
+# target to build an object file
+conf.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/conf.cpp.o
+.PHONY : conf.cpp.o
+
+conf.i: conf.cpp.i
+.PHONY : conf.i
+
+# target to preprocess a source file
+conf.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/conf.cpp.i
+.PHONY : conf.cpp.i
+
+conf.s: conf.cpp.s
+.PHONY : conf.s
+
+# target to generate assembly for a file
+conf.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/conf.cpp.s
+.PHONY : conf.cpp.s
+
+conn.o: conn.cpp.o
+.PHONY : conn.o
+
+# target to build an object file
+conn.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/conn.cpp.o
+.PHONY : conn.cpp.o
+
+conn.i: conn.cpp.i
+.PHONY : conn.i
+
+# target to preprocess a source file
+conn.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/conn.cpp.i
+.PHONY : conn.cpp.i
+
+conn.s: conn.cpp.s
+.PHONY : conn.s
+
+# target to generate assembly for a file
+conn.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/conn.cpp.s
+.PHONY : conn.cpp.s
+
+daemon.o: daemon.cpp.o
+.PHONY : daemon.o
+
+# target to build an object file
+daemon.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/daemon.cpp.o
+.PHONY : daemon.cpp.o
+
+daemon.i: daemon.cpp.i
+.PHONY : daemon.i
+
+# target to preprocess a source file
+daemon.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/daemon.cpp.i
+.PHONY : daemon.cpp.i
+
+daemon.s: daemon.cpp.s
+.PHONY : daemon.s
+
+# target to generate assembly for a file
+daemon.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/daemon.cpp.s
+.PHONY : daemon.cpp.s
+
+event_base.o: event_base.cpp.o
+.PHONY : event_base.o
+
+# target to build an object file
+event_base.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/event_base.cpp.o
+.PHONY : event_base.cpp.o
+
+event_base.i: event_base.cpp.i
+.PHONY : event_base.i
+
+# target to preprocess a source file
+event_base.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/event_base.cpp.i
+.PHONY : event_base.cpp.i
+
+event_base.s: event_base.cpp.s
+.PHONY : event_base.s
+
+# target to generate assembly for a file
+event_base.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/event_base.cpp.s
+.PHONY : event_base.cpp.s
+
+file.o: file.cpp.o
+.PHONY : file.o
+
+# target to build an object file
+file.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/file.cpp.o
+.PHONY : file.cpp.o
+
+file.i: file.cpp.i
+.PHONY : file.i
+
+# target to preprocess a source file
+file.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/file.cpp.i
+.PHONY : file.cpp.i
+
+file.s: file.cpp.s
+.PHONY : file.s
+
+# target to generate assembly for a file
+file.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/file.cpp.s
+.PHONY : file.cpp.s
+
+http.o: http.cpp.o
+.PHONY : http.o
+
+# target to build an object file
+http.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/http.cpp.o
+.PHONY : http.cpp.o
+
+http.i: http.cpp.i
+.PHONY : http.i
+
+# target to preprocess a source file
+http.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/http.cpp.i
+.PHONY : http.cpp.i
+
+http.s: http.cpp.s
+.PHONY : http.s
+
+# target to generate assembly for a file
+http.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/http.cpp.s
+.PHONY : http.cpp.s
+
 logger.o: logger.cpp.o
 .PHONY : logger.o
 
@@ -154,6 +322,174 @@ logger.cpp.s:
 	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/logger.cpp.s
 .PHONY : logger.cpp.s
 
+net.o: net.cpp.o
+.PHONY : net.o
+
+# target to build an object file
+net.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/net.cpp.o
+.PHONY : net.cpp.o
+
+net.i: net.cpp.i
+.PHONY : net.i
+
+# target to preprocess a source file
+net.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/net.cpp.i
+.PHONY : net.cpp.i
+
+net.s: net.cpp.s
+.PHONY : net.s
+
+# target to generate assembly for a file
+net.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/net.cpp.s
+.PHONY : net.cpp.s
+
+poller.o: poller.cpp.o
+.PHONY : poller.o
+
+# target to build an object file
+poller.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/poller.cpp.o
+.PHONY : poller.cpp.o
+
+poller.i: poller.cpp.i
+.PHONY : poller.i
+
+# target to preprocess a source file
+poller.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/poller.cpp.i
+.PHONY : poller.cpp.i
+
+poller.s: poller.cpp.s
+.PHONY : poller.s
+
+# target to generate assembly for a file
+poller.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/poller.cpp.s
+.PHONY : poller.cpp.s
+
+port_posix.o: port_posix.cpp.o
+.PHONY : port_posix.o
+
+# target to build an object file
+port_posix.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/port_posix.cpp.o
+.PHONY : port_posix.cpp.o
+
+port_posix.i: port_posix.cpp.i
+.PHONY : port_posix.i
+
+# target to preprocess a source file
+port_posix.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/port_posix.cpp.i
+.PHONY : port_posix.cpp.i
+
+port_posix.s: port_posix.cpp.s
+.PHONY : port_posix.s
+
+# target to generate assembly for a file
+port_posix.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/port_posix.cpp.s
+.PHONY : port_posix.cpp.s
+
+stat-svr.o: stat-svr.cpp.o
+.PHONY : stat-svr.o
+
+# target to build an object file
+stat-svr.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/stat-svr.cpp.o
+.PHONY : stat-svr.cpp.o
+
+stat-svr.i: stat-svr.cpp.i
+.PHONY : stat-svr.i
+
+# target to preprocess a source file
+stat-svr.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/stat-svr.cpp.i
+.PHONY : stat-svr.cpp.i
+
+stat-svr.s: stat-svr.cpp.s
+.PHONY : stat-svr.s
+
+# target to generate assembly for a file
+stat-svr.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/stat-svr.cpp.s
+.PHONY : stat-svr.cpp.s
+
+thread_pool.o: thread_pool.cpp.o
+.PHONY : thread_pool.o
+
+# target to build an object file
+thread_pool.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/thread_pool.cpp.o
+.PHONY : thread_pool.cpp.o
+
+thread_pool.i: thread_pool.cpp.i
+.PHONY : thread_pool.i
+
+# target to preprocess a source file
+thread_pool.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/thread_pool.cpp.i
+.PHONY : thread_pool.cpp.i
+
+thread_pool.s: thread_pool.cpp.s
+.PHONY : thread_pool.s
+
+# target to generate assembly for a file
+thread_pool.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/thread_pool.cpp.s
+.PHONY : thread_pool.cpp.s
+
+udp.o: udp.cpp.o
+.PHONY : udp.o
+
+# target to build an object file
+udp.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/udp.cpp.o
+.PHONY : udp.cpp.o
+
+udp.i: udp.cpp.i
+.PHONY : udp.i
+
+# target to preprocess a source file
+udp.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/udp.cpp.i
+.PHONY : udp.cpp.i
+
+udp.s: udp.cpp.s
+.PHONY : udp.s
+
+# target to generate assembly for a file
+udp.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/udp.cpp.s
+.PHONY : udp.cpp.s
+
+utils.o: utils.cpp.o
+.PHONY : utils.o
+
+# target to build an object file
+utils.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/utils.cpp.o
+.PHONY : utils.cpp.o
+
+utils.i: utils.cpp.i
+.PHONY : utils.i
+
+# target to preprocess a source file
+utils.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/utils.cpp.i
+.PHONY : utils.cpp.i
+
+utils.s: utils.cpp.s
+.PHONY : utils.s
+
+# target to generate assembly for a file
+utils.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/utils.cpp.s
+.PHONY : utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -163,9 +499,51 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... handy"
+	@echo "... codec.o"
+	@echo "... codec.i"
+	@echo "... codec.s"
+	@echo "... conf.o"
+	@echo "... conf.i"
+	@echo "... conf.s"
+	@echo "... conn.o"
+	@echo "... conn.i"
+	@echo "... conn.s"
+	@echo "... daemon.o"
+	@echo "... daemon.i"
+	@echo "... daemon.s"
+	@echo "... event_base.o"
+	@echo "... event_base.i"
+	@echo "... event_base.s"
+	@echo "... file.o"
+	@echo "... file.i"
+	@echo "... file.s"
+	@echo "... http.o"
+	@echo "... http.i"
+	@echo "... http.s"
 	@echo "... logger.o"
 	@echo "... logger.i"
 	@echo "... logger.s"
+	@echo "... net.o"
+	@echo "... net.i"
+	@echo "... net.s"
+	@echo "... poller.o"
+	@echo "... poller.i"
+	@echo "... poller.s"
+	@echo "... port_posix.o"
+	@echo "... port_posix.i"
+	@echo "... port_posix.s"
+	@echo "... stat-svr.o"
+	@echo "... stat-svr.i"
+	@echo "... stat-svr.s"
+	@echo "... thread_pool.o"
+	@echo "... thread_pool.i"
+	@echo "... thread_pool.s"
+	@echo "... udp.o"
+	@echo "... udp.i"
+	@echo "... udp.s"
+	@echo "... utils.o"
+	@echo "... utils.i"
+	@echo "... utils.s"
 .PHONY : help
 
 

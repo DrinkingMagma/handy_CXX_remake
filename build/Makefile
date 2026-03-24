@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = /root/C++/handy_CXX_remake/build
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
-	@echo "Running external command ..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
 	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
@@ -77,7 +77,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@echo "Running external command ..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
 	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
@@ -116,6 +116,435 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named all_targets
+
+# Build rule for target.
+all_targets: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all_targets
+.PHONY : all_targets
+
+# fast build rule for target.
+all_targets/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_targets.dir/build.make CMakeFiles/all_targets.dir/build
+.PHONY : all_targets/fast
+
+#=============================================================================
+# Target rules for targets named handy
+
+# Build rule for target.
+handy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 handy
+.PHONY : handy
+
+# fast build rule for target.
+handy/fast:
+	$(MAKE) $(MAKESILENT) -f handy/CMakeFiles/handy.dir/build.make handy/CMakeFiles/handy.dir/build
+.PHONY : handy/fast
+
+#=============================================================================
+# Target rules for targets named conn_test
+
+# Build rule for target.
+conn_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 conn_test
+.PHONY : conn_test
+
+# fast build rule for target.
+conn_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/conn_test.dir/build.make test/CMakeFiles/conn_test.dir/build
+.PHONY : conn_test/fast
+
+#=============================================================================
+# Target rules for targets named thread_pool_test
+
+# Build rule for target.
+thread_pool_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thread_pool_test
+.PHONY : thread_pool_test
+
+# fast build rule for target.
+thread_pool_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/thread_pool_test.dir/build.make test/CMakeFiles/thread_pool_test.dir/build
+.PHONY : thread_pool_test/fast
+
+#=============================================================================
+# Target rules for targets named run_tests
+
+# Build rule for target.
+run_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_tests
+.PHONY : run_tests
+
+# fast build rule for target.
+run_tests/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
+
+#=============================================================================
+# Target rules for targets named utils_test
+
+# Build rule for target.
+utils_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils_test
+.PHONY : utils_test
+
+# fast build rule for target.
+utils_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/utils_test.dir/build.make test/CMakeFiles/utils_test.dir/build
+.PHONY : utils_test/fast
+
+#=============================================================================
+# Target rules for targets named daemon_test
+
+# Build rule for target.
+daemon_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 daemon_test
+.PHONY : daemon_test
+
+# fast build rule for target.
+daemon_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/daemon_test.dir/build.make test/CMakeFiles/daemon_test.dir/build
+.PHONY : daemon_test/fast
+
+#=============================================================================
+# Target rules for targets named stat-svr_test
+
+# Build rule for target.
+stat-svr_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stat-svr_test
+.PHONY : stat-svr_test
+
+# fast build rule for target.
+stat-svr_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/stat-svr_test.dir/build.make test/CMakeFiles/stat-svr_test.dir/build
+.PHONY : stat-svr_test/fast
+
+#=============================================================================
+# Target rules for targets named udp_test
+
+# Build rule for target.
+udp_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 udp_test
+.PHONY : udp_test
+
+# fast build rule for target.
+udp_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/udp_test.dir/build.make test/CMakeFiles/udp_test.dir/build
+.PHONY : udp_test/fast
+
+#=============================================================================
+# Target rules for targets named logger_test
+
+# Build rule for target.
+logger_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logger_test
+.PHONY : logger_test
+
+# fast build rule for target.
+logger_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/logger_test.dir/build.make test/CMakeFiles/logger_test.dir/build
+.PHONY : logger_test/fast
+
+#=============================================================================
+# Target rules for targets named codec_test
+
+# Build rule for target.
+codec_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codec_test
+.PHONY : codec_test
+
+# fast build rule for target.
+codec_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/codec_test.dir/build.make test/CMakeFiles/codec_test.dir/build
+.PHONY : codec_test/fast
+
+#=============================================================================
+# Target rules for targets named net_test
+
+# Build rule for target.
+net_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 net_test
+.PHONY : net_test
+
+# fast build rule for target.
+net_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/net_test.dir/build.make test/CMakeFiles/net_test.dir/build
+.PHONY : net_test/fast
+
+#=============================================================================
+# Target rules for targets named http_test
+
+# Build rule for target.
+http_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 http_test
+.PHONY : http_test
+
+# fast build rule for target.
+http_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/http_test.dir/build.make test/CMakeFiles/http_test.dir/build
+.PHONY : http_test/fast
+
+#=============================================================================
+# Target rules for targets named conf_test
+
+# Build rule for target.
+conf_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 conf_test
+.PHONY : conf_test
+
+# fast build rule for target.
+conf_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/conf_test.dir/build.make test/CMakeFiles/conf_test.dir/build
+.PHONY : conf_test/fast
+
+#=============================================================================
+# Target rules for targets named file_test
+
+# Build rule for target.
+file_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 file_test
+.PHONY : file_test
+
+# fast build rule for target.
+file_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/file_test.dir/build.make test/CMakeFiles/file_test.dir/build
+.PHONY : file_test/fast
+
+#=============================================================================
+# Target rules for targets named status_test
+
+# Build rule for target.
+status_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 status_test
+.PHONY : status_test
+
+# fast build rule for target.
+status_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/status_test.dir/build.make test/CMakeFiles/status_test.dir/build
+.PHONY : status_test/fast
+
+#=============================================================================
+# Target rules for targets named slice_test
+
+# Build rule for target.
+slice_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 slice_test
+.PHONY : slice_test
+
+# fast build rule for target.
+slice_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/slice_test.dir/build.make test/CMakeFiles/slice_test.dir/build
+.PHONY : slice_test/fast
+
+#=============================================================================
+# Target rules for targets named port_posix_test
+
+# Build rule for target.
+port_posix_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 port_posix_test
+.PHONY : port_posix_test
+
+# fast build rule for target.
+port_posix_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/port_posix_test.dir/build.make test/CMakeFiles/port_posix_test.dir/build
+.PHONY : port_posix_test/fast
+
+#=============================================================================
+# Target rules for targets named reconnect_example
+
+# Build rule for target.
+reconnect_example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reconnect_example
+.PHONY : reconnect_example
+
+# fast build rule for target.
+reconnect_example/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/reconnect_example.dir/build.make examples/CMakeFiles/reconnect_example.dir/build
+.PHONY : reconnect_example/fast
+
+#=============================================================================
+# Target rules for targets named chat_example
+
+# Build rule for target.
+chat_example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chat_example
+.PHONY : chat_example
+
+# fast build rule for target.
+chat_example/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/chat_example.dir/build.make examples/CMakeFiles/chat_example.dir/build
+.PHONY : chat_example/fast
+
+#=============================================================================
+# Target rules for targets named timer_example
+
+# Build rule for target.
+timer_example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 timer_example
+.PHONY : timer_example
+
+# fast build rule for target.
+timer_example/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/timer_example.dir/build.make examples/CMakeFiles/timer_example.dir/build
+.PHONY : timer_example/fast
+
+#=============================================================================
+# Target rules for targets named tcp_server
+
+# Build rule for target.
+tcp_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcp_server
+.PHONY : tcp_server
+
+# fast build rule for target.
+tcp_server/fast:
+	$(MAKE) $(MAKESILENT) -f examples/tcp/CMakeFiles/tcp_server.dir/build.make examples/tcp/CMakeFiles/tcp_server.dir/build
+.PHONY : tcp_server/fast
+
+#=============================================================================
+# Target rules for targets named tcp_client
+
+# Build rule for target.
+tcp_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcp_client
+.PHONY : tcp_client
+
+# fast build rule for target.
+tcp_client/fast:
+	$(MAKE) $(MAKESILENT) -f examples/tcp/CMakeFiles/tcp_client.dir/build.make examples/tcp/CMakeFiles/tcp_client.dir/build
+.PHONY : tcp_client/fast
+
+#=============================================================================
+# Target rules for targets named udp_server
+
+# Build rule for target.
+udp_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 udp_server
+.PHONY : udp_server
+
+# fast build rule for target.
+udp_server/fast:
+	$(MAKE) $(MAKESILENT) -f examples/udp/CMakeFiles/udp_server.dir/build.make examples/udp/CMakeFiles/udp_server.dir/build
+.PHONY : udp_server/fast
+
+#=============================================================================
+# Target rules for targets named udp_client
+
+# Build rule for target.
+udp_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 udp_client
+.PHONY : udp_client
+
+# fast build rule for target.
+udp_client/fast:
+	$(MAKE) $(MAKESILENT) -f examples/udp/CMakeFiles/udp_client.dir/build.make examples/udp/CMakeFiles/udp_client.dir/build
+.PHONY : udp_client/fast
+
+#=============================================================================
+# Target rules for targets named http_server
+
+# Build rule for target.
+http_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 http_server
+.PHONY : http_server
+
+# fast build rule for target.
+http_server/fast:
+	$(MAKE) $(MAKESILENT) -f examples/HTTP/CMakeFiles/http_server.dir/build.make examples/HTTP/CMakeFiles/http_server.dir/build
+.PHONY : http_server/fast
+
+#=============================================================================
+# Target rules for targets named http_client
+
+# Build rule for target.
+http_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 http_client
+.PHONY : http_client
+
+# fast build rule for target.
+http_client/fast:
+	$(MAKE) $(MAKESILENT) -f examples/HTTP/CMakeFiles/http_client.dir/build.make examples/HTTP/CMakeFiles/http_client.dir/build
+.PHONY : http_client/fast
+
+#=============================================================================
+# Target rules for targets named hsha_server
+
+# Build rule for target.
+hsha_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hsha_server
+.PHONY : hsha_server
+
+# fast build rule for target.
+hsha_server/fast:
+	$(MAKE) $(MAKESILENT) -f examples/HSHA/CMakeFiles/hsha_server.dir/build.make examples/HSHA/CMakeFiles/hsha_server.dir/build
+.PHONY : hsha_server/fast
+
+#=============================================================================
+# Target rules for targets named hsha_client
+
+# Build rule for target.
+hsha_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hsha_client
+.PHONY : hsha_client
+
+# fast build rule for target.
+hsha_client/fast:
+	$(MAKE) $(MAKESILENT) -f examples/HSHA/CMakeFiles/hsha_client.dir/build.make examples/HSHA/CMakeFiles/hsha_client.dir/build
+.PHONY : hsha_client/fast
+
+#=============================================================================
+# Target rules for targets named hshau_server
+
+# Build rule for target.
+hshau_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hshau_server
+.PHONY : hshau_server
+
+# fast build rule for target.
+hshau_server/fast:
+	$(MAKE) $(MAKESILENT) -f examples/HSHAU/CMakeFiles/hshau_server.dir/build.make examples/HSHAU/CMakeFiles/hshau_server.dir/build
+.PHONY : hshau_server/fast
+
+#=============================================================================
+# Target rules for targets named hshau_client
+
+# Build rule for target.
+hshau_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hshau_client
+.PHONY : hshau_client
+
+# fast build rule for target.
+hshau_client/fast:
+	$(MAKE) $(MAKESILENT) -f examples/HSHAU/CMakeFiles/hshau_client.dir/build.make examples/HSHAU/CMakeFiles/hshau_client.dir/build
+.PHONY : hshau_client/fast
+
+#=============================================================================
+# Target rules for targets named high_concurrency_server
+
+# Build rule for target.
+high_concurrency_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 high_concurrency_server
+.PHONY : high_concurrency_server
+
+# fast build rule for target.
+high_concurrency_server/fast:
+	$(MAKE) $(MAKESILENT) -f examples/high_concurrency/CMakeFiles/high_concurrency_server.dir/build.make examples/high_concurrency/CMakeFiles/high_concurrency_server.dir/build
+.PHONY : high_concurrency_server/fast
+
+#=============================================================================
+# Target rules for targets named high_concurrency_client
+
+# Build rule for target.
+high_concurrency_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 high_concurrency_client
+.PHONY : high_concurrency_client
+
+# fast build rule for target.
+high_concurrency_client/fast:
+	$(MAKE) $(MAKESILENT) -f examples/high_concurrency/CMakeFiles/high_concurrency_client.dir/build.make examples/high_concurrency/CMakeFiles/high_concurrency_client.dir/build
+.PHONY : high_concurrency_client/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +553,39 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... all_targets"
+	@echo "... run_tests"
+	@echo "... chat_example"
+	@echo "... codec_test"
+	@echo "... conf_test"
+	@echo "... conn_test"
+	@echo "... daemon_test"
+	@echo "... file_test"
+	@echo "... handy"
+	@echo "... high_concurrency_client"
+	@echo "... high_concurrency_server"
+	@echo "... hsha_client"
+	@echo "... hsha_server"
+	@echo "... hshau_client"
+	@echo "... hshau_server"
+	@echo "... http_client"
+	@echo "... http_server"
+	@echo "... http_test"
+	@echo "... logger_test"
+	@echo "... net_test"
+	@echo "... port_posix_test"
+	@echo "... reconnect_example"
+	@echo "... slice_test"
+	@echo "... stat-svr_test"
+	@echo "... status_test"
+	@echo "... tcp_client"
+	@echo "... tcp_server"
+	@echo "... thread_pool_test"
+	@echo "... timer_example"
+	@echo "... udp_client"
+	@echo "... udp_server"
+	@echo "... udp_test"
+	@echo "... utils_test"
 .PHONY : help
 
 

@@ -4,6 +4,7 @@
 test/CMakeFiles/logger_test.dir/logger_test.cpp.o: ../test/logger_test.cpp \
   /usr/include/stdc-predef.h \
   ../handy/logger.h \
+  ../handy/non_copy_able.h \
   /usr/include/c++/8/string \
   /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
   /usr/include/bits/wordsize.h \
@@ -128,6 +129,7 @@ test/CMakeFiles/logger_test.dir/logger_test.cpp.o: ../test/logger_test.cpp \
   /usr/include/bits/types/sigset_t.h \
   /usr/include/bits/types/__sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/c++/8/bits/std_abs.h \
   /usr/include/c++/8/cstdio \
@@ -138,6 +140,7 @@ test/CMakeFiles/logger_test.dir/logger_test.cpp.o: ../test/logger_test.cpp \
   /usr/include/bits/types/cookie_io_functions_t.h \
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/sys_errlist.h \
+  /usr/include/bits/stdio.h \
   /usr/include/c++/8/cerrno \
   /usr/include/errno.h \
   /usr/include/bits/errno.h \
@@ -196,13 +199,15 @@ test/CMakeFiles/logger_test.dir/logger_test.cpp.o: ../test/logger_test.cpp \
 
 /usr/include/c++/8/bits/shared_ptr_base.h:
 
-/usr/include/c++/8/bits/unique_ptr.h:
-
 /usr/include/c++/8/ext/concurrence.h:
 
 /usr/include/c++/8/bits/stl_tempbuf.h:
 
 /usr/include/c++/8/bits/stl_uninitialized.h:
+
+/usr/include/c++/8/memory:
+
+/usr/include/c++/8/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/8/bits/stl_construct.h:
 
@@ -260,6 +265,18 @@ test/CMakeFiles/logger_test.dir/logger_test.cpp.o: ../test/logger_test.cpp \
 
 /usr/include/bits/floatn.h:
 
+/usr/include/c++/8/bits/exception_ptr.h:
+
+/usr/include/bits/types/__locale_t.h:
+
+/usr/include/c++/8/ext/new_allocator.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h:
+
+/usr/include/wchar.h:
+
+/usr/include/bits/sched.h:
+
 /usr/include/bits/wchar.h:
 
 /usr/include/c++/8/x86_64-redhat-linux/bits/cpu_defines.h:
@@ -274,17 +291,9 @@ test/CMakeFiles/logger_test.dir/logger_test.cpp.o: ../test/logger_test.cpp \
 
 /usr/include/bits/errno.h:
 
-/usr/include/c++/8/bits/uses_allocator.h:
-
-/usr/include/c++/8/bits/char_traits.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/8/include/stdint.h:
-
-/usr/include/c++/8/bits/concept_check.h:
-
-/usr/include/c++/8/bits/stl_pair.h:
-
 /usr/include/bits/long-double.h:
+
+/usr/include/bits/stdio.h:
 
 /usr/include/features.h:
 
@@ -302,23 +311,19 @@ test/CMakeFiles/logger_test.dir/logger_test.cpp.o: ../test/logger_test.cpp \
 
 /usr/include/bits/types/sigset_t.h:
 
-/usr/include/c++/8/bits/stl_algobase.h:
+../test/logger_test.cpp:
 
-/usr/include/c++/8/chrono:
+/usr/include/bits/types/struct_timespec.h:
 
-/usr/include/c++/8/bits/postypes.h:
+/usr/include/time.h:
 
-/usr/include/c++/8/bits/exception_ptr.h:
+/usr/lib/gcc/x86_64-redhat-linux/8/include/stdint.h:
 
-/usr/include/bits/types/__locale_t.h:
+/usr/include/c++/8/bits/char_traits.h:
 
-/usr/include/c++/8/ext/new_allocator.h:
+/usr/include/c++/8/bits/concept_check.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h:
-
-/usr/include/wchar.h:
-
-/usr/include/bits/sched.h:
+/usr/include/c++/8/bits/stl_pair.h:
 
 /usr/include/stdc-predef.h:
 
@@ -344,13 +349,19 @@ test/CMakeFiles/logger_test.dir/logger_test.cpp.o: ../test/logger_test.cpp \
 
 /usr/include/c++/8/bits/alloc_traits.h:
 
-../test/logger_test.cpp:
-
-/usr/include/bits/types/struct_timespec.h:
-
-/usr/include/time.h:
-
 /usr/include/c++/8/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/8/bits/unique_ptr.h:
+
+../handy/non_copy_able.h:
+
+/usr/include/c++/8/bits/uses_allocator.h:
+
+/usr/include/c++/8/bits/postypes.h:
+
+/usr/include/c++/8/bits/stl_algobase.h:
+
+/usr/include/c++/8/chrono:
 
 /usr/include/c++/8/bits/refwrap.h:
 
@@ -470,6 +481,10 @@ test/CMakeFiles/logger_test.dir/logger_test.cpp.o: ../test/logger_test.cpp \
 
 /usr/include/c++/8/cstdlib:
 
+/usr/include/c++/8/thread:
+
+/usr/include/bits/waitflags.h:
+
 /usr/include/c++/8/cerrno:
 
 /usr/include/c++/8/bits/move.h:
@@ -483,6 +498,8 @@ test/CMakeFiles/logger_test.dir/logger_test.cpp.o: ../test/logger_test.cpp \
 /usr/include/bits/types/__sigset_t.h:
 
 /usr/include/alloca.h:
+
+/usr/include/bits/stdlib-bsearch.h:
 
 /usr/include/c++/8/bits/stl_vector.h:
 
@@ -543,11 +560,3 @@ test/CMakeFiles/logger_test.dir/logger_test.cpp.o: ../test/logger_test.cpp \
 /usr/include/bits/setjmp.h:
 
 /usr/include/c++/8/atomic:
-
-/usr/include/c++/8/bits/atomic_lockfree_defines.h:
-
-/usr/include/bits/waitflags.h:
-
-/usr/include/c++/8/thread:
-
-/usr/include/c++/8/memory:

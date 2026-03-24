@@ -278,7 +278,7 @@ void test_thread_safe() {
     int64_t total = g_fileThreadTestCount.load();
     int64_t expected = THREAD_NUM * LOOP_NUM;
     bool threadOk = (total == expected);
-    DEBUG("线程安全测试：总成功次数=%lld（预期：%lld，%s）",
+    DEBUG("线程安全测试：总成功次数=%ld（预期：%ld，%s）",
           total, expected, threadOk ? "通过" : "失败");
 
     DEBUG("=== 文件操作线程安全测试结束 ===\n");

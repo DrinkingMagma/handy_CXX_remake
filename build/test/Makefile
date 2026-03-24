@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = /root/C++/handy_CXX_remake/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -84,6 +74,16 @@ edit_cache:
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,6 +117,104 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test/CMakeFiles/conn_test.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/conn_test.dir/rule
+.PHONY : test/CMakeFiles/conn_test.dir/rule
+
+# Convenience name for target.
+conn_test: test/CMakeFiles/conn_test.dir/rule
+.PHONY : conn_test
+
+# fast build rule for target.
+conn_test/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/conn_test.dir/build.make test/CMakeFiles/conn_test.dir/build
+.PHONY : conn_test/fast
+
+# Convenience name for target.
+test/CMakeFiles/thread_pool_test.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/thread_pool_test.dir/rule
+.PHONY : test/CMakeFiles/thread_pool_test.dir/rule
+
+# Convenience name for target.
+thread_pool_test: test/CMakeFiles/thread_pool_test.dir/rule
+.PHONY : thread_pool_test
+
+# fast build rule for target.
+thread_pool_test/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/thread_pool_test.dir/build.make test/CMakeFiles/thread_pool_test.dir/build
+.PHONY : thread_pool_test/fast
+
+# Convenience name for target.
+test/CMakeFiles/run_tests.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/run_tests.dir/rule
+.PHONY : test/CMakeFiles/run_tests.dir/rule
+
+# Convenience name for target.
+run_tests: test/CMakeFiles/run_tests.dir/rule
+.PHONY : run_tests
+
+# fast build rule for target.
+run_tests/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
+
+# Convenience name for target.
+test/CMakeFiles/utils_test.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/utils_test.dir/rule
+.PHONY : test/CMakeFiles/utils_test.dir/rule
+
+# Convenience name for target.
+utils_test: test/CMakeFiles/utils_test.dir/rule
+.PHONY : utils_test
+
+# fast build rule for target.
+utils_test/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/utils_test.dir/build.make test/CMakeFiles/utils_test.dir/build
+.PHONY : utils_test/fast
+
+# Convenience name for target.
+test/CMakeFiles/daemon_test.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/daemon_test.dir/rule
+.PHONY : test/CMakeFiles/daemon_test.dir/rule
+
+# Convenience name for target.
+daemon_test: test/CMakeFiles/daemon_test.dir/rule
+.PHONY : daemon_test
+
+# fast build rule for target.
+daemon_test/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/daemon_test.dir/build.make test/CMakeFiles/daemon_test.dir/build
+.PHONY : daemon_test/fast
+
+# Convenience name for target.
+test/CMakeFiles/stat-svr_test.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/stat-svr_test.dir/rule
+.PHONY : test/CMakeFiles/stat-svr_test.dir/rule
+
+# Convenience name for target.
+stat-svr_test: test/CMakeFiles/stat-svr_test.dir/rule
+.PHONY : stat-svr_test
+
+# fast build rule for target.
+stat-svr_test/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/stat-svr_test.dir/build.make test/CMakeFiles/stat-svr_test.dir/build
+.PHONY : stat-svr_test/fast
+
+# Convenience name for target.
+test/CMakeFiles/udp_test.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/udp_test.dir/rule
+.PHONY : test/CMakeFiles/udp_test.dir/rule
+
+# Convenience name for target.
+udp_test: test/CMakeFiles/udp_test.dir/rule
+.PHONY : udp_test
+
+# fast build rule for target.
+udp_test/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/udp_test.dir/build.make test/CMakeFiles/udp_test.dir/build
+.PHONY : udp_test/fast
+
+# Convenience name for target.
 test/CMakeFiles/logger_test.dir/rule:
 	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/logger_test.dir/rule
 .PHONY : test/CMakeFiles/logger_test.dir/rule
@@ -129,6 +227,262 @@ logger_test: test/CMakeFiles/logger_test.dir/rule
 logger_test/fast:
 	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/logger_test.dir/build.make test/CMakeFiles/logger_test.dir/build
 .PHONY : logger_test/fast
+
+# Convenience name for target.
+test/CMakeFiles/codec_test.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/codec_test.dir/rule
+.PHONY : test/CMakeFiles/codec_test.dir/rule
+
+# Convenience name for target.
+codec_test: test/CMakeFiles/codec_test.dir/rule
+.PHONY : codec_test
+
+# fast build rule for target.
+codec_test/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/codec_test.dir/build.make test/CMakeFiles/codec_test.dir/build
+.PHONY : codec_test/fast
+
+# Convenience name for target.
+test/CMakeFiles/net_test.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/net_test.dir/rule
+.PHONY : test/CMakeFiles/net_test.dir/rule
+
+# Convenience name for target.
+net_test: test/CMakeFiles/net_test.dir/rule
+.PHONY : net_test
+
+# fast build rule for target.
+net_test/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/net_test.dir/build.make test/CMakeFiles/net_test.dir/build
+.PHONY : net_test/fast
+
+# Convenience name for target.
+test/CMakeFiles/http_test.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/http_test.dir/rule
+.PHONY : test/CMakeFiles/http_test.dir/rule
+
+# Convenience name for target.
+http_test: test/CMakeFiles/http_test.dir/rule
+.PHONY : http_test
+
+# fast build rule for target.
+http_test/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/http_test.dir/build.make test/CMakeFiles/http_test.dir/build
+.PHONY : http_test/fast
+
+# Convenience name for target.
+test/CMakeFiles/conf_test.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/conf_test.dir/rule
+.PHONY : test/CMakeFiles/conf_test.dir/rule
+
+# Convenience name for target.
+conf_test: test/CMakeFiles/conf_test.dir/rule
+.PHONY : conf_test
+
+# fast build rule for target.
+conf_test/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/conf_test.dir/build.make test/CMakeFiles/conf_test.dir/build
+.PHONY : conf_test/fast
+
+# Convenience name for target.
+test/CMakeFiles/file_test.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/file_test.dir/rule
+.PHONY : test/CMakeFiles/file_test.dir/rule
+
+# Convenience name for target.
+file_test: test/CMakeFiles/file_test.dir/rule
+.PHONY : file_test
+
+# fast build rule for target.
+file_test/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/file_test.dir/build.make test/CMakeFiles/file_test.dir/build
+.PHONY : file_test/fast
+
+# Convenience name for target.
+test/CMakeFiles/status_test.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/status_test.dir/rule
+.PHONY : test/CMakeFiles/status_test.dir/rule
+
+# Convenience name for target.
+status_test: test/CMakeFiles/status_test.dir/rule
+.PHONY : status_test
+
+# fast build rule for target.
+status_test/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/status_test.dir/build.make test/CMakeFiles/status_test.dir/build
+.PHONY : status_test/fast
+
+# Convenience name for target.
+test/CMakeFiles/slice_test.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/slice_test.dir/rule
+.PHONY : test/CMakeFiles/slice_test.dir/rule
+
+# Convenience name for target.
+slice_test: test/CMakeFiles/slice_test.dir/rule
+.PHONY : slice_test
+
+# fast build rule for target.
+slice_test/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/slice_test.dir/build.make test/CMakeFiles/slice_test.dir/build
+.PHONY : slice_test/fast
+
+# Convenience name for target.
+test/CMakeFiles/port_posix_test.dir/rule:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/port_posix_test.dir/rule
+.PHONY : test/CMakeFiles/port_posix_test.dir/rule
+
+# Convenience name for target.
+port_posix_test: test/CMakeFiles/port_posix_test.dir/rule
+.PHONY : port_posix_test
+
+# fast build rule for target.
+port_posix_test/fast:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/port_posix_test.dir/build.make test/CMakeFiles/port_posix_test.dir/build
+.PHONY : port_posix_test/fast
+
+codec_test.o: codec_test.cpp.o
+.PHONY : codec_test.o
+
+# target to build an object file
+codec_test.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/codec_test.dir/build.make test/CMakeFiles/codec_test.dir/codec_test.cpp.o
+.PHONY : codec_test.cpp.o
+
+codec_test.i: codec_test.cpp.i
+.PHONY : codec_test.i
+
+# target to preprocess a source file
+codec_test.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/codec_test.dir/build.make test/CMakeFiles/codec_test.dir/codec_test.cpp.i
+.PHONY : codec_test.cpp.i
+
+codec_test.s: codec_test.cpp.s
+.PHONY : codec_test.s
+
+# target to generate assembly for a file
+codec_test.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/codec_test.dir/build.make test/CMakeFiles/codec_test.dir/codec_test.cpp.s
+.PHONY : codec_test.cpp.s
+
+conf_test.o: conf_test.cpp.o
+.PHONY : conf_test.o
+
+# target to build an object file
+conf_test.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/conf_test.dir/build.make test/CMakeFiles/conf_test.dir/conf_test.cpp.o
+.PHONY : conf_test.cpp.o
+
+conf_test.i: conf_test.cpp.i
+.PHONY : conf_test.i
+
+# target to preprocess a source file
+conf_test.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/conf_test.dir/build.make test/CMakeFiles/conf_test.dir/conf_test.cpp.i
+.PHONY : conf_test.cpp.i
+
+conf_test.s: conf_test.cpp.s
+.PHONY : conf_test.s
+
+# target to generate assembly for a file
+conf_test.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/conf_test.dir/build.make test/CMakeFiles/conf_test.dir/conf_test.cpp.s
+.PHONY : conf_test.cpp.s
+
+conn_test.o: conn_test.cpp.o
+.PHONY : conn_test.o
+
+# target to build an object file
+conn_test.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/conn_test.dir/build.make test/CMakeFiles/conn_test.dir/conn_test.cpp.o
+.PHONY : conn_test.cpp.o
+
+conn_test.i: conn_test.cpp.i
+.PHONY : conn_test.i
+
+# target to preprocess a source file
+conn_test.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/conn_test.dir/build.make test/CMakeFiles/conn_test.dir/conn_test.cpp.i
+.PHONY : conn_test.cpp.i
+
+conn_test.s: conn_test.cpp.s
+.PHONY : conn_test.s
+
+# target to generate assembly for a file
+conn_test.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/conn_test.dir/build.make test/CMakeFiles/conn_test.dir/conn_test.cpp.s
+.PHONY : conn_test.cpp.s
+
+daemon_test.o: daemon_test.cpp.o
+.PHONY : daemon_test.o
+
+# target to build an object file
+daemon_test.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/daemon_test.dir/build.make test/CMakeFiles/daemon_test.dir/daemon_test.cpp.o
+.PHONY : daemon_test.cpp.o
+
+daemon_test.i: daemon_test.cpp.i
+.PHONY : daemon_test.i
+
+# target to preprocess a source file
+daemon_test.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/daemon_test.dir/build.make test/CMakeFiles/daemon_test.dir/daemon_test.cpp.i
+.PHONY : daemon_test.cpp.i
+
+daemon_test.s: daemon_test.cpp.s
+.PHONY : daemon_test.s
+
+# target to generate assembly for a file
+daemon_test.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/daemon_test.dir/build.make test/CMakeFiles/daemon_test.dir/daemon_test.cpp.s
+.PHONY : daemon_test.cpp.s
+
+file_test.o: file_test.cpp.o
+.PHONY : file_test.o
+
+# target to build an object file
+file_test.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/file_test.dir/build.make test/CMakeFiles/file_test.dir/file_test.cpp.o
+.PHONY : file_test.cpp.o
+
+file_test.i: file_test.cpp.i
+.PHONY : file_test.i
+
+# target to preprocess a source file
+file_test.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/file_test.dir/build.make test/CMakeFiles/file_test.dir/file_test.cpp.i
+.PHONY : file_test.cpp.i
+
+file_test.s: file_test.cpp.s
+.PHONY : file_test.s
+
+# target to generate assembly for a file
+file_test.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/file_test.dir/build.make test/CMakeFiles/file_test.dir/file_test.cpp.s
+.PHONY : file_test.cpp.s
+
+http_test.o: http_test.cpp.o
+.PHONY : http_test.o
+
+# target to build an object file
+http_test.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/http_test.dir/build.make test/CMakeFiles/http_test.dir/http_test.cpp.o
+.PHONY : http_test.cpp.o
+
+http_test.i: http_test.cpp.i
+.PHONY : http_test.i
+
+# target to preprocess a source file
+http_test.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/http_test.dir/build.make test/CMakeFiles/http_test.dir/http_test.cpp.i
+.PHONY : http_test.cpp.i
+
+http_test.s: http_test.cpp.s
+.PHONY : http_test.s
+
+# target to generate assembly for a file
+http_test.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/http_test.dir/build.make test/CMakeFiles/http_test.dir/http_test.cpp.s
+.PHONY : http_test.cpp.s
 
 logger_test.o: logger_test.cpp.o
 .PHONY : logger_test.o
@@ -154,6 +508,198 @@ logger_test.cpp.s:
 	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/logger_test.dir/build.make test/CMakeFiles/logger_test.dir/logger_test.cpp.s
 .PHONY : logger_test.cpp.s
 
+net_test.o: net_test.cpp.o
+.PHONY : net_test.o
+
+# target to build an object file
+net_test.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/net_test.dir/build.make test/CMakeFiles/net_test.dir/net_test.cpp.o
+.PHONY : net_test.cpp.o
+
+net_test.i: net_test.cpp.i
+.PHONY : net_test.i
+
+# target to preprocess a source file
+net_test.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/net_test.dir/build.make test/CMakeFiles/net_test.dir/net_test.cpp.i
+.PHONY : net_test.cpp.i
+
+net_test.s: net_test.cpp.s
+.PHONY : net_test.s
+
+# target to generate assembly for a file
+net_test.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/net_test.dir/build.make test/CMakeFiles/net_test.dir/net_test.cpp.s
+.PHONY : net_test.cpp.s
+
+port_posix_test.o: port_posix_test.cpp.o
+.PHONY : port_posix_test.o
+
+# target to build an object file
+port_posix_test.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/port_posix_test.dir/build.make test/CMakeFiles/port_posix_test.dir/port_posix_test.cpp.o
+.PHONY : port_posix_test.cpp.o
+
+port_posix_test.i: port_posix_test.cpp.i
+.PHONY : port_posix_test.i
+
+# target to preprocess a source file
+port_posix_test.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/port_posix_test.dir/build.make test/CMakeFiles/port_posix_test.dir/port_posix_test.cpp.i
+.PHONY : port_posix_test.cpp.i
+
+port_posix_test.s: port_posix_test.cpp.s
+.PHONY : port_posix_test.s
+
+# target to generate assembly for a file
+port_posix_test.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/port_posix_test.dir/build.make test/CMakeFiles/port_posix_test.dir/port_posix_test.cpp.s
+.PHONY : port_posix_test.cpp.s
+
+slice_test.o: slice_test.cpp.o
+.PHONY : slice_test.o
+
+# target to build an object file
+slice_test.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/slice_test.dir/build.make test/CMakeFiles/slice_test.dir/slice_test.cpp.o
+.PHONY : slice_test.cpp.o
+
+slice_test.i: slice_test.cpp.i
+.PHONY : slice_test.i
+
+# target to preprocess a source file
+slice_test.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/slice_test.dir/build.make test/CMakeFiles/slice_test.dir/slice_test.cpp.i
+.PHONY : slice_test.cpp.i
+
+slice_test.s: slice_test.cpp.s
+.PHONY : slice_test.s
+
+# target to generate assembly for a file
+slice_test.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/slice_test.dir/build.make test/CMakeFiles/slice_test.dir/slice_test.cpp.s
+.PHONY : slice_test.cpp.s
+
+stat-svr_test.o: stat-svr_test.cpp.o
+.PHONY : stat-svr_test.o
+
+# target to build an object file
+stat-svr_test.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/stat-svr_test.dir/build.make test/CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.o
+.PHONY : stat-svr_test.cpp.o
+
+stat-svr_test.i: stat-svr_test.cpp.i
+.PHONY : stat-svr_test.i
+
+# target to preprocess a source file
+stat-svr_test.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/stat-svr_test.dir/build.make test/CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.i
+.PHONY : stat-svr_test.cpp.i
+
+stat-svr_test.s: stat-svr_test.cpp.s
+.PHONY : stat-svr_test.s
+
+# target to generate assembly for a file
+stat-svr_test.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/stat-svr_test.dir/build.make test/CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.s
+.PHONY : stat-svr_test.cpp.s
+
+status_test.o: status_test.cpp.o
+.PHONY : status_test.o
+
+# target to build an object file
+status_test.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/status_test.dir/build.make test/CMakeFiles/status_test.dir/status_test.cpp.o
+.PHONY : status_test.cpp.o
+
+status_test.i: status_test.cpp.i
+.PHONY : status_test.i
+
+# target to preprocess a source file
+status_test.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/status_test.dir/build.make test/CMakeFiles/status_test.dir/status_test.cpp.i
+.PHONY : status_test.cpp.i
+
+status_test.s: status_test.cpp.s
+.PHONY : status_test.s
+
+# target to generate assembly for a file
+status_test.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/status_test.dir/build.make test/CMakeFiles/status_test.dir/status_test.cpp.s
+.PHONY : status_test.cpp.s
+
+thread_pool_test.o: thread_pool_test.cpp.o
+.PHONY : thread_pool_test.o
+
+# target to build an object file
+thread_pool_test.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/thread_pool_test.dir/build.make test/CMakeFiles/thread_pool_test.dir/thread_pool_test.cpp.o
+.PHONY : thread_pool_test.cpp.o
+
+thread_pool_test.i: thread_pool_test.cpp.i
+.PHONY : thread_pool_test.i
+
+# target to preprocess a source file
+thread_pool_test.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/thread_pool_test.dir/build.make test/CMakeFiles/thread_pool_test.dir/thread_pool_test.cpp.i
+.PHONY : thread_pool_test.cpp.i
+
+thread_pool_test.s: thread_pool_test.cpp.s
+.PHONY : thread_pool_test.s
+
+# target to generate assembly for a file
+thread_pool_test.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/thread_pool_test.dir/build.make test/CMakeFiles/thread_pool_test.dir/thread_pool_test.cpp.s
+.PHONY : thread_pool_test.cpp.s
+
+udp_test.o: udp_test.cpp.o
+.PHONY : udp_test.o
+
+# target to build an object file
+udp_test.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/udp_test.dir/build.make test/CMakeFiles/udp_test.dir/udp_test.cpp.o
+.PHONY : udp_test.cpp.o
+
+udp_test.i: udp_test.cpp.i
+.PHONY : udp_test.i
+
+# target to preprocess a source file
+udp_test.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/udp_test.dir/build.make test/CMakeFiles/udp_test.dir/udp_test.cpp.i
+.PHONY : udp_test.cpp.i
+
+udp_test.s: udp_test.cpp.s
+.PHONY : udp_test.s
+
+# target to generate assembly for a file
+udp_test.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/udp_test.dir/build.make test/CMakeFiles/udp_test.dir/udp_test.cpp.s
+.PHONY : udp_test.cpp.s
+
+utils_test.o: utils_test.cpp.o
+.PHONY : utils_test.o
+
+# target to build an object file
+utils_test.cpp.o:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/utils_test.dir/build.make test/CMakeFiles/utils_test.dir/utils_test.cpp.o
+.PHONY : utils_test.cpp.o
+
+utils_test.i: utils_test.cpp.i
+.PHONY : utils_test.i
+
+# target to preprocess a source file
+utils_test.cpp.i:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/utils_test.dir/build.make test/CMakeFiles/utils_test.dir/utils_test.cpp.i
+.PHONY : utils_test.cpp.i
+
+utils_test.s: utils_test.cpp.s
+.PHONY : utils_test.s
+
+# target to generate assembly for a file
+utils_test.cpp.s:
+	cd /root/C++/handy_CXX_remake/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/utils_test.dir/build.make test/CMakeFiles/utils_test.dir/utils_test.cpp.s
+.PHONY : utils_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,10 +708,67 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... run_tests"
+	@echo "... codec_test"
+	@echo "... conf_test"
+	@echo "... conn_test"
+	@echo "... daemon_test"
+	@echo "... file_test"
+	@echo "... http_test"
 	@echo "... logger_test"
+	@echo "... net_test"
+	@echo "... port_posix_test"
+	@echo "... slice_test"
+	@echo "... stat-svr_test"
+	@echo "... status_test"
+	@echo "... thread_pool_test"
+	@echo "... udp_test"
+	@echo "... utils_test"
+	@echo "... codec_test.o"
+	@echo "... codec_test.i"
+	@echo "... codec_test.s"
+	@echo "... conf_test.o"
+	@echo "... conf_test.i"
+	@echo "... conf_test.s"
+	@echo "... conn_test.o"
+	@echo "... conn_test.i"
+	@echo "... conn_test.s"
+	@echo "... daemon_test.o"
+	@echo "... daemon_test.i"
+	@echo "... daemon_test.s"
+	@echo "... file_test.o"
+	@echo "... file_test.i"
+	@echo "... file_test.s"
+	@echo "... http_test.o"
+	@echo "... http_test.i"
+	@echo "... http_test.s"
 	@echo "... logger_test.o"
 	@echo "... logger_test.i"
 	@echo "... logger_test.s"
+	@echo "... net_test.o"
+	@echo "... net_test.i"
+	@echo "... net_test.s"
+	@echo "... port_posix_test.o"
+	@echo "... port_posix_test.i"
+	@echo "... port_posix_test.s"
+	@echo "... slice_test.o"
+	@echo "... slice_test.i"
+	@echo "... slice_test.s"
+	@echo "... stat-svr_test.o"
+	@echo "... stat-svr_test.i"
+	@echo "... stat-svr_test.s"
+	@echo "... status_test.o"
+	@echo "... status_test.i"
+	@echo "... status_test.s"
+	@echo "... thread_pool_test.o"
+	@echo "... thread_pool_test.i"
+	@echo "... thread_pool_test.s"
+	@echo "... udp_test.o"
+	@echo "... udp_test.i"
+	@echo "... udp_test.s"
+	@echo "... utils_test.o"
+	@echo "... utils_test.i"
+	@echo "... utils_test.s"
 .PHONY : help
 
 

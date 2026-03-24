@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/root/C++/handy_CXX_remake/test/../handy -I/root/C++/handy_CXX_remake/handy
+CXX_INCLUDES = -I/root/C++/handy_CXX_remake/handy
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS =  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 -std=gnu++17
 

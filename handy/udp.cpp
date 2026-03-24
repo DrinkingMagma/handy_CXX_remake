@@ -92,7 +92,7 @@ namespace handy
         r = ::bind(fd, reinterpret_cast<struct sockaddr*>(&sockAddr), sizeof(sockAddr));
         if(r != 0)
         {
-            ERROR("Bind to %s failed: errno=%d, msg=%s", m_addr.toString(), errno, strerror(errno));
+            ERROR("Bind to %s failed: errno=%d, msg=%s", m_addr.toString().c_str(), errno, strerror(errno));
             close(fd);
             return errno;
         }
@@ -177,7 +177,7 @@ namespace handy
     {
         if(!m_channel || m_channel->getFd() < 0)
         {
-            WARN("UdpServer send %d bytes to %s failed: channel is nullptr or channel fd < 0", len, addr.toString().c_str());
+            WARN("UdpServer send %zu bytes to %s failed: channel is nullptr or channel fd < 0", len, addr.toString().c_str());
             return;
         }
 
@@ -186,11 +186,11 @@ namespace handy
         ssize_t wn = sendto(fd, buf, len, 0, reinterpret_cast<struct sockaddr*>(&sockAddr), sizeof(sockAddr));
         if(wn < 0)
         {
-            ERROR("UdpServer(fd=%d) send %d bytes to %s failed: errno=%d, msg=%s", fd, len, addr.toString().c_str(), errno, strerror(errno));
+            ERROR("UdpServer(fd=%d) send %zu bytes to %s failed: errno=%d, msg=%s", fd, len, addr.toString().c_str(), errno, strerror(errno));
             return;
         }
 
-        TRACE("UdpServer(fd=%d) send %d bytes to %s success", fd, wn, addr.toString().c_str());
+        TRACE("UdpServer(fd=%d) send %zd bytes to %s success", fd, wn, addr.toString().c_str());
     }
 
     void UdpServer::sendTo(Buffer msg, Ipv4Addr addr)
@@ -273,13 +273,13 @@ namespace handy
             TRACE("UDP connection(fd=%d) recving...", conn->m_channel->getFd());
             if(!conn->m_channel || conn->m_channel->getFd() < 0)
             {
-                WARN("conn closing: conn->m_channel=%p, conn->m_channel->getFd()=%d", conn->m_channel, conn->m_channel->getFd());
+                WARN("conn closing: conn->m_channel=%p, conn->m_channel->getFd()=%d", (void*)conn->m_channel, conn->m_channel->getFd());
                 conn->close();
                 TRACE("conn closed");
                 return;
             }
 
-            TRACE("UDP connection(fd=%d) recving...");
+            TRACE("UDP connection(fd=%d) recving...", conn->m_channel->getFd());
 
             Buffer input;
             int fd = conn->m_channel->getFd();
@@ -330,7 +330,7 @@ namespace handy
     {
         if(!m_channel || m_channel->getFd() < 0)
         {
-            WARN("UDP connection send %d bytes to %s failed: channel is nullptr or channel fd < 0", 
+            WARN("UDP connection send %zu bytes to %s failed: channel is nullptr or channel fd < 0", 
                     len, m_peer.toString().c_str());
             return;
         }
@@ -339,12 +339,12 @@ namespace handy
         ssize_t wn = ::write(fd, buf, len);
         if(wn < 0)
         {
-            ERROR("UDP connection(fd=%d) send %d bytes to %s failed: errno=%d, msg=%s", 
+            ERROR("UDP connection(fd=%d) send %zu bytes to %s failed: errno=%d, msg=%s", 
                     fd, len, m_peer.toString().c_str(), errno, strerror(errno));
             return;
         }
 
-        TRACE("UDP connection(fd=%d) send %d bytes to %s success", fd, wn, m_peer.toString().c_str());
+        TRACE("UDP connection(fd=%d) send %zd bytes to %s success", fd, wn, m_peer.toString().c_str());
     }
 
     void UdpConn::send(Buffer msg)

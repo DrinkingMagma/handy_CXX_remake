@@ -45,7 +45,7 @@ void test_LineCodec_basic() {
     // 测试2：解码完整消息（带\r\n）
     size_t decodeLen = codec.tryDecode(Slice(buf.peek()), msg);
     bool decodeOk1 = (decodeLen == testStr.size() + 2) && (msg.toString() == testStr);
-    DEBUG("LineCodec解码测试1: 输入=%s → 解析=%s（长度=%d，%s）",
+    DEBUG("LineCodec解码测试1: 输入=%s → 解析=%s（长度=%zu，%s）",
           buf.data().c_str(), msg.toString().c_str(), decodeLen, decodeOk1 ? "通过" : "失败");
 
     // 测试3：解码带\n的消息
@@ -61,7 +61,7 @@ void test_LineCodec_basic() {
     buf.append("incomplete_message");
     decodeLen = codec.tryDecode(Slice(buf.data()), msg);
     bool decodeOk3 = (decodeLen == 0);  // 应返回0表示不完整
-    DEBUG("LineCodec解码测试3: 不完整消息 → 返回值=%d（%s）",
+    DEBUG("LineCodec解码测试3: 不完整消息 → 返回值=%zu（%s）",
           decodeLen, decodeOk3 ? "通过" : "失败");
 
     // 测试5：EOT结束符测试（0x04）
@@ -69,7 +69,7 @@ void test_LineCodec_basic() {
     buf.appendValue(static_cast<char>(0x04));  // 单独EOT
     decodeLen = codec.tryDecode(Slice(buf.data()), msg);
     bool decodeOk4 = (decodeLen == 1) && (msg.size() == 1) && (static_cast<uint8_t>(msg[0]) == 0x04);
-    DEBUG("LineCodec EOT测试: 单独EOT → 解析长度=%d（%s）",
+    DEBUG("LineCodec EOT测试: 单独EOT → 解析长度=%zu（%s）",
           decodeLen, decodeOk4 ? "通过" : "失败");
 
     // 测试6：EOT与其他数据混合（非法场景）
@@ -77,7 +77,7 @@ void test_LineCodec_basic() {
     buf.append("data").appendValue(static_cast<char>(0x04));
     decodeLen = codec.tryDecode(Slice(buf.data()), msg);
     bool decodeOk5 = (decodeLen == 0);  // 应无法解析
-    DEBUG("LineCodec非法EOT测试: EOT混合数据 → 返回值=%d（%s）",
+    DEBUG("LineCodec非法EOT测试: EOT混合数据 → 返回值=%zu（%s）",
           decodeLen, decodeOk5 ? "通过" : "失败");
 
     // 测试7：编码含\n的消息（应抛出异常）

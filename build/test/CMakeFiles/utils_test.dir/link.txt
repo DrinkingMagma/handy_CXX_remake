@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/utils_test.dir/utils_test.cpp.o -o utils_test  ../handy/libhandy.a -lpthread 

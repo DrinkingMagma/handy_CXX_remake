@@ -1,6 +1,8 @@
 handy/CMakeFiles/handy.dir/logger.cpp.o: \
  /root/C++/handy_CXX_remake/handy/logger.cpp /usr/include/stdc-predef.h \
- /root/C++/handy_CXX_remake/handy/logger.h /usr/include/c++/8/string \
+ /root/C++/handy_CXX_remake/handy/logger.h \
+ /root/C++/handy_CXX_remake/handy/non_copy_able.h \
+ /usr/include/c++/8/string \
  /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
  /usr/include/c++/8/x86_64-redhat-linux/bits/os_defines.h \
@@ -83,17 +85,17 @@ handy/CMakeFiles/handy.dir/logger.cpp.o: \
  /usr/include/bits/waitstatus.h /usr/include/sys/types.h \
  /usr/include/sys/select.h /usr/include/bits/select.h \
  /usr/include/bits/types/sigset_t.h /usr/include/bits/types/__sigset_t.h \
- /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
- /usr/include/c++/8/bits/std_abs.h /usr/include/c++/8/cstdio \
- /usr/include/stdio.h /usr/include/bits/types/__fpos_t.h \
- /usr/include/bits/types/__fpos64_t.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-bsearch.h \
+ /usr/include/bits/stdlib-float.h /usr/include/c++/8/bits/std_abs.h \
+ /usr/include/c++/8/cstdio /usr/include/stdio.h \
+ /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__fpos64_t.h \
  /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
- /usr/include/c++/8/cerrno /usr/include/errno.h /usr/include/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/asm/errno.h \
- /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- /usr/include/bits/types/error_t.h \
+ /usr/include/bits/stdio.h /usr/include/c++/8/cerrno /usr/include/errno.h \
+ /usr/include/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h /usr/include/bits/types/error_t.h \
  /usr/include/c++/8/bits/basic_string.tcc /usr/include/c++/8/mutex \
  /usr/include/c++/8/tuple /usr/include/c++/8/utility \
  /usr/include/c++/8/bits/stl_relops.h /usr/include/c++/8/array \
@@ -147,4 +149,5 @@ handy/CMakeFiles/handy.dir/logger.cpp.o: \
  /usr/include/c++/8/bits/stl_algo.h \
  /usr/include/c++/8/bits/algorithmfwd.h \
  /usr/include/c++/8/bits/stl_heap.h \
- /usr/include/c++/8/bits/uniform_int_dist.h
+ /usr/include/c++/8/bits/uniform_int_dist.h /usr/include/c++/8/cstring \
+ /usr/include/string.h /usr/include/strings.h

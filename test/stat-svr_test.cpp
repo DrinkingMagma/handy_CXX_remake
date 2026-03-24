@@ -372,7 +372,7 @@ void testStatServerThreadSafe() {
     int64_t total = g_callbackInvokeCount.load();
     int64_t expected = THREAD_NUM * REQ_PER_THREAD;
     bool test1 = (total == expected);
-    DEBUG("测试1（多线程回调计数）：%lld/%lld, %s", 
+    DEBUG("测试1（多线程回调计数）：%ld/%ld, %s", 
           total, expected, test1 ? "通过" : "失败");
 
     DEBUG("=== StatServer 线程安全测试结束 ===\n");

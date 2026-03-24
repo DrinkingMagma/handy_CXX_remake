@@ -363,7 +363,7 @@ Value4 = test_string
     int64_t total = g_threadTestCount.load();
     int64_t expected = THREAD_NUM * LOOP_NUM;
     bool threadOk = (total == expected);
-    DEBUG("线程安全测试: 总执行次数=%lld（预期: %lld，%s）", 
+    DEBUG("线程安全测试: 总执行次数=%ld（预期: %ld，%s）", 
           total, expected, threadOk ? "通过" : "失败");
 
     deleteTempIniFile(tempFile);

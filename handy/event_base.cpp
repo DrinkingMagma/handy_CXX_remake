@@ -155,7 +155,7 @@ namespace handy
                 // 非中断/阻塞错误，记录致命错误
                 else if(errno != EINTR && errno != EAGAIN)
                 {
-                    FATAL("Wakeup channel read error: r=%d, errno=%d, msg=%s",
+                    FATAL("Wakeup channel read error: r=%zd, errno=%d, msg=%s",
                         r, errno, strerror(errno));
                 }
             });
@@ -258,7 +258,7 @@ namespace handy
             idleIdPtr->m_iter->lastUpdatedTimestamp_s = Utils::timeMilli() / 1000;
             idleIdPtr->m_lst->splice(idleIdPtr->m_lst->end(), *idleIdPtr->m_lst, idleIdPtr->m_iter);
 
-            TRACE("Idle connection updated: updateTime=%lld", idleIdPtr->m_iter->lastUpdatedTimestamp_s);
+            TRACE("Idle connection updated: updateTime=%ld", idleIdPtr->m_iter->lastUpdatedTimestamp_s);
         }
 
         /**
@@ -401,7 +401,7 @@ namespace handy
                 m_timers[tr->timerIdPair] = [this, tr]() { repeatableTimeout(tr); };
                 refreshNearestTimer(&tr->timerIdPair);
 
-                TRACE("Repeatable timer registered: repTimerIdPair={%lld, %lld}, interval=%lld ms",
+                TRACE("Repeatable timer registered: repTimerIdPair={%ld, %ld}, interval=%ld ms",
                     rep.first, rep.second, interval_ms);
                 return rep;
             }
@@ -410,7 +410,7 @@ namespace handy
             m_timers.emplace(tid, std::move(task));
             refreshNearestTimer(&tid);
 
-            TRACE("One-shot timer registered: timerIdPair={%lld, %lld}",
+            TRACE("One-shot timer registered: timerIdPair={%ld, %ld}",
                 tid.first, tid.second);
             return tid;
         }
@@ -420,11 +420,11 @@ namespace handy
         */
         void loop()
         {
-            TRACE("EventBase loop started: base=%p", m_base);
+            TRACE("EventBase loop started: base=%p", (void*)m_base);
             // 每次最多等待10秒，避免永久阻塞
             while(!m_exit)
                 loopOnce(10000);
-            TRACE("EventBase loop exited: base=%p", m_base);
+            TRACE("EventBase loop exited: base=%p", (void*)m_base);
 
             // 清理资源
             m_timerReps.clear();
@@ -481,7 +481,7 @@ namespace handy
 
     EventBase::~EventBase()
     {
-        TRACE("EventBase destroying: base=%p", this);
+        TRACE("EventBase destroying: base=%p", (void*)this);
         // unique_ptr析构时会自动调用delete释放m_imp，无需手动处理
     }
 
@@ -623,21 +623,21 @@ namespace handy
         m_poller = m_base->getPoller();
         m_poller->addChannel(this);
 
-        TRACE("Channel created: id=%lld, fd=%d, events=0x%x",
+        TRACE("Channel created: id=%ld, fd=%d, events=0x%x",
             m_id, m_fd, m_events);
     }
 
     Channel::~Channel()
     {
         close();
-        TRACE("Channel destroyed: id=%lld, fd=%d", m_id, m_fd); 
+        TRACE("Channel destroyed: id=%ld, fd=%d", m_id, m_fd); 
     }
 
     void Channel::close()
     {
         if(m_fd >= 0)
         {
-            TRACE("Channel closing: id=%lld, fd=%d", m_id, m_fd);
+            TRACE("Channel closing: id=%ld, fd=%d", m_id, m_fd);
 
             // 删除Polller中的事件并关闭fd
             m_poller->removeChannel(this);
@@ -661,7 +661,7 @@ namespace handy
         else
             m_events &= ~kReadEvent;
         m_poller->updateChannel(this);
-        TRACE("Channel enableRead: id=%lld, fd=%d, events=0x%x",
+        TRACE("Channel enableRead: id=%ld, fd=%d, events=0x%x",
             m_id, m_fd, m_events);
     }
 
@@ -672,7 +672,7 @@ namespace handy
         else
             m_events &= ~kWriteEvent;
         m_poller->updateChannel(this);
-        TRACE("Channel enableWrite: id=%lld, fd=%d, events=0x%x",
+        TRACE("Channel enableWrite: id=%ld, fd=%d, events=0x%x",
             m_id, m_fd, m_events);
     }
 
@@ -735,7 +735,7 @@ namespace handy
         int64_t interval = m_reconnectInterval_ms - (now_ms - m_connectedTime_ms);
         interval = std::max(interval, 0L);
 
-        INFO("TcpConn reconnect scheduled: interval=%lld ms", interval);
+        INFO("TcpConn reconnect scheduled: interval=%ld ms", interval);
 
         // 注册重连任务
         base->runAfter(interval, [this, conn, base]() {

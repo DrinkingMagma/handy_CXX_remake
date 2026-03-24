@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/hshau_server.dir/server.cpp.o -o hshau_server  ../../handy/libhandy.a -lpthread 
