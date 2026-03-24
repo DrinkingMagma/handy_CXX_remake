@@ -1,0 +1,6 @@
+<map id="startClientWithReconnect" name="startClientWithReconnect">
+<area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#a9ef6387e0679449e2b1d0f9b550e18b5" title="创建一个客户端TCP连接 " alt="" coords="225,5,452,32"/>
+<area shape="rect" id="node3" href="$reconnect_8cpp.html#a4efc7051feb278d41877851d6015bde6" title="onClientState" alt="" coords="288,56,389,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af" title="获取缓冲区中的数据副本 " alt="" coords="273,107,405,133"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42" title="清空缓冲区，释放所有动态内存，重置所有偏移量和容量 " alt="" coords="271,157,406,184"/>
+</map>

@@ -1,0 +1,25 @@
+<map id="handy::EventBase::loop" name="handy::EventBase::loop">
+<area shape="rect" id="node2" href="$conn__test_8cpp.html#a371e35f12517fc6f6be6f7d4972bffb9" title="测试TcpConn基本连接功能 " alt="" coords="231,5,372,32"/>
+<area shape="rect" id="node5" href="$conn__test_8cpp.html#a0d646a1f1da2d69ad6e042527901294c" title="测试TcpConn的消息编解码功能 " alt="" coords="229,56,374,83"/>
+<area shape="rect" id="node6" href="$conn__test_8cpp.html#abedef015b96a88c6effd1ffa8b6a7404" title="测试TcpConn的重连功能 " alt="" coords="218,107,385,133"/>
+<area shape="rect" id="node7" href="$conn__test_8cpp.html#a45845c959d29aeb1c33704eaeb3c4006" title="测试TcpConn的多线程并发读写 " alt="" coords="215,157,388,184"/>
+<area shape="rect" id="node8" href="$conn__test_8cpp.html#af6979ffebb77fb70fc8b4b2166cf8cee" title="测试TcpConn的关闭和清理功能 " alt="" coords="231,208,372,235"/>
+<area shape="rect" id="node9" href="$conn__test_8cpp.html#a56ce041a546f210c6b43fdef9f12d04a" title="测试TcpConn的空闲回调功能 " alt="" coords="236,259,367,285"/>
+<area shape="rect" id="node10" href="$namespacehandy_1_1statSvrTest.html#afe30454626cbb9d209d3066a4e7c558e" title="模拟HTTP请求并获取响应 " alt="" coords="235,310,367,351"/>
+<area shape="rect" id="node18" href="$namespacehandy_1_1statSvrTest.html#afcccfddf3d4afd37d6ae926711894ad5" title="测试多线程安全 " alt="" coords="447,474,628,515"/>
+<area shape="rect" id="node19" href="$udp__test_8cpp.html#a1e6c44e3a2c1938e87a0fd8f863c54e2" title="test_udp_server_basic" alt="" coords="225,427,378,453"/>
+<area shape="rect" id="node22" href="$udp__test_8cpp.html#ae12e3fc59f65808ab1e017b9aee29739" title="test_udp_conn" alt="" coords="248,477,355,504"/>
+<area shape="rect" id="node23" href="$udp__test_8cpp.html#aa69b2ac648de0a269e8ed6a11a3dc0b3" title="test_hshau_server" alt="" coords="237,528,366,555"/>
+<area shape="rect" id="node24" href="$udp__test_8cpp.html#ac52a62b445e7b2af0f7110f3999e76d3" title="test_udp_thread_safe" alt="" coords="228,579,375,605"/>
+<area shape="rect" id="node3" href="$conn__test_8cpp.html#ab94405784016ea76b9f75a8ed4cd08fe" title="run_all_conn_tests" alt="" coords="472,96,603,123"/>
+<area shape="rect" id="node4" href="$conn__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="727,96,778,123"/>
+<area shape="rect" id="node11" href="$namespacehandy_1_1statSvrTest.html#a4bc63cfe9fd7b20a93899a61052da590" title="测试状态回调注册与处理 " alt="" coords="436,147,639,189"/>
+<area shape="rect" id="node14" href="$namespacehandy_1_1statSvrTest.html#a8923512cf2e34c3894bff312608462d0" title="测试页面回调注册与处理 " alt="" coords="436,213,639,254"/>
+<area shape="rect" id="node15" href="$namespacehandy_1_1statSvrTest.html#a6978e7b5a49820e29212fb51ee1ba8cc" title="测试命令回调注册与处理 " alt="" coords="437,278,637,319"/>
+<area shape="rect" id="node16" href="$namespacehandy_1_1statSvrTest.html#ae5deb8ab2c5c2449d14be92e81d6b441" title="测试404错误处理 " alt="" coords="444,343,631,385"/>
+<area shape="rect" id="node17" href="$namespacehandy_1_1statSvrTest.html#a04884af2631c5060a5a59c875c827cc4" title="测试内容类型设置 " alt="" coords="443,409,631,450"/>
+<area shape="rect" id="node12" href="$namespacehandy_1_1statSvrTest.html#a51d6168c2b8db2fabed82b2a4ebb6bf4" title="handy::statSvrTest\l::runAllTests" alt="" coords="687,311,819,353"/>
+<area shape="rect" id="node13" href="$stat-svr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="867,319,917,345"/>
+<area shape="rect" id="node20" href="$udp__test_8cpp.html#adf5fa5d1a8867dba73315c105f40b449" title="run_all_tests" alt="" coords="489,540,585,567"/>
+<area shape="rect" id="node21" href="$udp__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="727,540,778,567"/>
+</map>

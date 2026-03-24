@@ -1,3 +1,6 @@
 <map id="handy::HttpRequest::getArg" name="handy::HttpRequest::getArg">
-<area shape="rect" id="node2" href="$classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8" title="构造函数 " alt="" coords="192,5,327,47"/>
+<area shape="rect" id="node2" href="$classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8" title="构造函数 " alt="" coords="208,5,343,47"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1httpTest.html#a4150b5ab4526f3bd6df454d11062902c" title="测试 HttpRequest 解码功能 " alt="" coords="192,71,359,112"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1httpTest.html#a17f111811262f57e517dbaac08eb9206" title="handy::httpTest::runAllTests" alt="" coords="407,78,592,105"/>
+<area shape="rect" id="node5" href="$http__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="640,78,691,105"/>
 </map>

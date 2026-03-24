@@ -1,0 +1,9 @@
+<map id="handy::statSvrTest::simulateRequest" name="handy::statSvrTest::simulateRequest">
+<area shape="rect" id="node2" href="$namespacehandy_1_1statSvrTest.html#a4bc63cfe9fd7b20a93899a61052da590" title="测试状态回调注册与处理 " alt="" coords="185,5,388,47"/>
+<area shape="rect" id="node5" href="$namespacehandy_1_1statSvrTest.html#a8923512cf2e34c3894bff312608462d0" title="测试页面回调注册与处理 " alt="" coords="185,71,388,112"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1statSvrTest.html#a6978e7b5a49820e29212fb51ee1ba8cc" title="测试命令回调注册与处理 " alt="" coords="187,136,387,177"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1statSvrTest.html#ae5deb8ab2c5c2449d14be92e81d6b441" title="测试404错误处理 " alt="" coords="193,201,380,243"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1statSvrTest.html#a04884af2631c5060a5a59c875c827cc4" title="测试内容类型设置 " alt="" coords="193,267,381,308"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1statSvrTest.html#a51d6168c2b8db2fabed82b2a4ebb6bf4" title="handy::statSvrTest\l::runAllTests" alt="" coords="436,136,568,177"/>
+<area shape="rect" id="node4" href="$stat-svr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="616,143,667,170"/>
+</map>

@@ -1,6 +1,15 @@
 <map id="handy::SafeQueue::push" name="handy::SafeQueue::push">
-<area shape="rect" id="node2" href="$classhandy_1_1ThreadPool.html#aa539ee3210ff0346b8f88d705bf56f32" title="向线程池添加任务（右值引用，线程安全） " alt="" coords="220,57,359,98"/>
-<area shape="rect" id="node3" href="$classhandy_1_1HSHA.html#a45b5d0f4e3a7eac206d6a7336eef5111" title="设置消息处理的回调函数 " alt="" coords="411,5,562,32"/>
-<area shape="rect" id="node4" href="$classhandy_1_1ThreadPool.html#adc125c1df1bdcd8ffcc4162551a49be2" title="向线程池添加任务（左值引用，线程安全） " alt="" coords="417,57,556,98"/>
-<area shape="rect" id="node5" href="$classhandy_1_1HSHAU.html#a7a46b7958480b944f8ed95fbcf2df57d" title="设置消息处理回调函数 " alt="" coords="407,123,567,149"/>
+<area shape="rect" id="node2" href="$classhandy_1_1ThreadPool.html#aa539ee3210ff0346b8f88d705bf56f32" title="向线程池添加任务（右值引用，线程安全） " alt="" coords="243,207,382,249"/>
+<area shape="rect" id="node12" href="$namespacehandy_1_1threadsTest.html#afdd23b92908ad2e400d35fa48fc70779" title="测试 SafeQueue 基础功能（push/popWait/size/exit） " alt="" coords="237,410,388,451"/>
+<area shape="rect" id="node13" href="$namespacehandy_1_1threadsTest.html#a44479815d334b757460063a734ba746a" title="测试 SafeQueue 超时等待功能（popWait超时） " alt="" coords="231,475,395,517"/>
+<area shape="rect" id="node14" href="$namespacehandy_1_1threadsTest.html#ac86254c952d340971a1b0566064ef2fd" title="测试 SafeQueue 多生产者多消费者线程安全 " alt="" coords="220,541,405,582"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HSHA.html#a45b5d0f4e3a7eac206d6a7336eef5111" title="设置消息处理的回调函数 " alt="" coords="480,5,631,32"/>
+<area shape="rect" id="node4" href="$classhandy_1_1ThreadPool.html#adc125c1df1bdcd8ffcc4162551a49be2" title="向线程池添加任务（左值引用，线程安全） " alt="" coords="486,57,625,98"/>
+<area shape="rect" id="node5" href="$classhandy_1_1HSHAU.html#a7a46b7958480b944f8ed95fbcf2df57d" title="设置消息处理回调函数 " alt="" coords="475,123,635,149"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1threadsTest.html#abbd019f23df358dfd350a694bd0f8755" title="测试 ThreadPool 基础功能（构造/start/addTask/exit/join） " alt="" coords="480,174,631,215"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1threadsTest.html#a27d7989806fd80711ca64fef1a1bb772" title="测试 ThreadPool 异常处理（非法参数、状态错误） " alt="" coords="464,239,647,281"/>
+<area shape="rect" id="node10" href="$namespacehandy_1_1threadsTest.html#a9c4cfb5b26d89f823390fc8e7a6dacfc" title="测试 ThreadPool 多线程任务执行与容量控制 " alt="" coords="468,305,643,346"/>
+<area shape="rect" id="node11" href="$namespacehandy_1_1threadsTest.html#a7397324a575b5a9cfae3f63bd26a91cb" title="测试 ThreadPool 任务异常处理（任务抛出异常不影响线程池） " alt="" coords="453,370,657,411"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1threadsTest.html#af3efd1ba4edce828298b3cc7e46be9d0" title="handy::threadsTest\l::runAllTests" alt="" coords="705,370,839,411"/>
+<area shape="rect" id="node8" href="$thread__pool__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="887,377,937,404"/>
 </map>

@@ -1,0 +1,11 @@
+<map id="handy::netTest::test_ipv4addr_construct_format" name="handy::netTest::test_ipv4addr_construct_format">
+<area shape="rect" id="node2" href="$classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86" title="获取IP地址和端口的字符串表示 " alt="" coords="236,79,407,106"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Ipv4Addr.html#aeedd479d879facc608008878faa48a8b" title="检查IP地址是否有效 " alt="" coords="455,28,629,55"/>
+<area shape="rect" id="node8" href="$classhandy_1_1Ipv4Addr.html#a143d7ca4af554ed22e334bfb80d5ad02" title="获取主机字节序的端口号 " alt="" coords="248,180,395,207"/>
+<area shape="rect" id="node9" href="$classhandy_1_1Ipv4Addr.html#aa1e3e274ffd85680959b12a1ce1fdd50" title="获取纯IP地址的字符串表示 " alt="" coords="254,130,389,156"/>
+<area shape="rect" id="node10" href="$classhandy_1_1Ipv4Addr.html#a59e4db2e65a09db95cbe295fcd956a39" title="获取主机字节序的IP地址整数表示 " alt="" coords="246,28,397,55"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Net.html#ab2529e9ccaf7c82c477ba0cbc2fa6f6c" title="将网络字节序转换为主机字节序 " alt="" coords="483,130,601,156"/>
+<area shape="rect" id="node7" href="$structhandy_1_1Utils.html#ad70f51fc39095ca32dce7f045adc026b" title="格式化字符串 " alt="" coords="473,79,611,106"/>
+<area shape="rect" id="node5" href="$namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f" title="将16位无符号整数从大端字节序（网络字节序）转换为主机字节序 " alt="" coords="677,130,804,156"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30" title="将16位无符号整数从主机字节序转换为大端字节序（网络字节序） " alt="" coords="852,130,979,156"/>
+</map>

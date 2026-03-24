@@ -1,3 +1,10 @@
 <map id="handy::Status::toString" name="handy::Status::toString">
-<area shape="rect" id="node2" href="$classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99" title="注册页面文件（将文件内容作为页面响应） " alt="" coords="209,5,344,47"/>
+<area shape="rect" id="node2" href="$classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99" title="注册页面文件（将文件内容作为页面响应） " alt="" coords="209,71,344,112"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1statusTest.html#a23edcebac575d8ff54662df7155b5a8a" title="测试Status工具函数（toString等） " alt="" coords="209,136,344,177"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1statSvrTest.html#a8923512cf2e34c3894bff312608462d0" title="测试页面回调注册与处理 " alt="" coords="392,5,595,47"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1statSvrTest.html#a04884af2631c5060a5a59c875c827cc4" title="测试内容类型设置 " alt="" coords="399,71,587,112"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1statSvrTest.html#a51d6168c2b8db2fabed82b2a4ebb6bf4" title="handy::statSvrTest\l::runAllTests" alt="" coords="643,39,775,80"/>
+<area shape="rect" id="node5" href="$stat-svr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="823,46,873,73"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1statusTest.html#ad6e6436c4424c1b3e8840a9d3c0cc77f" title="handy::statusTest::\lrunAllTests" alt="" coords="426,136,561,177"/>
+<area shape="rect" id="node9" href="$status__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="683,143,734,170"/>
 </map>

@@ -1,6 +1,10 @@
 <map id="handy::Buffer::begin" name="handy::Buffer::begin">
-<area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3" title="处理写事件 " alt="" coords="192,5,393,32"/>
-<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#aa6686d5e5c585b9e566763552c07ee35" title="发送缓冲区中的数据 " alt="" coords="216,56,369,83"/>
-<area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#a876eeca51918ea71097edc1c2aab3fea" title="发送输出缓冲区中的数据 " alt="" coords="441,49,633,90"/>
-<area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#a9ff910e1037b29a941c66f3b8eefacc4" title="发送消息（通过编解码器编码后发送） " alt="" coords="681,56,860,83"/>
+<area shape="rect" id="node2" href="$HSHAU_2client_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="267,5,318,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3" title="处理写事件 " alt="" coords="192,56,393,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#aa6686d5e5c585b9e566763552c07ee35" title="发送缓冲区中的数据 " alt="" coords="216,107,369,133"/>
+<area shape="rect" id="node7" href="$classhandy_1_1HttpConnPtr.html#aa27725703eccbd49f3763e295113887d" title="记录输出日志 " alt="" coords="223,161,362,202"/>
+<area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#a876eeca51918ea71097edc1c2aab3fea" title="发送输出缓冲区中的数据 " alt="" coords="441,95,633,137"/>
+<area shape="rect" id="node6" href="$classhandy_1_1TcpConn.html#a9ff910e1037b29a941c66f3b8eefacc4" title="发送消息（通过编解码器编码后发送） " alt="" coords="681,103,860,129"/>
+<area shape="rect" id="node8" href="$classhandy_1_1HttpConnPtr.html#a918459361f721be5a159092c23d3503e" title="发送指定的请求对象 " alt="" coords="468,161,607,202"/>
+<area shape="rect" id="node9" href="$classhandy_1_1HttpConnPtr.html#ab6e45a0b670d2bd094c00d320a374ebf" title="发送指定响应的对象 " alt="" coords="468,226,607,267"/>
 </map>

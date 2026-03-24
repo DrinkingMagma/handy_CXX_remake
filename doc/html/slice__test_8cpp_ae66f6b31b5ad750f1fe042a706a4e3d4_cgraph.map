@@ -1,0 +1,36 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$namespacehandy_1_1sliceTest.html#ae747836883106b714d16ec9feb184fc1" title="handy::sliceTest::run\l_all_tests" alt="" coords="104,777,247,818"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1sliceTest.html#ab1e55c8b09e60a4716df2af902d53760" title="初始化Logger（输出到slice_test.log） " alt="" coords="295,74,462,115"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1sliceTest.html#ac6d15e591e009e0b251426d6489b84ef" title="测试 Slice 构造函数 " alt="" coords="305,809,452,850"/>
+<area shape="rect" id="node12" href="$namespacehandy_1_1sliceTest.html#a760d8cc3b6f2e4f0881add396d0981df" title="测试 Slice 基础访问接口 " alt="" coords="305,302,452,343"/>
+<area shape="rect" id="node17" href="$namespacehandy_1_1sliceTest.html#a95d95b848b37759a07a2fcdf445b4eb4" title="测试 Slice 视图修改接口 " alt="" coords="305,891,452,933"/>
+<area shape="rect" id="node27" href="$namespacehandy_1_1sliceTest.html#a7c3b841abd4233dd996ed9726027b261" title="测试 Slice 比较与转换接口 " alt="" coords="295,606,462,647"/>
+<area shape="rect" id="node32" href="$namespacehandy_1_1sliceTest.html#ad1821b6af545091279d87c2f252861fb" title="测试 Slice 异常处理 " alt="" coords="305,743,452,785"/>
+<area shape="rect" id="node33" href="$namespacehandy_1_1sliceTest.html#ae4c5cab504ae0a63d0ad6223e880a705" title="多线程测试（验证线程安全：构造/访问） " alt="" coords="305,957,452,998"/>
+<area shape="rect" id="node35" href="$namespacehandy_1_1sliceTest.html#ae56621795ae496ef7f157b693cf3e43d" title="测试结束时关闭Logger（根据实际Logger接口调整） " alt="" coords="295,1022,463,1063"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725" title="handy::Logger::getInstance" alt="" coords="524,5,704,32"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893" title="设置日志文件名称 " alt="" coords="511,56,717,83"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36" title="通过字符串形式（全小写）设置日志级别 " alt="" coords="523,107,705,133"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Logger.html#a1f5d1fab0756d1df799e204499faa012" title="获取当前时间戳（秒） " alt="" coords="765,49,939,90"/>
+<area shape="rect" id="node9" href="$classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe" title="判断视图是否为空 " alt="" coords="783,411,921,437"/>
+<area shape="rect" id="node10" href="$classhandy_1_1Slice.html#aa9c41a7c077cb18809a408d429587b3c" title="获取视图长度 " alt="" coords="789,765,915,792"/>
+<area shape="rect" id="node11" href="$classhandy_1_1Slice.html#a853af4383711ab615372f9d238255c54" title="转换为std::string " alt="" coords="541,867,687,893"/>
+<area shape="rect" id="node13" href="$classhandy_1_1Slice.html#a229c81ddfceb6b035b4e0325d8f5fac6" title="获取数据起始指针（非空） " alt="" coords="551,259,677,285"/>
+<area shape="rect" id="node14" href="$classhandy_1_1Slice.html#abd00e36492afd0d0e68627268611166a" title="获取起始迭代器（兼容STL算法） " alt="" coords="547,309,681,336"/>
+<area shape="rect" id="node15" href="$classhandy_1_1Slice.html#a7811489eb8eac078321021c057e22a9d" title="获取第一个字符 " alt="" coords="550,411,678,437"/>
+<area shape="rect" id="node16" href="$classhandy_1_1Slice.html#ae986157a157ad8d957e2a6e8cab587b2" title="获取最后一个字符 " alt="" coords="549,208,679,235"/>
+<area shape="rect" id="node18" href="$classhandy_1_1Slice.html#a648c2ad74f8993e59113bd8987b1d569" title="调整视图长度（仅允许缩小，避免越界） " alt="" coords="545,765,683,792"/>
+<area shape="rect" id="node19" href="$classhandy_1_1Slice.html#a7f14d97101d460d6cd92b35c24c466c0" title="清空视图（重置为空视图） " alt="" coords="549,1069,679,1096"/>
+<area shape="rect" id="node20" href="$classhandy_1_1Slice.html#a8859befd2f54816c2f1a38b5c095b49c" title="吞噬前sz个字符（从视图中移除并返回） " alt="" coords="554,917,674,944"/>
+<area shape="rect" id="node21" href="$classhandy_1_1Slice.html#a0570587beb57c84ab21c74015c299443" title="吞噬一个单词（跳过前导空白，直到下一个空白) " alt="" coords="539,1120,689,1147"/>
+<area shape="rect" id="node23" href="$classhandy_1_1Slice.html#a8d8fabf867b1d5c94f33dd1d1481da7f" title="吞噬一行（直到 或 ，兼容 Windows/Linux 换行） " alt="" coords="542,1171,686,1197"/>
+<area shape="rect" id="node25" href="$classhandy_1_1Slice.html#a026c61a30fbf8675933fb9a6bfb56530" title="获取子视图（支持负偏移） " alt="" coords="553,1019,675,1045"/>
+<area shape="rect" id="node26" href="$classhandy_1_1Slice.html#a9942173fc598137ca9d959ed8cb39fe7" title="移除前后空白字符（修改当前视图） " alt="" coords="533,968,695,995"/>
+<area shape="rect" id="node22" href="$classhandy_1_1Slice.html#aa8b651518d868af04c7f053f1783b9c7" title="默认构造：空视图 " alt="" coords="787,1120,917,1147"/>
+<area shape="rect" id="node24" href="$classhandy_1_1Slice.html#aade2a2a717f5fdb7ba9fcb36679fa837" title="获取结束迭代器（兼容STL算法） " alt="" coords="791,1171,913,1197"/>
+<area shape="rect" id="node28" href="$classhandy_1_1Slice.html#ac07aa3819e66893480287ad790a27d0d" title="三段式比较（兼容排序） " alt="" coords="538,512,690,539"/>
+<area shape="rect" id="node29" href="$classhandy_1_1Slice.html#a6c5dab311605872e81871847eb01d504" title="判断是否以指定前缀开头 " alt="" coords="533,613,695,640"/>
+<area shape="rect" id="node30" href="$classhandy_1_1Slice.html#ab8b42b1c4e4fa5a7ae0030fb54109bad" title="判断是否以指定后缀结尾 " alt="" coords="535,715,693,741"/>
+<area shape="rect" id="node31" href="$classhandy_1_1Slice.html#afd158342d935780c8efc5afee65665e0" title="按指定字符分割视图 " alt="" coords="551,461,677,488"/>
+<area shape="rect" id="node34" href="$slice__test_8cpp.html#a5009e4fd964ad1720323558686a4c1fa" title="g_sliceThreadTestCount" alt="" coords="533,1221,695,1248"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725" title="handy::Logger::getInstance" alt="" coords="105,5,285,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36" title="通过字符串形式（全小写）设置日志级别 " alt="" coords="104,56,287,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Logger.html#a19a54d9a8c6c8cc4bb72c10958956b75" title="设置日志文件大小限制（MB） " alt="" coords="107,107,283,149"/>
+</map>

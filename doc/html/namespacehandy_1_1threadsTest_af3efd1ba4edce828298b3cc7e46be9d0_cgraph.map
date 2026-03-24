@@ -1,0 +1,35 @@
+<map id="handy::threadsTest::runAllTests" name="handy::threadsTest::runAllTests">
+<area shape="rect" id="node2" href="$namespacehandy_1_1threadsTest.html#ad308256f592d38713db18f78043f8f03" title="初始化测试日志（输出到threads_test.log） " alt="" coords="222,74,355,115"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1threadsTest.html#afdd23b92908ad2e400d35fa48fc70779" title="测试 SafeQueue 基础功能（push/popWait/size/exit） " alt="" coords="213,559,364,601"/>
+<area shape="rect" id="node19" href="$namespacehandy_1_1threadsTest.html#a44479815d334b757460063a734ba746a" title="测试 SafeQueue 超时等待功能（popWait超时） " alt="" coords="207,770,371,811"/>
+<area shape="rect" id="node20" href="$namespacehandy_1_1threadsTest.html#ac86254c952d340971a1b0566064ef2fd" title="测试 SafeQueue 多生产者多消费者线程安全 " alt="" coords="196,331,381,373"/>
+<area shape="rect" id="node21" href="$namespacehandy_1_1threadsTest.html#abbd019f23df358dfd350a694bd0f8755" title="测试 ThreadPool 基础功能（构造/start/addTask/exit/join） " alt="" coords="213,1081,364,1122"/>
+<area shape="rect" id="node29" href="$namespacehandy_1_1threadsTest.html#a27d7989806fd80711ca64fef1a1bb772" title="测试 ThreadPool 异常处理（非法参数、状态错误） " alt="" coords="197,950,380,991"/>
+<area shape="rect" id="node30" href="$namespacehandy_1_1threadsTest.html#a9c4cfb5b26d89f823390fc8e7a6dacfc" title="测试 ThreadPool 多线程任务执行与容量控制 " alt="" coords="201,1015,376,1057"/>
+<area shape="rect" id="node33" href="$namespacehandy_1_1threadsTest.html#a7397324a575b5a9cfae3f63bd26a91cb" title="测试 ThreadPool 任务异常处理（任务抛出异常不影响线程池） " alt="" coords="187,885,391,926"/>
+<area shape="rect" id="node34" href="$namespacehandy_1_1threadsTest.html#aeffbbb11619689b9511e546ab5ae390d" title="测试结束清理日志 " alt="" coords="220,1146,357,1187"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725" title="handy::Logger::getInstance" alt="" coords="452,56,632,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893" title="设置日志文件名称 " alt="" coords="439,107,645,133"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36" title="通过字符串形式（全小写）设置日志级别 " alt="" coords="451,5,633,32"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Logger.html#a1f5d1fab0756d1df799e204499faa012" title="获取当前时间戳（秒） " alt="" coords="693,95,867,137"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1threadsTest.html#a8a3baaea2f6eebd2a77562c3c50e7022" title="重置全局测试变量（避免测试间干扰） " alt="" coords="475,770,609,811"/>
+<area shape="rect" id="node9" href="$thread__pool__test_8cpp.html#af20fc77e12bba9b5bba24850f1472099" title="g_taskExecCount" alt="" coords="717,929,843,956"/>
+<area shape="rect" id="node13" href="$classhandy_1_1SafeQueue.html#acb896f0aca5b54570157b4a9528ec529" title="向队列尾部添加元素(线程安全) " alt="" coords="697,516,863,543"/>
+<area shape="rect" id="node14" href="$namespacehandy_1_1threadsTest.html#a31b1a09b21d1a397bbed227758c88465" title="测试用基础任务（原子计数+状态标记） " alt="" coords="475,887,609,929"/>
+<area shape="rect" id="node15" href="$classhandy_1_1SafeQueue.html#af07406186104294fc562099a1f323c71" title="获取当前队列中的元素数量(线程安全) " alt="" coords="699,879,861,905"/>
+<area shape="rect" id="node16" href="$classhandy_1_1SafeQueue.html#aef745af0cbdac7e9e8f2366a5db8f40d" title="从队列头部取出元素(支持超时等待,线程安全) " alt="" coords="915,440,1101,467"/>
+<area shape="rect" id="node17" href="$classhandy_1_1SafeQueue.html#a7602d1d067c8b146ba6b4e7cbad335a0" title="通知队列优雅退出(线程安全) " alt="" coords="701,828,859,855"/>
+<area shape="rect" id="node18" href="$classhandy_1_1SafeQueue.html#a3181499b61b4fdd19223c893c8c25e57" title="查询队列是否已退出(线程安全) " alt="" coords="449,465,635,492"/>
+<area shape="rect" id="node10" href="$thread__pool__test_8cpp.html#aa697aa5d2577edd72b873af09a835f5d" title="g_taskFlag" alt="" coords="737,777,823,804"/>
+<area shape="rect" id="node11" href="$thread__pool__test_8cpp.html#a2b3fdaf9fe8e47838b760125fb141dd8" title="g_multiProducerCount" alt="" coords="705,263,855,289"/>
+<area shape="rect" id="node12" href="$thread__pool__test_8cpp.html#a8b38c9b516bd6453ac1dc73bfa316196" title="g_multiConsumerCount" alt="" coords="701,389,859,416"/>
+<area shape="rect" id="node22" href="$classhandy_1_1ThreadPool.html#aaa3d53b0362ab14ebd76e4b220fa2cfb" title="查询线程池是否已启动（线程安全） " alt="" coords="473,1434,611,1475"/>
+<area shape="rect" id="node23" href="$classhandy_1_1ThreadPool.html#afa85eb43f1e6d4972f4fa55fe6fc8067" title="查询线程池是否已退出（线程安全） " alt="" coords="473,1369,611,1410"/>
+<area shape="rect" id="node24" href="$classhandy_1_1ThreadPool.html#aa539ee3210ff0346b8f88d705bf56f32" title="向线程池添加任务（右值引用，线程安全） " alt="" coords="473,953,611,994"/>
+<area shape="rect" id="node25" href="$classhandy_1_1ThreadPool.html#a645707a5d4a6d126b5c3427b1ec39124" title="通知线程池优雅退出（线程安全） " alt="" coords="462,1019,622,1045"/>
+<area shape="rect" id="node26" href="$classhandy_1_1ThreadPool.html#aa12157caf7e934a8f56c6f9ce79af4b1" title="等待所有线程退出（阻塞当前线程） " alt="" coords="463,1136,621,1163"/>
+<area shape="rect" id="node27" href="$classhandy_1_1ThreadPool.html#a74e85ff1e6605531acdd8e0e3cf903df" title="启动线程池（线程安全） " alt="" coords="473,1303,611,1345"/>
+<area shape="rect" id="node28" href="$classhandy_1_1ThreadPool.html#af16863e56e3df5e49bc00cebb08ae5a4" title="线程工作循环（每个线程的入口函数，仅内部调用） " alt="" coords="711,1142,849,1183"/>
+<area shape="rect" id="node31" href="$namespacehandy_1_1threadsTest.html#ad321c9b293454f86d26fe9a42a9e4275" title="测试用带参数任务（通过lambda捕获传递参数） " alt="" coords="475,1238,609,1279"/>
+<area shape="rect" id="node32" href="$classhandy_1_1ThreadPool.html#a9184b6409d22e2d2110d9666a4506526" title="获取当前等待执行的任务数量（线程安全） " alt="" coords="469,1070,615,1111"/>
+</map>

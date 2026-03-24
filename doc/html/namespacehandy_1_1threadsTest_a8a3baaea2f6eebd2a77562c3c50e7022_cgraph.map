@@ -1,0 +1,6 @@
+<map id="handy::threadsTest::resetGlobalVars" name="handy::threadsTest::resetGlobalVars">
+<area shape="rect" id="node2" href="$thread__pool__test_8cpp.html#af20fc77e12bba9b5bba24850f1472099" title="g_taskExecCount" alt="" coords="203,5,329,32"/>
+<area shape="rect" id="node3" href="$thread__pool__test_8cpp.html#aa697aa5d2577edd72b873af09a835f5d" title="g_taskFlag" alt="" coords="223,56,309,83"/>
+<area shape="rect" id="node4" href="$thread__pool__test_8cpp.html#a2b3fdaf9fe8e47838b760125fb141dd8" title="g_multiProducerCount" alt="" coords="191,107,341,133"/>
+<area shape="rect" id="node5" href="$thread__pool__test_8cpp.html#a8b38c9b516bd6453ac1dc73bfa316196" title="g_multiConsumerCount" alt="" coords="187,157,345,184"/>
+</map>

@@ -1,3 +1,10 @@
 <map id="handy::Daemon::restart" name="handy::Daemon::restart">
-<area shape="rect" id="node2" href="$classhandy_1_1Daemon.html#a301dc0a520e61a5f46ecd2ffb7d3d91f" title="根据命令执行守护进程的对应操作 " alt="" coords="212,5,380,32"/>
+<area shape="rect" id="node2" href="$classhandy_1_1Daemon.html#a301dc0a520e61a5f46ecd2ffb7d3d91f" title="根据命令执行守护进程的对应操作 " alt="" coords="212,143,380,170"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1daemonTest.html#a0266777c48e18959ce473a9a709adde4" title="测试守护进程启动功能 " alt="" coords="428,5,571,47"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1daemonTest.html#ae551c1f6eab5d03401603b59d438c91c" title="测试守护进程停止功能 " alt="" coords="428,71,571,112"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1daemonTest.html#a8ed22b6ff90fa489907c6e8a243e0455" title="测试守护进程重启功能 " alt="" coords="428,136,571,177"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1daemonTest.html#aac71125095105a4da1be35092dd36de2" title="测试信号处理功能 " alt="" coords="428,201,571,243"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1daemonTest.html#afbe93ed780319eeebf5694e287f8e4f0" title="测试重复启动防护功能 " alt="" coords="428,267,571,308"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1daemonTest.html#a3e3f87bb96ea98e28e0f7f909e90e16a" title="handy::daemonTest::\lrun_all_tests" alt="" coords="619,136,761,177"/>
+<area shape="rect" id="node5" href="$daemon__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="809,143,860,170"/>
 </map>

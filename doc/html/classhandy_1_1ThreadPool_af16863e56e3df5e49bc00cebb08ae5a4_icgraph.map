@@ -1,4 +1,8 @@
 <map id="handy::ThreadPool::workerLoop" name="handy::ThreadPool::workerLoop">
-<area shape="rect" id="node2" href="$classhandy_1_1ThreadPool.html#a74e85ff1e6605531acdd8e0e3cf903df" title="启动线程池（线程安全） " alt="" coords="192,5,331,47"/>
-<area shape="rect" id="node3" href="$classhandy_1_1ThreadPool.html#a60492a85af81120d1d8d03e3a41d2ffe" title="构造函数(初始化线程池参数) " alt="" coords="379,5,517,47"/>
+<area shape="rect" id="node2" href="$classhandy_1_1ThreadPool.html#a74e85ff1e6605531acdd8e0e3cf903df" title="启动线程池（线程安全） " alt="" coords="192,71,331,112"/>
+<area shape="rect" id="node3" href="$classhandy_1_1ThreadPool.html#a60492a85af81120d1d8d03e3a41d2ffe" title="构造函数(初始化线程池参数) " alt="" coords="401,5,539,47"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1threadsTest.html#abbd019f23df358dfd350a694bd0f8755" title="测试 ThreadPool 基础功能（构造/start/addTask/exit/join） " alt="" coords="395,71,545,112"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1threadsTest.html#a27d7989806fd80711ca64fef1a1bb772" title="测试 ThreadPool 异常处理（非法参数、状态错误） " alt="" coords="379,136,561,177"/>
+<area shape="rect" id="node5" href="$namespacehandy_1_1threadsTest.html#af3efd1ba4edce828298b3cc7e46be9d0" title="handy::threadsTest\l::runAllTests" alt="" coords="609,104,743,145"/>
+<area shape="rect" id="node6" href="$thread__pool__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="791,111,841,138"/>
 </map>

@@ -9,6 +9,7 @@ var logger_8h =
     [ "FATAL_IF", "logger_8h.html#aaad6a85aecfc4d2bc60259e986af4581", null ],
     [ "HLOG", "logger_8h.html#aade7269bb68eed682e7094993c435d4b", null ],
     [ "INFO", "logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6", null ],
+    [ "LOG_FORMAT_ATTR", "logger_8h.html#abd6f6f002757341413607c55e93f75e8", null ],
     [ "SET_LOG_FILE", "logger_8h.html#ae920f7f94cd053df1aadfc2bcb40b0a2", null ],
     [ "SET_LOG_LEVEL", "logger_8h.html#a3b2f5c234822e4ed18847adc529a6853", null ],
     [ "TRACE", "logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a", null ],

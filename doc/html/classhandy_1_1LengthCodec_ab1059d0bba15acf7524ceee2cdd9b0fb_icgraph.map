@@ -1,3 +1,6 @@
 <map id="handy::LengthCodec::LengthCodec" name="handy::LengthCodec::LengthCodec">
 <area shape="rect" id="node2" href="$classhandy_1_1LengthCodec.html#aa3ccbe69cf3cbf27468eb5929cf507ab" title="克隆编解码器（多态拷贝，用于线程独立实例） " alt="" coords="196,5,339,47"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1codecTest.html#a7a39269a9beac5a38c7bb63789f0af62" title="测试CodecBase的clone()方法（多态拷贝） " alt="" coords="387,5,541,47"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1codecTest.html#af92da63a32dc8f9c41bcccf6501d1b83" title="handy::codecTest::run\l_all_tests" alt="" coords="589,5,740,47"/>
+<area shape="rect" id="node5" href="$codec__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="788,13,839,39"/>
 </map>

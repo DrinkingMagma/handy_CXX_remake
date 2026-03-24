@@ -1,0 +1,5 @@
+<map id="handy::statusTest::testCopyAndMove" name="handy::statusTest::testCopyAndMove">
+<area shape="rect" id="node2" href="$classhandy_1_1Status.html#abac5c65c266afdd5d0da7b1194c49e52" title="获取状态码 " alt="" coords="372,22,511,49"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Status.html#a357d7e675bc0f19620f70a2e15b41e2a" title="获取错误信息字符串 " alt="" coords="188,22,324,49"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Status.html#a2054a08a6b1608df26b630f6bc27f9b8" title="检查操作是否成功 " alt="" coords="193,73,319,100"/>
+</map>

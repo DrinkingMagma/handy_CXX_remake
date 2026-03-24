@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: test/udp_test.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('udp__test_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">udp_test.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="udp__test_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// udp_test.cpp</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="udp_8h.html">udp.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="event__base_8h.html">event_base.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="logger_8h.html">logger.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;signal.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span>handy;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// 测试用全局变量</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;std::atomic&lt;int&gt; <a class="code" href="udp__test_8cpp.html#a31aa4bced138c03d6017fff0c9e3a629">g_udpTestCount</a>(0);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;std::atomic&lt;bool&gt; <a class="code" href="udp__test_8cpp.html#a91676bed2845c91bd82df40e0f2a3136">g_serverReady</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;std::atomic&lt;bool&gt; <a class="code" href="udp__test_8cpp.html#a6faa20b81b07b63073ebc06aefe0d63c">g_msgReceived</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="udp__test_8cpp.html#a332cec8c25f713e81adbfcca4d2592b1">   22</a></span>&#160;std::string <a class="code" href="udp__test_8cpp.html#a332cec8c25f713e81adbfcca4d2592b1">g_testMsg</a> = <span class="stringliteral">&quot;Hello UDP Test&quot;</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="udp__test_8cpp.html#af79430c9ef5ad10775a7f561a4e9e814">   23</a></span>&#160;std::string <a class="code" href="udp__test_8cpp.html#af79430c9ef5ad10775a7f561a4e9e814">g_testResponse</a> = <span class="stringliteral">&quot;Received: Hello UDP Test&quot;</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// 测试辅助函数</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="udp__test_8cpp.html#a248c7a1668b0649feca050aca6f26e1f">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="udp__test_8cpp.html#a248c7a1668b0649feca050aca6f26e1f">initTestLogger</a>() {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">Logger::getInstance</a>().<a class="code" href="classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893">setLogFileName</a>(<span class="stringliteral">&quot;udp_test.log&quot;</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">Logger::getInstance</a>().<a class="code" href="classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36">setLogLevel</a>(Logger::LogLevel::LALL);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;=== udp_test 测试开始 ===&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="udp__test_8cpp.html#ab4ddc58834ee35d4f999a35869b7bb62">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="udp__test_8cpp.html#ab4ddc58834ee35d4f999a35869b7bb62">destroyTestLogger</a>() {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;=== udp_test 测试结束 ===&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// 测试UdpServer基础功能</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="udp__test_8cpp.html#a1e6c44e3a2c1938e87a0fd8f863c54e2">   37</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="udp__test_8cpp.html#a1e6c44e3a2c1938e87a0fd8f863c54e2">test_udp_server_basic</a>() {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 开始测试 UdpServer 基础功能 ===&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classhandy_1_1EventBase.html">EventBase</a>* base = <span class="keyword">new</span> <a class="code" href="classhandy_1_1EventBase.html">EventBase</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> testOk = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// 启动服务器</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">auto</span> server = <a class="code" href="classhandy_1_1UdpServer.html#a67fc24c72f8cec3c2a842e99f74c2e30">UdpServer::startServer</a>(base, <span class="stringliteral">&quot;127.0.0.1&quot;</span>, 12345);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (!server) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;UdpServer 启动失败&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;UdpServer 启动成功&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="udp__test_8cpp.html#a91676bed2845c91bd82df40e0f2a3136">g_serverReady</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// 设置消息处理回调</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    server-&gt;onMsg([&amp;](<span class="keyword">const</span> <a class="code" href="classhandy_1_1UdpServer.html#a55016d1b3d3342f98bcb4239549687b7">UdpServer::Ptr</a>&amp; srv, <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> buf, <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> peer) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        std::string recvMsg(buf.<a class="code" href="classhandy_1_1Buffer.html#aceb300c5e30fad7a6062b97f48a2c111">peek</a>(), buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>());</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;服务器收到消息: %s 来自 %s&quot;</span>, recvMsg.c_str(), peer.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str());</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (recvMsg == <a class="code" href="udp__test_8cpp.html#a332cec8c25f713e81adbfcca4d2592b1">g_testMsg</a>) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            srv-&gt;sendTo(<a class="code" href="udp__test_8cpp.html#af79430c9ef5ad10775a7f561a4e9e814">g_testResponse</a>, peer);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            testOk = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    });</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// 启动客户端发送消息</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    std::thread client([&amp;]() {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// 等待服务器准备就绪</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">while</span> (!<a class="code" href="udp__test_8cpp.html#a91676bed2845c91bd82df40e0f2a3136">g_serverReady</a>) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            std::this_thread::sleep_for(std::chrono::milliseconds(10));</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classhandy_1_1EventBase.html">EventBase</a> clientBase;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">auto</span> conn = <a class="code" href="classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd">UdpConn::createConnection</a>(&amp;clientBase, <span class="stringliteral">&quot;127.0.0.1&quot;</span>, 12345);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span> (!conn) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;UdpConn 创建失败&quot;</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;UdpConn 创建成功&quot;</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        conn-&gt;onMsg([&amp;](<span class="keyword">const</span> <a class="code" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">UdpConn::Ptr</a>&amp;, <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> buf) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            std::string resp(buf.<a class="code" href="classhandy_1_1Buffer.html#aceb300c5e30fad7a6062b97f48a2c111">peek</a>(), buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>());</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;客户端收到响应: %s&quot;</span>, resp.c_str());</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">if</span> (resp == <a class="code" href="udp__test_8cpp.html#af79430c9ef5ad10775a7f561a4e9e814">g_testResponse</a>) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <a class="code" href="udp__test_8cpp.html#a6faa20b81b07b63073ebc06aefe0d63c">g_msgReceived</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                clientBase.<a class="code" href="classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f">exit</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;resp(%s) != g_testResponse(%s)&quot;</span>, resp.c_str(), <a class="code" href="udp__test_8cpp.html#af79430c9ef5ad10775a7f561a4e9e814">g_testResponse</a>.c_str());</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        });</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        conn-&gt;send(<a class="code" href="udp__test_8cpp.html#a332cec8c25f713e81adbfcca4d2592b1">g_testMsg</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;Ready to loop&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        clientBase.<a class="code" href="classhandy_1_1EventBase.html#ae2ab677b735668355724861f4264d3b6">loop</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        sleep(2);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;Client base exiting&quot;</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    });</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="udp__test_8cpp.html#a91676bed2845c91bd82df40e0f2a3136">g_serverReady</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// 运行事件循环一段时间</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;Server eventbase exiting&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    base-&gt;<a class="code" href="classhandy_1_1EventBase.html#a46364e14e3307741148d587791971d7e">runAfter</a>(2000, [base]() { base-&gt;<a class="code" href="classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f">exit</a>(); });</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    base-&gt;<a class="code" href="classhandy_1_1EventBase.html#ae2ab677b735668355724861f4264d3b6">loop</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;Server eventbase exited&quot;</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    client.join();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;测试1（服务器客户端通信）：%s&quot;</span>, (testOk &amp;&amp; <a class="code" href="udp__test_8cpp.html#a6faa20b81b07b63073ebc06aefe0d63c">g_msgReceived</a>) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== UdpServer 基础功能测试结束 ===\n&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">// 测试UdpConn功能</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="udp__test_8cpp.html#ae12e3fc59f65808ab1e017b9aee29739">  111</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="udp__test_8cpp.html#ae12e3fc59f65808ab1e017b9aee29739">test_udp_conn</a>() {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 开始测试 UdpConn 功能 ===&quot;</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="classhandy_1_1EventBase.html">EventBase</a> base;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">bool</span> testOk = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">// 启动服务器</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">auto</span> server = <a class="code" href="classhandy_1_1UdpServer.html#a67fc24c72f8cec3c2a842e99f74c2e30">UdpServer::startServer</a>(&amp;base, <span class="stringliteral">&quot;127.0.0.1&quot;</span>, 12346);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">if</span> (!server) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;UdpServer 启动失败&quot;</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    server-&gt;onMsg([&amp;](<span class="keyword">const</span> <a class="code" href="classhandy_1_1UdpServer.html#a55016d1b3d3342f98bcb4239549687b7">UdpServer::Ptr</a>&amp; srv, <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> buf, <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> peer) {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        std::string msg(buf.<a class="code" href="classhandy_1_1Buffer.html#aceb300c5e30fad7a6062b97f48a2c111">peek</a>(), buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>());</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;服务器收到消息: %s&quot;</span>, msg.c_str());</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        srv-&gt;sendTo(msg, peer); <span class="comment">// 回声服务</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    });</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">// 创建客户端连接</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">auto</span> conn = <a class="code" href="classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd">UdpConn::createConnection</a>(&amp;base, <span class="stringliteral">&quot;127.0.0.1&quot;</span>, 12346);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> (!conn) {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;UdpConn 创建失败&quot;</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    conn-&gt;onMsg([&amp;](<span class="keyword">const</span> <a class="code" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">UdpConn::Ptr</a>&amp;, <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> buf) {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        std::string resp(buf.<a class="code" href="classhandy_1_1Buffer.html#aceb300c5e30fad7a6062b97f48a2c111">peek</a>(), buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>());</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;客户端收到回声: %s&quot;</span>, resp.c_str());</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">if</span> (resp == <a class="code" href="udp__test_8cpp.html#a332cec8c25f713e81adbfcca4d2592b1">g_testMsg</a>) {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            testOk = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            base.<a class="code" href="classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f">exit</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    });</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="comment">// 发送测试消息</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    conn-&gt;send(<a class="code" href="udp__test_8cpp.html#a332cec8c25f713e81adbfcca4d2592b1">g_testMsg</a>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    base.<a class="code" href="classhandy_1_1EventBase.html#a46364e14e3307741148d587791971d7e">runAfter</a>(1000, [&amp;]() { base.<a class="code" href="classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f">exit</a>(); }); <span class="comment">// 超时退出</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    base.<a class="code" href="classhandy_1_1EventBase.html#ae2ab677b735668355724861f4264d3b6">loop</a>();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;测试1（连接回声）：%s&quot;</span>, testOk ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== UdpConn 功能测试结束 ===\n&quot;</span>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">// 测试HSHAU半同步半异步服务器</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="udp__test_8cpp.html#aa69b2ac648de0a269e8ed6a11a3dc0b3">  156</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="udp__test_8cpp.html#aa69b2ac648de0a269e8ed6a11a3dc0b3">test_hshau_server</a>() {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 开始测试 HSHAU 服务器 ===&quot;</span>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="classhandy_1_1EventBase.html">EventBase</a> base;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">bool</span> testOk = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="comment">// 启动HSHAU服务器</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">auto</span> hshau = <a class="code" href="classhandy_1_1HSHAU.html#a2e1fd5b7fc4d5d17dbd2b084e0e6a017">HSHAU::startServer</a>(&amp;base, <span class="stringliteral">&quot;127.0.0.1&quot;</span>, 12347, 4);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">if</span> (!hshau) {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;HSHAU 启动失败&quot;</span>);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="comment">// 设置消息处理回调</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    hshau-&gt;onMsg([](<span class="keyword">const</span> <a class="code" href="classhandy_1_1UdpServer.html#a55016d1b3d3342f98bcb4239549687b7">UdpServer::Ptr</a>&amp;, <span class="keyword">const</span> std::string&amp; input, <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>) {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;HSHAU处理消息: %s&quot;</span>, input.c_str());</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;HSHAU: &quot;</span> + input;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    });</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">// 启动客户端</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    std::thread client([&amp;]() {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <a class="code" href="classhandy_1_1EventBase.html">EventBase</a> clientBase;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">auto</span> conn = <a class="code" href="classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd">UdpConn::createConnection</a>(&amp;clientBase, <span class="stringliteral">&quot;127.0.0.1&quot;</span>, 12347);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">if</span> (!conn) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;客户端连接创建失败&quot;</span>);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        conn-&gt;onMsg([&amp;](<span class="keyword">const</span> <a class="code" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">UdpConn::Ptr</a>&amp;, <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> buf) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            std::string resp(buf.<a class="code" href="classhandy_1_1Buffer.html#aceb300c5e30fad7a6062b97f48a2c111">peek</a>(), buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>());</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;HSHAU客户端收到: %s&quot;</span>, resp.c_str());</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">if</span> (resp == <span class="stringliteral">&quot;HSHAU: &quot;</span> + <a class="code" href="udp__test_8cpp.html#a332cec8c25f713e81adbfcca4d2592b1">g_testMsg</a>) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                testOk = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                clientBase.<a class="code" href="classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f">exit</a>();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        });</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        conn-&gt;send(<a class="code" href="udp__test_8cpp.html#a332cec8c25f713e81adbfcca4d2592b1">g_testMsg</a>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        clientBase.<a class="code" href="classhandy_1_1EventBase.html#a46364e14e3307741148d587791971d7e">runAfter</a>(1000, [&amp;]() { clientBase.<a class="code" href="classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f">exit</a>(); });</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        clientBase.<a class="code" href="classhandy_1_1EventBase.html#ae2ab677b735668355724861f4264d3b6">loop</a>();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    });</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    base.<a class="code" href="classhandy_1_1EventBase.html#a46364e14e3307741148d587791971d7e">runAfter</a>(1000, [&amp;]() { base.<a class="code" href="classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f">exit</a>(); });</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    base.<a class="code" href="classhandy_1_1EventBase.html#ae2ab677b735668355724861f4264d3b6">loop</a>();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    client.join();</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;测试1（HSHAU通信）：%s&quot;</span>, testOk ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== HSHAU 服务器测试结束 ===\n&quot;</span>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment">// 测试多线程并发访问</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="udp__test_8cpp.html#ac52a62b445e7b2af0f7110f3999e76d3">  207</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="udp__test_8cpp.html#ac52a62b445e7b2af0f7110f3999e76d3">test_udp_thread_safe</a>() {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 开始测试 UDP 线程安全 ===&quot;</span>);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> THREAD_NUM = 5;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> MSG_PER_THREAD = 20;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <a class="code" href="classhandy_1_1EventBase.html">EventBase</a>* base = <span class="keyword">new</span> <a class="code" href="classhandy_1_1EventBase.html">EventBase</a>();</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    std::atomic&lt;int&gt; msgCount(0);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="comment">// 启动服务器</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keyword">auto</span> server = <a class="code" href="classhandy_1_1UdpServer.html#a67fc24c72f8cec3c2a842e99f74c2e30">UdpServer::startServer</a>(base, <span class="stringliteral">&quot;127.0.0.1&quot;</span>, 12348);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">if</span> (!server) {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;UdpServer 启动失败&quot;</span>);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    server-&gt;onMsg([&amp;](<span class="keyword">const</span> <a class="code" href="classhandy_1_1UdpServer.html#a55016d1b3d3342f98bcb4239549687b7">UdpServer::Ptr</a>&amp; srv, <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> buf, <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> peer) {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        msgCount++;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        srv-&gt;sendTo(<span class="stringliteral">&quot;ACK&quot;</span>, peer);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    });</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="comment">// 启动多个客户端线程</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keyword">auto</span> clientFunc = [&amp;]() {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <a class="code" href="classhandy_1_1EventBase.html">EventBase</a> clientBase;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keyword">auto</span> conn = <a class="code" href="classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd">UdpConn::createConnection</a>(&amp;clientBase, <span class="stringliteral">&quot;127.0.0.1&quot;</span>, 12348);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">if</span> (!conn) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordtype">int</span> ackCount = 0;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        conn-&gt;onMsg([&amp;](<span class="keyword">const</span> <a class="code" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">UdpConn::Ptr</a>&amp;, <a class="code" href="classhandy_1_1Buffer.html">Buffer</a>) {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <span class="keywordflow">if</span> (++ackCount &gt;= MSG_PER_THREAD) {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                clientBase.<a class="code" href="classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f">exit</a>();</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        });</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; MSG_PER_THREAD; ++i) {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            conn-&gt;send(<a class="code" href="udp__test_8cpp.html#a332cec8c25f713e81adbfcca4d2592b1">g_testMsg</a> + std::to_string(i));</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            std::this_thread::sleep_for(std::chrono::microseconds(100));</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        clientBase.<a class="code" href="classhandy_1_1EventBase.html#a46364e14e3307741148d587791971d7e">runAfter</a>(1000, [&amp;]() { clientBase.<a class="code" href="classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f">exit</a>(); });</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        clientBase.<a class="code" href="classhandy_1_1EventBase.html#ae2ab677b735668355724861f4264d3b6">loop</a>();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <a class="code" href="udp__test_8cpp.html#a31aa4bced138c03d6017fff0c9e3a629">g_udpTestCount</a> += ackCount;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    };</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    std::vector&lt;std::thread&gt; clients;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; THREAD_NUM; ++i) {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        clients.emplace_back(clientFunc);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="comment">// 运行服务器</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    base-&gt;<a class="code" href="classhandy_1_1EventBase.html#a46364e14e3307741148d587791971d7e">runAfter</a>(2000, [&amp;]() { base-&gt;<a class="code" href="classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f">exit</a>(); });</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    base-&gt;<a class="code" href="classhandy_1_1EventBase.html#ae2ab677b735668355724861f4264d3b6">loop</a>();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="comment">// 等待所有客户端完成</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; t : clients) {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        t.join();</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">int</span> expected = THREAD_NUM * MSG_PER_THREAD;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">bool</span> testOk = (msgCount == expected) &amp;&amp; (<a class="code" href="udp__test_8cpp.html#a31aa4bced138c03d6017fff0c9e3a629">g_udpTestCount</a> == expected);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;测试1（多线程并发）：总接收=%d, 总确认=%d, 预期=%d, %s&quot;</span>,</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;          (<span class="keywordtype">int</span>)msgCount, (<span class="keywordtype">int</span>)<a class="code" href="udp__test_8cpp.html#a31aa4bced138c03d6017fff0c9e3a629">g_udpTestCount</a>, expected, testOk ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== UDP 线程安全测试结束 ===\n&quot;</span>);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment">// 测试端口复用功能</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="udp__test_8cpp.html#a59a675ba8b163675e0ae7e57022d6a52">  272</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="udp__test_8cpp.html#a59a675ba8b163675e0ae7e57022d6a52">test_reuse_port</a>() {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 开始测试 端口复用 功能 ===&quot;</span>);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <a class="code" href="classhandy_1_1EventBase.html">EventBase</a>* base = <span class="keyword">new</span> <a class="code" href="classhandy_1_1EventBase.html">EventBase</a>();</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">bool</span> testOk = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="comment">// 第一个服务器绑定端口</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keyword">auto</span> server1 = <a class="code" href="classhandy_1_1UdpServer.html#a67fc24c72f8cec3c2a842e99f74c2e30">UdpServer::startServer</a>(base, <span class="stringliteral">&quot;127.0.0.1&quot;</span>, 12349, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">if</span> (!server1) {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;第一个服务器启动失败&quot;</span>);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="comment">// 第二个服务器尝试复用端口</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keyword">auto</span> server2 = <a class="code" href="classhandy_1_1UdpServer.html#a67fc24c72f8cec3c2a842e99f74c2e30">UdpServer::startServer</a>(base, <span class="stringliteral">&quot;127.0.0.1&quot;</span>, 12349, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordflow">if</span> (server2) {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        testOk = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;第二个服务器成功复用端口&quot;</span>);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;第二个服务器复用端口失败&quot;</span>);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;测试1（端口复用）：%s&quot;</span>, testOk ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 端口复用 功能测试结束 ===\n&quot;</span>);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment">// 测试入口函数</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="udp__test_8cpp.html#adf5fa5d1a8867dba73315c105f40b449">  299</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="udp__test_8cpp.html#adf5fa5d1a8867dba73315c105f40b449">run_all_tests</a>() {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <a class="code" href="udp__test_8cpp.html#a248c7a1668b0649feca050aca6f26e1f">initTestLogger</a>();</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <a class="code" href="udp__test_8cpp.html#a1e6c44e3a2c1938e87a0fd8f863c54e2">test_udp_server_basic</a>();</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <a class="code" href="udp__test_8cpp.html#ae12e3fc59f65808ab1e017b9aee29739">test_udp_conn</a>();</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <a class="code" href="udp__test_8cpp.html#aa69b2ac648de0a269e8ed6a11a3dc0b3">test_hshau_server</a>();</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <a class="code" href="udp__test_8cpp.html#ac52a62b445e7b2af0f7110f3999e76d3">test_udp_thread_safe</a>();</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <a class="code" href="udp__test_8cpp.html#a59a675ba8b163675e0ae7e57022d6a52">test_reuse_port</a>();</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <a class="code" href="udp__test_8cpp.html#ab4ddc58834ee35d4f999a35869b7bb62">destroyTestLogger</a>();</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00311"></a><span class="lineno"><a class="line" href="udp__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">  311</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="chat_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>() {</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <a class="code" href="udp__test_8cpp.html#adf5fa5d1a8867dba73315c105f40b449">run_all_tests</a>();</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;}</div>
+<div class="ttc" id="chat_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="chat_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="chat_8cpp_source.html#l00054">chat.cpp:54</a></div></div>
+<div class="ttc" id="udp__test_8cpp_html_ab4ddc58834ee35d4f999a35869b7bb62"><div class="ttname"><a href="udp__test_8cpp.html#ab4ddc58834ee35d4f999a35869b7bb62">destroyTestLogger</a></div><div class="ttdeci">void destroyTestLogger()</div><div class="ttdef"><b>Definition:</b> <a href="udp__test_8cpp_source.html#l00032">udp_test.cpp:32</a></div></div>
+<div class="ttc" id="classhandy_1_1EventBase_html_a47358c5f8dc93868d8b80190984c169f"><div class="ttname"><a href="classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f">handy::EventBase::exit</a></div><div class="ttdeci">EventBase &amp; exit()</div><div class="ttdoc">退出事件循环（线程安全） </div><div class="ttdef"><b>Definition:</b> <a href="event__base_8cpp_source.html#l00510">event_base.cpp:510</a></div></div>
+<div class="ttc" id="classhandy_1_1EventBase_html"><div class="ttname"><a href="classhandy_1_1EventBase.html">handy::EventBase</a></div><div class="ttdoc">单线程事件派发器，管理定时器、I/O事件、异步任务 </div><div class="ttdef"><b>Definition:</b> <a href="event__base_8h_source.html#l00090">event_base.h:90</a></div></div>
+<div class="ttc" id="classhandy_1_1EventBase_html_ae2ab677b735668355724861f4264d3b6"><div class="ttname"><a href="classhandy_1_1EventBase.html#ae2ab677b735668355724861f4264d3b6">handy::EventBase::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdoc">启动事件循环（阻塞，直到调用exit()退出） </div><div class="ttdef"><b>Definition:</b> <a href="event__base_8cpp_source.html#l00494">event_base.cpp:494</a></div></div>
+<div class="ttc" id="classhandy_1_1EventBase_html_a46364e14e3307741148d587791971d7e"><div class="ttname"><a href="classhandy_1_1EventBase.html#a46364e14e3307741148d587791971d7e">handy::EventBase::runAfter</a></div><div class="ttdeci">TimerId runAfter(int64_t timestamp_ms, Task &amp;&amp;task, int64_t interval_ms=0)</div><div class="ttdoc">在指定延迟后执行任务（支持周期性） </div><div class="ttdef"><b>Definition:</b> <a href="event__base_8h_source.html#l00150">event_base.h:150</a></div></div>
+<div class="ttc" id="classhandy_1_1HSHAU_html_a2e1fd5b7fc4d5d17dbd2b084e0e6a017"><div class="ttname"><a href="classhandy_1_1HSHAU.html#a2e1fd5b7fc4d5d17dbd2b084e0e6a017">handy::HSHAU::startServer</a></div><div class="ttdeci">static Ptr startServer(EventBase *base, const std::string &amp;host, unsigned short port, int threads)</div><div class="ttdoc">启动半同步半异步UDP服务器 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00368">udp.cpp:368</a></div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_aa28b152799dd56d5fea997e699996725"><div class="ttname"><a href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a></div><div class="ttdeci">static Logger &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00120">logger.h:120</a></div></div>
+<div class="ttc" id="classhandy_1_1Ipv4Addr_html"><div class="ttname"><a href="classhandy_1_1Ipv4Addr.html">handy::Ipv4Addr</a></div><div class="ttdoc">IPv4地址封装类，提供IP地址解析、格式化和合法性校验功能 </div><div class="ttdef"><b>Definition:</b> <a href="net_8h_source.html#l00141">net.h:141</a></div></div>
+<div class="ttc" id="udp__test_8cpp_html_a31aa4bced138c03d6017fff0c9e3a629"><div class="ttname"><a href="udp__test_8cpp.html#a31aa4bced138c03d6017fff0c9e3a629">g_udpTestCount</a></div><div class="ttdeci">std::atomic&lt; int &gt; g_udpTestCount(0)</div></div>
+<div class="ttc" id="udp__test_8cpp_html_ae12e3fc59f65808ab1e017b9aee29739"><div class="ttname"><a href="udp__test_8cpp.html#ae12e3fc59f65808ab1e017b9aee29739">test_udp_conn</a></div><div class="ttdeci">void test_udp_conn()</div><div class="ttdef"><b>Definition:</b> <a href="udp__test_8cpp_source.html#l00111">udp_test.cpp:111</a></div></div>
+<div class="ttc" id="udp__test_8cpp_html_a248c7a1668b0649feca050aca6f26e1f"><div class="ttname"><a href="udp__test_8cpp.html#a248c7a1668b0649feca050aca6f26e1f">initTestLogger</a></div><div class="ttdeci">void initTestLogger()</div><div class="ttdef"><b>Definition:</b> <a href="udp__test_8cpp_source.html#l00026">udp_test.cpp:26</a></div></div>
+<div class="ttc" id="udp__test_8cpp_html_a6faa20b81b07b63073ebc06aefe0d63c"><div class="ttname"><a href="udp__test_8cpp.html#a6faa20b81b07b63073ebc06aefe0d63c">g_msgReceived</a></div><div class="ttdeci">std::atomic&lt; bool &gt; g_msgReceived(false)</div></div>
+<div class="ttc" id="classhandy_1_1UdpServer_html_a55016d1b3d3342f98bcb4239549687b7"><div class="ttname"><a href="classhandy_1_1UdpServer.html#a55016d1b3d3342f98bcb4239549687b7">handy::UdpServer::Ptr</a></div><div class="ttdeci">std::shared_ptr&lt; UdpServer &gt; Ptr</div><div class="ttdoc">UdpServer的智能指针类型定义 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00157">udp.h:157</a></div></div>
+<div class="ttc" id="udp__test_8cpp_html_aa69b2ac648de0a269e8ed6a11a3dc0b3"><div class="ttname"><a href="udp__test_8cpp.html#aa69b2ac648de0a269e8ed6a11a3dc0b3">test_hshau_server</a></div><div class="ttdeci">void test_hshau_server()</div><div class="ttdef"><b>Definition:</b> <a href="udp__test_8cpp_source.html#l00156">udp_test.cpp:156</a></div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a166a12af568a87281a0f5953c3b7dc36"><div class="ttname"><a href="classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36">handy::Logger::setLogLevel</a></div><div class="ttdeci">void setLogLevel(const std::string &amp;logLevel)</div><div class="ttdoc">通过字符串形式（全小写）设置日志级别 </div><div class="ttdef"><b>Definition:</b> <a href="logger_8cpp_source.html#l00191">logger.cpp:191</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpConn_html_ad42f2c83b20c11a3468a8ac42b2b9fbd"><div class="ttname"><a href="classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd">handy::UdpConn::createConnection</a></div><div class="ttdeci">static Ptr createConnection(EventBase *base, const std::string &amp;destHost, unsigned short destPort)</div><div class="ttdoc">创建新的UDP连接 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00217">udp.cpp:217</a></div></div>
+<div class="ttc" id="udp__test_8cpp_html_a59a675ba8b163675e0ae7e57022d6a52"><div class="ttname"><a href="udp__test_8cpp.html#a59a675ba8b163675e0ae7e57022d6a52">test_reuse_port</a></div><div class="ttdeci">void test_reuse_port()</div><div class="ttdef"><b>Definition:</b> <a href="udp__test_8cpp_source.html#l00272">udp_test.cpp:272</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_aceb300c5e30fad7a6062b97f48a2c111"><div class="ttname"><a href="classhandy_1_1Buffer.html#aceb300c5e30fad7a6062b97f48a2c111">handy::Buffer::peek</a></div><div class="ttdeci">const char * peek() const </div><div class="ttdoc">返回内部缓冲区的只读指针 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00371">net.cpp:371</a></div></div>
+<div class="ttc" id="logger_8h_html_a15378cd15bafb3a79061424b452497aa"><div class="ttname"><a href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a></div><div class="ttdeci">#define ERROR(fmt,...)</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00068">logger.h:68</a></div></div>
+<div class="ttc" id="udp__test_8cpp_html_ac52a62b445e7b2af0f7110f3999e76d3"><div class="ttname"><a href="udp__test_8cpp.html#ac52a62b445e7b2af0f7110f3999e76d3">test_udp_thread_safe</a></div><div class="ttdeci">void test_udp_thread_safe()</div><div class="ttdef"><b>Definition:</b> <a href="udp__test_8cpp_source.html#l00207">udp_test.cpp:207</a></div></div>
+<div class="ttc" id="logger_8h_html_ab56f6599fb46785e4265a3033ba91aa6"><div class="ttname"><a href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a></div><div class="ttdeci">#define INFO(fmt,...)</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00066">logger.h:66</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpConn_html_a56c9450a096d3d9a564da71c9f7d0308"><div class="ttname"><a href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">handy::UdpConn::Ptr</a></div><div class="ttdeci">std::shared_ptr&lt; UdpConn &gt; Ptr</div><div class="ttdoc">UdpConn的智能指针类型定义 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00044">udp.h:44</a></div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_ad096978e08b310f1456742540e746893"><div class="ttname"><a href="classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893">handy::Logger::setLogFileName</a></div><div class="ttdeci">void setLogFileName(const std::string &amp;logFileName)</div><div class="ttdoc">设置日志文件名称 </div><div class="ttdef"><b>Definition:</b> <a href="logger_8cpp_source.html#l00146">logger.cpp:146</a></div></div>
+<div class="ttc" id="logger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div><div class="ttdoc">日志系统核心头文件，提供线程安全的日志记录功能和便捷的日志宏定义 </div></div>
+<div class="ttc" id="udp__test_8cpp_html_adf5fa5d1a8867dba73315c105f40b449"><div class="ttname"><a href="udp__test_8cpp.html#adf5fa5d1a8867dba73315c105f40b449">run_all_tests</a></div><div class="ttdeci">void run_all_tests()</div><div class="ttdef"><b>Definition:</b> <a href="udp__test_8cpp_source.html#l00299">udp_test.cpp:299</a></div></div>
+<div class="ttc" id="udp__test_8cpp_html_a332cec8c25f713e81adbfcca4d2592b1"><div class="ttname"><a href="udp__test_8cpp.html#a332cec8c25f713e81adbfcca4d2592b1">g_testMsg</a></div><div class="ttdeci">std::string g_testMsg</div><div class="ttdef"><b>Definition:</b> <a href="udp__test_8cpp_source.html#l00022">udp_test.cpp:22</a></div></div>
+<div class="ttc" id="event__base_8h_html"><div class="ttname"><a href="event__base_8h.html">event_base.h</a></div><div class="ttdoc">事件驱动框架核心头文件，定义事件循环、多线程事件管理、I/O通道等核心组件 </div></div>
+<div class="ttc" id="logger_8h_html_ad96d3a6cf3e98ce15febe3d27bda47bc"><div class="ttname"><a href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a></div><div class="ttdeci">#define DEBUG(fmt,...)</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00065">logger.h:65</a></div></div>
+<div class="ttc" id="udp__test_8cpp_html_af79430c9ef5ad10775a7f561a4e9e814"><div class="ttname"><a href="udp__test_8cpp.html#af79430c9ef5ad10775a7f561a4e9e814">g_testResponse</a></div><div class="ttdeci">std::string g_testResponse</div><div class="ttdef"><b>Definition:</b> <a href="udp__test_8cpp_source.html#l00023">udp_test.cpp:23</a></div></div>
+<div class="ttc" id="udp__test_8cpp_html_a91676bed2845c91bd82df40e0f2a3136"><div class="ttname"><a href="udp__test_8cpp.html#a91676bed2845c91bd82df40e0f2a3136">g_serverReady</a></div><div class="ttdeci">std::atomic&lt; bool &gt; g_serverReady(false)</div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html"><div class="ttname"><a href="classhandy_1_1Buffer.html">handy::Buffer</a></div><div class="ttdoc">线程安全的缓冲区类，用于数据的存储和操作 </div><div class="ttdef"><b>Definition:</b> <a href="net_8h_source.html#l00248">net.h:248</a></div></div>
+<div class="ttc" id="udp__test_8cpp_html_a1e6c44e3a2c1938e87a0fd8f863c54e2"><div class="ttname"><a href="udp__test_8cpp.html#a1e6c44e3a2c1938e87a0fd8f863c54e2">test_udp_server_basic</a></div><div class="ttdeci">void test_udp_server_basic()</div><div class="ttdef"><b>Definition:</b> <a href="udp__test_8cpp_source.html#l00037">udp_test.cpp:37</a></div></div>
+<div class="ttc" id="udp_8h_html"><div class="ttname"><a href="udp_8h.html">udp.h</a></div><div class="ttdoc">UDP客户端和服务端连接的封装接口定义 </div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_aa759a33b7e3748d79cff07430f8a7b16"><div class="ttname"><a href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">handy::Buffer::size</a></div><div class="ttdeci">size_t size() const </div><div class="ttdoc">获取当前缓冲区中的数据长度 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00335">net.cpp:335</a></div></div>
+<div class="ttc" id="classhandy_1_1Ipv4Addr_html_aecdc2af21e4190bd6286b4e5b7fdcb86"><div class="ttname"><a href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">handy::Ipv4Addr::toString</a></div><div class="ttdeci">std::string toString() const </div><div class="ttdoc">获取IP地址和端口的字符串表示 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00198">net.cpp:198</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpServer_html_a67fc24c72f8cec3c2a842e99f74c2e30"><div class="ttname"><a href="classhandy_1_1UdpServer.html#a67fc24c72f8cec3c2a842e99f74c2e30">handy::UdpServer::startServer</a></div><div class="ttdeci">static Ptr startServer(EventBases *bases, const std::string &amp;host, unsigned short port, bool isReusePort=false)</div><div class="ttdoc">启动并创建一个新的UDP服务器 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00156">udp.cpp:156</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li><li class="navelem"><a class="el" href="udp__test_8cpp.html">udp_test.cpp</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="handy::portTest::test_getHostByName_threadSafe" name="handy::portTest::test_getHostByName_threadSafe">
+<area shape="rect" id="node2" href="$namespacehandy_1_1port.html#a4f1587cf54ea7cefa3d01e75f3f1d797" title="通过主机名获取对应的IPv4地址 " alt="" coords="249,5,441,32"/>
+<area shape="rect" id="node3" href="$port__posix__test_8cpp.html#a344a27ea81349df56ea0c8915db33f30" title="g_threadSafeCount" alt="" coords="278,56,413,83"/>
+</map>

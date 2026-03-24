@@ -1,0 +1,8 @@
+<map id="handy::sliceTest::test_basic_access" name="handy::sliceTest::test_basic_access">
+<area shape="rect" id="node2" href="$classhandy_1_1Slice.html#a229c81ddfceb6b035b4e0325d8f5fac6" title="获取数据起始指针（非空） " alt="" coords="203,5,330,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Slice.html#abd00e36492afd0d0e68627268611166a" title="获取起始迭代器（兼容STL算法） " alt="" coords="200,56,333,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Slice.html#aa9c41a7c077cb18809a408d429587b3c" title="获取视图长度 " alt="" coords="203,107,330,133"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Slice.html#a7811489eb8eac078321021c057e22a9d" title="获取第一个字符 " alt="" coords="203,157,331,184"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe" title="判断视图是否为空 " alt="" coords="381,208,520,235"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Slice.html#ae986157a157ad8d957e2a6e8cab587b2" title="获取最后一个字符 " alt="" coords="201,259,332,285"/>
+</map>

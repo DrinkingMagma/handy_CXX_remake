@@ -1,0 +1,4 @@
+<map id="sigIntHandler" name="sigIntHandler">
+<area shape="rect" id="node2" href="$classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f" title="退出事件循环（线程安全） " alt="" coords="152,5,311,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1EventBase.html#a54e0450f295724a37aa7ff0404058fb7" title="唤醒事件循环（线程安全） " alt="" coords="359,5,541,32"/>
+</map>

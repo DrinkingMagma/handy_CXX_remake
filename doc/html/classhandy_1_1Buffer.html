@@ -139,7 +139,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:ae9849db92cf0ce89b2c069c22fec2831"><td class="mdescLeft">&#160;</td><td class="mdescRight">移动赋值运算符，线程安全地转移另一个缓冲区的资源所有权  <a href="#ae9849db92cf0ce89b2c069c22fec2831">更多...</a><br/></td></tr>
 <tr class="separator:ae9849db92cf0ce89b2c069c22fec2831"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a804cb068a8f1b7b1d3c5f4aaa09d1b42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42">clear</a> ()</td></tr>
-<tr class="memdesc:a804cb068a8f1b7b1d3c5f4aaa09d1b42"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空缓冲区，释放多有动态内存，重置所有偏移量和容量  <a href="#a804cb068a8f1b7b1d3c5f4aaa09d1b42">更多...</a><br/></td></tr>
+<tr class="memdesc:a804cb068a8f1b7b1d3c5f4aaa09d1b42"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空缓冲区，释放所有动态内存，重置所有偏移量和容量  <a href="#a804cb068a8f1b7b1d3c5f4aaa09d1b42">更多...</a><br/></td></tr>
 <tr class="separator:a804cb068a8f1b7b1d3c5f4aaa09d1b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa759a33b7e3748d79cff07430f8a7b16"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a> () const </td></tr>
 <tr class="memdesc:aa759a33b7e3748d79cff07430f8a7b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前缓冲区中的数据长度  <a href="#aa759a33b7e3748d79cff07430f8a7b16">更多...</a><br/></td></tr>
@@ -259,6 +259,8 @@ Private 属性</h2></td></tr>
 2. 缓冲区的自动扩展和内存碎片整理 </dd>
 <dd>
 3. 线程安全的拷贝和移动操作 </dd></dl>
+
+<p>在文件 <a class="el" href="net_8h_source.html">net.h</a> 第 <a class="el" href="net_8h_source.html#l00248">248</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a class="anchor" id="ab8f6264923bd2e9235561b120d13a75b"></a>
 <div class="memitem">
@@ -274,6 +276,8 @@ Private 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p>默认构造函数，初始化一个空缓冲区，期望增长大小为512字节 </p>
+
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00263">263</a> 行定义.</p>
 
 </div>
 </div>
@@ -291,6 +295,8 @@ Private 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p>析构函数，释放所有动态分配的内存 </p>
+
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00266">266</a> 行定义.</p>
 
 </div>
 </div>
@@ -316,11 +322,12 @@ Private 属性</h2></td></tr>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00271">271</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a3b4003ed7f04aee3226314fa5e2703e5_cgraph.svg" width="372" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a3b4003ed7f04aee3226314fa5e2703e5_cgraph.svg" width="372" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -356,6 +363,8 @@ Private 属性</h2></td></tr>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00288">288</a> 行定义.</p>
+
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
@@ -390,11 +399,12 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section note"><dt>注解</dt><dd>内部方法，调用前需确保已释放当前资源且加锁 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00549">549</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_ab7b4ecedfc55d6e4195bea86608f98db_icgraph.svg" width="372" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_ab7b4ecedfc55d6e4195bea86608f98db_icgraph.svg" width="372" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -431,10 +441,12 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section note"><dt>注解</dt><dd>内部方法，调用前需先加锁 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00522">522</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a0ca99339d31c25d203875bf57f75fc67_icgraph.svg" width="1568" height="463"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a0ca99339d31c25d203875bf57f75fc67_icgraph.svg" width="1772" height="994"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -473,19 +485,19 @@ Private 属性</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>char* 指向可写入数据位置的指针 </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>内部方法，调用前需先加锁 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00509">509</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_afbd50b666a4e1576b2e19bdb047e7a53_cgraph.svg" width="418" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_afbd50b666a4e1576b2e19bdb047e7a53_cgraph.svg" width="418" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_afbd50b666a4e1576b2e19bdb047e7a53_icgraph.svg" width="1327" height="463"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_afbd50b666a4e1576b2e19bdb047e7a53_icgraph.svg" width="1626" height="1156"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -515,11 +527,12 @@ Private 属性</h2></td></tr>
 <p>将数据移动到缓冲区头部，减少内存碎片 </p>
 <dl class="section note"><dt>注解</dt><dd>内部方法，调用前需先加锁 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00538">538</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a152b8546af1c0bca407455a6b174e05b_icgraph.svg" width="1552" height="463"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a152b8546af1c0bca407455a6b174e05b_icgraph.svg" width="1851" height="1156"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -549,11 +562,12 @@ Private 属性</h2></td></tr>
 <p>获取当前缓冲区中的数据长度（需外部加锁） </p>
 <dl class="section return"><dt>返回</dt><dd>size_t 数据长度（字节数） </dd></dl>
 
+<p>在文件 <a class="el" href="net_8h_source.html">net.h</a> 第 <a class="el" href="net_8h_source.html#l00303">303</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a56a876c03842962a6d412c9842c3ff8a_icgraph.svg" width="372" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a56a876c03842962a6d412c9842c3ff8a_icgraph.svg" width="372" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -583,10 +597,12 @@ Private 属性</h2></td></tr>
 <p>返回缓冲区中当前剩余的可用空间（字节数）（需外部加锁） </p>
 <dl class="section return"><dt>返回</dt><dd>size_t 缓冲区中当前剩余的可用空间（字节数） </dd></dl>
 
+<p>在文件 <a class="el" href="net_8h_source.html">net.h</a> 第 <a class="el" href="net_8h_source.html#l00309">309</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_ac048f158dc445a075cb5d5a1534ea544_icgraph.svg" width="662" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_ac048f158dc445a075cb5d5a1534ea544_icgraph.svg" width="1106" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -624,11 +640,12 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section note"><dt>注解</dt><dd>内部方法，调用前需加锁 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00565">565</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a84df3b1f96b52d68c97b2e6fc7a90264_icgraph.svg" width="367" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a84df3b1f96b52d68c97b2e6fc7a90264_icgraph.svg" width="367" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -657,19 +674,19 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00462">462</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a48b58522a99b408d8dca8c831d83650a_cgraph.svg" width="854" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a48b58522a99b408d8dca8c831d83650a_cgraph.svg" width="854" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a48b58522a99b408d8dca8c831d83650a_icgraph.svg" width="826" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a48b58522a99b408d8dca8c831d83650a_icgraph.svg" width="826" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -698,10 +715,12 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section note"><dt>注解</dt><dd>用于向缓冲区添加数据后，未更新缓冲区的实际数据长度的场景 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00397">397</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a0428fcbdbcf59a3382bb5a40a75d4b18_icgraph.svg" width="444" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a0428fcbdbcf59a3382bb5a40a75d4b18_icgraph.svg" width="888" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -742,19 +761,19 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00403">403</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a3fb7183f49ac1a86d1d35dd44943ef60_cgraph.svg" width="615" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a3fb7183f49ac1a86d1d35dd44943ef60_cgraph.svg" width="615" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a3fb7183f49ac1a86d1d35dd44943ef60_icgraph.svg" width="572" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a3fb7183f49ac1a86d1d35dd44943ef60_icgraph.svg" width="1139" height="816"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -783,11 +802,12 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00426">426</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a26e2bf103ceb23b8a4344d0bea0b018e_cgraph.svg" width="812" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a26e2bf103ceb23b8a4344d0bea0b018e_cgraph.svg" width="812" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -816,11 +836,12 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00431">431</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_abbb56c7aeaa54f9ece9a2f80741e21bf_cgraph.svg" width="812" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_abbb56c7aeaa54f9ece9a2f80741e21bf_cgraph.svg" width="812" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -849,11 +870,12 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00436">436</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_ad2ac7e17a9b68ccdb42fa687f6d56c45_cgraph.svg" width="812" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_ad2ac7e17a9b68ccdb42fa687f6d56c45_cgraph.svg" width="812" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -892,19 +914,19 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00415">415</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a9270651a5f88b399ec11f281ef86fdde_cgraph.svg" width="659" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a9270651a5f88b399ec11f281ef86fdde_cgraph.svg" width="659" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a9270651a5f88b399ec11f281ef86fdde_icgraph.svg" width="1067" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a9270651a5f88b399ec11f281ef86fdde_icgraph.svg" width="1067" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -950,11 +972,12 @@ template&lt;class T &gt; </div>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>仅支持POD类型的数据，非POD类型数据会触发编译错误 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8h_source.html">net.h</a> 第 <a class="el" href="net_8h_source.html#l00459">459</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a1206aca6841c03ba32c83dce30f886cd_icgraph.svg" width="383" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a1206aca6841c03ba32c83dce30f886cd_icgraph.svg" width="916" height="242"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -976,10 +999,12 @@ template&lt;class T &gt; </div>
 <p>获取缓冲区中的数据开头指针 </p>
 <dl class="section return"><dt>返回</dt><dd>char* 指向缓冲区开头的指针 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00353">353</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a2bd79c05c0e2e82b6cdfd130af4739d0_icgraph.svg" width="866" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a2bd79c05c0e2e82b6cdfd130af4739d0_icgraph.svg" width="866" height="274"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -999,12 +1024,14 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>清空缓冲区，释放多有动态内存，重置所有偏移量和容量 </p>
+<p>清空缓冲区，释放所有动态内存，重置所有偏移量和容量 </p>
+
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00325">325</a> 行定义.</p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a804cb068a8f1b7b1d3c5f4aaa09d1b42_icgraph.svg" width="596" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a804cb068a8f1b7b1d3c5f4aaa09d1b42_icgraph.svg" width="703" height="452"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -1035,11 +1062,12 @@ template&lt;class T &gt; </div>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>若len带当前数据长度，会消耗所有数据 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00441">441</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_aa08545c90241054e435ff328f087b0c1_icgraph.svg" width="887" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_aa08545c90241054e435ff328f087b0c1_icgraph.svg" width="887" height="286"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1062,11 +1090,12 @@ template&lt;class T &gt; </div>
 <dl class="section return"><dt>返回</dt><dd>std::string 包含缓冲区中所有数据的字符串 </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>返回的是数据副本，避免外部直接操作内部数据 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00347">347</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a44a208a057b4f4b753d64d3ef06ba0af_icgraph.svg" width="536" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a44a208a057b4f4b753d64d3ef06ba0af_icgraph.svg" width="699" height="731"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1088,11 +1117,12 @@ template&lt;class T &gt; </div>
 <p>判断缓冲区是否为空 </p>
 <dl class="section return"><dt>返回</dt><dd>bool true: 空，false: 非空 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00341">341</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a268ad2c07c123cee2157f861424b2f08_icgraph.svg" width="870" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a268ad2c07c123cee2157f861424b2f08_icgraph.svg" width="870" height="286"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1114,10 +1144,12 @@ template&lt;class T &gt; </div>
 <p>获取缓冲区中的数据末尾指针 </p>
 <dl class="section return"><dt>返回</dt><dd>char* 指向缓冲区中的数据末尾的指针 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00359">359</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a82f738013d27b2d2e94725b5b5765bca_icgraph.svg" width="388" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a82f738013d27b2d2e94725b5b5765bca_icgraph.svg" width="388" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -1140,18 +1172,19 @@ template&lt;class T &gt; </div>
 <p>当缓冲区剩余空间小于m_exp时，扩展缓冲区 </p>
 <dl class="section note"><dt>注解</dt><dd>用于按照m_exp扩展缓冲区 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00377">377</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a7060b929fb9d5b805ae670c77b0f8cdf_cgraph.svg" width="390" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a7060b929fb9d5b805ae670c77b0f8cdf_cgraph.svg" width="390" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a7060b929fb9d5b805ae670c77b0f8cdf_icgraph.svg" width="464" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a7060b929fb9d5b805ae670c77b0f8cdf_icgraph.svg" width="908" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -1175,11 +1208,12 @@ template&lt;class T &gt; </div>
 <p>确保缓冲区有足够空间来存储指定长度的数据 </p>
 <dl class="section return"><dt>返回</dt><dd>char* 当前最后有效数据的位置指针 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00384">384</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a04a7b5fd98fe745c56b6a338b47bc532_cgraph.svg" width="411" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a04a7b5fd98fe745c56b6a338b47bc532_cgraph.svg" width="411" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1201,6 +1235,8 @@ template&lt;class T &gt; </div>
 <p>转换为Slice对象 </p>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Slice.html" title="非持有型字符序列视图（类似std::string_view，但兼容C++11） ">Slice</a> 包含缓冲区数据的临时Slice对象 </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>返回的Slice对象仅在当前语句有效，请勿保存引用 </dd></dl>
+
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00503">503</a> 行定义.</p>
 
 </div>
 </div>
@@ -1227,11 +1263,12 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00278">278</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_aa7a82b232c0ecde46a2078da3a0bcd94_cgraph.svg" width="367" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_aa7a82b232c0ecde46a2078da3a0bcd94_cgraph.svg" width="367" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1268,6 +1305,8 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 当前缓冲区的引用 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00301">301</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="aceb300c5e30fad7a6062b97f48a2c111"></a>
@@ -1287,11 +1326,12 @@ template&lt;class T &gt; </div>
 <dl class="section return"><dt>返回</dt><dd>const char* 内部缓冲区的只读指针 </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>无法修改内部数据 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00371">371</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_aceb300c5e30fad7a6062b97f48a2c111_icgraph.svg" width="596" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_aceb300c5e30fad7a6062b97f48a2c111_icgraph.svg" width="695" height="423"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1320,6 +1360,15 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section note"><dt>注解</dt><dd>当需要扩展缓冲区时，会按照此大小进行扩展，减少内存分配的次数 </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00496">496</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a4bfa7ff879fbce307c502c668d378bb5_icgraph.svg" width="675" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="aa759a33b7e3748d79cff07430f8a7b16"></a>
@@ -1338,10 +1387,12 @@ template&lt;class T &gt; </div>
 <p>获取当前缓冲区中的数据长度 </p>
 <dl class="section return"><dt>返回</dt><dd>size_t 数据长度（字节数） </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00335">335</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_aa759a33b7e3748d79cff07430f8a7b16_icgraph.svg" width="900" height="576"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_aa759a33b7e3748d79cff07430f8a7b16_icgraph.svg" width="1082" height="1420"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -1364,11 +1415,12 @@ template&lt;class T &gt; </div>
 <p>返回缓冲区中当前剩余的可用空间（字节数） </p>
 <dl class="section return"><dt>返回</dt><dd>size_t 缓冲区中当前剩余的可用空间（字节数） </dd></dl>
 
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 第 <a class="el" href="net_8cpp_source.html#l00365">365</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a890cb0622de47912ae09c75bbfb5d4a1_icgraph.svg" width="403" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Buffer_a890cb0622de47912ae09c75bbfb5d4a1_icgraph.svg" width="403" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1395,6 +1447,8 @@ template&lt;class T &gt; </div>
 
 <p>数据起始偏移量（头部已消耗的部分） </p>
 
+<p>在文件 <a class="el" href="net_8h_source.html">net.h</a> 第 <a class="el" href="net_8h_source.html#l00254">254</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a5895d67a50e408218d64c4e07c9f0e4a"></a>
@@ -1416,6 +1470,8 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>动态分配的内存缓冲区 </p>
+
+<p>在文件 <a class="el" href="net_8h_source.html">net.h</a> 第 <a class="el" href="net_8h_source.html#l00252">252</a> 行定义.</p>
 
 </div>
 </div>
@@ -1439,6 +1495,8 @@ template&lt;class T &gt; </div>
 
 <p>缓冲区总容量（字节数） </p>
 
+<p>在文件 <a class="el" href="net_8h_source.html">net.h</a> 第 <a class="el" href="net_8h_source.html#l00258">258</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="ae09cee613bb33a7b994dcc7a22c19738"></a>
@@ -1460,6 +1518,8 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>数据结束偏移量（尾部未使用的部分） </p>
+
+<p>在文件 <a class="el" href="net_8h_source.html">net.h</a> 第 <a class="el" href="net_8h_source.html#l00256">256</a> 行定义.</p>
 
 </div>
 </div>
@@ -1483,6 +1543,8 @@ template&lt;class T &gt; </div>
 
 <p>期望增长大小（字节数），用于减少内存分配次数 </p>
 
+<p>在文件 <a class="el" href="net_8h_source.html">net.h</a> 第 <a class="el" href="net_8h_source.html#l00260">260</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a9bf9b29fc2265d0213673b2e14c100f7"></a>
@@ -1505,11 +1567,13 @@ template&lt;class T &gt; </div>
 
 <p>互斥锁，保证多线程访问的线程安全 </p>
 
+<p>在文件 <a class="el" href="net_8h_source.html">net.h</a> 第 <a class="el" href="net_8h_source.html#l00262">262</a> 行定义.</p>
+
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>handy/<a class="el" href="net_8h_source.html">net.h</a></li>
-<li>handy/<a class="el" href="net_8cpp.html">net.cpp</a></li>
+<li>handy/<a class="el" href="net_8cpp_source.html">net.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

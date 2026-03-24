@@ -1,0 +1,48 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$namespacehandy_1_1netTest.html#a67440c6a5e1613729fd7d78f23f151cc" title="handy::netTest::run\l_all_tests" alt="" coords="104,595,239,637"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1netTest.html#aedbb5cc1bfdf14d0abdb88c8299812e6" title="初始化测试日志（输出到net_test.log） " alt="" coords="297,70,455,111"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1netTest.html#a4b27bb07bc34f93a8f101a166994f5c7" title="测试Net类字节序转换功能（hton/ntoh） " alt="" coords="795,393,934,434"/>
+<area shape="rect" id="node13" href="$namespacehandy_1_1netTest.html#a834ee58d32bfc67e085de365ff5daaa1" title="测试Net类Socket选项设置（非阻塞、地址重用等） " alt="" coords="305,369,447,410"/>
+<area shape="rect" id="node20" href="$namespacehandy_1_1netTest.html#abf3529f17874986515ffb235c012aed1" title="测试Net类多线程安全（并发设置Socket选项） " alt="" coords="307,457,445,498"/>
+<area shape="rect" id="node22" href="$namespacehandy_1_1netTest.html#a9ebc5dad13f87eb5aea50c66c205cc58" title="测试Ipv4Addr类构造与格式化功能 " alt="" coords="525,595,708,637"/>
+<area shape="rect" id="node29" href="$namespacehandy_1_1netTest.html#a01641c30da483685f0cd4439763043ec" title="测试Ipv4Addr类IP解析与验证功能 " alt="" coords="287,679,465,721"/>
+<area shape="rect" id="node31" href="$namespacehandy_1_1netTest.html#ac61eff50eb6968ff473ad272aaeabc15" title="测试Buffer类基本数据操作（追加、消耗、清空） " alt="" coords="307,1011,445,1053"/>
+<area shape="rect" id="node45" href="$namespacehandy_1_1netTest.html#a33466d1829f046b00a1b3b152b53f36f" title="测试Buffer类内存管理（碎片整理、自动扩展） " alt="" coords="292,941,460,982"/>
+<area shape="rect" id="node46" href="$namespacehandy_1_1netTest.html#a8e4e5f11e0a6836bf86642f9cf761c74" title="测试Buffer类多线程安全（并发追加、消耗、吸收） " alt="" coords="303,1087,449,1129"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725" title="handy::Logger::getInstance" alt="" coords="527,5,707,32"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893" title="设置日志文件名称 " alt="" coords="513,56,720,83"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36" title="通过字符串形式（全小写）设置日志级别 " alt="" coords="525,107,708,133"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Logger.html#a1f5d1fab0756d1df799e204499faa012" title="获取当前时间戳（秒） " alt="" coords="778,49,951,90"/>
+<area shape="rect" id="node9" href="$classhandy_1_1Net.html#a9512fbffc383897eaad1fd9dab0a7f01" title="将主机字节序转换为网络字节序 " alt="" coords="1268,433,1387,460"/>
+<area shape="rect" id="node11" href="$classhandy_1_1Net.html#ab2529e9ccaf7c82c477ba0cbc2fa6f6c" title="将网络字节序转换为主机字节序 " alt="" coords="1041,505,1159,532"/>
+<area shape="rect" id="node10" href="$namespacehandy_1_1port.html#ada33f950eea2ad0a8b424d009eaead30" title="将16位无符号整数从主机字节序转换为大端字节序（网络字节序） " alt="" coords="1464,467,1591,493"/>
+<area shape="rect" id="node12" href="$namespacehandy_1_1port.html#a5f1b74470622c97466be3c98a6e0929f" title="将16位无符号整数从大端字节序（网络字节序）转换为主机字节序 " alt="" coords="1264,499,1391,525"/>
+<area shape="rect" id="node14" href="$namespacehandy_1_1netTest.html#a6f9436df62b53b26aad843a0103ab2b8" title="创建临时TCP Socket（用于Net类选项测试） " alt="" coords="525,310,709,351"/>
+<area shape="rect" id="node15" href="$classhandy_1_1Net.html#a6453e1072f6fdc96c1ca5df55f8124b3" title="设置文件描述符的非阻塞模式 " alt="" coords="532,376,701,403"/>
+<area shape="rect" id="node16" href="$classhandy_1_1Net.html#a268a9fccc2daea05719f3599a620bd10" title="设置Socket的地址重用选项(SO_REUSEADDR) " alt="" coords="528,427,705,453"/>
+<area shape="rect" id="node17" href="$classhandy_1_1Net.html#affb6f68dd905db3c1572998ea730461c" title="设置Socket的端口重用选项(SO_REUSEPORT) " alt="" coords="529,259,704,285"/>
+<area shape="rect" id="node18" href="$classhandy_1_1Net.html#a913f5315ff0e3d0e044ec7c686fe54c0" title="设置TCP的无延迟选项(TCP_NODELAY) " alt="" coords="535,208,698,235"/>
+<area shape="rect" id="node19" href="$namespacehandy_1_1netTest.html#a6566427ee3de225971e897e87ea067e8" title="关闭临时Socket " alt="" coords="527,478,706,519"/>
+<area shape="rect" id="node21" href="$net__test_8cpp.html#a7f869fbfa37a9933b051dcf806f0c516" title="g_netThreadCount" alt="" coords="552,544,681,571"/>
+<area shape="rect" id="node23" href="$classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86" title="获取IP地址和端口的字符串表示 " alt="" coords="779,509,950,536"/>
+<area shape="rect" id="node24" href="$classhandy_1_1Ipv4Addr.html#aeedd479d879facc608008878faa48a8b" title="检查IP地址是否有效 " alt="" coords="1013,661,1187,688"/>
+<area shape="rect" id="node26" href="$classhandy_1_1Ipv4Addr.html#a143d7ca4af554ed22e334bfb80d5ad02" title="获取主机字节序的端口号 " alt="" coords="791,459,938,485"/>
+<area shape="rect" id="node27" href="$classhandy_1_1Ipv4Addr.html#aa1e3e274ffd85680959b12a1ce1fdd50" title="获取纯IP地址的字符串表示 " alt="" coords="797,611,932,637"/>
+<area shape="rect" id="node28" href="$classhandy_1_1Ipv4Addr.html#a59e4db2e65a09db95cbe295fcd956a39" title="获取主机字节序的IP地址整数表示 " alt="" coords="789,560,940,587"/>
+<area shape="rect" id="node25" href="$structhandy_1_1Utils.html#ad70f51fc39095ca32dce7f045adc026b" title="格式化字符串 " alt="" coords="1031,584,1169,611"/>
+<area shape="rect" id="node30" href="$classhandy_1_1Ipv4Addr.html#a15f73de1453340b7a7855250f08b10c6" title="将主机名解析为IP地址字符串 " alt="" coords="529,712,704,739"/>
+<area shape="rect" id="node32" href="$classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60" title="将指定长度的数据追加到缓冲区 " alt="" coords="542,931,691,957"/>
+<area shape="rect" id="node36" href="$classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af" title="获取缓冲区中的数据副本 " alt="" coords="551,1235,683,1261"/>
+<area shape="rect" id="node37" href="$classhandy_1_1Buffer.html#a1206aca6841c03ba32c83dce30f886cd" title="追加POD类型的值到缓冲区 " alt="" coords="526,880,707,907"/>
+<area shape="rect" id="node38" href="$classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16" title="获取当前缓冲区中的数据长度 " alt="" coords="551,1032,682,1059"/>
+<area shape="rect" id="node39" href="$classhandy_1_1Buffer.html#aa08545c90241054e435ff328f087b0c1" title="从头部消耗指定长度的数据 " alt="" coords="537,1083,697,1109"/>
+<area shape="rect" id="node40" href="$classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42" title="清空缓冲区，释放所有动态内存，重置所有偏移量和容量 " alt="" coords="549,981,684,1008"/>
+<area shape="rect" id="node41" href="$classhandy_1_1Buffer.html#a268ad2c07c123cee2157f861424b2f08" title="判断缓冲区是否为空 " alt="" coords="545,1133,688,1160"/>
+<area shape="rect" id="node42" href="$classhandy_1_1Buffer.html#a48b58522a99b408d8dca8c831d83650a" title="合并另一个缓冲区的内容（将另一个缓冲区的所有数据追加到当前缓冲区，并清空另一个缓冲区） " alt="" coords="543,1184,690,1211"/>
+<area shape="rect" id="node44" href="$classhandy_1_1Buffer.html#a4bfa7ff879fbce307c502c668d378bb5" title="设置缓冲区的期望增长大小 " alt="" coords="533,814,700,855"/>
+<area shape="rect" id="node33" href="$classhandy_1_1Buffer.html#afbd50b666a4e1576b2e19bdb047e7a53" title="确保缓冲区有足够空间容纳指定长度的数据 " alt="" coords="1009,1057,1191,1084"/>
+<area shape="rect" id="node34" href="$classhandy_1_1Buffer.html#a152b8546af1c0bca407455a6b174e05b" title="将数据移动到缓冲区头部，减少内存碎片 " alt="" coords="1239,1032,1416,1059"/>
+<area shape="rect" id="node35" href="$classhandy_1_1Buffer.html#a0ca99339d31c25d203875bf57f75fc67" title="扩展缓冲区容量 " alt="" coords="1249,1083,1405,1109"/>
+<area shape="rect" id="node43" href="$classhandy_1_1Buffer.html#a9270651a5f88b399ec11f281ef86fdde" title="追加字符串中的数据到缓冲区(未加锁版本，用于在内部函数中调用，防止重复加锁导致的死锁) " alt="" coords="768,1133,961,1160"/>
+<area shape="rect" id="node47" href="$net__test_8cpp.html#a852944679fba32403b45793ce4fb3cd9" title="g_bufferThreadCount" alt="" coords="545,1285,688,1312"/>
+</map>

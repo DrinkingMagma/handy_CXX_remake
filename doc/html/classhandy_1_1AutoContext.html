@@ -188,6 +188,8 @@ Private 属性</h2></td></tr>
 </ol>
 </li>
 </ol>
+
+<p>在文件 <a class="el" href="handy-imp_8h_source.html">handy-imp.h</a> 第 <a class="el" href="handy-imp_8h_source.html#l00058">58</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a class="anchor" id="ae1907e8c4cd06ef829a7cc3dbfcb39a8"></a>
 <div class="memitem">
@@ -241,11 +243,12 @@ Private 属性</h2></td></tr>
 </ol>
 </dd></dl>
 
+<p>在文件 <a class="el" href="handy-imp_8h_source.html">handy-imp.h</a> 第 <a class="el" href="handy-imp_8h_source.html#l00166">166</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1AutoContext_a95dfd440997fea28095d56aa5835b30b_cgraph.svg" width="336" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1AutoContext_a95dfd440997fea28095d56aa5835b30b_cgraph.svg" width="336" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -293,11 +296,12 @@ template&lt;typename T &gt; </div>
 <dd>
 2. 类型安全：通过static_cast强制转换，确保返回正确类型的引用 </dd></dl>
 
+<p>在文件 <a class="el" href="handy-imp_8h_source.html">handy-imp.h</a> 第 <a class="el" href="handy-imp_8h_source.html#l00075">75</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1AutoContext_a31ec5f39af7e6dcef8407f573f2a3734_icgraph.svg" width="390" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1AutoContext_a31ec5f39af7e6dcef8407f573f2a3734_icgraph.svg" width="390" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -328,6 +332,8 @@ template&lt;typename T &gt; </div>
 <dl class="section return"><dt>返回</dt><dd>bool true: 已创建上下文，false: 未创建</dd></dl>
 <p>无锁读取m_ctx指针，线程安全（内存序：acquire，确保读取到最新值） </p>
 <dl class="section note"><dt>注解</dt><dd>线程安全：支持多线程并发调用，无锁开销，性能高效 </dd></dl>
+
+<p>在文件 <a class="el" href="handy-imp_8h_source.html">handy-imp.h</a> 第 <a class="el" href="handy-imp_8h_source.html#l00156">156</a> 行定义.</p>
 
 </div>
 </div>
@@ -363,11 +369,12 @@ template&lt;typename T &gt; </div>
 </ol>
 <p>线程安全：多线程并发调用时，仅第一个调用会执行清理逻辑，其他调用无操作 </p>
 
+<p>在文件 <a class="el" href="handy-imp_8h_source.html">handy-imp.h</a> 第 <a class="el" href="handy-imp_8h_source.html#l00129">129</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1AutoContext_a5add2c81ef03e428ecc7f13f2e9b6151_icgraph.svg" width="336" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1AutoContext_a5add2c81ef03e428ecc7f13f2e9b6151_icgraph.svg" width="336" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -394,6 +401,8 @@ template&lt;typename T &gt; </div>
 
 <p>上下文对象指针（原子操作确保多线程可见性） </p>
 
+<p>在文件 <a class="el" href="handy-imp_8h_source.html">handy-imp.h</a> 第 <a class="el" href="handy-imp_8h_source.html#l00172">172</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab6a733050e7e4245117218730d869d26"></a>
@@ -414,6 +423,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>上下文清理函数指针 存储销毁上下文对象的任务，避免析构时类型信息丢失 </p>
+
+<p>在文件 <a class="el" href="handy-imp_8h_source.html">handy-imp.h</a> 第 <a class="el" href="handy-imp_8h_source.html#l00181">181</a> 行定义.</p>
 
 </div>
 </div>
@@ -436,6 +447,8 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>互斥锁 </p>
+
+<p>在文件 <a class="el" href="handy-imp_8h_source.html">handy-imp.h</a> 第 <a class="el" href="handy-imp_8h_source.html#l00175">175</a> 行定义.</p>
 
 </div>
 </div>

@@ -6,13 +6,17 @@ var searchData=
   ['channel',['Channel',['../classhandy_1_1Channel.html#a6799f6e926dd77b91e5280f0128d01b1',1,'handy::Channel']]],
   ['checkandrotatelogfile',['checkAndRotateLogFile',['../classhandy_1_1Logger.html#a434ac0f25b7add4d9276da50167e2117',1,'handy::Logger']]],
   ['checkmagic',['checkMagic',['../classhandy_1_1LengthCodec.html#a29011b90ccc681ae4aae490269043cc0',1,'handy::LengthCodec']]],
+  ['checkstatus',['checkStatus',['../namespacehandy_1_1fileTest.html#ac415b83fa17d3b62779e471c2617338e',1,'handy::fileTest']]],
+  ['cleantestenv',['cleanTestEnv',['../namespacehandy_1_1daemonTest.html#a3851edde745ce542c3e590fe280f7134',1,'handy::daemonTest']]],
+  ['cleantestfiles',['cleanTestFiles',['../namespacehandy_1_1fileTest.html#ac7b0c964d0d67dc1997d1865df7a4d95',1,'handy::fileTest']]],
   ['cleanup',['cleanup',['../classhandy_1_1TcpConn.html#a9ac6fe9839fbf06e2246f52b45668d01',1,'handy::TcpConn']]],
-  ['clear',['clear',['../classhandy_1_1HttpMsg.html#a6af21518e70f11938fcdebfa3db1f5cb',1,'handy::HttpMsg::clear()'],['../classhandy_1_1HttpRequest.html#ae39f092276a181a44f1eb5b7f65766c7',1,'handy::HttpRequest::clear()'],['../classhandy_1_1HttpResponse.html#acbe680ebf31b7ea5d54830b9af6f36c6',1,'handy::HttpResponse::clear()'],['../classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42',1,'handy::Buffer::clear()'],['../classhandy_1_1Slice.html#a7f14d97101d460d6cd92b35c24c466c0',1,'handy::Slice::clear()']]],
+  ['clear',['clear',['../classhandy_1_1HttpMsg.html#a6af21518e70f11938fcdebfa3db1f5cb',1,'handy::HttpMsg::clear()'],['../classhandy_1_1HttpRequest.html#ae39f092276a181a44f1eb5b7f65766c7',1,'handy::HttpRequest::clear()'],['../classhandy_1_1HttpResponse.html#acbe680ebf31b7ea5d54830b9af6f36c6',1,'handy::HttpResponse::clear()'],['../classhandy_1_1Logger.html#a52bd5919c0b225d6053498c8ecaed1a5',1,'handy::Logger::clear()'],['../classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42',1,'handy::Buffer::clear()'],['../classhandy_1_1Slice.html#a7f14d97101d460d6cd92b35c24c466c0',1,'handy::Slice::clear()']]],
   ['cleardata',['clearData',['../classhandy_1_1HttpConnPtr.html#a49c214e0ff829597517ff35dff826d74',1,'handy::HttpConnPtr']]],
   ['clone',['clone',['../classhandy_1_1CodecBase.html#a83be0020483fe076885abfd335428a96',1,'handy::CodecBase::clone()'],['../classhandy_1_1LineCodec.html#a2bdb8bdb28d753194487fc2abf84d239',1,'handy::LineCodec::clone()'],['../classhandy_1_1LengthCodec.html#aa3ccbe69cf3cbf27468eb5929cf507ab',1,'handy::LengthCodec::clone()']]],
   ['close',['close',['../classhandy_1_1TcpConn.html#a277d22f010726325dfc767ff275fe570',1,'handy::TcpConn::close()'],['../classhandy_1_1Channel.html#a16bfdb9fd8be1db78f17777fb59ebe85',1,'handy::Channel::close()'],['../classhandy_1_1UdpConn.html#ad60a08b5941d9cf5ecf786d514b69915',1,'handy::UdpConn::close()']]],
   ['closelogfile',['closeLogFile',['../classhandy_1_1Logger.html#a1869d64a7b809063a5c777b2eddeb70e',1,'handy::Logger']]],
   ['closenow',['closeNow',['../classhandy_1_1TcpConn.html#aed1048ae4c4766e402371acbc9afd6a5',1,'handy::TcpConn']]],
+  ['closetempsocket',['closeTempSocket',['../namespacehandy_1_1netTest.html#a6566427ee3de225971e897e87ea067e8',1,'handy::netTest']]],
   ['code',['code',['../classhandy_1_1Status.html#abac5c65c266afdd5d0da7b1194c49e52',1,'handy::Status']]],
   ['codecbase',['CodecBase',['../classhandy_1_1CodecBase.html#a40f25f67aa1d067b84aaa5ab0f7785b2',1,'handy::CodecBase::CodecBase(const CodecBase &amp;)=delete'],['../classhandy_1_1CodecBase.html#abf2d72021a06485436fd17af6bb7ed8e',1,'handy::CodecBase::CodecBase(CodecBase &amp;&amp;) noexcept=default'],['../classhandy_1_1CodecBase.html#a6b71876697dffea616f506f3dd76db63',1,'handy::CodecBase::CodecBase()=default']]],
   ['compare',['compare',['../classhandy_1_1Slice.html#ac07aa3819e66893480287ad790a27d0d',1,'handy::Slice']]],
@@ -25,5 +29,8 @@ var searchData=
   ['createconnection',['createConnection',['../classhandy_1_1TcpConn.html#a9ef6387e0679449e2b1d0f9b550e18b5',1,'handy::TcpConn::createConnection(EventBase *base, const std::string &amp;destHost, unsigned short destPort, int timeout_ms=0, const std::string &amp;localIp=&quot;&quot;)'],['../classhandy_1_1TcpConn.html#ad83bd7d75bb9ecb1a1f1cb87c777173e',1,'handy::TcpConn::createConnection(EventBase *base, int fd, const Ipv4Addr &amp;local, const Ipv4Addr &amp;peer)'],['../classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd',1,'handy::UdpConn::createConnection()']]],
   ['createdir',['createDir',['../classhandy_1_1File.html#a4d5d82396291c98069b2a4a0ac13ae87',1,'handy::File']]],
   ['createpoller',['createPoller',['../namespacehandy.html#a69606e6700aa1efe845830b858c8c578',1,'handy']]],
-  ['createsafe',['createSafe',['../classhandy_1_1Slice.html#af45f20d3303966c98501cbbc7f17eeef',1,'handy::Slice']]]
+  ['createsafe',['createSafe',['../classhandy_1_1Slice.html#af45f20d3303966c98501cbbc7f17eeef',1,'handy::Slice']]],
+  ['createtempinifile',['createTempIniFile',['../namespacehandy_1_1confTest.html#a7ae69e41bd2c7c3171a87660e7716572',1,'handy::confTest']]],
+  ['createtemptcpsocket',['createTempTcpSocket',['../namespacehandy_1_1netTest.html#a6f9436df62b53b26aad843a0103ab2b8',1,'handy::netTest']]],
+  ['createtestfile',['createTestFile',['../namespacehandy_1_1statSvrTest.html#af29684a80b3e27f1061435d8cfd6aa19',1,'handy::statSvrTest']]]
 ];

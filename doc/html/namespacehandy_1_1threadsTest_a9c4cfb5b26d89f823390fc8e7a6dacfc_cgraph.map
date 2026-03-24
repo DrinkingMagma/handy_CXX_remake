@@ -1,0 +1,16 @@
+<map id="handy::threadsTest::testThreadPoolMultiTask" name="handy::threadsTest::testThreadPoolMultiTask">
+<area shape="rect" id="node2" href="$namespacehandy_1_1threadsTest.html#a8a3baaea2f6eebd2a77562c3c50e7022" title="重置全局测试变量（避免测试间干扰） " alt="" coords="241,169,375,210"/>
+<area shape="rect" id="node3" href="$thread__pool__test_8cpp.html#af20fc77e12bba9b5bba24850f1472099" title="g_taskExecCount" alt="" coords="456,51,583,77"/>
+<area shape="rect" id="node7" href="$classhandy_1_1ThreadPool.html#aa539ee3210ff0346b8f88d705bf56f32" title="向线程池添加任务（右值引用，线程安全） " alt="" coords="239,234,377,275"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1threadsTest.html#ad321c9b293454f86d26fe9a42a9e4275" title="测试用带参数任务（通过lambda捕获传递参数） " alt="" coords="241,38,375,79"/>
+<area shape="rect" id="node10" href="$classhandy_1_1ThreadPool.html#a9184b6409d22e2d2110d9666a4506526" title="获取当前等待执行的任务数量（线程安全） " alt="" coords="235,299,381,341"/>
+<area shape="rect" id="node12" href="$namespacehandy_1_1threadsTest.html#a31b1a09b21d1a397bbed227758c88465" title="测试用基础任务（原子计数+状态标记） " alt="" coords="241,103,375,145"/>
+<area shape="rect" id="node13" href="$classhandy_1_1ThreadPool.html#a645707a5d4a6d126b5c3427b1ec39124" title="通知线程池优雅退出（线程安全） " alt="" coords="228,365,388,392"/>
+<area shape="rect" id="node15" href="$classhandy_1_1ThreadPool.html#aa12157caf7e934a8f56c6f9ce79af4b1" title="等待所有线程退出（阻塞当前线程） " alt="" coords="229,416,387,443"/>
+<area shape="rect" id="node4" href="$thread__pool__test_8cpp.html#aa697aa5d2577edd72b873af09a835f5d" title="g_taskFlag" alt="" coords="476,108,563,135"/>
+<area shape="rect" id="node5" href="$thread__pool__test_8cpp.html#a2b3fdaf9fe8e47838b760125fb141dd8" title="g_multiProducerCount" alt="" coords="444,209,595,236"/>
+<area shape="rect" id="node6" href="$thread__pool__test_8cpp.html#a8b38c9b516bd6453ac1dc73bfa316196" title="g_multiConsumerCount" alt="" coords="440,159,599,185"/>
+<area shape="rect" id="node8" href="$classhandy_1_1SafeQueue.html#acb896f0aca5b54570157b4a9528ec529" title="向队列尾部添加元素(线程安全) " alt="" coords="436,260,603,287"/>
+<area shape="rect" id="node11" href="$classhandy_1_1SafeQueue.html#af07406186104294fc562099a1f323c71" title="获取当前队列中的元素数量(线程安全) " alt="" coords="438,311,601,337"/>
+<area shape="rect" id="node14" href="$classhandy_1_1SafeQueue.html#a7602d1d067c8b146ba6b4e7cbad335a0" title="通知队列优雅退出(线程安全) " alt="" coords="440,365,599,392"/>
+</map>

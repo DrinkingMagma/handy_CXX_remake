@@ -1,0 +1,11 @@
+<map id="testAbsoluteTime" name="testAbsoluteTime">
+<area shape="rect" id="node2" href="$structhandy_1_1Utils.html#a6769faed062da90b4411a3dc189727bf" title="获取当前系统时间(毫秒级) " alt="" coords="815,107,963,133"/>
+<area shape="rect" id="node4" href="$classhandy_1_1EventBase.html#ade4a9837ba0ad90032f217a4c04a674c" title="在执行时间戳执行任务（支持周期性） " alt="" coords="805,5,973,32"/>
+<area shape="rect" id="node5" href="$classhandy_1_1EventBase.html#a46364e14e3307741148d587791971d7e" title="在指定延迟后执行任务（支持周期性） " alt="" coords="567,56,749,83"/>
+<area shape="rect" id="node6" href="$timer_8cpp.html#a02db9fa52d887d712e5b91e3cdc970e2" title="testCancelTimer" alt="" coords="177,81,296,108"/>
+<area shape="rect" id="node3" href="$structhandy_1_1Utils.html#a504697916771757a1fb83eb4cdb994b5" title="获取当前系统时间(微秒级，线程安全) " alt="" coords="1028,107,1185,133"/>
+<area shape="rect" id="node7" href="$classhandy_1_1EventBase.html#a9a9d1b7712601398261784e045f0a6fa" title="取消定时器 " alt="" coords="344,157,519,184"/>
+<area shape="rect" id="node8" href="$timer_8cpp.html#a10a1b90b03320cd0c612367350dfd9a6" title="testMultipleTimers" alt="" coords="367,107,496,133"/>
+<area shape="rect" id="node9" href="$classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f" title="退出事件循环（线程安全） " alt="" coords="579,157,737,184"/>
+<area shape="rect" id="node10" href="$classhandy_1_1EventBase.html#a54e0450f295724a37aa7ff0404058fb7" title="唤醒事件循环（线程安全） " alt="" coords="797,157,980,184"/>
+</map>

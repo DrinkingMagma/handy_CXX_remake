@@ -1,0 +1,6 @@
+<map id="handy::Status::fromSystem" name="handy::Status::fromSystem">
+<area shape="rect" id="node2" href="$namespacehandy_1_1statusTest.html#a595afcc4a907331411ebe4696d3d9c36" title="测试Status静态创建函数 " alt="" coords="236,5,371,47"/>
+<area shape="rect" id="node5" href="$namespacehandy_1_1statusTest.html#afe6ceb6ad6d9760995371a4d58e1cd99" title="多线程测试（验证线程安全） " alt="" coords="236,71,371,112"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1statusTest.html#ad6e6436c4424c1b3e8840a9d3c0cc77f" title="handy::statusTest::\lrunAllTests" alt="" coords="419,39,553,80"/>
+<area shape="rect" id="node4" href="$status__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="601,46,652,73"/>
+</map>

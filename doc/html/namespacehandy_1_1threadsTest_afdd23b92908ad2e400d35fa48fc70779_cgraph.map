@@ -1,0 +1,13 @@
+<map id="handy::threadsTest::testSafeQueueBasic" name="handy::threadsTest::testSafeQueueBasic">
+<area shape="rect" id="node2" href="$namespacehandy_1_1threadsTest.html#a8a3baaea2f6eebd2a77562c3c50e7022" title="重置全局测试变量（避免测试间干扰） " alt="" coords="231,114,364,155"/>
+<area shape="rect" id="node3" href="$thread__pool__test_8cpp.html#af20fc77e12bba9b5bba24850f1472099" title="g_taskExecCount" alt="" coords="455,20,581,46"/>
+<area shape="rect" id="node7" href="$classhandy_1_1SafeQueue.html#acb896f0aca5b54570157b4a9528ec529" title="向队列尾部添加元素(线程安全) " alt="" coords="214,180,381,206"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1threadsTest.html#a31b1a09b21d1a397bbed227758c88465" title="测试用基础任务（原子计数+状态标记） " alt="" coords="231,48,364,90"/>
+<area shape="rect" id="node9" href="$classhandy_1_1SafeQueue.html#af07406186104294fc562099a1f323c71" title="获取当前队列中的元素数量(线程安全) " alt="" coords="216,230,379,257"/>
+<area shape="rect" id="node10" href="$classhandy_1_1SafeQueue.html#aef745af0cbdac7e9e8f2366a5db8f40d" title="从队列头部取出元素(支持超时等待,线程安全) " alt="" coords="204,281,391,308"/>
+<area shape="rect" id="node11" href="$classhandy_1_1SafeQueue.html#a7602d1d067c8b146ba6b4e7cbad335a0" title="通知队列优雅退出(线程安全) " alt="" coords="218,332,377,358"/>
+<area shape="rect" id="node12" href="$classhandy_1_1SafeQueue.html#a3181499b61b4fdd19223c893c8c25e57" title="查询队列是否已退出(线程安全) " alt="" coords="205,382,390,409"/>
+<area shape="rect" id="node4" href="$thread__pool__test_8cpp.html#aa697aa5d2577edd72b873af09a835f5d" title="g_taskFlag" alt="" coords="475,70,561,97"/>
+<area shape="rect" id="node5" href="$thread__pool__test_8cpp.html#a2b3fdaf9fe8e47838b760125fb141dd8" title="g_multiProducerCount" alt="" coords="443,121,593,148"/>
+<area shape="rect" id="node6" href="$thread__pool__test_8cpp.html#a8b38c9b516bd6453ac1dc73bfa316196" title="g_multiConsumerCount" alt="" coords="439,172,597,198"/>
+</map>

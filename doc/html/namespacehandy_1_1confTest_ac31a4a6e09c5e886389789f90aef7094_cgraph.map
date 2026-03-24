@@ -1,0 +1,13 @@
+<map id="handy::confTest::test_basic_parsing" name="handy::confTest::test_basic_parsing">
+<area shape="rect" id="node2" href="$namespacehandy_1_1confTest.html#a7ae69e41bd2c7c3171a87660e7716572" title="创建临时测试INI文件 " alt="" coords="199,5,389,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Conf.html#a68f8de8f5d3ca79a3e7b3b99c0712234" title="解析指定的INI配置文件 " alt="" coords="227,71,361,98"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1confTest.html#a7e3cafddb4c958c3c7d891228589f3ff" title="删除临时测试文件 " alt="" coords="199,123,389,164"/>
+<area shape="rect" id="node9" href="$classhandy_1_1Conf.html#a856496911ede1e6e1e1dd691a1df96ca" title="获取字符串类型配置值 " alt="" coords="235,189,353,215"/>
+<area shape="rect" id="node10" href="$classhandy_1_1Conf.html#a6517617284370f4b202c2d672b66f8a6" title="获取整数类型配置值 " alt="" coords="215,239,373,266"/>
+<area shape="rect" id="node11" href="$classhandy_1_1Conf.html#ac95baddc78ffe210a7db17937402d36a" title="获取浮点类型配置值 " alt="" coords="221,290,367,317"/>
+<area shape="rect" id="node12" href="$classhandy_1_1Conf.html#abfa57fe0dd253686321846148cd8661e" title="获取布尔类型配置值 " alt="" coords="211,341,377,367"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Slice.html#a7f14d97101d460d6cd92b35c24c466c0" title="清空视图（重置为空视图） " alt="" coords="453,21,583,47"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe" title="判断视图是否为空 " alt="" coords="449,71,587,98"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Slice.html#a9942173fc598137ca9d959ed8cb39fe7" title="移除前后空白字符（修改当前视图） " alt="" coords="437,122,599,149"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Conf.html#a6fd50de0f9f04dbf88f65b6d32f4c844" title="生成内部存储的键名（节名.键名，转为小写） " alt="" coords="440,181,596,207"/>
+</map>

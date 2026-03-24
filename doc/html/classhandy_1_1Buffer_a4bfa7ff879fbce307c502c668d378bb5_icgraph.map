@@ -1,0 +1,6 @@
+<map id="handy::Buffer::setExpectGrowSize" name="handy::Buffer::setExpectGrowSize">
+<area shape="rect" id="node2" href="$namespacehandy_1_1netTest.html#ac61eff50eb6968ff473ad272aaeabc15" title="测试Buffer类基本数据操作（追加、消耗、清空） " alt="" coords="235,5,373,47"/>
+<area shape="rect" id="node5" href="$namespacehandy_1_1netTest.html#a33466d1829f046b00a1b3b152b53f36f" title="测试Buffer类内存管理（碎片整理、自动扩展） " alt="" coords="220,71,388,112"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1netTest.html#a67440c6a5e1613729fd7d78f23f151cc" title="handy::netTest::run\l_all_tests" alt="" coords="436,39,571,80"/>
+<area shape="rect" id="node4" href="$net__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="619,46,669,73"/>
+</map>

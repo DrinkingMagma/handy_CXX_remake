@@ -1,0 +1,4 @@
+<map id="handy::utilsTest::test_atoi" name="handy::utilsTest::test_atoi">
+<area shape="rect" id="node2" href="$structhandy_1_1Utils.html#ad661a83e923aec39f76d1038f3a8372d" title="将字符串区间转换为整数 " alt="" coords="229,5,350,32"/>
+<area shape="rect" id="node3" href="$structhandy_1_1Utils.html#aa85027bfd20881ce1866c7e368c31ef9" title="将字符串区间严格转换为整数（需完全匹配，线程安全） " alt="" coords="225,56,353,83"/>
+</map>

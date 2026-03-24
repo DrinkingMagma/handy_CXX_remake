@@ -1,13 +1,29 @@
 <map id="handy::Status::ioError" name="handy::Status::ioError">
-<area shape="rect" id="node2" href="$classhandy_1_1File.html#a5b778189e38180b3a7888d01d85292ac" title="读取文件内容到字符串 " alt="" coords="207,57,366,83"/>
-<area shape="rect" id="node5" href="$classhandy_1_1File.html#a301c1e79828ed43e2dab0a749ce3f09b" title="将字符串内容写入文件（覆盖模式） " alt="" coords="203,107,371,134"/>
-<area shape="rect" id="node6" href="$classhandy_1_1File.html#a25c291a825fafe32feeeea8e1322a804" title="安全写入文件（先写临时文件，再原子重命名） " alt="" coords="419,158,585,185"/>
-<area shape="rect" id="node7" href="$classhandy_1_1File.html#a67e8a00e0036f9550d4a7c63637088d6" title="获取目录下的所有子文件/子目录名 " alt="" coords="207,209,367,235"/>
-<area shape="rect" id="node8" href="$classhandy_1_1File.html#acc3347222815f1358f7b376e3e7bd8f8" title="删除指定文件 " alt="" coords="211,259,362,286"/>
-<area shape="rect" id="node9" href="$classhandy_1_1File.html#a4d5d82396291c98069b2a4a0ac13ae87" title="创建目录（仅创建一级目录） " alt="" coords="213,310,360,337"/>
-<area shape="rect" id="node10" href="$classhandy_1_1File.html#a8acfc71d9fcedd4a029cbfae45dc2d0a" title="删除空目录 " alt="" coords="213,361,360,387"/>
-<area shape="rect" id="node11" href="$classhandy_1_1File.html#a6f264ae5ec8ba8bbf3cd7d96e6fc4356" title="获取文件大小 " alt="" coords="207,411,366,438"/>
-<area shape="rect" id="node12" href="$classhandy_1_1File.html#af37989e9dc29d191f3eb8a832052bb98" title="重名名文件或目录 " alt="" coords="218,462,355,489"/>
-<area shape="rect" id="node3" href="$classhandy_1_1HttpConnPtr.html#a5baa91c7b32051095038b4c9d4e9f30f" title="发送文件作为响应 " alt="" coords="433,5,571,47"/>
-<area shape="rect" id="node4" href="$classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99" title="注册页面文件（将文件内容作为页面响应） " alt="" coords="435,71,569,112"/>
+<area shape="rect" id="node2" href="$classhandy_1_1File.html#a5b778189e38180b3a7888d01d85292ac" title="读取文件内容到字符串 " alt="" coords="207,166,366,193"/>
+<area shape="rect" id="node14" href="$classhandy_1_1File.html#a301c1e79828ed43e2dab0a749ce3f09b" title="将字符串内容写入文件（覆盖模式） " alt="" coords="203,314,371,341"/>
+<area shape="rect" id="node15" href="$classhandy_1_1File.html#a25c291a825fafe32feeeea8e1322a804" title="安全写入文件（先写临时文件，再原子重命名） " alt="" coords="421,305,587,331"/>
+<area shape="rect" id="node18" href="$classhandy_1_1File.html#a67e8a00e0036f9550d4a7c63637088d6" title="获取目录下的所有子文件/子目录名 " alt="" coords="207,567,367,594"/>
+<area shape="rect" id="node20" href="$classhandy_1_1File.html#acc3347222815f1358f7b376e3e7bd8f8" title="删除指定文件 " alt="" coords="211,517,362,543"/>
+<area shape="rect" id="node22" href="$classhandy_1_1File.html#a4d5d82396291c98069b2a4a0ac13ae87" title="创建目录（仅创建一级目录） " alt="" coords="213,415,360,442"/>
+<area shape="rect" id="node23" href="$classhandy_1_1File.html#a8acfc71d9fcedd4a029cbfae45dc2d0a" title="删除空目录 " alt="" coords="213,618,360,645"/>
+<area shape="rect" id="node24" href="$classhandy_1_1File.html#a6f264ae5ec8ba8bbf3cd7d96e6fc4356" title="获取文件大小 " alt="" coords="207,466,366,493"/>
+<area shape="rect" id="node25" href="$classhandy_1_1File.html#af37989e9dc29d191f3eb8a832052bb98" title="重名名文件或目录 " alt="" coords="218,365,355,391"/>
+<area shape="rect" id="node26" href="$namespacehandy_1_1statusTest.html#a595afcc4a907331411ebe4696d3d9c36" title="测试Status静态创建函数 " alt="" coords="219,672,354,713"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpConnPtr.html#a5baa91c7b32051095038b4c9d4e9f30f" title="发送文件作为响应 " alt="" coords="435,5,573,47"/>
+<area shape="rect" id="node4" href="$classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99" title="注册页面文件（将文件内容作为页面响应） " alt="" coords="437,71,571,112"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1fileTest.html#a78e164ae2492b8a4080410faee8830ec" title="测试文件内容读写 " alt="" coords="435,188,573,229"/>
+<area shape="rect" id="node12" href="$namespacehandy_1_1fileTest.html#ae3c5eeaf9febafc577893c74e42edd9e" title="测试安全写入（renameSave） " alt="" coords="670,280,807,321"/>
+<area shape="rect" id="node13" href="$namespacehandy_1_1fileTest.html#a06819c234274d7b8430df9e34bf7d93b" title="多线程测试（并发读写文件） " alt="" coords="435,356,573,397"/>
+<area shape="rect" id="node5" href="$namespacehandy_1_1statSvrTest.html#a8923512cf2e34c3894bff312608462d0" title="测试页面回调注册与处理 " alt="" coords="637,57,840,99"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1statSvrTest.html#a04884af2631c5060a5a59c875c827cc4" title="测试内容类型设置 " alt="" coords="645,123,833,164"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1statSvrTest.html#a51d6168c2b8db2fabed82b2a4ebb6bf4" title="handy::statSvrTest\l::runAllTests" alt="" coords="889,91,1021,132"/>
+<area shape="rect" id="node7" href="$stat-svr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1069,98,1120,125"/>
+<area shape="rect" id="node10" href="$namespacehandy_1_1fileTest.html#a33080a341d943df16856498ee9fcd13c" title="handy::fileTest::run\l_all_tests" alt="" coords="888,421,1021,463"/>
+<area shape="rect" id="node11" href="$file__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1069,429,1120,455"/>
+<area shape="rect" id="node16" href="$namespacehandy_1_1fileTest.html#a997bba3124270e63134e408342827375" title="测试目录操作 " alt="" coords="431,487,577,528"/>
+<area shape="rect" id="node17" href="$namespacehandy_1_1fileTest.html#aa38e5690185315439c05d4859d1791a8" title="测试文件属性操作（大小、重命名、存在性） " alt="" coords="435,421,573,463"/>
+<area shape="rect" id="node19" href="$namespacehandy_1_1fileTest.html#a4e5171866f13d54a1954791d8d5da125" title="测试错误处理（空指针等无效参数） " alt="" coords="435,552,573,593"/>
+<area shape="rect" id="node21" href="$namespacehandy_1_1fileTest.html#ac7b0c964d0d67dc1997d1865df7a4d95" title="清理测试生成的文件和目录 " alt="" coords="419,617,589,659"/>
+<area shape="rect" id="node27" href="$namespacehandy_1_1statusTest.html#ad6e6436c4424c1b3e8840a9d3c0cc77f" title="handy::statusTest::\lrunAllTests" alt="" coords="437,683,571,724"/>
+<area shape="rect" id="node28" href="$status__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="713,690,764,717"/>
 </map>

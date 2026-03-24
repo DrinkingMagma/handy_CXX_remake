@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy/conf.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('conf_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">conf.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="conf_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="conf_8h.html">conf.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="slice_8h.html">slice.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">using</span> std::list;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">using</span> std::FILE;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>handy </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classhandy_1_1Conf.html#a6fd50de0f9f04dbf88f65b6d32f4c844">   31</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classhandy_1_1Conf.html#a6fd50de0f9f04dbf88f65b6d32f4c844">Conf::makeKey</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp;section, <span class="keyword">const</span> std::string&amp; name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">string</span> key = section + <span class="stringliteral">&quot;.&quot;</span> + name;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">// 转换为小写，实现大小写不敏感查找</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        transform(key.begin(), key.end(), key.begin(), ::tolower);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> key;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classhandy_1_1Conf.html#a856496911ede1e6e1e1dd691a1df96ca">   39</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classhandy_1_1Conf.html#a856496911ede1e6e1e1dd691a1df96ca">Conf::get</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; section, <span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string&amp; defaultValue)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">string</span> key = <a class="code" href="classhandy_1_1Conf.html#a6fd50de0f9f04dbf88f65b6d32f4c844">makeKey</a>(section, name);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">auto</span> p = <a class="code" href="classhandy_1_1Conf.html#ad5361b2b88a389418e1df3d486a9dbb1">m_values</a>.find(key);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// 若找到则返回最后一个值（多行值取最后一行），否则返回默认值</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> p == <a class="code" href="classhandy_1_1Conf.html#ad5361b2b88a389418e1df3d486a9dbb1">m_values</a>.end() ? defaultValue : p-&gt;second.back();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classhandy_1_1Conf.html#ae78f51c6b0e42e8bd5c7e36ae0ea6690">   47</a></span>&#160;    list&lt;string&gt; <a class="code" href="classhandy_1_1Conf.html#ae78f51c6b0e42e8bd5c7e36ae0ea6690">Conf::getStrings</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; section, <span class="keyword">const</span> std::string&amp; name)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">string</span> key = <a class="code" href="classhandy_1_1Conf.html#a6fd50de0f9f04dbf88f65b6d32f4c844">makeKey</a>(section, name);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">auto</span> p = <a class="code" href="classhandy_1_1Conf.html#ad5361b2b88a389418e1df3d486a9dbb1">m_values</a>.find(key);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> p == <a class="code" href="classhandy_1_1Conf.html#ad5361b2b88a389418e1df3d486a9dbb1">m_values</a>.end() ? list&lt;string&gt;() : p-&gt;second;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classhandy_1_1Conf.html#a6517617284370f4b202c2d672b66f8a6">   54</a></span>&#160;    <span class="keywordtype">long</span> <a class="code" href="classhandy_1_1Conf.html#a6517617284370f4b202c2d672b66f8a6">Conf::getInteger</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; section, <span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">long</span> defaultValue)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">string</span> valStr = <span class="keyword">get</span>(section, name, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *val = valStr.c_str();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">char</span> *end;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">// 解析整数（支持十进制、十六进制）</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">// - value：待解析字符串</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// - &amp;end：输出参数，指向未解析的第一个字符</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">// - 0：自动判断进制（0x开头为十六进制，否则为十进制）</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">long</span> n = strtol(val, &amp;end, 0);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// 若解析成功（至少有一个字符被解析），返回解析结果，否则返回默认值</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> end &gt; val ? n : defaultValue;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classhandy_1_1Conf.html#ac95baddc78ffe210a7db17937402d36a">   70</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classhandy_1_1Conf.html#ac95baddc78ffe210a7db17937402d36a">Conf::getReal</a>(<span class="keyword">const</span> std::string&amp; section, <span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">double</span> defaultValue)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    { </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">string</span> valStr = <span class="keyword">get</span>(section, name, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span>* val = valStr.c_str();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">char</span> *end;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">// 解析浮点数（支持科学计数法）</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">double</span> n = strtod(val, &amp;end);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> end &gt; val ? n : defaultValue;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classhandy_1_1Conf.html#abfa57fe0dd253686321846148cd8661e">   82</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classhandy_1_1Conf.html#abfa57fe0dd253686321846148cd8661e">Conf::getBoolean</a>(<span class="keyword">const</span> std::string&amp; section, <span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">bool</span> defaultValue)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">string</span> valStr = <span class="keyword">get</span>(section, name, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        transform(valStr.begin(), valStr.end(), valStr.begin(), ::tolower);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">if</span>(valStr == <span class="stringliteral">&quot;true&quot;</span> || valStr == <span class="stringliteral">&quot;yes&quot;</span> || valStr == <span class="stringliteral">&quot;on&quot;</span> || valStr == <span class="stringliteral">&quot;1&quot;</span>)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(valStr == <span class="stringliteral">&quot;false&quot;</span> || valStr == <span class="stringliteral">&quot;no&quot;</span> || valStr == <span class="stringliteral">&quot;off&quot;</span> || valStr == <span class="stringliteral">&quot;0&quot;</span>)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> defaultValue;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="namespacehandy_1_1anonymous__namespace_02conf_8cpp_03.html">   99</a></span>&#160;    <span class="keyword">namespace</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html">  101</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html">LineScanner</a></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        { </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a90db6f68dbe3673fe1dc297f978b40aa">  104</a></span>&#160;            <span class="keywordtype">char</span> *<a class="code" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a90db6f68dbe3673fe1dc297f978b40aa">p</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a8a9e52f6917024579cb8075a81e837e3">  106</a></span>&#160;            <span class="keywordtype">int</span> <a class="code" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a8a9e52f6917024579cb8075a81e837e3">err</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a55bd0302c77698efc3d14e9fc510789c">  112</a></span>&#160;            <a class="code" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a55bd0302c77698efc3d14e9fc510789c">LineScanner</a>(<span class="keywordtype">char</span> *ln) : p(ln), err(0) {}</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a9914774244c4ba75826cd4210f9ed375">  118</a></span>&#160;            <a class="code" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html">LineScanner</a>&amp; <a class="code" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a9914774244c4ba75826cd4210f9ed375">skipSpace</a>() </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="keywordflow">while</span> (*p &amp;&amp; isspace(static_cast&lt;unsigned char&gt;(*p))) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    p++;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a9dbd5e6a7b3dc60221e7127bef80a64a">  132</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a9dbd5e6a7b3dc60221e7127bef80a64a">rstrip</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* s, <span class="keyword">const</span> <span class="keywordtype">char</span>* e)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="keywordflow">while</span>(e &gt; s &amp;&amp; isspace(static_cast&lt;unsigned char&gt;(*e -1)))</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    e--;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <span class="keywordflow">return</span> string(s, e);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a424ee5f71aa1c328827c38262ee69d96">  143</a></span>&#160;            <span class="keywordtype">int</span> <a class="code" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a424ee5f71aa1c328827c38262ee69d96">peekChar</a>()</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                skipSpace();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <span class="keywordflow">return</span> *p;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#ab527414285e61f23bd68189ad5c4d08b">  154</a></span>&#160;            <a class="code" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html">LineScanner</a>&amp; <a class="code" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#ab527414285e61f23bd68189ad5c4d08b">skip</a>(<span class="keywordtype">int</span> i)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                p += i;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a19582757deb6661f43328720eebc0cde">  166</a></span>&#160;            <a class="code" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html">LineScanner</a>&amp; <a class="code" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a19582757deb6661f43328720eebc0cde">match</a>(<span class="keywordtype">char</span> c)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                skipSpace();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                err = (*p++ != c);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a6145274c2ad83b496e72199e698072f1">  179</a></span>&#160;            <span class="keywordtype">string</span> <a class="code" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a6145274c2ad83b496e72199e698072f1">consumeTill</a>(<span class="keywordtype">char</span> c)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                skipSpace();</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                <span class="keywordtype">char</span> *e = p;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <span class="comment">// 移动到终止字符位置</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="keywordflow">while</span> (!err &amp;&amp; *e &amp;&amp; *e != c)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                    e++;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                <span class="comment">// 检查是否找到终止符</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                <span class="keywordflow">if</span>(*e != c)</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                    err = 1;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                <span class="comment">// 提取并修剪字符串</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                <span class="keywordtype">char</span> *s = p;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                p = e;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                <span class="keywordflow">return</span> rstrip(s, e);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a09b8a2be7ec4ce9c3dcb34599ea8d6ca">  205</a></span>&#160;            <span class="keywordtype">string</span> <a class="code" href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a09b8a2be7ec4ce9c3dcb34599ea8d6ca">consumeTillEnd</a>()</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                skipSpace();</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                <span class="keywordtype">char</span> *e = p;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                <span class="comment">// 标记是否已经遇到空格</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                <span class="keywordtype">int</span> wasSpace = 0;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                <span class="keywordflow">while</span> (!err &amp;&amp; *e &amp;&amp; *e != <span class="charliteral">&#39;;&#39;</span> &amp;&amp; *e != <span class="charliteral">&#39;#&#39;</span>)</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                    <span class="keywordflow">if</span>(wasSpace)</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                    wasSpace = isspace(static_cast&lt;unsigned char&gt;(*e));</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                    e++;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                <span class="keywordtype">char</span> *s = p;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                p = e;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                <span class="keywordflow">return</span> rstrip(s, e);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        };</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    } <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="classhandy_1_1Conf.html#a68f8de8f5d3ca79a3e7b3b99c0712234">  226</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classhandy_1_1Conf.html#a68f8de8f5d3ca79a3e7b3b99c0712234">Conf::parse</a>(<span class="keyword">const</span> std::string&amp; fileName)</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="comment">// 记录当前解析的文件名</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <a class="code" href="classhandy_1_1Conf.html#a105b61f0abce30bf40a45e0a35e237ba">m_fileName</a> = fileName;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="comment">// 以只读模式打开</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        FILE *file = fopen(<a class="code" href="classhandy_1_1Conf.html#a105b61f0abce30bf40a45e0a35e237ba">m_fileName</a>.c_str(), <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">if</span>(!file)</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="comment">// 使用智能指针自动关闭文件（避免资源泄露）</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keyword">auto</span> autoClose = std::shared_ptr&lt;FILE&gt;(file, fclose);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="comment">// 最大行长度（16KB）</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> MAX_LINE = 16 * 1024;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="comment">// 行缓冲区,智能指针自动释放缓冲区</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keyword">auto</span> lineBuf = std::make_unique&lt;char[]&gt;(MAX_LINE);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordtype">int</span> curLine = 0; <span class="comment">// 当前行号</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordtype">string</span> section; <span class="comment">// 当前解析的节名称</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <a class="code" href="classhandy_1_1Slice.html">Slice</a> key;     <span class="comment">// 当前解析的键名称</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordtype">int</span> err = 0;    <span class="comment">// 错误标志</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="comment">// 逐行读取文件</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">while</span>(!err &amp;&amp; fgets(lineBuf.get(), MAX_LINE, file) != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            curLine++;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="comment">// 初始化行扫描器</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            LineScanner scanner(lineBuf.get());</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="comment">// 获取行首的第一个非空格字符</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordtype">int</span> firstChar = scanner.peekChar();</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="comment">// 处理注释行或空行（跳过）</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordflow">if</span>(firstChar == <span class="charliteral">&#39;;&#39;</span> || firstChar == <span class="charliteral">&#39;#&#39;</span> || firstChar == <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <span class="comment">// 处理节定义，如：[section]</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(firstChar == <span class="charliteral">&#39;[&#39;</span>)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                section = scanner.skip(1).consumeTill(<span class="charliteral">&#39;]&#39;</span>);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                err = scanner.match(<span class="charliteral">&#39;]&#39;</span>).err;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                <span class="comment">// 新节开始，重置当前键名</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                key.<a class="code" href="classhandy_1_1Slice.html#a7f14d97101d460d6cd92b35c24c466c0">clear</a>();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="comment">// 处理续行（以空格开头，说明属于上一个键的值）</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isspace(static_cast&lt;unsigned char&gt;(lineBuf[0])))</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                <span class="keywordflow">if</span>(!key.<a class="code" href="classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe">empty</a>())</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                    <span class="comment">// 将续行的内容添加到上一个键的值列表中</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                    <a class="code" href="classhandy_1_1Slice.html">Slice</a> val = scanner.consumeTill(<span class="charliteral">&#39;\0&#39;</span>);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                    val.<a class="code" href="classhandy_1_1Slice.html#a9942173fc598137ca9d959ed8cb39fe7">trimSpace</a>();</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                    <a class="code" href="classhandy_1_1Conf.html#ad5361b2b88a389418e1df3d486a9dbb1">m_values</a>[<a class="code" href="classhandy_1_1Conf.html#a6fd50de0f9f04dbf88f65b6d32f4c844">makeKey</a>(section, key)].push_back(val);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                    err = 1;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            <span class="comment">// 处理键值对（如key = value或key::value）</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                <span class="comment">// 备份扫描器状态（用于兼容:分隔符）</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                LineScanner backUp = scanner;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                <span class="comment">// 尝试以&#39;=&#39;分隔键和值</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                key = scanner.consumeTill(<span class="charliteral">&#39;=&#39;</span>);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                key.<a class="code" href="classhandy_1_1Slice.html#a9942173fc598137ca9d959ed8cb39fe7">trimSpace</a>();</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                <span class="keywordflow">if</span>(scanner.peekChar() == <span class="charliteral">&#39;=&#39;</span>)</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                    scanner.skip(1);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    scanner = backUp;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                    key = scanner.consumeTill(<span class="charliteral">&#39;:&#39;</span>);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                    err = scanner.match(<span class="charliteral">&#39;:&#39;</span>).err;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                scanner.skipSpace();</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                <span class="comment">// 提取键值对并存储</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                <a class="code" href="classhandy_1_1Slice.html">Slice</a> val = scanner.consumeTillEnd();</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                val.<a class="code" href="classhandy_1_1Slice.html#a9942173fc598137ca9d959ed8cb39fe7">trimSpace</a>();</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                <a class="code" href="classhandy_1_1Conf.html#ad5361b2b88a389418e1df3d486a9dbb1">m_values</a>[<a class="code" href="classhandy_1_1Conf.html#a6fd50de0f9f04dbf88f65b6d32f4c844">makeKey</a>(section, key)].push_back(val);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                <span class="comment">// std::cout &lt;&lt; section &lt;&lt; &quot;: &quot; &lt;&lt; &quot;-&quot; &lt;&lt; key.toString() &lt;&lt; &quot;- = -&quot; &lt;&lt; val.toString() &lt;&lt; &quot;-&quot; &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">return</span> err ? curLine : 0;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;} <span class="comment">// namespace handy</span></div>
+<div class="ttc" id="classhandy_1_1Conf_html_a6517617284370f4b202c2d672b66f8a6"><div class="ttname"><a href="classhandy_1_1Conf.html#a6517617284370f4b202c2d672b66f8a6">handy::Conf::getInteger</a></div><div class="ttdeci">long getInteger(const std::string &amp;section, const std::string &amp;name, long defaultValue)</div><div class="ttdoc">获取整数类型配置值 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00054">conf.cpp:54</a></div></div>
+<div class="ttc" id="classhandy_1_1Slice_html_a9942173fc598137ca9d959ed8cb39fe7"><div class="ttname"><a href="classhandy_1_1Slice.html#a9942173fc598137ca9d959ed8cb39fe7">handy::Slice::trimSpace</a></div><div class="ttdeci">Slice &amp; trimSpace() noexcept</div><div class="ttdoc">移除前后空白字符（修改当前视图） </div><div class="ttdef"><b>Definition:</b> <a href="slice_8h_source.html#l00353">slice.h:353</a></div></div>
+<div class="ttc" id="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner_html_a424ee5f71aa1c328827c38262ee69d96"><div class="ttname"><a href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a424ee5f71aa1c328827c38262ee69d96">handy::anonymous_namespace{conf.cpp}::LineScanner::peekChar</a></div><div class="ttdeci">int peekChar()</div><div class="ttdoc">获取当前位置的第一个非空格字符 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00143">conf.cpp:143</a></div></div>
+<div class="ttc" id="classhandy_1_1Slice_html_a357b22a45d5ee301fe4cec8ab34233fe"><div class="ttname"><a href="classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe">handy::Slice::empty</a></div><div class="ttdeci">bool empty() const noexcept</div><div class="ttdoc">判断视图是否为空 </div><div class="ttdef"><b>Definition:</b> <a href="slice_8h_source.html#l00168">slice.h:168</a></div></div>
+<div class="ttc" id="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner_html_a8a9e52f6917024579cb8075a81e837e3"><div class="ttname"><a href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a8a9e52f6917024579cb8075a81e837e3">handy::anonymous_namespace{conf.cpp}::LineScanner::err</a></div><div class="ttdeci">int err</div><div class="ttdoc">错误标志（0：无错误，1：解析错误） </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00106">conf.cpp:106</a></div></div>
+<div class="ttc" id="classhandy_1_1Conf_html_a856496911ede1e6e1e1dd691a1df96ca"><div class="ttname"><a href="classhandy_1_1Conf.html#a856496911ede1e6e1e1dd691a1df96ca">handy::Conf::get</a></div><div class="ttdeci">std::string get(const std::string &amp;section, const std::string &amp;name, const std::string &amp;defaultValue)</div><div class="ttdoc">获取字符串类型配置值 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00039">conf.cpp:39</a></div></div>
+<div class="ttc" id="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner_html_a19582757deb6661f43328720eebc0cde"><div class="ttname"><a href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a19582757deb6661f43328720eebc0cde">handy::anonymous_namespace{conf.cpp}::LineScanner::match</a></div><div class="ttdeci">LineScanner &amp; match(char c)</div><div class="ttdoc">匹配并跳过指定字符 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00166">conf.cpp:166</a></div></div>
+<div class="ttc" id="classhandy_1_1Conf_html_ae78f51c6b0e42e8bd5c7e36ae0ea6690"><div class="ttname"><a href="classhandy_1_1Conf.html#ae78f51c6b0e42e8bd5c7e36ae0ea6690">handy::Conf::getStrings</a></div><div class="ttdeci">std::list&lt; std::string &gt; getStrings(const std::string &amp;section, const std::string &amp;name)</div><div class="ttdoc">获取多值配置（多行值） </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00047">conf.cpp:47</a></div></div>
+<div class="ttc" id="classhandy_1_1Conf_html_a68f8de8f5d3ca79a3e7b3b99c0712234"><div class="ttname"><a href="classhandy_1_1Conf.html#a68f8de8f5d3ca79a3e7b3b99c0712234">handy::Conf::parse</a></div><div class="ttdeci">int parse(const std::string &amp;fileName)</div><div class="ttdoc">解析指定的INI配置文件 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00226">conf.cpp:226</a></div></div>
+<div class="ttc" id="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner_html_a6145274c2ad83b496e72199e698072f1"><div class="ttname"><a href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a6145274c2ad83b496e72199e698072f1">handy::anonymous_namespace{conf.cpp}::LineScanner::consumeTill</a></div><div class="ttdeci">string consumeTill(char c)</div><div class="ttdoc">从当前位置提取字符，直到遇到指定字符 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00179">conf.cpp:179</a></div></div>
+<div class="ttc" id="classhandy_1_1Slice_html"><div class="ttname"><a href="classhandy_1_1Slice.html">handy::Slice</a></div><div class="ttdoc">非持有型字符序列视图（类似std::string_view，但兼容C++11） </div><div class="ttdef"><b>Definition:</b> <a href="slice_8h_source.html#l00034">slice.h:34</a></div></div>
+<div class="ttc" id="classhandy_1_1Conf_html_ad5361b2b88a389418e1df3d486a9dbb1"><div class="ttname"><a href="classhandy_1_1Conf.html#ad5361b2b88a389418e1df3d486a9dbb1">handy::Conf::m_values</a></div><div class="ttdeci">std::map&lt; std::string, std::list&lt; std::string &gt; &gt; m_values</div><div class="ttdef"><b>Definition:</b> <a href="conf_8h_source.html#l00104">conf.h:104</a></div></div>
+<div class="ttc" id="classhandy_1_1Conf_html_abfa57fe0dd253686321846148cd8661e"><div class="ttname"><a href="classhandy_1_1Conf.html#abfa57fe0dd253686321846148cd8661e">handy::Conf::getBoolean</a></div><div class="ttdeci">bool getBoolean(const std::string &amp;section, const std::string &amp;name, bool defaultValue)</div><div class="ttdoc">获取布尔类型配置值 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00082">conf.cpp:82</a></div></div>
+<div class="ttc" id="classhandy_1_1Conf_html_a6fd50de0f9f04dbf88f65b6d32f4c844"><div class="ttname"><a href="classhandy_1_1Conf.html#a6fd50de0f9f04dbf88f65b6d32f4c844">handy::Conf::makeKey</a></div><div class="ttdeci">std::string makeKey(const std::string &amp;section, const std::string &amp;name) const </div><div class="ttdoc">生成内部存储的键名（节名.键名，转为小写） </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00031">conf.cpp:31</a></div></div>
+<div class="ttc" id="classhandy_1_1Slice_html_a7f14d97101d460d6cd92b35c24c466c0"><div class="ttname"><a href="classhandy_1_1Slice.html#a7f14d97101d460d6cd92b35c24c466c0">handy::Slice::clear</a></div><div class="ttdeci">void clear() noexcept</div><div class="ttdoc">清空视图（重置为空视图） </div><div class="ttdef"><b>Definition:</b> <a href="slice_8h_source.html#l00188">slice.h:188</a></div></div>
+<div class="ttc" id="slice_8h_html"><div class="ttname"><a href="slice_8h.html">slice.h</a></div><div class="ttdoc">非持有型字符序列视图类定义，提供安全、高效的字符串操作接口（兼容C++11） </div></div>
+<div class="ttc" id="classhandy_1_1Conf_html_a105b61f0abce30bf40a45e0a35e237ba"><div class="ttname"><a href="classhandy_1_1Conf.html#a105b61f0abce30bf40a45e0a35e237ba">handy::Conf::m_fileName</a></div><div class="ttdeci">std::string m_fileName</div><div class="ttdoc">当前解析的配置文件名 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8h_source.html#l00099">conf.h:99</a></div></div>
+<div class="ttc" id="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner_html_ab527414285e61f23bd68189ad5c4d08b"><div class="ttname"><a href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#ab527414285e61f23bd68189ad5c4d08b">handy::anonymous_namespace{conf.cpp}::LineScanner::skip</a></div><div class="ttdeci">LineScanner &amp; skip(int i)</div><div class="ttdoc">跳过指定数量的字符 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00154">conf.cpp:154</a></div></div>
+<div class="ttc" id="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner_html_a09b8a2be7ec4ce9c3dcb34599ea8d6ca"><div class="ttname"><a href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a09b8a2be7ec4ce9c3dcb34599ea8d6ca">handy::anonymous_namespace{conf.cpp}::LineScanner::consumeTillEnd</a></div><div class="ttdeci">string consumeTillEnd()</div><div class="ttdoc">从当前位置提取字符，直到行尾或注释符 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00205">conf.cpp:205</a></div></div>
+<div class="ttc" id="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner_html_a90db6f68dbe3673fe1dc297f978b40aa"><div class="ttname"><a href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a90db6f68dbe3673fe1dc297f978b40aa">handy::anonymous_namespace{conf.cpp}::LineScanner::p</a></div><div class="ttdeci">char * p</div><div class="ttdoc">当前扫描位置指针 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00104">conf.cpp:104</a></div></div>
+<div class="ttc" id="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner_html"><div class="ttname"><a href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html">handy::anonymous_namespace{conf.cpp}::LineScanner</a></div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00101">conf.cpp:101</a></div></div>
+<div class="ttc" id="classhandy_1_1Conf_html_ac95baddc78ffe210a7db17937402d36a"><div class="ttname"><a href="classhandy_1_1Conf.html#ac95baddc78ffe210a7db17937402d36a">handy::Conf::getReal</a></div><div class="ttdeci">double getReal(const std::string &amp;section, const std::string &amp;name, double defaultValue)</div><div class="ttdoc">获取浮点类型配置值 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00070">conf.cpp:70</a></div></div>
+<div class="ttc" id="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner_html_a55bd0302c77698efc3d14e9fc510789c"><div class="ttname"><a href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a55bd0302c77698efc3d14e9fc510789c">handy::anonymous_namespace{conf.cpp}::LineScanner::LineScanner</a></div><div class="ttdeci">LineScanner(char *ln)</div><div class="ttdoc">构造函数，初始化扫描位置 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00112">conf.cpp:112</a></div></div>
+<div class="ttc" id="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner_html_a9914774244c4ba75826cd4210f9ed375"><div class="ttname"><a href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a9914774244c4ba75826cd4210f9ed375">handy::anonymous_namespace{conf.cpp}::LineScanner::skipSpace</a></div><div class="ttdeci">LineScanner &amp; skipSpace()</div><div class="ttdoc">跳过当前位置的所有空格字符 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00118">conf.cpp:118</a></div></div>
+<div class="ttc" id="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner_html_a9dbd5e6a7b3dc60221e7127bef80a64a"><div class="ttname"><a href="structhandy_1_1anonymous__namespace_02conf_8cpp_03_1_1LineScanner.html#a9dbd5e6a7b3dc60221e7127bef80a64a">handy::anonymous_namespace{conf.cpp}::LineScanner::rstrip</a></div><div class="ttdeci">static string rstrip(const char *s, const char *e)</div><div class="ttdoc">去除字符串尾部的空格 </div><div class="ttdef"><b>Definition:</b> <a href="conf_8cpp_source.html#l00132">conf.cpp:132</a></div></div>
+<div class="ttc" id="conf_8h_html"><div class="ttname"><a href="conf_8h.html">conf.h</a></div><div class="ttdoc">INI配置文件解析器类定义 </div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_32ffdd1374fa2f424904bdef8ac66f3e.html">handy</a></li><li class="navelem"><a class="el" href="conf_8cpp.html">conf.cpp</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

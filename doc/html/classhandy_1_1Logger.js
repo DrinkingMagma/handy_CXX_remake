@@ -13,6 +13,7 @@ var classhandy_1_1Logger =
     [ "Logger", "classhandy_1_1Logger.html#ac4560f0b630dc778c846681e01290f9f", null ],
     [ "adjustLogLevel", "classhandy_1_1Logger.html#a2bef2bb7d52686e606c2a23508dba57d", null ],
     [ "checkAndRotateLogFile", "classhandy_1_1Logger.html#a434ac0f25b7add4d9276da50167e2117", null ],
+    [ "clear", "classhandy_1_1Logger.html#a52bd5919c0b225d6053498c8ecaed1a5", null ],
     [ "closeLogFile", "classhandy_1_1Logger.html#a1869d64a7b809063a5c777b2eddeb70e", null ],
     [ "getCurrentTimeStamp", "classhandy_1_1Logger.html#a1f5d1fab0756d1df799e204499faa012", null ],
     [ "getInstance", "classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725", null ],

@@ -1,3 +1,7 @@
 <map id="handy::port::getHostByName" name="handy::port::getHostByName">
-<area shape="rect" id="node2" href="$classhandy_1_1Ipv4Addr.html#afae4fb76206f89c0e2c03e61c4c6e6ec" title="通过主机名和端口初始化IPv4地址 " alt="" coords="245,5,423,32"/>
+<area shape="rect" id="node2" href="$classhandy_1_1Ipv4Addr.html#afae4fb76206f89c0e2c03e61c4c6e6ec" title="通过主机名和端口初始化IPv4地址 " alt="" coords="255,5,432,32"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1portTest.html#a38c50b0703918e7756242759f985eda5" title="测试主机名解析（域名+IP字符串） " alt="" coords="272,57,415,98"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1portTest.html#aa3b09afc808ed8ea495bcbe00dcb8e88" title="测试主机名解析多线程安全性 " alt="" coords="245,122,441,163"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1portTest.html#a5128382d1a24ade090bb3a7d8fa214e1" title="handy::portTest::run\l_all_tests" alt="" coords="489,90,628,131"/>
+<area shape="rect" id="node5" href="$port__posix__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="676,97,727,124"/>
 </map>

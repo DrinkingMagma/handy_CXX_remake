@@ -1,0 +1,14 @@
+<map id="g_taskExecCount" name="g_taskExecCount">
+<area shape="rect" id="node2" href="$namespacehandy_1_1threadsTest.html#a8a3baaea2f6eebd2a77562c3c50e7022" title="重置全局测试变量（避免测试间干扰） " alt="" coords="180,149,313,191"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1threadsTest.html#afdd23b92908ad2e400d35fa48fc70779" title="测试 SafeQueue 基础功能（push/popWait/size/exit） " alt="" coords="388,71,539,112"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1threadsTest.html#abbd019f23df358dfd350a694bd0f8755" title="测试 ThreadPool 基础功能（构造/start/addTask/exit/join） " alt="" coords="388,267,539,308"/>
+<area shape="rect" id="node10" href="$namespacehandy_1_1threadsTest.html#a9c4cfb5b26d89f823390fc8e7a6dacfc" title="测试 ThreadPool 多线程任务执行与容量控制 " alt="" coords="376,397,551,439"/>
+<area shape="rect" id="node11" href="$namespacehandy_1_1threadsTest.html#a7397324a575b5a9cfae3f63bd26a91cb" title="测试 ThreadPool 任务异常处理（任务抛出异常不影响线程池） " alt="" coords="361,332,565,373"/>
+<area shape="rect" id="node12" href="$namespacehandy_1_1threadsTest.html#a31b1a09b21d1a397bbed227758c88465" title="测试用基础任务（原子计数+状态标记） " alt="" coords="180,215,313,256"/>
+<area shape="rect" id="node13" href="$namespacehandy_1_1threadsTest.html#ad321c9b293454f86d26fe9a42a9e4275" title="测试用带参数任务（通过lambda捕获传递参数） " alt="" coords="180,383,313,424"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1threadsTest.html#a44479815d334b757460063a734ba746a" title="测试 SafeQueue 超时等待功能（popWait超时） " alt="" coords="381,201,545,243"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1threadsTest.html#ac86254c952d340971a1b0566064ef2fd" title="测试 SafeQueue 多生产者多消费者线程安全 " alt="" coords="371,5,556,47"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1threadsTest.html#a27d7989806fd80711ca64fef1a1bb772" title="测试 ThreadPool 异常处理（非法参数、状态错误） " alt="" coords="372,136,555,177"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1threadsTest.html#af3efd1ba4edce828298b3cc7e46be9d0" title="handy::threadsTest\l::runAllTests" alt="" coords="613,201,747,243"/>
+<area shape="rect" id="node5" href="$thread__pool__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="795,209,845,235"/>
+</map>

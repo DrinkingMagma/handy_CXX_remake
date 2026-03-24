@@ -1,0 +1,10 @@
+<map id="handy::threadsTest::testSafeQueueTimeout" name="handy::threadsTest::testSafeQueueTimeout">
+<area shape="rect" id="node2" href="$namespacehandy_1_1threadsTest.html#a8a3baaea2f6eebd2a77562c3c50e7022" title="重置全局测试变量（避免测试间干扰） " alt="" coords="244,82,377,123"/>
+<area shape="rect" id="node7" href="$classhandy_1_1SafeQueue.html#aef745af0cbdac7e9e8f2366a5db8f40d" title="从队列头部取出元素(支持超时等待,线程安全) " alt="" coords="217,148,404,175"/>
+<area shape="rect" id="node8" href="$classhandy_1_1SafeQueue.html#acb896f0aca5b54570157b4a9528ec529" title="向队列尾部添加元素(线程安全) " alt="" coords="227,199,394,225"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1threadsTest.html#a31b1a09b21d1a397bbed227758c88465" title="测试用基础任务（原子计数+状态标记） " alt="" coords="244,17,377,58"/>
+<area shape="rect" id="node3" href="$thread__pool__test_8cpp.html#af20fc77e12bba9b5bba24850f1472099" title="g_taskExecCount" alt="" coords="468,5,595,32"/>
+<area shape="rect" id="node4" href="$thread__pool__test_8cpp.html#aa697aa5d2577edd72b873af09a835f5d" title="g_taskFlag" alt="" coords="488,56,575,83"/>
+<area shape="rect" id="node5" href="$thread__pool__test_8cpp.html#a2b3fdaf9fe8e47838b760125fb141dd8" title="g_multiProducerCount" alt="" coords="456,107,607,133"/>
+<area shape="rect" id="node6" href="$thread__pool__test_8cpp.html#a8b38c9b516bd6453ac1dc73bfa316196" title="g_multiConsumerCount" alt="" coords="452,157,611,184"/>
+</map>

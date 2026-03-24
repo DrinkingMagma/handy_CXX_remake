@@ -191,6 +191,8 @@ std::list&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="b
 <li>禁止拷贝操作（继承NonCopyAble），允许移动操作 <dl class="section note"><dt>注解</dt><dd>线程安全：单线程使用安全；多线程读写需外部加锁 </dd></dl>
 </li>
 </ol>
+
+<p>在文件 <a class="el" href="conf_8h_source.html">conf.h</a> 第 <a class="el" href="conf_8h_source.html#l00035">35</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a class="anchor" id="a036a0327285d04a8c9e9eb76c6d2c92d"></a>
 <div class="memitem">
@@ -281,11 +283,19 @@ std::list&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="b
 <dl class="section return"><dt>返回</dt><dd>配置值（找到时返回最后一个匹配值，未找到时返回defaultValue） </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>节名和键名大小写不敏感 </dd></dl>
 
+<p>在文件 <a class="el" href="conf_8cpp_source.html">conf.cpp</a> 第 <a class="el" href="conf_8cpp_source.html#l00039">39</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Conf_a856496911ede1e6e1e1dd691a1df96ca_cgraph.svg" width="334" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Conf_a856496911ede1e6e1e1dd691a1df96ca_cgraph.svg" width="334" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Conf_a856496911ede1e6e1e1dd691a1df96ca_icgraph.svg" width="323" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -332,6 +342,15 @@ std::list&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="b
 </dl>
 <dl class="section return"><dt>返回</dt><dd>解析后的布尔值（支持"true"、"false"、"1"、"0"、"on"、"off"、"yes"、"no"、"y"、"n"）（不区分大小写） </dd></dl>
 
+<p>在文件 <a class="el" href="conf_8cpp_source.html">conf.cpp</a> 第 <a class="el" href="conf_8cpp_source.html#l00082">82</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Conf_abfa57fe0dd253686321846148cd8661e_icgraph.svg" width="371" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a6517617284370f4b202c2d672b66f8a6"></a>
@@ -374,6 +393,15 @@ std::list&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="b
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>解析后的整数值（支持十进制、负数、十六进制"0x1f"） </dd></dl>
+
+<p>在文件 <a class="el" href="conf_8cpp_source.html">conf.cpp</a> 第 <a class="el" href="conf_8cpp_source.html#l00054">54</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Conf_a6517617284370f4b202c2d672b66f8a6_icgraph.svg" width="363" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
 
 </div>
 </div>
@@ -418,6 +446,15 @@ std::list&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="b
 </dl>
 <dl class="section return"><dt>返回</dt><dd>解析后的浮点数值（支持"3.14"、"-1.2"、"1.2e-3"等格式） </dd></dl>
 
+<p>在文件 <a class="el" href="conf_8cpp_source.html">conf.cpp</a> 第 <a class="el" href="conf_8cpp_source.html#l00070">70</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Conf_ac95baddc78ffe210a7db17937402d36a_icgraph.svg" width="351" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="ae78f51c6b0e42e8bd5c7e36ae0ea6690"></a>
@@ -455,11 +492,12 @@ std::list&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="b
 <dl class="section return"><dt>返回</dt><dd>配置值列表（续行内容会被拆分为多个元素，未找到时返回空列表） </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>适用于键对应多个值的场景（如"ip_list = 192.168.1.1\n 192.168.1.2"） </dd></dl>
 
+<p>在文件 <a class="el" href="conf_8cpp_source.html">conf.cpp</a> 第 <a class="el" href="conf_8cpp_source.html#l00047">47</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Conf_ae78f51c6b0e42e8bd5c7e36ae0ea6690_cgraph.svg" width="375" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Conf_ae78f51c6b0e42e8bd5c7e36ae0ea6690_cgraph.svg" width="375" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -508,11 +546,12 @@ std::list&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="b
 <dl class="section return"><dt>返回</dt><dd>格式化后的键名（如section="Server", name="Port" → "server.port"） </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>私有辅助函数，用于统一内部键名格式，实现大小写不敏感查找 </dd></dl>
 
+<p>在文件 <a class="el" href="conf_8cpp_source.html">conf.cpp</a> 第 <a class="el" href="conf_8cpp_source.html#l00031">31</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Conf_a6fd50de0f9f04dbf88f65b6d32f4c844_icgraph.svg" width="375" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Conf_a6fd50de0f9f04dbf88f65b6d32f4c844_icgraph.svg" width="568" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -541,11 +580,19 @@ std::list&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="b
 </dl>
 <dl class="section return"><dt>返回</dt><dd>解析结果： 0：解析成功， -1：文件打开失败（如路径不存在、权限不足）， 正数：解析错误的行号（如语法错误） </dd></dl>
 
+<p>在文件 <a class="el" href="conf_8cpp_source.html">conf.cpp</a> 第 <a class="el" href="conf_8cpp_source.html#l00226">226</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Conf_a68f8de8f5d3ca79a3e7b3b99c0712234_cgraph.svg" width="354" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Conf_a68f8de8f5d3ca79a3e7b3b99c0712234_cgraph.svg" width="354" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1Conf_a68f8de8f5d3ca79a3e7b3b99c0712234_icgraph.svg" width="338" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -572,6 +619,8 @@ std::list&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="b
 
 <p>当前解析的配置文件名 </p>
 
+<p>在文件 <a class="el" href="conf_8h_source.html">conf.h</a> 第 <a class="el" href="conf_8h_source.html#l00099">99</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad5361b2b88a389418e1df3d486a9dbb1"></a>
@@ -593,11 +642,13 @@ std::list&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="b
 </div><div class="memdoc">
 <p>存储解析后的配置文件 键为makeKey生成的字符串，值为该键对应的所有值（支持多行） </p>
 
+<p>在文件 <a class="el" href="conf_8h_source.html">conf.h</a> 第 <a class="el" href="conf_8h_source.html#l00104">104</a> 行定义.</p>
+
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>handy/<a class="el" href="conf_8h_source.html">conf.h</a></li>
-<li>handy/<a class="el" href="conf_8cpp.html">conf.cpp</a></li>
+<li>handy/<a class="el" href="conf_8cpp_source.html">conf.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

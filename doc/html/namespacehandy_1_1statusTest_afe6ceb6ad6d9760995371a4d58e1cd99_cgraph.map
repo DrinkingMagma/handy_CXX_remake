@@ -1,0 +1,9 @@
+<map id="handy::statusTest::testThreadSafe" name="handy::statusTest::testThreadSafe">
+<area shape="rect" id="node2" href="$classhandy_1_1Status.html#a07bbe0f37479f5765a7b3ba442d70957" title="根据当前线程的系统错误(errno)创建Status对象 " alt="" coords="188,56,371,83"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Status.html#a20ee42a38aebe4d18b36d5bc2ef1bf6b" title="根据格式化字符串创建Status对象 " alt="" coords="190,5,369,32"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Status.html#abac5c65c266afdd5d0da7b1194c49e52" title="获取状态码 " alt="" coords="210,107,349,133"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Status.html#a357d7e675bc0f19620f70a2e15b41e2a" title="获取错误信息字符串 " alt="" coords="211,157,347,184"/>
+<area shape="rect" id="node8" href="$status__test_8cpp.html#a61cc23273bda432fadede59224e24389" title="g_statusThreadTestCount" alt="" coords="193,208,365,235"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Status.html#a928f8d212a443ec48bf09b53d58eed93" title="构造函数，创建一个表示“成功”的Status对象 " alt="" coords="419,5,568,32"/>
+<area shape="rect" id="node4" href="$namespacehandy.html#a957dcc461a7df87ab6338b1da38e4fba" title="获取当前线程的系统错误信息字符串 " alt="" coords="446,56,541,83"/>
+</map>

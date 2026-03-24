@@ -48,7 +48,7 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="classhandy_1_1TcpConn.html#ab5ce5d7f2258ee3b4cadface21dc330c" target="_top" xlink:title="添加空闲回调函数 ">
+<g id="a_node9"><a xlink:href="classhandy_1_1TcpConn.html#a2f286a93da01ca7da55289857c590a08" target="_top" xlink:title="添加空闲回调函数 ">
 <polygon fill="#ffffff" stroke="#000000" points="166,-.5 166,-19.5 306,-19.5 306,-.5 166,-.5"/>
 <text text-anchor="middle" x="236" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">handy::TcpConn::addIdleCB</text>
 </a>

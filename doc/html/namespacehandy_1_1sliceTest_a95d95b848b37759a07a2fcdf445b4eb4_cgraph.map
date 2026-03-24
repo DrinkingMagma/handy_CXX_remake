@@ -1,0 +1,14 @@
+<map id="handy::sliceTest::test_view_modification" name="handy::sliceTest::test_view_modification">
+<area shape="rect" id="node2" href="$classhandy_1_1Slice.html#a648c2ad74f8993e59113bd8987b1d569" title="调整视图长度（仅允许缩小，避免越界） " alt="" coords="212,5,349,32"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Slice.html#a853af4383711ab615372f9d238255c54" title="转换为std::string " alt="" coords="207,56,354,83"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Slice.html#a7f14d97101d460d6cd92b35c24c466c0" title="清空视图（重置为空视图） " alt="" coords="215,107,346,133"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe" title="判断视图是否为空 " alt="" coords="211,157,350,184"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Slice.html#a8859befd2f54816c2f1a38b5c095b49c" title="吞噬前sz个字符（从视图中移除并返回） " alt="" coords="221,208,341,235"/>
+<area shape="rect" id="node8" href="$classhandy_1_1Slice.html#a0570587beb57c84ab21c74015c299443" title="吞噬一个单词（跳过前导空白，直到下一个空白) " alt="" coords="205,309,356,336"/>
+<area shape="rect" id="node10" href="$classhandy_1_1Slice.html#a8d8fabf867b1d5c94f33dd1d1481da7f" title="吞噬一行（直到 或 ，兼容 Windows/Linux 换行） " alt="" coords="209,360,353,387"/>
+<area shape="rect" id="node12" href="$classhandy_1_1Slice.html#a026c61a30fbf8675933fb9a6bfb56530" title="获取子视图（支持负偏移） " alt="" coords="219,259,342,285"/>
+<area shape="rect" id="node13" href="$classhandy_1_1Slice.html#a9942173fc598137ca9d959ed8cb39fe7" title="移除前后空白字符（修改当前视图） " alt="" coords="200,411,361,437"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Slice.html#aa9c41a7c077cb18809a408d429587b3c" title="获取视图长度 " alt="" coords="411,132,538,159"/>
+<area shape="rect" id="node9" href="$classhandy_1_1Slice.html#aa8b651518d868af04c7f053f1783b9c7" title="默认构造：空视图 " alt="" coords="409,309,540,336"/>
+<area shape="rect" id="node11" href="$classhandy_1_1Slice.html#aade2a2a717f5fdb7ba9fcb36679fa837" title="获取结束迭代器（兼容STL算法） " alt="" coords="413,360,536,387"/>
+</map>

@@ -209,6 +209,8 @@ Private 属性</h2></td></tr>
 </li>
 </ol>
 <p>任务执行异常不会导致线程退出 </p>
+
+<p>在文件 <a class="el" href="thread__pool_8h_source.html">thread_pool.h</a> 第 <a class="el" href="thread__pool_8h_source.html#l00161">161</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a class="anchor" id="a60492a85af81120d1d8d03e3a41d2ffe"></a>
 <div class="memitem">
@@ -262,11 +264,12 @@ Private 属性</h2></td></tr>
 </li>
 </ol>
 
+<p>在文件 <a class="el" href="thread__pool_8cpp_source.html">thread_pool.cpp</a> 第 <a class="el" href="thread__pool_8cpp_source.html#l00113">113</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_a60492a85af81120d1d8d03e3a41d2ffe_cgraph.svg" width="758" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_a60492a85af81120d1d8d03e3a41d2ffe_cgraph.svg" width="758" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -301,11 +304,12 @@ Private 属性</h2></td></tr>
 </li>
 </ol>
 
+<p>在文件 <a class="el" href="thread__pool_8cpp_source.html">thread_pool.cpp</a> 第 <a class="el" href="thread__pool_8cpp_source.html#l00128">128</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_ac6679e58f1edc7df60289577b0475100_cgraph.svg" width="567" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_ac6679e58f1edc7df60289577b0475100_cgraph.svg" width="567" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -368,19 +372,19 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section note"><dt>注解</dt><dd>检查线程池状态，符合条件则将任务添加到任务队列 </dd></dl>
 
+<p>在文件 <a class="el" href="thread__pool_8cpp_source.html">thread_pool.cpp</a> 第 <a class="el" href="thread__pool_8cpp_source.html#l00199">199</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_aa539ee3210ff0346b8f88d705bf56f32_cgraph.svg" width="364" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_aa539ee3210ff0346b8f88d705bf56f32_cgraph.svg" width="364" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_aa539ee3210ff0346b8f88d705bf56f32_icgraph.svg" width="358" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_aa539ee3210ff0346b8f88d705bf56f32_icgraph.svg" width="682" height="418"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -418,11 +422,12 @@ Private 属性</h2></td></tr>
 <dd>
 2. 间接调用addTask(task&amp;&amp;)完成添加 </dd></dl>
 
+<p>在文件 <a class="el" href="thread__pool_8cpp_source.html">thread_pool.cpp</a> 第 <a class="el" href="thread__pool_8cpp_source.html#l00210">210</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_adc125c1df1bdcd8ffcc4162551a49be2_cgraph.svg" width="551" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_adc125c1df1bdcd8ffcc4162551a49be2_cgraph.svg" width="551" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -445,19 +450,19 @@ Private 属性</h2></td></tr>
 <p>设置线程池退出标志，通知任务队列退出（不再接受新任务） </p>
 <dl class="section note"><dt>注解</dt><dd>已添加的任务会继续执行直到完成 </dd></dl>
 
+<p>在文件 <a class="el" href="thread__pool_8cpp_source.html">thread_pool.cpp</a> 第 <a class="el" href="thread__pool_8cpp_source.html#l00158">158</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_a645707a5d4a6d126b5c3427b1ec39124_cgraph.svg" width="378" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_a645707a5d4a6d126b5c3427b1ec39124_cgraph.svg" width="378" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_a645707a5d4a6d126b5c3427b1ec39124_icgraph.svg" width="587" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_a645707a5d4a6d126b5c3427b1ec39124_icgraph.svg" width="747" height="418"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -480,11 +485,19 @@ Private 属性</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>size_t 当前等待执行的任务的数量 </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>委托给任务队列的size()方法，确保计数的线程安全性 </dd></dl>
 
+<p>在文件 <a class="el" href="thread__pool_8cpp_source.html">thread_pool.cpp</a> 第 <a class="el" href="thread__pool_8cpp_source.html#l00215">215</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_a9184b6409d22e2d2110d9666a4506526_cgraph.svg" width="368" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_a9184b6409d22e2d2110d9666a4506526_cgraph.svg" width="368" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_a9184b6409d22e2d2110d9666a4506526_icgraph.svg" width="660" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -515,6 +528,15 @@ Private 属性</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>bool 线程池已退出返回true,否则返回false </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>直接读取原子变量，无锁开销，效率高 </dd></dl>
 
+<p>在文件 <a class="el" href="thread__pool_8cpp_source.html">thread_pool.cpp</a> 第 <a class="el" href="thread__pool_8cpp_source.html#l00225">225</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_afa85eb43f1e6d4972f4fa55fe6fc8067_icgraph.svg" width="628" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="aaa3d53b0362ab14ebd76e4b220fa2cfb"></a>
@@ -542,6 +564,15 @@ Private 属性</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>bool 线程池已启动返回true,否则返回false </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>直接读取原子变量，无锁开销，效率高 </dd></dl>
 
+<p>在文件 <a class="el" href="thread__pool_8cpp_source.html">thread_pool.cpp</a> 第 <a class="el" href="thread__pool_8cpp_source.html#l00220">220</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_aaa3d53b0362ab14ebd76e4b220fa2cfb_icgraph.svg" width="628" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="aa12157caf7e934a8f56c6f9ce79af4b1"></a>
@@ -568,11 +599,12 @@ Private 属性</h2></td></tr>
 <dd>
 2. 等待完成后清空线程容器以释放资源 </dd></dl>
 
+<p>在文件 <a class="el" href="thread__pool_8cpp_source.html">thread_pool.cpp</a> 第 <a class="el" href="thread__pool_8cpp_source.html#l00167">167</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_aa12157caf7e934a8f56c6f9ce79af4b1_icgraph.svg" width="586" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_aa12157caf7e934a8f56c6f9ce79af4b1_icgraph.svg" width="746" height="352"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -631,19 +663,19 @@ Private 属性</h2></td></tr>
 </li>
 </ol>
 
+<p>在文件 <a class="el" href="thread__pool_8cpp_source.html">thread_pool.cpp</a> 第 <a class="el" href="thread__pool_8cpp_source.html#l00139">139</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_a74e85ff1e6605531acdd8e0e3cf903df_cgraph.svg" width="571" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_a74e85ff1e6605531acdd8e0e3cf903df_cgraph.svg" width="571" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_a74e85ff1e6605531acdd8e0e3cf903df_icgraph.svg" width="336" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_a74e85ff1e6605531acdd8e0e3cf903df_icgraph.svg" width="660" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -677,19 +709,19 @@ Private 属性</h2></td></tr>
 <dd>
 3. 直到线程池退出（m_isExited为true） </dd></dl>
 
+<p>在文件 <a class="el" href="thread__pool_8cpp_source.html">thread_pool.cpp</a> 第 <a class="el" href="thread__pool_8cpp_source.html#l00230">230</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_af16863e56e3df5e49bc00cebb08ae5a4_cgraph.svg" width="384" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_af16863e56e3df5e49bc00cebb08ae5a4_cgraph.svg" width="384" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_af16863e56e3df5e49bc00cebb08ae5a4_icgraph.svg" width="523" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1ThreadPool_af16863e56e3df5e49bc00cebb08ae5a4_icgraph.svg" width="847" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -716,6 +748,8 @@ Private 属性</h2></td></tr>
 
 <p>线程池退出标志（原子变量） </p>
 
+<p>在文件 <a class="el" href="thread__pool_8h_source.html">thread_pool.h</a> 第 <a class="el" href="thread__pool_8h_source.html#l00270">270</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a0be37b138ce3f9948195f3e92d5b7b63"></a>
@@ -738,6 +772,8 @@ Private 属性</h2></td></tr>
 
 <p>线程池启动标志（原子变量） </p>
 
+<p>在文件 <a class="el" href="thread__pool_8h_source.html">thread_pool.h</a> 第 <a class="el" href="thread__pool_8h_source.html#l00267">267</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a2cebf7ae68c57ace2b7cf18ad88a7ebc"></a>
@@ -758,6 +794,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>任务队列（存储待执行的任务） 复用SafeQueue&lt;Task&gt;实现线程安全的任务存储与分发 </p>
+
+<p>在文件 <a class="el" href="thread__pool_8h_source.html">thread_pool.h</a> 第 <a class="el" href="thread__pool_8h_source.html#l00258">258</a> 行定义.</p>
 
 </div>
 </div>
@@ -780,11 +818,13 @@ Private 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>存储线程对象的容器 构造上时预分配内存，避免后续扩容导致的线程对象拷贝 </p>
 
+<p>在文件 <a class="el" href="thread__pool_8h_source.html">thread_pool.h</a> 第 <a class="el" href="thread__pool_8h_source.html#l00264">264</a> 行定义.</p>
+
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>handy/<a class="el" href="thread__pool_8h_source.html">thread_pool.h</a></li>
-<li>handy/<a class="el" href="thread__pool_8cpp.html">thread_pool.cpp</a></li>
+<li>handy/<a class="el" href="thread__pool_8cpp_source.html">thread_pool.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

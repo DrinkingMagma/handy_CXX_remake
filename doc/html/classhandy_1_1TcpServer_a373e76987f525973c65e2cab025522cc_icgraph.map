@@ -1,3 +1,8 @@
 <map id="handy::TcpServer::bind" name="handy::TcpServer::bind">
-<area shape="rect" id="node2" href="$classhandy_1_1StatServer.html#a85d041b9ba9b52ff1ec223777d84c744" title="将服务器绑定到指定的主机和端口 " alt="" coords="209,5,368,32"/>
+<area shape="rect" id="node2" href="$HTTP_2server_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="263,5,314,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1StatServer.html#a85d041b9ba9b52ff1ec223777d84c744" title="将服务器绑定到指定的主机和端口 " alt="" coords="209,56,368,83"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1statSvrTest.html#aa579971c9cf0ca4ac96dbda469457028" title="测试 StatServer 基本构造与绑定功能 " alt="" coords="444,15,591,57"/>
+<area shape="rect" id="node5" href="$namespacehandy_1_1statSvrTest.html#a4bc63cfe9fd7b20a93899a61052da590" title="测试状态回调注册与处理 " alt="" coords="416,81,619,122"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1statSvrTest.html#a51d6168c2b8db2fabed82b2a4ebb6bf4" title="handy::statSvrTest\l::runAllTests" alt="" coords="667,81,799,122"/>
+<area shape="rect" id="node7" href="$stat-svr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="847,88,897,115"/>
 </map>

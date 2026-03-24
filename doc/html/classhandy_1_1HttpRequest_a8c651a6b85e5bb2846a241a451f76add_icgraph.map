@@ -1,5 +1,8 @@
 <map id="handy::HttpRequest::tryDecode" name="handy::HttpRequest::tryDecode">
-<area shape="rect" id="node2" href="$classhandy_1_1HttpConnPtr.html#a1c2c0b1fbe5a35f94ae9d898ac57551b" title="底层TCP连接 " alt="" coords="192,5,331,47"/>
-<area shape="rect" id="node3" href="$classhandy_1_1HttpConnPtr.html#a0b2ff11dafbd36c86ce8e6a035a95d4b" title="注册HTTP消息处理回调 " alt="" coords="379,5,517,47"/>
-<area shape="rect" id="node4" href="$classhandy_1_1HttpServer.html#af36412871ad23228ad2ba124b4526690" title="构造函数 " alt="" coords="565,5,701,47"/>
+<area shape="rect" id="node2" href="$classhandy_1_1HttpConnPtr.html#a1c2c0b1fbe5a35f94ae9d898ac57551b" title="底层TCP连接 " alt="" coords="206,5,345,47"/>
+<area shape="rect" id="node5" href="$namespacehandy_1_1httpTest.html#a4150b5ab4526f3bd6df454d11062902c" title="测试 HttpRequest 解码功能 " alt="" coords="192,71,359,112"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpConnPtr.html#a0b2ff11dafbd36c86ce8e6a035a95d4b" title="注册HTTP消息处理回调 " alt="" coords="430,5,569,47"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpServer.html#af36412871ad23228ad2ba124b4526690" title="构造函数 " alt="" coords="640,5,776,47"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1httpTest.html#a17f111811262f57e517dbaac08eb9206" title="handy::httpTest::runAllTests" alt="" coords="407,78,592,105"/>
+<area shape="rect" id="node7" href="$http__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="683,78,733,105"/>
 </map>

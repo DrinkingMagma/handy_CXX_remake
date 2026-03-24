@@ -1,13 +1,29 @@
 <map id="handy::Slice::Slice" name="handy::Slice::Slice">
-<area shape="rect" id="node2" href="$classhandy_1_1Slice.html#a0570587beb57c84ab21c74015c299443" title="吞噬一个单词（跳过前导空白，直到下一个空白) " alt="" coords="417,25,568,52"/>
-<area shape="rect" id="node8" href="$classhandy_1_1Slice.html#a8d8fabf867b1d5c94f33dd1d1481da7f" title="吞噬一行（直到 或 ，兼容 Windows/Linux 换行） " alt="" coords="195,82,339,109"/>
-<area shape="rect" id="node10" href="$classhandy_1_1Slice.html#acab150e3649842deedd9bdd86592ba51" title="吞噬直到终止符号出现(终止符号也会被吞噬) " alt="" coords="193,32,340,58"/>
-<area shape="rect" id="node11" href="$classhandy_1_1Slice.html#a026c61a30fbf8675933fb9a6bfb56530" title="获取子视图（支持负偏移） " alt="" coords="205,133,328,160"/>
-<area shape="rect" id="node12" href="$classhandy_1_1Slice.html#af45f20d3303966c98501cbbc7f17eeef" title="线程安全的Slice构造（多线程创建时避免空指针竞争） " alt="" coords="184,184,349,210"/>
-<area shape="rect" id="node3" href="$classhandy_1_1HttpRequest.html#a8c651a6b85e5bb2846a241a451f76add" title="从缓冲区解码请求 " alt="" coords="641,83,780,124"/>
-<area shape="rect" id="node7" href="$classhandy_1_1HttpResponse.html#aff04a28503872c7f918d17fcc36835fe" title="从缓冲区解码响应 " alt="" coords="636,18,785,59"/>
-<area shape="rect" id="node4" href="$classhandy_1_1HttpConnPtr.html#a1c2c0b1fbe5a35f94ae9d898ac57551b" title="底层TCP连接 " alt="" coords="833,51,972,92"/>
-<area shape="rect" id="node5" href="$classhandy_1_1HttpConnPtr.html#a0b2ff11dafbd36c86ce8e6a035a95d4b" title="注册HTTP消息处理回调 " alt="" coords="1020,51,1159,92"/>
-<area shape="rect" id="node6" href="$classhandy_1_1HttpServer.html#af36412871ad23228ad2ba124b4526690" title="构造函数 " alt="" coords="1207,51,1343,92"/>
-<area shape="rect" id="node9" href="$classhandy_1_1HttpMsg.html#a035dca54b0b58b34ba00876b3db36f59" title="已解析的字节数 " alt="" coords="397,82,588,109"/>
+<area shape="rect" id="node2" href="$classhandy_1_1Slice.html#a0570587beb57c84ab21c74015c299443" title="吞噬一个单词（跳过前导空白，直到下一个空白) " alt="" coords="191,236,342,263"/>
+<area shape="rect" id="node24" href="$classhandy_1_1Slice.html#a8d8fabf867b1d5c94f33dd1d1481da7f" title="吞噬一行（直到 或 ，兼容 Windows/Linux 换行） " alt="" coords="195,291,339,317"/>
+<area shape="rect" id="node26" href="$classhandy_1_1Slice.html#acab150e3649842deedd9bdd86592ba51" title="吞噬直到终止符号出现(终止符号也会被吞噬) " alt="" coords="193,341,340,368"/>
+<area shape="rect" id="node27" href="$classhandy_1_1Slice.html#a026c61a30fbf8675933fb9a6bfb56530" title="获取子视图（支持负偏移） " alt="" coords="205,392,328,419"/>
+<area shape="rect" id="node28" href="$classhandy_1_1Slice.html#af45f20d3303966c98501cbbc7f17eeef" title="线程安全的Slice构造（多线程创建时避免空指针竞争） " alt="" coords="184,443,349,469"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpRequest.html#a8c651a6b85e5bb2846a241a451f76add" title="从缓冲区解码请求 " alt="" coords="641,367,780,409"/>
+<area shape="rect" id="node10" href="$classhandy_1_1HttpResponse.html#aff04a28503872c7f918d17fcc36835fe" title="从缓冲区解码响应 " alt="" coords="636,271,785,313"/>
+<area shape="rect" id="node21" href="$namespacehandy_1_1sliceTest.html#a95d95b848b37759a07a2fcdf445b4eb4" title="测试 Slice 视图修改接口 " alt="" coords="419,283,566,325"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpConnPtr.html#a1c2c0b1fbe5a35f94ae9d898ac57551b" title="底层TCP连接 " alt="" coords="855,433,993,474"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1httpTest.html#a4150b5ab4526f3bd6df454d11062902c" title="测试 HttpRequest 解码功能 " alt="" coords="841,367,1007,409"/>
+<area shape="rect" id="node5" href="$classhandy_1_1HttpConnPtr.html#a0b2ff11dafbd36c86ce8e6a035a95d4b" title="注册HTTP消息处理回调 " alt="" coords="1095,433,1233,474"/>
+<area shape="rect" id="node6" href="$classhandy_1_1HttpServer.html#af36412871ad23228ad2ba124b4526690" title="构造函数 " alt="" coords="1313,433,1449,474"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1httpTest.html#a17f111811262f57e517dbaac08eb9206" title="handy::httpTest::runAllTests" alt="" coords="1071,379,1257,405"/>
+<area shape="rect" id="node9" href="$http__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1356,379,1407,405"/>
+<area shape="rect" id="node11" href="$namespacehandy_1_1httpTest.html#a5032b65f228353aae4952b24c46e54dd" title="测试 HttpResponse 解码功能 " alt="" coords="841,302,1007,343"/>
+<area shape="rect" id="node12" href="$namespacehandy_1_1statSvrTest.html#afe30454626cbb9d209d3066a4e7c558e" title="模拟HTTP请求并获取响应 " alt="" coords="858,237,990,278"/>
+<area shape="rect" id="node20" href="$namespacehandy_1_1statSvrTest.html#afcccfddf3d4afd37d6ae926711894ad5" title="测试多线程安全 " alt="" coords="833,171,1015,213"/>
+<area shape="rect" id="node13" href="$namespacehandy_1_1statSvrTest.html#a4bc63cfe9fd7b20a93899a61052da590" title="测试状态回调注册与处理 " alt="" coords="1063,247,1265,289"/>
+<area shape="rect" id="node16" href="$namespacehandy_1_1statSvrTest.html#a8923512cf2e34c3894bff312608462d0" title="测试页面回调注册与处理 " alt="" coords="1063,313,1265,354"/>
+<area shape="rect" id="node17" href="$namespacehandy_1_1statSvrTest.html#a6978e7b5a49820e29212fb51ee1ba8cc" title="测试命令回调注册与处理 " alt="" coords="1064,51,1264,93"/>
+<area shape="rect" id="node18" href="$namespacehandy_1_1statSvrTest.html#ae5deb8ab2c5c2449d14be92e81d6b441" title="测试404错误处理 " alt="" coords="1071,117,1257,158"/>
+<area shape="rect" id="node19" href="$namespacehandy_1_1statSvrTest.html#a04884af2631c5060a5a59c875c827cc4" title="测试内容类型设置 " alt="" coords="1070,182,1258,223"/>
+<area shape="rect" id="node14" href="$namespacehandy_1_1statSvrTest.html#a51d6168c2b8db2fabed82b2a4ebb6bf4" title="handy::statSvrTest\l::runAllTests" alt="" coords="1315,150,1447,191"/>
+<area shape="rect" id="node15" href="$stat-svr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1497,157,1548,184"/>
+<area shape="rect" id="node22" href="$namespacehandy_1_1sliceTest.html#ae747836883106b714d16ec9feb184fc1" title="handy::sliceTest::run\l_all_tests" alt="" coords="639,145,782,186"/>
+<area shape="rect" id="node23" href="$slice__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="899,120,949,147"/>
+<area shape="rect" id="node25" href="$classhandy_1_1HttpMsg.html#a035dca54b0b58b34ba00876b3db36f59" title="已解析的字节数 " alt="" coords="397,349,588,376"/>
 </map>

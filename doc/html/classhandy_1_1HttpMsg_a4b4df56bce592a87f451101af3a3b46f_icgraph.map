@@ -1,8 +1,27 @@
 <map id="handy::HttpMsg::getBody" name="handy::HttpMsg::getBody">
-<area shape="rect" id="node2" href="$classhandy_1_1HttpRequest.html#a31ffcd924278389dbebef51a0a7ba3d7" title="编码请求到缓冲区 " alt="" coords="229,5,368,47"/>
-<area shape="rect" id="node4" href="$classhandy_1_1HttpResponse.html#a5b1c5770e086e07eea5e7ca0d66ad711" title="编码响应到缓冲区 " alt="" coords="224,71,373,112"/>
-<area shape="rect" id="node6" href="$classhandy_1_1HttpConnPtr.html#a5baa91c7b32051095038b4c9d4e9f30f" title="发送文件作为响应 " alt="" coords="229,136,368,177"/>
-<area shape="rect" id="node7" href="$classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8" title="构造函数 " alt="" coords="231,201,366,243"/>
-<area shape="rect" id="node3" href="$classhandy_1_1HttpConnPtr.html#a918459361f721be5a159092c23d3503e" title="发送指定的请求对象 " alt="" coords="421,5,560,47"/>
-<area shape="rect" id="node5" href="$classhandy_1_1HttpConnPtr.html#ab6e45a0b670d2bd094c00d320a374ebf" title="发送指定响应的对象 " alt="" coords="421,71,560,112"/>
+<area shape="rect" id="node2" href="$HTTP_2server_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="282,249,333,275"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpRequest.html#a31ffcd924278389dbebef51a0a7ba3d7" title="编码请求到缓冲区 " alt="" coords="238,351,377,392"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1statSvrTest.html#afe30454626cbb9d209d3066a4e7c558e" title="模拟HTTP请求并获取响应 " alt="" coords="456,168,588,209"/>
+<area shape="rect" id="node18" href="$classhandy_1_1HttpResponse.html#a5b1c5770e086e07eea5e7ca0d66ad711" title="编码响应到缓冲区 " alt="" coords="233,416,382,457"/>
+<area shape="rect" id="node21" href="$classhandy_1_1HttpConnPtr.html#a5baa91c7b32051095038b4c9d4e9f30f" title="发送文件作为响应 " alt="" coords="238,481,377,523"/>
+<area shape="rect" id="node22" href="$classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8" title="构造函数 " alt="" coords="240,547,375,588"/>
+<area shape="rect" id="node23" href="$namespacehandy_1_1httpTest.html#a49b265c0276ae2a8458959bb5f1e90d5" title="测试 HttpRequest 构造与基础操作 " alt="" coords="439,612,605,653"/>
+<area shape="rect" id="node24" href="$namespacehandy_1_1httpTest.html#a4150b5ab4526f3bd6df454d11062902c" title="测试 HttpRequest 解码功能 " alt="" coords="224,664,391,705"/>
+<area shape="rect" id="node25" href="$namespacehandy_1_1httpTest.html#a178c59b4492092998a98f9d5173e74aa" title="测试 HttpResponse 构造与基础操作 " alt="" coords="224,729,391,771"/>
+<area shape="rect" id="node26" href="$namespacehandy_1_1httpTest.html#a5032b65f228353aae4952b24c46e54dd" title="测试 HttpResponse 解码功能 " alt="" coords="224,795,391,836"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpConnPtr.html#a918459361f721be5a159092c23d3503e" title="发送指定的请求对象 " alt="" coords="453,233,591,275"/>
+<area shape="rect" id="node5" href="$namespacehandy_1_1httpTest.html#ab5d48a3430a1fc73e3742c910b8bc038" title="测试 HttpRequest 编码功能 " alt="" coords="439,351,605,392"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1httpTest.html#aab6ef4bdb7427ac67bfe9b130ce98dcb" title="多线程测试HTTP消息处理 " alt="" coords="439,416,605,457"/>
+<area shape="rect" id="node17" href="$namespacehandy_1_1statSvrTest.html#afcccfddf3d4afd37d6ae926711894ad5" title="测试多线程安全 " alt="" coords="664,332,845,373"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1httpTest.html#a17f111811262f57e517dbaac08eb9206" title="handy::httpTest::runAllTests" alt="" coords="662,619,847,646"/>
+<area shape="rect" id="node7" href="$http__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="945,619,995,646"/>
+<area shape="rect" id="node10" href="$namespacehandy_1_1statSvrTest.html#a4bc63cfe9fd7b20a93899a61052da590" title="测试状态回调注册与处理 " alt="" coords="653,5,856,47"/>
+<area shape="rect" id="node13" href="$namespacehandy_1_1statSvrTest.html#a8923512cf2e34c3894bff312608462d0" title="测试页面回调注册与处理 " alt="" coords="653,71,856,112"/>
+<area shape="rect" id="node14" href="$namespacehandy_1_1statSvrTest.html#a6978e7b5a49820e29212fb51ee1ba8cc" title="测试命令回调注册与处理 " alt="" coords="655,136,855,177"/>
+<area shape="rect" id="node15" href="$namespacehandy_1_1statSvrTest.html#ae5deb8ab2c5c2449d14be92e81d6b441" title="测试404错误处理 " alt="" coords="661,201,848,243"/>
+<area shape="rect" id="node16" href="$namespacehandy_1_1statSvrTest.html#a04884af2631c5060a5a59c875c827cc4" title="测试内容类型设置 " alt="" coords="661,267,849,308"/>
+<area shape="rect" id="node11" href="$namespacehandy_1_1statSvrTest.html#a51d6168c2b8db2fabed82b2a4ebb6bf4" title="handy::statSvrTest\l::runAllTests" alt="" coords="904,169,1036,211"/>
+<area shape="rect" id="node12" href="$stat-svr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1084,177,1135,203"/>
+<area shape="rect" id="node19" href="$classhandy_1_1HttpConnPtr.html#ab6e45a0b670d2bd094c00d320a374ebf" title="发送指定响应的对象 " alt="" coords="453,481,591,523"/>
+<area shape="rect" id="node20" href="$namespacehandy_1_1httpTest.html#acebf1dab044818e1f50569325777683e" title="测试 HttpResponse 编码功能 " alt="" coords="439,547,605,588"/>
 </map>

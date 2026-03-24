@@ -1,7 +1,7 @@
 <map id="handy::TcpConn::getBase" name="handy::TcpConn::getBase">
 <area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#a277d22f010726325dfc767ff275fe570" title="关闭连接（在下一个事件循环中处理） " alt="" coords="242,5,398,32"/>
 <area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#a14338af0c8635457894f33585bdd0878" title="重连 " alt="" coords="688,31,877,57"/>
-<area shape="rect" id="node9" href="$classhandy_1_1TcpConn.html#ab5ce5d7f2258ee3b4cadface21dc330c" title="添加空闲回调函数 " alt="" coords="227,107,413,133"/>
+<area shape="rect" id="node9" href="$classhandy_1_1TcpConn.html#a2f286a93da01ca7da55289857c590a08" title="添加空闲回调函数 " alt="" coords="227,107,413,133"/>
 <area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#a1227846cc9258601c72a354f71dd080f" title="主动连接到指定的主机和端口 " alt="" coords="461,5,640,32"/>
 <area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#a9ac6fe9839fbf06e2246f52b45668d01" title="清理连接资源 " alt="" coords="925,31,1096,57"/>
 <area shape="rect" id="node6" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="1428,5,1629,32"/>

@@ -7,6 +7,7 @@ var searchData=
   ['file',['File',['../classhandy_1_1File.html#a87f482d95739fba0ce3d8f432b0b4196',1,'handy::File']]],
   ['file_2ecpp',['file.cpp',['../file_8cpp.html',1,'']]],
   ['file_2eh',['file.h',['../file_8h.html',1,'']]],
+  ['file_5ftest_2ecpp',['file_test.cpp',['../file__test_8cpp.html',1,'']]],
   ['find',['find',['../classhandy_1_1Slice.html#adb6d432def1aaf530c7635c7bf59ec3c',1,'handy::Slice::find(char ch) const noexcept'],['../classhandy_1_1Slice.html#ad6caa9dc456f4b67906da3dcd907a74d',1,'handy::Slice::find(char ch, size_t pos=0) noexcept']]],
   ['format',['format',['../structhandy_1_1Utils.html#ad70f51fc39095ca32dce7f045adc026b',1,'handy::Utils']]],
   ['fromformat',['fromFormat',['../classhandy_1_1Status.html#a20ee42a38aebe4d18b36d5bc2ef1bf6b',1,'handy::Status']]],

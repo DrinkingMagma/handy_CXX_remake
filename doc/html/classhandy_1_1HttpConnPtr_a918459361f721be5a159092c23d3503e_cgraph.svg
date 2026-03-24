@@ -193,17 +193,17 @@
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af" target="_top" xlink:title="获取缓冲区中的数据副本 ">
-<polygon fill="#ffffff" stroke="#000000" points="294.5,-197 294.5,-216 393.5,-216 393.5,-197 294.5,-197"/>
-<text text-anchor="middle" x="344" y="-204" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">handy::Buffer::data</text>
+<g id="a_node12"><a xlink:href="classhandy_1_1Buffer.html#a2bd79c05c0e2e82b6cdfd130af4739d0" target="_top" xlink:title="获取缓冲区中的数据开头指针 ">
+<polygon fill="#ffffff" stroke="#000000" points="292,-197 292,-216 396,-216 396,-197 292,-197"/>
+<text text-anchor="middle" x="344" y="-204" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">handy::Buffer::begin</text>
 </a>
 </g>
 </g>
 <!-- Node11&#45;&gt;Node12 -->
 <g id="edge12" class="edge">
 <title>Node11&#45;&gt;Node12</title>
-<path fill="none" stroke="#191970" d="M244.3098,-215.0261C257.2434,-213.92 271.1941,-212.7268 284.4443,-211.5936"/>
-<polygon fill="#191970" stroke="#191970" points="284.7466,-215.0806 294.4119,-210.7411 284.15,-208.1061 284.7466,-215.0806"/>
+<path fill="none" stroke="#191970" d="M244.3098,-215.0261C256.3189,-213.999 269.2049,-212.897 281.5928,-211.8375"/>
+<polygon fill="#191970" stroke="#191970" points="282.1861,-215.2996 291.8514,-210.9601 281.5895,-208.3251 282.1861,-215.2996"/>
 </g>
 <!-- Node14 -->
 <g id="node14" class="node">

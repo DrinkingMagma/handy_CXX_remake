@@ -1,3 +1,7 @@
 <map id="handy::Ipv4Addr::ip" name="handy::Ipv4Addr::ip">
-<area shape="rect" id="node2" href="$classhandy_1_1Ipv4Addr.html#a15f73de1453340b7a7855250f08b10c6" title="将主机名解析为IP地址字符串 " alt="" coords="188,5,363,32"/>
+<area shape="rect" id="node2" href="$classhandy_1_1Ipv4Addr.html#a15f73de1453340b7a7855250f08b10c6" title="将主机名解析为IP地址字符串 " alt="" coords="188,17,363,43"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1netTest.html#a9ebc5dad13f87eb5aea50c66c205cc58" title="测试Ipv4Addr类构造与格式化功能 " alt="" coords="411,71,593,112"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1netTest.html#a01641c30da483685f0cd4439763043ec" title="测试Ipv4Addr类IP解析与验证功能 " alt="" coords="413,5,591,47"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1netTest.html#a67440c6a5e1613729fd7d78f23f151cc" title="handy::netTest::run\l_all_tests" alt="" coords="641,39,776,80"/>
+<area shape="rect" id="node5" href="$net__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="824,46,875,73"/>
 </map>

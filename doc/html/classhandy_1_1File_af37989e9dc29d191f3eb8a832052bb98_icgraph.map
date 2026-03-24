@@ -1,3 +1,7 @@
 <map id="handy::File::rename" name="handy::File::rename">
-<area shape="rect" id="node2" href="$classhandy_1_1File.html#a25c291a825fafe32feeeea8e1322a804" title="安全写入文件（先写临时文件，再原子重命名） " alt="" coords="191,5,357,32"/>
+<area shape="rect" id="node2" href="$classhandy_1_1File.html#a25c291a825fafe32feeeea8e1322a804" title="安全写入文件（先写临时文件，再原子重命名） " alt="" coords="191,17,357,43"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1fileTest.html#aa38e5690185315439c05d4859d1791a8" title="测试文件属性操作（大小、重命名、存在性） " alt="" coords="405,71,543,112"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1fileTest.html#ae3c5eeaf9febafc577893c74e42edd9e" title="测试安全写入（renameSave） " alt="" coords="405,5,543,47"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1fileTest.html#a33080a341d943df16856498ee9fcd13c" title="handy::fileTest::run\l_all_tests" alt="" coords="591,39,724,80"/>
+<area shape="rect" id="node5" href="$file__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="772,46,823,73"/>
 </map>

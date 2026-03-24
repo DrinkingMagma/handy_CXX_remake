@@ -1,3 +1,11 @@
 <map id="handy::Buffer::appendValue" name="handy::Buffer::appendValue">
-<area shape="rect" id="node2" href="$classhandy_1_1LengthCodec.html#a3f9dc26fcad4400d3b3e92c5ce85f906" title="对消息进行编码 " alt="" coords="235,5,377,47"/>
+<area shape="rect" id="node2" href="$classhandy_1_1LengthCodec.html#a3f9dc26fcad4400d3b3e92c5ce85f906" title="对消息进行编码 " alt="" coords="241,64,383,105"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1codecTest.html#a6eb614919eb3c8a0806765d0394d300c" title="测试LengthCodec基本编码解码功能 " alt="" coords="448,5,603,47"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1codecTest.html#a28cd8d37666f7d67ea69ef3dc4e8a09a" title="测试LineCodec基本编码解码功能 " alt="" coords="235,129,389,171"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1netTest.html#ac61eff50eb6968ff473ad272aaeabc15" title="测试Buffer类基本数据操作（追加、消耗、清空） " alt="" coords="243,195,381,236"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1codecTest.html#ad76dddb779db3104e640795e409dde9f" title="测试LengthCodec多线程安全 " alt="" coords="437,71,613,112"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1codecTest.html#af92da63a32dc8f9c41bcccf6501d1b83" title="handy::codecTest::run\l_all_tests" alt="" coords="661,71,812,112"/>
+<area shape="rect" id="node5" href="$codec__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="860,78,911,105"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1netTest.html#a67440c6a5e1613729fd7d78f23f151cc" title="handy::netTest::run\l_all_tests" alt="" coords="458,195,593,236"/>
+<area shape="rect" id="node10" href="$net__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="711,202,762,229"/>
 </map>

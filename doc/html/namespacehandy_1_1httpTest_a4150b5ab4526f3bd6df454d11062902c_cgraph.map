@@ -1,0 +1,20 @@
+<map id="handy::httpTest::testHttpRequestDecode" name="handy::httpTest::testHttpRequestDecode">
+<area shape="rect" id="node2" href="$classhandy_1_1HttpRequest.html#a8c651a6b85e5bb2846a241a451f76add" title="从缓冲区解码请求 " alt="" coords="236,277,375,318"/>
+<area shape="rect" id="node13" href="$classhandy_1_1HttpMsg.html#a787d8f3958332225f99d196a901589a5" title="获取指定头部字段对应的值 " alt="" coords="677,513,860,554"/>
+<area shape="rect" id="node17" href="$classhandy_1_1HttpRequest.html#af1e9cf4630be3579f97d1802ceab5103" title="获取指定查询参数的值 " alt="" coords="236,569,375,610"/>
+<area shape="rect" id="node18" href="$classhandy_1_1HttpMsg.html#a4b4df56bce592a87f451101af3a3b46f" title="获取消息体内容 " alt="" coords="220,128,391,155"/>
+<area shape="rect" id="node19" href="$classhandy_1_1Slice.html#a853af4383711ab615372f9d238255c54" title="转换为std::string " alt="" coords="461,461,607,488"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpMsg.html#a035dca54b0b58b34ba00876b3db36f59" title="已解析的字节数 " alt="" coords="439,208,629,235"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Slice.html#a229c81ddfceb6b035b4e0325d8f5fac6" title="获取数据起始指针（非空） " alt="" coords="705,360,832,387"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Slice.html#aa9c41a7c077cb18809a408d429587b3c" title="获取视图长度 " alt="" coords="935,360,1061,387"/>
+<area shape="rect" id="node9" href="$classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe" title="判断视图是否为空 " alt="" coords="699,5,838,32"/>
+<area shape="rect" id="node11" href="$classhandy_1_1Slice.html#a026c61a30fbf8675933fb9a6bfb56530" title="获取子视图（支持负偏移） " alt="" coords="707,259,830,285"/>
+<area shape="rect" id="node15" href="$classhandy_1_1Slice.html#a0570587beb57c84ab21c74015c299443" title="吞噬一个单词（跳过前导空白，直到下一个空白) " alt="" coords="459,132,609,159"/>
+<area shape="rect" id="node16" href="$classhandy_1_1Slice.html#adb6d432def1aaf530c7635c7bf59ec3c" title="查找字符位置 " alt="" coords="473,309,595,336"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Slice.html#a8d8fabf867b1d5c94f33dd1d1481da7f" title="吞噬一行（直到 或 ，兼容 Windows/Linux 换行） " alt="" coords="697,157,841,184"/>
+<area shape="rect" id="node10" href="$classhandy_1_1Slice.html#acab150e3649842deedd9bdd86592ba51" title="吞噬直到终止符号出现(终止符号也会被吞噬) " alt="" coords="695,208,842,235"/>
+<area shape="rect" id="node12" href="$classhandy_1_1Slice.html#a9942173fc598137ca9d959ed8cb39fe7" title="移除前后空白字符（修改当前视图） " alt="" coords="688,107,849,133"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Slice.html#aade2a2a717f5fdb7ba9fcb36679fa837" title="获取结束迭代器（兼容STL算法） " alt="" coords="937,157,1059,184"/>
+<area shape="rect" id="node8" href="$classhandy_1_1Slice.html#aa8b651518d868af04c7f053f1783b9c7" title="默认构造：空视图 " alt="" coords="933,208,1063,235"/>
+<area shape="rect" id="node14" href="$classhandy_1_1HttpMsg.html#a0f16575d0b9bf5afc37c1c60483ae1a9" title="内部函数，从映射表中获取指定键的值（不区分大小写） " alt="" coords="908,542,1088,583"/>
+</map>

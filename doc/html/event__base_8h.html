@@ -150,10 +150,10 @@ $(document).ready(function(){initNavTree('event__base_8h.html','');});
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 类型定义</h2></td></tr>
-<tr class="memitem:afc7c19669ce2cf96502ca389d4d9c00a"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr<br class="typebreak"/>
-&lt; TCPServer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#afc7c19669ce2cf96502ca389d4d9c00a">handy::TcpServerPtr</a></td></tr>
-<tr class="memdesc:afc7c19669ce2cf96502ca389d4d9c00a"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP连接指针  <a href="#afc7c19669ce2cf96502ca389d4d9c00a">更多...</a><br/></td></tr>
-<tr class="separator:afc7c19669ce2cf96502ca389d4d9c00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68085d3232b10f32a1ea5948d0cd6d02"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr<br class="typebreak"/>
+&lt; TcpServer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a68085d3232b10f32a1ea5948d0cd6d02">handy::TcpServerPtr</a></td></tr>
+<tr class="memdesc:a68085d3232b10f32a1ea5948d0cd6d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP连接指针  <a href="#a68085d3232b10f32a1ea5948d0cd6d02">更多...</a><br/></td></tr>
+<tr class="separator:a68085d3232b10f32a1ea5948d0cd6d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ea5af3f590ac7621cb8ec61e2bfed56"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const <br class="typebreak"/>
 TcpConnPtr &amp;, const Slice &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html#a3ea5af3f590ac7621cb8ec61e2bfed56">handy::MsgCallBack</a></td></tr>
 <tr class="memdesc:a3ea5af3f590ac7621cb8ec61e2bfed56"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP连接相关回调（如连接建立/关闭）  <a href="#a3ea5af3f590ac7621cb8ec61e2bfed56">更多...</a><br/></td></tr>
@@ -189,6 +189,8 @@ TcpConnPtr &amp;, const Slice &amp;)&gt;&#160;</td><td class="memItemRight" vali
 <li>定时器支持：EventBase支持一次性和周期性定时器，通过TimerId进行管理和取消；</li>
 <li>依赖：需配合poller.h（I/O多路复用）、utils.h（工具函数）等头文件使用，编译时需启用C++11及以上标准。 </li>
 </ol>
+
+<p>在文件 <a class="el" href="event__base_8h_source.html">event_base.h</a> 中定义.</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

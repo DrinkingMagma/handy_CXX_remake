@@ -1,3 +1,16 @@
 <map id="handy::HttpRequest::encode" name="handy::HttpRequest::encode">
-<area shape="rect" id="node2" href="$classhandy_1_1HttpConnPtr.html#a918459361f721be5a159092c23d3503e" title="发送指定的请求对象 " alt="" coords="192,5,331,47"/>
+<area shape="rect" id="node2" href="$classhandy_1_1HttpConnPtr.html#a918459361f721be5a159092c23d3503e" title="发送指定的请求对象 " alt="" coords="213,5,352,47"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1httpTest.html#ab5d48a3430a1fc73e3742c910b8bc038" title="测试 HttpRequest 编码功能 " alt="" coords="199,71,366,112"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1httpTest.html#aab6ef4bdb7427ac67bfe9b130ce98dcb" title="多线程测试HTTP消息处理 " alt="" coords="199,136,366,177"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1statSvrTest.html#afe30454626cbb9d209d3066a4e7c558e" title="模拟HTTP请求并获取响应 " alt="" coords="217,231,349,272"/>
+<area shape="rect" id="node15" href="$namespacehandy_1_1statSvrTest.html#afcccfddf3d4afd37d6ae926711894ad5" title="测试多线程安全 " alt="" coords="192,357,373,399"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1httpTest.html#a17f111811262f57e517dbaac08eb9206" title="handy::httpTest::runAllTests" alt="" coords="430,63,615,90"/>
+<area shape="rect" id="node5" href="$http__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="713,63,763,90"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1statSvrTest.html#a4bc63cfe9fd7b20a93899a61052da590" title="测试状态回调注册与处理 " alt="" coords="421,115,624,156"/>
+<area shape="rect" id="node11" href="$namespacehandy_1_1statSvrTest.html#a8923512cf2e34c3894bff312608462d0" title="测试页面回调注册与处理 " alt="" coords="421,180,624,221"/>
+<area shape="rect" id="node12" href="$namespacehandy_1_1statSvrTest.html#a6978e7b5a49820e29212fb51ee1ba8cc" title="测试命令回调注册与处理 " alt="" coords="423,245,623,287"/>
+<area shape="rect" id="node13" href="$namespacehandy_1_1statSvrTest.html#ae5deb8ab2c5c2449d14be92e81d6b441" title="测试404错误处理 " alt="" coords="429,311,616,352"/>
+<area shape="rect" id="node14" href="$namespacehandy_1_1statSvrTest.html#a04884af2631c5060a5a59c875c827cc4" title="测试内容类型设置 " alt="" coords="429,376,617,417"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1statSvrTest.html#a51d6168c2b8db2fabed82b2a4ebb6bf4" title="handy::statSvrTest\l::runAllTests" alt="" coords="672,277,804,319"/>
+<area shape="rect" id="node10" href="$stat-svr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="852,285,903,311"/>
 </map>

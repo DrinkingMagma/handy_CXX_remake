@@ -116,7 +116,10 @@ $(document).ready(function(){initNavTree('logger_8cpp.html','');});
 <code>#include &lt;sys/stat.h&gt;</code><br/>
 <code>#include &lt;sstream&gt;</code><br/>
 <code>#include &lt;algorithm&gt;</code><br/>
-</div><table class="memberdecls">
+<code>#include &lt;cstring&gt;</code><br/>
+</div>
+<p><a href="logger_8cpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 命名空间</h2></td></tr>
 <tr class="memitem:namespacehandy"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html">handy</a></td></tr>
@@ -141,6 +144,8 @@ $(document).ready(function(){initNavTree('logger_8cpp.html','');});
 <li>线程安全：所有日志写入和配置修改操作均通过互斥锁保护，支持多线程并发调用；</li>
 <li>时间戳格式：日志中的时间戳使用本地时间，格式为"YYYY-MM-DD HH:MM:SS.xxx"（xxx为毫秒）。 </li>
 </ol>
+
+<p>在文件 <a class="el" href="logger_8cpp_source.html">logger.cpp</a> 中定义.</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

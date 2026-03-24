@@ -1,0 +1,9 @@
+<map id="handy::Daemon::process" name="handy::Daemon::process">
+<area shape="rect" id="node2" href="$namespacehandy_1_1daemonTest.html#a0266777c48e18959ce473a9a709adde4" title="测试守护进程启动功能 " alt="" coords="221,5,364,47"/>
+<area shape="rect" id="node5" href="$namespacehandy_1_1daemonTest.html#ae551c1f6eab5d03401603b59d438c91c" title="测试守护进程停止功能 " alt="" coords="221,71,364,112"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1daemonTest.html#a8ed22b6ff90fa489907c6e8a243e0455" title="测试守护进程重启功能 " alt="" coords="221,136,364,177"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1daemonTest.html#aac71125095105a4da1be35092dd36de2" title="测试信号处理功能 " alt="" coords="221,201,364,243"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1daemonTest.html#afbe93ed780319eeebf5694e287f8e4f0" title="测试重复启动防护功能 " alt="" coords="221,267,364,308"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1daemonTest.html#a3e3f87bb96ea98e28e0f7f909e90e16a" title="handy::daemonTest::\lrun_all_tests" alt="" coords="412,136,555,177"/>
+<area shape="rect" id="node4" href="$daemon__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="603,143,653,170"/>
+</map>

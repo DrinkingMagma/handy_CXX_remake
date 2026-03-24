@@ -1,6 +1,9 @@
 <map id="handy::HttpResponse::clear" name="handy::HttpResponse::clear">
-<area shape="rect" id="node2" href="$classhandy_1_1HttpConnPtr.html#a49c214e0ff829597517ff35dff826d74" title="清楚当前连接的请求/响应数据 " alt="" coords="208,37,347,79"/>
-<area shape="rect" id="node5" href="$classhandy_1_1HttpResponse.html#a1bda547365bbd563f7b14699e0880d6b" title="默认构造函数 " alt="" coords="203,103,352,144"/>
-<area shape="rect" id="node3" href="$classhandy_1_1HttpConnPtr.html#a918459361f721be5a159092c23d3503e" title="发送指定的请求对象 " alt="" coords="400,5,539,47"/>
-<area shape="rect" id="node4" href="$classhandy_1_1HttpConnPtr.html#ab6e45a0b670d2bd094c00d320a374ebf" title="发送指定响应的对象 " alt="" coords="400,71,539,112"/>
+<area shape="rect" id="node2" href="$classhandy_1_1HttpConnPtr.html#a49c214e0ff829597517ff35dff826d74" title="清楚当前连接的请求/响应数据 " alt="" coords="217,37,355,79"/>
+<area shape="rect" id="node5" href="$classhandy_1_1HttpResponse.html#a1bda547365bbd563f7b14699e0880d6b" title="默认构造函数 " alt="" coords="211,103,361,144"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1httpTest.html#a178c59b4492092998a98f9d5173e74aa" title="测试 HttpResponse 构造与基础操作 " alt="" coords="203,168,369,209"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpConnPtr.html#a918459361f721be5a159092c23d3503e" title="发送指定的请求对象 " alt="" coords="441,5,579,47"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpConnPtr.html#ab6e45a0b670d2bd094c00d320a374ebf" title="发送指定响应的对象 " alt="" coords="441,71,579,112"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1httpTest.html#a17f111811262f57e517dbaac08eb9206" title="handy::httpTest::runAllTests" alt="" coords="417,175,603,202"/>
+<area shape="rect" id="node8" href="$http__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="651,175,701,202"/>
 </map>

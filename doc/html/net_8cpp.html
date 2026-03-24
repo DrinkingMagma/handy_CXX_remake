@@ -115,7 +115,9 @@ $(document).ready(function(){initNavTree('net_8cpp.html','');});
 <code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br/>
 <code>#include &lt;fcntl.h&gt;</code><br/>
 <code>#include &lt;netinet/tcp.h&gt;</code><br/>
-</div><table class="memberdecls">
+</div>
+<p><a href="net_8cpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 命名空间</h2></td></tr>
 <tr class="memitem:namespacehandy"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy.html">handy</a></td></tr>
@@ -154,6 +156,8 @@ $(document).ready(function(){initNavTree('net_8cpp.html','');});
 <li>线程安全注意事项：Buffer类的所有公共接口均为线程安全，但移动操作会转移资源所有权，调用方需确保移动后的对象不再被其他线程访问；</li>
 <li>地址解析限制：hostToIp函数依赖gethostbyname或inet_pton函数，若主机名无法解析（如网络不通、域名不存在），会返回无效IP地址。 </li>
 </ol>
+
+<p>在文件 <a class="el" href="net_8cpp_source.html">net.cpp</a> 中定义.</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -132,6 +132,8 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 宏定义</h2></td></tr>
+<tr class="memitem:abd6f6f002757341413607c55e93f75e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#abd6f6f002757341413607c55e93f75e8">LOG_FORMAT_ATTR</a>(fmt_pos, va_pos)</td></tr>
+<tr class="separator:abd6f6f002757341413607c55e93f75e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aade7269bb68eed682e7094993c435d4b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a>(level, fmt,...)</td></tr>
 <tr class="memdesc:aade7269bb68eed682e7094993c435d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑  <a href="#aade7269bb68eed682e7094993c435d4b">更多...</a><br/></td></tr>
 <tr class="separator:aade7269bb68eed682e7094993c435d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,6 +184,8 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
 <li>轮转配置限制：日志轮转间隔最小为1小时，避免过于频繁的轮转；</li>
 <li>线程安全范围：所有日志记录和配置修改操作均为线程安全，但日志宏中的条件判断（如level &lt;= getLogLevel()）是非原子的，若在多线程环境下同时修改日志级别和记录日志，可能会出现少量低级别日志漏记或误记，不影响程序正确性。 </li>
 </ol>
+
+<p>在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 中定义.</p>
 </div><h2 class="groupheader">宏定义说明</h2>
 <a class="anchor" id="a78559860b0d897def272733a90440e52"></a>
 <div class="memitem">
@@ -212,9 +216,11 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
 <div class="line">            std::abort();                                   \</div>
 <div class="line">        }                                                   \</div>
 <div class="line">    } <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdoc">日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑 </div><div class="ttdef"><b>Definition:</b> logger.h:45</div></div>
-<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a></div><div class="ttdef"><b>Definition:</b> logger.h:103</div></div>
+<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdoc">日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑 </div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00052">logger.h:52</a></div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a></div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00110">logger.h:110</a></div></div>
 </div><!-- fragment -->
+<p>在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00081">81</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad96d3a6cf3e98ce15febe3d27bda47bc"></a>
@@ -241,6 +247,8 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
       </table>
 </div><div class="memdoc">
 
+<p>在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00065">65</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a15378cd15bafb3a79061424b452497aa"></a>
@@ -266,6 +274,8 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00068">68</a> 行定义.</p>
 
 </div>
 </div>
@@ -298,9 +308,11 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
 <div class="line">            std::exit(1);                                   \</div>
 <div class="line">        }                                                   \</div>
 <div class="line">    } <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9">handy::Logger::LERROR</a></div><div class="ttdef"><b>Definition:</b> logger.h:104</div></div>
-<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdoc">日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑 </div><div class="ttdef"><b>Definition:</b> logger.h:45</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28feae360eddbaa9e8836c4c35bd2a9a78cc9">handy::Logger::LERROR</a></div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00111">logger.h:111</a></div></div>
+<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdoc">日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑 </div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00052">logger.h:52</a></div></div>
 </div><!-- fragment -->
+<p>在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00089">89</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a053d6037d543b84ce59308ce71d15cd1"></a>
@@ -328,6 +340,8 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
 </div><div class="memdoc">
 
 <p>std::abort()：终止程序运行 </p>
+
+<p>在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00070">70</a> 行定义.</p>
 
 </div>
 </div>
@@ -360,10 +374,12 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
 <div class="line">            std::abort();                                   \</div>
 <div class="line">        }                                                   \</div>
 <div class="line">    } <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdoc">日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑 </div><div class="ttdef"><b>Definition:</b> logger.h:45</div></div>
-<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a></div><div class="ttdef"><b>Definition:</b> logger.h:103</div></div>
+<div class="ttc" id="logger_8h_html_aade7269bb68eed682e7094993c435d4b"><div class="ttname"><a href="logger_8h.html#aade7269bb68eed682e7094993c435d4b">HLOG</a></div><div class="ttdeci">#define HLOG(level, fmt,...)</div><div class="ttdoc">日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑 </div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00052">logger.h:52</a></div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea8bd4d1ef16edd0a62afc8525b10d6501">handy::Logger::LFATAL</a></div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00110">logger.h:110</a></div></div>
 </div><!-- fragment -->
 <p>条件日志宏：在特定条件满足时自动记录并执行相应的操作 </p>
+
+<p>在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00073">73</a> 行定义.</p>
 
 </div>
 </div>
@@ -404,11 +420,13 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
 <div class="line"><a class="code" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">            handy::Logger::getInstance</a>().<a class="code" href="classhandy_1_1Logger.html#a6d61757bf1d37101021e3bdc63e78c6d">logv</a>(level, __FILE__, __LINE__, __func__, fmt, ##__VA_ARGS__);      \</div>
 <div class="line">        }                                                                                   \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
-<div class="ttc" id="classhandy_1_1Logger_html_aa28b152799dd56d5fea997e699996725"><div class="ttname"><a href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a></div><div class="ttdeci">static Logger &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> logger.h:113</div></div>
-<div class="ttc" id="classhandy_1_1Logger_html_a6d61757bf1d37101021e3bdc63e78c6d"><div class="ttname"><a href="classhandy_1_1Logger.html#a6d61757bf1d37101021e3bdc63e78c6d">handy::Logger::logv</a></div><div class="ttdeci">void logv(int level, const char *file, int line, const char *func, const char *fmt,...)</div><div class="ttdoc">日志记录函数 </div><div class="ttdef"><b>Definition:</b> logger.cpp:41</div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_aa28b152799dd56d5fea997e699996725"><div class="ttname"><a href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a></div><div class="ttdeci">static Logger &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00120">logger.h:120</a></div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a6d61757bf1d37101021e3bdc63e78c6d"><div class="ttname"><a href="classhandy_1_1Logger.html#a6d61757bf1d37101021e3bdc63e78c6d">handy::Logger::logv</a></div><div class="ttdeci">void logv(int level, const char *file, int line, const char *func, const char *fmt,...)</div><div class="ttdoc">日志记录函数 </div><div class="ttdef"><b>Definition:</b> <a href="logger_8cpp_source.html#l00042">logger.cpp:42</a></div></div>
 </div><!-- fragment -->
 <p>日志宏定义：根据编译模式（调试/发布）提供不同的日志处理逻辑 </p>
 <p>若当前为调试模式（Debug） 用日志格式字符串初始化一个静态常量，让编译器在编译器检查日志格式字符串的语法有效性 static const char* checkFmt = fmt: 仅用格式字符串初始化，不含变量 避免编译器警告"未使用的变量checkFmt"，将其强制转换为void，表示已使用 </p>
+
+<p>在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00052">52</a> 行定义.</p>
 
 </div>
 </div>
@@ -436,6 +454,36 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
       </table>
 </div><div class="memdoc">
 
+<p>在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00066">66</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abd6f6f002757341413607c55e93f75e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_FORMAT_ATTR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt_pos, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">va_pos&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00031">31</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="ae920f7f94cd053df1aadfc2bcb40b0a2"></a>
@@ -454,6 +502,8 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
 
 <p>文件设置宏 </p>
 
+<p>在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00100">100</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a3b2f5c234822e4ed18847adc529a6853"></a>
@@ -471,6 +521,8 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
 </div><div class="memdoc">
 
 <p>日志级别宏 </p>
+
+<p>在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00098">98</a> 行定义.</p>
 
 </div>
 </div>
@@ -500,6 +552,8 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
 
 <p>简化日志宏：直接传递 level + fmt + 可变参数（与 HLOG 格式匹配） </p>
 
+<p>在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00064">64</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="ac4cebd204831cf85d2c6e9d03b8d5bbb"></a>
@@ -525,6 +579,8 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00067">67</a> 行定义.</p>
 
 </div>
 </div>

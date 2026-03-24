@@ -63,7 +63,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42" target="_top" xlink:title="清空缓冲区，释放多有动态内存，重置所有偏移量和容量 ">
+<g id="a_node5"><a xlink:href="classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42" target="_top" xlink:title="清空缓冲区，释放所有动态内存，重置所有偏移量和容量 ">
 <polygon fill="#ffffff" stroke="#000000" points="338,-.5 338,-19.5 439,-19.5 439,-.5 338,-.5"/>
 <text text-anchor="middle" x="388.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">handy::Buffer::clear</text>
 </a>

@@ -1,0 +1,603 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy::threadsTest 命名空间参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="namespaces.html"><span>命名空间列表</span></a></li>
+      <li><a href="namespacemembers.html"><span>命名空间成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('namespacehandy_1_1threadsTest.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">handy::threadsTest 命名空间参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ad308256f592d38713db18f78043f8f03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1threadsTest.html#ad308256f592d38713db18f78043f8f03">initTestLogger</a> ()</td></tr>
+<tr class="memdesc:ad308256f592d38713db18f78043f8f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化测试日志（输出到threads_test.log）  <a href="#ad308256f592d38713db18f78043f8f03">更多...</a><br/></td></tr>
+<tr class="separator:ad308256f592d38713db18f78043f8f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeffbbb11619689b9511e546ab5ae390d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1threadsTest.html#aeffbbb11619689b9511e546ab5ae390d">destroyTestLogger</a> ()</td></tr>
+<tr class="memdesc:aeffbbb11619689b9511e546ab5ae390d"><td class="mdescLeft">&#160;</td><td class="mdescRight">测试结束清理日志  <a href="#aeffbbb11619689b9511e546ab5ae390d">更多...</a><br/></td></tr>
+<tr class="separator:aeffbbb11619689b9511e546ab5ae390d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3baaea2f6eebd2a77562c3c50e7022"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1threadsTest.html#a8a3baaea2f6eebd2a77562c3c50e7022">resetGlobalVars</a> ()</td></tr>
+<tr class="memdesc:a8a3baaea2f6eebd2a77562c3c50e7022"><td class="mdescLeft">&#160;</td><td class="mdescRight">重置全局测试变量（避免测试间干扰）  <a href="#a8a3baaea2f6eebd2a77562c3c50e7022">更多...</a><br/></td></tr>
+<tr class="separator:a8a3baaea2f6eebd2a77562c3c50e7022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b1a09b21d1a397bbed227758c88465"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1threadsTest.html#a31b1a09b21d1a397bbed227758c88465">baseTestTask</a> ()</td></tr>
+<tr class="memdesc:a31b1a09b21d1a397bbed227758c88465"><td class="mdescLeft">&#160;</td><td class="mdescRight">测试用基础任务（原子计数+状态标记）  <a href="#a31b1a09b21d1a397bbed227758c88465">更多...</a><br/></td></tr>
+<tr class="separator:a31b1a09b21d1a397bbed227758c88465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad321c9b293454f86d26fe9a42a9e4275"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1threadsTest.html#ad321c9b293454f86d26fe9a42a9e4275">paramTestTask</a> (int num, int delayMs)</td></tr>
+<tr class="memdesc:ad321c9b293454f86d26fe9a42a9e4275"><td class="mdescLeft">&#160;</td><td class="mdescRight">测试用带参数任务（通过lambda捕获传递参数）  <a href="#ad321c9b293454f86d26fe9a42a9e4275">更多...</a><br/></td></tr>
+<tr class="separator:ad321c9b293454f86d26fe9a42a9e4275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd23b92908ad2e400d35fa48fc70779"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1threadsTest.html#afdd23b92908ad2e400d35fa48fc70779">testSafeQueueBasic</a> ()</td></tr>
+<tr class="memdesc:afdd23b92908ad2e400d35fa48fc70779"><td class="mdescLeft">&#160;</td><td class="mdescRight">测试 <a class="el" href="classhandy_1_1SafeQueue.html" title="线程安全的队列容器（模版类） ">SafeQueue</a> 基础功能（push/popWait/size/exit）  <a href="#afdd23b92908ad2e400d35fa48fc70779">更多...</a><br/></td></tr>
+<tr class="separator:afdd23b92908ad2e400d35fa48fc70779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44479815d334b757460063a734ba746a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1threadsTest.html#a44479815d334b757460063a734ba746a">testSafeQueueTimeout</a> ()</td></tr>
+<tr class="memdesc:a44479815d334b757460063a734ba746a"><td class="mdescLeft">&#160;</td><td class="mdescRight">测试 <a class="el" href="classhandy_1_1SafeQueue.html" title="线程安全的队列容器（模版类） ">SafeQueue</a> 超时等待功能（popWait超时）  <a href="#a44479815d334b757460063a734ba746a">更多...</a><br/></td></tr>
+<tr class="separator:a44479815d334b757460063a734ba746a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac86254c952d340971a1b0566064ef2fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1threadsTest.html#ac86254c952d340971a1b0566064ef2fd">testSafeQueueMultiThread</a> ()</td></tr>
+<tr class="memdesc:ac86254c952d340971a1b0566064ef2fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">测试 <a class="el" href="classhandy_1_1SafeQueue.html" title="线程安全的队列容器（模版类） ">SafeQueue</a> 多生产者多消费者线程安全  <a href="#ac86254c952d340971a1b0566064ef2fd">更多...</a><br/></td></tr>
+<tr class="separator:ac86254c952d340971a1b0566064ef2fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd019f23df358dfd350a694bd0f8755"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1threadsTest.html#abbd019f23df358dfd350a694bd0f8755">testThreadPoolBasic</a> ()</td></tr>
+<tr class="memdesc:abbd019f23df358dfd350a694bd0f8755"><td class="mdescLeft">&#160;</td><td class="mdescRight">测试 <a class="el" href="classhandy_1_1ThreadPool.html" title="线程池类(管理一组线程执行任务) ">ThreadPool</a> 基础功能（构造/start/addTask/exit/join）  <a href="#abbd019f23df358dfd350a694bd0f8755">更多...</a><br/></td></tr>
+<tr class="separator:abbd019f23df358dfd350a694bd0f8755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27d7989806fd80711ca64fef1a1bb772"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1threadsTest.html#a27d7989806fd80711ca64fef1a1bb772">testThreadPoolExceptions</a> ()</td></tr>
+<tr class="memdesc:a27d7989806fd80711ca64fef1a1bb772"><td class="mdescLeft">&#160;</td><td class="mdescRight">测试 <a class="el" href="classhandy_1_1ThreadPool.html" title="线程池类(管理一组线程执行任务) ">ThreadPool</a> 异常处理（非法参数、状态错误）  <a href="#a27d7989806fd80711ca64fef1a1bb772">更多...</a><br/></td></tr>
+<tr class="separator:a27d7989806fd80711ca64fef1a1bb772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c4cfb5b26d89f823390fc8e7a6dacfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1threadsTest.html#a9c4cfb5b26d89f823390fc8e7a6dacfc">testThreadPoolMultiTask</a> ()</td></tr>
+<tr class="memdesc:a9c4cfb5b26d89f823390fc8e7a6dacfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">测试 <a class="el" href="classhandy_1_1ThreadPool.html" title="线程池类(管理一组线程执行任务) ">ThreadPool</a> 多线程任务执行与容量控制  <a href="#a9c4cfb5b26d89f823390fc8e7a6dacfc">更多...</a><br/></td></tr>
+<tr class="separator:a9c4cfb5b26d89f823390fc8e7a6dacfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7397324a575b5a9cfae3f63bd26a91cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1threadsTest.html#a7397324a575b5a9cfae3f63bd26a91cb">testThreadPoolTaskException</a> ()</td></tr>
+<tr class="memdesc:a7397324a575b5a9cfae3f63bd26a91cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">测试 <a class="el" href="classhandy_1_1ThreadPool.html" title="线程池类(管理一组线程执行任务) ">ThreadPool</a> 任务异常处理（任务抛出异常不影响线程池）  <a href="#a7397324a575b5a9cfae3f63bd26a91cb">更多...</a><br/></td></tr>
+<tr class="separator:a7397324a575b5a9cfae3f63bd26a91cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3efd1ba4edce828298b3cc7e46be9d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehandy_1_1threadsTest.html#af3efd1ba4edce828298b3cc7e46be9d0">runAllTests</a> ()</td></tr>
+<tr class="separator:af3efd1ba4edce828298b3cc7e46be9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="a31b1a09b21d1a397bbed227758c88465"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::threadsTest::baseTestTask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>测试用基础任务（原子计数+状态标记） </p>
+
+<p>在文件 <a class="el" href="thread__pool__test_8cpp_source.html">thread_pool_test.cpp</a> 第 <a class="el" href="thread__pool__test_8cpp_source.html#l00050">50</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_a31b1a09b21d1a397bbed227758c88465_cgraph.svg" width="319" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_a31b1a09b21d1a397bbed227758c88465_icgraph.svg" width="676" height="379"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aeffbbb11619689b9511e546ab5ae390d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::threadsTest::destroyTestLogger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>测试结束清理日志 </p>
+
+<p>在文件 <a class="el" href="thread__pool__test_8cpp_source.html">thread_pool_test.cpp</a> 第 <a class="el" href="thread__pool__test_8cpp_source.html#l00033">33</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_aeffbbb11619689b9511e546ab5ae390d_icgraph.svg" width="428" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad308256f592d38713db18f78043f8f03"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::threadsTest::initTestLogger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化测试日志（输出到threads_test.log） </p>
+
+<p>在文件 <a class="el" href="thread__pool__test_8cpp_source.html">thread_pool_test.cpp</a> 第 <a class="el" href="thread__pool__test_8cpp_source.html#l00024">24</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_ad308256f592d38713db18f78043f8f03_cgraph.svg" width="620" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_ad308256f592d38713db18f78043f8f03_icgraph.svg" width="424" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad321c9b293454f86d26fe9a42a9e4275"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::threadsTest::paramTestTask </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delayMs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>测试用带参数任务（通过lambda捕获传递参数） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num</td><td>任务编号 </td></tr>
+    <tr><td class="paramname">delayMs</td><td>任务执行延迟（毫秒） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="thread__pool__test_8cpp_source.html">thread_pool_test.cpp</a> 第 <a class="el" href="thread__pool__test_8cpp_source.html#l00061">61</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_ad321c9b293454f86d26fe9a42a9e4275_cgraph.svg" width="319" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_ad321c9b293454f86d26fe9a42a9e4275_icgraph.svg" width="647" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a3baaea2f6eebd2a77562c3c50e7022"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::threadsTest::resetGlobalVars </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>重置全局测试变量（避免测试间干扰） </p>
+
+<p>在文件 <a class="el" href="thread__pool__test_8cpp_source.html">thread_pool_test.cpp</a> 第 <a class="el" href="thread__pool__test_8cpp_source.html#l00040">40</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_a8a3baaea2f6eebd2a77562c3c50e7022_cgraph.svg" width="351" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_a8a3baaea2f6eebd2a77562c3c50e7022_icgraph.svg" width="676" height="444"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af3efd1ba4edce828298b3cc7e46be9d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::threadsTest::runAllTests </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="thread__pool__test_8cpp_source.html">thread_pool_test.cpp</a> 第 <a class="el" href="thread__pool__test_8cpp_source.html#l00600">600</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_af3efd1ba4edce828298b3cc7e46be9d0_cgraph.svg" width="1107" height="1539"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_af3efd1ba4edce828298b3cc7e46be9d0_icgraph.svg" width="243" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afdd23b92908ad2e400d35fa48fc70779"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::threadsTest::testSafeQueueBasic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>测试 <a class="el" href="classhandy_1_1SafeQueue.html" title="线程安全的队列容器（模版类） ">SafeQueue</a> 基础功能（push/popWait/size/exit） </p>
+
+<p>在文件 <a class="el" href="thread__pool__test_8cpp_source.html">thread_pool_test.cpp</a> 第 <a class="el" href="thread__pool__test_8cpp_source.html#l00072">72</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_afdd23b92908ad2e400d35fa48fc70779_cgraph.svg" width="603" height="415"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_afdd23b92908ad2e400d35fa48fc70779_icgraph.svg" width="442" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac86254c952d340971a1b0566064ef2fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::threadsTest::testSafeQueueMultiThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>测试 <a class="el" href="classhandy_1_1SafeQueue.html" title="线程安全的队列容器（模版类） ">SafeQueue</a> 多生产者多消费者线程安全 </p>
+
+<p>在文件 <a class="el" href="thread__pool__test_8cpp_source.html">thread_pool_test.cpp</a> 第 <a class="el" href="thread__pool__test_8cpp_source.html#l00238">238</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_ac86254c952d340971a1b0566064ef2fd_cgraph.svg" width="638" height="298"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_ac86254c952d340971a1b0566064ef2fd_icgraph.svg" width="476" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a44479815d334b757460063a734ba746a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::threadsTest::testSafeQueueTimeout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>测试 <a class="el" href="classhandy_1_1SafeQueue.html" title="线程安全的队列容器（模版类） ">SafeQueue</a> 超时等待功能（popWait超时） </p>
+
+<p>在文件 <a class="el" href="thread__pool__test_8cpp_source.html">thread_pool_test.cpp</a> 第 <a class="el" href="thread__pool__test_8cpp_source.html#l00183">183</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_a44479815d334b757460063a734ba746a_cgraph.svg" width="616" height="231"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_a44479815d334b757460063a734ba746a_icgraph.svg" width="455" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abbd019f23df358dfd350a694bd0f8755"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::threadsTest::testThreadPoolBasic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>测试 <a class="el" href="classhandy_1_1ThreadPool.html" title="线程池类(管理一组线程执行任务) ">ThreadPool</a> 基础功能（构造/start/addTask/exit/join） </p>
+
+<p>在文件 <a class="el" href="thread__pool__test_8cpp_source.html">thread_pool_test.cpp</a> 第 <a class="el" href="thread__pool__test_8cpp_source.html#l00302">302</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_abbd019f23df358dfd350a694bd0f8755_cgraph.svg" width="819" height="526"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_abbd019f23df358dfd350a694bd0f8755_icgraph.svg" width="442" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a27d7989806fd80711ca64fef1a1bb772"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::threadsTest::testThreadPoolExceptions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>测试 <a class="el" href="classhandy_1_1ThreadPool.html" title="线程池类(管理一组线程执行任务) ">ThreadPool</a> 异常处理（非法参数、状态错误） </p>
+
+<p>在文件 <a class="el" href="thread__pool__test_8cpp_source.html">thread_pool_test.cpp</a> 第 <a class="el" href="thread__pool__test_8cpp_source.html#l00408">408</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_a27d7989806fd80711ca64fef1a1bb772_cgraph.svg" width="851" height="368"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_a27d7989806fd80711ca64fef1a1bb772_icgraph.svg" width="474" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9c4cfb5b26d89f823390fc8e7a6dacfc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::threadsTest::testThreadPoolMultiTask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>测试 <a class="el" href="classhandy_1_1ThreadPool.html" title="线程池类(管理一组线程执行任务) ">ThreadPool</a> 多线程任务执行与容量控制 </p>
+
+<p>在文件 <a class="el" href="thread__pool__test_8cpp_source.html">thread_pool_test.cpp</a> 第 <a class="el" href="thread__pool__test_8cpp_source.html#l00490">490</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_a9c4cfb5b26d89f823390fc8e7a6dacfc_cgraph.svg" width="608" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_a9c4cfb5b26d89f823390fc8e7a6dacfc_icgraph.svg" width="466" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7397324a575b5a9cfae3f63bd26a91cb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handy::threadsTest::testThreadPoolTaskException </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>测试 <a class="el" href="classhandy_1_1ThreadPool.html" title="线程池类(管理一组线程执行任务) ">ThreadPool</a> 任务异常处理（任务抛出异常不影响线程池） </p>
+
+<p>在文件 <a class="el" href="thread__pool__test_8cpp_source.html">thread_pool_test.cpp</a> 第 <a class="el" href="thread__pool__test_8cpp_source.html#l00554">554</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_a7397324a575b5a9cfae3f63bd26a91cb_cgraph.svg" width="638" height="328"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehandy_1_1threadsTest_a7397324a575b5a9cfae3f63bd26a91cb_icgraph.svg" width="495" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacehandy.html">handy</a></li><li class="navelem"><a class="el" href="namespacehandy_1_1threadsTest.html">threadsTest</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,26 +1,51 @@
 <map id="handy::Slice::size" name="handy::Slice::size">
-<area shape="rect" id="node2" href="$classhandy_1_1LineCodec.html#ab1c8f9735412f7c041d3a22226d4681a" title="检查EOT结束符的合法性（防止0x04混入普通数据） " alt="" coords="180,59,376,86"/>
-<area shape="rect" id="node3" href="$classhandy_1_1LineCodec.html#a4adf81b19212f4710d7859d17eb1a664" title="尝试对消息进行解码 " alt="" coords="424,34,619,61"/>
-<area shape="rect" id="node4" href="$classhandy_1_1LengthCodec.html#a1198a51cc6f48544dbae4e34cca38b70" title="尝试对消息进行解码 " alt="" coords="207,111,349,152"/>
-<area shape="rect" id="node5" href="$classhandy_1_1LengthCodec.html#a3f9dc26fcad4400d3b3e92c5ce85f906" title="对消息进行编码 " alt="" coords="207,176,349,217"/>
-<area shape="rect" id="node6" href="$classhandy_1_1TcpConn.html#a63113808998448cf8da3f24db546082a" title="设置消息回调函数，与onReadable回调冲突，只能调用一个 " alt="" coords="196,242,360,269"/>
-<area shape="rect" id="node7" href="$classhandy_1_1HttpMsg.html#a035dca54b0b58b34ba00876b3db36f59" title="已解析的字节数 " alt="" coords="426,394,617,421"/>
-<area shape="rect" id="node8" href="$classhandy_1_1HttpRequest.html#a8c651a6b85e5bb2846a241a451f76add" title="从缓冲区解码请求 " alt="" coords="672,361,811,403"/>
-<area shape="rect" id="node12" href="$classhandy_1_1HttpResponse.html#aff04a28503872c7f918d17fcc36835fe" title="从缓冲区解码响应 " alt="" coords="667,520,816,561"/>
-<area shape="rect" id="node13" href="$classhandy_1_1Buffer.html#abbb56c7aeaa54f9ece9a2f80741e21bf" title="追加Slice中的数据到缓冲区 " alt="" coords="203,445,353,471"/>
-<area shape="rect" id="node14" href="$classhandy_1_1Slice.html#a648c2ad74f8993e59113bd8987b1d569" title="调整视图长度（仅允许缩小，避免越界） " alt="" coords="209,495,347,522"/>
-<area shape="rect" id="node15" href="$classhandy_1_1Slice.html#a8859befd2f54816c2f1a38b5c095b49c" title="吞噬前sz个字符（从视图中移除并返回） " alt="" coords="218,546,338,573"/>
-<area shape="rect" id="node16" href="$classhandy_1_1Slice.html#ad6caa9dc456f4b67906da3dcd907a74d" title="从指定索引开始查找字符位置 " alt="" coords="217,597,339,623"/>
-<area shape="rect" id="node17" href="$classhandy_1_1Slice.html#a026c61a30fbf8675933fb9a6bfb56530" title="获取子视图（支持负偏移） " alt="" coords="217,343,339,370"/>
-<area shape="rect" id="node18" href="$classhandy_1_1Slice.html#a75bb49346c401e0529bbb6ea51a6f788" title="下标访问（支持随机访问） " alt="" coords="199,698,357,725"/>
-<area shape="rect" id="node19" href="$classhandy_1_1Slice.html#a853af4383711ab615372f9d238255c54" title="转换为std::string " alt="" coords="205,749,351,775"/>
-<area shape="rect" id="node22" href="$classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8" title="构造函数 " alt="" coords="454,851,589,892"/>
-<area shape="rect" id="node23" href="$classhandy_1_1Slice.html#ac07aa3819e66893480287ad790a27d0d" title="三段式比较（兼容排序） " alt="" coords="202,850,354,877"/>
-<area shape="rect" id="node24" href="$classhandy_1_1Slice.html#a6c5dab311605872e81871847eb01d504" title="判断是否以指定前缀开头 " alt="" coords="197,901,359,927"/>
-<area shape="rect" id="node25" href="$classhandy_1_1Slice.html#ab8b42b1c4e4fa5a7ae0030fb54109bad" title="判断是否以指定后缀结尾 " alt="" coords="199,951,357,978"/>
-<area shape="rect" id="node9" href="$classhandy_1_1HttpConnPtr.html#a1c2c0b1fbe5a35f94ae9d898ac57551b" title="底层TCP连接 " alt="" coords="864,488,1003,529"/>
-<area shape="rect" id="node10" href="$classhandy_1_1HttpConnPtr.html#a0b2ff11dafbd36c86ce8e6a035a95d4b" title="注册HTTP消息处理回调 " alt="" coords="1051,488,1189,529"/>
-<area shape="rect" id="node11" href="$classhandy_1_1HttpServer.html#af36412871ad23228ad2ba124b4526690" title="构造函数 " alt="" coords="1237,488,1373,529"/>
-<area shape="rect" id="node20" href="$classhandy_1_1HSHA.html#a45b5d0f4e3a7eac206d6a7336eef5111" title="设置消息处理的回调函数 " alt="" coords="446,749,597,775"/>
-<area shape="rect" id="node21" href="$classhandy_1_1Slice.html#a94fbcf5f40fdadf2f4f9a5665bac2ff5" title="隐式转换为std::string（兼容字符串场景） " alt="" coords="454,799,589,826"/>
+<area shape="rect" id="node2" href="$chat_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="253,5,303,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1LineCodec.html#ab1c8f9735412f7c041d3a22226d4681a" title="检查EOT结束符的合法性（防止0x04混入普通数据） " alt="" coords="180,56,376,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1LineCodec.html#a4adf81b19212f4710d7859d17eb1a664" title="尝试对消息进行解码 " alt="" coords="424,99,619,125"/>
+<area shape="rect" id="node5" href="$namespacehandy_1_1codecTest.html#a28cd8d37666f7d67ea69ef3dc4e8a09a" title="测试LineCodec基本编码解码功能 " alt="" coords="673,154,827,195"/>
+<area shape="rect" id="node8" href="$classhandy_1_1LengthCodec.html#a1198a51cc6f48544dbae4e34cca38b70" title="尝试对消息进行解码 " alt="" coords="207,274,349,315"/>
+<area shape="rect" id="node11" href="$classhandy_1_1LengthCodec.html#a3f9dc26fcad4400d3b3e92c5ce85f906" title="对消息进行编码 " alt="" coords="207,209,349,250"/>
+<area shape="rect" id="node12" href="$classhandy_1_1TcpConn.html#a63113808998448cf8da3f24db546082a" title="设置消息回调函数，与onReadable回调冲突，只能调用一个 " alt="" coords="196,340,360,367"/>
+<area shape="rect" id="node13" href="$classhandy_1_1HttpMsg.html#a035dca54b0b58b34ba00876b3db36f59" title="已解析的字节数 " alt="" coords="426,441,617,468"/>
+<area shape="rect" id="node14" href="$classhandy_1_1HttpRequest.html#a8c651a6b85e5bb2846a241a451f76add" title="从缓冲区解码请求 " alt="" coords="681,529,819,570"/>
+<area shape="rect" id="node19" href="$classhandy_1_1HttpResponse.html#aff04a28503872c7f918d17fcc36835fe" title="从缓冲区解码响应 " alt="" coords="675,463,825,505"/>
+<area shape="rect" id="node27" href="$classhandy_1_1Buffer.html#abbb56c7aeaa54f9ece9a2f80741e21bf" title="追加Slice中的数据到缓冲区 " alt="" coords="203,543,353,569"/>
+<area shape="rect" id="node28" href="$classhandy_1_1Slice.html#a648c2ad74f8993e59113bd8987b1d569" title="调整视图长度（仅允许缩小，避免越界） " alt="" coords="209,1283,347,1309"/>
+<area shape="rect" id="node32" href="$classhandy_1_1Slice.html#a8859befd2f54816c2f1a38b5c095b49c" title="吞噬前sz个字符（从视图中移除并返回） " alt="" coords="218,1141,338,1168"/>
+<area shape="rect" id="node33" href="$classhandy_1_1Slice.html#ad6caa9dc456f4b67906da3dcd907a74d" title="从指定索引开始查找字符位置 " alt="" coords="217,847,339,873"/>
+<area shape="rect" id="node34" href="$classhandy_1_1Slice.html#a026c61a30fbf8675933fb9a6bfb56530" title="获取子视图（支持负偏移） " alt="" coords="217,492,339,519"/>
+<area shape="rect" id="node35" href="$classhandy_1_1Slice.html#a75bb49346c401e0529bbb6ea51a6f788" title="下标访问（支持随机访问） " alt="" coords="199,948,357,975"/>
+<area shape="rect" id="node36" href="$classhandy_1_1Slice.html#a853af4383711ab615372f9d238255c54" title="转换为std::string " alt="" coords="205,796,351,823"/>
+<area shape="rect" id="node40" href="$classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8" title="构造函数 " alt="" coords="454,1166,589,1207"/>
+<area shape="rect" id="node44" href="$namespacehandy_1_1sliceTest.html#ac6d15e591e009e0b251426d6489b84ef" title="测试 Slice 构造函数 " alt="" coords="448,1231,595,1273"/>
+<area shape="rect" id="node46" href="$classhandy_1_1Slice.html#ac07aa3819e66893480287ad790a27d0d" title="三段式比较（兼容排序） " alt="" coords="202,1384,354,1411"/>
+<area shape="rect" id="node48" href="$classhandy_1_1Slice.html#a6c5dab311605872e81871847eb01d504" title="判断是否以指定前缀开头 " alt="" coords="197,1435,359,1461"/>
+<area shape="rect" id="node49" href="$classhandy_1_1Slice.html#ab8b42b1c4e4fa5a7ae0030fb54109bad" title="判断是否以指定后缀结尾 " alt="" coords="199,1333,357,1360"/>
+<area shape="rect" id="node50" href="$namespacehandy_1_1sliceTest.html#a760d8cc3b6f2e4f0881add396d0981df" title="测试 Slice 基础访问接口 " alt="" coords="205,1486,351,1527"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1codecTest.html#a90b79757a09c901a54dab3b5ab500651" title="测试LineCodec多线程安全 " alt="" coords="669,89,831,130"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1codecTest.html#af92da63a32dc8f9c41bcccf6501d1b83" title="handy::codecTest::run\l_all_tests" alt="" coords="897,183,1047,225"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1codecTest.html#a6eb614919eb3c8a0806765d0394d300c" title="测试LengthCodec基本编码解码功能 " alt="" coords="444,274,599,315"/>
+<area shape="rect" id="node10" href="$namespacehandy_1_1codecTest.html#ad76dddb779db3104e640795e409dde9f" title="测试LengthCodec多线程安全 " alt="" coords="433,209,609,250"/>
+<area shape="rect" id="node15" href="$classhandy_1_1HttpConnPtr.html#a1c2c0b1fbe5a35f94ae9d898ac57551b" title="底层TCP连接 " alt="" coords="903,521,1041,562"/>
+<area shape="rect" id="node17" href="$namespacehandy_1_1httpTest.html#a4150b5ab4526f3bd6df454d11062902c" title="测试 HttpRequest 解码功能 " alt="" coords="889,839,1055,881"/>
+<area shape="rect" id="node16" href="$classhandy_1_1HttpConnPtr.html#a0b2ff11dafbd36c86ce8e6a035a95d4b" title="注册HTTP消息处理回调 " alt="" coords="1143,506,1281,547"/>
+<area shape="rect" id="node18" href="$namespacehandy_1_1httpTest.html#a17f111811262f57e517dbaac08eb9206" title="handy::httpTest::runAllTests" alt="" coords="1119,876,1305,903"/>
+<area shape="rect" id="node20" href="$namespacehandy_1_1httpTest.html#a5032b65f228353aae4952b24c46e54dd" title="测试 HttpResponse 解码功能 " alt="" coords="889,774,1055,815"/>
+<area shape="rect" id="node21" href="$namespacehandy_1_1statSvrTest.html#afe30454626cbb9d209d3066a4e7c558e" title="模拟HTTP请求并获取响应 " alt="" coords="906,637,1038,678"/>
+<area shape="rect" id="node26" href="$namespacehandy_1_1statSvrTest.html#afcccfddf3d4afd37d6ae926711894ad5" title="测试多线程安全 " alt="" coords="881,455,1063,497"/>
+<area shape="rect" id="node22" href="$namespacehandy_1_1statSvrTest.html#a4bc63cfe9fd7b20a93899a61052da590" title="测试状态回调注册与处理 " alt="" coords="1111,571,1313,613"/>
+<area shape="rect" id="node23" href="$namespacehandy_1_1statSvrTest.html#a8923512cf2e34c3894bff312608462d0" title="测试页面回调注册与处理 " alt="" coords="1111,637,1313,678"/>
+<area shape="rect" id="node24" href="$namespacehandy_1_1statSvrTest.html#a6978e7b5a49820e29212fb51ee1ba8cc" title="测试命令回调注册与处理 " alt="" coords="1112,702,1312,743"/>
+<area shape="rect" id="node25" href="$namespacehandy_1_1statSvrTest.html#ae5deb8ab2c5c2449d14be92e81d6b441" title="测试404错误处理 " alt="" coords="1119,767,1305,809"/>
+<area shape="rect" id="node29" href="$namespacehandy_1_1sliceTest.html#a95d95b848b37759a07a2fcdf445b4eb4" title="测试 Slice 视图修改接口 " alt="" coords="448,1297,595,1338"/>
+<area shape="rect" id="node31" href="$namespacehandy_1_1sliceTest.html#ad1821b6af545091279d87c2f252861fb" title="测试 Slice 异常处理 " alt="" coords="448,1362,595,1403"/>
+<area shape="rect" id="node30" href="$namespacehandy_1_1sliceTest.html#ae747836883106b714d16ec9feb184fc1" title="handy::sliceTest::run\l_all_tests" alt="" coords="679,1329,821,1370"/>
+<area shape="rect" id="node37" href="$HTTP_2server_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="496,999,547,1025"/>
+<area shape="rect" id="node38" href="$classhandy_1_1HSHA.html#a45b5d0f4e3a7eac206d6a7336eef5111" title="设置消息处理的回调函数 " alt="" coords="446,1049,597,1076"/>
+<area shape="rect" id="node39" href="$classhandy_1_1Slice.html#a94fbcf5f40fdadf2f4f9a5665bac2ff5" title="隐式转换为std::string（兼容字符串场景） " alt="" coords="454,695,589,721"/>
+<area shape="rect" id="node41" href="$conn__test_8cpp.html#a0d646a1f1da2d69ad6e042527901294c" title="测试TcpConn的消息编解码功能 " alt="" coords="449,745,594,772"/>
+<area shape="rect" id="node42" href="$namespacehandy_1_1httpTest.html#a49b265c0276ae2a8458959bb5f1e90d5" title="测试 HttpRequest 构造与基础操作 " alt="" coords="667,963,833,1005"/>
+<area shape="rect" id="node43" href="$namespacehandy_1_1httpTest.html#a178c59b4492092998a98f9d5173e74aa" title="测试 HttpResponse 构造与基础操作 " alt="" coords="667,898,833,939"/>
+<area shape="rect" id="node45" href="$namespacehandy_1_1sliceTest.html#ae4c5cab504ae0a63d0ad6223e880a705" title="多线程测试（验证线程安全：构造/访问） " alt="" coords="448,1101,595,1142"/>
+<area shape="rect" id="node47" href="$namespacehandy_1_1sliceTest.html#a7c3b841abd4233dd996ed9726027b261" title="测试 Slice 比较与转换接口 " alt="" coords="438,1427,605,1469"/>
 </map>

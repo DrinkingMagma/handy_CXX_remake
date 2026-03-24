@@ -110,7 +110,9 @@ $(document).ready(function(){initNavTree('thread__pool_8cpp.html','');});
 <a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="thread__pool_8h_source.html">thread_pool.h</a>&quot;</code><br/>
 <code>#include &lt;chrono&gt;</code><br/>
-</div><a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+</div>
+<p><a href="thread__pool_8cpp_source.html">浏览源代码.</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>线程池实现，包含安全队列和线程池核心逻辑，支持任务并发执行、动态启停和优雅退出 </p>
 <p>该文件实现了两个核心组件：</p>
 <ol type="1">
@@ -138,6 +140,8 @@ $(document).ready(function(){initNavTree('thread__pool_8cpp.html','');});
 <li>优雅退出：调用exit()后，线程池不再接受新任务，已入队任务会继续执行完成，所有工作线程退出后join()返回；</li>
 <li>使用限制：线程池启动后才能添加任务，退出后不能再启动或添加任务，否则会抛出异常或返回失败。 </li>
 </ol>
+
+<p>在文件 <a class="el" href="thread__pool_8cpp_source.html">thread_pool.cpp</a> 中定义.</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

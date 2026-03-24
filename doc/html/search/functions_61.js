@@ -3,7 +3,7 @@ var searchData=
   ['absorb',['absorb',['../classhandy_1_1Buffer.html#a48b58522a99b408d8dca8c831d83650a',1,'handy::Buffer']]],
   ['addchannel',['addChannel',['../classhandy_1_1PollerBase.html#a4bdd5c937d665e188bc16eaf147d8a03',1,'handy::PollerBase']]],
   ['addfdflag',['addFdFlag',['../structhandy_1_1Utils.html#aa5e8825a818f6d930e3ffae3414d29cb',1,'handy::Utils']]],
-  ['addidlecb',['addIdleCB',['../classhandy_1_1TcpConn.html#ab5ce5d7f2258ee3b4cadface21dc330c',1,'handy::TcpConn']]],
+  ['addidlecb',['addIdleCB',['../classhandy_1_1TcpConn.html#a2f286a93da01ca7da55289857c590a08',1,'handy::TcpConn']]],
   ['addrtostring',['addrToString',['../namespacehandy_1_1port.html#a944d00efd76b149e785f1143daafaf77',1,'handy::port']]],
   ['addsize',['addSize',['../classhandy_1_1Buffer.html#a0428fcbdbcf59a3382bb5a40a75d4b18',1,'handy::Buffer']]],
   ['addtask',['addTask',['../classhandy_1_1ThreadPool.html#aa539ee3210ff0346b8f88d705bf56f32',1,'handy::ThreadPool::addTask(Task &amp;&amp;task)'],['../classhandy_1_1ThreadPool.html#adc125c1df1bdcd8ffcc4162551a49be2',1,'handy::ThreadPool::addTask(Task &amp;task)']]],

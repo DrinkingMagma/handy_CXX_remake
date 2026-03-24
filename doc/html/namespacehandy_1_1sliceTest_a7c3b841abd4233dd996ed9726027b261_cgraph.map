@@ -1,0 +1,7 @@
+<map id="handy::sliceTest::test_comparison_conversion" name="handy::sliceTest::test_comparison_conversion">
+<area shape="rect" id="node2" href="$classhandy_1_1Slice.html#ac07aa3819e66893480287ad790a27d0d" title="三段式比较（兼容排序） " alt="" coords="225,5,377,32"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Slice.html#a6c5dab311605872e81871847eb01d504" title="判断是否以指定前缀开头 " alt="" coords="220,56,383,83"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Slice.html#ab8b42b1c4e4fa5a7ae0030fb54109bad" title="判断是否以指定后缀结尾 " alt="" coords="223,107,380,133"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Slice.html#afd158342d935780c8efc5afee65665e0" title="按指定字符分割视图 " alt="" coords="238,157,365,184"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Slice.html#aa9c41a7c077cb18809a408d429587b3c" title="获取视图长度 " alt="" coords="431,56,557,83"/>
+</map>

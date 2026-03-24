@@ -1,0 +1,12 @@
+<map id="handy::daemonTest::test_signal_handler" name="handy::daemonTest::test_signal_handler">
+<area shape="rect" id="node2" href="$namespacehandy_1_1daemonTest.html#a3851edde745ce542c3e590fe280f7134" title="清理测试环境 " alt="" coords="209,5,351,47"/>
+<area shape="rect" id="node3" href="$daemon__test_8cpp.html#a270e10c38fca3e98fe82967c2cde5d7f" title="g_signalReceived" alt="" coords="447,42,572,69"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Signal.html#aee24b9f0b0cd79e6be63fc1fd0a8b149" title="注册信号处理函数 " alt="" coords="209,122,351,149"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Daemon.html#a542577d85c2cde3b563c3661ccda0e80" title="停止当前运行的守护进程 " alt="" coords="655,274,802,301"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Daemon.html#a43b7d49312a5972bde56a14a95ebb815" title="从指定的pid文件中读取守护进程的PID " alt="" coords="851,299,1061,326"/>
+<area shape="rect" id="node8" href="$classhandy_1_1Daemon.html#a301dc0a520e61a5f46ecd2ffb7d3d91f" title="根据命令执行守护进程的对应操作 " alt="" coords="196,299,364,326"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Signal.html#a6d993972ec93b71aade25986ec825635" title="信号处理分发函数 " alt="" coords="412,122,607,149"/>
+<area shape="rect" id="node9" href="$classhandy_1_1Daemon.html#a3e86b062fd8967dd448455bdc73c53cd" title="启动一个新的守护进程 " alt="" coords="655,375,803,402"/>
+<area shape="rect" id="node11" href="$classhandy_1_1Daemon.html#aafa40b3e5938a3e9cbfeadabe1ee0fd8" title="重启守护进程 " alt="" coords="430,325,589,351"/>
+<area shape="rect" id="node10" href="$classhandy_1_1Daemon.html#a1e9cab5021af8a73b485e80fd47f10a0" title="将当前进程的PID写入指定的PID文件 " alt="" coords="857,375,1055,402"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="handy::netTest::test_buffer_memory_manage" name="handy::netTest::test_buffer_memory_manage">
+<area shape="rect" id="node2" href="$classhandy_1_1Buffer.html#a4bfa7ff879fbce307c502c668d378bb5" title="设置缓冲区的期望增长大小 " alt="" coords="221,5,388,47"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60" title="将指定长度的数据追加到缓冲区 " alt="" coords="230,71,379,98"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Buffer.html#aa08545c90241054e435ff328f087b0c1" title="从头部消耗指定长度的数据 " alt="" coords="225,122,385,149"/>
+<area shape="rect" id="node8" href="$classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16" title="获取当前缓冲区中的数据长度 " alt="" coords="239,173,370,199"/>
+<area shape="rect" id="node9" href="$classhandy_1_1Buffer.html#a268ad2c07c123cee2157f861424b2f08" title="判断缓冲区是否为空 " alt="" coords="233,223,376,250"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Buffer.html#afbd50b666a4e1576b2e19bdb047e7a53" title="确保缓冲区有足够空间容纳指定长度的数据 " alt="" coords="436,71,617,98"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Buffer.html#a152b8546af1c0bca407455a6b174e05b" title="将数据移动到缓冲区头部，减少内存碎片 " alt="" coords="665,46,843,73"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Buffer.html#a0ca99339d31c25d203875bf57f75fc67" title="扩展缓冲区容量 " alt="" coords="676,97,832,123"/>
+</map>

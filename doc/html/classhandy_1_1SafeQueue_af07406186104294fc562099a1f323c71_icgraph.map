@@ -1,4 +1,8 @@
 <map id="handy::SafeQueue::size" name="handy::SafeQueue::size">
 <area shape="rect" id="node2" href="$classhandy_1_1ThreadPool.html#ac6679e58f1edc7df60289577b0475100" title="析构函数(优雅释放资源) " alt="" coords="220,5,359,47"/>
 <area shape="rect" id="node3" href="$classhandy_1_1ThreadPool.html#a9184b6409d22e2d2110d9666a4506526" title="获取当前等待执行的任务数量（线程安全） " alt="" coords="216,71,363,112"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1threadsTest.html#afdd23b92908ad2e400d35fa48fc70779" title="测试 SafeQueue 基础功能（push/popWait/size/exit） " alt="" coords="423,133,573,175"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1threadsTest.html#a9c4cfb5b26d89f823390fc8e7a6dacfc" title="测试 ThreadPool 多线程任务执行与容量控制 " alt="" coords="411,68,585,109"/>
+<area shape="rect" id="node5" href="$namespacehandy_1_1threadsTest.html#af3efd1ba4edce828298b3cc7e46be9d0" title="handy::threadsTest\l::runAllTests" alt="" coords="633,101,767,143"/>
+<area shape="rect" id="node6" href="$thread__pool__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="815,109,865,135"/>
 </map>

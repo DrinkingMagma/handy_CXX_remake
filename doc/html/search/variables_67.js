@@ -1,5 +1,19 @@
 var searchData=
 [
+  ['g_5fbase',['g_base',['../chat_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e',1,'g_base():&#160;chat.cpp'],['../HSHA_2client_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e',1,'g_base():&#160;client.cpp'],['../HSHA_2server_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e',1,'g_base():&#160;server.cpp'],['../HSHAU_2client_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e',1,'g_base():&#160;client.cpp'],['../HSHAU_2server_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e',1,'g_base():&#160;server.cpp'],['../HTTP_2server_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e',1,'g_base():&#160;server.cpp'],['../reconnect_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e',1,'g_base():&#160;reconnect.cpp'],['../tcp_2client_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e',1,'g_base():&#160;client.cpp'],['../tcp_2server_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e',1,'g_base():&#160;server.cpp'],['../timer_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e',1,'g_base():&#160;timer.cpp'],['../udp_2client_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e',1,'g_base():&#160;client.cpp'],['../udp_2server_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e',1,'g_base():&#160;server.cpp']]],
+  ['g_5fclientconn',['g_clientConn',['../reconnect_8cpp.html#ad42c01343da7c22272f2b2fde02537f1',1,'reconnect.cpp']]],
+  ['g_5fconnnames',['g_connNames',['../chat_8cpp.html#ae385d47405556b8c4af517f80d75c0ab',1,'chat.cpp']]],
+  ['g_5fconns',['g_conns',['../chat_8cpp.html#ae1a11134651b465c5a6800ed5534bc55',1,'chat.cpp']]],
+  ['g_5fhsha',['g_hsha',['../HSHA_2server_8cpp.html#abbf97f115cfc1ac7ce77c626572d2abc',1,'server.cpp']]],
+  ['g_5fhshau',['g_hshau',['../HSHAU_2server_8cpp.html#ae4e62c6c054e610944bb8c72ce3db598',1,'server.cpp']]],
+  ['g_5fpendingclose',['g_pendingClose',['../chat_8cpp.html#ab3f07819dcf70486a8958c2b7e596cf4',1,'chat.cpp']]],
+  ['g_5frunning',['g_running',['../reconnect_8cpp.html#a82d33897ce200eadf132e93031f0e595',1,'reconnect.cpp']]],
+  ['g_5fserver',['g_server',['../chat_8cpp.html#a19b169a8ac42f50793aaf481d0317b2b',1,'chat.cpp']]],
+  ['g_5ftcpserver',['g_tcpServer',['../reconnect_8cpp.html#afe6180369cfb5826aa9f8f2e5fa0c73f',1,'reconnect.cpp']]],
+  ['g_5ftestfilecontent',['g_testFileContent',['../namespacehandy_1_1statSvrTest.html#ac95ec642bb44f550155681d75f04ca24',1,'handy::statSvrTest']]],
+  ['g_5ftestfilename',['g_testFileName',['../namespacehandy_1_1statSvrTest.html#a0e296cf997e69276c3ad30a1ad9127fb',1,'handy::statSvrTest']]],
+  ['g_5ftestmsg',['g_testMsg',['../udp__test_8cpp.html#a332cec8c25f713e81adbfcca4d2592b1',1,'udp_test.cpp']]],
+  ['g_5ftestresponse',['g_testResponse',['../udp__test_8cpp.html#af79430c9ef5ad10775a7f561a4e9e814',1,'udp_test.cpp']]],
   ['g_5ftmkey',['g_tmKey',['../namespacehandy.html#a5e1a7b3bd1c48ec484cdb1821b851412',1,'handy']]],
   ['g_5ftmkeyonce',['g_tmKeyOnce',['../namespacehandy.html#a9319165141c8b789eb6279cafda9d9cd',1,'handy']]],
   ['globalid',['globalId',['../classhandy_1_1PollerBase.html#a5e0851c1a0dc2256ee44a28104d0985e',1,'handy::PollerBase']]]

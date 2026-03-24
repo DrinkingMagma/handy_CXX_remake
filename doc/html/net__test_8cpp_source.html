@@ -1,0 +1,603 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: test/net_test.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('net__test_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">net_test.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="net__test_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="net_8h.html">net.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="logger_8h.html">logger.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html">utils.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;arpa/inet.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;netinet/tcp.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// 多线程测试计数变量</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;std::atomic&lt;int&gt; <a class="code" href="net__test_8cpp.html#a852944679fba32403b45793ce4fb3cd9">g_bufferThreadCount</a>(0);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;std::atomic&lt;int&gt; <a class="code" href="net__test_8cpp.html#a7f869fbfa37a9933b051dcf806f0c516">g_netThreadCount</a>(0);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>handy {</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="namespacehandy_1_1netTest.html">   21</a></span>&#160;<span class="keyword">namespace </span>netTest {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// -------------------------- 测试辅助函数 --------------------------</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespacehandy_1_1netTest.html#aedbb5cc1bfdf14d0abdb88c8299812e6">   27</a></span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="namespacehandy_1_1netTest.html#aedbb5cc1bfdf14d0abdb88c8299812e6">initTestLogger</a>() {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">Logger::getInstance</a>().<a class="code" href="classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893">setLogFileName</a>(<span class="stringliteral">&quot;net_test.log&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">Logger::getInstance</a>().<a class="code" href="classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36">setLogLevel</a>(Logger::LogLevel::LDEBUG);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;=== net_test 测试开始 ===&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespacehandy_1_1netTest.html#a6f9436df62b53b26aad843a0103ab2b8">   37</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespacehandy_1_1netTest.html#a6f9436df62b53b26aad843a0103ab2b8">createTempTcpSocket</a>() {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> fd = socket(AF_INET, SOCK_STREAM, 0);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (fd &lt; 0) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;创建临时Socket失败，err=%d(%s)&quot;</span>, errno, strerror(errno));</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> fd;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespacehandy_1_1netTest.html#a6566427ee3de225971e897e87ea067e8">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacehandy_1_1netTest.html#a6566427ee3de225971e897e87ea067e8">closeTempSocket</a>(<span class="keywordtype">int</span> fd) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (fd &gt;= 0) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        close(fd);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// -------------------------- Net类测试 --------------------------</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="namespacehandy_1_1netTest.html#a4b27bb07bc34f93a8f101a166994f5c7">   59</a></span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="namespacehandy_1_1netTest.html#a4b27bb07bc34f93a8f101a166994f5c7">test_net_byte_order</a>() {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 开始测试Net字节序转换 ===&quot;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// 测试16位无符号整数</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    uint16_t host16 = 0x1234;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    uint16_t net16 = <a class="code" href="classhandy_1_1Net.html#a9512fbffc383897eaad1fd9dab0a7f01">Net::hton</a>(host16);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    uint16_t host16_restore = <a class="code" href="classhandy_1_1Net.html#ab2529e9ccaf7c82c477ba0cbc2fa6f6c">Net::ntoh</a>(net16);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;16位转换测试: 主机序0x%x → 网络序0x%x → 恢复0x%x（%s）&quot;</span>,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;          host16, net16, host16_restore, </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;          (host16_restore == host16) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// 测试32位有符号整数</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    int32_t host32 = 0x12345678;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    int32_t net32 = <a class="code" href="classhandy_1_1Net.html#a9512fbffc383897eaad1fd9dab0a7f01">Net::hton</a>(host32);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    int32_t host32_restore = <a class="code" href="classhandy_1_1Net.html#ab2529e9ccaf7c82c477ba0cbc2fa6f6c">Net::ntoh</a>(net32);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;32位转换测试: 主机序0x%x → 网络序0x%x → 恢复0x%x（%s）&quot;</span>,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;          host32, net32, host32_restore, </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;          (host32_restore == host32) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// 测试64位无符号整数</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    uint64_t host64 = 0x123456789abcdef0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    uint64_t net64 = <a class="code" href="classhandy_1_1Net.html#a9512fbffc383897eaad1fd9dab0a7f01">Net::hton</a>(host64);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    uint64_t host64_restore = <a class="code" href="classhandy_1_1Net.html#ab2529e9ccaf7c82c477ba0cbc2fa6f6c">Net::ntoh</a>(net64);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;64位转换测试: 主机序0x%lx → 网络序0x%lx → 恢复0x%lx（%s）&quot;</span>,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;          host64, net64, host64_restore, </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;          (host64_restore == host64) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== Net字节序转换测试结束 ===\n&quot;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="namespacehandy_1_1netTest.html#a834ee58d32bfc67e085de365ff5daaa1">   92</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacehandy_1_1netTest.html#a834ee58d32bfc67e085de365ff5daaa1">test_net_socket_options</a>() {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 开始测试Net Socket选项 ===&quot;</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">int</span> fd = <a class="code" href="namespacehandy_1_1netTest.html#a6f9436df62b53b26aad843a0103ab2b8">createTempTcpSocket</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span> (fd &lt; 0) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== Net Socket选项测试结束（失败） ===\n&quot;</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">int</span> errCode = 0;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">// 测试1: 设置非阻塞模式</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">bool</span> nbRet = <a class="code" href="classhandy_1_1Net.html#a6453e1072f6fdc96c1ca5df55f8124b3">Net::setNonBlock</a>(fd, <span class="keyword">true</span>, &amp;errCode);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">int</span> flags = fcntl(fd, F_GETFL, 0);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">bool</span> nbCheck = (flags &amp; O_NONBLOCK) != 0;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;非阻塞模式测试: 设置返回%s，实际状态%s（%s）&quot;</span>,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;          nbRet ? <span class="stringliteral">&quot;成功&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>, nbCheck ? <span class="stringliteral">&quot;非阻塞&quot;</span> : <span class="stringliteral">&quot;阻塞&quot;</span>,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;          (nbRet &amp;&amp; nbCheck) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">// 测试2: 设置地址重用（SO_REUSEADDR）</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">bool</span> raRet = <a class="code" href="classhandy_1_1Net.html#a268a9fccc2daea05719f3599a620bd10">Net::setReuseAddr</a>(fd, <span class="keyword">true</span>, &amp;errCode);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">int</span> raFlag = 0;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    socklen_t raLen = <span class="keyword">sizeof</span>(raFlag);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    getsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &amp;raFlag, &amp;raLen);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;地址重用测试: 设置返回%s，实际值%d（%s）&quot;</span>,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;          raRet ? <span class="stringliteral">&quot;成功&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>, raFlag,</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;          (raRet &amp;&amp; raFlag == 1) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">// 测试3: 设置端口重用（SO_REUSEPORT）</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">bool</span> rpRet = <a class="code" href="classhandy_1_1Net.html#affb6f68dd905db3c1572998ea730461c">Net::setReusePort</a>(fd, <span class="keyword">true</span>, &amp;errCode);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">    #ifdef SO_REUSEPORT</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor"></span>        <span class="keywordtype">int</span> rpFlag = 0;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        socklen_t rpLen = <span class="keyword">sizeof</span>(rpFlag);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        getsockopt(fd, SOL_SOCKET, SO_REUSEPORT, &amp;rpFlag, &amp;rpLen);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;端口重用测试: 设置返回%s，实际值%d（%s）&quot;</span>,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;              rpRet ? <span class="stringliteral">&quot;成功&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>, rpFlag,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;              (rpRet &amp;&amp; rpFlag == 1) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">    #else</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor"></span>        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;端口重用测试: 平台不支持SO_REUSEPORT（跳过验证）&quot;</span>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">// 测试4: 设置TCP无延迟（TCP_NODELAY）</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">bool</span> ndRet = <a class="code" href="classhandy_1_1Net.html#a913f5315ff0e3d0e044ec7c686fe54c0">Net::setNoDelay</a>(fd, <span class="keyword">true</span>, &amp;errCode);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">int</span> ndFlag = 0;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    socklen_t ndLen = <span class="keyword">sizeof</span>(ndFlag);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    getsockopt(fd, IPPROTO_TCP, TCP_NODELAY, &amp;ndFlag, &amp;ndLen);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;TCP无延迟测试: 设置返回%s，实际值%d（%s）&quot;</span>,</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;          ndRet ? <span class="stringliteral">&quot;成功&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>, ndFlag,</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;          (ndRet &amp;&amp; ndFlag == 1) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment">// 测试5: 无效fd处理</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">bool</span> badFdRet = <a class="code" href="classhandy_1_1Net.html#a6453e1072f6fdc96c1ca5df55f8124b3">Net::setNonBlock</a>(-1, <span class="keyword">true</span>, &amp;errCode);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;无效fd测试: 设置返回%s，错误码%d（预期EBADF=%d，%s）&quot;</span>,</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;          badFdRet ? <span class="stringliteral">&quot;成功&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>, errCode, EBADF,</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;          (badFdRet == <span class="keyword">false</span> &amp;&amp; errCode == EBADF) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="namespacehandy_1_1netTest.html#a6566427ee3de225971e897e87ea067e8">closeTempSocket</a>(fd);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== Net Socket选项测试结束 ===\n&quot;</span>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="namespacehandy_1_1netTest.html#abf3529f17874986515ffb235c012aed1">  153</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacehandy_1_1netTest.html#abf3529f17874986515ffb235c012aed1">test_net_thread_safety</a>() {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 开始测试Net多线程安全 ===&quot;</span>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> THREAD_NUM = 4;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> LOOP_NUM = 500;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="comment">// 线程函数：并发设置Socket选项</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">auto</span> threadFunc = []() {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; LOOP_NUM; ++i) {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordtype">int</span> fd = <a class="code" href="namespacehandy_1_1netTest.html#a6f9436df62b53b26aad843a0103ab2b8">createTempTcpSocket</a>();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">if</span> (fd &gt;= 0) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                <span class="comment">// 交替设置不同选项</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <a class="code" href="classhandy_1_1Net.html#a6453e1072f6fdc96c1ca5df55f8124b3">Net::setNonBlock</a>(fd, (i % 2 == 0), <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                <a class="code" href="classhandy_1_1Net.html#a268a9fccc2daea05719f3599a620bd10">Net::setReuseAddr</a>(fd, (i % 3 == 0), <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <a class="code" href="namespacehandy_1_1netTest.html#a6566427ee3de225971e897e87ea067e8">closeTempSocket</a>(fd);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <a class="code" href="net__test_8cpp.html#a7f869fbfa37a9933b051dcf806f0c516">g_netThreadCount</a>.fetch_add(1, std::memory_order_relaxed);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    };</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">// 启动线程</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    std::vector&lt;std::thread&gt; threads;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; THREAD_NUM; ++i) {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        threads.emplace_back(threadFunc);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="comment">// 等待线程完成</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; t : threads) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        t.join();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="comment">// 验证执行次数</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    int64_t total = <a class="code" href="net__test_8cpp.html#a7f869fbfa37a9933b051dcf806f0c516">g_netThreadCount</a>.load();</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    int64_t expected = THREAD_NUM * LOOP_NUM;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;Net多线程测试: 总执行次数=%lld（预期%lld，%s）&quot;</span>,</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;          total, expected, (total == expected) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== Net多线程安全测试结束 ===\n&quot;</span>);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">// -------------------------- Ipv4Addr类测试 --------------------------</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="namespacehandy_1_1netTest.html#a9ebc5dad13f87eb5aea50c66c205cc58">  196</a></span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="namespacehandy_1_1netTest.html#a9ebc5dad13f87eb5aea50c66c205cc58">test_ipv4addr_construct_format</a>() {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 开始测试Ipv4Addr构造与格式化 ===&quot;</span>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">// 测试1: 通过端口构造（默认0.0.0.0）</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> addr1(8080);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;端口构造测试: %s（预期0.0.0.0:8080，%s）&quot;</span>,</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;          addr1.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str(),</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;          (addr1.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>() == <span class="stringliteral">&quot;0.0.0.0:8080&quot;</span> &amp;&amp; addr1.<a class="code" href="classhandy_1_1Ipv4Addr.html#a143d7ca4af554ed22e334bfb80d5ad02">port</a>() == 8080) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="comment">// 测试2: 通过IP字符串+端口构造</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> addr2(<span class="stringliteral">&quot;192.168.1.100&quot;</span>, 9090);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;IP+端口构造测试: %s（预期192.168.1.100:9090，%s）&quot;</span>,</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;          addr2.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str(),</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;          (addr2.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>() == <span class="stringliteral">&quot;192.168.1.100:9090&quot;</span> &amp;&amp; addr2.<a class="code" href="classhandy_1_1Ipv4Addr.html#aa1e3e274ffd85680959b12a1ce1fdd50">ip</a>() == <span class="stringliteral">&quot;192.168.1.100&quot;</span>) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="comment">// 测试3: 通过域名构造（依赖DNS解析，这里用已知域名）</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> addr3(<span class="stringliteral">&quot;localhost&quot;</span>, 80);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">bool</span> dnsValid = addr3.<a class="code" href="classhandy_1_1Ipv4Addr.html#aeedd479d879facc608008878faa48a8b">isIpValid</a>() &amp;&amp; (addr3.<a class="code" href="classhandy_1_1Ipv4Addr.html#aa1e3e274ffd85680959b12a1ce1fdd50">ip</a>() == <span class="stringliteral">&quot;127.0.0.1&quot;</span>);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;域名构造测试: %s（%s）&quot;</span>,</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;          addr3.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str(), dnsValid ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="comment">// 测试4: 通过sockaddr_in构造</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keyword">struct </span>sockaddr_in rawAddr;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    memset(&amp;rawAddr, 0, <span class="keyword">sizeof</span>(rawAddr));</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    rawAddr.sin_family = AF_INET;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    rawAddr.sin_port = htons(1234);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    inet_pton(AF_INET, <span class="stringliteral">&quot;10.0.0.1&quot;</span>, &amp;rawAddr.sin_addr);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> addr4(rawAddr);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;sockaddr_in构造测试: %s（预期10.0.0.1:1234，%s）&quot;</span>,</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;          addr4.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str(),</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;          (addr4.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>() == <span class="stringliteral">&quot;10.0.0.1:1234&quot;</span> &amp;&amp; addr4.<a class="code" href="classhandy_1_1Ipv4Addr.html#a59e4db2e65a09db95cbe295fcd956a39">ipInt</a>() == 0x0a000001) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="comment">// 测试5: 无效IP构造</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> addr5(<span class="stringliteral">&quot;invalid_ip_123&quot;</span>, 5678);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;无效IP构造测试: %s（预期含invalid_ip，%s）&quot;</span>,</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;          addr5.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str(),</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;          (addr5.<a class="code" href="classhandy_1_1Ipv4Addr.html#aeedd479d879facc608008878faa48a8b">isIpValid</a>() == <span class="keyword">false</span> &amp;&amp; addr5.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().find(<span class="stringliteral">&quot;invalid ip&quot;</span>) != std::string::npos) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="comment">// 测试6: 拷贝与移动构造</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> addr6 = addr2;  <span class="comment">// 拷贝</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> addr7 = std::move(addr6);  <span class="comment">// 移动</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;拷贝/移动构造测试: %s（预期192.168.1.100:9090，%s）&quot;</span>,</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;          addr7.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str(),</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;          (addr7.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>() == <span class="stringliteral">&quot;192.168.1.100:9090&quot;</span>) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== Ipv4Addr构造与格式化测试结束 ===\n&quot;</span>);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="namespacehandy_1_1netTest.html#a01641c30da483685f0cd4439763043ec">  248</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacehandy_1_1netTest.html#a01641c30da483685f0cd4439763043ec">test_ipv4addr_resolve_validate</a>() {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 开始测试Ipv4Addr解析与验证 ===&quot;</span>);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="comment">// 测试1: 主机名转IP（localhost）</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    std::string outIp1;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">bool</span> ret1 = <a class="code" href="classhandy_1_1Ipv4Addr.html#a15f73de1453340b7a7855250f08b10c6">Ipv4Addr::hostToIp</a>(<span class="stringliteral">&quot;localhost&quot;</span>, outIp1);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;localhost解析测试: IP=%s（%s）&quot;</span>,</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;          outIp1.c_str(), (ret1 &amp;&amp; outIp1 == <span class="stringliteral">&quot;127.0.0.1&quot;</span>) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="comment">// 测试2: 无效主机名解析</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    std::string outIp2;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordtype">bool</span> ret2 = <a class="code" href="classhandy_1_1Ipv4Addr.html#a15f73de1453340b7a7855250f08b10c6">Ipv4Addr::hostToIp</a>(<span class="stringliteral">&quot;invalid.host.nonexist&quot;</span>, outIp2);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;无效主机名解析测试: 返回%s，IP=%s（%s）&quot;</span>,</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;          ret2 ? <span class="stringliteral">&quot;成功&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>, outIp2.c_str(),</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;          (ret2 == <span class="keyword">false</span> &amp;&amp; outIp2.empty()) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">// 测试3: IP整数转换（主机序）</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> addr(<span class="stringliteral">&quot;172.16.0.2&quot;</span>, 0);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    uint32_t ipInt = addr.<a class="code" href="classhandy_1_1Ipv4Addr.html#a59e4db2e65a09db95cbe295fcd956a39">ipInt</a>();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;IP整数转换测试: 主机序整数0x%x（预期0xac100002，%s）&quot;</span>,</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;          ipInt, (ipInt == 0xac100002) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="comment">// 测试4: 地址族校验（非AF_INET）</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keyword">struct </span>sockaddr_in badAddr;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    memset(&amp;badAddr, 0, <span class="keyword">sizeof</span>(badAddr));</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    badAddr.sin_family = AF_INET6;  <span class="comment">// IPv6地址族</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> addrBad(badAddr);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;地址族校验测试: 有效性=%s（预期false，%s）&quot;</span>,</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;          addrBad.<a class="code" href="classhandy_1_1Ipv4Addr.html#aeedd479d879facc608008878faa48a8b">isIpValid</a>() ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>,</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;          (addrBad.<a class="code" href="classhandy_1_1Ipv4Addr.html#aeedd479d879facc608008878faa48a8b">isIpValid</a>() == <span class="keyword">false</span>) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== Ipv4Addr解析与验证测试结束 ===\n&quot;</span>);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;}</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment">// -------------------------- Buffer类测试 --------------------------</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="namespacehandy_1_1netTest.html#ac61eff50eb6968ff473ad272aaeabc15">  286</a></span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="namespacehandy_1_1netTest.html#ac61eff50eb6968ff473ad272aaeabc15">test_buffer_basic_ops</a>() {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 开始测试Buffer基本操作 ===&quot;</span>);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> buf;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="comment">// 测试1: 追加字符串</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    buf.<a class="code" href="classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60">append</a>(<span class="stringliteral">&quot;hello&quot;</span>);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    buf.<a class="code" href="classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60">append</a>(<span class="stringliteral">&quot; world&quot;</span>);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    std::string data1 = buf.<a class="code" href="classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af">data</a>();</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;字符串追加测试: 数据=%s（预期hello world，%s）&quot;</span>,</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;          data1.c_str(), (data1 == <span class="stringliteral">&quot;hello world&quot;</span>) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="comment">// 测试2: 追加POD类型（int）</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">int</span> podVal = 0x12345678;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    buf.<a class="code" href="classhandy_1_1Buffer.html#a1206aca6841c03ba32c83dce30f886cd">appendValue</a>(podVal);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordtype">size_t</span> size2 = buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>();</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;POD追加测试: 总长度=%zu（预期11+4=15，%s）&quot;</span>,</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;          size2, (size2 == 15) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="comment">// 测试3: 消耗数据</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    buf.<a class="code" href="classhandy_1_1Buffer.html#aa08545c90241054e435ff328f087b0c1">consume</a>(6);  <span class="comment">// 消耗&quot;hello &quot;</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    std::string data3 = buf.<a class="code" href="classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af">data</a>();</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;数据消耗测试: 剩余长度=%zu（预期9，%s）&quot;</span>,</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;          data3.size(), (data3.size() == 9) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="comment">// 测试4: 清空缓冲区</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    buf.<a class="code" href="classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42">clear</a>();</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;清空测试: 空=%s（预期true，%s）&quot;</span>,</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;          buf.<a class="code" href="classhandy_1_1Buffer.html#a268ad2c07c123cee2157f861424b2f08">empty</a>() ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>, (buf.<a class="code" href="classhandy_1_1Buffer.html#a268ad2c07c123cee2157f861424b2f08">empty</a>() == <span class="keyword">true</span>) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="comment">// 测试5: 吸收另一个缓冲区</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> bufSrc;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    bufSrc.<a class="code" href="classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60">append</a>(<span class="stringliteral">&quot;absorb_test&quot;</span>);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    buf.<a class="code" href="classhandy_1_1Buffer.html#a48b58522a99b408d8dca8c831d83650a">absorb</a>(bufSrc);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;吸收测试: 数据=%s（预期absorb_test，%s）&quot;</span>,</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;          buf.<a class="code" href="classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af">data</a>().c_str(), (buf.<a class="code" href="classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af">data</a>() == <span class="stringliteral">&quot;absorb_test&quot;</span> &amp;&amp; bufSrc.<a class="code" href="classhandy_1_1Buffer.html#a268ad2c07c123cee2157f861424b2f08">empty</a>()) ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="comment">// 测试6: 设置期望增长大小</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    buf.<a class="code" href="classhandy_1_1Buffer.html#a4bfa7ff879fbce307c502c668d378bb5">setExpectGrowSize</a>(1024);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    std::string bigData(2048, <span class="charliteral">&#39;a&#39;</span>);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    buf.<a class="code" href="classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60">append</a>(bigData);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordtype">bool</span> growOk = buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>() == (11 + 2048);  <span class="comment">// 11是absorb_test长度</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;增长大小测试: 容量扩展%s（预期2058字节，%s）&quot;</span>,</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;          growOk ? <span class="stringliteral">&quot;符合预期&quot;</span> : <span class="stringliteral">&quot;不符合预期&quot;</span>, growOk ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== Buffer基本操作测试结束 ===\n&quot;</span>);</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;}</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
+<div class="line"><a name="l00336"></a><span class="lineno"><a class="line" href="namespacehandy_1_1netTest.html#a33466d1829f046b00a1b3b152b53f36f">  336</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacehandy_1_1netTest.html#a33466d1829f046b00a1b3b152b53f36f">test_buffer_memory_manage</a>() {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 开始测试Buffer内存管理 ===&quot;</span>);</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> buf;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    buf.<a class="code" href="classhandy_1_1Buffer.html#a4bfa7ff879fbce307c502c668d378bb5">setExpectGrowSize</a>(100);  <span class="comment">// 固定期望增长大小</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="comment">// 测试1: 多次消耗后触发碎片整理（moveHead）</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    buf.<a class="code" href="classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60">append</a>(std::string(150, <span class="charliteral">&#39;a&#39;</span>));  <span class="comment">// 初始容量100→扩展到200</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    buf.<a class="code" href="classhandy_1_1Buffer.html#aa08545c90241054e435ff328f087b0c1">consume</a>(100);  <span class="comment">// 剩余50字节，偏移m_b=100</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    buf.<a class="code" href="classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60">append</a>(std::string(30, <span class="charliteral">&#39;b&#39;</span>));   <span class="comment">// 触发moveHead</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">bool</span> defragOk = (buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>() == 80);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;碎片整理测试: 剩余长度=%zu（预期80，%s）&quot;</span>,</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;          buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>(), defragOk ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="comment">// 测试2: 自动扩展策略</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    buf.<a class="code" href="classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60">append</a>(std::string(150, <span class="charliteral">&#39;c&#39;</span>));  <span class="comment">// 需扩展到400</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    buf.<a class="code" href="classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60">append</a>(std::string(200, <span class="charliteral">&#39;d&#39;</span>));  <span class="comment">// 无需再次扩展</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">bool</span> expandOk = (buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>() == 80 + 150 + 200);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;自动扩展测试: 总长度=%zu（预期430，%s）&quot;</span>,</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;          buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>(), expandOk ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="comment">// 测试3: 空缓冲区吸收非空缓冲区（资源转移）</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> bufEmpty;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> bufFull;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    bufFull.<a class="code" href="classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60">append</a>(<span class="stringliteral">&quot;transfer_data&quot;</span>);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordtype">size_t</span> fullSize = bufFull.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>();</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    bufEmpty.absorb(bufFull);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordtype">bool</span> transferOk = (bufEmpty.size() == fullSize &amp;&amp; bufFull.<a class="code" href="classhandy_1_1Buffer.html#a268ad2c07c123cee2157f861424b2f08">empty</a>());</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;资源转移测试: %s（%s）&quot;</span>,</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;          transferOk ? <span class="stringliteral">&quot;数据完整且原缓冲区空&quot;</span> : <span class="stringliteral">&quot;数据丢失或原缓冲区非空&quot;</span>,</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;          transferOk ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== Buffer内存管理测试结束 ===\n&quot;</span>);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;}</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
+<div class="line"><a name="l00373"></a><span class="lineno"><a class="line" href="namespacehandy_1_1netTest.html#a8e4e5f11e0a6836bf86642f9cf761c74">  373</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacehandy_1_1netTest.html#a8e4e5f11e0a6836bf86642f9cf761c74">test_buffer_thread_safety</a>() {</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 开始测试Buffer多线程安全 ===&quot;</span>);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> buf;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> THREAD_NUM = 5;    <span class="comment">// 5个并发线程</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> LOOP_NUM = 500;    <span class="comment">// 每个线程循环500次</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="comment">// 线程1-2：并发追加字符串</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keyword">auto</span> appendThread = [&amp;buf]() {</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; LOOP_NUM; ++i) {</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            std::string data = <span class="stringliteral">&quot;thread_&quot;</span> + std::to_string(pthread_self()) + <span class="stringliteral">&quot;_&quot;</span> + std::to_string(i);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;线程%lu追加数据: %s&quot;</span>, pthread_self(), data.c_str());</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            buf.<a class="code" href="classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60">append</a>(data);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            <a class="code" href="net__test_8cpp.html#a852944679fba32403b45793ce4fb3cd9">g_bufferThreadCount</a>.fetch_add(1, std::memory_order_relaxed);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        }</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    };</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="comment">// 线程3-4：并发消耗数据（每次消耗1-5字节）</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keyword">auto</span> consumeThread = [&amp;buf]() {</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; LOOP_NUM; ++i) {</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            <span class="keywordtype">size_t</span> currentSize = buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>();</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            <span class="keywordflow">if</span> (currentSize &gt; 0) {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                <span class="keywordtype">size_t</span> consumeLen = std::min&lt;size_t&gt;(rand() % 5 + 1, currentSize);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;线程%lu消耗数据: %zu字节&quot;</span>, pthread_self(), consumeLen);</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                buf.<a class="code" href="classhandy_1_1Buffer.html#aa08545c90241054e435ff328f087b0c1">consume</a>(consumeLen);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            }</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            <a class="code" href="net__test_8cpp.html#a852944679fba32403b45793ce4fb3cd9">g_bufferThreadCount</a>.fetch_add(1, std::memory_order_relaxed);</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        }</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    };</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="comment">// 线程5：并发吸收临时缓冲区</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keyword">auto</span> absorbThread = [&amp;buf]() {</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; LOOP_NUM; ++i) {</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> tempBuf;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                tempBuf.<a class="code" href="classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60">append</a>(<span class="stringliteral">&quot;absorb_temp_&quot;</span> + std::to_string(i));</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            }</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;线程%lu吸收临时缓冲区: %s&quot;</span>, pthread_self(), tempBuf.<a class="code" href="classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af">data</a>().c_str());</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            buf.<a class="code" href="classhandy_1_1Buffer.html#a48b58522a99b408d8dca8c831d83650a">absorb</a>(tempBuf);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            <a class="code" href="net__test_8cpp.html#a852944679fba32403b45793ce4fb3cd9">g_bufferThreadCount</a>.fetch_add(1, std::memory_order_relaxed);</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        }</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    };</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="comment">// 启动线程</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    std::vector&lt;std::thread&gt; threads;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    threads.emplace_back(appendThread);</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    threads.emplace_back(appendThread);</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    threads.emplace_back(consumeThread);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    threads.emplace_back(consumeThread);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    threads.emplace_back(absorbThread);</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="comment">// 等待所有线程完成</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; t : threads) {</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        t.join();</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    }</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="comment">// 验证：无崩溃+执行次数正确</span></div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    int64_t total = <a class="code" href="net__test_8cpp.html#a852944679fba32403b45793ce4fb3cd9">g_bufferThreadCount</a>.load();</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    int64_t expected = THREAD_NUM * LOOP_NUM;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordtype">bool</span> threadSafe = (total == expected);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;多线程执行次数测试: 实际=%lld，预期=%lld（%s）&quot;</span>,</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;          total, expected, threadSafe ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;多线程后缓冲区状态: 非空=%s，长度=%zu（无崩溃即符合安全要求）&quot;</span>,</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;          buf.<a class="code" href="classhandy_1_1Buffer.html#a268ad2c07c123cee2157f861424b2f08">empty</a>() ? <span class="stringliteral">&quot;否&quot;</span> : <span class="stringliteral">&quot;是&quot;</span>, buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>());</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== Buffer多线程安全测试结束 ===\n&quot;</span>);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;}</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="comment">// -------------------------- 测试入口函数 --------------------------</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno"><a class="line" href="namespacehandy_1_1netTest.html#a67440c6a5e1613729fd7d78f23f151cc">  441</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacehandy_1_1netTest.html#a67440c6a5e1613729fd7d78f23f151cc">run_all_tests</a>() {</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="comment">// 1. 初始化日志</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <a class="code" href="namespacehandy_1_1netTest.html#aedbb5cc1bfdf14d0abdb88c8299812e6">initTestLogger</a>();</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="comment">// 2. 执行Net类测试</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <a class="code" href="namespacehandy_1_1netTest.html#a4b27bb07bc34f93a8f101a166994f5c7">test_net_byte_order</a>();</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <a class="code" href="namespacehandy_1_1netTest.html#a834ee58d32bfc67e085de365ff5daaa1">test_net_socket_options</a>();</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <a class="code" href="namespacehandy_1_1netTest.html#abf3529f17874986515ffb235c012aed1">test_net_thread_safety</a>();</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="comment">// 3. 执行Ipv4Addr类测试</span></div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <a class="code" href="namespacehandy_1_1netTest.html#a9ebc5dad13f87eb5aea50c66c205cc58">test_ipv4addr_construct_format</a>();</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <a class="code" href="namespacehandy_1_1netTest.html#a01641c30da483685f0cd4439763043ec">test_ipv4addr_resolve_validate</a>();</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="comment">// 4. 执行Buffer类测试</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <a class="code" href="namespacehandy_1_1netTest.html#ac61eff50eb6968ff473ad272aaeabc15">test_buffer_basic_ops</a>();</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <a class="code" href="namespacehandy_1_1netTest.html#a33466d1829f046b00a1b3b152b53f36f">test_buffer_memory_manage</a>();</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <a class="code" href="namespacehandy_1_1netTest.html#a8e4e5f11e0a6836bf86642f9cf761c74">test_buffer_thread_safety</a>();</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="comment">// 5. 测试总结</span></div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;=== net_test 所有测试执行完成 ===&quot;</span>);</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;}</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;}  <span class="comment">// namespace netTest</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;}  <span class="comment">// namespace handy</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="comment">// 主函数：启动所有测试</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno"><a class="line" href="net__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">  467</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="chat_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>() {</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    srand(time(<span class="keyword">nullptr</span>));  <span class="comment">// 为消耗线程的随机数初始化</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <a class="code" href="namespacehandy_1_1netTest.html#a67440c6a5e1613729fd7d78f23f151cc">handy::netTest::run_all_tests</a>();</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;}</div>
+<div class="ttc" id="chat_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="chat_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="chat_8cpp_source.html#l00054">chat.cpp:54</a></div></div>
+<div class="ttc" id="namespacehandy_1_1netTest_html_a8e4e5f11e0a6836bf86642f9cf761c74"><div class="ttname"><a href="namespacehandy_1_1netTest.html#a8e4e5f11e0a6836bf86642f9cf761c74">handy::netTest::test_buffer_thread_safety</a></div><div class="ttdeci">void test_buffer_thread_safety()</div><div class="ttdoc">测试Buffer类多线程安全（并发追加、消耗、吸收） </div><div class="ttdef"><b>Definition:</b> <a href="net__test_8cpp_source.html#l00373">net_test.cpp:373</a></div></div>
+<div class="ttc" id="namespacehandy_1_1netTest_html_ac61eff50eb6968ff473ad272aaeabc15"><div class="ttname"><a href="namespacehandy_1_1netTest.html#ac61eff50eb6968ff473ad272aaeabc15">handy::netTest::test_buffer_basic_ops</a></div><div class="ttdeci">void test_buffer_basic_ops()</div><div class="ttdoc">测试Buffer类基本数据操作（追加、消耗、清空） </div><div class="ttdef"><b>Definition:</b> <a href="net__test_8cpp_source.html#l00286">net_test.cpp:286</a></div></div>
+<div class="ttc" id="net_8h_html"><div class="ttname"><a href="net_8h.html">net.h</a></div><div class="ttdoc">网络编程核心工具类定义头文件，包含套接字操作、IPv4地址处理和线程安全缓冲区 </div></div>
+<div class="ttc" id="namespacehandy_1_1netTest_html_a834ee58d32bfc67e085de365ff5daaa1"><div class="ttname"><a href="namespacehandy_1_1netTest.html#a834ee58d32bfc67e085de365ff5daaa1">handy::netTest::test_net_socket_options</a></div><div class="ttdeci">void test_net_socket_options()</div><div class="ttdoc">测试Net类Socket选项设置（非阻塞、地址重用等） </div><div class="ttdef"><b>Definition:</b> <a href="net__test_8cpp_source.html#l00092">net_test.cpp:92</a></div></div>
+<div class="ttc" id="namespacehandy_1_1netTest_html_a33466d1829f046b00a1b3b152b53f36f"><div class="ttname"><a href="namespacehandy_1_1netTest.html#a33466d1829f046b00a1b3b152b53f36f">handy::netTest::test_buffer_memory_manage</a></div><div class="ttdeci">void test_buffer_memory_manage()</div><div class="ttdoc">测试Buffer类内存管理（碎片整理、自动扩展） </div><div class="ttdef"><b>Definition:</b> <a href="net__test_8cpp_source.html#l00336">net_test.cpp:336</a></div></div>
+<div class="ttc" id="namespacehandy_1_1netTest_html_a9ebc5dad13f87eb5aea50c66c205cc58"><div class="ttname"><a href="namespacehandy_1_1netTest.html#a9ebc5dad13f87eb5aea50c66c205cc58">handy::netTest::test_ipv4addr_construct_format</a></div><div class="ttdeci">void test_ipv4addr_construct_format()</div><div class="ttdoc">测试Ipv4Addr类构造与格式化功能 </div><div class="ttdef"><b>Definition:</b> <a href="net__test_8cpp_source.html#l00196">net_test.cpp:196</a></div></div>
+<div class="ttc" id="namespacehandy_1_1netTest_html_a6f9436df62b53b26aad843a0103ab2b8"><div class="ttname"><a href="namespacehandy_1_1netTest.html#a6f9436df62b53b26aad843a0103ab2b8">handy::netTest::createTempTcpSocket</a></div><div class="ttdeci">int createTempTcpSocket()</div><div class="ttdoc">创建临时TCP Socket（用于Net类选项测试） </div><div class="ttdef"><b>Definition:</b> <a href="net__test_8cpp_source.html#l00037">net_test.cpp:37</a></div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_aa28b152799dd56d5fea997e699996725"><div class="ttname"><a href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a></div><div class="ttdeci">static Logger &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00120">logger.h:120</a></div></div>
+<div class="ttc" id="classhandy_1_1Ipv4Addr_html"><div class="ttname"><a href="classhandy_1_1Ipv4Addr.html">handy::Ipv4Addr</a></div><div class="ttdoc">IPv4地址封装类，提供IP地址解析、格式化和合法性校验功能 </div><div class="ttdef"><b>Definition:</b> <a href="net_8h_source.html#l00141">net.h:141</a></div></div>
+<div class="ttc" id="classhandy_1_1Net_html_affb6f68dd905db3c1572998ea730461c"><div class="ttname"><a href="classhandy_1_1Net.html#affb6f68dd905db3c1572998ea730461c">handy::Net::setReusePort</a></div><div class="ttdeci">static bool setReusePort(int fd, bool value=true, int *errCode=nullptr)</div><div class="ttdoc">设置Socket的端口重用选项(SO_REUSEPORT) </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00094">net.cpp:94</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_a4bfa7ff879fbce307c502c668d378bb5"><div class="ttname"><a href="classhandy_1_1Buffer.html#a4bfa7ff879fbce307c502c668d378bb5">handy::Buffer::setExpectGrowSize</a></div><div class="ttdeci">void setExpectGrowSize(size_t sz)</div><div class="ttdoc">设置缓冲区的期望增长大小 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00496">net.cpp:496</a></div></div>
+<div class="ttc" id="utils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div><div class="ttdoc">通用工具函数和辅助类的接口定义 </div></div>
+<div class="ttc" id="classhandy_1_1Net_html_a6453e1072f6fdc96c1ca5df55f8124b3"><div class="ttname"><a href="classhandy_1_1Net.html#a6453e1072f6fdc96c1ca5df55f8124b3">handy::Net::setNonBlock</a></div><div class="ttdeci">static bool setNonBlock(int fd, bool value=true, int *errCode=nullptr)</div><div class="ttdoc">设置文件描述符的非阻塞模式 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00036">net.cpp:36</a></div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a166a12af568a87281a0f5953c3b7dc36"><div class="ttname"><a href="classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36">handy::Logger::setLogLevel</a></div><div class="ttdeci">void setLogLevel(const std::string &amp;logLevel)</div><div class="ttdoc">通过字符串形式（全小写）设置日志级别 </div><div class="ttdef"><b>Definition:</b> <a href="logger_8cpp_source.html#l00191">logger.cpp:191</a></div></div>
+<div class="ttc" id="classhandy_1_1Ipv4Addr_html_a143d7ca4af554ed22e334bfb80d5ad02"><div class="ttname"><a href="classhandy_1_1Ipv4Addr.html#a143d7ca4af554ed22e334bfb80d5ad02">handy::Ipv4Addr::port</a></div><div class="ttdeci">unsigned short port() const </div><div class="ttdoc">获取主机字节序的端口号 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00228">net.cpp:228</a></div></div>
+<div class="ttc" id="classhandy_1_1Net_html_a268a9fccc2daea05719f3599a620bd10"><div class="ttname"><a href="classhandy_1_1Net.html#a268a9fccc2daea05719f3599a620bd10">handy::Net::setReuseAddr</a></div><div class="ttdeci">static bool setReuseAddr(int fd, bool value=true, int *errCode=nullptr)</div><div class="ttdoc">设置Socket的地址重用选项(SO_REUSEADDR) </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00071">net.cpp:71</a></div></div>
+<div class="ttc" id="namespacehandy_1_1netTest_html_a6566427ee3de225971e897e87ea067e8"><div class="ttname"><a href="namespacehandy_1_1netTest.html#a6566427ee3de225971e897e87ea067e8">handy::netTest::closeTempSocket</a></div><div class="ttdeci">void closeTempSocket(int fd)</div><div class="ttdoc">关闭临时Socket </div><div class="ttdef"><b>Definition:</b> <a href="net__test_8cpp_source.html#l00049">net_test.cpp:49</a></div></div>
+<div class="ttc" id="logger_8h_html_a15378cd15bafb3a79061424b452497aa"><div class="ttname"><a href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a></div><div class="ttdeci">#define ERROR(fmt,...)</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00068">logger.h:68</a></div></div>
+<div class="ttc" id="classhandy_1_1Ipv4Addr_html_a59e4db2e65a09db95cbe295fcd956a39"><div class="ttname"><a href="classhandy_1_1Ipv4Addr.html#a59e4db2e65a09db95cbe295fcd956a39">handy::Ipv4Addr::ipInt</a></div><div class="ttdeci">uint32_t ipInt() const </div><div class="ttdoc">获取主机字节序的IP地址整数表示 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00233">net.cpp:233</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_a1206aca6841c03ba32c83dce30f886cd"><div class="ttname"><a href="classhandy_1_1Buffer.html#a1206aca6841c03ba32c83dce30f886cd">handy::Buffer::appendValue</a></div><div class="ttdeci">Buffer &amp; appendValue(const T &amp;v)</div><div class="ttdoc">追加POD类型的值到缓冲区 </div><div class="ttdef"><b>Definition:</b> <a href="net_8h_source.html#l00459">net.h:459</a></div></div>
+<div class="ttc" id="namespacehandy_1_1netTest_html_a67440c6a5e1613729fd7d78f23f151cc"><div class="ttname"><a href="namespacehandy_1_1netTest.html#a67440c6a5e1613729fd7d78f23f151cc">handy::netTest::run_all_tests</a></div><div class="ttdeci">void run_all_tests()</div><div class="ttdef"><b>Definition:</b> <a href="net__test_8cpp_source.html#l00441">net_test.cpp:441</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_a804cb068a8f1b7b1d3c5f4aaa09d1b42"><div class="ttname"><a href="classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42">handy::Buffer::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">清空缓冲区，释放所有动态内存，重置所有偏移量和容量 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00325">net.cpp:325</a></div></div>
+<div class="ttc" id="classhandy_1_1Ipv4Addr_html_aeedd479d879facc608008878faa48a8b"><div class="ttname"><a href="classhandy_1_1Ipv4Addr.html#aeedd479d879facc608008878faa48a8b">handy::Ipv4Addr::isIpValid</a></div><div class="ttdeci">bool isIpValid() const </div><div class="ttdoc">检查IP地址是否有效 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00241">net.cpp:241</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_a44a208a057b4f4b753d64d3ef06ba0af"><div class="ttname"><a href="classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af">handy::Buffer::data</a></div><div class="ttdeci">std::string data() const </div><div class="ttdoc">获取缓冲区中的数据副本 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00347">net.cpp:347</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_a268ad2c07c123cee2157f861424b2f08"><div class="ttname"><a href="classhandy_1_1Buffer.html#a268ad2c07c123cee2157f861424b2f08">handy::Buffer::empty</a></div><div class="ttdeci">bool empty() const </div><div class="ttdoc">判断缓冲区是否为空 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00341">net.cpp:341</a></div></div>
+<div class="ttc" id="logger_8h_html_ab56f6599fb46785e4265a3033ba91aa6"><div class="ttname"><a href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a></div><div class="ttdeci">#define INFO(fmt,...)</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00066">logger.h:66</a></div></div>
+<div class="ttc" id="net__test_8cpp_html_a7f869fbfa37a9933b051dcf806f0c516"><div class="ttname"><a href="net__test_8cpp.html#a7f869fbfa37a9933b051dcf806f0c516">g_netThreadCount</a></div><div class="ttdeci">std::atomic&lt; int &gt; g_netThreadCount(0)</div></div>
+<div class="ttc" id="classhandy_1_1Net_html_ab2529e9ccaf7c82c477ba0cbc2fa6f6c"><div class="ttname"><a href="classhandy_1_1Net.html#ab2529e9ccaf7c82c477ba0cbc2fa6f6c">handy::Net::ntoh</a></div><div class="ttdeci">static T ntoh(T v)</div><div class="ttdoc">将网络字节序转换为主机字节序 </div><div class="ttdef"><b>Definition:</b> <a href="net_8h_source.html#l00084">net.h:84</a></div></div>
+<div class="ttc" id="namespacehandy_1_1netTest_html_a4b27bb07bc34f93a8f101a166994f5c7"><div class="ttname"><a href="namespacehandy_1_1netTest.html#a4b27bb07bc34f93a8f101a166994f5c7">handy::netTest::test_net_byte_order</a></div><div class="ttdeci">void test_net_byte_order()</div><div class="ttdoc">测试Net类字节序转换功能（hton/ntoh） </div><div class="ttdef"><b>Definition:</b> <a href="net__test_8cpp_source.html#l00059">net_test.cpp:59</a></div></div>
+<div class="ttc" id="classhandy_1_1Net_html_a9512fbffc383897eaad1fd9dab0a7f01"><div class="ttname"><a href="classhandy_1_1Net.html#a9512fbffc383897eaad1fd9dab0a7f01">handy::Net::hton</a></div><div class="ttdeci">static T hton(T v)</div><div class="ttdoc">将主机字节序转换为网络字节序 </div><div class="ttdef"><b>Definition:</b> <a href="net_8h_source.html#l00065">net.h:65</a></div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_ad096978e08b310f1456742540e746893"><div class="ttname"><a href="classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893">handy::Logger::setLogFileName</a></div><div class="ttdeci">void setLogFileName(const std::string &amp;logFileName)</div><div class="ttdoc">设置日志文件名称 </div><div class="ttdef"><b>Definition:</b> <a href="logger_8cpp_source.html#l00146">logger.cpp:146</a></div></div>
+<div class="ttc" id="logger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div><div class="ttdoc">日志系统核心头文件，提供线程安全的日志记录功能和便捷的日志宏定义 </div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_aa08545c90241054e435ff328f087b0c1"><div class="ttname"><a href="classhandy_1_1Buffer.html#aa08545c90241054e435ff328f087b0c1">handy::Buffer::consume</a></div><div class="ttdeci">Buffer &amp; consume(size_t len)</div><div class="ttdoc">从头部消耗指定长度的数据 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00441">net.cpp:441</a></div></div>
+<div class="ttc" id="classhandy_1_1Net_html_a913f5315ff0e3d0e044ec7c686fe54c0"><div class="ttname"><a href="classhandy_1_1Net.html#a913f5315ff0e3d0e044ec7c686fe54c0">handy::Net::setNoDelay</a></div><div class="ttdeci">static bool setNoDelay(int fd, bool value=true, int *errCode=nullptr)</div><div class="ttdoc">设置TCP的无延迟选项(TCP_NODELAY) </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00126">net.cpp:126</a></div></div>
+<div class="ttc" id="logger_8h_html_ad96d3a6cf3e98ce15febe3d27bda47bc"><div class="ttname"><a href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a></div><div class="ttdeci">#define DEBUG(fmt,...)</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00065">logger.h:65</a></div></div>
+<div class="ttc" id="classhandy_1_1Ipv4Addr_html_aa1e3e274ffd85680959b12a1ce1fdd50"><div class="ttname"><a href="classhandy_1_1Ipv4Addr.html#aa1e3e274ffd85680959b12a1ce1fdd50">handy::Ipv4Addr::ip</a></div><div class="ttdeci">std::string ip() const </div><div class="ttdoc">获取纯IP地址的字符串表示 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00214">net.cpp:214</a></div></div>
+<div class="ttc" id="classhandy_1_1Ipv4Addr_html_a15f73de1453340b7a7855250f08b10c6"><div class="ttname"><a href="classhandy_1_1Ipv4Addr.html#a15f73de1453340b7a7855250f08b10c6">handy::Ipv4Addr::hostToIp</a></div><div class="ttdeci">static bool hostToIp(const std::string &amp;host, std::string &amp;outIp)</div><div class="ttdoc">将主机名解析为IP地址字符串 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00251">net.cpp:251</a></div></div>
+<div class="ttc" id="namespacehandy_1_1netTest_html_abf3529f17874986515ffb235c012aed1"><div class="ttname"><a href="namespacehandy_1_1netTest.html#abf3529f17874986515ffb235c012aed1">handy::netTest::test_net_thread_safety</a></div><div class="ttdeci">void test_net_thread_safety()</div><div class="ttdoc">测试Net类多线程安全（并发设置Socket选项） </div><div class="ttdef"><b>Definition:</b> <a href="net__test_8cpp_source.html#l00153">net_test.cpp:153</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_a48b58522a99b408d8dca8c831d83650a"><div class="ttname"><a href="classhandy_1_1Buffer.html#a48b58522a99b408d8dca8c831d83650a">handy::Buffer::absorb</a></div><div class="ttdeci">Buffer &amp; absorb(Buffer &amp;other)</div><div class="ttdoc">合并另一个缓冲区的内容（将另一个缓冲区的所有数据追加到当前缓冲区，并清空另一个缓冲区） </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00462">net.cpp:462</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html"><div class="ttname"><a href="classhandy_1_1Buffer.html">handy::Buffer</a></div><div class="ttdoc">线程安全的缓冲区类，用于数据的存储和操作 </div><div class="ttdef"><b>Definition:</b> <a href="net_8h_source.html#l00248">net.h:248</a></div></div>
+<div class="ttc" id="namespacehandy_1_1netTest_html_aedbb5cc1bfdf14d0abdb88c8299812e6"><div class="ttname"><a href="namespacehandy_1_1netTest.html#aedbb5cc1bfdf14d0abdb88c8299812e6">handy::netTest::initTestLogger</a></div><div class="ttdeci">void initTestLogger()</div><div class="ttdoc">初始化测试日志（输出到net_test.log） </div><div class="ttdef"><b>Definition:</b> <a href="net__test_8cpp_source.html#l00027">net_test.cpp:27</a></div></div>
+<div class="ttc" id="namespacehandy_1_1netTest_html_a01641c30da483685f0cd4439763043ec"><div class="ttname"><a href="namespacehandy_1_1netTest.html#a01641c30da483685f0cd4439763043ec">handy::netTest::test_ipv4addr_resolve_validate</a></div><div class="ttdeci">void test_ipv4addr_resolve_validate()</div><div class="ttdoc">测试Ipv4Addr类IP解析与验证功能 </div><div class="ttdef"><b>Definition:</b> <a href="net__test_8cpp_source.html#l00248">net_test.cpp:248</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_a3fb7183f49ac1a86d1d35dd44943ef60"><div class="ttname"><a href="classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60">handy::Buffer::append</a></div><div class="ttdeci">Buffer &amp; append(const char *p, size_t len)</div><div class="ttdoc">将指定长度的数据追加到缓冲区 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00403">net.cpp:403</a></div></div>
+<div class="ttc" id="net__test_8cpp_html_a852944679fba32403b45793ce4fb3cd9"><div class="ttname"><a href="net__test_8cpp.html#a852944679fba32403b45793ce4fb3cd9">g_bufferThreadCount</a></div><div class="ttdeci">std::atomic&lt; int &gt; g_bufferThreadCount(0)</div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_aa759a33b7e3748d79cff07430f8a7b16"><div class="ttname"><a href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">handy::Buffer::size</a></div><div class="ttdeci">size_t size() const </div><div class="ttdoc">获取当前缓冲区中的数据长度 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00335">net.cpp:335</a></div></div>
+<div class="ttc" id="classhandy_1_1Ipv4Addr_html_aecdc2af21e4190bd6286b4e5b7fdcb86"><div class="ttname"><a href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">handy::Ipv4Addr::toString</a></div><div class="ttdeci">std::string toString() const </div><div class="ttdoc">获取IP地址和端口的字符串表示 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00198">net.cpp:198</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li><li class="navelem"><a class="el" href="net__test_8cpp.html">net_test.cpp</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -127,8 +127,7 @@ $(document).ready(function(){initNavTree('classhandy_1_1TcpConn.html','');});
 <div class="dynheader">
 handy::TcpConn 的协作图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn__coll__graph.svg" width="1206" height="430"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn__coll__graph.svg" width="1206" height="430"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -196,7 +195,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a3feacc69c822aaf9abcebb84f939f749"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送以null结尾的字符串  <a href="#a3feacc69c822aaf9abcebb84f939f749">更多...</a><br/></td></tr>
 <tr class="separator:a3feacc69c822aaf9abcebb84f939f749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab41238ee58cd21be82fcf878383c59a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#ab41238ee58cd21be82fcf878383c59a9">onReadable</a> (const <a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">TcpCallBack</a> &amp;cb)</td></tr>
-<tr class="memdesc:ab41238ee58cd21be82fcf878383c59a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置数据到达(TCP缓冲区可写)时的回调函数  <a href="#ab41238ee58cd21be82fcf878383c59a9">更多...</a><br/></td></tr>
+<tr class="memdesc:ab41238ee58cd21be82fcf878383c59a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置数据到达(TCP缓冲区可读)时的回调函数  <a href="#ab41238ee58cd21be82fcf878383c59a9">更多...</a><br/></td></tr>
 <tr class="separator:ab41238ee58cd21be82fcf878383c59a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad527083c9816a0cb03b44fc1dea000e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#aad527083c9816a0cb03b44fc1dea000e">onWritable</a> (const <a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">TcpCallBack</a> &amp;cb)</td></tr>
 <tr class="memdesc:aad527083c9816a0cb03b44fc1dea000e"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置TCP缓冲区可写时的回调函数  <a href="#aad527083c9816a0cb03b44fc1dea000e">更多...</a><br/></td></tr>
@@ -204,9 +203,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ac279319ef309479cc7600263be736523"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#ac279319ef309479cc7600263be736523">onState</a> (const <a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">TcpCallBack</a> &amp;cb)</td></tr>
 <tr class="memdesc:ac279319ef309479cc7600263be736523"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置TCP状态改变时的回调函数  <a href="#ac279319ef309479cc7600263be736523">更多...</a><br/></td></tr>
 <tr class="separator:ac279319ef309479cc7600263be736523"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5ce5d7f2258ee3b4cadface21dc330c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#ab5ce5d7f2258ee3b4cadface21dc330c">addIdleCB</a> (int idle_ms, const <a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">TcpCallBack</a> &amp;cb)</td></tr>
-<tr class="memdesc:ab5ce5d7f2258ee3b4cadface21dc330c"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加空闲回调函数  <a href="#ab5ce5d7f2258ee3b4cadface21dc330c">更多...</a><br/></td></tr>
-<tr class="separator:ab5ce5d7f2258ee3b4cadface21dc330c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f286a93da01ca7da55289857c590a08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a2f286a93da01ca7da55289857c590a08">addIdleCB</a> (int idle_s, const <a class="el" href="namespacehandy.html#a9925b50afcb817e770eef0b0ee15e5eb">TcpCallBack</a> &amp;cb)</td></tr>
+<tr class="memdesc:a2f286a93da01ca7da55289857c590a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加空闲回调函数  <a href="#a2f286a93da01ca7da55289857c590a08">更多...</a><br/></td></tr>
+<tr class="separator:a2f286a93da01ca7da55289857c590a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63113808998448cf8da3f24db546082a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a63113808998448cf8da3f24db546082a">onMsg</a> (std::unique_ptr&lt; <a class="el" href="classhandy_1_1CodecBase.html">CodecBase</a> &gt; codec, const <a class="el" href="namespacehandy.html#a3ea5af3f590ac7621cb8ec61e2bfed56">MsgCallBack</a> &amp;cb)</td></tr>
 <tr class="memdesc:a63113808998448cf8da3f24db546082a"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置消息回调函数，与onReadable回调冲突，只能调用一个  <a href="#a63113808998448cf8da3f24db546082a">更多...</a><br/></td></tr>
 <tr class="separator:a63113808998448cf8da3f24db546082a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -228,6 +227,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aae9ce06d8e921cae92a09686caad970b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#aae9ce06d8e921cae92a09686caad970b">getPeerStr</a> () const </td></tr>
 <tr class="memdesc:aae9ce06d8e921cae92a09686caad970b"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取远程地址的字符串表示  <a href="#aae9ce06d8e921cae92a09686caad970b">更多...</a><br/></td></tr>
 <tr class="separator:aae9ce06d8e921cae92a09686caad970b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46af8b2810a257f58f4db305dc6128a2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#a46af8b2810a257f58f4db305dc6128a2">getLocalStr</a> () const </td></tr>
+<tr class="memdesc:a46af8b2810a257f58f4db305dc6128a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取本地地址的字符串表示  <a href="#a46af8b2810a257f58f4db305dc6128a2">更多...</a><br/></td></tr>
+<tr class="separator:a46af8b2810a257f58f4db305dc6128a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeeb062fe73e0e1655c1e744376c8ba07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandy_1_1TcpConn.html#aeeb062fe73e0e1655c1e744376c8ba07">attach</a> (<a class="el" href="classhandy_1_1EventBase.html">EventBase</a> *base, int fd, const <a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> &amp;localIp, const <a class="el" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> &amp;peerIp)</td></tr>
 <tr class="memdesc:aeeb062fe73e0e1655c1e744376c8ba07"><td class="mdescLeft">&#160;</td><td class="mdescRight">将连接与已有的文件描述符进行关联  <a href="#aeeb062fe73e0e1655c1e744376c8ba07">更多...</a><br/></td></tr>
 <tr class="separator:aeeb062fe73e0e1655c1e744376c8ba07"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -368,6 +370,8 @@ Private 属性</h2></td></tr>
 <dl class="section note"><dt>注解</dt><dd>1. 继承自std::enable_shared_from_this&lt;TcpConn&gt;，因此TcpConn对象可被std::shared_ptr管理,以便在成员函数中安全地获取自身的shared_ptr </dd>
 <dd>
 2. 继承自NonCopyAble，因此TcpConn对象不可被拷贝构造和赋值 </dd></dl>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00048">48</a> 行定义.</p>
 </div><h2 class="groupheader">成员枚举类型说明</h2>
 <a class="anchor" id="ae3b68d2c0a60e9b035eb1855f8148b0a"></a>
 <div class="memitem">
@@ -403,6 +407,8 @@ Private 属性</h2></td></tr>
 </td></tr>
 </table>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00055">55</a> 行定义.</p>
+
 </div>
 </div>
 <h2 class="groupheader">构造及析构函数说明</h2>
@@ -420,6 +426,8 @@ Private 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p>构造函数，初始化连接状态未INVALID </p>
+
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00039">39</a> 行定义.</p>
 
 </div>
 </div>
@@ -446,11 +454,12 @@ Private 属性</h2></td></tr>
 
 <p>析构函数，关闭连接并释放资源 </p>
 
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00048">48</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aafaaa41f36db3d6aa30c4a6f3a3d93d6_cgraph.svg" width="1063" height="231"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aafaaa41f36db3d6aa30c4a6f3a3d93d6_cgraph.svg" width="1063" height="231"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -519,19 +528,19 @@ Private 属性</h2></td></tr>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00097">97</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a1227846cc9258601c72a354f71dd080f_cgraph.svg" width="1226" height="468"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a1227846cc9258601c72a354f71dd080f_cgraph.svg" width="1226" height="468"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a1227846cc9258601c72a354f71dd080f_icgraph.svg" width="1179" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a1227846cc9258601c72a354f71dd080f_icgraph.svg" width="1179" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -568,19 +577,19 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>int 0：成功，-1：失败 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00321">321</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aede1ec049cda3fffd74acf9f116b16aa_cgraph.svg" width="2023" height="970"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aede1ec049cda3fffd74acf9f116b16aa_cgraph.svg" width="2023" height="970"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aede1ec049cda3fffd74acf9f116b16aa_icgraph.svg" width="496" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aede1ec049cda3fffd74acf9f116b16aa_icgraph.svg" width="496" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -617,11 +626,12 @@ Private 属性</h2></td></tr>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00255">255</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_abf60924c0a811cec7b75835cf8d3b7c5_cgraph.svg" width="2272" height="1000"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_abf60924c0a811cec7b75835cf8d3b7c5_cgraph.svg" width="2272" height="1000"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -657,11 +667,12 @@ Private 属性</h2></td></tr>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00376">376</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a63457506a3210662f34050088e0a08e3_cgraph.svg" width="2272" height="1304"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a63457506a3210662f34050088e0a08e3_cgraph.svg" width="2272" height="1304"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -716,11 +727,12 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>int 实际读取的字节数，-1表示读取失败 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00391">391</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_abd0ef86af03ac999941e182c22cf40ce_icgraph.svg" width="439" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_abd0ef86af03ac999941e182c22cf40ce_icgraph.svg" width="439" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -749,19 +761,19 @@ Private 属性</h2></td></tr>
 
 <p>重连 </p>
 
+<p>在文件 <a class="el" href="event__base_8cpp_source.html">event_base.cpp</a> 第 <a class="el" href="event__base_8cpp_source.html#l00717">717</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a14338af0c8635457894f33585bdd0878_cgraph.svg" width="1463" height="567"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a14338af0c8635457894f33585bdd0878_cgraph.svg" width="1463" height="567"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a14338af0c8635457894f33585bdd0878_icgraph.svg" width="952" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a14338af0c8635457894f33585bdd0878_icgraph.svg" width="952" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -809,19 +821,19 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>ssize_t 实际发送的字节数 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00417">417</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a6ab3b461a68113e6b043b0c4add063c4_cgraph.svg" width="594" height="248"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a6ab3b461a68113e6b043b0c4add063c4_cgraph.svg" width="594" height="248"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a6ab3b461a68113e6b043b0c4add063c4_icgraph.svg" width="887" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a6ab3b461a68113e6b043b0c4add063c4_icgraph.svg" width="887" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -876,17 +888,18 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>int 实际写入的字节数，-1表示写入失败 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00400">400</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a9f8539d1968174b255aa598fdac92b90_icgraph.svg" width="1118" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a9f8539d1968174b255aa598fdac92b90_icgraph.svg" width="1118" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="ab5ce5d7f2258ee3b4cadface21dc330c"></a>
+<a class="anchor" id="a2f286a93da01ca7da55289857c590a08"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -894,7 +907,7 @@ Private 属性</h2></td></tr>
           <td class="memname">void handy::TcpConn::addIdleCB </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>idle_ms</em>, </td>
+          <td class="paramname"><em>idle_s</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -913,17 +926,18 @@ Private 属性</h2></td></tr>
 <p>添加空闲回调函数 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">idle_ms</td><td>空闲时间（毫秒） </td></tr>
+    <tr><td class="paramname">idle_s</td><td>空闲时间（秒） </td></tr>
     <tr><td class="paramname">cb</td><td>回调函数 </td></tr>
   </table>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="event__base_8cpp_source.html">event_base.cpp</a> 第 <a class="el" href="event__base_8cpp_source.html#l00707">707</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_ab5ce5d7f2258ee3b4cadface21dc330c_cgraph.svg" width="419" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a2f286a93da01ca7da55289857c590a08_cgraph.svg" width="419" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -976,19 +990,19 @@ Private 属性</h2></td></tr>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00054">54</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aeeb062fe73e0e1655c1e744376c8ba07_cgraph.svg" width="963" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aeeb062fe73e0e1655c1e744376c8ba07_cgraph.svg" width="963" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aeeb062fe73e0e1655c1e744376c8ba07_icgraph.svg" width="1388" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aeeb062fe73e0e1655c1e744376c8ba07_icgraph.svg" width="1388" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1016,19 +1030,19 @@ Private 属性</h2></td></tr>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00190">190</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a9ac6fe9839fbf06e2246f52b45668d01_cgraph.svg" width="1718" height="747"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a9ac6fe9839fbf06e2246f52b45668d01_cgraph.svg" width="1718" height="747"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a9ac6fe9839fbf06e2246f52b45668d01_icgraph.svg" width="715" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a9ac6fe9839fbf06e2246f52b45668d01_icgraph.svg" width="715" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1049,19 +1063,19 @@ Private 属性</h2></td></tr>
 
 <p>关闭连接（在下一个事件循环中处理） </p>
 
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00175">175</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a277d22f010726325dfc767ff275fe570_cgraph.svg" width="400" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a277d22f010726325dfc767ff275fe570_cgraph.svg" width="400" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a277d22f010726325dfc767ff275fe570_icgraph.svg" width="1383" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a277d22f010726325dfc767ff275fe570_icgraph.svg" width="1383" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1083,19 +1097,19 @@ Private 属性</h2></td></tr>
 <p>立即关闭连接，清理相关资源 </p>
 <dl class="section note"><dt>注解</dt><dd>慎用，可能导致该连接的引用计数变为0，从而使得连接被析构 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00596">596</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aed1048ae4c4766e402371acbc9afd6a5_cgraph.svg" width="632" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aed1048ae4c4766e402371acbc9afd6a5_cgraph.svg" width="632" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aed1048ae4c4766e402371acbc9afd6a5_icgraph.svg" width="427" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aed1048ae4c4766e402371acbc9afd6a5_icgraph.svg" width="427" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1172,6 +1186,16 @@ template&lt;class C  = TcpConn&gt; </div>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>TcpConnPtr 创建的连接对象的智能指针 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00085">85</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a9ef6387e0679449e2b1d0f9b550e18b5_icgraph.svg" width="996" height="399"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="ad83bd7d75bb9ecb1a1f1cb87c777173e"></a>
@@ -1238,6 +1262,8 @@ template&lt;class C  = TcpConn&gt; </div>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>TcpConnPtr 创建的连接的智能指针 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00103">103</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa6baf7d4b12b93ab40cafc6c171662ad"></a>
@@ -1264,11 +1290,12 @@ template&lt;class C  = TcpConn&gt; </div>
 <p>获取当前连接所属的事件循环 </p>
 <dl class="section return"><dt>返回</dt><dd>EventBase* 事件循环对象指针 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00132">132</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aa6baf7d4b12b93ab40cafc6c171662ad_icgraph.svg" width="1635" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aa6baf7d4b12b93ab40cafc6c171662ad_icgraph.svg" width="1635" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1297,6 +1324,8 @@ template&lt;class C  = TcpConn&gt; </div>
 
 <p>获取通道对象 </p>
 <dl class="section return"><dt>返回</dt><dd>Channel* 通道对象指针 </dd></dl>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00160">160</a> 行定义.</p>
 
 </div>
 </div>
@@ -1332,11 +1361,12 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>T&amp; 上下文对象引用 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00122">122</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a737c420f6eff603fbcf9346e69092437_cgraph.svg" width="387" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a737c420f6eff603fbcf9346e69092437_cgraph.svg" width="387" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1366,6 +1396,8 @@ template&lt;typename T &gt; </div>
 <p>获取输入缓冲区 </p>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 输入缓冲区引用 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00148">148</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a6ea9d46d49ab64ac6dab1db30bb3b540"></a>
@@ -1391,6 +1423,43 @@ template&lt;typename T &gt; </div>
 
 <p>获取内部上下文 </p>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1AutoContext.html" title="自动上下文管理器（线程安全） ">AutoContext</a>&amp; 内部上下文 </dd></dl>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00176">176</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a46af8b2810a257f58f4db305dc6128a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string handy::TcpConn::getLocalStr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取本地地址的字符串表示 </p>
+<dl class="section return"><dt>返回</dt><dd>std::string 本地地址字符串 </dd></dl>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00309">309</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a46af8b2810a257f58f4db305dc6128a2_cgraph.svg" width="992" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
 
 </div>
 </div>
@@ -1418,11 +1487,12 @@ template&lt;typename T &gt; </div>
 <p>获取输出缓冲区 </p>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classhandy_1_1Buffer.html" title="线程安全的缓冲区类，用于数据的存储和操作 ">Buffer</a>&amp; 输出缓冲区引用 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00154">154</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a55a39fd4e7cba65551d78f8f61569d96_icgraph.svg" width="420" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a55a39fd4e7cba65551d78f8f61569d96_icgraph.svg" width="420" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1452,11 +1522,12 @@ template&lt;typename T &gt; </div>
 <p>获取远程地址的字符串表示 </p>
 <dl class="section return"><dt>返回</dt><dd>std::string 远程地址字符串 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00303">303</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aae9ce06d8e921cae92a09686caad970b_cgraph.svg" width="988" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aae9ce06d8e921cae92a09686caad970b_cgraph.svg" width="988" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1486,11 +1557,12 @@ template&lt;typename T &gt; </div>
 <p>获取当前连接状态 </p>
 <dl class="section return"><dt>返回</dt><dd>State 当前连接状态 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00138">138</a> 行定义.</p>
+
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aafdd284adfe8cbe3784bbc7fa2a49344_icgraph.svg" width="719" height="100"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aafdd284adfe8cbe3784bbc7fa2a49344_icgraph.svg" width="719" height="100"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1520,6 +1592,8 @@ template&lt;typename T &gt; </div>
 <p>判断当前连接是否为客户端连接 </p>
 <dl class="section return"><dt>返回</dt><dd>bool true:客户端连接，false:服务端连接 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00114">114</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="afde1ecdc32cfba6bf265a462e8bf065d"></a>
@@ -1546,19 +1620,19 @@ template&lt;typename T &gt; </div>
 <p>判断当前连接是否可写 </p>
 <dl class="section return"><dt>返回</dt><dd>bool true: 可写, false: 不可写 </dd></dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00166">166</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_afde1ecdc32cfba6bf265a462e8bf065d_cgraph.svg" width="420" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_afde1ecdc32cfba6bf265a462e8bf065d_cgraph.svg" width="420" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_afde1ecdc32cfba6bf265a462e8bf065d_icgraph.svg" width="910" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_afde1ecdc32cfba6bf265a462e8bf065d_icgraph.svg" width="910" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1597,11 +1671,12 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00555">555</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a63113808998448cf8da3f24db546082a_cgraph.svg" width="350" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a63113808998448cf8da3f24db546082a_cgraph.svg" width="350" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1629,13 +1704,15 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>设置数据到达(TCP缓冲区可写)时的回调函数 </p>
+<p>设置数据到达(TCP缓冲区可读)时的回调函数 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">cb</td><td>回调函数 </td></tr>
   </table>
   </dd>
 </dl>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00216">216</a> 行定义.</p>
 
 </div>
 </div>
@@ -1669,6 +1746,8 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00242">242</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="aad527083c9816a0cb03b44fc1dea000e"></a>
@@ -1701,6 +1780,8 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00228">228</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa6686d5e5c585b9e566763552c07ee35"></a>
@@ -1725,19 +1806,19 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00472">472</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aa6686d5e5c585b9e566763552c07ee35_cgraph.svg" width="1091" height="494"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aa6686d5e5c585b9e566763552c07ee35_cgraph.svg" width="1091" height="494"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aa6686d5e5c585b9e566763552c07ee35_icgraph.svg" width="631" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aa6686d5e5c585b9e566763552c07ee35_icgraph.svg" width="631" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1776,11 +1857,12 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00522">522</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aa8e73c9e41877d76bde10306975d3a2e_cgraph.svg" width="1022" height="498"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_aa8e73c9e41877d76bde10306975d3a2e_cgraph.svg" width="1022" height="498"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1816,19 +1898,19 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00203">203</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a91043d5e043932b7de6d93d3c779e231_cgraph.svg" width="164" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a91043d5e043932b7de6d93d3c779e231_cgraph.svg" width="164" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a91043d5e043932b7de6d93d3c779e231_icgraph.svg" width="164" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a91043d5e043932b7de6d93d3c779e231_icgraph.svg" width="164" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1864,19 +1946,19 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00210">210</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a3feacc69c822aaf9abcebb84f939f749_cgraph.svg" width="164" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a3feacc69c822aaf9abcebb84f939f749_cgraph.svg" width="164" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a3feacc69c822aaf9abcebb84f939f749_icgraph.svg" width="164" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a3feacc69c822aaf9abcebb84f939f749_icgraph.svg" width="164" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1904,11 +1986,12 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="conn_8cpp_source.html">conn.cpp</a> 第 <a class="el" href="conn_8cpp_source.html#l00585">585</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a9ff910e1037b29a941c66f3b8eefacc4_cgraph.svg" width="1558" height="494"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a9ff910e1037b29a941c66f3b8eefacc4_cgraph.svg" width="1558" height="494"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1937,19 +2020,19 @@ template&lt;typename T &gt; </div>
 
 <p>发送输出缓冲区中的数据 </p>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00184">184</a> 行定义.</p>
+
 <p><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a876eeca51918ea71097edc1c2aab3fea_cgraph.svg" width="1331" height="494"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a876eeca51918ea71097edc1c2aab3fea_cgraph.svg" width="1331" height="494"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a876eeca51918ea71097edc1c2aab3fea_icgraph.svg" width="430" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classhandy_1_1TcpConn_a876eeca51918ea71097edc1c2aab3fea_icgraph.svg" width="430" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1985,6 +2068,8 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00281">281</a> 行定义.</p>
+
 </div>
 </div>
 <h2 class="groupheader">类成员变量说明</h2>
@@ -2005,6 +2090,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00321">321</a> 行定义.</p>
 
 </div>
 </div>
@@ -2028,6 +2115,8 @@ template&lt;typename T &gt; </div>
 
 <p>状态变更回调函数 </p>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00333">333</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a2cd6fe876b1a5c77b3a16a0ee528a4de"></a>
@@ -2049,6 +2138,8 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>所属的事件循环 </p>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00322">322</a> 行定义.</p>
 
 </div>
 </div>
@@ -2072,6 +2163,8 @@ template&lt;typename T &gt; </div>
 
 <p>关联的事件通道 </p>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00323">323</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a247c7c3fb578da91908caabf4c80f1c9"></a>
@@ -2093,6 +2186,8 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>连接建立时间 </p>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00346">346</a> 行定义.</p>
 
 </div>
 </div>
@@ -2116,6 +2211,8 @@ template&lt;typename T &gt; </div>
 
 <p>重连间隔的互斥锁 </p>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00345">345</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a4f3ffecc6b09dfacf55c31bdf47b23af"></a>
@@ -2137,6 +2234,8 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>目标端口 </p>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00342">342</a> 行定义.</p>
 
 </div>
 </div>
@@ -2160,6 +2259,8 @@ template&lt;typename T &gt; </div>
 
 <p>超时ID </p>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00336">336</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="ac57cbda534c37cba1052189752d6af92"></a>
@@ -2181,6 +2282,8 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>内部上下文对象 </p>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00338">338</a> 行定义.</p>
 
 </div>
 </div>
@@ -2204,6 +2307,8 @@ template&lt;typename T &gt; </div>
 
 <p>保护上下文对象的互斥锁 </p>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00339">339</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a395e908197e44c44353d247b972ee2b6"></a>
@@ -2225,6 +2330,8 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>本地IP地址 </p>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00341">341</a> 行定义.</p>
 
 </div>
 </div>
@@ -2248,6 +2355,8 @@ template&lt;typename T &gt; </div>
 
 <p>保护回调函数的互斥锁 </p>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00334">334</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7ac3be768de7bab61fde080bed353e9f"></a>
@@ -2269,6 +2378,8 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>保护m_channel的互斥锁 </p>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00324">324</a> 行定义.</p>
 
 </div>
 </div>
@@ -2292,6 +2403,8 @@ template&lt;typename T &gt; </div>
 
 <p>上下文对象 </p>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00337">337</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="aad47d1bae416e0942e7006b08ea70318"></a>
@@ -2313,6 +2426,8 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>重连间隔时间 </p>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00344">344</a> 行定义.</p>
 
 </div>
 </div>
@@ -2336,6 +2451,8 @@ template&lt;typename T &gt; </div>
 
 <p>输出缓冲区 </p>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00326">326</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a6f331924153b37ae62b8064bbac5eb77"></a>
@@ -2357,6 +2474,8 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>目标主机地址 </p>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00340">340</a> 行定义.</p>
 
 </div>
 </div>
@@ -2380,6 +2499,8 @@ template&lt;typename T &gt; </div>
 
 <p>输入缓冲区 </p>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00325">325</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa3ed99edbeeb22ba99834afcb1739eed"></a>
@@ -2401,6 +2522,8 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>本地地址 </p>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00327">327</a> 行定义.</p>
 
 </div>
 </div>
@@ -2424,6 +2547,8 @@ template&lt;typename T &gt; </div>
 
 <p>保护m_state的互斥锁 </p>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00330">330</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa587fd559a9aa65d432c1ec172c30d58"></a>
@@ -2445,6 +2570,8 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>连接超时时间 </p>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00343">343</a> 行定义.</p>
 
 </div>
 </div>
@@ -2468,6 +2595,8 @@ template&lt;typename T &gt; </div>
 
 <p>对端地址 </p>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00328">328</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="a1bc8a0cef1a1cd16394084fb0d558680"></a>
@@ -2489,6 +2618,8 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>写回调函数 </p>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00332">332</a> 行定义.</p>
 
 </div>
 </div>
@@ -2512,6 +2643,8 @@ template&lt;typename T &gt; </div>
 
 <p>连接状态 </p>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00329">329</a> 行定义.</p>
+
 </div>
 </div>
 <a class="anchor" id="affe2e36985f12b23adf01dc7e1abf0a5"></a>
@@ -2533,6 +2666,8 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>空闲回调ID列表 </p>
+
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00335">335</a> 行定义.</p>
 
 </div>
 </div>
@@ -2556,12 +2691,14 @@ template&lt;typename T &gt; </div>
 
 <p>读回调函数 </p>
 
+<p>在文件 <a class="el" href="conn_8h_source.html">conn.h</a> 第 <a class="el" href="conn_8h_source.html#l00331">331</a> 行定义.</p>
+
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>handy/<a class="el" href="conn_8h_source.html">conn.h</a></li>
-<li>handy/<a class="el" href="conn_8cpp.html">conn.cpp</a></li>
-<li>handy/<a class="el" href="event__base_8cpp.html">event_base.cpp</a></li>
+<li>handy/<a class="el" href="conn_8cpp_source.html">conn.cpp</a></li>
+<li>handy/<a class="el" href="event__base_8cpp_source.html">event_base.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

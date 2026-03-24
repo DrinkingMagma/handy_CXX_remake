@@ -1,25 +1,43 @@
 <map id="handy::Ipv4Addr::isIpValid" name="handy::Ipv4Addr::isIpValid">
-<area shape="rect" id="node2" href="$classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86" title="获取IP地址和端口的字符串表示 " alt="" coords="228,335,399,361"/>
-<area shape="rect" id="node22" href="$classhandy_1_1Ipv4Addr.html#aa1e3e274ffd85680959b12a1ce1fdd50" title="获取纯IP地址的字符串表示 " alt="" coords="246,613,381,640"/>
-<area shape="rect" id="node23" href="$classhandy_1_1Ipv4Addr.html#a15f73de1453340b7a7855250f08b10c6" title="将主机名解析为IP地址字符串 " alt="" coords="475,664,649,691"/>
-<area shape="rect" id="node24" href="$classhandy_1_1Ipv4Addr.html#a59e4db2e65a09db95cbe295fcd956a39" title="获取主机字节序的IP地址整数表示 " alt="" coords="238,715,389,741"/>
-<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#aafaaa41f36db3d6aa30c4a6f3a3d93d6" title="析构函数，关闭连接并释放资源 " alt="" coords="469,5,655,32"/>
-<area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#aeeb062fe73e0e1655c1e744376c8ba07" title="将连接与已有的文件描述符进行关联 " alt="" coords="481,56,643,83"/>
-<area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#a1227846cc9258601c72a354f71dd080f" title="主动连接到指定的主机和端口 " alt="" coords="732,107,911,133"/>
-<area shape="rect" id="node7" href="$classhandy_1_1TcpConn.html#a9ac6fe9839fbf06e2246f52b45668d01" title="清理连接资源 " alt="" coords="1203,157,1373,184"/>
-<area shape="rect" id="node9" href="$classhandy_1_1TcpConn.html#aede1ec049cda3fffd74acf9f116b16aa" title="处理握手过程 " alt="" coords="1421,208,1657,235"/>
-<area shape="rect" id="node11" href="$classhandy_1_1TcpConn.html#aa6686d5e5c585b9e566763552c07ee35" title="发送缓冲区中的数据 " alt="" coords="485,259,639,285"/>
-<area shape="rect" id="node14" href="$classhandy_1_1TcpServer.html#a373e76987f525973c65e2cab025522cc" title="绑定到指定的主机和端口 " alt="" coords="484,309,640,336"/>
-<area shape="rect" id="node16" href="$classhandy_1_1TcpConn.html#aae9ce06d8e921cae92a09686caad970b" title="获取远程地址的字符串表示 " alt="" coords="469,360,655,387"/>
-<area shape="rect" id="node17" href="$classhandy_1_1UdpServer.html#a49e1cf8559b57b910172e38e59199b67" title="将服务器绑定到指定地址和端口 " alt="" coords="483,411,641,437"/>
-<area shape="rect" id="node18" href="$classhandy_1_1UdpServer.html#a411549e29cb1c4c0a5310834e7ce99bb" title="发送指定长度的字节数据到指定地址 " alt="" coords="473,461,651,488"/>
-<area shape="rect" id="node19" href="$classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd" title="创建新的UDP连接 " alt="" coords="447,512,677,539"/>
-<area shape="rect" id="node20" href="$classhandy_1_1UdpConn.html#a029c43ca7cd568b9fea2e336970ebf42" title="发送指定长度的字节数据 " alt="" coords="484,563,640,589"/>
-<area shape="rect" id="node21" href="$classhandy_1_1UdpConn.html#ad2b1bc2b4e41a0321dc4312f2a9e6f6e" title="获取远程地址的字符串表示 " alt="" coords="467,613,657,640"/>
-<area shape="rect" id="node6" href="$classhandy_1_1TcpConn.html#a14338af0c8635457894f33585bdd0878" title="重连 " alt="" coords="965,107,1155,133"/>
-<area shape="rect" id="node8" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="1705,157,1907,184"/>
-<area shape="rect" id="node10" href="$classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3" title="处理写事件 " alt="" coords="1705,208,1907,235"/>
-<area shape="rect" id="node12" href="$classhandy_1_1TcpConn.html#a876eeca51918ea71097edc1c2aab3fea" title="发送输出缓冲区中的数据 " alt="" coords="725,259,917,301"/>
-<area shape="rect" id="node13" href="$classhandy_1_1TcpConn.html#a9ff910e1037b29a941c66f3b8eefacc4" title="发送消息（通过编解码器编码后发送） " alt="" coords="971,267,1149,293"/>
-<area shape="rect" id="node15" href="$classhandy_1_1StatServer.html#a85d041b9ba9b52ff1ec223777d84c744" title="将服务器绑定到指定的主机和端口 " alt="" coords="742,325,901,352"/>
+<area shape="rect" id="node2" href="$classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86" title="获取IP地址和端口的字符串表示 " alt="" coords="228,436,399,463"/>
+<area shape="rect" id="node36" href="$namespacehandy_1_1netTest.html#a9ebc5dad13f87eb5aea50c66c205cc58" title="测试Ipv4Addr类构造与格式化功能 " alt="" coords="471,817,653,858"/>
+<area shape="rect" id="node39" href="$classhandy_1_1Ipv4Addr.html#aa1e3e274ffd85680959b12a1ce1fdd50" title="获取纯IP地址的字符串表示 " alt="" coords="246,883,381,909"/>
+<area shape="rect" id="node40" href="$classhandy_1_1Ipv4Addr.html#a15f73de1453340b7a7855250f08b10c6" title="将主机名解析为IP地址字符串 " alt="" coords="475,933,649,960"/>
+<area shape="rect" id="node41" href="$namespacehandy_1_1netTest.html#a01641c30da483685f0cd4439763043ec" title="测试Ipv4Addr类IP解析与验证功能 " alt="" coords="732,926,911,967"/>
+<area shape="rect" id="node42" href="$classhandy_1_1Ipv4Addr.html#a59e4db2e65a09db95cbe295fcd956a39" title="获取主机字节序的IP地址整数表示 " alt="" coords="238,832,389,859"/>
+<area shape="rect" id="node3" href="$HSHAU_2server_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="537,411,587,437"/>
+<area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#aafaaa41f36db3d6aa30c4a6f3a3d93d6" title="析构函数，关闭连接并释放资源 " alt="" coords="469,461,655,488"/>
+<area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#aeeb062fe73e0e1655c1e744376c8ba07" title="将连接与已有的文件描述符进行关联 " alt="" coords="481,613,643,640"/>
+<area shape="rect" id="node6" href="$classhandy_1_1TcpConn.html#a1227846cc9258601c72a354f71dd080f" title="主动连接到指定的主机和端口 " alt="" coords="732,584,911,611"/>
+<area shape="rect" id="node8" href="$classhandy_1_1TcpConn.html#a9ac6fe9839fbf06e2246f52b45668d01" title="清理连接资源 " alt="" coords="1216,584,1387,611"/>
+<area shape="rect" id="node10" href="$classhandy_1_1TcpConn.html#aede1ec049cda3fffd74acf9f116b16aa" title="处理握手过程 " alt="" coords="1435,635,1671,661"/>
+<area shape="rect" id="node12" href="$classhandy_1_1TcpConn.html#aa6686d5e5c585b9e566763552c07ee35" title="发送缓冲区中的数据 " alt="" coords="485,715,639,741"/>
+<area shape="rect" id="node15" href="$classhandy_1_1TcpServer.html#a373e76987f525973c65e2cab025522cc" title="绑定到指定的主机和端口 " alt="" coords="484,765,640,792"/>
+<area shape="rect" id="node22" href="$classhandy_1_1TcpConn.html#aae9ce06d8e921cae92a09686caad970b" title="获取远程地址的字符串表示 " alt="" coords="469,5,655,32"/>
+<area shape="rect" id="node23" href="$classhandy_1_1TcpConn.html#a46af8b2810a257f58f4db305dc6128a2" title="获取本地地址的字符串表示 " alt="" coords="467,56,657,83"/>
+<area shape="rect" id="node24" href="$classhandy_1_1UdpServer.html#a49e1cf8559b57b910172e38e59199b67" title="将服务器绑定到指定地址和端口 " alt="" coords="483,107,641,133"/>
+<area shape="rect" id="node25" href="$classhandy_1_1UdpServer.html#a411549e29cb1c4c0a5310834e7ce99bb" title="发送指定长度的字节数据到指定地址 " alt="" coords="473,157,651,184"/>
+<area shape="rect" id="node26" href="$classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd" title="创建新的UDP连接 " alt="" coords="447,259,677,285"/>
+<area shape="rect" id="node28" href="$udp__test_8cpp.html#a1e6c44e3a2c1938e87a0fd8f863c54e2" title="test_udp_server_basic" alt="" coords="745,183,898,209"/>
+<area shape="rect" id="node34" href="$classhandy_1_1UdpConn.html#a029c43ca7cd568b9fea2e336970ebf42" title="发送指定长度的字节数据 " alt="" coords="484,309,640,336"/>
+<area shape="rect" id="node35" href="$classhandy_1_1UdpConn.html#ad2b1bc2b4e41a0321dc4312f2a9e6f6e" title="获取远程地址的字符串表示 " alt="" coords="467,360,657,387"/>
+<area shape="rect" id="node7" href="$classhandy_1_1TcpConn.html#a14338af0c8635457894f33585bdd0878" title="重连 " alt="" coords="972,584,1161,611"/>
+<area shape="rect" id="node9" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="1719,584,1920,611"/>
+<area shape="rect" id="node11" href="$classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3" title="处理写事件 " alt="" coords="1719,635,1920,661"/>
+<area shape="rect" id="node13" href="$classhandy_1_1TcpConn.html#a876eeca51918ea71097edc1c2aab3fea" title="发送输出缓冲区中的数据 " alt="" coords="725,707,917,749"/>
+<area shape="rect" id="node14" href="$classhandy_1_1TcpConn.html#a9ff910e1037b29a941c66f3b8eefacc4" title="发送消息（通过编解码器编码后发送） " alt="" coords="977,715,1156,741"/>
+<area shape="rect" id="node16" href="$HTTP_2server_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="796,824,847,851"/>
+<area shape="rect" id="node17" href="$classhandy_1_1StatServer.html#a85d041b9ba9b52ff1ec223777d84c744" title="将服务器绑定到指定的主机和端口 " alt="" coords="742,773,901,800"/>
+<area shape="rect" id="node18" href="$namespacehandy_1_1statSvrTest.html#aa579971c9cf0ca4ac96dbda469457028" title="测试 StatServer 基本构造与绑定功能 " alt="" coords="993,831,1140,873"/>
+<area shape="rect" id="node19" href="$namespacehandy_1_1statSvrTest.html#a4bc63cfe9fd7b20a93899a61052da590" title="测试状态回调注册与处理 " alt="" coords="965,766,1168,807"/>
+<area shape="rect" id="node20" href="$namespacehandy_1_1statSvrTest.html#a51d6168c2b8db2fabed82b2a4ebb6bf4" title="handy::statSvrTest\l::runAllTests" alt="" coords="1235,766,1367,807"/>
+<area shape="rect" id="node21" href="$stat-svr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1527,773,1578,800"/>
+<area shape="rect" id="node27" href="$HSHAU_2client_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="796,335,847,361"/>
+<area shape="rect" id="node31" href="$udp__test_8cpp.html#ae12e3fc59f65808ab1e017b9aee29739" title="test_udp_conn" alt="" coords="768,385,875,412"/>
+<area shape="rect" id="node32" href="$udp__test_8cpp.html#aa69b2ac648de0a269e8ed6a11a3dc0b3" title="test_hshau_server" alt="" coords="757,233,886,260"/>
+<area shape="rect" id="node33" href="$udp__test_8cpp.html#ac52a62b445e7b2af0f7110f3999e76d3" title="test_udp_thread_safe" alt="" coords="748,284,895,311"/>
+<area shape="rect" id="node29" href="$udp__test_8cpp.html#adf5fa5d1a8867dba73315c105f40b449" title="run_all_tests" alt="" coords="1019,259,1115,285"/>
+<area shape="rect" id="node30" href="$udp__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1276,259,1327,285"/>
+<area shape="rect" id="node37" href="$namespacehandy_1_1netTest.html#a67440c6a5e1613729fd7d78f23f151cc" title="handy::netTest::run\l_all_tests" alt="" coords="999,911,1134,953"/>
+<area shape="rect" id="node38" href="$net__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1276,919,1327,945"/>
 </map>

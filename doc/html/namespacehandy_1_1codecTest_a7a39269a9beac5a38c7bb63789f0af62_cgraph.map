@@ -1,0 +1,7 @@
+<map id="handy::codecTest::test_Codec_clone" name="handy::codecTest::test_Codec_clone">
+<area shape="rect" id="node2" href="$classhandy_1_1CodecBase.html#a83be0020483fe076885abfd335428a96" title="克隆编解码器（多态拷贝，用于线程独立实例） " alt="" coords="208,5,380,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1LengthCodec.html#a20b6d1910445ba925a588d8ece29863f" title="设置单条消息最大长度限制（线程安全） " alt="" coords="223,57,365,98"/>
+<area shape="rect" id="node4" href="$classhandy_1_1LengthCodec.html#aa3ccbe69cf3cbf27468eb5929cf507ab" title="克隆编解码器（多态拷贝，用于线程独立实例） " alt="" coords="223,122,365,163"/>
+<area shape="rect" id="node6" href="$classhandy_1_1LengthCodec.html#abe9909e28da71de098bc2c015da20691" title="获取当前最大消息长度（线程安全） " alt="" coords="223,187,365,229"/>
+<area shape="rect" id="node5" href="$classhandy_1_1LengthCodec.html#ab1059d0bba15acf7524ceee2cdd9b0fb" title="handy::LengthCodec\l::LengthCodec" alt="" coords="428,122,571,163"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="g_signalReceived" name="g_signalReceived">
+<area shape="rect" id="node2" href="$namespacehandy_1_1daemonTest.html#a3851edde745ce542c3e590fe280f7134" title="清理测试环境 " alt="" coords="179,221,321,263"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1daemonTest.html#aac71125095105a4da1be35092dd36de2" title="测试信号处理功能 " alt="" coords="373,384,516,425"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1daemonTest.html#a0266777c48e18959ce473a9a709adde4" title="测试守护进程启动功能 " alt="" coords="373,5,516,47"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1daemonTest.html#a3e3f87bb96ea98e28e0f7f909e90e16a" title="handy::daemonTest::\lrun_all_tests" alt="" coords="568,188,711,229"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1daemonTest.html#ae551c1f6eab5d03401603b59d438c91c" title="测试守护进程停止功能 " alt="" coords="373,123,516,164"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1daemonTest.html#a8ed22b6ff90fa489907c6e8a243e0455" title="测试守护进程重启功能 " alt="" coords="373,188,516,229"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1daemonTest.html#a7d42e9b43e4f860f1405f4ebf2d4f1bd" title="测试getPidFromFile函数 " alt="" coords="369,253,520,295"/>
+<area shape="rect" id="node10" href="$namespacehandy_1_1daemonTest.html#afbe93ed780319eeebf5694e287f8e4f0" title="测试重复启动防护功能 " alt="" coords="373,319,516,360"/>
+<area shape="rect" id="node5" href="$daemon__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="759,195,809,222"/>
+</map>

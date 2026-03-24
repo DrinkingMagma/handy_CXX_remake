@@ -1,4 +1,8 @@
 <map id="handy::LengthCodec::getMaxMsgLenUnSafe" name="handy::LengthCodec::getMaxMsgLenUnSafe">
 <area shape="rect" id="node2" href="$classhandy_1_1LengthCodec.html#a1198a51cc6f48544dbae4e34cca38b70" title="尝试对消息进行解码 " alt="" coords="216,5,359,47"/>
-<area shape="rect" id="node3" href="$classhandy_1_1LengthCodec.html#a3f9dc26fcad4400d3b3e92c5ce85f906" title="对消息进行编码 " alt="" coords="216,71,359,112"/>
+<area shape="rect" id="node7" href="$classhandy_1_1LengthCodec.html#a3f9dc26fcad4400d3b3e92c5ce85f906" title="对消息进行编码 " alt="" coords="216,71,359,112"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1codecTest.html#a6eb614919eb3c8a0806765d0394d300c" title="测试LengthCodec基本编码解码功能 " alt="" coords="417,5,572,47"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1codecTest.html#ad76dddb779db3104e640795e409dde9f" title="测试LengthCodec多线程安全 " alt="" coords="407,71,583,112"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1codecTest.html#af92da63a32dc8f9c41bcccf6501d1b83" title="handy::codecTest::run\l_all_tests" alt="" coords="631,39,781,80"/>
+<area shape="rect" id="node5" href="$codec__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="829,46,880,73"/>
 </map>

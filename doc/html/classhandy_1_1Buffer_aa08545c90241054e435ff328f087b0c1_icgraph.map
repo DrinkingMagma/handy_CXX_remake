@@ -1,6 +1,11 @@
 <map id="handy::Buffer::consume" name="handy::Buffer::consume">
 <area shape="rect" id="node2" href="$classhandy_1_1TcpConn.html#a63457506a3210662f34050088e0a08e3" title="处理写事件 " alt="" coords="213,5,415,32"/>
 <area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#aa6686d5e5c585b9e566763552c07ee35" title="发送缓冲区中的数据 " alt="" coords="237,56,391,83"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1netTest.html#ac61eff50eb6968ff473ad272aaeabc15" title="测试Buffer类基本数据操作（追加、消耗、清空） " alt="" coords="245,107,383,149"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1netTest.html#a33466d1829f046b00a1b3b152b53f36f" title="测试Buffer类内存管理（碎片整理、自动扩展） " alt="" coords="230,173,398,214"/>
+<area shape="rect" id="node10" href="$namespacehandy_1_1netTest.html#a8e4e5f11e0a6836bf86642f9cf761c74" title="测试Buffer类多线程安全（并发追加、消耗、吸收） " alt="" coords="241,238,387,279"/>
 <area shape="rect" id="node4" href="$classhandy_1_1TcpConn.html#a876eeca51918ea71097edc1c2aab3fea" title="发送输出缓冲区中的数据 " alt="" coords="463,49,655,90"/>
 <area shape="rect" id="node5" href="$classhandy_1_1TcpConn.html#a9ff910e1037b29a941c66f3b8eefacc4" title="发送消息（通过编解码器编码后发送） " alt="" coords="703,56,881,83"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1netTest.html#a67440c6a5e1613729fd7d78f23f151cc" title="handy::netTest::run\l_all_tests" alt="" coords="491,173,626,214"/>
+<area shape="rect" id="node8" href="$net__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="767,180,817,207"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="handy::portTest::test_getHostByName" name="handy::portTest::test_getHostByName">
+<area shape="rect" id="node2" href="$namespacehandy_1_1port.html#a4f1587cf54ea7cefa3d01e75f3f1d797" title="通过主机名获取对应的IPv4地址 " alt="" coords="196,5,388,32"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1port.html#a944d00efd76b149e785f1143daafaf77" title="将IPv4地址结构转换为字符串表示 " alt="" coords="208,56,376,83"/>
+</map>

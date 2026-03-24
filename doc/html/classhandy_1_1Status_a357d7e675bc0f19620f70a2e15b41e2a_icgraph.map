@@ -1,6 +1,25 @@
 <map id="handy::Status::msg" name="handy::Status::msg">
-<area shape="rect" id="node2" href="$classhandy_1_1HttpConnPtr.html#a5baa91c7b32051095038b4c9d4e9f30f" title="发送文件作为响应 " alt="" coords="211,5,350,47"/>
-<area shape="rect" id="node3" href="$classhandy_1_1Status.html#a9bb2db3b2ee3a4a4b21fc27282895bce" title="根据指定的系统错误码创建Status对象 " alt="" coords="189,71,372,98"/>
-<area shape="rect" id="node4" href="$classhandy_1_1Status.html#a52189e0c8f37deb78789de48a4cf583a" title="将状态信息转换为字符串 " alt="" coords="203,122,359,149"/>
-<area shape="rect" id="node5" href="$classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99" title="注册页面文件（将文件内容作为页面响应） " alt="" coords="420,115,555,156"/>
+<area shape="rect" id="node2" href="$classhandy_1_1HttpConnPtr.html#a5baa91c7b32051095038b4c9d4e9f30f" title="发送文件作为响应 " alt="" coords="214,125,353,167"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Status.html#a9bb2db3b2ee3a4a4b21fc27282895bce" title="根据指定的系统错误码创建Status对象 " alt="" coords="192,191,375,218"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Status.html#a52189e0c8f37deb78789de48a4cf583a" title="将状态信息转换为字符串 " alt="" coords="205,390,361,417"/>
+<area shape="rect" id="node13" href="$namespacehandy_1_1fileTest.html#ac415b83fa17d3b62779e471c2617338e" title="验证状态是否符合预期 " alt="" coords="189,242,377,269"/>
+<area shape="rect" id="node21" href="$namespacehandy_1_1statusTest.html#a58a72d676b93b136a2469a143cbdbffc" title="测试Status构造函数和基础属性 " alt="" coords="431,565,566,607"/>
+<area shape="rect" id="node22" href="$namespacehandy_1_1statusTest.html#a4b8ca16e0a37a25ad8485f318377b937" title="测试Status拷贝和移动语义 " alt="" coords="216,624,351,665"/>
+<area shape="rect" id="node23" href="$namespacehandy_1_1statusTest.html#a595afcc4a907331411ebe4696d3d9c36" title="测试Status静态创建函数 " alt="" coords="216,441,351,483"/>
+<area shape="rect" id="node24" href="$namespacehandy_1_1statusTest.html#afe6ceb6ad6d9760995371a4d58e1cd99" title="多线程测试（验证线程安全） " alt="" coords="216,507,351,548"/>
+<area shape="rect" id="node5" href="$classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99" title="注册页面文件（将文件内容作为页面响应） " alt="" coords="431,332,566,373"/>
+<area shape="rect" id="node10" href="$namespacehandy_1_1statusTest.html#a23edcebac575d8ff54662df7155b5a8a" title="测试Status工具函数（toString等） " alt="" coords="431,397,566,439"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1statSvrTest.html#a8923512cf2e34c3894bff312608462d0" title="测试页面回调注册与处理 " alt="" coords="620,300,823,341"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1statSvrTest.html#a04884af2631c5060a5a59c875c827cc4" title="测试内容类型设置 " alt="" coords="627,365,815,407"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1statSvrTest.html#a51d6168c2b8db2fabed82b2a4ebb6bf4" title="handy::statSvrTest\l::runAllTests" alt="" coords="871,333,1003,375"/>
+<area shape="rect" id="node8" href="$stat-svr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1051,341,1101,367"/>
+<area shape="rect" id="node11" href="$namespacehandy_1_1statusTest.html#ad6e6436c4424c1b3e8840a9d3c0cc77f" title="handy::statusTest::\lrunAllTests" alt="" coords="654,507,789,548"/>
+<area shape="rect" id="node12" href="$status__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="911,514,962,541"/>
+<area shape="rect" id="node14" href="$namespacehandy_1_1fileTest.html#a78e164ae2492b8a4080410faee8830ec" title="测试文件内容读写 " alt="" coords="430,136,567,177"/>
+<area shape="rect" id="node17" href="$namespacehandy_1_1fileTest.html#ae3c5eeaf9febafc577893c74e42edd9e" title="测试安全写入（renameSave） " alt="" coords="430,201,567,243"/>
+<area shape="rect" id="node18" href="$namespacehandy_1_1fileTest.html#a997bba3124270e63134e408342827375" title="测试目录操作 " alt="" coords="425,267,572,308"/>
+<area shape="rect" id="node19" href="$namespacehandy_1_1fileTest.html#aa38e5690185315439c05d4859d1791a8" title="测试文件属性操作（大小、重命名、存在性） " alt="" coords="430,5,567,47"/>
+<area shape="rect" id="node20" href="$namespacehandy_1_1fileTest.html#a4e5171866f13d54a1954791d8d5da125" title="测试错误处理（空指针等无效参数） " alt="" coords="430,71,567,112"/>
+<area shape="rect" id="node15" href="$namespacehandy_1_1fileTest.html#a33080a341d943df16856498ee9fcd13c" title="handy::fileTest::run\l_all_tests" alt="" coords="655,136,788,177"/>
+<area shape="rect" id="node16" href="$file__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="911,143,962,170"/>
 </map>

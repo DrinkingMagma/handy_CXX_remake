@@ -1,0 +1,18 @@
+<map id="handy::httpTest::testHttpResponseBasic" name="handy::httpTest::testHttpResponseBasic">
+<area shape="rect" id="node2" href="$classhandy_1_1HttpMsg.html#ae1cf2d1ed9a2dc28651d52b4e6e9d7a2" title="获取HTTP版本 " alt="" coords="223,5,407,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpResponse.html#a8e64d809b653c3af1045eff6969bacbf" title="设置响应码和状态 " alt="" coords="474,78,623,119"/>
+<area shape="rect" id="node5" href="$classhandy_1_1HttpResponse.html#a9910f0c1d366043c3bd7cff5901121ac" title="设置404 Not Found状态 " alt="" coords="241,107,390,149"/>
+<area shape="rect" id="node6" href="$classhandy_1_1HttpMsg.html#a5f5db18769afc9c4aab2c250f4f13343" title="设置单个头部字段（添加/覆盖单个键值对） " alt="" coords="224,173,407,200"/>
+<area shape="rect" id="node7" href="$classhandy_1_1HttpMsg.html#af73142db7e94bf0a75dd82a03930fc2f" title="设置m_body消息体内容 " alt="" coords="230,224,401,251"/>
+<area shape="rect" id="node8" href="$classhandy_1_1HttpMsg.html#a787d8f3958332225f99d196a901589a5" title="获取指定头部字段对应的值 " alt="" coords="224,275,407,317"/>
+<area shape="rect" id="node10" href="$classhandy_1_1HttpMsg.html#a4b4df56bce592a87f451101af3a3b46f" title="获取消息体内容 " alt="" coords="230,341,401,368"/>
+<area shape="rect" id="node11" href="$classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe" title="判断视图是否为空 " alt="" coords="479,367,618,393"/>
+<area shape="rect" id="node12" href="$classhandy_1_1Slice.html#a853af4383711ab615372f9d238255c54" title="转换为std::string " alt="" coords="242,443,389,469"/>
+<area shape="rect" id="node14" href="$classhandy_1_1HttpResponse.html#acbe680ebf31b7ea5d54830b9af6f36c6" title="清空响应所有字段 " alt="" coords="241,494,390,535"/>
+<area shape="rect" id="node17" href="$classhandy_1_1HttpMsg.html#a376e3ffcc918d995c0c0847e76d931b9" title="获取头部字段 " alt="" coords="220,560,411,587"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpResponse.html#aa0f5da9cddecdb321286d69f5a84ea96" title="状态描述 " alt="" coords="687,78,847,119"/>
+<area shape="rect" id="node9" href="$classhandy_1_1HttpMsg.html#a0f16575d0b9bf5afc37c1c60483ae1a9" title="内部函数，从映射表中获取指定键的值（不区分大小写） " alt="" coords="459,275,639,317"/>
+<area shape="rect" id="node13" href="$classhandy_1_1Slice.html#aa9c41a7c077cb18809a408d429587b3c" title="获取视图长度 " alt="" coords="485,443,612,469"/>
+<area shape="rect" id="node15" href="$classhandy_1_1HttpMsg.html#a6af21518e70f11938fcdebfa3db1f5cb" title="清空消息所有字段，恢复初始状态 " alt="" coords="473,501,624,528"/>
+<area shape="rect" id="node16" href="$classhandy_1_1Slice.html#a7f14d97101d460d6cd92b35c24c466c0" title="清空视图（重置为空视图） " alt="" coords="701,501,832,528"/>
+</map>

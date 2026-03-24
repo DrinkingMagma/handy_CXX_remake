@@ -1,0 +1,6 @@
+<map id="handy::fileTest::initTestLogger" name="handy::fileTest::initTestLogger">
+<area shape="rect" id="node2" href="$classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725" title="handy::Logger::getInstance" alt="" coords="224,5,404,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893" title="设置日志文件名称 " alt="" coords="211,56,417,83"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36" title="通过字符串形式（全小写）设置日志级别 " alt="" coords="223,107,405,133"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Logger.html#a1f5d1fab0756d1df799e204499faa012" title="获取当前时间戳（秒） " alt="" coords="465,49,639,90"/>
+</map>

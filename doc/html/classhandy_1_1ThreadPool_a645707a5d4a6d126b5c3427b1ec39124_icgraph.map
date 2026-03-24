@@ -1,6 +1,12 @@
 <map id="handy::ThreadPool::exit" name="handy::ThreadPool::exit">
-<area shape="rect" id="node2" href="$classhandy_1_1HSHA.html#aad61ed7ed000d983922ce2b2f3de045a" title="退出服务器 " alt="" coords="219,5,351,32"/>
-<area shape="rect" id="node3" href="$classhandy_1_1ThreadPool.html#ac6679e58f1edc7df60289577b0475100" title="析构函数(优雅释放资源) " alt="" coords="215,57,354,98"/>
-<area shape="rect" id="node4" href="$classhandy_1_1HSHAU.html#a9611a03558463948b5e6b3ee3b497111" title="停止服务器并释放资源 " alt="" coords="213,123,356,149"/>
-<area shape="rect" id="node5" href="$classhandy_1_1HSHAU.html#add75bf71d827efb6fcb02ced26d44a07" title="析构函数，停止线程池 " alt="" coords="404,123,581,149"/>
+<area shape="rect" id="node2" href="$classhandy_1_1HSHA.html#aad61ed7ed000d983922ce2b2f3de045a" title="退出服务器 " alt="" coords="249,5,381,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1ThreadPool.html#ac6679e58f1edc7df60289577b0475100" title="析构函数(优雅释放资源) " alt="" coords="246,57,385,98"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HSHAU.html#a9611a03558463948b5e6b3ee3b497111" title="停止服务器并释放资源 " alt="" coords="244,123,387,149"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1threadsTest.html#abbd019f23df358dfd350a694bd0f8755" title="测试 ThreadPool 基础功能（构造/start/addTask/exit/join） " alt="" coords="240,174,391,215"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1threadsTest.html#a27d7989806fd80711ca64fef1a1bb772" title="测试 ThreadPool 异常处理（非法参数、状态错误） " alt="" coords="224,239,407,281"/>
+<area shape="rect" id="node10" href="$namespacehandy_1_1threadsTest.html#a9c4cfb5b26d89f823390fc8e7a6dacfc" title="测试 ThreadPool 多线程任务执行与容量控制 " alt="" coords="228,305,403,346"/>
+<area shape="rect" id="node11" href="$namespacehandy_1_1threadsTest.html#a7397324a575b5a9cfae3f63bd26a91cb" title="测试 ThreadPool 任务异常处理（任务抛出异常不影响线程池） " alt="" coords="213,370,417,411"/>
+<area shape="rect" id="node5" href="$classhandy_1_1HSHAU.html#add75bf71d827efb6fcb02ced26d44a07" title="析构函数，停止线程池 " alt="" coords="465,123,643,149"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1threadsTest.html#af3efd1ba4edce828298b3cc7e46be9d0" title="handy::threadsTest\l::runAllTests" alt="" coords="487,271,621,313"/>
+<area shape="rect" id="node8" href="$thread__pool__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="691,279,741,305"/>
 </map>

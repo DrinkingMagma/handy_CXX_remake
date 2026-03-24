@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: examples/reconnect.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('reconnect_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">reconnect.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="reconnect_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="conn_8h.html">conn.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="logger_8h.html">logger.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;csignal&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span>handy;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="reconnect_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e">    9</a></span>&#160;<span class="keyword">static</span> <a class="code" href="classhandy_1_1EventBase.html">EventBase</a>* <a class="code" href="reconnect_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e">g_base</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="reconnect_8cpp.html#ad42c01343da7c22272f2b2fde02537f1">   10</a></span>&#160;<span class="keyword">static</span> <a class="code" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a> <a class="code" href="reconnect_8cpp.html#ad42c01343da7c22272f2b2fde02537f1">g_clientConn</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="reconnect_8cpp.html#afe6180369cfb5826aa9f8f2e5fa0c73f">   11</a></span>&#160;<span class="keyword">static</span> <a class="code" href="namespacehandy.html#a68085d3232b10f32a1ea5948d0cd6d02">TcpServerPtr</a> <a class="code" href="reconnect_8cpp.html#afe6180369cfb5826aa9f8f2e5fa0c73f">g_tcpServer</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="reconnect_8cpp.html#a82d33897ce200eadf132e93031f0e595">   12</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="reconnect_8cpp.html#a82d33897ce200eadf132e93031f0e595">g_running</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="reconnect_8cpp.html#ac2bb6dc9dbcb341a0eaa868085906850">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="reconnect_8cpp.html#ac2bb6dc9dbcb341a0eaa868085906850">setLogs</a>(std::string mode)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">Logger::getInstance</a>().<a class="code" href="classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36">setLogLevel</a>(<a class="code" href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea4f00f764b4a17f851be1f0cb27095785">Logger::LINFO</a>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span>(mode == <span class="stringliteral">&quot;server&quot;</span>)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">Logger::getInstance</a>().<a class="code" href="classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893">setLogFileName</a>(<span class="stringliteral">&quot;./logs/reconnect_server.log&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">Logger::getInstance</a>().<a class="code" href="classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893">setLogFileName</a>(<span class="stringliteral">&quot;./logs/reconnect_client.log&quot;</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">Logger::getInstance</a>().<a class="code" href="classhandy_1_1Logger.html#a52bd5919c0b225d6053498c8ecaed1a5">clear</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="reconnect_8cpp.html#a43afabee594de427107db4086a489789">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="chat_8cpp.html#a43afabee594de427107db4086a489789">sigIntHandler</a>(<span class="keywordtype">int</span> sig)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    (void)sig;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;exit reconnect test&quot;</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="reconnect_8cpp.html#a82d33897ce200eadf132e93031f0e595">g_running</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="reconnect_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e">g_base</a>) <a class="code" href="reconnect_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e">g_base</a>-&gt;<a class="code" href="classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f">exit</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// 客户端连接状态回调</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="reconnect_8cpp.html#a4efc7051feb278d41877851d6015bde6">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="reconnect_8cpp.html#a4efc7051feb278d41877851d6015bde6">onClientState</a>(<span class="keyword">const</span> <a class="code" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a>&amp; conn)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">auto</span> state = conn-&gt;getState();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span> (state == <a class="code" href="classhandy_1_1TcpConn.html#ae3b68d2c0a60e9b035eb1855f8148b0aaa5afd6edd5336d91316964e493936858">TcpConn::State::CONNECTED</a>) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;Client connected to server: %s -&gt; %s&quot;</span>, </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;             conn-&gt;getLocalStr().c_str(), conn-&gt;getPeerStr().c_str());</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">// 发送一条消息</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        conn-&gt;send(<span class="stringliteral">&quot;Hello from client!\n&quot;</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (state == <a class="code" href="classhandy_1_1TcpConn.html#ae3b68d2c0a60e9b035eb1855f8148b0aa110ccf2f5d2ff4eda1fd1a494293467d">TcpConn::State::CLOSED</a>) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;Client connection closed: %s&quot;</span>, conn-&gt;getPeerStr().c_str());</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (state == <a class="code" href="classhandy_1_1TcpConn.html#ae3b68d2c0a60e9b035eb1855f8148b0aab9e14d9b2886bcff408b85aefa780419">TcpConn::State::FAILED</a>) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;Client connection failed: %s&quot;</span>, conn-&gt;getPeerStr().c_str());</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">// 启动客户端连接（带重连功能）</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="reconnect_8cpp.html#a441a837aea1df7812e22f235891f6056">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="reconnect_8cpp.html#a441a837aea1df7812e22f235891f6056">startClientWithReconnect</a>(<a class="code" href="classhandy_1_1EventBase.html">EventBase</a>* base, <span class="keyword">const</span> std::string&amp; host, <span class="keywordtype">int</span> port)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="reconnect_8cpp.html#ad42c01343da7c22272f2b2fde02537f1">g_clientConn</a> = <a class="code" href="classhandy_1_1TcpConn.html#a9ef6387e0679449e2b1d0f9b550e18b5">TcpConn::createConnection</a>(base, host, port, 5000);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// 设置重连间隔为3秒</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="reconnect_8cpp.html#ad42c01343da7c22272f2b2fde02537f1">g_clientConn</a>-&gt;setReconnectInterval(3000);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// 设置状态回调</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="reconnect_8cpp.html#ad42c01343da7c22272f2b2fde02537f1">g_clientConn</a>-&gt;onState(<a class="code" href="reconnect_8cpp.html#a4efc7051feb278d41877851d6015bde6">onClientState</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// 设置消息回调</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="reconnect_8cpp.html#ad42c01343da7c22272f2b2fde02537f1">g_clientConn</a>-&gt;onReadable([](<span class="keyword">const</span> <a class="code" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a>&amp; conn) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="classhandy_1_1Buffer.html">Buffer</a>&amp; buf = conn-&gt;getInputBuffer();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        std::string msg = buf.<a class="code" href="classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af">data</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;Client received raw: %s&quot;</span>, msg.c_str());</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        buf.<a class="code" href="classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42">clear</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    });</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">// g_clientConn-&gt;onMsg(std::make_unique&lt;LineCodec&gt;(), [](const TcpConnPtr&amp; conn, const Slice&amp; msg){</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">//     INFO(&quot;Received message from %s: %.*s&quot;, conn-&gt;getPeerStr().c_str(), (int)msg.size(), msg.data());</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// });</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;Client started, connecting to %s:%d with reconnect interval 3000ms&quot;</span>, host.c_str(), port);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="reconnect_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   75</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="chat_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    signal(SIGINT, <a class="code" href="chat_8cpp.html#a43afabee594de427107db4086a489789">sigIntHandler</a>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">// 解析命令行参数</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (argc &lt; 2) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;Usage: %s &lt;server|client&gt; [host] [port]\n&quot;</span>, argv[0]);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;  Example: %s server\n&quot;</span>, argv[0]);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;  Example: %s client 127.0.0.1 12345\n&quot;</span>, argv[0]);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">bool</span> isServer;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    std::string mode = argv[1];</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (mode == <span class="stringliteral">&quot;server&quot;</span>) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        isServer = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mode == <span class="stringliteral">&quot;client&quot;</span>) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        isServer = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;Invalid mode: %s. Must be &#39;server&#39; or &#39;client&#39;\n&quot;</span>, mode.c_str());</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="reconnect_8cpp.html#ac2bb6dc9dbcb341a0eaa868085906850">setLogs</a>(mode);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    std::string host = <span class="stringliteral">&quot;127.0.0.1&quot;</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">int</span> port = 12345;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (argc &gt; 2) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        host = argv[2];</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">if</span> (argc &gt; 3) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        port = std::atoi(argv[3]);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    std::unique_ptr&lt;EventBase&gt; base(<span class="keyword">new</span> <a class="code" href="classhandy_1_1EventBase.html">EventBase</a>());</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="reconnect_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e">g_base</a> = base.get();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span> (isServer) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="comment">// 服务器模式</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="reconnect_8cpp.html#afe6180369cfb5826aa9f8f2e5fa0c73f">g_tcpServer</a> = <a class="code" href="classhandy_1_1TcpServer.html#a088308ea460256efa88abf76e1867dd3">TcpServer::startServer</a>(base.get(), host, port);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="reconnect_8cpp.html#afe6180369cfb5826aa9f8f2e5fa0c73f">g_tcpServer</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;Server start failed on %s:%d&quot;</span>, host.c_str(), port);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;Server started on %s:%d&quot;</span>, host.c_str(), port);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;Usage: Start client in another terminal with: ./reconnect client&quot;</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="reconnect_8cpp.html#afe6180369cfb5826aa9f8f2e5fa0c73f">g_tcpServer</a>-&gt;onConnCreate([]() {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">return</span> std::make_shared&lt;TcpConn&gt;();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        });</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="reconnect_8cpp.html#afe6180369cfb5826aa9f8f2e5fa0c73f">g_tcpServer</a>-&gt;onConnState([](<span class="keyword">const</span> <a class="code" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a>&amp; conn) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keywordflow">if</span> (conn-&gt;getState() == <a class="code" href="classhandy_1_1TcpConn.html#ae3b68d2c0a60e9b035eb1855f8148b0aaa5afd6edd5336d91316964e493936858">TcpConn::State::CONNECTED</a>) {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;Server: Client connected from %s&quot;</span>, conn-&gt;getPeerStr().c_str());</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                conn-&gt;send(<span class="stringliteral">&quot;Welcome! Server is ready.\n&quot;</span>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (conn-&gt;getState() == <a class="code" href="classhandy_1_1TcpConn.html#ae3b68d2c0a60e9b035eb1855f8148b0aa110ccf2f5d2ff4eda1fd1a494293467d">TcpConn::State::CLOSED</a>) {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;Server: Client disconnected from %s&quot;</span>, conn-&gt;getPeerStr().c_str());</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        });</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <a class="code" href="reconnect_8cpp.html#afe6180369cfb5826aa9f8f2e5fa0c73f">g_tcpServer</a>-&gt;onConnRead([](<span class="keyword">const</span> <a class="code" href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">TcpConnPtr</a>&amp; conn) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <a class="code" href="classhandy_1_1Buffer.html">Buffer</a>&amp; buf = conn-&gt;getInputBuffer();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            std::string msg(buf.<a class="code" href="classhandy_1_1Buffer.html#a2bd79c05c0e2e82b6cdfd130af4739d0">begin</a>(), buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>());</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;Server received from %s: %s&quot;</span>, conn-&gt;getPeerStr().c_str(), msg.c_str());</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            buf.<a class="code" href="classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42">clear</a>();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="comment">// 回复客户端</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            std::string reply = <span class="stringliteral">&quot;Server echo: &quot;</span> + msg;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            conn-&gt;send(reply);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        });</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">// g_tcpServer-&gt;onConnMsg(std::make_unique&lt;LineCodec&gt;(), [](const TcpConnPtr&amp; conn, const Slice&amp; msg){</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="comment">//     INFO(&quot;Server received from %s: %.*s&quot;, conn-&gt;getPeerStr().c_str(), (int)msg.size(), msg.data());</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="comment">//     // 回复客户端</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="comment">//     conn-&gt;send(&quot;Server echo: &quot; + msg.toString() + &quot;\n&quot;);</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="comment">// });</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="comment">// 客户端模式（带重连功能）</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <a class="code" href="reconnect_8cpp.html#a441a837aea1df7812e22f235891f6056">startClientWithReconnect</a>(base.get(), host, port);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="comment">// 定期发送心跳消息</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        base-&gt;runAfter(5000, [](...) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="reconnect_8cpp.html#ad42c01343da7c22272f2b2fde02537f1">g_clientConn</a> &amp;&amp; <a class="code" href="reconnect_8cpp.html#ad42c01343da7c22272f2b2fde02537f1">g_clientConn</a>-&gt;getState() == <a class="code" href="classhandy_1_1TcpConn.html#ae3b68d2c0a60e9b035eb1855f8148b0aaa5afd6edd5336d91316964e493936858">TcpConn::State::CONNECTED</a>) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;Sending heartbeat...&quot;</span>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                <a class="code" href="reconnect_8cpp.html#ad42c01343da7c22272f2b2fde02537f1">g_clientConn</a>-&gt;send(<span class="stringliteral">&quot;Heartbeat\n&quot;</span>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }, 5000);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    base-&gt;loop();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="reconnect_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e">g_base</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="reconnect_8cpp.html#ad42c01343da7c22272f2b2fde02537f1">g_clientConn</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;Reconnect test exited&quot;</span>);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
+<div class="ttc" id="classhandy_1_1TcpConn_html_ae3b68d2c0a60e9b035eb1855f8148b0aab9e14d9b2886bcff408b85aefa780419"><div class="ttname"><a href="classhandy_1_1TcpConn.html#ae3b68d2c0a60e9b035eb1855f8148b0aab9e14d9b2886bcff408b85aefa780419">handy::TcpConn::State::FAILED</a></div><div class="ttdoc">已关闭 </div></div>
+<div class="ttc" id="chat_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="chat_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="chat_8cpp_source.html#l00054">chat.cpp:54</a></div></div>
+<div class="ttc" id="reconnect_8cpp_html_a82d33897ce200eadf132e93031f0e595"><div class="ttname"><a href="reconnect_8cpp.html#a82d33897ce200eadf132e93031f0e595">g_running</a></div><div class="ttdeci">static bool g_running</div><div class="ttdef"><b>Definition:</b> <a href="reconnect_8cpp_source.html#l00012">reconnect.cpp:12</a></div></div>
+<div class="ttc" id="classhandy_1_1EventBase_html_a47358c5f8dc93868d8b80190984c169f"><div class="ttname"><a href="classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f">handy::EventBase::exit</a></div><div class="ttdeci">EventBase &amp; exit()</div><div class="ttdoc">退出事件循环（线程安全） </div><div class="ttdef"><b>Definition:</b> <a href="event__base_8cpp_source.html#l00510">event_base.cpp:510</a></div></div>
+<div class="ttc" id="reconnect_8cpp_html_ac2bb6dc9dbcb341a0eaa868085906850"><div class="ttname"><a href="reconnect_8cpp.html#ac2bb6dc9dbcb341a0eaa868085906850">setLogs</a></div><div class="ttdeci">void setLogs(std::string mode)</div><div class="ttdef"><b>Definition:</b> <a href="reconnect_8cpp_source.html#l00014">reconnect.cpp:14</a></div></div>
+<div class="ttc" id="namespacehandy_html_aff2a897d26359dc727a452653efc3ae7"><div class="ttname"><a href="namespacehandy.html#aff2a897d26359dc727a452653efc3ae7">handy::TcpConnPtr</a></div><div class="ttdeci">std::shared_ptr&lt; TcpConn &gt; TcpConnPtr</div><div class="ttdoc">TCP连接的智能指针类型 </div><div class="ttdef"><b>Definition:</b> <a href="conn_8h_source.html#l00036">conn.h:36</a></div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a3a39bad8a841801bbeb753a438ed28fea4f00f764b4a17f851be1f0cb27095785"><div class="ttname"><a href="classhandy_1_1Logger.html#a3a39bad8a841801bbeb753a438ed28fea4f00f764b4a17f851be1f0cb27095785">handy::Logger::LINFO</a></div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00113">logger.h:113</a></div></div>
+<div class="ttc" id="classhandy_1_1EventBase_html"><div class="ttname"><a href="classhandy_1_1EventBase.html">handy::EventBase</a></div><div class="ttdoc">单线程事件派发器，管理定时器、I/O事件、异步任务 </div><div class="ttdef"><b>Definition:</b> <a href="event__base_8h_source.html#l00090">event_base.h:90</a></div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_aa28b152799dd56d5fea997e699996725"><div class="ttname"><a href="classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725">handy::Logger::getInstance</a></div><div class="ttdeci">static Logger &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00120">logger.h:120</a></div></div>
+<div class="ttc" id="reconnect_8cpp_html_a4efc7051feb278d41877851d6015bde6"><div class="ttname"><a href="reconnect_8cpp.html#a4efc7051feb278d41877851d6015bde6">onClientState</a></div><div class="ttdeci">void onClientState(const TcpConnPtr &amp;conn)</div><div class="ttdef"><b>Definition:</b> <a href="reconnect_8cpp_source.html#l00033">reconnect.cpp:33</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_a2bd79c05c0e2e82b6cdfd130af4739d0"><div class="ttname"><a href="classhandy_1_1Buffer.html#a2bd79c05c0e2e82b6cdfd130af4739d0">handy::Buffer::begin</a></div><div class="ttdeci">char * begin() const </div><div class="ttdoc">获取缓冲区中的数据开头指针 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00353">net.cpp:353</a></div></div>
+<div class="ttc" id="classhandy_1_1TcpConn_html_ae3b68d2c0a60e9b035eb1855f8148b0aaa5afd6edd5336d91316964e493936858"><div class="ttname"><a href="classhandy_1_1TcpConn.html#ae3b68d2c0a60e9b035eb1855f8148b0aaa5afd6edd5336d91316964e493936858">handy::TcpConn::State::CONNECTED</a></div><div class="ttdoc">正在握手 </div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a166a12af568a87281a0f5953c3b7dc36"><div class="ttname"><a href="classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36">handy::Logger::setLogLevel</a></div><div class="ttdeci">void setLogLevel(const std::string &amp;logLevel)</div><div class="ttdoc">通过字符串形式（全小写）设置日志级别 </div><div class="ttdef"><b>Definition:</b> <a href="logger_8cpp_source.html#l00191">logger.cpp:191</a></div></div>
+<div class="ttc" id="reconnect_8cpp_html_a13500ef769d4006308cd7b1e6b75ed4e"><div class="ttname"><a href="reconnect_8cpp.html#a13500ef769d4006308cd7b1e6b75ed4e">g_base</a></div><div class="ttdeci">static EventBase * g_base</div><div class="ttdef"><b>Definition:</b> <a href="reconnect_8cpp_source.html#l00009">reconnect.cpp:9</a></div></div>
+<div class="ttc" id="classhandy_1_1TcpConn_html_ae3b68d2c0a60e9b035eb1855f8148b0aa110ccf2f5d2ff4eda1fd1a494293467d"><div class="ttname"><a href="classhandy_1_1TcpConn.html#ae3b68d2c0a60e9b035eb1855f8148b0aa110ccf2f5d2ff4eda1fd1a494293467d">handy::TcpConn::State::CLOSED</a></div><div class="ttdoc">已连接 </div></div>
+<div class="ttc" id="reconnect_8cpp_html_ad42c01343da7c22272f2b2fde02537f1"><div class="ttname"><a href="reconnect_8cpp.html#ad42c01343da7c22272f2b2fde02537f1">g_clientConn</a></div><div class="ttdeci">static TcpConnPtr g_clientConn</div><div class="ttdef"><b>Definition:</b> <a href="reconnect_8cpp_source.html#l00010">reconnect.cpp:10</a></div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_a52bd5919c0b225d6053498c8ecaed1a5"><div class="ttname"><a href="classhandy_1_1Logger.html#a52bd5919c0b225d6053498c8ecaed1a5">handy::Logger::clear</a></div><div class="ttdeci">bool clear()</div><div class="ttdoc">将当前日志文件清空 </div><div class="ttdef"><b>Definition:</b> <a href="logger_8cpp_source.html#l00217">logger.cpp:217</a></div></div>
+<div class="ttc" id="logger_8h_html_a15378cd15bafb3a79061424b452497aa"><div class="ttname"><a href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a></div><div class="ttdeci">#define ERROR(fmt,...)</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00068">logger.h:68</a></div></div>
+<div class="ttc" id="classhandy_1_1TcpServer_html_a088308ea460256efa88abf76e1867dd3"><div class="ttname"><a href="classhandy_1_1TcpServer.html#a088308ea460256efa88abf76e1867dd3">handy::TcpServer::startServer</a></div><div class="ttdeci">static Ptr startServer(EventBases *bases, const std::string &amp;host, unsigned short port, bool isReusePort=false)</div><div class="ttdoc">启动一个TCP服务器 </div><div class="ttdef"><b>Definition:</b> <a href="conn_8cpp_source.html#l00683">conn.cpp:683</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_a804cb068a8f1b7b1d3c5f4aaa09d1b42"><div class="ttname"><a href="classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42">handy::Buffer::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">清空缓冲区，释放所有动态内存，重置所有偏移量和容量 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00325">net.cpp:325</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_a44a208a057b4f4b753d64d3ef06ba0af"><div class="ttname"><a href="classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af">handy::Buffer::data</a></div><div class="ttdeci">std::string data() const </div><div class="ttdoc">获取缓冲区中的数据副本 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00347">net.cpp:347</a></div></div>
+<div class="ttc" id="logger_8h_html_ab56f6599fb46785e4265a3033ba91aa6"><div class="ttname"><a href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a></div><div class="ttdeci">#define INFO(fmt,...)</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00066">logger.h:66</a></div></div>
+<div class="ttc" id="reconnect_8cpp_html_a441a837aea1df7812e22f235891f6056"><div class="ttname"><a href="reconnect_8cpp.html#a441a837aea1df7812e22f235891f6056">startClientWithReconnect</a></div><div class="ttdeci">void startClientWithReconnect(EventBase *base, const std::string &amp;host, int port)</div><div class="ttdef"><b>Definition:</b> <a href="reconnect_8cpp_source.html#l00051">reconnect.cpp:51</a></div></div>
+<div class="ttc" id="namespacehandy_html_a68085d3232b10f32a1ea5948d0cd6d02"><div class="ttname"><a href="namespacehandy.html#a68085d3232b10f32a1ea5948d0cd6d02">handy::TcpServerPtr</a></div><div class="ttdeci">std::shared_ptr&lt; TcpServer &gt; TcpServerPtr</div><div class="ttdoc">TCP连接指针 </div><div class="ttdef"><b>Definition:</b> <a href="event__base_8h_source.html#l00027">event_base.h:27</a></div></div>
+<div class="ttc" id="classhandy_1_1TcpConn_html_a9ef6387e0679449e2b1d0f9b550e18b5"><div class="ttname"><a href="classhandy_1_1TcpConn.html#a9ef6387e0679449e2b1d0f9b550e18b5">handy::TcpConn::createConnection</a></div><div class="ttdeci">static TcpConnPtr createConnection(EventBase *base, const std::string &amp;destHost, unsigned short destPort, int timeout_ms=0, const std::string &amp;localIp=&quot;&quot;)</div><div class="ttdoc">创建一个客户端TCP连接 </div><div class="ttdef"><b>Definition:</b> <a href="conn_8h_source.html#l00085">conn.h:85</a></div></div>
+<div class="ttc" id="classhandy_1_1Logger_html_ad096978e08b310f1456742540e746893"><div class="ttname"><a href="classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893">handy::Logger::setLogFileName</a></div><div class="ttdeci">void setLogFileName(const std::string &amp;logFileName)</div><div class="ttdoc">设置日志文件名称 </div><div class="ttdef"><b>Definition:</b> <a href="logger_8cpp_source.html#l00146">logger.cpp:146</a></div></div>
+<div class="ttc" id="logger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div><div class="ttdoc">日志系统核心头文件，提供线程安全的日志记录功能和便捷的日志宏定义 </div></div>
+<div class="ttc" id="conn_8h_html"><div class="ttname"><a href="conn_8h.html">conn.h</a></div><div class="ttdoc">TCP连接管理核心头文件，包含TcpConn（连接对象）、TcpServer（TCP服务器）、HSHA（半同步半异步服务器）类声明 </div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html"><div class="ttname"><a href="classhandy_1_1Buffer.html">handy::Buffer</a></div><div class="ttdoc">线程安全的缓冲区类，用于数据的存储和操作 </div><div class="ttdef"><b>Definition:</b> <a href="net_8h_source.html#l00248">net.h:248</a></div></div>
+<div class="ttc" id="chat_8cpp_html_a43afabee594de427107db4086a489789"><div class="ttname"><a href="chat_8cpp.html#a43afabee594de427107db4086a489789">sigIntHandler</a></div><div class="ttdeci">void sigIntHandler(int sig)</div><div class="ttdef"><b>Definition:</b> <a href="chat_8cpp_source.html#l00017">chat.cpp:17</a></div></div>
+<div class="ttc" id="reconnect_8cpp_html_afe6180369cfb5826aa9f8f2e5fa0c73f"><div class="ttname"><a href="reconnect_8cpp.html#afe6180369cfb5826aa9f8f2e5fa0c73f">g_tcpServer</a></div><div class="ttdeci">static TcpServerPtr g_tcpServer</div><div class="ttdef"><b>Definition:</b> <a href="reconnect_8cpp_source.html#l00011">reconnect.cpp:11</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_aa759a33b7e3748d79cff07430f8a7b16"><div class="ttname"><a href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">handy::Buffer::size</a></div><div class="ttdeci">size_t size() const </div><div class="ttdoc">获取当前缓冲区中的数据长度 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00335">net.cpp:335</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d28a4824dc47e487b107a5db32ef43c4.html">examples</a></li><li class="navelem"><a class="el" href="reconnect_8cpp.html">reconnect.cpp</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

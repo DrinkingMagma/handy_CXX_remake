@@ -1,6 +1,7 @@
 var searchData=
 [
   ['ok',['ok',['../classhandy_1_1Status.html#a2054a08a6b1608df26b630f6bc27f9b8',1,'handy::Status']]],
+  ['onclientstate',['onClientState',['../reconnect_8cpp.html#a4efc7051feb278d41877851d6015bde6',1,'reconnect.cpp']]],
   ['oncmd',['onCmd',['../classhandy_1_1StatServer.html#a2ee5b97acb5ba6006590bfc9ffa70794',1,'handy::StatServer::onCmd(const std::string &amp;cmd, const std::string &amp;desc, const InfoCallBack &amp;cb)'],['../classhandy_1_1StatServer.html#a920c22305a387baac14a596497be76b8',1,'handy::StatServer::onCmd(const std::string &amp;cmd, const std::string &amp;desc, const IntCallBack &amp;cb)']]],
   ['onconncreate',['onConnCreate',['../classhandy_1_1TcpServer.html#aa57ff576a6947e6e66c492c7150765b0',1,'handy::TcpServer']]],
   ['onconnmsg',['onConnMsg',['../classhandy_1_1TcpServer.html#aba53a2e9aeb6bb1ecb12c617b82f704c',1,'handy::TcpServer']]],

@@ -1,0 +1,8 @@
+<map id="testMultipleTimers" name="testMultipleTimers">
+<area shape="rect" id="node2" href="$classhandy_1_1EventBase.html#a46364e14e3307741148d587791971d7e" title="在指定延迟后执行任务（支持周期性） " alt="" coords="183,5,365,32"/>
+<area shape="rect" id="node4" href="$structhandy_1_1Utils.html#a6769faed062da90b4411a3dc189727bf" title="获取当前系统时间(毫秒级) " alt="" coords="431,56,579,83"/>
+<area shape="rect" id="node6" href="$classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f" title="退出事件循环（线程安全） " alt="" coords="195,107,353,133"/>
+<area shape="rect" id="node3" href="$classhandy_1_1EventBase.html#ade4a9837ba0ad90032f217a4c04a674c" title="在执行时间戳执行任务（支持周期性） " alt="" coords="421,5,589,32"/>
+<area shape="rect" id="node5" href="$structhandy_1_1Utils.html#a504697916771757a1fb83eb4cdb994b5" title="获取当前系统时间(微秒级，线程安全) " alt="" coords="644,56,801,83"/>
+<area shape="rect" id="node7" href="$classhandy_1_1EventBase.html#a54e0450f295724a37aa7ff0404058fb7" title="唤醒事件循环（线程安全） " alt="" coords="413,107,596,133"/>
+</map>

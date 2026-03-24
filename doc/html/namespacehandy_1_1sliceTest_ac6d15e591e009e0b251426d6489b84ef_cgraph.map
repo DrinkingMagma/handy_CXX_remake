@@ -1,0 +1,5 @@
+<map id="handy::sliceTest::test_constructors" name="handy::sliceTest::test_constructors">
+<area shape="rect" id="node2" href="$classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe" title="判断视图是否为空 " alt="" coords="204,5,343,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Slice.html#aa9c41a7c077cb18809a408d429587b3c" title="获取视图长度 " alt="" coords="395,81,521,108"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Slice.html#a853af4383711ab615372f9d238255c54" title="转换为std::string " alt="" coords="200,107,347,133"/>
+</map>

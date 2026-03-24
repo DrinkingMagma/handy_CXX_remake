@@ -1,0 +1,15 @@
+<map id="handy::fileTest::test_directory_operations" name="handy::fileTest::test_directory_operations">
+<area shape="rect" id="node2" href="$classhandy_1_1File.html#a4d5d82396291c98069b2a4a0ac13ae87" title="创建目录（仅创建一级目录） " alt="" coords="221,81,367,108"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1fileTest.html#ac415b83fa17d3b62779e471c2617338e" title="验证状态是否符合预期 " alt="" coords="200,31,388,57"/>
+<area shape="rect" id="node10" href="$classhandy_1_1File.html#a301c1e79828ed43e2dab0a749ce3f09b" title="将字符串内容写入文件（覆盖模式） " alt="" coords="210,132,378,159"/>
+<area shape="rect" id="node11" href="$classhandy_1_1File.html#ad3820962babcc80c043def1e3c515fc2" title="检查文件或目录是否存在 " alt="" coords="229,183,359,209"/>
+<area shape="rect" id="node12" href="$classhandy_1_1File.html#a67e8a00e0036f9550d4a7c63637088d6" title="获取目录下的所有子文件/子目录名 " alt="" coords="214,335,374,361"/>
+<area shape="rect" id="node13" href="$classhandy_1_1File.html#a8acfc71d9fcedd4a029cbfae45dc2d0a" title="删除空目录 " alt="" coords="221,233,367,260"/>
+<area shape="rect" id="node14" href="$classhandy_1_1File.html#acc3347222815f1358f7b376e3e7bd8f8" title="删除指定文件 " alt="" coords="219,284,369,311"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Status.html#a4f98c279b3cd768dcad0e83e38f37616" title="创建I/O操作错误的Status对象 " alt="" coords="436,247,585,273"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Status.html#a20ee42a38aebe4d18b36d5bc2ef1bf6b" title="根据格式化字符串创建Status对象 " alt="" coords="633,309,812,336"/>
+<area shape="rect" id="node6" href="$namespacehandy.html#a957dcc461a7df87ab6338b1da38e4fba" title="获取当前线程的系统错误信息字符串 " alt="" coords="675,247,770,273"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Status.html#a928f8d212a443ec48bf09b53d58eed93" title="构造函数，创建一个表示“成功”的Status对象 " alt="" coords="860,309,1009,336"/>
+<area shape="rect" id="node8" href="$classhandy_1_1Status.html#abac5c65c266afdd5d0da7b1194c49e52" title="获取状态码 " alt="" coords="441,5,580,32"/>
+<area shape="rect" id="node9" href="$classhandy_1_1Status.html#a357d7e675bc0f19620f70a2e15b41e2a" title="获取错误信息字符串 " alt="" coords="443,56,579,83"/>
+</map>

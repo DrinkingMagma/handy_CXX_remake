@@ -1,3 +1,6 @@
 <map id="handy::Signal::_signalHandler" name="handy::Signal::_signalHandler">
-<area shape="rect" id="node2" href="$classhandy_1_1Signal.html#aee24b9f0b0cd79e6be63fc1fd0a8b149" title="注册信号处理函数 " alt="" coords="248,5,391,32"/>
+<area shape="rect" id="node2" href="$classhandy_1_1Signal.html#aee24b9f0b0cd79e6be63fc1fd0a8b149" title="注册信号处理函数 " alt="" coords="248,13,391,39"/>
+<area shape="rect" id="node3" href="$namespacehandy_1_1daemonTest.html#aac71125095105a4da1be35092dd36de2" title="测试信号处理功能 " alt="" coords="439,5,581,47"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1daemonTest.html#a3e3f87bb96ea98e28e0f7f909e90e16a" title="handy::daemonTest::\lrun_all_tests" alt="" coords="629,5,772,47"/>
+<area shape="rect" id="node5" href="$daemon__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="820,13,871,39"/>
 </map>

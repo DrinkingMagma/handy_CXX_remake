@@ -1,5 +1,9 @@
 <map id="handy::HttpMsg::getVersion" name="handy::HttpMsg::getVersion">
-<area shape="rect" id="node2" href="$classhandy_1_1HttpConnPtr.html#a1c2c0b1fbe5a35f94ae9d898ac57551b" title="底层TCP连接 " alt="" coords="237,5,376,47"/>
-<area shape="rect" id="node3" href="$classhandy_1_1HttpConnPtr.html#a0b2ff11dafbd36c86ce8e6a035a95d4b" title="注册HTTP消息处理回调 " alt="" coords="424,5,563,47"/>
-<area shape="rect" id="node4" href="$classhandy_1_1HttpServer.html#af36412871ad23228ad2ba124b4526690" title="构造函数 " alt="" coords="611,5,747,47"/>
+<area shape="rect" id="node2" href="$HTTP_2server_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="295,5,346,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1HttpConnPtr.html#a1c2c0b1fbe5a35f94ae9d898ac57551b" title="底层TCP连接 " alt="" coords="251,57,390,98"/>
+<area shape="rect" id="node6" href="$namespacehandy_1_1httpTest.html#a178c59b4492092998a98f9d5173e74aa" title="测试 HttpResponse 构造与基础操作 " alt="" coords="237,122,404,163"/>
+<area shape="rect" id="node4" href="$classhandy_1_1HttpConnPtr.html#a0b2ff11dafbd36c86ce8e6a035a95d4b" title="注册HTTP消息处理回调 " alt="" coords="475,57,614,98"/>
+<area shape="rect" id="node5" href="$classhandy_1_1HttpServer.html#af36412871ad23228ad2ba124b4526690" title="构造函数 " alt="" coords="685,57,821,98"/>
+<area shape="rect" id="node7" href="$namespacehandy_1_1httpTest.html#a17f111811262f57e517dbaac08eb9206" title="handy::httpTest::runAllTests" alt="" coords="452,129,637,156"/>
+<area shape="rect" id="node8" href="$http__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="728,129,779,156"/>
 </map>

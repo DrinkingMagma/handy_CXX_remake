@@ -28,6 +28,9 @@ var NAVTREE =
       [ "文件列表", "files.html", "files" ],
       [ "文件成员", "globals.html", [
         [ "全部", "globals.html", null ],
+        [ "函数", "globals_func.html", null ],
+        [ "变量", "globals_vars.html", null ],
+        [ "类型定义", "globals_type.html", null ],
         [ "宏定义", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -36,10 +39,11 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"classhandy_1_1Ipv4Addr.html#a3184b372d413e0bc28353ab9322edc7c",
-"classhandy_1_1TcpConn.html#a9ff910e1037b29a941c66f3b8eefacc4",
-"pages.html"
+"HSHAU_2client_8cpp.html",
+"classhandy_1_1HttpMsg.html#a79020b51a66e5118c6be7fed2762931f",
+"classhandy_1_1Status.html#ab5b0a6e7c16bbdeab8ab64414870104e",
+"event__base_8h.html#a20123b690d2753b31d89587a802cc44b",
+"reconnect_8cpp.html#afe6180369cfb5826aa9f8f2e5fa0c73f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

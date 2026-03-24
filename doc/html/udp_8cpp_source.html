@@ -1,0 +1,577 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Handy_CXX_REMAKE: handy/udp.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Handy_CXX_REMAKE
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('udp_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>友元</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>宏定义</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">udp.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="udp_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="udp_8h.html">udp.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;fcntl.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="logger_8h.html">logger.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>handy</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpServer.html#a4f9f59c1eefd51cf69bf80180fcf32bc">   31</a></span>&#160;    <a class="code" href="classhandy_1_1UdpServer.html#a4f9f59c1eefd51cf69bf80180fcf32bc">UdpServer::UdpServer</a>(<a class="code" href="classhandy_1_1EventBases.html">EventBases</a>* bases) : m_bases(bases)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="namespacehandy.html#aeb22e917b1ad4ff09d0f01cacd79a86b">FATAL_IF</a>(<a class="code" href="classhandy_1_1UdpServer.html#a11655d3cacee7bc3a9ec5e08f520b6b6">m_bases</a> == <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;m_bases is nullptr&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="classhandy_1_1UdpServer.html#aff9aa7ad7f8cb300e058c25717884a93">m_base</a> = <a class="code" href="classhandy_1_1UdpServer.html#a11655d3cacee7bc3a9ec5e08f520b6b6">m_bases</a>-&gt;<a class="code" href="classhandy_1_1EventBases.html#a9e80d26b5cb6091ab83d7c8a89420dae">allocBase</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="namespacehandy.html#aeb22e917b1ad4ff09d0f01cacd79a86b">FATAL_IF</a>(<a class="code" href="classhandy_1_1UdpServer.html#aff9aa7ad7f8cb300e058c25717884a93">m_base</a> == <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;m_bases allocate base failed&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpServer.html#acd0ac630590e8dc6a27e5f8409ba690f">   38</a></span>&#160;    <a class="code" href="classhandy_1_1UdpServer.html#acd0ac630590e8dc6a27e5f8409ba690f">UdpServer::~UdpServer</a>()</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classhandy_1_1UdpServer.html#ad5a6f3bd4d85800f13f44e01e834e7b7">m_channel</a>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="comment">// 在事件循环线程中安全删除通道</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="classhandy_1_1UdpServer.html#aff9aa7ad7f8cb300e058c25717884a93">m_base</a>-&gt;<a class="code" href="classhandy_1_1EventBase.html#a3ac6300bb4a65a089a08b8010c4ee0bb">safeCall</a>([<span class="keyword">this</span>]() { <span class="keyword">delete</span> <a class="code" href="classhandy_1_1UdpServer.html#ad5a6f3bd4d85800f13f44e01e834e7b7">m_channel</a>; });</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="classhandy_1_1UdpServer.html#ad5a6f3bd4d85800f13f44e01e834e7b7">m_channel</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpServer.html#a49e1cf8559b57b910172e38e59199b67">   48</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classhandy_1_1UdpServer.html#a49e1cf8559b57b910172e38e59199b67">UdpServer::bind</a>(<span class="keyword">const</span> std::string&amp; host, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port, <span class="keywordtype">bool</span> isReusePort)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classhandy_1_1UdpServer.html#a9af89a4446ba59fd2ad9792d951c670e">m_addr</a> = <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>(host, port);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// 创建UDP套接字</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">int</span> fd = socket(AF_INET, SOCK_DGRAM, 0);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span>(fd &lt; 0)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;Create socket failed: errno=%d, msg=%s&quot;</span>, errno, strerror(errno));</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">return</span> errno;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">// 设置地址复用</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">int</span> r = <a class="code" href="classhandy_1_1Net.html#a268a9fccc2daea05719f3599a620bd10">Net::setReuseAddr</a>(fd, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span>(r != 1)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;Set reuse addr failed: errno=%d, msg=%s&quot;</span>, errno, strerror(errno));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            close(fd);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> errno;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// 设置端口复用</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span>(isReusePort)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            r = <a class="code" href="classhandy_1_1Net.html#affb6f68dd905db3c1572998ea730461c">Net::setReusePort</a>(fd, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">if</span>(r != 1)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;Set reuse port failed: errno=%d, msg=%s&quot;</span>, errno, strerror(errno));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                close(fd);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">return</span> errno;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">// 设置FD_CLOEXEC标志</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        r = <a class="code" href="structhandy_1_1Utils.html#aa5e8825a818f6d930e3ffae3414d29cb">Utils::addFdFlag</a>(fd, FD_CLOEXEC);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span>(r != 0)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;Set FD_CLOEXEC failed: errno=%d, msg=%s&quot;</span>, errno, strerror(errno));</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            close(fd);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">return</span> errno;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">// 绑定地址</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">struct </span>sockaddr_in sockAddr = <a class="code" href="classhandy_1_1UdpServer.html#a9af89a4446ba59fd2ad9792d951c670e">m_addr</a>.<a class="code" href="classhandy_1_1Ipv4Addr.html#aac6036c363e51a66207c4c83e3e137d0">getAddr</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        r = <a class="code" href="classhandy_1_1UdpServer.html#a49e1cf8559b57b910172e38e59199b67">::bind</a>(fd, reinterpret_cast&lt;struct sockaddr*&gt;(&amp;sockAddr), <span class="keyword">sizeof</span>(sockAddr));</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span>(r != 0)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;Bind to %s failed: errno=%d, msg=%s&quot;</span>, <a class="code" href="classhandy_1_1UdpServer.html#a9af89a4446ba59fd2ad9792d951c670e">m_addr</a>.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>(), errno, strerror(errno));</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            close(fd);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">return</span> errno;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">// 设置非阻塞模式</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classhandy_1_1Net.html#a6453e1072f6fdc96c1ca5df55f8124b3">Net::setNonBlock</a>(fd) != 1)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;Set non-block failed: errno=%d, msg=%s&quot;</span>, errno, strerror(errno));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            close(fd);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> errno;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a>(<span class="stringliteral">&quot;UDP server(fd=%d) bind to %s success&quot;</span>, fd, <a class="code" href="classhandy_1_1UdpServer.html#a9af89a4446ba59fd2ad9792d951c670e">m_addr</a>.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str());</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="comment">// 创建通道并设置读事件回调：读取数据并调用消息处理回调函数</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="classhandy_1_1UdpServer.html#ad5a6f3bd4d85800f13f44e01e834e7b7">m_channel</a> = <span class="keyword">new</span> <a class="code" href="classhandy_1_1Channel.html">Channel</a>(<a class="code" href="classhandy_1_1UdpServer.html#aff9aa7ad7f8cb300e058c25717884a93">m_base</a>, fd, <a class="code" href="namespacehandy.html#a1d928bf129769dcad1668174c6ff7555">kReadEvent</a>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        m_channel-&gt;onRead([<span class="keyword">this</span>]() {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">if</span>(!m_channel || m_channel-&gt;getFd() &lt; 0)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> buf;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keyword">struct </span>sockaddr_in remoteAddr;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            socklen_t remoteAddrLen = <span class="keyword">sizeof</span>(remoteAddr);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordtype">int</span> fd = m_channel-&gt;getFd();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <a class="code" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(<span class="stringliteral">&quot;Udp server(fd=%d) recving...&quot;</span>, fd);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">while</span>(<span class="keyword">true</span>)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            {   </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                ssize_t rn = recvfrom(fd, buf.<a class="code" href="classhandy_1_1Buffer.html#a7060b929fb9d5b805ae670c77b0f8cdf">makeRoom</a>(<a class="code" href="namespacehandy.html#ad3d2de94c1471194c3d744c87a5b0f54">kUdpPacketSize</a>), <a class="code" href="namespacehandy.html#ad3d2de94c1471194c3d744c87a5b0f54">kUdpPacketSize</a>, 0,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    <span class="keyword">reinterpret_cast&lt;</span>struct sockaddr*<span class="keyword">&gt;</span>(&amp;remoteAddr), &amp;remoteAddrLen);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="keywordflow">if</span>(rn &gt; 0)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    buf.<a class="code" href="classhandy_1_1Buffer.html#a0428fcbdbcf59a3382bb5a40a75d4b18">addSize</a>(static_cast&lt;size_t&gt;(rn));</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                    <a class="code" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(<span class="stringliteral">&quot;Udp server(fd=%d) recvfrom %ld bytes from %s&quot;</span>, fd, rn, <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>(remoteAddr).toString().c_str());</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                    <a class="code" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(<span class="stringliteral">&quot;Udp server(fd=%d) recvfrom %s&quot;</span>, fd, buf.<a class="code" href="classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af">data</a>().c_str());</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                    <span class="keywordflow">if</span>(<a class="code" href="classhandy_1_1UdpServer.html#a216794a28d8e4df8ee2159c163621228">m_serverMsgCallback</a>)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                        <a class="code" href="classhandy_1_1UdpServer.html#a216794a28d8e4df8ee2159c163621228">m_serverMsgCallback</a>(shared_from_this(), buf, <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a>(remoteAddr));</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <span class="comment">// 没有更多数据，退出循环</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(rn &lt; 0 &amp;&amp; (errno == EAGAIN || errno == EWOULDBLOCK))</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(rn &lt; 0 &amp;&amp; errno != EINTR)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                    <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;UDP server(fd=%d) recvfrom failed: errno=%d, msg=%s&quot;</span>, fd, errno, strerror(errno));</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        });</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpServer.html#a67fc24c72f8cec3c2a842e99f74c2e30">  156</a></span>&#160;    <a class="code" href="classhandy_1_1UdpServer.html#a55016d1b3d3342f98bcb4239549687b7">UdpServer::Ptr</a> <a class="code" href="classhandy_1_1UdpServer.html#a67fc24c72f8cec3c2a842e99f74c2e30">UdpServer::startServer</a>(<a class="code" href="classhandy_1_1EventBases.html">EventBases</a>* bases, <span class="keyword">const</span> std::string&amp; host,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                                            <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port, <span class="keywordtype">bool</span> isReusePort)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">if</span>(bases == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;EventBases is nullptr&quot;</span>);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="classhandy_1_1UdpServer.html#a55016d1b3d3342f98bcb4239549687b7">Ptr</a> server(<span class="keyword">new</span> <a class="code" href="classhandy_1_1UdpServer.html#a4f9f59c1eefd51cf69bf80180fcf32bc">UdpServer</a>(bases));</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordtype">int</span> r = server-&gt;bind(host, port, isReusePort);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">if</span>(r != 0)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;UdpServer bind failed: errno=%d, msg=%s&quot;</span>, r, strerror(r));</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> server;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpServer.html#a411549e29cb1c4c0a5310834e7ce99bb">  176</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1UdpServer.html#ae56468dcf409ffde65f6c1b783b273cd">UdpServer::sendTo</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* buf, <span class="keywordtype">size_t</span> len, <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> addr)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="classhandy_1_1UdpServer.html#ad5a6f3bd4d85800f13f44e01e834e7b7">m_channel</a> || <a class="code" href="classhandy_1_1UdpServer.html#ad5a6f3bd4d85800f13f44e01e834e7b7">m_channel</a>-&gt;<a class="code" href="classhandy_1_1Channel.html#ac24c361fc54c9779765afe0a70560d82">getFd</a>() &lt; 0)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <a class="code" href="logger_8h.html#ac4cebd204831cf85d2c6e9d03b8d5bbb">WARN</a>(<span class="stringliteral">&quot;UdpServer send %d bytes to %s failed: channel is nullptr or channel fd &lt; 0&quot;</span>, len, addr.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str());</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordtype">int</span> fd= <a class="code" href="classhandy_1_1UdpServer.html#ad5a6f3bd4d85800f13f44e01e834e7b7">m_channel</a>-&gt;<a class="code" href="classhandy_1_1Channel.html#ac24c361fc54c9779765afe0a70560d82">getFd</a>();</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keyword">struct </span>sockaddr_in sockAddr = addr.<a class="code" href="classhandy_1_1Ipv4Addr.html#aac6036c363e51a66207c4c83e3e137d0">getAddr</a>();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        ssize_t wn = sendto(fd, buf, len, 0, reinterpret_cast&lt;struct sockaddr*&gt;(&amp;sockAddr), <span class="keyword">sizeof</span>(sockAddr));</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">if</span>(wn &lt; 0)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;UdpServer(fd=%d) send %d bytes to %s failed: errno=%d, msg=%s&quot;</span>, fd, len, addr.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str(), errno, strerror(errno));</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <a class="code" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(<span class="stringliteral">&quot;UdpServer(fd=%d) send %d bytes to %s success&quot;</span>, fd, wn, addr.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str());</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpServer.html#ae56468dcf409ffde65f6c1b783b273cd">  196</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1UdpServer.html#ae56468dcf409ffde65f6c1b783b273cd">UdpServer::sendTo</a>(<a class="code" href="classhandy_1_1Buffer.html">Buffer</a> msg, <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> addr)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <a class="code" href="classhandy_1_1UdpServer.html#ae56468dcf409ffde65f6c1b783b273cd">sendTo</a>(msg.<a class="code" href="classhandy_1_1Buffer.html#aceb300c5e30fad7a6062b97f48a2c111">peek</a>(), msg.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>(), addr);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        msg.<a class="code" href="classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42">clear</a>();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpServer.html#aa6bf655c4c5e53333ced52b5f49c743e">  202</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1UdpServer.html#ae56468dcf409ffde65f6c1b783b273cd">UdpServer::sendTo</a>(<span class="keyword">const</span> std::string&amp; s, <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> addr)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <a class="code" href="classhandy_1_1UdpServer.html#ae56468dcf409ffde65f6c1b783b273cd">sendTo</a>(s.c_str(), s.size(), addr);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpServer.html#ad052ecd2cfc2c8e3c774f03ec02adafb">  207</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1UdpServer.html#ae56468dcf409ffde65f6c1b783b273cd">UdpServer::sendTo</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* s, <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> addr)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <a class="code" href="classhandy_1_1UdpServer.html#ae56468dcf409ffde65f6c1b783b273cd">sendTo</a>(s, strlen(s), addr);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpConn.html#ae0b19a95f626ed8f50698f7a1d202262">  212</a></span>&#160;    <a class="code" href="classhandy_1_1UdpConn.html#ae0b19a95f626ed8f50698f7a1d202262">UdpConn::~UdpConn</a>()</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <a class="code" href="classhandy_1_1UdpConn.html#ad60a08b5941d9cf5ecf786d514b69915">close</a>();</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd">  217</a></span>&#160;    <a class="code" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">UdpConn::Ptr</a> <a class="code" href="classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd">UdpConn::createConnection</a>(<a class="code" href="classhandy_1_1EventBase.html">EventBase</a>* base, <span class="keyword">const</span> std::string&amp; destHost,</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                                            <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> destPort)</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">if</span>(!base)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;EventBase is nullptr&quot;</span>);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> destAddr(destHost, destPort);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordtype">int</span> fd = socket(AF_INET, SOCK_DGRAM, 0);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">if</span>(fd &lt; 0)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;Create socket failed: errno=%d, msg=%s&quot;</span>, errno, strerror(errno));</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="comment">// 设置为非阻塞模式</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classhandy_1_1Net.html#a6453e1072f6fdc96c1ca5df55f8124b3">Net::setNonBlock</a>(fd) != 1)</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;Set non-block failed: errno=%d, msg=%s&quot;</span>, errno, strerror(errno));</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <a class="code" href="classhandy_1_1UdpConn.html#ad60a08b5941d9cf5ecf786d514b69915">::close</a>(fd);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="comment">// 设置FD_CLOEXEC标志</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordtype">int</span> r = <a class="code" href="structhandy_1_1Utils.html#aa5e8825a818f6d930e3ffae3414d29cb">Utils::addFdFlag</a>(fd, FD_CLOEXEC);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">if</span>(r != 0)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;Set FD_CLOEXEC failed: errno=%d, msg=%s&quot;</span>, errno, strerror(errno));</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <a class="code" href="classhandy_1_1UdpConn.html#ad60a08b5941d9cf5ecf786d514b69915">::close</a>(fd);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="comment">// 连接到目标地址</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keyword">struct </span>sockaddr_in sockAddr = destAddr.<a class="code" href="classhandy_1_1Ipv4Addr.html#aac6036c363e51a66207c4c83e3e137d0">getAddr</a>();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        r = ::connect(fd, reinterpret_cast&lt;struct sockaddr*&gt;(&amp;sockAddr), <span class="keyword">sizeof</span>(sockAddr));</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">if</span>(r != 0 &amp;&amp; errno != EINPROGRESS)</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;Connect to %s failed: errno=%d, msg=%s&quot;</span>, destAddr.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str(), errno, strerror(errno));</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <a class="code" href="classhandy_1_1UdpConn.html#ad60a08b5941d9cf5ecf786d514b69915">::close</a>(fd);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <a class="code" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(<span class="stringliteral">&quot;UDP connection(fd=%d) connect to %s success&quot;</span>, fd, destAddr.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str());</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <a class="code" href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">Ptr</a> conn(<span class="keyword">new</span> <a class="code" href="classhandy_1_1UdpConn.html">UdpConn</a>);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        conn-&gt;m_destHost = destHost;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        conn-&gt;m_destPort = destPort;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        conn-&gt;m_base = base;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        conn-&gt;m_peer = destAddr;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        conn-&gt;m_channel = <span class="keyword">new</span> <a class="code" href="classhandy_1_1Channel.html">Channel</a>(base, fd, <a class="code" href="namespacehandy.html#a1d928bf129769dcad1668174c6ff7555">kReadEvent</a>);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="comment">// 设置读事件回调</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        conn-&gt;m_channel-&gt;onRead([conn]() </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        { </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <a class="code" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(<span class="stringliteral">&quot;UDP connection(fd=%d) recving...&quot;</span>, conn-&gt;m_channel-&gt;getFd());</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordflow">if</span>(!conn-&gt;m_channel || conn-&gt;m_channel-&gt;getFd() &lt; 0)</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                <a class="code" href="logger_8h.html#ac4cebd204831cf85d2c6e9d03b8d5bbb">WARN</a>(<span class="stringliteral">&quot;conn closing: conn-&gt;m_channel=%p, conn-&gt;m_channel-&gt;getFd()=%d&quot;</span>, conn-&gt;m_channel, conn-&gt;m_channel-&gt;getFd());</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                conn-&gt;close();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                <a class="code" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(<span class="stringliteral">&quot;conn closed&quot;</span>);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            <a class="code" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(<span class="stringliteral">&quot;UDP connection(fd=%d) recving...&quot;</span>);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> input;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordtype">int</span> fd = conn-&gt;m_channel-&gt;getFd();</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            <a class="code" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(<span class="stringliteral">&quot;UDP connection(fd=%d) recvfrom %s&quot;</span>, fd, conn-&gt;m_peer.toString().c_str());</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            ssize_t rn = ::read(fd, input.<a class="code" href="classhandy_1_1Buffer.html#a7060b929fb9d5b805ae670c77b0f8cdf">makeRoom</a>(<a class="code" href="namespacehandy.html#ad3d2de94c1471194c3d744c87a5b0f54">kUdpPacketSize</a>), <a class="code" href="namespacehandy.html#ad3d2de94c1471194c3d744c87a5b0f54">kUdpPacketSize</a>);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            <a class="code" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(<span class="stringliteral">&quot;UDP connection(fd=%d) recvfrom %ld bytes from %s&quot;</span>, fd, rn, conn-&gt;m_peer.toString().c_str());</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <span class="keywordflow">if</span>(rn &lt; 0)</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;UDP connection(fd=%d) read failed: errno=%d, msg=%s&quot;</span>, </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                        fd, errno, strerror(errno));</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <a class="code" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(<span class="stringliteral">&quot;UDP connection(fd=%d) read %ld bytes from %s&quot;</span>, fd, rn, conn-&gt;m_peer.toString().c_str());</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            input.<a class="code" href="classhandy_1_1Buffer.html#a0428fcbdbcf59a3382bb5a40a75d4b18">addSize</a>(static_cast&lt;size_t&gt;(rn));</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="keywordflow">if</span>(conn-&gt;m_udpMsgCallback)</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                conn-&gt;m_udpMsgCallback(conn, input);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        });</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">return</span> conn;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpConn.html#ad60a08b5941d9cf5ecf786d514b69915">  308</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1UdpConn.html#ad60a08b5941d9cf5ecf786d514b69915">UdpConn::close</a>()</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="classhandy_1_1UdpConn.html#a533af80bc031d93794dba64721ae123e">m_channel</a>)</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="comment">// 保存通道指针并在事件循环中安全删除</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <a class="code" href="classhandy_1_1Channel.html">Channel</a>* channel = <a class="code" href="classhandy_1_1UdpConn.html#a533af80bc031d93794dba64721ae123e">m_channel</a>;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <a class="code" href="classhandy_1_1UdpConn.html#a533af80bc031d93794dba64721ae123e">m_channel</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classhandy_1_1UdpConn.html#a27f862cfd5d126ecf6c1a0f242e9777b">m_base</a>)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <a class="code" href="classhandy_1_1UdpConn.html#a27f862cfd5d126ecf6c1a0f242e9777b">m_base</a>-&gt;<a class="code" href="classhandy_1_1EventBase.html#a3ac6300bb4a65a089a08b8010c4ee0bb">safeCall</a>([channel]()</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                <span class="keyword">delete</span> channel;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            });</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        }</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <span class="keyword">delete</span> channel;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
+<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpConn.html#a029c43ca7cd568b9fea2e336970ebf42">  329</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1UdpConn.html#a1ec5518264f7c2a3de123560e4998c59">UdpConn::send</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* buf, <span class="keywordtype">size_t</span> len)</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="classhandy_1_1UdpConn.html#a533af80bc031d93794dba64721ae123e">m_channel</a> || <a class="code" href="classhandy_1_1UdpConn.html#a533af80bc031d93794dba64721ae123e">m_channel</a>-&gt;<a class="code" href="classhandy_1_1Channel.html#ac24c361fc54c9779765afe0a70560d82">getFd</a>() &lt; 0)</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <a class="code" href="logger_8h.html#ac4cebd204831cf85d2c6e9d03b8d5bbb">WARN</a>(<span class="stringliteral">&quot;UDP connection send %d bytes to %s failed: channel is nullptr or channel fd &lt; 0&quot;</span>, </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                    len, <a class="code" href="classhandy_1_1UdpConn.html#afb59dcbfba79879ed38aa9c0fc470ad9">m_peer</a>.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str());</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordtype">int</span> fd = <a class="code" href="classhandy_1_1UdpConn.html#a533af80bc031d93794dba64721ae123e">m_channel</a>-&gt;<a class="code" href="classhandy_1_1Channel.html#ac24c361fc54c9779765afe0a70560d82">getFd</a>();</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        ssize_t wn = ::write(fd, buf, len);</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">if</span>(wn &lt; 0)</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;UDP connection(fd=%d) send %d bytes to %s failed: errno=%d, msg=%s&quot;</span>, </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                    fd, len, <a class="code" href="classhandy_1_1UdpConn.html#afb59dcbfba79879ed38aa9c0fc470ad9">m_peer</a>.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str(), errno, strerror(errno));</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        }</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <a class="code" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(<span class="stringliteral">&quot;UDP connection(fd=%d) send %d bytes to %s success&quot;</span>, fd, wn, <a class="code" href="classhandy_1_1UdpConn.html#afb59dcbfba79879ed38aa9c0fc470ad9">m_peer</a>.<a class="code" href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">toString</a>().c_str());</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    }</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
+<div class="line"><a name="l00350"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpConn.html#a1ec5518264f7c2a3de123560e4998c59">  350</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1UdpConn.html#a1ec5518264f7c2a3de123560e4998c59">UdpConn::send</a>(<a class="code" href="classhandy_1_1Buffer.html">Buffer</a> msg)</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    {</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        <a class="code" href="classhandy_1_1UdpConn.html#a1ec5518264f7c2a3de123560e4998c59">send</a>(msg.<a class="code" href="classhandy_1_1Buffer.html#aceb300c5e30fad7a6062b97f48a2c111">peek</a>(), msg.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>());</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        msg.<a class="code" href="classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42">clear</a>();</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    }</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
+<div class="line"><a name="l00356"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpConn.html#a6d7c13df818c8f65e97770eb8fe5edea">  356</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1UdpConn.html#a1ec5518264f7c2a3de123560e4998c59">UdpConn::send</a>(<span class="keyword">const</span> std::string&amp; s)</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    {</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <a class="code" href="classhandy_1_1UdpConn.html#a1ec5518264f7c2a3de123560e4998c59">send</a>(s.data(), s.size());</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00361"></a><span class="lineno"><a class="line" href="classhandy_1_1UdpConn.html#acc3f1490c0a4d66adc8288b760e650fa">  361</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1UdpConn.html#a1ec5518264f7c2a3de123560e4998c59">UdpConn::send</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* s)</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    {</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <a class="code" href="classhandy_1_1UdpConn.html#a1ec5518264f7c2a3de123560e4998c59">send</a>(s, strlen(s));</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    }</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno"><a class="line" href="classhandy_1_1HSHAU.html#ab748838aea29ec68eade37503a6dfb98">  366</a></span>&#160;    <a class="code" href="classhandy_1_1HSHAU.html#ab748838aea29ec68eade37503a6dfb98">HSHAU::HSHAU</a>(<span class="keywordtype">int</span> threads) : m_threadPool(threads) {}</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
+<div class="line"><a name="l00368"></a><span class="lineno"><a class="line" href="classhandy_1_1HSHAU.html#a2e1fd5b7fc4d5d17dbd2b084e0e6a017">  368</a></span>&#160;    <a class="code" href="classhandy_1_1HSHAU.html#a06d19f5a49e9a6425b639d6b198b08d2">HSHAU::Ptr</a> <a class="code" href="classhandy_1_1HSHAU.html#a2e1fd5b7fc4d5d17dbd2b084e0e6a017">HSHAU::startServer</a>(<a class="code" href="classhandy_1_1EventBase.html">EventBase</a>* base, <span class="keyword">const</span> std::string&amp; host, </div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                                    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port, <span class="keywordtype">int</span> threads)</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    {</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keywordflow">if</span>(!base)</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;EventBase is nullptr&quot;</span>);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <a class="code" href="classhandy_1_1HSHAU.html#a06d19f5a49e9a6425b639d6b198b08d2">Ptr</a> server(<span class="keyword">new</span> <a class="code" href="classhandy_1_1HSHAU.html#ab748838aea29ec68eade37503a6dfb98">HSHAU</a>(threads));</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        server-&gt;m_server = <a class="code" href="classhandy_1_1UdpServer.html#a67fc24c72f8cec3c2a842e99f74c2e30">UdpServer::startServer</a>(base, host, port);</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">if</span>(!server-&gt;m_server)</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">return</span> server;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    }</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
+<div class="line"><a name="l00386"></a><span class="lineno"><a class="line" href="classhandy_1_1HSHAU.html#a9611a03558463948b5e6b3ee3b497111">  386</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1HSHAU.html#a9611a03558463948b5e6b3ee3b497111">HSHAU::exit</a>()</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <a class="code" href="classhandy_1_1HSHAU.html#a3cdaad1ae9d35fc452d2954f7b5d66fc">m_threadPool</a>.<a class="code" href="classhandy_1_1ThreadPool.html#a645707a5d4a6d126b5c3427b1ec39124">exit</a>();</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <a class="code" href="classhandy_1_1HSHAU.html#a3cdaad1ae9d35fc452d2954f7b5d66fc">m_threadPool</a>.<a class="code" href="classhandy_1_1ThreadPool.html#aa12157caf7e934a8f56c6f9ce79af4b1">join</a>();</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    }</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
+<div class="line"><a name="l00392"></a><span class="lineno"><a class="line" href="classhandy_1_1HSHAU.html#a7a46b7958480b944f8ed95fbcf2df57d">  392</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classhandy_1_1HSHAU.html#a7a46b7958480b944f8ed95fbcf2df57d">HSHAU::onMsg</a>(<span class="keyword">const</span> <a class="code" href="classhandy_1_1HSHAU.html#a01f94a4433d594e4d7bd01fc58dedd61">RetMsgCallback</a>&amp; cb)</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="classhandy_1_1HSHAU.html#a92be50722ed6a5d50fa55f72018f0a7c">m_server</a>)</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            <a class="code" href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;UdpServer is nullptr&quot;</span>);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        }</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <a class="code" href="classhandy_1_1HSHAU.html#a92be50722ed6a5d50fa55f72018f0a7c">m_server</a>-&gt;onMsg([<span class="keyword">this</span>, cb](<span class="keyword">const</span> <a class="code" href="classhandy_1_1UdpServer.html#a55016d1b3d3342f98bcb4239549687b7">UdpServer::Ptr</a>&amp; server, <a class="code" href="classhandy_1_1Buffer.html">Buffer</a> buf, <a class="code" href="classhandy_1_1Ipv4Addr.html">Ipv4Addr</a> peerAddr)</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        {</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            std::string input(buf.<a class="code" href="classhandy_1_1Buffer.html#aceb300c5e30fad7a6062b97f48a2c111">peek</a>(), buf.<a class="code" href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">size</a>());</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            <span class="comment">// 提交任务到线程池</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            <a class="code" href="classhandy_1_1HSHAU.html#a3cdaad1ae9d35fc452d2954f7b5d66fc">m_threadPool</a>.<a class="code" href="classhandy_1_1ThreadPool.html#aa539ee3210ff0346b8f88d705bf56f32">addTask</a>([=]()</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                std::string output = cb(server, input, peerAddr);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                <span class="comment">// 在事件循环线程中发送响应</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                <span class="keywordflow">if</span>(!output.empty() &amp;&amp; server-&gt;getBase())</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                {</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                    server-&gt;getBase()-&gt;safeCall([=]()</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                    {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                        server-&gt;sendTo(output, peerAddr);</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                    });</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;                }</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            });</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        });</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    }</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;}   <span class="comment">// namespace handy</span></div>
+<div class="ttc" id="classhandy_1_1UdpConn_html_ae0b19a95f626ed8f50698f7a1d202262"><div class="ttname"><a href="classhandy_1_1UdpConn.html#ae0b19a95f626ed8f50698f7a1d202262">handy::UdpConn::~UdpConn</a></div><div class="ttdeci">virtual ~UdpConn()</div><div class="ttdoc">析构函数，关闭连接并释放资源 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00212">udp.cpp:212</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpConn_html_a1ec5518264f7c2a3de123560e4998c59"><div class="ttname"><a href="classhandy_1_1UdpConn.html#a1ec5518264f7c2a3de123560e4998c59">handy::UdpConn::send</a></div><div class="ttdeci">void send(Buffer msg)</div><div class="ttdoc">发送数据缓冲区中的数据 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00350">udp.cpp:350</a></div></div>
+<div class="ttc" id="classhandy_1_1EventBases_html"><div class="ttname"><a href="classhandy_1_1EventBases.html">handy::EventBases</a></div><div class="ttdoc">事件派发器抽象基类（定义多事件派发器的统一接口） </div><div class="ttdef"><b>Definition:</b> <a href="event__base_8h_source.html#l00073">event_base.h:73</a></div></div>
+<div class="ttc" id="classhandy_1_1Ipv4Addr_html_aac6036c363e51a66207c4c83e3e137d0"><div class="ttname"><a href="classhandy_1_1Ipv4Addr.html#aac6036c363e51a66207c4c83e3e137d0">handy::Ipv4Addr::getAddr</a></div><div class="ttdeci">struct sockaddr_in &amp; getAddr() const </div><div class="ttdoc">获取内部的sockaddr_in结构体（只读） </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00246">net.cpp:246</a></div></div>
+<div class="ttc" id="classhandy_1_1Channel_html"><div class="ttname"><a href="classhandy_1_1Channel.html">handy::Channel</a></div><div class="ttdoc">I/O事件通道类（封装文件描述符与事件处理逻辑） </div><div class="ttdef"><b>Definition:</b> <a href="event__base_8h_source.html#l00280">event_base.h:280</a></div></div>
+<div class="ttc" id="namespacehandy_html_ad3d2de94c1471194c3d744c87a5b0f54"><div class="ttname"><a href="namespacehandy.html#ad3d2de94c1471194c3d744c87a5b0f54">handy::kUdpPacketSize</a></div><div class="ttdeci">const int kUdpPacketSize</div><div class="ttdoc">UDP数据包的最大大小为4096字节（4KB） </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00035">udp.h:35</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpServer_html_aff9aa7ad7f8cb300e058c25717884a93"><div class="ttname"><a href="classhandy_1_1UdpServer.html#aff9aa7ad7f8cb300e058c25717884a93">handy::UdpServer::m_base</a></div><div class="ttdeci">EventBase * m_base</div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00245">udp.h:245</a></div></div>
+<div class="ttc" id="classhandy_1_1HSHAU_html_a92be50722ed6a5d50fa55f72018f0a7c"><div class="ttname"><a href="classhandy_1_1HSHAU.html#a92be50722ed6a5d50fa55f72018f0a7c">handy::HSHAU::m_server</a></div><div class="ttdeci">UdpServer::Ptr m_server</div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00305">udp.h:305</a></div></div>
+<div class="ttc" id="classhandy_1_1ThreadPool_html_a645707a5d4a6d126b5c3427b1ec39124"><div class="ttname"><a href="classhandy_1_1ThreadPool.html#a645707a5d4a6d126b5c3427b1ec39124">handy::ThreadPool::exit</a></div><div class="ttdeci">void exit()</div><div class="ttdoc">通知线程池优雅退出（线程安全） </div><div class="ttdef"><b>Definition:</b> <a href="thread__pool_8cpp_source.html#l00158">thread_pool.cpp:158</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpServer_html_acd0ac630590e8dc6a27e5f8409ba690f"><div class="ttname"><a href="classhandy_1_1UdpServer.html#acd0ac630590e8dc6a27e5f8409ba690f">handy::UdpServer::~UdpServer</a></div><div class="ttdeci">~UdpServer()</div><div class="ttdoc">析构函数，释放资源 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00038">udp.cpp:38</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpServer_html_a9af89a4446ba59fd2ad9792d951c670e"><div class="ttname"><a href="classhandy_1_1UdpServer.html#a9af89a4446ba59fd2ad9792d951c670e">handy::UdpServer::m_addr</a></div><div class="ttdeci">Ipv4Addr m_addr</div><div class="ttdoc">事件循环对象基类 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00247">udp.h:247</a></div></div>
+<div class="ttc" id="classhandy_1_1EventBase_html_a3ac6300bb4a65a089a08b8010c4ee0bb"><div class="ttname"><a href="classhandy_1_1EventBase.html#a3ac6300bb4a65a089a08b8010c4ee0bb">handy::EventBase::safeCall</a></div><div class="ttdeci">void safeCall(Task &amp;&amp;task)</div><div class="ttdoc">投递异步任务（线程安全，右值引用） </div><div class="ttdef"><b>Definition:</b> <a href="event__base_8cpp_source.html#l00531">event_base.cpp:531</a></div></div>
+<div class="ttc" id="classhandy_1_1ThreadPool_html_aa539ee3210ff0346b8f88d705bf56f32"><div class="ttname"><a href="classhandy_1_1ThreadPool.html#aa539ee3210ff0346b8f88d705bf56f32">handy::ThreadPool::addTask</a></div><div class="ttdeci">bool addTask(Task &amp;&amp;task)</div><div class="ttdoc">向线程池添加任务（右值引用，线程安全） </div><div class="ttdef"><b>Definition:</b> <a href="thread__pool_8cpp_source.html#l00199">thread_pool.cpp:199</a></div></div>
+<div class="ttc" id="classhandy_1_1EventBase_html"><div class="ttname"><a href="classhandy_1_1EventBase.html">handy::EventBase</a></div><div class="ttdoc">单线程事件派发器，管理定时器、I/O事件、异步任务 </div><div class="ttdef"><b>Definition:</b> <a href="event__base_8h_source.html#l00090">event_base.h:90</a></div></div>
+<div class="ttc" id="namespacehandy_html_a1d928bf129769dcad1668174c6ff7555"><div class="ttname"><a href="namespacehandy.html#a1d928bf129769dcad1668174c6ff7555">handy::kReadEvent</a></div><div class="ttdeci">static constexpr int kReadEvent</div><div class="ttdoc">单次轮询最大处理事件数（限制单次处理的事件数）(静态常量，避免宏定义）) </div><div class="ttdef"><b>Definition:</b> <a href="poller_8h_source.html#l00028">poller.h:28</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpServer_html_a49e1cf8559b57b910172e38e59199b67"><div class="ttname"><a href="classhandy_1_1UdpServer.html#a49e1cf8559b57b910172e38e59199b67">handy::UdpServer::bind</a></div><div class="ttdeci">int bind(const std::string &amp;host, unsigned short port, bool isReusePort=false)</div><div class="ttdoc">将服务器绑定到指定地址和端口 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00048">udp.cpp:48</a></div></div>
+<div class="ttc" id="classhandy_1_1HSHAU_html_a2e1fd5b7fc4d5d17dbd2b084e0e6a017"><div class="ttname"><a href="classhandy_1_1HSHAU.html#a2e1fd5b7fc4d5d17dbd2b084e0e6a017">handy::HSHAU::startServer</a></div><div class="ttdeci">static Ptr startServer(EventBase *base, const std::string &amp;host, unsigned short port, int threads)</div><div class="ttdoc">启动半同步半异步UDP服务器 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00368">udp.cpp:368</a></div></div>
+<div class="ttc" id="classhandy_1_1Ipv4Addr_html"><div class="ttname"><a href="classhandy_1_1Ipv4Addr.html">handy::Ipv4Addr</a></div><div class="ttdoc">IPv4地址封装类，提供IP地址解析、格式化和合法性校验功能 </div><div class="ttdef"><b>Definition:</b> <a href="net_8h_source.html#l00141">net.h:141</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_a7060b929fb9d5b805ae670c77b0f8cdf"><div class="ttname"><a href="classhandy_1_1Buffer.html#a7060b929fb9d5b805ae670c77b0f8cdf">handy::Buffer::makeRoom</a></div><div class="ttdeci">void makeRoom()</div><div class="ttdoc">当缓冲区剩余空间小于m_exp时，扩展缓冲区 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00377">net.cpp:377</a></div></div>
+<div class="ttc" id="classhandy_1_1Net_html_affb6f68dd905db3c1572998ea730461c"><div class="ttname"><a href="classhandy_1_1Net.html#affb6f68dd905db3c1572998ea730461c">handy::Net::setReusePort</a></div><div class="ttdeci">static bool setReusePort(int fd, bool value=true, int *errCode=nullptr)</div><div class="ttdoc">设置Socket的端口重用选项(SO_REUSEPORT) </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00094">net.cpp:94</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpServer_html_a55016d1b3d3342f98bcb4239549687b7"><div class="ttname"><a href="classhandy_1_1UdpServer.html#a55016d1b3d3342f98bcb4239549687b7">handy::UdpServer::Ptr</a></div><div class="ttdeci">std::shared_ptr&lt; UdpServer &gt; Ptr</div><div class="ttdoc">UdpServer的智能指针类型定义 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00157">udp.h:157</a></div></div>
+<div class="ttc" id="classhandy_1_1HSHAU_html_a01f94a4433d594e4d7bd01fc58dedd61"><div class="ttname"><a href="classhandy_1_1HSHAU.html#a01f94a4433d594e4d7bd01fc58dedd61">handy::HSHAU::RetMsgCallback</a></div><div class="ttdeci">std::function&lt; std::string(const UdpServer::Ptr &amp;, const std::string &amp;, Ipv4Addr)&gt; RetMsgCallback</div><div class="ttdoc">消息处理回调函数类型 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00269">udp.h:269</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpConn_html_afb59dcbfba79879ed38aa9c0fc470ad9"><div class="ttname"><a href="classhandy_1_1UdpConn.html#afb59dcbfba79879ed38aa9c0fc470ad9">handy::UdpConn::m_peer</a></div><div class="ttdeci">Ipv4Addr m_peer</div><div class="ttdoc">本地地址 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00131">udp.h:131</a></div></div>
+<div class="ttc" id="classhandy_1_1Net_html_a6453e1072f6fdc96c1ca5df55f8124b3"><div class="ttname"><a href="classhandy_1_1Net.html#a6453e1072f6fdc96c1ca5df55f8124b3">handy::Net::setNonBlock</a></div><div class="ttdeci">static bool setNonBlock(int fd, bool value=true, int *errCode=nullptr)</div><div class="ttdoc">设置文件描述符的非阻塞模式 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00036">net.cpp:36</a></div></div>
+<div class="ttc" id="classhandy_1_1HSHAU_html_ab748838aea29ec68eade37503a6dfb98"><div class="ttname"><a href="classhandy_1_1HSHAU.html#ab748838aea29ec68eade37503a6dfb98">handy::HSHAU::HSHAU</a></div><div class="ttdeci">HSHAU(int threads)</div><div class="ttdoc">构造函数 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00366">udp.cpp:366</a></div></div>
+<div class="ttc" id="classhandy_1_1ThreadPool_html_aa12157caf7e934a8f56c6f9ce79af4b1"><div class="ttname"><a href="classhandy_1_1ThreadPool.html#aa12157caf7e934a8f56c6f9ce79af4b1">handy::ThreadPool::join</a></div><div class="ttdeci">void join()</div><div class="ttdoc">等待所有线程退出（阻塞当前线程） </div><div class="ttdef"><b>Definition:</b> <a href="thread__pool_8cpp_source.html#l00167">thread_pool.cpp:167</a></div></div>
+<div class="ttc" id="namespacehandy_html_aeb22e917b1ad4ff09d0f01cacd79a86b"><div class="ttname"><a href="namespacehandy.html#aeb22e917b1ad4ff09d0f01cacd79a86b">handy::FATAL_IF</a></div><div class="ttdeci">FATAL_IF(!m_base,&quot;Failed to allocate event base&quot;)</div></div>
+<div class="ttc" id="classhandy_1_1UdpConn_html_ad42f2c83b20c11a3468a8ac42b2b9fbd"><div class="ttname"><a href="classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd">handy::UdpConn::createConnection</a></div><div class="ttdeci">static Ptr createConnection(EventBase *base, const std::string &amp;destHost, unsigned short destPort)</div><div class="ttdoc">创建新的UDP连接 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00217">udp.cpp:217</a></div></div>
+<div class="ttc" id="classhandy_1_1Net_html_a268a9fccc2daea05719f3599a620bd10"><div class="ttname"><a href="classhandy_1_1Net.html#a268a9fccc2daea05719f3599a620bd10">handy::Net::setReuseAddr</a></div><div class="ttdeci">static bool setReuseAddr(int fd, bool value=true, int *errCode=nullptr)</div><div class="ttdoc">设置Socket的地址重用选项(SO_REUSEADDR) </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00071">net.cpp:71</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpServer_html_ad5a6f3bd4d85800f13f44e01e834e7b7"><div class="ttname"><a href="classhandy_1_1UdpServer.html#ad5a6f3bd4d85800f13f44e01e834e7b7">handy::UdpServer::m_channel</a></div><div class="ttdeci">Channel * m_channel</div><div class="ttdoc">服务器绑定的地址 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00248">udp.h:248</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_aceb300c5e30fad7a6062b97f48a2c111"><div class="ttname"><a href="classhandy_1_1Buffer.html#aceb300c5e30fad7a6062b97f48a2c111">handy::Buffer::peek</a></div><div class="ttdeci">const char * peek() const </div><div class="ttdoc">返回内部缓冲区的只读指针 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00371">net.cpp:371</a></div></div>
+<div class="ttc" id="logger_8h_html_a15378cd15bafb3a79061424b452497aa"><div class="ttname"><a href="logger_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a></div><div class="ttdeci">#define ERROR(fmt,...)</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00068">logger.h:68</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_a0428fcbdbcf59a3382bb5a40a75d4b18"><div class="ttname"><a href="classhandy_1_1Buffer.html#a0428fcbdbcf59a3382bb5a40a75d4b18">handy::Buffer::addSize</a></div><div class="ttdeci">void addSize(size_t len)</div><div class="ttdoc">更新缓冲区的实际数据长度 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00397">net.cpp:397</a></div></div>
+<div class="ttc" id="structhandy_1_1Utils_html_aa5e8825a818f6d930e3ffae3414d29cb"><div class="ttname"><a href="structhandy_1_1Utils.html#aa5e8825a818f6d930e3ffae3414d29cb">handy::Utils::addFdFlag</a></div><div class="ttdeci">static int addFdFlag(int fd, int flag) noexcept</div><div class="ttdoc">为文件描述符添加标志（线程安全） </div><div class="ttdef"><b>Definition:</b> <a href="utils_8cpp_source.html#l00215">utils.cpp:215</a></div></div>
+<div class="ttc" id="classhandy_1_1EventBases_html_a9e80d26b5cb6091ab83d7c8a89420dae"><div class="ttname"><a href="classhandy_1_1EventBases.html#a9e80d26b5cb6091ab83d7c8a89420dae">handy::EventBases::allocBase</a></div><div class="ttdeci">virtual EventBase * allocBase()=0</div><div class="ttdoc">分配事件派发器 </div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_a804cb068a8f1b7b1d3c5f4aaa09d1b42"><div class="ttname"><a href="classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42">handy::Buffer::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">清空缓冲区，释放所有动态内存，重置所有偏移量和容量 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00325">net.cpp:325</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpConn_html_a27f862cfd5d126ecf6c1a0f242e9777b"><div class="ttname"><a href="classhandy_1_1UdpConn.html#a27f862cfd5d126ecf6c1a0f242e9777b">handy::UdpConn::m_base</a></div><div class="ttdeci">EventBase * m_base</div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00128">udp.h:128</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpConn_html"><div class="ttname"><a href="classhandy_1_1UdpConn.html">handy::UdpConn</a></div><div class="ttdoc">UDP连接类，封装UDP连接的创建、数据发送和接收 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00040">udp.h:40</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_a44a208a057b4f4b753d64d3ef06ba0af"><div class="ttname"><a href="classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af">handy::Buffer::data</a></div><div class="ttdeci">std::string data() const </div><div class="ttdoc">获取缓冲区中的数据副本 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00347">net.cpp:347</a></div></div>
+<div class="ttc" id="logger_8h_html_ab56f6599fb46785e4265a3033ba91aa6"><div class="ttname"><a href="logger_8h.html#ab56f6599fb46785e4265a3033ba91aa6">INFO</a></div><div class="ttdeci">#define INFO(fmt,...)</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00066">logger.h:66</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpServer_html_ae56468dcf409ffde65f6c1b783b273cd"><div class="ttname"><a href="classhandy_1_1UdpServer.html#ae56468dcf409ffde65f6c1b783b273cd">handy::UdpServer::sendTo</a></div><div class="ttdeci">void sendTo(Buffer msg, Ipv4Addr addr)</div><div class="ttdoc">发送数据缓冲区到指定地址 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00196">udp.cpp:196</a></div></div>
+<div class="ttc" id="classhandy_1_1HSHAU_html_a7a46b7958480b944f8ed95fbcf2df57d"><div class="ttname"><a href="classhandy_1_1HSHAU.html#a7a46b7958480b944f8ed95fbcf2df57d">handy::HSHAU::onMsg</a></div><div class="ttdeci">void onMsg(const RetMsgCallback &amp;cb)</div><div class="ttdoc">设置消息处理回调函数 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00392">udp.cpp:392</a></div></div>
+<div class="ttc" id="classhandy_1_1HSHAU_html_a9611a03558463948b5e6b3ee3b497111"><div class="ttname"><a href="classhandy_1_1HSHAU.html#a9611a03558463948b5e6b3ee3b497111">handy::HSHAU::exit</a></div><div class="ttdeci">void exit()</div><div class="ttdoc">停止服务器并释放资源 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00386">udp.cpp:386</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpConn_html_ad60a08b5941d9cf5ecf786d514b69915"><div class="ttname"><a href="classhandy_1_1UdpConn.html#ad60a08b5941d9cf5ecf786d514b69915">handy::UdpConn::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">关闭当前UDP连接 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00308">udp.cpp:308</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpConn_html_a56c9450a096d3d9a564da71c9f7d0308"><div class="ttname"><a href="classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308">handy::UdpConn::Ptr</a></div><div class="ttdeci">std::shared_ptr&lt; UdpConn &gt; Ptr</div><div class="ttdoc">UdpConn的智能指针类型定义 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00044">udp.h:44</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpServer_html_a4f9f59c1eefd51cf69bf80180fcf32bc"><div class="ttname"><a href="classhandy_1_1UdpServer.html#a4f9f59c1eefd51cf69bf80180fcf32bc">handy::UdpServer::UdpServer</a></div><div class="ttdeci">UdpServer(EventBases *m_bases)</div><div class="ttdoc">构造函数，通过m_bases-&amp;gt;allocBase()获取具体的事件循环对象 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00031">udp.cpp:31</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpServer_html_a216794a28d8e4df8ee2159c163621228"><div class="ttname"><a href="classhandy_1_1UdpServer.html#a216794a28d8e4df8ee2159c163621228">handy::UdpServer::m_serverMsgCallback</a></div><div class="ttdeci">ServerMsgCallBack m_serverMsgCallback</div><div class="ttdoc">通道对象 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00249">udp.h:249</a></div></div>
+<div class="ttc" id="classhandy_1_1HSHAU_html_a3cdaad1ae9d35fc452d2954f7b5d66fc"><div class="ttname"><a href="classhandy_1_1HSHAU.html#a3cdaad1ae9d35fc452d2954f7b5d66fc">handy::HSHAU::m_threadPool</a></div><div class="ttdeci">ThreadPool m_threadPool</div><div class="ttdoc">UDP服务器对象 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00306">udp.h:306</a></div></div>
+<div class="ttc" id="logger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div><div class="ttdoc">日志系统核心头文件，提供线程安全的日志记录功能和便捷的日志宏定义 </div></div>
+<div class="ttc" id="classhandy_1_1UdpServer_html_a11655d3cacee7bc3a9ec5e08f520b6b6"><div class="ttname"><a href="classhandy_1_1UdpServer.html#a11655d3cacee7bc3a9ec5e08f520b6b6">handy::UdpServer::m_bases</a></div><div class="ttdeci">EventBases * m_bases</div><div class="ttdoc">关联的事件循环对象 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00246">udp.h:246</a></div></div>
+<div class="ttc" id="logger_8h_html_a21cc0459b78d5f2d7bd737e5aae1278a"><div class="ttname"><a href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a></div><div class="ttdeci">#define TRACE(fmt,...)</div><div class="ttdoc">简化日志宏：直接传递 level + fmt + 可变参数（与 HLOG 格式匹配） </div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00064">logger.h:64</a></div></div>
+<div class="ttc" id="classhandy_1_1HSHAU_html_a06d19f5a49e9a6425b639d6b198b08d2"><div class="ttname"><a href="classhandy_1_1HSHAU.html#a06d19f5a49e9a6425b639d6b198b08d2">handy::HSHAU::Ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HSHAU &gt; Ptr</div><div class="ttdoc">HSHAU的智能指针类型定义 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00260">udp.h:260</a></div></div>
+<div class="ttc" id="logger_8h_html_ac4cebd204831cf85d2c6e9d03b8d5bbb"><div class="ttname"><a href="logger_8h.html#ac4cebd204831cf85d2c6e9d03b8d5bbb">WARN</a></div><div class="ttdeci">#define WARN(fmt,...)</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00067">logger.h:67</a></div></div>
+<div class="ttc" id="classhandy_1_1Channel_html_ac24c361fc54c9779765afe0a70560d82"><div class="ttname"><a href="classhandy_1_1Channel.html#ac24c361fc54c9779765afe0a70560d82">handy::Channel::getFd</a></div><div class="ttdeci">int getFd() const </div><div class="ttdoc">获取关联的文件描述符 </div><div class="ttdef"><b>Definition:</b> <a href="event__base_8h_source.html#l00310">event_base.h:310</a></div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html"><div class="ttname"><a href="classhandy_1_1Buffer.html">handy::Buffer</a></div><div class="ttdoc">线程安全的缓冲区类，用于数据的存储和操作 </div><div class="ttdef"><b>Definition:</b> <a href="net_8h_source.html#l00248">net.h:248</a></div></div>
+<div class="ttc" id="udp_8h_html"><div class="ttname"><a href="udp_8h.html">udp.h</a></div><div class="ttdoc">UDP客户端和服务端连接的封装接口定义 </div></div>
+<div class="ttc" id="classhandy_1_1Buffer_html_aa759a33b7e3748d79cff07430f8a7b16"><div class="ttname"><a href="classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16">handy::Buffer::size</a></div><div class="ttdeci">size_t size() const </div><div class="ttdoc">获取当前缓冲区中的数据长度 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00335">net.cpp:335</a></div></div>
+<div class="ttc" id="classhandy_1_1Ipv4Addr_html_aecdc2af21e4190bd6286b4e5b7fdcb86"><div class="ttname"><a href="classhandy_1_1Ipv4Addr.html#aecdc2af21e4190bd6286b4e5b7fdcb86">handy::Ipv4Addr::toString</a></div><div class="ttdeci">std::string toString() const </div><div class="ttdoc">获取IP地址和端口的字符串表示 </div><div class="ttdef"><b>Definition:</b> <a href="net_8cpp_source.html#l00198">net.cpp:198</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpConn_html_a533af80bc031d93794dba64721ae123e"><div class="ttname"><a href="classhandy_1_1UdpConn.html#a533af80bc031d93794dba64721ae123e">handy::UdpConn::m_channel</a></div><div class="ttdeci">Channel * m_channel</div><div class="ttdoc">关联的事件循环对象 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8h_source.html#l00129">udp.h:129</a></div></div>
+<div class="ttc" id="classhandy_1_1UdpServer_html_a67fc24c72f8cec3c2a842e99f74c2e30"><div class="ttname"><a href="classhandy_1_1UdpServer.html#a67fc24c72f8cec3c2a842e99f74c2e30">handy::UdpServer::startServer</a></div><div class="ttdeci">static Ptr startServer(EventBases *bases, const std::string &amp;host, unsigned short port, bool isReusePort=false)</div><div class="ttdoc">启动并创建一个新的UDP服务器 </div><div class="ttdef"><b>Definition:</b> <a href="udp_8cpp_source.html#l00156">udp.cpp:156</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_32ffdd1374fa2f424904bdef8ac66f3e.html">handy</a></li><li class="navelem"><a class="el" href="udp_8cpp.html">udp.cpp</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

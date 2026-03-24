@@ -1,0 +1,9 @@
+<map id="handy::statusTest::testStaticCreators" name="handy::statusTest::testStaticCreators">
+<area shape="rect" id="node2" href="$classhandy_1_1Status.html#a07bbe0f37479f5765a7b3ba442d70957" title="根据当前线程的系统错误(errno)创建Status对象 " alt="" coords="188,5,371,32"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Status.html#abac5c65c266afdd5d0da7b1194c49e52" title="获取状态码 " alt="" coords="210,56,349,83"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Status.html#a357d7e675bc0f19620f70a2e15b41e2a" title="获取错误信息字符串 " alt="" coords="211,107,347,133"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Status.html#a20ee42a38aebe4d18b36d5bc2ef1bf6b" title="根据格式化字符串创建Status对象 " alt="" coords="419,157,597,184"/>
+<area shape="rect" id="node8" href="$classhandy_1_1Status.html#a4f98c279b3cd768dcad0e83e38f37616" title="创建I/O操作错误的Status对象 " alt="" coords="205,157,354,184"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Status.html#a928f8d212a443ec48bf09b53d58eed93" title="构造函数，创建一个表示“成功”的Status对象 " alt="" coords="645,107,795,133"/>
+<area shape="rect" id="node4" href="$namespacehandy.html#a957dcc461a7df87ab6338b1da38e4fba" title="获取当前线程的系统错误信息字符串 " alt="" coords="461,81,555,108"/>
+</map>
