@@ -12,7 +12,7 @@ INCLUDES = -I../../handy
 # 模块目录
 HANDY_DIR = ../../handy
 
-# handy模块的源文件列表（只需要修改这个列表即可）
+# handy模块的源文件列表
 HANDY_SRCS_BASENAME = logger utils conf port_posix net codec thread_pool daemon udp event_base poller conn file http stat-svr
 
 # 自动生成handy模块的.cpp源文件路径
@@ -36,8 +36,8 @@ all: $(TARGETS)
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c -o $@ $<
 
 # 自动生成每个测试程序的编译规则
-# 目标：测试可执行文件 (e.g., logger_test)
-# 依赖：对应的源文件 (e.g., logger_test.cpp) 和所有handy模块的.o文件
+# 目标：测试可执行文件
+# 依赖：对应的源文件和所有handy模块的.o文件
 $(TARGETS): %: %.cpp $(HANDY_OBJS)
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $@ $^
 

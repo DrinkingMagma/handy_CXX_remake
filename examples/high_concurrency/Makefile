@@ -59,7 +59,7 @@ run_server: $(SERVER_BIN) logs
 run_client: $(CLIENT_BIN) logs
 	./$(CLIENT_BIN)
 
-# Run complete test (server in background, then client)
+# Run complete test
 run_test: $(SERVER_BIN) $(CLIENT_BIN) logs
 	@echo "Starting server..."
 	./$(SERVER_BIN) &

@@ -19,7 +19,7 @@ void sigIntHandler(int sig)
 
 int main(int argc, char *argv[]) 
 {
-    Logger::getInstance().setLogLevel(Logger::LALL);
+    Logger::getInstance().setLogLevel(Logger::LINFO);
     Logger::getInstance().setLogFileName("./server.log");
     Logger::getInstance().clear();
 
@@ -43,7 +43,10 @@ int main(int argc, char *argv[])
     INFO("HSHA server start success, listening on 127.0.0.1:12345");
 
     g_hsha->onMsg(std::make_unique<LineCodec>(), [](const TcpConnPtr& conn, const std::string& msg){
-        INFO("Received message from %s: %s", conn->getPeerStr().c_str(), msg.c_str());
+        std::thread::id threadID = std::this_thread::get_id();
+        uint64_t tid = std::hash<std::thread::id>()(threadID);
+        
+        INFO("Thread %llu received message from %s: %s", (unsigned long long)tid, conn->getPeerStr().c_str(), msg.c_str());
 
         std::string response = "HSHA server processed: " + msg;
         
