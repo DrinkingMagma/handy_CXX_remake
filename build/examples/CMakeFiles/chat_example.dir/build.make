@@ -73,15 +73,15 @@ examples/CMakeFiles/chat_example.dir/chat.cpp.o: examples/CMakeFiles/chat_exampl
 examples/CMakeFiles/chat_example.dir/chat.cpp.o: ../examples/chat.cpp
 examples/CMakeFiles/chat_example.dir/chat.cpp.o: examples/CMakeFiles/chat_example.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/chat_example.dir/chat.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/chat_example.dir/chat.cpp.o -MF CMakeFiles/chat_example.dir/chat.cpp.o.d -o CMakeFiles/chat_example.dir/chat.cpp.o -c /root/C++/handy_CXX_remake/examples/chat.cpp
+	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/chat_example.dir/chat.cpp.o -MF CMakeFiles/chat_example.dir/chat.cpp.o.d -o CMakeFiles/chat_example.dir/chat.cpp.o -c /root/C++/handy_CXX_remake/examples/chat.cpp
 
 examples/CMakeFiles/chat_example.dir/chat.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chat_example.dir/chat.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/examples/chat.cpp > CMakeFiles/chat_example.dir/chat.cpp.i
+	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/examples/chat.cpp > CMakeFiles/chat_example.dir/chat.cpp.i
 
 examples/CMakeFiles/chat_example.dir/chat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chat_example.dir/chat.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/examples/chat.cpp -o CMakeFiles/chat_example.dir/chat.cpp.s
+	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/examples/chat.cpp -o CMakeFiles/chat_example.dir/chat.cpp.s
 
 # Object files for target chat_example
 chat_example_OBJECTS = \

@@ -73,15 +73,15 @@ test/CMakeFiles/utils_test.dir/utils_test.cpp.o: test/CMakeFiles/utils_test.dir/
 test/CMakeFiles/utils_test.dir/utils_test.cpp.o: ../test/utils_test.cpp
 test/CMakeFiles/utils_test.dir/utils_test.cpp.o: test/CMakeFiles/utils_test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/utils_test.dir/utils_test.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/utils_test.dir/utils_test.cpp.o -MF CMakeFiles/utils_test.dir/utils_test.cpp.o.d -o CMakeFiles/utils_test.dir/utils_test.cpp.o -c /root/C++/handy_CXX_remake/test/utils_test.cpp
+	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/utils_test.dir/utils_test.cpp.o -MF CMakeFiles/utils_test.dir/utils_test.cpp.o.d -o CMakeFiles/utils_test.dir/utils_test.cpp.o -c /root/C++/handy_CXX_remake/test/utils_test.cpp
 
 test/CMakeFiles/utils_test.dir/utils_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utils_test.dir/utils_test.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/test/utils_test.cpp > CMakeFiles/utils_test.dir/utils_test.cpp.i
+	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/test/utils_test.cpp > CMakeFiles/utils_test.dir/utils_test.cpp.i
 
 test/CMakeFiles/utils_test.dir/utils_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utils_test.dir/utils_test.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/test/utils_test.cpp -o CMakeFiles/utils_test.dir/utils_test.cpp.s
+	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/test/utils_test.cpp -o CMakeFiles/utils_test.dir/utils_test.cpp.s
 
 # Object files for target utils_test
 utils_test_OBJECTS = \

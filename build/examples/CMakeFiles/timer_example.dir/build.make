@@ -73,15 +73,15 @@ examples/CMakeFiles/timer_example.dir/timer.cpp.o: examples/CMakeFiles/timer_exa
 examples/CMakeFiles/timer_example.dir/timer.cpp.o: ../examples/timer.cpp
 examples/CMakeFiles/timer_example.dir/timer.cpp.o: examples/CMakeFiles/timer_example.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/timer_example.dir/timer.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/timer_example.dir/timer.cpp.o -MF CMakeFiles/timer_example.dir/timer.cpp.o.d -o CMakeFiles/timer_example.dir/timer.cpp.o -c /root/C++/handy_CXX_remake/examples/timer.cpp
+	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/timer_example.dir/timer.cpp.o -MF CMakeFiles/timer_example.dir/timer.cpp.o.d -o CMakeFiles/timer_example.dir/timer.cpp.o -c /root/C++/handy_CXX_remake/examples/timer.cpp
 
 examples/CMakeFiles/timer_example.dir/timer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/timer_example.dir/timer.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/examples/timer.cpp > CMakeFiles/timer_example.dir/timer.cpp.i
+	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/examples/timer.cpp > CMakeFiles/timer_example.dir/timer.cpp.i
 
 examples/CMakeFiles/timer_example.dir/timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/timer_example.dir/timer.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/examples/timer.cpp -o CMakeFiles/timer_example.dir/timer.cpp.s
+	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/examples/timer.cpp -o CMakeFiles/timer_example.dir/timer.cpp.s
 
 # Object files for target timer_example
 timer_example_OBJECTS = \

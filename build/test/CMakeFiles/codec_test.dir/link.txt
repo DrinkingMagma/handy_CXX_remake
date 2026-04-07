@@ -1,1 +1,1 @@
-/usr/bin/c++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/codec_test.dir/codec_test.cpp.o -o codec_test  ../handy/libhandy.a -lpthread 
+/usr/bin/g++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/codec_test.dir/codec_test.cpp.o -o codec_test  ../handy/libhandy.a -lpthread 

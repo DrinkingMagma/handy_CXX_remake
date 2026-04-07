@@ -73,15 +73,15 @@ test/CMakeFiles/udp_test.dir/udp_test.cpp.o: test/CMakeFiles/udp_test.dir/flags.
 test/CMakeFiles/udp_test.dir/udp_test.cpp.o: ../test/udp_test.cpp
 test/CMakeFiles/udp_test.dir/udp_test.cpp.o: test/CMakeFiles/udp_test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/udp_test.dir/udp_test.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/udp_test.dir/udp_test.cpp.o -MF CMakeFiles/udp_test.dir/udp_test.cpp.o.d -o CMakeFiles/udp_test.dir/udp_test.cpp.o -c /root/C++/handy_CXX_remake/test/udp_test.cpp
+	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/udp_test.dir/udp_test.cpp.o -MF CMakeFiles/udp_test.dir/udp_test.cpp.o.d -o CMakeFiles/udp_test.dir/udp_test.cpp.o -c /root/C++/handy_CXX_remake/test/udp_test.cpp
 
 test/CMakeFiles/udp_test.dir/udp_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udp_test.dir/udp_test.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/test/udp_test.cpp > CMakeFiles/udp_test.dir/udp_test.cpp.i
+	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/test/udp_test.cpp > CMakeFiles/udp_test.dir/udp_test.cpp.i
 
 test/CMakeFiles/udp_test.dir/udp_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udp_test.dir/udp_test.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/test/udp_test.cpp -o CMakeFiles/udp_test.dir/udp_test.cpp.s
+	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/test/udp_test.cpp -o CMakeFiles/udp_test.dir/udp_test.cpp.s
 
 # Object files for target udp_test
 udp_test_OBJECTS = \

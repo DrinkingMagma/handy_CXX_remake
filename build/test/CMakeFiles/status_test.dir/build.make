@@ -73,15 +73,15 @@ test/CMakeFiles/status_test.dir/status_test.cpp.o: test/CMakeFiles/status_test.d
 test/CMakeFiles/status_test.dir/status_test.cpp.o: ../test/status_test.cpp
 test/CMakeFiles/status_test.dir/status_test.cpp.o: test/CMakeFiles/status_test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/status_test.dir/status_test.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/status_test.dir/status_test.cpp.o -MF CMakeFiles/status_test.dir/status_test.cpp.o.d -o CMakeFiles/status_test.dir/status_test.cpp.o -c /root/C++/handy_CXX_remake/test/status_test.cpp
+	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/status_test.dir/status_test.cpp.o -MF CMakeFiles/status_test.dir/status_test.cpp.o.d -o CMakeFiles/status_test.dir/status_test.cpp.o -c /root/C++/handy_CXX_remake/test/status_test.cpp
 
 test/CMakeFiles/status_test.dir/status_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/status_test.dir/status_test.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/test/status_test.cpp > CMakeFiles/status_test.dir/status_test.cpp.i
+	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/test/status_test.cpp > CMakeFiles/status_test.dir/status_test.cpp.i
 
 test/CMakeFiles/status_test.dir/status_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/status_test.dir/status_test.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/test/status_test.cpp -o CMakeFiles/status_test.dir/status_test.cpp.s
+	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/test/status_test.cpp -o CMakeFiles/status_test.dir/status_test.cpp.s
 
 # Object files for target status_test
 status_test_OBJECTS = \

@@ -73,15 +73,15 @@ examples/HSHA/CMakeFiles/hsha_server.dir/server.cpp.o: examples/HSHA/CMakeFiles/
 examples/HSHA/CMakeFiles/hsha_server.dir/server.cpp.o: ../examples/HSHA/server.cpp
 examples/HSHA/CMakeFiles/hsha_server.dir/server.cpp.o: examples/HSHA/CMakeFiles/hsha_server.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/HSHA/CMakeFiles/hsha_server.dir/server.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/examples/HSHA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/HSHA/CMakeFiles/hsha_server.dir/server.cpp.o -MF CMakeFiles/hsha_server.dir/server.cpp.o.d -o CMakeFiles/hsha_server.dir/server.cpp.o -c /root/C++/handy_CXX_remake/examples/HSHA/server.cpp
+	cd /root/C++/handy_CXX_remake/build/examples/HSHA && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/HSHA/CMakeFiles/hsha_server.dir/server.cpp.o -MF CMakeFiles/hsha_server.dir/server.cpp.o.d -o CMakeFiles/hsha_server.dir/server.cpp.o -c /root/C++/handy_CXX_remake/examples/HSHA/server.cpp
 
 examples/HSHA/CMakeFiles/hsha_server.dir/server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hsha_server.dir/server.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/examples/HSHA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/examples/HSHA/server.cpp > CMakeFiles/hsha_server.dir/server.cpp.i
+	cd /root/C++/handy_CXX_remake/build/examples/HSHA && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/examples/HSHA/server.cpp > CMakeFiles/hsha_server.dir/server.cpp.i
 
 examples/HSHA/CMakeFiles/hsha_server.dir/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hsha_server.dir/server.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/examples/HSHA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/examples/HSHA/server.cpp -o CMakeFiles/hsha_server.dir/server.cpp.s
+	cd /root/C++/handy_CXX_remake/build/examples/HSHA && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/examples/HSHA/server.cpp -o CMakeFiles/hsha_server.dir/server.cpp.s
 
 # Object files for target hsha_server
 hsha_server_OBJECTS = \

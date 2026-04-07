@@ -73,15 +73,15 @@ examples/tcp/CMakeFiles/tcp_client.dir/client.cpp.o: examples/tcp/CMakeFiles/tcp
 examples/tcp/CMakeFiles/tcp_client.dir/client.cpp.o: ../examples/tcp/client.cpp
 examples/tcp/CMakeFiles/tcp_client.dir/client.cpp.o: examples/tcp/CMakeFiles/tcp_client.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/tcp/CMakeFiles/tcp_client.dir/client.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/examples/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/tcp/CMakeFiles/tcp_client.dir/client.cpp.o -MF CMakeFiles/tcp_client.dir/client.cpp.o.d -o CMakeFiles/tcp_client.dir/client.cpp.o -c /root/C++/handy_CXX_remake/examples/tcp/client.cpp
+	cd /root/C++/handy_CXX_remake/build/examples/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/tcp/CMakeFiles/tcp_client.dir/client.cpp.o -MF CMakeFiles/tcp_client.dir/client.cpp.o.d -o CMakeFiles/tcp_client.dir/client.cpp.o -c /root/C++/handy_CXX_remake/examples/tcp/client.cpp
 
 examples/tcp/CMakeFiles/tcp_client.dir/client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tcp_client.dir/client.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/examples/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/examples/tcp/client.cpp > CMakeFiles/tcp_client.dir/client.cpp.i
+	cd /root/C++/handy_CXX_remake/build/examples/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/examples/tcp/client.cpp > CMakeFiles/tcp_client.dir/client.cpp.i
 
 examples/tcp/CMakeFiles/tcp_client.dir/client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tcp_client.dir/client.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/examples/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/examples/tcp/client.cpp -o CMakeFiles/tcp_client.dir/client.cpp.s
+	cd /root/C++/handy_CXX_remake/build/examples/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/examples/tcp/client.cpp -o CMakeFiles/tcp_client.dir/client.cpp.s
 
 # Object files for target tcp_client
 tcp_client_OBJECTS = \

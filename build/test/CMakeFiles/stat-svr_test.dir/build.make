@@ -73,15 +73,15 @@ test/CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.o: test/CMakeFiles/stat-svr_
 test/CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.o: ../test/stat-svr_test.cpp
 test/CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.o: test/CMakeFiles/stat-svr_test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.o -MF CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.o.d -o CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.o -c /root/C++/handy_CXX_remake/test/stat-svr_test.cpp
+	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.o -MF CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.o.d -o CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.o -c /root/C++/handy_CXX_remake/test/stat-svr_test.cpp
 
 test/CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/test/stat-svr_test.cpp > CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.i
+	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/test/stat-svr_test.cpp > CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.i
 
 test/CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/test/stat-svr_test.cpp -o CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.s
+	cd /root/C++/handy_CXX_remake/build/test && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/test/stat-svr_test.cpp -o CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.s
 
 # Object files for target stat-svr_test
 stat__svr_test_OBJECTS = \

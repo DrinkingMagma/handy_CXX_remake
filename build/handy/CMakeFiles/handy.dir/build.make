@@ -73,211 +73,211 @@ handy/CMakeFiles/handy.dir/logger.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/logger.cpp.o: ../handy/logger.cpp
 handy/CMakeFiles/handy.dir/logger.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object handy/CMakeFiles/handy.dir/logger.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/logger.cpp.o -MF CMakeFiles/handy.dir/logger.cpp.o.d -o CMakeFiles/handy.dir/logger.cpp.o -c /root/C++/handy_CXX_remake/handy/logger.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/logger.cpp.o -MF CMakeFiles/handy.dir/logger.cpp.o.d -o CMakeFiles/handy.dir/logger.cpp.o -c /root/C++/handy_CXX_remake/handy/logger.cpp
 
 handy/CMakeFiles/handy.dir/logger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/logger.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/logger.cpp > CMakeFiles/handy.dir/logger.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/logger.cpp > CMakeFiles/handy.dir/logger.cpp.i
 
 handy/CMakeFiles/handy.dir/logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/logger.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/logger.cpp -o CMakeFiles/handy.dir/logger.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/logger.cpp -o CMakeFiles/handy.dir/logger.cpp.s
 
 handy/CMakeFiles/handy.dir/codec.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/codec.cpp.o: ../handy/codec.cpp
 handy/CMakeFiles/handy.dir/codec.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object handy/CMakeFiles/handy.dir/codec.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/codec.cpp.o -MF CMakeFiles/handy.dir/codec.cpp.o.d -o CMakeFiles/handy.dir/codec.cpp.o -c /root/C++/handy_CXX_remake/handy/codec.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/codec.cpp.o -MF CMakeFiles/handy.dir/codec.cpp.o.d -o CMakeFiles/handy.dir/codec.cpp.o -c /root/C++/handy_CXX_remake/handy/codec.cpp
 
 handy/CMakeFiles/handy.dir/codec.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/codec.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/codec.cpp > CMakeFiles/handy.dir/codec.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/codec.cpp > CMakeFiles/handy.dir/codec.cpp.i
 
 handy/CMakeFiles/handy.dir/codec.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/codec.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/codec.cpp -o CMakeFiles/handy.dir/codec.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/codec.cpp -o CMakeFiles/handy.dir/codec.cpp.s
 
 handy/CMakeFiles/handy.dir/conn.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/conn.cpp.o: ../handy/conn.cpp
 handy/CMakeFiles/handy.dir/conn.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object handy/CMakeFiles/handy.dir/conn.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/conn.cpp.o -MF CMakeFiles/handy.dir/conn.cpp.o.d -o CMakeFiles/handy.dir/conn.cpp.o -c /root/C++/handy_CXX_remake/handy/conn.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/conn.cpp.o -MF CMakeFiles/handy.dir/conn.cpp.o.d -o CMakeFiles/handy.dir/conn.cpp.o -c /root/C++/handy_CXX_remake/handy/conn.cpp
 
 handy/CMakeFiles/handy.dir/conn.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/conn.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/conn.cpp > CMakeFiles/handy.dir/conn.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/conn.cpp > CMakeFiles/handy.dir/conn.cpp.i
 
 handy/CMakeFiles/handy.dir/conn.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/conn.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/conn.cpp -o CMakeFiles/handy.dir/conn.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/conn.cpp -o CMakeFiles/handy.dir/conn.cpp.s
 
 handy/CMakeFiles/handy.dir/daemon.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/daemon.cpp.o: ../handy/daemon.cpp
 handy/CMakeFiles/handy.dir/daemon.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object handy/CMakeFiles/handy.dir/daemon.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/daemon.cpp.o -MF CMakeFiles/handy.dir/daemon.cpp.o.d -o CMakeFiles/handy.dir/daemon.cpp.o -c /root/C++/handy_CXX_remake/handy/daemon.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/daemon.cpp.o -MF CMakeFiles/handy.dir/daemon.cpp.o.d -o CMakeFiles/handy.dir/daemon.cpp.o -c /root/C++/handy_CXX_remake/handy/daemon.cpp
 
 handy/CMakeFiles/handy.dir/daemon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/daemon.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/daemon.cpp > CMakeFiles/handy.dir/daemon.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/daemon.cpp > CMakeFiles/handy.dir/daemon.cpp.i
 
 handy/CMakeFiles/handy.dir/daemon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/daemon.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/daemon.cpp -o CMakeFiles/handy.dir/daemon.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/daemon.cpp -o CMakeFiles/handy.dir/daemon.cpp.s
 
 handy/CMakeFiles/handy.dir/event_base.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/event_base.cpp.o: ../handy/event_base.cpp
 handy/CMakeFiles/handy.dir/event_base.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object handy/CMakeFiles/handy.dir/event_base.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/event_base.cpp.o -MF CMakeFiles/handy.dir/event_base.cpp.o.d -o CMakeFiles/handy.dir/event_base.cpp.o -c /root/C++/handy_CXX_remake/handy/event_base.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/event_base.cpp.o -MF CMakeFiles/handy.dir/event_base.cpp.o.d -o CMakeFiles/handy.dir/event_base.cpp.o -c /root/C++/handy_CXX_remake/handy/event_base.cpp
 
 handy/CMakeFiles/handy.dir/event_base.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/event_base.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/event_base.cpp > CMakeFiles/handy.dir/event_base.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/event_base.cpp > CMakeFiles/handy.dir/event_base.cpp.i
 
 handy/CMakeFiles/handy.dir/event_base.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/event_base.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/event_base.cpp -o CMakeFiles/handy.dir/event_base.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/event_base.cpp -o CMakeFiles/handy.dir/event_base.cpp.s
 
 handy/CMakeFiles/handy.dir/file.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/file.cpp.o: ../handy/file.cpp
 handy/CMakeFiles/handy.dir/file.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object handy/CMakeFiles/handy.dir/file.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/file.cpp.o -MF CMakeFiles/handy.dir/file.cpp.o.d -o CMakeFiles/handy.dir/file.cpp.o -c /root/C++/handy_CXX_remake/handy/file.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/file.cpp.o -MF CMakeFiles/handy.dir/file.cpp.o.d -o CMakeFiles/handy.dir/file.cpp.o -c /root/C++/handy_CXX_remake/handy/file.cpp
 
 handy/CMakeFiles/handy.dir/file.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/file.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/file.cpp > CMakeFiles/handy.dir/file.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/file.cpp > CMakeFiles/handy.dir/file.cpp.i
 
 handy/CMakeFiles/handy.dir/file.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/file.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/file.cpp -o CMakeFiles/handy.dir/file.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/file.cpp -o CMakeFiles/handy.dir/file.cpp.s
 
 handy/CMakeFiles/handy.dir/http.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/http.cpp.o: ../handy/http.cpp
 handy/CMakeFiles/handy.dir/http.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object handy/CMakeFiles/handy.dir/http.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/http.cpp.o -MF CMakeFiles/handy.dir/http.cpp.o.d -o CMakeFiles/handy.dir/http.cpp.o -c /root/C++/handy_CXX_remake/handy/http.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/http.cpp.o -MF CMakeFiles/handy.dir/http.cpp.o.d -o CMakeFiles/handy.dir/http.cpp.o -c /root/C++/handy_CXX_remake/handy/http.cpp
 
 handy/CMakeFiles/handy.dir/http.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/http.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/http.cpp > CMakeFiles/handy.dir/http.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/http.cpp > CMakeFiles/handy.dir/http.cpp.i
 
 handy/CMakeFiles/handy.dir/http.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/http.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/http.cpp -o CMakeFiles/handy.dir/http.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/http.cpp -o CMakeFiles/handy.dir/http.cpp.s
 
 handy/CMakeFiles/handy.dir/net.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/net.cpp.o: ../handy/net.cpp
 handy/CMakeFiles/handy.dir/net.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object handy/CMakeFiles/handy.dir/net.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/net.cpp.o -MF CMakeFiles/handy.dir/net.cpp.o.d -o CMakeFiles/handy.dir/net.cpp.o -c /root/C++/handy_CXX_remake/handy/net.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/net.cpp.o -MF CMakeFiles/handy.dir/net.cpp.o.d -o CMakeFiles/handy.dir/net.cpp.o -c /root/C++/handy_CXX_remake/handy/net.cpp
 
 handy/CMakeFiles/handy.dir/net.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/net.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/net.cpp > CMakeFiles/handy.dir/net.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/net.cpp > CMakeFiles/handy.dir/net.cpp.i
 
 handy/CMakeFiles/handy.dir/net.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/net.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/net.cpp -o CMakeFiles/handy.dir/net.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/net.cpp -o CMakeFiles/handy.dir/net.cpp.s
 
 handy/CMakeFiles/handy.dir/poller.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/poller.cpp.o: ../handy/poller.cpp
 handy/CMakeFiles/handy.dir/poller.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object handy/CMakeFiles/handy.dir/poller.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/poller.cpp.o -MF CMakeFiles/handy.dir/poller.cpp.o.d -o CMakeFiles/handy.dir/poller.cpp.o -c /root/C++/handy_CXX_remake/handy/poller.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/poller.cpp.o -MF CMakeFiles/handy.dir/poller.cpp.o.d -o CMakeFiles/handy.dir/poller.cpp.o -c /root/C++/handy_CXX_remake/handy/poller.cpp
 
 handy/CMakeFiles/handy.dir/poller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/poller.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/poller.cpp > CMakeFiles/handy.dir/poller.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/poller.cpp > CMakeFiles/handy.dir/poller.cpp.i
 
 handy/CMakeFiles/handy.dir/poller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/poller.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/poller.cpp -o CMakeFiles/handy.dir/poller.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/poller.cpp -o CMakeFiles/handy.dir/poller.cpp.s
 
 handy/CMakeFiles/handy.dir/port_posix.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/port_posix.cpp.o: ../handy/port_posix.cpp
 handy/CMakeFiles/handy.dir/port_posix.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object handy/CMakeFiles/handy.dir/port_posix.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/port_posix.cpp.o -MF CMakeFiles/handy.dir/port_posix.cpp.o.d -o CMakeFiles/handy.dir/port_posix.cpp.o -c /root/C++/handy_CXX_remake/handy/port_posix.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/port_posix.cpp.o -MF CMakeFiles/handy.dir/port_posix.cpp.o.d -o CMakeFiles/handy.dir/port_posix.cpp.o -c /root/C++/handy_CXX_remake/handy/port_posix.cpp
 
 handy/CMakeFiles/handy.dir/port_posix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/port_posix.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/port_posix.cpp > CMakeFiles/handy.dir/port_posix.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/port_posix.cpp > CMakeFiles/handy.dir/port_posix.cpp.i
 
 handy/CMakeFiles/handy.dir/port_posix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/port_posix.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/port_posix.cpp -o CMakeFiles/handy.dir/port_posix.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/port_posix.cpp -o CMakeFiles/handy.dir/port_posix.cpp.s
 
 handy/CMakeFiles/handy.dir/stat-svr.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/stat-svr.cpp.o: ../handy/stat-svr.cpp
 handy/CMakeFiles/handy.dir/stat-svr.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object handy/CMakeFiles/handy.dir/stat-svr.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/stat-svr.cpp.o -MF CMakeFiles/handy.dir/stat-svr.cpp.o.d -o CMakeFiles/handy.dir/stat-svr.cpp.o -c /root/C++/handy_CXX_remake/handy/stat-svr.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/stat-svr.cpp.o -MF CMakeFiles/handy.dir/stat-svr.cpp.o.d -o CMakeFiles/handy.dir/stat-svr.cpp.o -c /root/C++/handy_CXX_remake/handy/stat-svr.cpp
 
 handy/CMakeFiles/handy.dir/stat-svr.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/stat-svr.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/stat-svr.cpp > CMakeFiles/handy.dir/stat-svr.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/stat-svr.cpp > CMakeFiles/handy.dir/stat-svr.cpp.i
 
 handy/CMakeFiles/handy.dir/stat-svr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/stat-svr.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/stat-svr.cpp -o CMakeFiles/handy.dir/stat-svr.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/stat-svr.cpp -o CMakeFiles/handy.dir/stat-svr.cpp.s
 
 handy/CMakeFiles/handy.dir/thread_pool.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/thread_pool.cpp.o: ../handy/thread_pool.cpp
 handy/CMakeFiles/handy.dir/thread_pool.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object handy/CMakeFiles/handy.dir/thread_pool.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/thread_pool.cpp.o -MF CMakeFiles/handy.dir/thread_pool.cpp.o.d -o CMakeFiles/handy.dir/thread_pool.cpp.o -c /root/C++/handy_CXX_remake/handy/thread_pool.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/thread_pool.cpp.o -MF CMakeFiles/handy.dir/thread_pool.cpp.o.d -o CMakeFiles/handy.dir/thread_pool.cpp.o -c /root/C++/handy_CXX_remake/handy/thread_pool.cpp
 
 handy/CMakeFiles/handy.dir/thread_pool.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/thread_pool.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/thread_pool.cpp > CMakeFiles/handy.dir/thread_pool.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/thread_pool.cpp > CMakeFiles/handy.dir/thread_pool.cpp.i
 
 handy/CMakeFiles/handy.dir/thread_pool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/thread_pool.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/thread_pool.cpp -o CMakeFiles/handy.dir/thread_pool.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/thread_pool.cpp -o CMakeFiles/handy.dir/thread_pool.cpp.s
 
 handy/CMakeFiles/handy.dir/udp.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/udp.cpp.o: ../handy/udp.cpp
 handy/CMakeFiles/handy.dir/udp.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object handy/CMakeFiles/handy.dir/udp.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/udp.cpp.o -MF CMakeFiles/handy.dir/udp.cpp.o.d -o CMakeFiles/handy.dir/udp.cpp.o -c /root/C++/handy_CXX_remake/handy/udp.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/udp.cpp.o -MF CMakeFiles/handy.dir/udp.cpp.o.d -o CMakeFiles/handy.dir/udp.cpp.o -c /root/C++/handy_CXX_remake/handy/udp.cpp
 
 handy/CMakeFiles/handy.dir/udp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/udp.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/udp.cpp > CMakeFiles/handy.dir/udp.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/udp.cpp > CMakeFiles/handy.dir/udp.cpp.i
 
 handy/CMakeFiles/handy.dir/udp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/udp.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/udp.cpp -o CMakeFiles/handy.dir/udp.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/udp.cpp -o CMakeFiles/handy.dir/udp.cpp.s
 
 handy/CMakeFiles/handy.dir/utils.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/utils.cpp.o: ../handy/utils.cpp
 handy/CMakeFiles/handy.dir/utils.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object handy/CMakeFiles/handy.dir/utils.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/utils.cpp.o -MF CMakeFiles/handy.dir/utils.cpp.o.d -o CMakeFiles/handy.dir/utils.cpp.o -c /root/C++/handy_CXX_remake/handy/utils.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/utils.cpp.o -MF CMakeFiles/handy.dir/utils.cpp.o.d -o CMakeFiles/handy.dir/utils.cpp.o -c /root/C++/handy_CXX_remake/handy/utils.cpp
 
 handy/CMakeFiles/handy.dir/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/utils.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/utils.cpp > CMakeFiles/handy.dir/utils.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/utils.cpp > CMakeFiles/handy.dir/utils.cpp.i
 
 handy/CMakeFiles/handy.dir/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/utils.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/utils.cpp -o CMakeFiles/handy.dir/utils.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/utils.cpp -o CMakeFiles/handy.dir/utils.cpp.s
 
 handy/CMakeFiles/handy.dir/conf.cpp.o: handy/CMakeFiles/handy.dir/flags.make
 handy/CMakeFiles/handy.dir/conf.cpp.o: ../handy/conf.cpp
 handy/CMakeFiles/handy.dir/conf.cpp.o: handy/CMakeFiles/handy.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object handy/CMakeFiles/handy.dir/conf.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/conf.cpp.o -MF CMakeFiles/handy.dir/conf.cpp.o.d -o CMakeFiles/handy.dir/conf.cpp.o -c /root/C++/handy_CXX_remake/handy/conf.cpp
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT handy/CMakeFiles/handy.dir/conf.cpp.o -MF CMakeFiles/handy.dir/conf.cpp.o.d -o CMakeFiles/handy.dir/conf.cpp.o -c /root/C++/handy_CXX_remake/handy/conf.cpp
 
 handy/CMakeFiles/handy.dir/conf.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handy.dir/conf.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/conf.cpp > CMakeFiles/handy.dir/conf.cpp.i
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/handy/conf.cpp > CMakeFiles/handy.dir/conf.cpp.i
 
 handy/CMakeFiles/handy.dir/conf.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handy.dir/conf.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/conf.cpp -o CMakeFiles/handy.dir/conf.cpp.s
+	cd /root/C++/handy_CXX_remake/build/handy && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/handy/conf.cpp -o CMakeFiles/handy.dir/conf.cpp.s
 
 # Object files for target handy
 handy_OBJECTS = \

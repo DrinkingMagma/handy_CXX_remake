@@ -1,1 +1,1 @@
-/usr/bin/c++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/http_test.dir/http_test.cpp.o -o http_test  ../handy/libhandy.a -lpthread 
+/usr/bin/g++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/http_test.dir/http_test.cpp.o -o http_test  ../handy/libhandy.a -lpthread 

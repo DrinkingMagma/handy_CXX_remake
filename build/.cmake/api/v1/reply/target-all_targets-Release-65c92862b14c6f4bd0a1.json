@@ -1,0 +1,162 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 33,
+				"parent" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "handy::@7d1cdaa9cc93a5733262"
+		},
+		{
+			"id" : "conn_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "thread_pool_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "utils_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "daemon_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "stat-svr_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "udp_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "logger_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "codec_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "net_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "http_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "conf_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "file_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "status_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "slice_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "port_posix_test::@36f028580bb02cc8272a"
+		},
+		{
+			"id" : "reconnect_example::@714eac15f71a94114fdf"
+		},
+		{
+			"id" : "chat_example::@714eac15f71a94114fdf"
+		},
+		{
+			"id" : "timer_example::@714eac15f71a94114fdf"
+		},
+		{
+			"id" : "tcp_server::@1b31f263a255ef3dabc9"
+		},
+		{
+			"id" : "tcp_client::@1b31f263a255ef3dabc9"
+		},
+		{
+			"id" : "udp_server::@ffcae9d74b8bfa21ba60"
+		},
+		{
+			"id" : "udp_client::@ffcae9d74b8bfa21ba60"
+		},
+		{
+			"id" : "http_server::@4e6f6322a4868c2ed9ab"
+		},
+		{
+			"id" : "http_client::@4e6f6322a4868c2ed9ab"
+		},
+		{
+			"id" : "hsha_server::@1d0f5c91292c5bf46b7e"
+		},
+		{
+			"id" : "hsha_client::@1d0f5c91292c5bf46b7e"
+		},
+		{
+			"id" : "hshau_server::@415db5f08afb985233a9"
+		},
+		{
+			"id" : "hshau_client::@415db5f08afb985233a9"
+		},
+		{
+			"id" : "high_concurrency_server::@777bd345d4ac84674e2b"
+		},
+		{
+			"id" : "high_concurrency_client::@777bd345d4ac84674e2b"
+		}
+	],
+	"id" : "all_targets::@6890427a1f51a3e7e1df",
+	"name" : "all_targets",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/all_targets",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/all_targets.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

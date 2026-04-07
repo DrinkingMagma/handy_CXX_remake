@@ -73,15 +73,15 @@ examples/CMakeFiles/reconnect_example.dir/reconnect.cpp.o: examples/CMakeFiles/r
 examples/CMakeFiles/reconnect_example.dir/reconnect.cpp.o: ../examples/reconnect.cpp
 examples/CMakeFiles/reconnect_example.dir/reconnect.cpp.o: examples/CMakeFiles/reconnect_example.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/reconnect_example.dir/reconnect.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/reconnect_example.dir/reconnect.cpp.o -MF CMakeFiles/reconnect_example.dir/reconnect.cpp.o.d -o CMakeFiles/reconnect_example.dir/reconnect.cpp.o -c /root/C++/handy_CXX_remake/examples/reconnect.cpp
+	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/reconnect_example.dir/reconnect.cpp.o -MF CMakeFiles/reconnect_example.dir/reconnect.cpp.o.d -o CMakeFiles/reconnect_example.dir/reconnect.cpp.o -c /root/C++/handy_CXX_remake/examples/reconnect.cpp
 
 examples/CMakeFiles/reconnect_example.dir/reconnect.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reconnect_example.dir/reconnect.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/examples/reconnect.cpp > CMakeFiles/reconnect_example.dir/reconnect.cpp.i
+	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/examples/reconnect.cpp > CMakeFiles/reconnect_example.dir/reconnect.cpp.i
 
 examples/CMakeFiles/reconnect_example.dir/reconnect.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reconnect_example.dir/reconnect.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/examples/reconnect.cpp -o CMakeFiles/reconnect_example.dir/reconnect.cpp.s
+	cd /root/C++/handy_CXX_remake/build/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/examples/reconnect.cpp -o CMakeFiles/reconnect_example.dir/reconnect.cpp.s
 
 # Object files for target reconnect_example
 reconnect_example_OBJECTS = \

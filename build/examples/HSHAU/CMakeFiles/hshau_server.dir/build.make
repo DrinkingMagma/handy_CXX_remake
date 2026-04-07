@@ -73,15 +73,15 @@ examples/HSHAU/CMakeFiles/hshau_server.dir/server.cpp.o: examples/HSHAU/CMakeFil
 examples/HSHAU/CMakeFiles/hshau_server.dir/server.cpp.o: ../examples/HSHAU/server.cpp
 examples/HSHAU/CMakeFiles/hshau_server.dir/server.cpp.o: examples/HSHAU/CMakeFiles/hshau_server.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/C++/handy_CXX_remake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/HSHAU/CMakeFiles/hshau_server.dir/server.cpp.o"
-	cd /root/C++/handy_CXX_remake/build/examples/HSHAU && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/HSHAU/CMakeFiles/hshau_server.dir/server.cpp.o -MF CMakeFiles/hshau_server.dir/server.cpp.o.d -o CMakeFiles/hshau_server.dir/server.cpp.o -c /root/C++/handy_CXX_remake/examples/HSHAU/server.cpp
+	cd /root/C++/handy_CXX_remake/build/examples/HSHAU && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/HSHAU/CMakeFiles/hshau_server.dir/server.cpp.o -MF CMakeFiles/hshau_server.dir/server.cpp.o.d -o CMakeFiles/hshau_server.dir/server.cpp.o -c /root/C++/handy_CXX_remake/examples/HSHAU/server.cpp
 
 examples/HSHAU/CMakeFiles/hshau_server.dir/server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hshau_server.dir/server.cpp.i"
-	cd /root/C++/handy_CXX_remake/build/examples/HSHAU && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/examples/HSHAU/server.cpp > CMakeFiles/hshau_server.dir/server.cpp.i
+	cd /root/C++/handy_CXX_remake/build/examples/HSHAU && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/C++/handy_CXX_remake/examples/HSHAU/server.cpp > CMakeFiles/hshau_server.dir/server.cpp.i
 
 examples/HSHAU/CMakeFiles/hshau_server.dir/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hshau_server.dir/server.cpp.s"
-	cd /root/C++/handy_CXX_remake/build/examples/HSHAU && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/examples/HSHAU/server.cpp -o CMakeFiles/hshau_server.dir/server.cpp.s
+	cd /root/C++/handy_CXX_remake/build/examples/HSHAU && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/C++/handy_CXX_remake/examples/HSHAU/server.cpp -o CMakeFiles/hshau_server.dir/server.cpp.s
 
 # Object files for target hshau_server
 hshau_server_OBJECTS = \

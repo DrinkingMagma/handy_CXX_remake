@@ -1,1 +1,1 @@
-/usr/bin/c++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/thread_pool_test.dir/thread_pool_test.cpp.o -o thread_pool_test  ../handy/libhandy.a -lpthread 
+/usr/bin/g++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/thread_pool_test.dir/thread_pool_test.cpp.o -o thread_pool_test  ../handy/libhandy.a -lpthread 

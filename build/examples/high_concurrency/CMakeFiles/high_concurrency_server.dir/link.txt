@@ -1,1 +1,1 @@
-/usr/bin/c++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/high_concurrency_server.dir/server.cpp.o -o high_concurrency_server  ../../handy/libhandy.a -lpthread 
+/usr/bin/g++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/high_concurrency_server.dir/server.cpp.o -o high_concurrency_server  ../../handy/libhandy.a -lpthread 

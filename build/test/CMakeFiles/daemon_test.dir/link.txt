@@ -1,1 +1,1 @@
-/usr/bin/c++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/daemon_test.dir/daemon_test.cpp.o -o daemon_test  ../handy/libhandy.a -lpthread 
+/usr/bin/g++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/daemon_test.dir/daemon_test.cpp.o -o daemon_test  ../handy/libhandy.a -lpthread 
