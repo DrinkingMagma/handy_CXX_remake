@@ -26,6 +26,7 @@ var dir_32ffdd1374fa2f424904bdef8ac66f3e =
       [ "File", "classhandy_1_1File.html", "classhandy_1_1File" ]
     ] ],
     [ "handy-imp.h", "handy-imp_8h.html", "handy-imp_8h" ],
+    [ "handy.h", "handy_8h.html", null ],
     [ "http.cpp", "http_8cpp.html", null ],
     [ "http.h", "http_8h.html", [
       [ "HttpMsg", "classhandy_1_1HttpMsg.html", "classhandy_1_1HttpMsg" ],

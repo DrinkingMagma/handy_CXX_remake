@@ -1,0 +1,227 @@
+[
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/logger.cpp.o -c /root/C++/handy_CXX_remake/handy/logger.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/logger.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/codec.cpp.o -c /root/C++/handy_CXX_remake/handy/codec.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/codec.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/conn.cpp.o -c /root/C++/handy_CXX_remake/handy/conn.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/conn.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/daemon.cpp.o -c /root/C++/handy_CXX_remake/handy/daemon.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/daemon.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/event_base.cpp.o -c /root/C++/handy_CXX_remake/handy/event_base.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/event_base.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/file.cpp.o -c /root/C++/handy_CXX_remake/handy/file.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/file.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/http.cpp.o -c /root/C++/handy_CXX_remake/handy/http.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/http.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/net.cpp.o -c /root/C++/handy_CXX_remake/handy/net.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/net.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/poller.cpp.o -c /root/C++/handy_CXX_remake/handy/poller.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/poller.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/port_posix.cpp.o -c /root/C++/handy_CXX_remake/handy/port_posix.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/port_posix.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/stat-svr.cpp.o -c /root/C++/handy_CXX_remake/handy/stat-svr.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/stat-svr.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/thread_pool.cpp.o -c /root/C++/handy_CXX_remake/handy/thread_pool.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/thread_pool.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/udp.cpp.o -c /root/C++/handy_CXX_remake/handy/udp.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/udp.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/utils.cpp.o -c /root/C++/handy_CXX_remake/handy/utils.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/utils.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/handy",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/handy.dir/conf.cpp.o -c /root/C++/handy_CXX_remake/handy/conf.cpp",
+  "file": "/root/C++/handy_CXX_remake/handy/conf.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/conn_test.dir/conn_test.cpp.o -c /root/C++/handy_CXX_remake/test/conn_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/conn_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/thread_pool_test.dir/thread_pool_test.cpp.o -c /root/C++/handy_CXX_remake/test/thread_pool_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/thread_pool_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/utils_test.dir/utils_test.cpp.o -c /root/C++/handy_CXX_remake/test/utils_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/utils_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/daemon_test.dir/daemon_test.cpp.o -c /root/C++/handy_CXX_remake/test/daemon_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/daemon_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/stat-svr_test.dir/stat-svr_test.cpp.o -c /root/C++/handy_CXX_remake/test/stat-svr_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/stat-svr_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/udp_test.dir/udp_test.cpp.o -c /root/C++/handy_CXX_remake/test/udp_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/udp_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/logger_test.dir/logger_test.cpp.o -c /root/C++/handy_CXX_remake/test/logger_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/logger_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/codec_test.dir/codec_test.cpp.o -c /root/C++/handy_CXX_remake/test/codec_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/codec_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/net_test.dir/net_test.cpp.o -c /root/C++/handy_CXX_remake/test/net_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/net_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/http_test.dir/http_test.cpp.o -c /root/C++/handy_CXX_remake/test/http_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/http_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/conf_test.dir/conf_test.cpp.o -c /root/C++/handy_CXX_remake/test/conf_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/conf_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/file_test.dir/file_test.cpp.o -c /root/C++/handy_CXX_remake/test/file_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/file_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/status_test.dir/status_test.cpp.o -c /root/C++/handy_CXX_remake/test/status_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/status_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/slice_test.dir/slice_test.cpp.o -c /root/C++/handy_CXX_remake/test/slice_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/slice_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/test",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/port_posix_test.dir/port_posix_test.cpp.o -c /root/C++/handy_CXX_remake/test/port_posix_test.cpp",
+  "file": "/root/C++/handy_CXX_remake/test/port_posix_test.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/reconnect_example.dir/reconnect.cpp.o -c /root/C++/handy_CXX_remake/examples/reconnect.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/reconnect.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/chat_example.dir/chat.cpp.o -c /root/C++/handy_CXX_remake/examples/chat.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/chat.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/timer_example.dir/timer.cpp.o -c /root/C++/handy_CXX_remake/examples/timer.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/timer.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples/tcp",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/tcp_server.dir/server.cpp.o -c /root/C++/handy_CXX_remake/examples/tcp/server.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/tcp/server.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples/tcp",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/tcp_client.dir/client.cpp.o -c /root/C++/handy_CXX_remake/examples/tcp/client.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/tcp/client.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples/udp",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/udp_server.dir/server.cpp.o -c /root/C++/handy_CXX_remake/examples/udp/server.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/udp/server.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples/udp",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/udp_client.dir/client.cpp.o -c /root/C++/handy_CXX_remake/examples/udp/client.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/udp/client.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples/HTTP",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/http_server.dir/server.cpp.o -c /root/C++/handy_CXX_remake/examples/HTTP/server.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/HTTP/server.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples/HTTP",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/http_client.dir/client.cpp.o -c /root/C++/handy_CXX_remake/examples/HTTP/client.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/HTTP/client.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples/HSHA",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/hsha_server.dir/server.cpp.o -c /root/C++/handy_CXX_remake/examples/HSHA/server.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/HSHA/server.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples/HSHA",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/hsha_client.dir/client.cpp.o -c /root/C++/handy_CXX_remake/examples/HSHA/client.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/HSHA/client.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples/HSHAU",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/hshau_server.dir/server.cpp.o -c /root/C++/handy_CXX_remake/examples/HSHAU/server.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/HSHAU/server.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples/HSHAU",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/hshau_client.dir/client.cpp.o -c /root/C++/handy_CXX_remake/examples/HSHAU/client.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/HSHAU/client.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples/high_concurrency",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/high_concurrency_server.dir/server.cpp.o -c /root/C++/handy_CXX_remake/examples/high_concurrency/server.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/high_concurrency/server.cpp"
+},
+{
+  "directory": "/root/C++/handy_CXX_remake/build/examples/high_concurrency",
+  "command": "/usr/bin/g++  -I/root/C++/handy_CXX_remake/handy  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17 -o CMakeFiles/high_concurrency_client.dir/client.cpp.o -c /root/C++/handy_CXX_remake/examples/high_concurrency/client.cpp",
+  "file": "/root/C++/handy_CXX_remake/examples/high_concurrency/client.cpp"
+}
+]

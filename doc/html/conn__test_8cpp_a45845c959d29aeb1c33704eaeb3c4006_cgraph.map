@@ -1,7 +1,12 @@
 <map id="test_TcpConn_threadSafe" name="test_TcpConn_threadSafe">
-<area shape="rect" id="node2" href="$classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16" title="获取当前缓冲区中的数据长度 " alt="" coords="242,5,373,32"/>
-<area shape="rect" id="node3" href="$classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f" title="退出事件循环（线程安全） " alt="" coords="228,56,387,83"/>
-<area shape="rect" id="node5" href="$classhandy_1_1EventBase.html#ae2ab677b735668355724861f4264d3b6" title="启动事件循环（阻塞，直到调用exit()退出） " alt="" coords="227,107,388,133"/>
-<area shape="rect" id="node6" href="$conn__test_8cpp.html#a4c1cd75c2f2669a776034aa76db1a0fa" title="g_connTestCount" alt="" coords="246,157,369,184"/>
-<area shape="rect" id="node4" href="$classhandy_1_1EventBase.html#a54e0450f295724a37aa7ff0404058fb7" title="唤醒事件循环（线程安全） " alt="" coords="436,56,619,83"/>
+<area shape="rect" id="node2" href="$classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16" title="获取当前缓冲区中的数据长度 " alt="" coords="467,56,597,83"/>
+<area shape="rect" id="node3" href="$classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f" title="退出事件循环（线程安全） " alt="" coords="228,5,387,32"/>
+<area shape="rect" id="node5" href="$high__concurrency_2client_8cpp.html#ad107a5651c0a6610f292c4ec3997000a" title="clientThread" alt="" coords="261,107,354,133"/>
+<area shape="rect" id="node10" href="$classhandy_1_1EventBase.html#ae2ab677b735668355724861f4264d3b6" title="启动事件循环（阻塞，直到调用exit()退出） " alt="" coords="227,157,388,184"/>
+<area shape="rect" id="node11" href="$conn__test_8cpp.html#a4c1cd75c2f2669a776034aa76db1a0fa" title="g_connTestCount" alt="" coords="246,208,369,235"/>
+<area shape="rect" id="node4" href="$classhandy_1_1EventBase.html#a54e0450f295724a37aa7ff0404058fb7" title="唤醒事件循环（线程安全） " alt="" coords="441,5,623,32"/>
+<area shape="rect" id="node6" href="$high__concurrency_2client_8cpp.html#aa2df5a26fb62f9260261076dad76ba2e" title="logStats" alt="" coords="676,183,747,209"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42" title="清空缓冲区，释放所有动态内存，重置所有偏移量和容量 " alt="" coords="465,259,599,285"/>
+<area shape="rect" id="node8" href="$classhandy_1_1EventBase.html#a33a64705c2b42651eaf5d133831eaaf8" title="执行一次事件循环 " alt="" coords="436,107,628,133"/>
+<area shape="rect" id="node9" href="$high__concurrency_2client_8cpp.html#a0beecd7e864561c9474bc80e993556bf" title="printStats" alt="" coords="493,157,571,184"/>
 </map>

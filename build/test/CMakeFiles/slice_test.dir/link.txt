@@ -1,1 +1,1 @@
-/usr/bin/g++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/slice_test.dir/slice_test.cpp.o -o slice_test  ../handy/libhandy.a -lpthread 
+/usr/bin/g++  -Wall -Wextra -Wpedantic -g -g -O0 CMakeFiles/slice_test.dir/slice_test.cpp.o -o slice_test  ../handy/libhandy.a -lpthread 

@@ -42,8 +42,9 @@ var NAVTREEINDEX =
 "HSHAU_2client_8cpp.html",
 "classhandy_1_1HttpMsg.html#a79020b51a66e5118c6be7fed2762931f",
 "classhandy_1_1Status.html#ab5b0a6e7c16bbdeab8ab64414870104e",
-"event__base_8h.html#a20123b690d2753b31d89587a802cc44b",
-"reconnect_8cpp.html#afe6180369cfb5826aa9f8f2e5fa0c73f"
+"event__base_8h.html",
+"port__posix_8h.html#a4917ce27a5c2a54e8f6a161d8ccc33a4",
+"utils_8cpp.html#a36322f9f76f61ed5b1176a76377394b3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

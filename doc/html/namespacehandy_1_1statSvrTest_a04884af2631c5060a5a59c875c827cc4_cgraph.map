@@ -1,48 +1,51 @@
 <map id="handy::statSvrTest::testStatServerContentType" name="handy::statSvrTest::testStatServerContentType">
-<area shape="rect" id="node2" href="$classhandy_1_1StatServer.html#a0623e3e3979c864209d4758249930c6f" title="注册页面信息回调（快捷接口） " alt="" coords="241,28,376,69"/>
-<area shape="rect" id="node4" href="$namespacehandy_1_1statSvrTest.html#af29684a80b3e27f1061435d8cfd6aa19" title="创建测试临时文件 " alt="" coords="243,116,375,157"/>
-<area shape="rect" id="node5" href="$classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99" title="注册页面文件（将文件内容作为页面响应） " alt="" coords="241,181,376,223"/>
-<area shape="rect" id="node21" href="$namespacehandy_1_1statSvrTest.html#afe30454626cbb9d209d3066a4e7c558e" title="模拟HTTP请求并获取响应 " alt="" coords="243,523,375,564"/>
+<area shape="rect" id="node2" href="$classhandy_1_1StatServer.html#a0623e3e3979c864209d4758249930c6f" title="注册页面信息回调（快捷接口） " alt="" coords="241,60,376,101"/>
+<area shape="rect" id="node4" href="$namespacehandy_1_1statSvrTest.html#af29684a80b3e27f1061435d8cfd6aa19" title="创建测试临时文件 " alt="" coords="243,676,375,717"/>
+<area shape="rect" id="node5" href="$classhandy_1_1StatServer.html#a0abb3f277002ee8dbb00bbc78e2abb99" title="注册页面文件（将文件内容作为页面响应） " alt="" coords="241,205,376,247"/>
+<area shape="rect" id="node21" href="$namespacehandy_1_1statSvrTest.html#afe30454626cbb9d209d3066a4e7c558e" title="模拟HTTP请求并获取响应 " alt="" coords="243,611,375,652"/>
 <area shape="rect" id="node3" href="$classhandy_1_1StatServer.html#af8136e30e403fed96155e2e5acb8a07f" title="注册请求处理回调函数 " alt="" coords="470,5,605,47"/>
-<area shape="rect" id="node6" href="$classhandy_1_1File.html#a5b778189e38180b3a7888d01d85292ac" title="读取文件内容到字符串 " alt="" coords="458,71,617,98"/>
-<area shape="rect" id="node11" href="$classhandy_1_1Status.html#a2054a08a6b1608df26b630f6bc27f9b8" title="检查操作是否成功 " alt="" coords="475,189,600,215"/>
-<area shape="rect" id="node13" href="$classhandy_1_1Status.html#a52189e0c8f37deb78789de48a4cf583a" title="将状态信息转换为字符串 " alt="" coords="459,239,615,266"/>
-<area shape="rect" id="node16" href="$classhandy_1_1HttpResponse.html#a9910f0c1d366043c3bd7cff5901121ac" title="设置404 Not Found状态 " alt="" coords="463,123,612,164"/>
-<area shape="rect" id="node19" href="$classhandy_1_1HttpMsg.html#af73142db7e94bf0a75dd82a03930fc2f" title="设置m_body消息体内容 " alt="" coords="452,290,623,317"/>
-<area shape="rect" id="node20" href="$classhandy_1_1HttpMsg.html#a5f5db18769afc9c4aab2c250f4f13343" title="设置单个头部字段（添加/覆盖单个键值对） " alt="" coords="446,341,629,367"/>
-<area shape="rect" id="node7" href="$classhandy_1_1Status.html#a4f98c279b3cd768dcad0e83e38f37616" title="创建I/O操作错误的Status对象 " alt="" coords="719,71,869,98"/>
-<area shape="rect" id="node8" href="$classhandy_1_1Status.html#a20ee42a38aebe4d18b36d5bc2ef1bf6b" title="根据格式化字符串创建Status对象 " alt="" coords="939,21,1118,47"/>
-<area shape="rect" id="node10" href="$namespacehandy.html#a957dcc461a7df87ab6338b1da38e4fba" title="获取当前线程的系统错误信息字符串 " alt="" coords="981,71,1076,98"/>
-<area shape="rect" id="node9" href="$classhandy_1_1Status.html#a928f8d212a443ec48bf09b53d58eed93" title="构造函数，创建一个表示“成功”的Status对象 " alt="" coords="1183,21,1333,47"/>
-<area shape="rect" id="node12" href="$classhandy_1_1Status.html#abac5c65c266afdd5d0da7b1194c49e52" title="获取状态码 " alt="" coords="725,189,863,215"/>
-<area shape="rect" id="node14" href="$structhandy_1_1Utils.html#ad70f51fc39095ca32dce7f045adc026b" title="格式化字符串 " alt="" coords="725,319,863,346"/>
-<area shape="rect" id="node15" href="$classhandy_1_1Status.html#a357d7e675bc0f19620f70a2e15b41e2a" title="获取错误信息字符串 " alt="" coords="726,239,862,266"/>
-<area shape="rect" id="node17" href="$classhandy_1_1HttpResponse.html#a8e64d809b653c3af1045eff6969bacbf" title="设置响应码和状态 " alt="" coords="719,123,869,164"/>
-<area shape="rect" id="node18" href="$classhandy_1_1HttpResponse.html#aa0f5da9cddecdb321286d69f5a84ea96" title="状态描述 " alt="" coords="949,123,1109,164"/>
-<area shape="rect" id="node22" href="$classhandy_1_1EventBase.html#ae2ab677b735668355724861f4264d3b6" title="启动事件循环（阻塞，直到调用exit()退出） " alt="" coords="457,391,618,418"/>
-<area shape="rect" id="node23" href="$classhandy_1_1TcpConn.html#a9ef6387e0679449e2b1d0f9b550e18b5" title="创建一个客户端TCP连接 " alt="" coords="424,442,651,469"/>
-<area shape="rect" id="node24" href="$classhandy_1_1HttpRequest.html#a31ffcd924278389dbebef51a0a7ba3d7" title="编码请求到缓冲区 " alt="" coords="468,493,607,535"/>
-<area shape="rect" id="node30" href="$classhandy_1_1HttpMsg.html#a4b4df56bce592a87f451101af3a3b46f" title="获取消息体内容 " alt="" coords="709,501,879,527"/>
-<area shape="rect" id="node32" href="$classhandy_1_1HttpResponse.html#aff04a28503872c7f918d17fcc36835fe" title="从缓冲区解码响应 " alt="" coords="463,675,612,716"/>
-<area shape="rect" id="node45" href="$classhandy_1_1Slice.html#a853af4383711ab615372f9d238255c54" title="转换为std::string " alt="" coords="721,899,867,926"/>
-<area shape="rect" id="node46" href="$classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f" title="退出事件循环（线程安全） " alt="" coords="458,861,617,887"/>
-<area shape="rect" id="node25" href="$classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16" title="获取当前缓冲区中的数据长度 " alt="" coords="729,399,859,426"/>
-<area shape="rect" id="node26" href="$classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60" title="将指定长度的数据追加到缓冲区 " alt="" coords="719,450,869,477"/>
-<area shape="rect" id="node27" href="$classhandy_1_1Buffer.html#afbd50b666a4e1576b2e19bdb047e7a53" title="确保缓冲区有足够空间容纳指定长度的数据 " alt="" coords="938,326,1119,353"/>
-<area shape="rect" id="node28" href="$classhandy_1_1Buffer.html#a152b8546af1c0bca407455a6b174e05b" title="将数据移动到缓冲区头部，减少内存碎片 " alt="" coords="1169,351,1347,378"/>
-<area shape="rect" id="node29" href="$classhandy_1_1Buffer.html#a0ca99339d31c25d203875bf57f75fc67" title="扩展缓冲区容量 " alt="" coords="1180,301,1336,327"/>
-<area shape="rect" id="node31" href="$classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe" title="判断视图是否为空 " alt="" coords="959,377,1098,403"/>
-<area shape="rect" id="node33" href="$classhandy_1_1HttpMsg.html#a035dca54b0b58b34ba00876b3db36f59" title="已解析的字节数 " alt="" coords="699,653,889,679"/>
-<area shape="rect" id="node34" href="$classhandy_1_1Slice.html#a229c81ddfceb6b035b4e0325d8f5fac6" title="获取数据起始指针（非空） " alt="" coords="965,798,1092,825"/>
-<area shape="rect" id="node35" href="$classhandy_1_1Slice.html#aa9c41a7c077cb18809a408d429587b3c" title="获取视图长度 " alt="" coords="1195,773,1321,799"/>
-<area shape="rect" id="node41" href="$classhandy_1_1Slice.html#a9942173fc598137ca9d959ed8cb39fe7" title="移除前后空白字符（修改当前视图） " alt="" coords="948,747,1109,774"/>
-<area shape="rect" id="node44" href="$classhandy_1_1Slice.html#a0570587beb57c84ab21c74015c299443" title="吞噬一个单词（跳过前导空白，直到下一个空白) " alt="" coords="953,427,1104,454"/>
-<area shape="rect" id="node36" href="$classhandy_1_1Slice.html#a8d8fabf867b1d5c94f33dd1d1481da7f" title="吞噬一行（直到 或 ，兼容 Windows/Linux 换行） " alt="" coords="957,529,1101,555"/>
-<area shape="rect" id="node39" href="$classhandy_1_1Slice.html#acab150e3649842deedd9bdd86592ba51" title="吞噬直到终止符号出现(终止符号也会被吞噬) " alt="" coords="955,478,1102,505"/>
-<area shape="rect" id="node40" href="$classhandy_1_1Slice.html#a026c61a30fbf8675933fb9a6bfb56530" title="获取子视图（支持负偏移） " alt="" coords="967,646,1090,673"/>
-<area shape="rect" id="node42" href="$classhandy_1_1HttpMsg.html#a787d8f3958332225f99d196a901589a5" title="获取指定头部字段对应的值 " alt="" coords="937,580,1120,621"/>
-<area shape="rect" id="node37" href="$classhandy_1_1Slice.html#aade2a2a717f5fdb7ba9fcb36679fa837" title="获取结束迭代器（兼容STL算法） " alt="" coords="1197,529,1319,555"/>
-<area shape="rect" id="node38" href="$classhandy_1_1Slice.html#aa8b651518d868af04c7f053f1783b9c7" title="默认构造：空视图 " alt="" coords="1193,478,1323,505"/>
-<area shape="rect" id="node43" href="$classhandy_1_1HttpMsg.html#a0f16575d0b9bf5afc37c1c60483ae1a9" title="内部函数，从映射表中获取指定键的值（不区分大小写） " alt="" coords="1168,580,1348,621"/>
-<area shape="rect" id="node47" href="$classhandy_1_1EventBase.html#a54e0450f295724a37aa7ff0404058fb7" title="唤醒事件循环（线程安全） " alt="" coords="703,950,885,977"/>
+<area shape="rect" id="node6" href="$classhandy_1_1File.html#a5b778189e38180b3a7888d01d85292ac" title="读取文件内容到字符串 " alt="" coords="458,238,617,265"/>
+<area shape="rect" id="node11" href="$classhandy_1_1Status.html#a2054a08a6b1608df26b630f6bc27f9b8" title="检查操作是否成功 " alt="" coords="475,289,600,315"/>
+<area shape="rect" id="node13" href="$classhandy_1_1Status.html#a52189e0c8f37deb78789de48a4cf583a" title="将状态信息转换为字符串 " alt="" coords="459,339,615,366"/>
+<area shape="rect" id="node16" href="$classhandy_1_1HttpResponse.html#a9910f0c1d366043c3bd7cff5901121ac" title="设置404 Not Found状态 " alt="" coords="463,71,612,112"/>
+<area shape="rect" id="node19" href="$classhandy_1_1HttpMsg.html#af73142db7e94bf0a75dd82a03930fc2f" title="设置m_body消息体内容 " alt="" coords="452,137,623,163"/>
+<area shape="rect" id="node20" href="$classhandy_1_1HttpMsg.html#a5f5db18769afc9c4aab2c250f4f13343" title="设置单个头部字段（添加/覆盖单个键值对） " alt="" coords="446,187,629,214"/>
+<area shape="rect" id="node7" href="$classhandy_1_1Status.html#a4f98c279b3cd768dcad0e83e38f37616" title="创建I/O操作错误的Status对象 " alt="" coords="720,238,869,265"/>
+<area shape="rect" id="node8" href="$classhandy_1_1Status.html#a20ee42a38aebe4d18b36d5bc2ef1bf6b" title="根据格式化字符串创建Status对象 " alt="" coords="941,213,1119,239"/>
+<area shape="rect" id="node10" href="$namespacehandy.html#a957dcc461a7df87ab6338b1da38e4fba" title="获取当前线程的系统错误信息字符串 " alt="" coords="983,263,1077,290"/>
+<area shape="rect" id="node9" href="$classhandy_1_1Status.html#a928f8d212a443ec48bf09b53d58eed93" title="构造函数，创建一个表示“成功”的Status对象 " alt="" coords="1183,213,1333,239"/>
+<area shape="rect" id="node12" href="$classhandy_1_1Status.html#abac5c65c266afdd5d0da7b1194c49e52" title="获取状态码 " alt="" coords="725,289,864,315"/>
+<area shape="rect" id="node14" href="$structhandy_1_1Utils.html#ad70f51fc39095ca32dce7f045adc026b" title="格式化字符串 " alt="" coords="726,390,863,417"/>
+<area shape="rect" id="node15" href="$classhandy_1_1Status.html#a357d7e675bc0f19620f70a2e15b41e2a" title="获取错误信息字符串 " alt="" coords="727,339,863,366"/>
+<area shape="rect" id="node17" href="$classhandy_1_1HttpResponse.html#a8e64d809b653c3af1045eff6969bacbf" title="设置响应码和状态 " alt="" coords="720,71,869,112"/>
+<area shape="rect" id="node18" href="$classhandy_1_1HttpResponse.html#aa0f5da9cddecdb321286d69f5a84ea96" title="状态描述 " alt="" coords="950,71,1110,112"/>
+<area shape="rect" id="node22" href="$classhandy_1_1EventBase.html#ae2ab677b735668355724861f4264d3b6" title="启动事件循环（阻塞，直到调用exit()退出） " alt="" coords="457,694,618,721"/>
+<area shape="rect" id="node23" href="$classhandy_1_1TcpConn.html#a9ef6387e0679449e2b1d0f9b550e18b5" title="创建一个客户端TCP连接 " alt="" coords="424,745,651,771"/>
+<area shape="rect" id="node24" href="$classhandy_1_1HttpRequest.html#a31ffcd924278389dbebef51a0a7ba3d7" title="编码请求到缓冲区 " alt="" coords="468,527,607,568"/>
+<area shape="rect" id="node30" href="$classhandy_1_1HttpMsg.html#a4b4df56bce592a87f451101af3a3b46f" title="获取消息体内容 " alt="" coords="709,542,880,569"/>
+<area shape="rect" id="node32" href="$classhandy_1_1HttpResponse.html#aff04a28503872c7f918d17fcc36835fe" title="从缓冲区解码响应 " alt="" coords="463,965,612,1007"/>
+<area shape="rect" id="node43" href="$classhandy_1_1Slice.html#a853af4383711ab615372f9d238255c54" title="转换为std::string " alt="" coords="721,846,868,873"/>
+<area shape="rect" id="node44" href="$classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f" title="退出事件循环（线程安全） " alt="" coords="458,458,617,485"/>
+<area shape="rect" id="node46" href="$high__concurrency_2client_8cpp.html#ad107a5651c0a6610f292c4ec3997000a" title="clientThread" alt="" coords="491,643,584,670"/>
+<area shape="rect" id="node25" href="$classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16" title="获取当前缓冲区中的数据长度 " alt="" coords="729,593,860,619"/>
+<area shape="rect" id="node26" href="$classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60" title="将指定长度的数据追加到缓冲区 " alt="" coords="720,491,869,518"/>
+<area shape="rect" id="node27" href="$classhandy_1_1Buffer.html#afbd50b666a4e1576b2e19bdb047e7a53" title="确保缓冲区有足够空间容纳指定长度的数据 " alt="" coords="939,491,1121,518"/>
+<area shape="rect" id="node28" href="$classhandy_1_1Buffer.html#a152b8546af1c0bca407455a6b174e05b" title="将数据移动到缓冲区头部，减少内存碎片 " alt="" coords="1169,517,1347,543"/>
+<area shape="rect" id="node29" href="$classhandy_1_1Buffer.html#a0ca99339d31c25d203875bf57f75fc67" title="扩展缓冲区容量 " alt="" coords="1180,466,1336,493"/>
+<area shape="rect" id="node31" href="$classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe" title="判断视图是否为空 " alt="" coords="961,947,1099,974"/>
+<area shape="rect" id="node33" href="$classhandy_1_1HttpMsg.html#a035dca54b0b58b34ba00876b3db36f59" title="已解析的字节数 " alt="" coords="699,1115,890,1142"/>
+<area shape="rect" id="node34" href="$classhandy_1_1Slice.html#a229c81ddfceb6b035b4e0325d8f5fac6" title="获取数据起始指针（非空） " alt="" coords="967,998,1093,1025"/>
+<area shape="rect" id="node35" href="$classhandy_1_1Slice.html#aa9c41a7c077cb18809a408d429587b3c" title="获取视图长度 " alt="" coords="1195,1006,1321,1033"/>
+<area shape="rect" id="node40" href="$classhandy_1_1Slice.html#a9942173fc598137ca9d959ed8cb39fe7" title="移除前后空白字符（修改当前视图） " alt="" coords="949,1318,1111,1345"/>
+<area shape="rect" id="node42" href="$classhandy_1_1Slice.html#a0570587beb57c84ab21c74015c299443" title="吞噬一个单词（跳过前导空白，直到下一个空白) " alt="" coords="955,1369,1105,1395"/>
+<area shape="rect" id="node36" href="$classhandy_1_1Slice.html#a8d8fabf867b1d5c94f33dd1d1481da7f" title="吞噬一行（直到 或 ，兼容 Windows/Linux 换行） " alt="" coords="958,1217,1102,1243"/>
+<area shape="rect" id="node38" href="$classhandy_1_1Slice.html#acab150e3649842deedd9bdd86592ba51" title="吞噬直到终止符号出现(终止符号也会被吞噬) " alt="" coords="957,1267,1103,1294"/>
+<area shape="rect" id="node39" href="$classhandy_1_1Slice.html#a026c61a30fbf8675933fb9a6bfb56530" title="获取子视图（支持负偏移） " alt="" coords="969,1166,1091,1193"/>
+<area shape="rect" id="node41" href="$classhandy_1_1HttpMsg.html#a787d8f3958332225f99d196a901589a5" title="获取指定头部字段对应的值 " alt="" coords="939,1049,1121,1091"/>
+<area shape="rect" id="node37" href="$classhandy_1_1Slice.html#aa8b651518d868af04c7f053f1783b9c7" title="默认构造：空视图 " alt="" coords="1193,1242,1323,1269"/>
+<area shape="rect" id="node45" href="$classhandy_1_1EventBase.html#a54e0450f295724a37aa7ff0404058fb7" title="唤醒事件循环（线程安全） " alt="" coords="703,441,886,467"/>
+<area shape="rect" id="node47" href="$high__concurrency_2client_8cpp.html#aa2df5a26fb62f9260261076dad76ba2e" title="logStats" alt="" coords="995,719,1065,746"/>
+<area shape="rect" id="node48" href="$classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42" title="清空缓冲区，释放所有动态内存，重置所有偏移量和容量 " alt="" coords="727,694,862,721"/>
+<area shape="rect" id="node49" href="$classhandy_1_1EventBase.html#a33a64705c2b42651eaf5d133831eaaf8" title="执行一次事件循环 " alt="" coords="699,745,891,771"/>
+<area shape="rect" id="node50" href="$high__concurrency_2client_8cpp.html#a0beecd7e864561c9474bc80e993556bf" title="printStats" alt="" coords="755,643,834,670"/>
 </map>

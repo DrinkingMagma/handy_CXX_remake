@@ -1,17 +1,22 @@
 <map id="run_all_conn_tests" name="run_all_conn_tests">
-<area shape="rect" id="node2" href="$conn__test_8cpp.html#adf110e2cda3387e6555b2d50601d6505" title="初始化Logger（输出到conn_test.log） " alt="" coords="204,5,337,32"/>
-<area shape="rect" id="node3" href="$conn__test_8cpp.html#a371e35f12517fc6f6be6f7d4972bffb9" title="测试TcpConn基本连接功能 " alt="" coords="200,107,341,133"/>
-<area shape="rect" id="node9" href="$conn__test_8cpp.html#a0d646a1f1da2d69ad6e042527901294c" title="测试TcpConn的消息编解码功能 " alt="" coords="198,309,343,336"/>
-<area shape="rect" id="node12" href="$conn__test_8cpp.html#abedef015b96a88c6effd1ffa8b6a7404" title="测试TcpConn的重连功能 " alt="" coords="187,157,354,184"/>
-<area shape="rect" id="node13" href="$conn__test_8cpp.html#a45845c959d29aeb1c33704eaeb3c4006" title="测试TcpConn的多线程并发读写 " alt="" coords="184,56,357,83"/>
-<area shape="rect" id="node15" href="$conn__test_8cpp.html#af6979ffebb77fb70fc8b4b2166cf8cee" title="测试TcpConn的关闭和清理功能 " alt="" coords="200,208,341,235"/>
-<area shape="rect" id="node16" href="$conn__test_8cpp.html#a56ce041a546f210c6b43fdef9f12d04a" title="测试TcpConn的空闲回调功能 " alt="" coords="205,259,336,285"/>
-<area shape="rect" id="node4" href="$classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16" title="获取当前缓冲区中的数据长度 " alt="" coords="421,56,551,83"/>
-<area shape="rect" id="node5" href="$classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af" title="获取缓冲区中的数据副本 " alt="" coords="420,107,552,133"/>
-<area shape="rect" id="node6" href="$classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f" title="退出事件循环（线程安全） " alt="" coords="407,157,565,184"/>
-<area shape="rect" id="node8" href="$classhandy_1_1EventBase.html#ae2ab677b735668355724861f4264d3b6" title="启动事件循环（阻塞，直到调用exit()退出） " alt="" coords="405,208,567,235"/>
-<area shape="rect" id="node7" href="$classhandy_1_1EventBase.html#a54e0450f295724a37aa7ff0404058fb7" title="唤醒事件循环（线程安全） " alt="" coords="615,157,797,184"/>
-<area shape="rect" id="node10" href="$classhandy_1_1Slice.html#a853af4383711ab615372f9d238255c54" title="转换为std::string " alt="" coords="413,309,559,336"/>
-<area shape="rect" id="node11" href="$classhandy_1_1Slice.html#aa9c41a7c077cb18809a408d429587b3c" title="获取视图长度 " alt="" coords="643,309,769,336"/>
-<area shape="rect" id="node14" href="$conn__test_8cpp.html#a4c1cd75c2f2669a776034aa76db1a0fa" title="g_connTestCount" alt="" coords="425,5,547,32"/>
+<area shape="rect" id="node2" href="$conn__test_8cpp.html#adf110e2cda3387e6555b2d50601d6505" title="初始化Logger（输出到conn_test.log） " alt="" coords="204,37,337,63"/>
+<area shape="rect" id="node3" href="$conn__test_8cpp.html#a371e35f12517fc6f6be6f7d4972bffb9" title="测试TcpConn基本连接功能 " alt="" coords="200,87,341,114"/>
+<area shape="rect" id="node9" href="$conn__test_8cpp.html#a0d646a1f1da2d69ad6e042527901294c" title="测试TcpConn的消息编解码功能 " alt="" coords="198,341,343,367"/>
+<area shape="rect" id="node12" href="$conn__test_8cpp.html#abedef015b96a88c6effd1ffa8b6a7404" title="测试TcpConn的重连功能 " alt="" coords="187,189,354,215"/>
+<area shape="rect" id="node18" href="$conn__test_8cpp.html#a45845c959d29aeb1c33704eaeb3c4006" title="测试TcpConn的多线程并发读写 " alt="" coords="184,138,357,165"/>
+<area shape="rect" id="node20" href="$conn__test_8cpp.html#af6979ffebb77fb70fc8b4b2166cf8cee" title="测试TcpConn的关闭和清理功能 " alt="" coords="200,290,341,317"/>
+<area shape="rect" id="node21" href="$conn__test_8cpp.html#a56ce041a546f210c6b43fdef9f12d04a" title="测试TcpConn的空闲回调功能 " alt="" coords="205,239,336,266"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16" title="获取当前缓冲区中的数据长度 " alt="" coords="645,37,776,63"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Buffer.html#a44a208a057b4f4b753d64d3ef06ba0af" title="获取缓冲区中的数据副本 " alt="" coords="420,37,552,63"/>
+<area shape="rect" id="node6" href="$classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f" title="退出事件循环（线程安全） " alt="" coords="407,239,565,266"/>
+<area shape="rect" id="node8" href="$classhandy_1_1EventBase.html#ae2ab677b735668355724861f4264d3b6" title="启动事件循环（阻塞，直到调用exit()退出） " alt="" coords="405,290,567,317"/>
+<area shape="rect" id="node7" href="$classhandy_1_1EventBase.html#a54e0450f295724a37aa7ff0404058fb7" title="唤醒事件循环（线程安全） " alt="" coords="619,290,802,317"/>
+<area shape="rect" id="node10" href="$classhandy_1_1Slice.html#a853af4383711ab615372f9d238255c54" title="转换为std::string " alt="" coords="413,341,559,367"/>
+<area shape="rect" id="node11" href="$classhandy_1_1Slice.html#aa9c41a7c077cb18809a408d429587b3c" title="获取视图长度 " alt="" coords="647,341,774,367"/>
+<area shape="rect" id="node13" href="$high__concurrency_2client_8cpp.html#ad107a5651c0a6610f292c4ec3997000a" title="clientThread" alt="" coords="439,189,533,215"/>
+<area shape="rect" id="node14" href="$high__concurrency_2client_8cpp.html#aa2df5a26fb62f9260261076dad76ba2e" title="logStats" alt="" coords="855,163,925,190"/>
+<area shape="rect" id="node15" href="$classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42" title="清空缓冲区，释放所有动态内存，重置所有偏移量和容量 " alt="" coords="643,239,778,266"/>
+<area shape="rect" id="node16" href="$classhandy_1_1EventBase.html#a33a64705c2b42651eaf5d133831eaaf8" title="执行一次事件循环 " alt="" coords="615,87,807,114"/>
+<area shape="rect" id="node17" href="$high__concurrency_2client_8cpp.html#a0beecd7e864561c9474bc80e993556bf" title="printStats" alt="" coords="671,138,750,165"/>
+<area shape="rect" id="node19" href="$conn__test_8cpp.html#a4c1cd75c2f2669a776034aa76db1a0fa" title="g_connTestCount" alt="" coords="425,138,547,165"/>
 </map>

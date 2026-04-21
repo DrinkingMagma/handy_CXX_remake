@@ -1,1 +1,1 @@
-/usr/bin/g++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/http_client.dir/client.cpp.o -o http_client  ../../handy/libhandy.a -lpthread 
+/usr/bin/g++  -Wall -Wextra -Wpedantic -g -g -O0 CMakeFiles/http_client.dir/client.cpp.o -o http_client  ../../handy/libhandy.a -lpthread 

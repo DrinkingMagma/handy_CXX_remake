@@ -1,10 +1,11 @@
 var searchData=
 [
   ['chat_2ecpp',['chat.cpp',['../chat_8cpp.html',1,'']]],
-  ['client_2ecpp',['client.cpp',['../HSHA_2client_8cpp.html',1,'']]],
-  ['client_2ecpp',['client.cpp',['../HTTP_2client_8cpp.html',1,'']]],
-  ['client_2ecpp',['client.cpp',['../tcp_2client_8cpp.html',1,'']]],
+  ['client_2ecpp',['client.cpp',['../high__concurrency_2client_8cpp.html',1,'']]],
   ['client_2ecpp',['client.cpp',['../HSHAU_2client_8cpp.html',1,'']]],
+  ['client_2ecpp',['client.cpp',['../HTTP_2client_8cpp.html',1,'']]],
+  ['client_2ecpp',['client.cpp',['../HSHA_2client_8cpp.html',1,'']]],
+  ['client_2ecpp',['client.cpp',['../tcp_2client_8cpp.html',1,'']]],
   ['client_2ecpp',['client.cpp',['../udp_2client_8cpp.html',1,'']]],
   ['codec_2ecpp',['codec.cpp',['../codec_8cpp.html',1,'']]],
   ['codec_2eh',['codec.h',['../codec_8h.html',1,'']]],

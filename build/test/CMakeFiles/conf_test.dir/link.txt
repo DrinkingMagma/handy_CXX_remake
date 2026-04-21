@@ -1,1 +1,1 @@
-/usr/bin/g++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/conf_test.dir/conf_test.cpp.o -o conf_test  ../handy/libhandy.a -lpthread 
+/usr/bin/g++  -Wall -Wextra -Wpedantic -g -g -O0 CMakeFiles/conf_test.dir/conf_test.cpp.o -o conf_test  ../handy/libhandy.a -lpthread 

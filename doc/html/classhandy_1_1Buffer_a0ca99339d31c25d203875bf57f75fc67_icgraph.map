@@ -1,51 +1,46 @@
 <map id="handy::Buffer::_expand" name="handy::Buffer::_expand">
-<area shape="rect" id="node2" href="$classhandy_1_1Buffer.html#a7060b929fb9d5b805ae670c77b0f8cdf" title="当缓冲区剩余空间小于m_exp时，扩展缓冲区 " alt="" coords="213,107,387,133"/>
-<area shape="rect" id="node13" href="$classhandy_1_1Buffer.html#afbd50b666a4e1576b2e19bdb047e7a53" title="确保缓冲区有足够空间容纳指定长度的数据 " alt="" coords="209,259,391,285"/>
-<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="453,31,655,57"/>
-<area shape="rect" id="node4" href="$classhandy_1_1UdpServer.html#a49e1cf8559b57b910172e38e59199b67" title="将服务器绑定到指定地址和端口 " alt="" coords="475,81,633,108"/>
-<area shape="rect" id="node5" href="$classhandy_1_1UdpConn.html#ad42f2c83b20c11a3468a8ac42b2b9fbd" title="创建新的UDP连接 " alt="" coords="439,132,669,159"/>
-<area shape="rect" id="node6" href="$HSHAU_2client_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="769,56,819,83"/>
-<area shape="rect" id="node7" href="$udp__test_8cpp.html#a1e6c44e3a2c1938e87a0fd8f863c54e2" title="test_udp_server_basic" alt="" coords="717,157,871,184"/>
-<area shape="rect" id="node10" href="$udp__test_8cpp.html#ae12e3fc59f65808ab1e017b9aee29739" title="test_udp_conn" alt="" coords="741,208,847,235"/>
-<area shape="rect" id="node11" href="$udp__test_8cpp.html#aa69b2ac648de0a269e8ed6a11a3dc0b3" title="test_hshau_server" alt="" coords="729,5,859,32"/>
-<area shape="rect" id="node12" href="$udp__test_8cpp.html#ac52a62b445e7b2af0f7110f3999e76d3" title="test_udp_thread_safe" alt="" coords="721,107,867,133"/>
-<area shape="rect" id="node8" href="$udp__test_8cpp.html#adf5fa5d1a8867dba73315c105f40b449" title="run_all_tests" alt="" coords="959,111,1055,137"/>
-<area shape="rect" id="node9" href="$udp__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1215,111,1265,137"/>
-<area shape="rect" id="node14" href="$classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60" title="将指定长度的数据追加到缓冲区 " alt="" coords="719,615,869,641"/>
-<area shape="rect" id="node47" href="$classhandy_1_1Buffer.html#a9270651a5f88b399ec11f281ef86fdde" title="追加字符串中的数据到缓冲区(未加锁版本，用于在内部函数中调用，防止重复加锁导致的死锁) " alt="" coords="457,259,651,285"/>
-<area shape="rect" id="node15" href="$classhandy_1_1LineCodec.html#a5635543be4c0c80dbe5d6133a528a648" title="对消息进行编码 " alt="" coords="919,900,1096,927"/>
-<area shape="rect" id="node16" href="$namespacehandy_1_1codecTest.html#a28cd8d37666f7d67ea69ef3dc4e8a09a" title="测试LineCodec基本编码解码功能 " alt="" coords="1163,881,1317,922"/>
-<area shape="rect" id="node20" href="$classhandy_1_1LengthCodec.html#a3f9dc26fcad4400d3b3e92c5ce85f906" title="对消息进行编码 " alt="" coords="936,783,1079,825"/>
-<area shape="rect" id="node21" href="$namespacehandy_1_1codecTest.html#a6eb614919eb3c8a0806765d0394d300c" title="测试LengthCodec基本编码解码功能 " alt="" coords="1163,750,1317,791"/>
-<area shape="rect" id="node23" href="$classhandy_1_1TcpConn.html#aa8e73c9e41877d76bde10306975d3a2e" title="发送指定的数据 " alt="" coords="931,951,1084,977"/>
-<area shape="rect" id="node24" href="$classhandy_1_1HttpRequest.html#a31ffcd924278389dbebef51a0a7ba3d7" title="编码请求到缓冲区 " alt="" coords="938,478,1077,519"/>
-<area shape="rect" id="node37" href="$classhandy_1_1HttpResponse.html#a5b1c5770e086e07eea5e7ca0d66ad711" title="编码响应到缓冲区 " alt="" coords="933,549,1082,590"/>
-<area shape="rect" id="node40" href="$classhandy_1_1Buffer.html#a26e2bf103ceb23b8a4344d0bea0b018e" title="将char*类型的数据追加到缓冲区中 " alt="" coords="933,615,1082,641"/>
-<area shape="rect" id="node41" href="$classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8" title="构造函数 " alt="" coords="940,666,1075,707"/>
-<area shape="rect" id="node42" href="$namespacehandy_1_1netTest.html#ac61eff50eb6968ff473ad272aaeabc15" title="测试Buffer类基本数据操作（追加、消耗、清空） " alt="" coords="938,247,1077,289"/>
-<area shape="rect" id="node45" href="$namespacehandy_1_1netTest.html#a33466d1829f046b00a1b3b152b53f36f" title="测试Buffer类内存管理（碎片整理、自动扩展） " alt="" coords="923,401,1091,442"/>
-<area shape="rect" id="node46" href="$namespacehandy_1_1netTest.html#a8e4e5f11e0a6836bf86642f9cf761c74" title="测试Buffer类多线程安全（并发追加、消耗、吸收） " alt="" coords="934,313,1081,354"/>
-<area shape="rect" id="node19" href="$namespacehandy_1_1codecTest.html#a90b79757a09c901a54dab3b5ab500651" title="测试LineCodec多线程安全 " alt="" coords="1159,946,1321,987"/>
-<area shape="rect" id="node17" href="$namespacehandy_1_1codecTest.html#af92da63a32dc8f9c41bcccf6501d1b83" title="handy::codecTest::run\l_all_tests" alt="" coords="1410,847,1561,889"/>
-<area shape="rect" id="node18" href="$codec__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1675,855,1726,881"/>
-<area shape="rect" id="node22" href="$namespacehandy_1_1codecTest.html#ad76dddb779db3104e640795e409dde9f" title="测试LengthCodec多线程安全 " alt="" coords="1152,815,1328,857"/>
-<area shape="rect" id="node25" href="$classhandy_1_1HttpConnPtr.html#a918459361f721be5a159092c23d3503e" title="发送指定的请求对象 " alt="" coords="1171,423,1309,465"/>
-<area shape="rect" id="node26" href="$namespacehandy_1_1httpTest.html#ab5d48a3430a1fc73e3742c910b8bc038" title="测试 HttpRequest 编码功能 " alt="" coords="1157,489,1323,530"/>
-<area shape="rect" id="node28" href="$namespacehandy_1_1httpTest.html#aab6ef4bdb7427ac67bfe9b130ce98dcb" title="多线程测试HTTP消息处理 " alt="" coords="1157,554,1323,595"/>
-<area shape="rect" id="node29" href="$namespacehandy_1_1statSvrTest.html#afe30454626cbb9d209d3066a4e7c558e" title="模拟HTTP请求并获取响应 " alt="" coords="1174,306,1306,347"/>
-<area shape="rect" id="node36" href="$namespacehandy_1_1statSvrTest.html#afcccfddf3d4afd37d6ae926711894ad5" title="测试多线程安全 " alt="" coords="1395,499,1576,541"/>
-<area shape="rect" id="node27" href="$namespacehandy_1_1httpTest.html#a17f111811262f57e517dbaac08eb9206" title="handy::httpTest::runAllTests" alt="" coords="1393,565,1578,592"/>
-<area shape="rect" id="node30" href="$namespacehandy_1_1statSvrTest.html#a4bc63cfe9fd7b20a93899a61052da590" title="测试状态回调注册与处理 " alt="" coords="1384,303,1587,345"/>
-<area shape="rect" id="node32" href="$namespacehandy_1_1statSvrTest.html#a8923512cf2e34c3894bff312608462d0" title="测试页面回调注册与处理 " alt="" coords="1384,369,1587,410"/>
-<area shape="rect" id="node33" href="$namespacehandy_1_1statSvrTest.html#a6978e7b5a49820e29212fb51ee1ba8cc" title="测试命令回调注册与处理 " alt="" coords="1385,434,1585,475"/>
-<area shape="rect" id="node34" href="$namespacehandy_1_1statSvrTest.html#ae5deb8ab2c5c2449d14be92e81d6b441" title="测试404错误处理 " alt="" coords="1392,173,1579,214"/>
-<area shape="rect" id="node35" href="$namespacehandy_1_1statSvrTest.html#a04884af2631c5060a5a59c875c827cc4" title="测试内容类型设置 " alt="" coords="1391,238,1579,279"/>
-<area shape="rect" id="node31" href="$namespacehandy_1_1statSvrTest.html#a51d6168c2b8db2fabed82b2a4ebb6bf4" title="handy::statSvrTest\l::runAllTests" alt="" coords="1635,337,1767,378"/>
-<area shape="rect" id="node38" href="$classhandy_1_1HttpConnPtr.html#ab6e45a0b670d2bd094c00d320a374ebf" title="发送指定响应的对象 " alt="" coords="1171,685,1309,726"/>
-<area shape="rect" id="node39" href="$namespacehandy_1_1httpTest.html#acebf1dab044818e1f50569325777683e" title="测试 HttpResponse 编码功能 " alt="" coords="1157,619,1323,661"/>
-<area shape="rect" id="node43" href="$namespacehandy_1_1netTest.html#a67440c6a5e1613729fd7d78f23f151cc" title="handy::netTest::run\l_all_tests" alt="" coords="1173,241,1307,282"/>
-<area shape="rect" id="node44" href="$net__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1460,121,1511,148"/>
-<area shape="rect" id="node48" href="$classhandy_1_1Buffer.html#a48b58522a99b408d8dca8c831d83650a" title="合并另一个缓冲区的内容（将另一个缓冲区的所有数据追加到当前缓冲区，并清空另一个缓冲区） " alt="" coords="721,259,867,285"/>
-<area shape="rect" id="node49" href="$classhandy_1_1TcpConn.html#aa6686d5e5c585b9e566763552c07ee35" title="发送缓冲区中的数据 " alt="" coords="931,189,1084,216"/>
-<area shape="rect" id="node50" href="$classhandy_1_1TcpConn.html#a876eeca51918ea71097edc1c2aab3fea" title="发送输出缓冲区中的数据 " alt="" coords="1144,175,1336,217"/>
+<area shape="rect" id="node2" href="$classhandy_1_1Buffer.html#a7060b929fb9d5b805ae670c77b0f8cdf" title="当缓冲区剩余空间小于m_exp时，扩展缓冲区 " alt="" coords="213,781,387,807"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Buffer.html#afbd50b666a4e1576b2e19bdb047e7a53" title="确保缓冲区有足够空间容纳指定长度的数据 " alt="" coords="209,831,391,858"/>
+<area shape="rect" id="node3" href="$classhandy_1_1TcpConn.html#abf60924c0a811cec7b75835cf8d3b7c5" title="编解码器 " alt="" coords="439,730,640,757"/>
+<area shape="rect" id="node4" href="$classhandy_1_1UdpServer.html#a49e1cf8559b57b910172e38e59199b67" title="将服务器绑定到指定地址和端口 " alt="" coords="460,781,619,807"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Buffer.html#a3fb7183f49ac1a86d1d35dd44943ef60" title="将指定长度的数据追加到缓冲区 " alt="" coords="688,751,837,778"/>
+<area shape="rect" id="node41" href="$classhandy_1_1Buffer.html#a9270651a5f88b399ec11f281ef86fdde" title="追加字符串中的数据到缓冲区(未加锁版本，用于在内部函数中调用，防止重复加锁导致的死锁) " alt="" coords="443,930,636,957"/>
+<area shape="rect" id="node7" href="$classhandy_1_1LineCodec.html#a5635543be4c0c80dbe5d6133a528a648" title="对消息进行编码 " alt="" coords="885,869,1063,895"/>
+<area shape="rect" id="node8" href="$namespacehandy_1_1codecTest.html#a28cd8d37666f7d67ea69ef3dc4e8a09a" title="测试LineCodec基本编码解码功能 " alt="" coords="1129,713,1284,755"/>
+<area shape="rect" id="node12" href="$classhandy_1_1LengthCodec.html#a3f9dc26fcad4400d3b3e92c5ce85f906" title="对消息进行编码 " alt="" coords="903,533,1045,575"/>
+<area shape="rect" id="node13" href="$namespacehandy_1_1codecTest.html#a6eb614919eb3c8a0806765d0394d300c" title="测试LengthCodec基本编码解码功能 " alt="" coords="1129,648,1284,689"/>
+<area shape="rect" id="node15" href="$classhandy_1_1TcpConn.html#aa8e73c9e41877d76bde10306975d3a2e" title="发送指定的数据 " alt="" coords="897,599,1051,626"/>
+<area shape="rect" id="node16" href="$classhandy_1_1HttpRequest.html#a31ffcd924278389dbebef51a0a7ba3d7" title="编码请求到缓冲区 " alt="" coords="905,292,1043,333"/>
+<area shape="rect" id="node31" href="$classhandy_1_1HttpResponse.html#a5b1c5770e086e07eea5e7ca0d66ad711" title="编码响应到缓冲区 " alt="" coords="899,457,1049,499"/>
+<area shape="rect" id="node34" href="$classhandy_1_1Buffer.html#a26e2bf103ceb23b8a4344d0bea0b018e" title="将char*类型的数据追加到缓冲区中 " alt="" coords="899,751,1049,778"/>
+<area shape="rect" id="node35" href="$classhandy_1_1StatServer.html#a753158eb7a85145c1b5c73c1e33e8fd8" title="构造函数 " alt="" coords="907,803,1041,844"/>
+<area shape="rect" id="node36" href="$namespacehandy_1_1netTest.html#ac61eff50eb6968ff473ad272aaeabc15" title="测试Buffer类基本数据操作（追加、消耗、清空） " alt="" coords="905,985,1043,1027"/>
+<area shape="rect" id="node39" href="$namespacehandy_1_1netTest.html#a33466d1829f046b00a1b3b152b53f36f" title="测试Buffer类内存管理（碎片整理、自动扩展） " alt="" coords="890,920,1058,961"/>
+<area shape="rect" id="node40" href="$namespacehandy_1_1netTest.html#a8e4e5f11e0a6836bf86642f9cf761c74" title="测试Buffer类多线程安全（并发追加、消耗、吸收） " alt="" coords="901,1051,1047,1092"/>
+<area shape="rect" id="node11" href="$namespacehandy_1_1codecTest.html#a90b79757a09c901a54dab3b5ab500651" title="测试LineCodec多线程安全 " alt="" coords="1126,823,1287,864"/>
+<area shape="rect" id="node9" href="$namespacehandy_1_1codecTest.html#af92da63a32dc8f9c41bcccf6501d1b83" title="handy::codecTest::run\l_all_tests" alt="" coords="1377,680,1527,721"/>
+<area shape="rect" id="node10" href="$codec__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1642,687,1693,714"/>
+<area shape="rect" id="node14" href="$namespacehandy_1_1codecTest.html#ad76dddb779db3104e640795e409dde9f" title="测试LengthCodec多线程安全 " alt="" coords="1119,583,1295,624"/>
+<area shape="rect" id="node17" href="$classhandy_1_1HttpConnPtr.html#a918459361f721be5a159092c23d3503e" title="发送指定的请求对象 " alt="" coords="1137,136,1276,177"/>
+<area shape="rect" id="node18" href="$namespacehandy_1_1httpTest.html#ab5d48a3430a1fc73e3742c910b8bc038" title="测试 HttpRequest 编码功能 " alt="" coords="1123,321,1290,363"/>
+<area shape="rect" id="node21" href="$namespacehandy_1_1httpTest.html#aab6ef4bdb7427ac67bfe9b130ce98dcb" title="多线程测试HTTP消息处理 " alt="" coords="1123,387,1290,428"/>
+<area shape="rect" id="node22" href="$namespacehandy_1_1statSvrTest.html#afe30454626cbb9d209d3066a4e7c558e" title="模拟HTTP请求并获取响应 " alt="" coords="1141,201,1273,243"/>
+<area shape="rect" id="node30" href="$namespacehandy_1_1statSvrTest.html#afcccfddf3d4afd37d6ae926711894ad5" title="测试多线程安全 " alt="" coords="1361,332,1543,373"/>
+<area shape="rect" id="node19" href="$namespacehandy_1_1httpTest.html#a17f111811262f57e517dbaac08eb9206" title="handy::httpTest::runAllTests" alt="" coords="1359,398,1545,425"/>
+<area shape="rect" id="node20" href="$http__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1642,398,1693,425"/>
+<area shape="rect" id="node23" href="$namespacehandy_1_1statSvrTest.html#a4bc63cfe9fd7b20a93899a61052da590" title="测试状态回调注册与处理 " alt="" coords="1351,201,1553,243"/>
+<area shape="rect" id="node26" href="$namespacehandy_1_1statSvrTest.html#a8923512cf2e34c3894bff312608462d0" title="测试页面回调注册与处理 " alt="" coords="1351,267,1553,308"/>
+<area shape="rect" id="node27" href="$namespacehandy_1_1statSvrTest.html#a6978e7b5a49820e29212fb51ee1ba8cc" title="测试命令回调注册与处理 " alt="" coords="1352,5,1552,47"/>
+<area shape="rect" id="node28" href="$namespacehandy_1_1statSvrTest.html#ae5deb8ab2c5c2449d14be92e81d6b441" title="测试404错误处理 " alt="" coords="1359,71,1545,112"/>
+<area shape="rect" id="node29" href="$namespacehandy_1_1statSvrTest.html#a04884af2631c5060a5a59c875c827cc4" title="测试内容类型设置 " alt="" coords="1358,136,1546,177"/>
+<area shape="rect" id="node24" href="$namespacehandy_1_1statSvrTest.html#a51d6168c2b8db2fabed82b2a4ebb6bf4" title="handy::statSvrTest\l::runAllTests" alt="" coords="1601,169,1733,211"/>
+<area shape="rect" id="node25" href="$stat-svr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1781,177,1832,203"/>
+<area shape="rect" id="node32" href="$classhandy_1_1HttpConnPtr.html#ab6e45a0b670d2bd094c00d320a374ebf" title="发送指定响应的对象 " alt="" coords="1137,517,1276,559"/>
+<area shape="rect" id="node33" href="$namespacehandy_1_1httpTest.html#acebf1dab044818e1f50569325777683e" title="测试 HttpResponse 编码功能 " alt="" coords="1123,452,1290,493"/>
+<area shape="rect" id="node37" href="$namespacehandy_1_1netTest.html#a67440c6a5e1613729fd7d78f23f151cc" title="handy::netTest::run\l_all_tests" alt="" coords="1139,985,1274,1027"/>
+<area shape="rect" id="node38" href="$net__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1427,993,1477,1019"/>
+<area shape="rect" id="node42" href="$classhandy_1_1Buffer.html#a48b58522a99b408d8dca8c831d83650a" title="合并另一个缓冲区的内容（将另一个缓冲区的所有数据追加到当前缓冲区，并清空另一个缓冲区） " alt="" coords="689,1025,836,1051"/>
+<area shape="rect" id="node43" href="$classhandy_1_1TcpConn.html#aa6686d5e5c585b9e566763552c07ee35" title="发送缓冲区中的数据 " alt="" coords="897,1117,1051,1143"/>
+<area shape="rect" id="node44" href="$classhandy_1_1TcpConn.html#a876eeca51918ea71097edc1c2aab3fea" title="发送输出缓冲区中的数据 " alt="" coords="1111,1109,1303,1151"/>
+<area shape="rect" id="node45" href="$classhandy_1_1TcpConn.html#a9ff910e1037b29a941c66f3b8eefacc4" title="发送消息（通过编解码器编码后发送） " alt="" coords="1363,1117,1541,1143"/>
 </map>

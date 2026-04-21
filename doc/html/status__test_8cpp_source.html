@@ -303,7 +303,7 @@ $(document).ready(function(){initNavTree('status__test_8cpp_source.html','');});
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    int64_t total = <a class="code" href="status__test_8cpp.html#a61cc23273bda432fadede59224e24389">g_statusThreadTestCount</a>.load();</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    int64_t expected = THREAD_NUM * LOOP_NUM;</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">bool</span> threadOk = (total == expected);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;线程安全测试：总执行次数=%lld（预期：%lld，%s）&quot;</span>, </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;线程安全测试：总执行次数=%ld（预期：%ld，%s）&quot;</span>, </div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;              total, expected, threadOk ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== 线程安全特性测试结束 ===\n&quot;</span>);</div>

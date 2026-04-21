@@ -1,1 +1,1 @@
-/usr/bin/g++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/hshau_client.dir/client.cpp.o -o hshau_client  ../../handy/libhandy.a -lpthread 
+/usr/bin/g++  -Wall -Wextra -Wpedantic -g -g -O0 CMakeFiles/hshau_client.dir/client.cpp.o -o hshau_client  ../../handy/libhandy.a -lpthread 

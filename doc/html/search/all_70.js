@@ -19,6 +19,7 @@ var searchData=
   ['port_5fposix_2ecpp',['port_posix.cpp',['../port__posix_8cpp.html',1,'']]],
   ['port_5fposix_2eh',['port_posix.h',['../port__posix_8h.html',1,'']]],
   ['port_5fposix_5ftest_2ecpp',['port_posix_test.cpp',['../port__posix__test_8cpp.html',1,'']]],
+  ['printstats',['printStats',['../high__concurrency_2client_8cpp.html#a0beecd7e864561c9474bc80e993556bf',1,'printStats():&#160;client.cpp'],['../high__concurrency_2server_8cpp.html#a0beecd7e864561c9474bc80e993556bf',1,'printStats():&#160;server.cpp']]],
   ['process',['process',['../classhandy_1_1Daemon.html#a301dc0a520e61a5f46ecd2ffb7d3d91f',1,'handy::Daemon']]],
   ['processpendingcloses',['processPendingCloses',['../chat_8cpp.html#a30d2ceb0f50a0a7f562c53e7d5a53912',1,'chat.cpp']]],
   ['ptr',['Ptr',['../classhandy_1_1TcpServer.html#a0c8e446865530210de2d43fd31b3f406',1,'handy::TcpServer::Ptr()'],['../classhandy_1_1HSHA.html#ae58eb45cf13c88fe3b897e24b3246937',1,'handy::HSHA::Ptr()'],['../classhandy_1_1UdpConn.html#a56c9450a096d3d9a564da71c9f7d0308',1,'handy::UdpConn::Ptr()'],['../classhandy_1_1UdpServer.html#a55016d1b3d3342f98bcb4239549687b7',1,'handy::UdpServer::Ptr()'],['../classhandy_1_1HSHAU.html#a06d19f5a49e9a6425b639d6b198b08d2',1,'handy::HSHAU::Ptr()']]],

@@ -267,13 +267,13 @@ $(document).ready(function(){initNavTree('poller_8cpp_source.html','');});
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordtype">int</span> PollerEpoll::loopOnce(<span class="keywordtype">int</span> waitTime_ms)</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        {</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="comment">// 记录轮询开始时间</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="keyword">const</span> int64_t  startTime_ms = <a class="code" href="structhandy_1_1Utils.html#a6769faed062da90b4411a3dc189727bf">Utils::timeMilli</a>();</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="keyword">const</span> int64_t startTime_ms = <a class="code" href="structhandy_1_1Utils.html#a6769faed062da90b4411a3dc189727bf">Utils::timeMilli</a>();</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="comment">// 等待事件</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            m_lastActive = epoll_wait(m_epollFd, m_activeEvs, <a class="code" href="namespacehandy.html#ae667e0f22334bb46bce43e64c2983ed4">kMaxEvents</a>, waitTime_ms);</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keyword">const</span> int64_t usedTime_ms = <a class="code" href="structhandy_1_1Utils.html#a6769faed062da90b4411a3dc189727bf">Utils::timeMilli</a>() - startTime_ms;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <a class="code" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(<span class="stringliteral">&quot;poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[%lld] epoll_wait, waitTime_ms=%d, m_lastActive=%d, usedTime_ms=%lld&quot;</span>,</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <a class="code" href="logger_8h.html#a21cc0459b78d5f2d7bd737e5aae1278a">TRACE</a>(<span class="stringliteral">&quot;poller.cpp::PollerEpoll::loopOnce(): PollerEpoll[%lld] epoll_wait, waitTime_ms=%d, m_lastActive=%d, usedTime_ms=%ld&quot;</span>,</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                    static_cast&lt;long long&gt;(getId()), waitTime_ms, m_lastActive, usedTime_ms);</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="comment">// 错误处理：排除信号中断（EINTR是正常情况）</span></div>

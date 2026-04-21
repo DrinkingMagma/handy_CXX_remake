@@ -217,7 +217,7 @@ namespace handy
         int PollerEpoll::loopOnce(int waitTime_ms)
         {
             // 记录轮询开始时间
-            const int64_t  startTime_ms = Utils::timeMilli();
+            const int64_t startTime_ms = Utils::timeMilli();
 
             // 等待事件
             m_lastActive = epoll_wait(m_epollFd, m_activeEvs, kMaxEvents, waitTime_ms);

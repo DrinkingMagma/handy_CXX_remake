@@ -1,0 +1,16 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classhandy_1_1Logger.html#aa28b152799dd56d5fea997e699996725" title="handy::Logger::getInstance" alt="" coords="117,5,297,32"/>
+<area shape="rect" id="node3" href="$classhandy_1_1Logger.html#a166a12af568a87281a0f5953c3b7dc36" title="通过字符串形式（全小写）设置日志级别 " alt="" coords="116,56,299,83"/>
+<area shape="rect" id="node4" href="$classhandy_1_1Logger.html#ad096978e08b310f1456742540e746893" title="设置日志文件名称 " alt="" coords="104,107,311,133"/>
+<area shape="rect" id="node6" href="$classhandy_1_1Logger.html#a52bd5919c0b225d6053498c8ecaed1a5" title="将当前日志文件清空 " alt="" coords="137,157,277,184"/>
+<area shape="rect" id="node7" href="$chat_8cpp.html#a43afabee594de427107db4086a489789" title="sigIntHandler" alt="" coords="158,208,257,235"/>
+<area shape="rect" id="node10" href="$high__concurrency_2client_8cpp.html#aa2df5a26fb62f9260261076dad76ba2e" title="logStats" alt="" coords="655,309,725,336"/>
+<area shape="rect" id="node11" href="$high__concurrency_2client_8cpp.html#ad107a5651c0a6610f292c4ec3997000a" title="clientThread" alt="" coords="161,385,254,412"/>
+<area shape="rect" id="node5" href="$classhandy_1_1Logger.html#a1f5d1fab0756d1df799e204499faa012" title="获取当前时间戳（秒） " alt="" coords="368,99,541,141"/>
+<area shape="rect" id="node8" href="$classhandy_1_1EventBase.html#a47358c5f8dc93868d8b80190984c169f" title="退出事件循环（线程安全） " alt="" coords="375,208,534,235"/>
+<area shape="rect" id="node9" href="$classhandy_1_1EventBase.html#a54e0450f295724a37aa7ff0404058fb7" title="唤醒事件循环（线程安全） " alt="" coords="599,208,781,235"/>
+<area shape="rect" id="node12" href="$classhandy_1_1Buffer.html#aa759a33b7e3748d79cff07430f8a7b16" title="获取当前缓冲区中的数据长度 " alt="" coords="389,360,520,387"/>
+<area shape="rect" id="node13" href="$classhandy_1_1Buffer.html#a804cb068a8f1b7b1d3c5f4aaa09d1b42" title="清空缓冲区，释放所有动态内存，重置所有偏移量和容量 " alt="" coords="387,411,522,437"/>
+<area shape="rect" id="node14" href="$classhandy_1_1EventBase.html#a33a64705c2b42651eaf5d133831eaaf8" title="执行一次事件循环 " alt="" coords="359,461,551,488"/>
+<area shape="rect" id="node15" href="$high__concurrency_2client_8cpp.html#a0beecd7e864561c9474bc80e993556bf" title="printStats" alt="" coords="415,512,494,539"/>
+</map>

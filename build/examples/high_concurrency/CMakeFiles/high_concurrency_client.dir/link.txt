@@ -1,1 +1,1 @@
-/usr/bin/g++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/high_concurrency_client.dir/client.cpp.o -o high_concurrency_client  ../../handy/libhandy.a -lpthread 
+/usr/bin/g++  -Wall -Wextra -Wpedantic -g -g -O0 CMakeFiles/high_concurrency_client.dir/client.cpp.o -o high_concurrency_client  ../../handy/libhandy.a -lpthread 

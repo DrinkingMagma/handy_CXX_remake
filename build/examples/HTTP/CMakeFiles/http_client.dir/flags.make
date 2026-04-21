@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/root/C++/handy_CXX_remake/handy
 
-CXX_FLAGS =  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 -std=gnu++17
+CXX_FLAGS =  -Wall -Wextra -Wpedantic -g -g -O0 -std=gnu++17
 

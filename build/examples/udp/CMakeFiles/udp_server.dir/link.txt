@@ -1,1 +1,1 @@
-/usr/bin/g++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -O3 CMakeFiles/udp_server.dir/server.cpp.o -o udp_server  ../../handy/libhandy.a -lpthread 
+/usr/bin/g++  -Wall -Wextra -Wpedantic -g -g -O0 CMakeFiles/udp_server.dir/server.cpp.o -o udp_server  ../../handy/libhandy.a -lpthread 

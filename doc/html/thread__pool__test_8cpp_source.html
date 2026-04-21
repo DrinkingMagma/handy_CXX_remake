@@ -288,7 +288,7 @@ $(document).ready(function(){initNavTree('thread__pool__test_8cpp_source.html','
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="comment">// 验证等待时间（应接近timeoutMs，误差允许±100ms）</span></div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">if</span> (costMs &lt; timeoutMs - 100 || costMs &gt; timeoutMs + 100) {</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        testOk = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;超时等待时间异常：实际=%lldms，预期≈%dms&quot;</span>, costMs, timeoutMs);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;超时等待时间异常：实际=%ldms，预期≈%dms&quot;</span>, costMs, timeoutMs);</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="comment">// 测试有任务时超时（任务存在，应立即返回true）</span></div>
@@ -309,7 +309,7 @@ $(document).ready(function(){initNavTree('thread__pool__test_8cpp_source.html','
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="comment">// 验证等待时间（应&lt;100ms，无明显延迟）</span></div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">if</span> (costMs &gt; 100) {</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        testOk = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;有任务时等待时间过长：实际=%lldms，预期&lt;100ms&quot;</span>, costMs);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;有任务时等待时间过长：实际=%ldms，预期&lt;100ms&quot;</span>, costMs);</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;测试（超时等待功能）：%s&quot;</span>, testOk ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>

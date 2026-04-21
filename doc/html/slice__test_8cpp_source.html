@@ -322,55 +322,59 @@ $(document).ready(function(){initNavTree('slice__test_8cpp_source.html','');});
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; LOOP_NUM; ++i) {</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <a class="code" href="classhandy_1_1Slice.html">Slice</a> s(<span class="stringliteral">&quot;hello world&quot;</span>);</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            std::string str = s.<a class="code" href="classhandy_1_1Slice.html#a853af4383711ab615372f9d238255c54">toString</a>();</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;线程%d-%d：slice=%s&quot;</span>, std::this_thread::get_id(), i, str.c_str());</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <a class="code" href="slice__test_8cpp.html#a5009e4fd964ad1720323558686a4c1fa">g_sliceThreadTestCount</a>.fetch_add(1, std::memory_order_relaxed);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    };</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="comment">// 创建线程</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; THREAD_NUM; ++i) {</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        threads.emplace_back(thread_func);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="comment">// 等待所有线程结束</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; t : threads) {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        t.join();</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="comment">// 验证总执行次数（确保无线程遗漏）</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    int64_t total = <a class="code" href="slice__test_8cpp.html#a5009e4fd964ad1720323558686a4c1fa">g_sliceThreadTestCount</a>.load();</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    int64_t expected = THREAD_NUM * LOOP_NUM;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">bool</span> thread_ok = (total == expected);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;线程安全测试：总执行次数=%lld（预期：%lld，%s）&quot;</span>, </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;              total, expected, thread_ok ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== Slice 线程安全 特性测试结束 ===\n&quot;</span>);</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="comment">// -------------------------- 测试入口函数 --------------------------</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="namespacehandy_1_1sliceTest.html#ae747836883106b714d16ec9feb184fc1">  267</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacehandy_1_1sliceTest.html#ae747836883106b714d16ec9feb184fc1">run_all_tests</a>() {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="comment">// 1. 初始化日志</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#ab1e55c8b09e60a4716df2af902d53760">initTestLogger</a>();</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="comment">// 2. 依次执行所有测试</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#ac6d15e591e009e0b251426d6489b84ef">test_constructors</a>();</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#a760d8cc3b6f2e4f0881add396d0981df">test_basic_access</a>();</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#a95d95b848b37759a07a2fcdf445b4eb4">test_view_modification</a>();</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#a7c3b841abd4233dd996ed9726027b261">test_comparison_conversion</a>();</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#ad1821b6af545091279d87c2f252861fb">test_exceptions</a>();</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#ae4c5cab504ae0a63d0ad6223e880a705">test_thread_safe</a>();</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="comment">// 3. 清理日志</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#ae56621795ae496ef7f157b693cf3e43d">destroy_test_logger</a>();</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;}</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keyword">auto</span> tid = std::this_thread::get_id();</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            std::stringstream ss;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            ss &lt;&lt; tid;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;线程%s-%d：slice=%s&quot;</span>, ss.str().c_str(), i, str.c_str());</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <a class="code" href="slice__test_8cpp.html#a5009e4fd964ad1720323558686a4c1fa">g_sliceThreadTestCount</a>.fetch_add(1, std::memory_order_relaxed);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    };</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="comment">// 创建线程</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; THREAD_NUM; ++i) {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        threads.emplace_back(thread_func);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="comment">// 等待所有线程结束</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; t : threads) {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        t.join();</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="comment">// 验证总执行次数（确保无线程遗漏）</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    int64_t total = <a class="code" href="slice__test_8cpp.html#a5009e4fd964ad1720323558686a4c1fa">g_sliceThreadTestCount</a>.load();</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    int64_t expected = THREAD_NUM * LOOP_NUM;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">bool</span> thread_ok = (total == expected);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;线程安全测试：总执行次数=%ld（预期：%ld，%s）&quot;</span>, </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;              total, expected, thread_ok ? <span class="stringliteral">&quot;通过&quot;</span> : <span class="stringliteral">&quot;失败&quot;</span>);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <a class="code" href="logger_8h.html#ad96d3a6cf3e98ce15febe3d27bda47bc">DEBUG</a>(<span class="stringliteral">&quot;=== Slice 线程安全 特性测试结束 ===\n&quot;</span>);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment">// -------------------------- 测试入口函数 --------------------------</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="namespacehandy_1_1sliceTest.html#ae747836883106b714d16ec9feb184fc1">  271</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacehandy_1_1sliceTest.html#ae747836883106b714d16ec9feb184fc1">run_all_tests</a>() {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="comment">// 1. 初始化日志</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#ab1e55c8b09e60a4716df2af902d53760">initTestLogger</a>();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">// 2. 依次执行所有测试</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#ac6d15e591e009e0b251426d6489b84ef">test_constructors</a>();</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#a760d8cc3b6f2e4f0881add396d0981df">test_basic_access</a>();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#a95d95b848b37759a07a2fcdf445b4eb4">test_view_modification</a>();</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#a7c3b841abd4233dd996ed9726027b261">test_comparison_conversion</a>();</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#ad1821b6af545091279d87c2f252861fb">test_exceptions</a>();</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#ae4c5cab504ae0a63d0ad6223e880a705">test_thread_safe</a>();</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;}  <span class="comment">// namespace sliceTest</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}  <span class="comment">// namespace handy</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment">// 主函数：启动测试</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="slice__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">  287</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="chat_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>() {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#ae747836883106b714d16ec9feb184fc1">handy::sliceTest::run_all_tests</a>();</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;}</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="comment">// 3. 清理日志</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#ae56621795ae496ef7f157b693cf3e43d">destroy_test_logger</a>();</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;}  <span class="comment">// namespace sliceTest</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;}  <span class="comment">// namespace handy</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment">// 主函数：启动测试</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="slice__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">  291</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="chat_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>() {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <a class="code" href="namespacehandy_1_1sliceTest.html#ae747836883106b714d16ec9feb184fc1">handy::sliceTest::run_all_tests</a>();</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;}</div>
 <div class="ttc" id="namespacehandy_1_1sliceTest_html_a7c3b841abd4233dd996ed9726027b261"><div class="ttname"><a href="namespacehandy_1_1sliceTest.html#a7c3b841abd4233dd996ed9726027b261">handy::sliceTest::test_comparison_conversion</a></div><div class="ttdeci">void test_comparison_conversion()</div><div class="ttdoc">测试 Slice 比较与转换接口 </div><div class="ttdef"><b>Definition:</b> <a href="slice__test_8cpp_source.html#l00156">slice_test.cpp:156</a></div></div>
 <div class="ttc" id="namespacehandy_1_1sliceTest_html_ab1e55c8b09e60a4716df2af902d53760"><div class="ttname"><a href="namespacehandy_1_1sliceTest.html#ab1e55c8b09e60a4716df2af902d53760">handy::sliceTest::initTestLogger</a></div><div class="ttdeci">void initTestLogger()</div><div class="ttdoc">初始化Logger（输出到slice_test.log） </div><div class="ttdef"><b>Definition:</b> <a href="slice__test_8cpp_source.html#l00023">slice_test.cpp:23</a></div></div>
 <div class="ttc" id="namespacehandy_1_1sliceTest_html_ae56621795ae496ef7f157b693cf3e43d"><div class="ttname"><a href="namespacehandy_1_1sliceTest.html#ae56621795ae496ef7f157b693cf3e43d">handy::sliceTest::destroy_test_logger</a></div><div class="ttdeci">void destroy_test_logger()</div><div class="ttdoc">测试结束时关闭Logger（根据实际Logger接口调整） </div><div class="ttdef"><b>Definition:</b> <a href="slice__test_8cpp_source.html#l00032">slice_test.cpp:32</a></div></div>
@@ -379,7 +383,7 @@ $(document).ready(function(){initNavTree('slice__test_8cpp_source.html','');});
 <div class="ttc" id="classhandy_1_1Slice_html_aa9c41a7c077cb18809a408d429587b3c"><div class="ttname"><a href="classhandy_1_1Slice.html#aa9c41a7c077cb18809a408d429587b3c">handy::Slice::size</a></div><div class="ttdeci">size_t size() const noexcept</div><div class="ttdoc">获取视图长度 </div><div class="ttdef"><b>Definition:</b> <a href="slice_8h_source.html#l00163">slice.h:163</a></div></div>
 <div class="ttc" id="classhandy_1_1Slice_html_a6c5dab311605872e81871847eb01d504"><div class="ttname"><a href="classhandy_1_1Slice.html#a6c5dab311605872e81871847eb01d504">handy::Slice::startsWith</a></div><div class="ttdeci">bool startsWith(const Slice &amp;prefix) const noexcept</div><div class="ttdoc">判断是否以指定前缀开头 </div><div class="ttdef"><b>Definition:</b> <a href="slice_8h_source.html#l00415">slice.h:415</a></div></div>
 <div class="ttc" id="classhandy_1_1Slice_html_a9942173fc598137ca9d959ed8cb39fe7"><div class="ttname"><a href="classhandy_1_1Slice.html#a9942173fc598137ca9d959ed8cb39fe7">handy::Slice::trimSpace</a></div><div class="ttdeci">Slice &amp; trimSpace() noexcept</div><div class="ttdoc">移除前后空白字符（修改当前视图） </div><div class="ttdef"><b>Definition:</b> <a href="slice_8h_source.html#l00353">slice.h:353</a></div></div>
-<div class="ttc" id="namespacehandy_1_1sliceTest_html_ae747836883106b714d16ec9feb184fc1"><div class="ttname"><a href="namespacehandy_1_1sliceTest.html#ae747836883106b714d16ec9feb184fc1">handy::sliceTest::run_all_tests</a></div><div class="ttdeci">void run_all_tests()</div><div class="ttdef"><b>Definition:</b> <a href="slice__test_8cpp_source.html#l00267">slice_test.cpp:267</a></div></div>
+<div class="ttc" id="namespacehandy_1_1sliceTest_html_ae747836883106b714d16ec9feb184fc1"><div class="ttname"><a href="namespacehandy_1_1sliceTest.html#ae747836883106b714d16ec9feb184fc1">handy::sliceTest::run_all_tests</a></div><div class="ttdeci">void run_all_tests()</div><div class="ttdef"><b>Definition:</b> <a href="slice__test_8cpp_source.html#l00271">slice_test.cpp:271</a></div></div>
 <div class="ttc" id="classhandy_1_1Slice_html_ac07aa3819e66893480287ad790a27d0d"><div class="ttname"><a href="classhandy_1_1Slice.html#ac07aa3819e66893480287ad790a27d0d">handy::Slice::compare</a></div><div class="ttdeci">int compare(const Slice &amp;b) const noexcept</div><div class="ttdoc">三段式比较（兼容排序） </div><div class="ttdef"><b>Definition:</b> <a href="slice_8h_source.html#l00399">slice.h:399</a></div></div>
 <div class="ttc" id="classhandy_1_1Slice_html_ae986157a157ad8d957e2a6e8cab587b2"><div class="ttname"><a href="classhandy_1_1Slice.html#ae986157a157ad8d957e2a6e8cab587b2">handy::Slice::back</a></div><div class="ttdeci">char back() const </div><div class="ttdoc">获取最后一个字符 </div><div class="ttdef"><b>Definition:</b> <a href="slice_8h_source.html#l00151">slice.h:151</a></div></div>
 <div class="ttc" id="classhandy_1_1Slice_html_a357b22a45d5ee301fe4cec8ab34233fe"><div class="ttname"><a href="classhandy_1_1Slice.html#a357b22a45d5ee301fe4cec8ab34233fe">handy::Slice::empty</a></div><div class="ttdeci">bool empty() const noexcept</div><div class="ttdoc">判断视图是否为空 </div><div class="ttdef"><b>Definition:</b> <a href="slice_8h_source.html#l00168">slice.h:168</a></div></div>
